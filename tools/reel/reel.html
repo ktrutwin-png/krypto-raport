@@ -32,11 +32,11 @@ function bg(t){
  g.fillStyle='rgba(255,255,255,.025)';for(let y=0;y<1920;y+=4)g.fillRect(0,y,1080,1);
 }
 function header(t){
- txt('CRYPTO REPORT · 25 OCT',48,170,24,TEAL,.95,'left',600);g.save();g.font=`600 24px ${F}`;g.restore();
+ txt('WEEKLY REPORT · 19–25 OCT',48,170,24,TEAL,.95,'left',600);g.save();g.font=`600 24px ${F}`;g.restore();
  txt('@erl.grey83',1032,172,34,'#ffd0df',1,'right',800,16);
  // ticker
  g.save();g.fillStyle='rgba(79,209,197,.08)';g.fillRect(0,215,1080,62);g.strokeStyle='rgba(79,209,197,.35)';g.lineWidth=1.5;g.strokeRect(0,215,1080,62);g.beginPath();g.rect(0,215,1080,62);g.clip();
- const items=['BTC $80,214  ▼0.35%','ETH $2,326  ▼1.59%','FEAR & GREED 44','TOTAL CAP $2.68T','BTC DOM 60.15%'];const line=items.join('      ◆      ')+'      ◆      ';
+ const items=['BTC $80,360  ▼0.63% 7D','ETH $2,343  ▼0.09% 7D','FEAR & GREED 45','TOTAL CAP $2.69T','BTC DOM 60.07%'];const line=items.join('      ◆      ')+'      ◆      ';
  g.font=`700 28px ${F}`;const w=g.measureText(line).width;const x0=-((t*140)%w);g.fillStyle='#cfe6ff';g.textBaseline='middle';
  for(let k=0;k<3;k++)g.fillText(line,x0+k*w,247);g.restore();
  // progress
@@ -51,7 +51,7 @@ function chartPts(x0,y0,w,h,lo,hi,n){return PX.slice(0,n).map((p,i)=>[x0+w*i/(PX
 
 // ---------- scene 1
 function sc1(t,e){
- const k=e.k,x0=60,y0=640,w=960,h=520,lo=79000,hi=85000;
+ const k=e.k,x0=60,y0=640,w=960,h=520,lo=79500,hi=85500;
  const prog=eio((k-.2)/4.6),n=prog*(PX.length-1);const full=chartPts(x0,y0,w,h,lo,hi,PX.length);
  const pts=full.slice(0,Math.floor(n)+1);const fr=n-Math.floor(n);if(Math.floor(n)<PX.length-1){const a=full[Math.floor(n)],b=full[Math.floor(n)+1];pts.push([lerp(a[0],b[0],fr),lerp(a[1],b[1],fr)])}
  // frame
@@ -66,40 +66,31 @@ function sc1(t,e){
  const tip=pts[pts.length-1];if(tip){const below=tip[1]>ly;const col=below?RED:'#fff';const pr=1+.35*Math.sin(t*10);g.fillStyle=col;g.shadowColor=col;g.shadowBlur=30;g.beginPath();g.arc(tip[0],tip[1],11*pr,0,7);g.fill();
   if(prog>.9){g.strokeStyle=RED;g.lineWidth=3;g.globalAlpha=e.o*(1-((k*1.5)%1));g.beginPath();g.arc(tip[0],tip[1],20+((k*1.5)%1)*90,0,7);g.stroke()}}
  g.restore();
+ // high/low markers
+ [[PX.indexOf(Math.max(...PX)),'HIGH',TEAL,-34],[PX.indexOf(Math.min(...PX)),'LOW',RED,52]].forEach(([ix,lb,c,dy])=>{if(n>=ix){const p=full[ix],a=eo((n-ix)/6);g.save();g.globalAlpha=e.o*a;g.fillStyle=c;g.shadowColor=c;g.shadowBlur=20;g.beginPath();g.arc(p[0],p[1],10,0,7);g.fill();g.restore();txt(lb+' $'+(PX[ix]/1000).toFixed(1)+'K',p[0],p[1]+dy,30,c,e.o*a,'center',800,12)}});
  // price label
  const pcur=lerp(PX[0],PX[PX.length-1],prog);const pv=PX[Math.min(PX.length-1,Math.floor(n))];
  txt('$'+fmt(pv),x0+10,y0+h+55,52,'#fff',e.o,'left',900,18);
  // big counter
- const ce=eo((k-3.2)/2.6),val=547*ce,sc=1+(k>5?0:.12*Math.sin(Math.min(1,(k-3.2)/.5)*3.14));
- g.save();g.translate(540,440);g.scale(sc,sc);txt('$'+Math.round(val)+'M',0,0,170,'#fff',e.o*cl((k-3)/.4),'center',900,40);g.restore();
- txt('WIPED OUT IN 24H',540,500,50,PINK,e.o*cl((k-3.4)/.4),'center',900,20);
- txt('LIQUIDATIONS',540,285,30,TEAL,e.o*cl((k-3)/.4),'center',700,10);
+ const ce=eo((k-3.2)/2.6),val=5.5*ce,sc=1+(k>5?0:.12*Math.sin(Math.min(1,(k-3.2)/.5)*3.14));
+ g.save();g.translate(540,440);g.scale(sc,sc);txt('−'+val.toFixed(1)+'%',0,0,170,'#fff',e.o*cl((k-3)/.4),'center',900,40);g.restore();
+ txt('FROM THE WEEKLY HIGH',540,500,50,PINK,e.o*cl((k-3.4)/.4),'center',900,20);
+ txt('PEAK TO LOW',540,285,30,TEAL,e.o*cl((k-3)/.4),'center',700,10);
  // headline early
- txt('BITCOIN BREAKS',540,380,86,'#fff',e.o*(1-cl((k-2.6)/.4)),'center',900,22);txt('$80K SUPPORT',540,470,86,PINK,e.o*(1-cl((k-2.6)/.4)),'center',900,22);
+ txt('BITCOIN WEEK',540,380,86,'#fff',e.o*(1-cl((k-2.6)/.4)),'center',900,22);txt('−0.6% NET',540,470,86,PINK,e.o*(1-cl((k-2.6)/.4)),'center',900,22);
  // impact burst
  if(k>4.4&&k<6.8){const bk=k-4.4;for(let i=0;i<46;i++){const ang=rnd(i)*6.28,sp=140+rnd(i+4)*520,r=bk*sp,x=540+Math.cos(ang)*r*.9,y=ly+Math.sin(ang)*r*.7+bk*bk*160;g.globalAlpha=e.o*Math.max(0,1-bk/2.3);g.fillStyle=i%3?RED:PINK;g.beginPath();g.arc(x,y,5+rnd(i+8)*7,0,7);g.fill()}g.globalAlpha=1}
 }
 // ---------- scene 2
 function sc2(t,e){
- const k=e.k,o=e.o;
- txt('116,300 TRADERS LIQUIDATED',540,400,48,'#fff',o,'center',900,16);
- const cols=24,rows=12,gx=(1080-120)/cols,y0=450;
- const kill=eo((k-1.2)/5.2);
- for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){const i=r*cols+c;const dead=rnd(i+1)<kill*.92;const dt=k-1.2-rnd(i+1)*5.2/ .92*0;const x=60+gx*(c+.5),y=y0+r*34;
-  const flick=dead&&(rnd(i+1)*5.4+1.2>k-.45&&rnd(i+1)*5.4+1.2<k+.1);
-  if(!dead){g.globalAlpha=o*(.55+.3*Math.sin(t*3+i));g.fillStyle=TEAL;g.beginPath();g.arc(x,y,8,0,7);g.fill()}
-  else{g.globalAlpha=o*.28;g.fillStyle='#552233';g.beginPath();g.arc(x,y,4.5,0,7);g.fill();if(flick){g.globalAlpha=o;g.fillStyle=RED;g.shadowColor=RED;g.shadowBlur=22;g.beginPath();g.arc(x,y,16,0,7);g.fill();g.shadowBlur=0}}}
- g.globalAlpha=1;
- txt(fmt(116300*kill)+' traders',540,880,0,'#fff',0);
- txt('MOSTLY LEVERAGED LONGS',540,920,40,PINK,o,'center',800,14);
- // cycle
- const nodes=['PRICE DROPS','FORCED SELLING','MORE LIQUIDATIONS'],cy=990;
- nodes.forEach((s,i)=>{const ap=eb((k-3.4-i*.9)/.5);const act=((k-4.5)/1.1)%3,hot=k>5&&Math.floor(act)==i;const x=100,w=880,y=cy+i*150;g.save();g.translate(0,(1-ap)*60);
-  card(x,y,w,108,hot?RED:(i==1?PINK:TEAL),o*cl(ap),hot?.9:.55);
-  txt((i+1)+'',x+50,y+72,56,hot?RED:TEAL,o*cl(ap),'center',900,12);txt(s,x+110,y+70,48,'#fff',o*cl(ap),'left',800,hot?20:0);g.restore();
-  if(i<2){const a=cl(ap);g.save();g.globalAlpha=o*a;g.fillStyle=hot?RED:PINK;g.translate(540,y+108+20);g.beginPath();g.moveTo(-18,-6);g.lineTo(18,-6);g.lineTo(0,16);g.closePath();g.fill();g.restore()}});
- // loop arrow
- if(k>6.8){txt('↻  A DIP BECOMES A CASCADE',540,1470,34,TEAL,o*cl((k-6.8)/.5),'center',800,14)}
+ const k=e.k,o=e.o;txt('7-DAY SCOREBOARD',540,400,60,'#fff',o,'center',900,18);
+ const rows=[['BNB',4.61],['XRP',2.94],['DOGE',0.88],['SOL',0.48],['ETH',-0.09],['BTC',-0.63],['ADA',-3.40]];
+ const z=440,sc=72;g.save();g.globalAlpha=o;g.strokeStyle='rgba(255,255,255,.3)';g.lineWidth=3;g.beginPath();g.moveTo(z,470);g.lineTo(z,1230);g.stroke();g.restore();
+ rows.forEach(([s,v],i)=>{const st=.6+i*.55,a=eo((k-st)/.4),bw=eo((k-st-.1)/1.1),y=520+i*105,c=v>=0?GRN:RED,len=Math.max(6,Math.abs(v)*sc)*bw;
+  txt(s,70,y+22,40,'#fff',o*a,'left',900,0);g.save();g.globalAlpha=o*a;g.fillStyle=c;g.shadowColor=c;g.shadowBlur=22;if(v>=0)rr(z,y-18,len,52,10);else rr(z-len,y-18,len,52,10);g.fill();g.restore();
+  txt((v>=0?'+':'−')+Math.abs(v*bw).toFixed(2)+'%',v>=0?z+len+16:z+16+0,y+24,40,c,o*a,'left',900,12)});
+ txt('TOTAL MARKET CAP  −1.24%',540,1320,40,'#cfe6ff',o*cl((k-5)/.5),'center',800,10);
+ txt('TRADING VOLUME  −12.8%',540,1390,40,TEAL,o*cl((k-5.6)/.5),'center',800,10);
 }
 // ---------- scene 3
 function sc3(t,e){
@@ -113,38 +104,33 @@ function sc3(t,e){
   if(ic=='down'){g.beginPath();g.moveTo(cx-52,cy-40);g.lineTo(cx-12,cy);g.lineTo(cx+8,cy-14);g.lineTo(cx+52,cy+40);g.stroke();g.beginPath();g.moveTo(cx+52,cy+40);g.lineTo(cx+20,cy+40);g.moveTo(cx+52,cy+40);g.lineTo(cx+52,cy+8);g.stroke()}
   if(ic=='clock'){g.beginPath();g.arc(cx,cy,48,0,7);g.stroke();const ang=t*2;g.beginPath();g.moveTo(cx,cy);g.lineTo(cx+Math.sin(ang)*34,cy-Math.cos(ang)*34);g.moveTo(cx,cy);g.lineTo(cx+Math.sin(ang/12)*22,cy-Math.cos(ang/12)*22);g.stroke()}
   g.restore();g.save();g.translate((1-cl(a))*side*600,0);txt(s,x+190,y+100,44,'#fff',o*cl(a),'left',800,0);g.restore()});
- txt('No single cause can be proven.',540,1385,36,'#8fb3d9',o*cl((k-6)/.6),'center',600);
+ txt('FUTURES OPEN INTEREST  −13% IN 7 DAYS',540,1380,36,PINK,o*cl((k-6)/.6),'center',800,12);txt('No single cause can be proven.',540,1440,32,'#8fb3d9',o*cl((k-7)/.6),'center',600);
 }
 // ---------- scene 4
 function sc4(t,e){
- const k=e.k,o=e.o;txt('BITCOIN ETFs',540,420,70,'#fff',o,'center',900,18);txt('A MIXED WEEK',540,490,44,TEAL,o,'center',800,12);
- const rows=[['OUTFLOWS THU + FRI',773,RED,'-$','M',1.1],['WEEKLY NET FLOW (PROVISIONAL)',301,TEAL,'+$','M',3.4],['ETHER FUNDS',221,PINK,'-$','M',5.8]];
- rows.forEach(([lab,v,c,pre,suf,st],i)=>{const a=eo((k-st)/.4),bw=eo((k-st-.2)/1.4),y=580+i*270;g.save();g.translate((1-a)*-80,0);
-  txt(lab,70,y,34,'#cfe6ff',o*a,'left',700);g.globalAlpha=o*a;g.fillStyle='rgba(255,255,255,.07)';rr(70,y+22,940,70,12);g.fill();
-  const grd=g.createLinearGradient(70,0,1010,0);grd.addColorStop(0,c);grd.addColorStop(1,c+'99');g.fillStyle=grd;g.shadowColor=c;g.shadowBlur=26;rr(70,y+22,Math.max(24,940*(v/800)*bw),70,12);g.fill();g.shadowBlur=0;
-  txt(pre+Math.round(v*bw)+suf,1010,y+82,56,'#fff',o*a,'right',900,16);g.restore()});
- txt('Flows can be revised. They do not show who bought or sold.',540,1420,30,'#8fb3d9',o*cl((k-8)/.6),'center',500);
+ const k=e.k,o=e.o;txt('FUNDS & SENTIMENT',540,400,66,'#fff',o,'center',900,18);
+ const rows=[['BITCOIN ETFs · OUTFLOWS THU + FRI',773,RED,'-$',1.0],['BITCOIN ETFs · WEEKLY NET (PROVISIONAL)',301,TEAL,'+$',2.6],['ETHER FUNDS · WEEKLY',221,PINK,'-$',4.2]];
+ rows.forEach(([lab,v,c,pre,st],i)=>{const a=eo((k-st)/.4),bw=eo((k-st-.2)/1.2),y=500+i*185;g.save();g.translate((1-a)*-80,0);
+  txt(lab,70,y,30,'#cfe6ff',o*a,'left',700);g.globalAlpha=o*a;g.fillStyle='rgba(255,255,255,.07)';rr(70,y+20,940,62,12);g.fill();
+  const grd=g.createLinearGradient(70,0,1010,0);grd.addColorStop(0,c);grd.addColorStop(1,c+'99');g.fillStyle=grd;g.shadowColor=c;g.shadowBlur=26;rr(70,y+20,Math.max(24,940*(v/800)*bw),62,12);g.fill();g.shadowBlur=0;
+  txt(pre+Math.round(v*bw)+'M',1010,y+70,50,'#fff',o*a,'right',900,16);g.restore()});
+ const fa=eo((k-5.6)/.5);txt('FEAR & GREED',70,1085,30,'#cfe6ff',o*fa,'left',700);
+ txt('49  →  45',1010,1090,64,'#fff',o*fa,'right',900,16);
+ const hl=[['SOLANA ALPENGLOW UPGRADE LIVE · 21 OCT',TEAL],['SWISS FINMA APPROVES RETAIL BITCOIN FUND · 20 OCT',PINK]];
+ hl.forEach(([s,c],i)=>{const ap=eb((k-8.2-i*.9)/.5);g.save();g.translate((1-cl(ap))*(i?500:-500),0);card(70,1170+i*125,940,100,c,o*cl(ap),.65);txt(s,540,1232+i*125,29,'#fff',o*cl(ap),'center',800,0);g.restore()});
+ txt('Flows can be revised.',540,1480,28,'#8fb3d9',o*cl((k-9)/.6),'center',500);
 }
 // ---------- scene 5
 function sc5(t,e){
- const k=e.k,o=e.o;txt('LEVELS TRADERS WATCH',540,420,60,'#fff',o,'center',900,18);
- const lv=[['$82K','recovery zone',TEAL],['$80K','key support',PINK],['$78K','next level if broken',RED]];
- const top=520,H=620,lo=77000,hi=83000,yy=v=>top+H*(1-(v-lo)/(hi-lo));
- // axis
- g.save();g.globalAlpha=o;g.strokeStyle='rgba(255,255,255,.25)';g.lineWidth=3;g.beginPath();g.moveTo(190,top-20);g.lineTo(190,top+H+20);g.stroke();g.restore();
- lv.forEach(([p,l,c],i)=>{const a=eo((k-.6-i*.9)/.5),y=yy(parseFloat(p.slice(1))*1000);g.save();g.globalAlpha=o*a;g.setLineDash([16,10]);g.strokeStyle=c;g.lineWidth=3;g.shadowColor=c;g.shadowBlur=14;g.beginPath();g.moveTo(190,y);g.lineTo(190+(1080-250)*a,y);g.stroke();g.restore();
-  txt(p,170,y+14,48,c,o*a,'right',900,14);txt(l,230,y-16,30,'#cfe6ff',o*a,'left',600)});
- // marker bouncing near 80K
- const my=yy(80250+ (Math.sin(t*2.2)*500)*(k>3?1:0));const mk=eo((k-3)/.6);g.save();g.globalAlpha=o*mk;g.fillStyle='#fff';g.shadowColor='#fff';g.shadowBlur=30;g.beginPath();g.arc(760,my,18,0,7);g.fill();g.restore();txt('BTC',760,my-34,30,'#fff',o*mk,'center',800,10);
- // dates
- const d=[['28 OCT','Fed decision'],['03 NOV','US midterm elections']];
- d.forEach(([a,b],i)=>{const ap=eb((k-6.4-i*1.1)/.5);g.save();g.translate((1-cl(ap))*(i?500:-500),0);card(70+i*480,1230,460,170,i?PINK:TEAL,o*cl(ap),.65);txt(a,70+i*480+230,1305,60,i?PINK:TEAL,o*cl(ap),'center',900,16);txt(b,70+i*480+230,1368,30,'#fff',o*cl(ap),'center',700);g.restore()});
+ const k=e.k,o=e.o;txt('THE WEEK AHEAD',540,400,70,'#fff',o,'center',900,18);
+ const ev=[['27 OCT','Ripple Swell, New York (27–29)'],['28 OCT','Fed decision'],['01 NOV','Ripple escrow release'],['03 NOV','US midterm elections']];
+ ev.forEach(([d,s],i)=>{const ap=eb((k-.8-i*1.5)/.5);g.save();g.translate((1-cl(ap))*(i%2?600:-600),0);card(70,500+i*215,940,180,i%2?PINK:TEAL,o*cl(ap),.65);
+  txt(d,100,500+i*215+112,66,i%2?PINK:TEAL,o*cl(ap),'left',900,16);txt(s,420,500+i*215+108,36,'#fff',o*cl(ap),'left',800,0);g.restore()});
 }
 // ---------- scene 6
 function sc6(t,e){
  const k=e.k,o=e.o;const pulse=1+.04*Math.sin(t*5);
- g.save();g.translate(540,640);g.scale(pulse,pulse);txt('BTC ABOVE OR BELOW',0,0,78,'#fff',o,'center',900,20);txt('$80K',0,200,190,PINK,o,'center',900,50);txt('BY FRIDAY?',0,330,100,'#fff',o,'center',900,20);g.restore();
- // arrows up/down
+ g.save();g.translate(540,640);g.scale(pulse,pulse);txt('NEXT WEEK: BTC',0,0,80,'#fff',o,'center',900,20);txt('ABOVE $80K?',0,190,130,PINK,o,'center',900,50);txt('AT THE CLOSE',0,310,90,'#fff',o,'center',900,20);g.restore();
  const bob=Math.sin(t*4)*14;g.save();g.globalAlpha=o;g.fillStyle=GRN;g.shadowColor=GRN;g.shadowBlur=24;g.translate(140,1080+bob);g.beginPath();g.moveTo(0,-60);g.lineTo(60,30);g.lineTo(-60,30);g.fill();g.restore();
  g.save();g.globalAlpha=o;g.fillStyle=RED;g.shadowColor=RED;g.shadowBlur=24;g.translate(940,1080-bob);g.beginPath();g.moveTo(0,60);g.lineTo(60,-30);g.lineTo(-60,-30);g.fill();g.restore();
  txt('COMMENT YOUR CALL',540,1100,50,'#fff',o*cl((k-1)/.5),'center',800,14);
