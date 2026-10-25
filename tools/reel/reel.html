@@ -1,0 +1,168 @@
+<!doctype html><html><head><meta charset="utf-8"><style>*{margin:0;padding:0}body{background:#05060f;width:1080px;height:1920px;overflow:hidden}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="prices.js"></script>
+<script>
+const cv=document.getElementById('c'),g=cv.getContext('2d');
+const TEAL='#4fd1c5',PINK='#ff7aa8',RED='#ff4d6d',GRN='#3dffa8',F="Inter, 'DejaVu Sans', sans-serif";
+let S=[[0,7.2],[7.2,18],[18,27],[27,38.7],[38.7,50.6],[50.6,56.9]],T=57.5;
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),lerp=(a,b,t)=>a+(b-a)*t;
+const eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+function rnd(s){s=Math.sin(s*127.1+311.7)*43758.5453;return s-Math.floor(s)}
+const fmt=n=>Math.round(n).toLocaleString('en-US');
+function txt(s,x,y,size,col,a=1,al='left',w=800,glow=0){g.save();g.globalAlpha=cl(a);g.font=`${w} ${size}px ${F}`;g.textAlign=al;g.textBaseline='alphabetic';g.fillStyle=col;if(glow){g.shadowColor=col;g.shadowBlur=glow}g.fillText(s,x,y);g.restore()}
+function rr(x,y,w,h,r){g.beginPath();g.moveTo(x+r,y);g.arcTo(x+w,y,x+w,y+h,r);g.arcTo(x+w,y+h,x,y+h,r);g.arcTo(x,y+h,x,y,r);g.arcTo(x,y,x+w,y,r);g.closePath()}
+function card(x,y,w,h,col,a=1,fillA=.55){g.save();g.globalAlpha=cl(a);rr(x,y,w,h,18);const gr=g.createLinearGradient(x,y,x+w,y+h);gr.addColorStop(0,'rgba(5,45,45,'+fillA+')');gr.addColorStop(1,'rgba(50,10,35,'+fillA+')');g.fillStyle=gr;g.fill();g.lineWidth=2.5;g.strokeStyle=col;g.shadowColor=col;g.shadowBlur=22;g.stroke();g.restore()}
+function glowLine(pts,col,wd,blur){g.save();g.strokeStyle=col;g.lineWidth=wd;g.lineJoin='round';g.lineCap='round';g.shadowColor=col;g.shadowBlur=blur;g.beginPath();pts.forEach((p,i)=>i?g.lineTo(p[0],p[1]):g.moveTo(p[0],p[1]));g.stroke();g.restore()}
+
+function bg(t){
+ const gr=g.createLinearGradient(0,0,0,1920);gr.addColorStop(0,'#070818');gr.addColorStop(1,'#04070e');g.fillStyle=gr;g.fillRect(0,0,1080,1920);
+ // orbs
+ [[0,.3,TEAL,700],[1,.05,PINK,650],[.5,1,'#0a8a80',800]].forEach(([fx,fy,c,r],i)=>{const x=fx*1080+Math.sin(t*.4+i*2)*120,y=fy*1920+Math.cos(t*.33+i)*140;const o=g.createRadialGradient(x,y,0,x,y,r);o.addColorStop(0,c+'55');o.addColorStop(1,c+'00');g.fillStyle=o;g.fillRect(0,0,1080,1920)});
+ // perspective grid floor
+ g.save();g.beginPath();g.rect(0,1100,1080,820);g.clip();
+ const hz=1100,off=(t*.5)%1;
+ g.strokeStyle='rgba(79,209,197,.22)';g.lineWidth=2;
+ for(let i=-14;i<=14;i++){g.beginPath();g.moveTo(540+i*40,hz);g.lineTo(540+i*260,1920);g.stroke()}
+ for(let k=0;k<14;k++){const p=Math.pow((k+off)/14,2.2);const y=hz+p*820;g.globalAlpha=.15+p*.5;g.beginPath();g.moveTo(0,y);g.lineTo(1080,y);g.stroke()}
+ g.restore();
+ // rising particles
+ for(let i=0;i<46;i++){const sp=.03+rnd(i)*.06,x=rnd(i+9)*1080+Math.sin(t+i)*20,y=1920-((t*sp*1920+rnd(i+3)*1920)%1920);g.globalAlpha=.25+rnd(i+5)*.4;g.fillStyle=i%2?TEAL:PINK;g.beginPath();g.arc(x,y,1.5+rnd(i+7)*2.5,0,7);g.fill()}
+ g.globalAlpha=1;
+ // scanlines
+ g.fillStyle='rgba(255,255,255,.025)';for(let y=0;y<1920;y+=4)g.fillRect(0,y,1080,1);
+}
+function header(t){
+ txt('CRYPTO REPORT · 25 OCT',48,170,24,TEAL,.95,'left',600);g.save();g.font=`600 24px ${F}`;g.restore();
+ txt('@erl.grey83',1032,172,34,'#ffd0df',1,'right',800,16);
+ // ticker
+ g.save();g.fillStyle='rgba(79,209,197,.08)';g.fillRect(0,215,1080,62);g.strokeStyle='rgba(79,209,197,.35)';g.lineWidth=1.5;g.strokeRect(0,215,1080,62);g.beginPath();g.rect(0,215,1080,62);g.clip();
+ const items=['BTC $80,214  ▼0.35%','ETH $2,326  ▼1.59%','FEAR & GREED 44','TOTAL CAP $2.68T','BTC DOM 60.15%'];const line=items.join('      ◆      ')+'      ◆      ';
+ g.font=`700 28px ${F}`;const w=g.measureText(line).width;const x0=-((t*140)%w);g.fillStyle='#cfe6ff';g.textBaseline='middle';
+ for(let k=0;k<3;k++)g.fillText(line,x0+k*w,247);g.restore();
+ // progress
+ g.fillStyle='rgba(255,255,255,.12)';g.fillRect(0,0,1080,8);const gp=g.createLinearGradient(0,0,1080,0);gp.addColorStop(0,TEAL);gp.addColorStop(1,PINK);g.fillStyle=gp;g.fillRect(0,0,1080*cl(t/T),8);
+}
+function footer(){txt('For information only, not investment advice.',540,1560,24,'#8fb3d9',.9,'center',500)}
+
+// scene envelope
+function env(i,t){const [a,b]=S[i];return {k:t-a,o:Math.min(eo((t-a)/.45),eo((b-t)/.35)),d:b-a}}
+
+function chartPts(x0,y0,w,h,lo,hi,n){return PX.slice(0,n).map((p,i)=>[x0+w*i/(PX.length-1),y0+h*(1-(p-lo)/(hi-lo))])}
+
+// ---------- scene 1
+function sc1(t,e){
+ const k=e.k,x0=60,y0=640,w=960,h=520,lo=79000,hi=85000;
+ const prog=eio((k-.2)/4.6),n=prog*(PX.length-1);const full=chartPts(x0,y0,w,h,lo,hi,PX.length);
+ const pts=full.slice(0,Math.floor(n)+1);const fr=n-Math.floor(n);if(Math.floor(n)<PX.length-1){const a=full[Math.floor(n)],b=full[Math.floor(n)+1];pts.push([lerp(a[0],b[0],fr),lerp(a[1],b[1],fr)])}
+ // frame
+ g.save();g.globalAlpha=e.o;card(x0-20,y0-90,w+40,h+170,TEAL,1,.45);
+ txt('BITCOIN · LAST 7 DAYS',x0+10,y0-40,26,TEAL,1,'left',700,10);
+ // 80K line
+ const ly=y0+h*(1-(80000-lo)/(hi-lo));g.setLineDash([14,12]);g.strokeStyle=PINK;g.lineWidth=2.5;g.globalAlpha=e.o*(.6+.4*Math.sin(t*6));g.beginPath();g.moveTo(x0,ly);g.lineTo(x0+w,ly);g.stroke();g.setLineDash([]);g.restore();
+ txt('$80K',x0+w-6,ly-14,32,PINK,e.o,'right',800,14);
+ // area fill
+ if(pts.length>2){g.save();g.globalAlpha=e.o*.5;const a2=g.createLinearGradient(0,y0,0,y0+h);a2.addColorStop(0,'rgba(79,209,197,.35)');a2.addColorStop(1,'rgba(79,209,197,0)');g.fillStyle=a2;g.beginPath();g.moveTo(pts[0][0],y0+h);pts.forEach(p=>g.lineTo(p[0],p[1]));g.lineTo(pts[pts.length-1][0],y0+h);g.closePath();g.fill();g.restore()}
+ g.save();g.globalAlpha=e.o;if(pts.length>1)glowLine(pts,TEAL,5,24);
+ const tip=pts[pts.length-1];if(tip){const below=tip[1]>ly;const col=below?RED:'#fff';const pr=1+.35*Math.sin(t*10);g.fillStyle=col;g.shadowColor=col;g.shadowBlur=30;g.beginPath();g.arc(tip[0],tip[1],11*pr,0,7);g.fill();
+  if(prog>.9){g.strokeStyle=RED;g.lineWidth=3;g.globalAlpha=e.o*(1-((k*1.5)%1));g.beginPath();g.arc(tip[0],tip[1],20+((k*1.5)%1)*90,0,7);g.stroke()}}
+ g.restore();
+ // price label
+ const pcur=lerp(PX[0],PX[PX.length-1],prog);const pv=PX[Math.min(PX.length-1,Math.floor(n))];
+ txt('$'+fmt(pv),x0+10,y0+h+55,52,'#fff',e.o,'left',900,18);
+ // big counter
+ const ce=eo((k-3.2)/2.6),val=547*ce,sc=1+(k>5?0:.12*Math.sin(Math.min(1,(k-3.2)/.5)*3.14));
+ g.save();g.translate(540,440);g.scale(sc,sc);txt('$'+Math.round(val)+'M',0,0,170,'#fff',e.o*cl((k-3)/.4),'center',900,40);g.restore();
+ txt('WIPED OUT IN 24H',540,500,50,PINK,e.o*cl((k-3.4)/.4),'center',900,20);
+ txt('LIQUIDATIONS',540,285,30,TEAL,e.o*cl((k-3)/.4),'center',700,10);
+ // headline early
+ txt('BITCOIN BREAKS',540,380,86,'#fff',e.o*(1-cl((k-2.6)/.4)),'center',900,22);txt('$80K SUPPORT',540,470,86,PINK,e.o*(1-cl((k-2.6)/.4)),'center',900,22);
+ // impact burst
+ if(k>4.4&&k<6.8){const bk=k-4.4;for(let i=0;i<46;i++){const ang=rnd(i)*6.28,sp=140+rnd(i+4)*520,r=bk*sp,x=540+Math.cos(ang)*r*.9,y=ly+Math.sin(ang)*r*.7+bk*bk*160;g.globalAlpha=e.o*Math.max(0,1-bk/2.3);g.fillStyle=i%3?RED:PINK;g.beginPath();g.arc(x,y,5+rnd(i+8)*7,0,7);g.fill()}g.globalAlpha=1}
+}
+// ---------- scene 2
+function sc2(t,e){
+ const k=e.k,o=e.o;
+ txt('116,300 TRADERS LIQUIDATED',540,400,48,'#fff',o,'center',900,16);
+ const cols=24,rows=12,gx=(1080-120)/cols,y0=450;
+ const kill=eo((k-1.2)/5.2);
+ for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){const i=r*cols+c;const dead=rnd(i+1)<kill*.92;const dt=k-1.2-rnd(i+1)*5.2/ .92*0;const x=60+gx*(c+.5),y=y0+r*34;
+  const flick=dead&&(rnd(i+1)*5.4+1.2>k-.45&&rnd(i+1)*5.4+1.2<k+.1);
+  if(!dead){g.globalAlpha=o*(.55+.3*Math.sin(t*3+i));g.fillStyle=TEAL;g.beginPath();g.arc(x,y,8,0,7);g.fill()}
+  else{g.globalAlpha=o*.28;g.fillStyle='#552233';g.beginPath();g.arc(x,y,4.5,0,7);g.fill();if(flick){g.globalAlpha=o;g.fillStyle=RED;g.shadowColor=RED;g.shadowBlur=22;g.beginPath();g.arc(x,y,16,0,7);g.fill();g.shadowBlur=0}}}
+ g.globalAlpha=1;
+ txt(fmt(116300*kill)+' traders',540,880,0,'#fff',0);
+ txt('MOSTLY LEVERAGED LONGS',540,920,40,PINK,o,'center',800,14);
+ // cycle
+ const nodes=['PRICE DROPS','FORCED SELLING','MORE LIQUIDATIONS'],cy=990;
+ nodes.forEach((s,i)=>{const ap=eb((k-3.4-i*.9)/.5);const act=((k-4.5)/1.1)%3,hot=k>5&&Math.floor(act)==i;const x=100,w=880,y=cy+i*150;g.save();g.translate(0,(1-ap)*60);
+  card(x,y,w,108,hot?RED:(i==1?PINK:TEAL),o*cl(ap),hot?.9:.55);
+  txt((i+1)+'',x+50,y+72,56,hot?RED:TEAL,o*cl(ap),'center',900,12);txt(s,x+110,y+70,48,'#fff',o*cl(ap),'left',800,hot?20:0);g.restore();
+  if(i<2){const a=cl(ap);g.save();g.globalAlpha=o*a;g.fillStyle=hot?RED:PINK;g.translate(540,y+108+20);g.beginPath();g.moveTo(-18,-6);g.lineTo(18,-6);g.lineTo(0,16);g.closePath();g.fill();g.restore()}});
+ // loop arrow
+ if(k>6.8){txt('↻  A DIP BECOMES A CASCADE',540,1470,34,TEAL,o*cl((k-6.8)/.5),'center',800,14)}
+}
+// ---------- scene 3
+function sc3(t,e){
+ const k=e.k,o=e.o;
+ txt('WHAT ANALYSTS POINT TO',540,420,58,'#fff',o,'center',900,18);
+ const items=[['GEOPOLITICAL TENSIONS','globe'],['HIGH OIL PRICES','drop'],['WEAK TECH STOCKS','down'],['THIN WEEKEND TRADING','clock']];
+ items.forEach(([s,ic],i)=>{const a=eb((k-.9-i*1.3)/.6),side=i%2?1:-1,x=70,y=500+i*205,w=940,h=170;g.save();g.translate((1-cl(a))*side*600,0);
+  card(x,y,w,h,i%2?PINK:TEAL,o*cl(a*1.5),.6);const cx=x+95,cy=y+85;g.globalAlpha=o*cl(a);g.strokeStyle=i%2?PINK:TEAL;g.fillStyle=g.strokeStyle;g.lineWidth=6;g.shadowColor=g.strokeStyle;g.shadowBlur=16;
+  if(ic=='globe'){g.beginPath();g.arc(cx,cy,48,0,7);g.stroke();g.beginPath();g.ellipse(cx,cy,22,48,0,0,7);g.stroke();g.beginPath();g.moveTo(cx-48,cy);g.lineTo(cx+48,cy);g.stroke()}
+  if(ic=='drop'){g.beginPath();g.moveTo(cx,cy-52);g.quadraticCurveTo(cx+52,cy+10,cx,cy+50);g.quadraticCurveTo(cx-52,cy+10,cx,cy-52);g.fill()}
+  if(ic=='down'){g.beginPath();g.moveTo(cx-52,cy-40);g.lineTo(cx-12,cy);g.lineTo(cx+8,cy-14);g.lineTo(cx+52,cy+40);g.stroke();g.beginPath();g.moveTo(cx+52,cy+40);g.lineTo(cx+20,cy+40);g.moveTo(cx+52,cy+40);g.lineTo(cx+52,cy+8);g.stroke()}
+  if(ic=='clock'){g.beginPath();g.arc(cx,cy,48,0,7);g.stroke();const ang=t*2;g.beginPath();g.moveTo(cx,cy);g.lineTo(cx+Math.sin(ang)*34,cy-Math.cos(ang)*34);g.moveTo(cx,cy);g.lineTo(cx+Math.sin(ang/12)*22,cy-Math.cos(ang/12)*22);g.stroke()}
+  g.restore();g.save();g.translate((1-cl(a))*side*600,0);txt(s,x+190,y+100,44,'#fff',o*cl(a),'left',800,0);g.restore()});
+ txt('No single cause can be proven.',540,1385,36,'#8fb3d9',o*cl((k-6)/.6),'center',600);
+}
+// ---------- scene 4
+function sc4(t,e){
+ const k=e.k,o=e.o;txt('BITCOIN ETFs',540,420,70,'#fff',o,'center',900,18);txt('A MIXED WEEK',540,490,44,TEAL,o,'center',800,12);
+ const rows=[['OUTFLOWS THU + FRI',773,RED,'-$','M',1.1],['WEEKLY NET FLOW (PROVISIONAL)',301,TEAL,'+$','M',3.4],['ETHER FUNDS',221,PINK,'-$','M',5.8]];
+ rows.forEach(([lab,v,c,pre,suf,st],i)=>{const a=eo((k-st)/.4),bw=eo((k-st-.2)/1.4),y=580+i*270;g.save();g.translate((1-a)*-80,0);
+  txt(lab,70,y,34,'#cfe6ff',o*a,'left',700);g.globalAlpha=o*a;g.fillStyle='rgba(255,255,255,.07)';rr(70,y+22,940,70,12);g.fill();
+  const grd=g.createLinearGradient(70,0,1010,0);grd.addColorStop(0,c);grd.addColorStop(1,c+'99');g.fillStyle=grd;g.shadowColor=c;g.shadowBlur=26;rr(70,y+22,Math.max(24,940*(v/800)*bw),70,12);g.fill();g.shadowBlur=0;
+  txt(pre+Math.round(v*bw)+suf,1010,y+82,56,'#fff',o*a,'right',900,16);g.restore()});
+ txt('Flows can be revised. They do not show who bought or sold.',540,1420,30,'#8fb3d9',o*cl((k-8)/.6),'center',500);
+}
+// ---------- scene 5
+function sc5(t,e){
+ const k=e.k,o=e.o;txt('LEVELS TRADERS WATCH',540,420,60,'#fff',o,'center',900,18);
+ const lv=[['$82K','recovery zone',TEAL],['$80K','key support',PINK],['$78K','next level if broken',RED]];
+ const top=520,H=620,lo=77000,hi=83000,yy=v=>top+H*(1-(v-lo)/(hi-lo));
+ // axis
+ g.save();g.globalAlpha=o;g.strokeStyle='rgba(255,255,255,.25)';g.lineWidth=3;g.beginPath();g.moveTo(190,top-20);g.lineTo(190,top+H+20);g.stroke();g.restore();
+ lv.forEach(([p,l,c],i)=>{const a=eo((k-.6-i*.9)/.5),y=yy(parseFloat(p.slice(1))*1000);g.save();g.globalAlpha=o*a;g.setLineDash([16,10]);g.strokeStyle=c;g.lineWidth=3;g.shadowColor=c;g.shadowBlur=14;g.beginPath();g.moveTo(190,y);g.lineTo(190+(1080-250)*a,y);g.stroke();g.restore();
+  txt(p,170,y+14,48,c,o*a,'right',900,14);txt(l,230,y-16,30,'#cfe6ff',o*a,'left',600)});
+ // marker bouncing near 80K
+ const my=yy(80250+ (Math.sin(t*2.2)*500)*(k>3?1:0));const mk=eo((k-3)/.6);g.save();g.globalAlpha=o*mk;g.fillStyle='#fff';g.shadowColor='#fff';g.shadowBlur=30;g.beginPath();g.arc(760,my,18,0,7);g.fill();g.restore();txt('BTC',760,my-34,30,'#fff',o*mk,'center',800,10);
+ // dates
+ const d=[['28 OCT','Fed decision'],['03 NOV','US midterm elections']];
+ d.forEach(([a,b],i)=>{const ap=eb((k-6.4-i*1.1)/.5);g.save();g.translate((1-cl(ap))*(i?500:-500),0);card(70+i*480,1230,460,170,i?PINK:TEAL,o*cl(ap),.65);txt(a,70+i*480+230,1305,60,i?PINK:TEAL,o*cl(ap),'center',900,16);txt(b,70+i*480+230,1368,30,'#fff',o*cl(ap),'center',700);g.restore()});
+}
+// ---------- scene 6
+function sc6(t,e){
+ const k=e.k,o=e.o;const pulse=1+.04*Math.sin(t*5);
+ g.save();g.translate(540,640);g.scale(pulse,pulse);txt('BTC ABOVE OR BELOW',0,0,78,'#fff',o,'center',900,20);txt('$80K',0,200,190,PINK,o,'center',900,50);txt('BY FRIDAY?',0,330,100,'#fff',o,'center',900,20);g.restore();
+ // arrows up/down
+ const bob=Math.sin(t*4)*14;g.save();g.globalAlpha=o;g.fillStyle=GRN;g.shadowColor=GRN;g.shadowBlur=24;g.translate(140,1080+bob);g.beginPath();g.moveTo(0,-60);g.lineTo(60,30);g.lineTo(-60,30);g.fill();g.restore();
+ g.save();g.globalAlpha=o;g.fillStyle=RED;g.shadowColor=RED;g.shadowBlur=24;g.translate(940,1080-bob);g.beginPath();g.moveTo(0,60);g.lineTo(60,-30);g.lineTo(-60,-30);g.fill();g.restore();
+ txt('COMMENT YOUR CALL',540,1100,50,'#fff',o*cl((k-1)/.5),'center',800,14);
+ const fa=eb((k-2.2)/.5);g.save();g.translate(0,(1-cl(fa))*80);card(110,1220,860,150,TEAL,o*cl(fa),.7);txt('FOLLOW @erl.grey83',540,1315,58,TEAL,o*cl(fa),'center',900,18);txt('daily crypto reports',540,1355,28,'#cfe6ff',o*cl(fa),'center',600);g.restore();
+}
+const SC=[sc1,sc2,sc3,sc4,sc5,sc6];
+function render(t){
+ g.setTransform(1,0,0,1,0,0);g.clearRect(0,0,1080,1920);
+ // shake in scene1 impact
+ let sx=0,sy=0;const k1=t-S[0][0]-4.4;if(k1>0&&k1<.8){const m=(1-k1/.8)*18;sx=Math.sin(k1*90)*m;sy=Math.cos(k1*70)*m}
+ g.save();g.translate(sx,sy);bg(t);header(t);
+ S.forEach((s,i)=>{if(t>=s[0]-.01&&t<s[1]+.4){const e=env(i,t);if(e.o>.003)SC[i](t,e)}});
+ footer();g.restore();
+ // transition sweep + flash
+ S.forEach((s,i)=>{if(i){const d=t-s[0];if(d>-.05&&d<.45){g.save();const p=cl(d/.45);g.globalAlpha=(1-p)*.55;const gr=g.createLinearGradient(0,1920*p-200,0,1920*p+200);gr.addColorStop(0,'rgba(79,209,197,0)');gr.addColorStop(.5,'rgba(255,255,255,.9)');gr.addColorStop(1,'rgba(255,122,168,0)');g.fillStyle=gr;g.fillRect(0,0,1080,1920);g.restore()}}});
+ if(k1>0&&k1<.25){g.save();g.globalAlpha=(1-k1/.25)*.35;g.fillStyle=RED;g.fillRect(0,0,1080,1920);g.restore()}
+ // vignette
+ const v=g.createRadialGradient(540,960,600,540,960,1250);v.addColorStop(0,'rgba(0,0,0,0)');v.addColorStop(1,'rgba(0,0,0,.45)');g.fillStyle=v;g.fillRect(0,0,1080,1920);
+}
+render(0);
+</script></body></html>
