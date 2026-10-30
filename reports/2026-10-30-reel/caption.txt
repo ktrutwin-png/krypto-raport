@@ -1,0 +1,15 @@
+$6.4B stolen from Binance — the biggest crypto theft on record? 🚨
+
+Here is what we know (as of Oct 30):
+• Funds left 10 blockchains in about 20 minutes. TRM Labs says the attacker used an Ethereum feature (EIP-7702) and a wallet funded via Tornado Cash.
+• About $2.7B in stablecoins was frozen, but TRM says 420K+ ETH and 18,270 BTC (~$2.4B) remain out of issuers' reach.
+• Binance says withdrawals should resume within 48 hours and has set aside $6.34B of its own funds. TRM and Chainalysis point to North Korea's TraderTraitor group; North Korea has denied hacking allegations.
+
+Where do you keep your crypto: on an exchange or in your own wallet? Tell us in the comments 👇
+
+Follow @erl.grey83 for daily crypto reports.
+
+Sources: Decrypt, TRM Labs, Chainalysis, Binance statements, CoinMarketCap News.
+For information only, not investment advice.
+
+#bitcoin #crypto #binance #cryptonews #ethereum #cryptohack #blockchain #trading
