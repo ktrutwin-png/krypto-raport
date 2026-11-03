@@ -1,0 +1,81 @@
+{
+ "date": "3 NOV 2026",
+ "datedot": "03 · NOV · 2026",
+ "asof": "DATA AS OF 20:18 (CET)",
+ "kick": "BINANCE: $6.3B HACK BEGAN WITH A FAKE JOB OFFER",
+ "coins": [
+  [
+   "BTC",
+   "77,463",
+   0.78,
+   -3.81
+  ],
+  [
+   "ETH",
+   "2,287",
+   1.8,
+   -2.2
+  ],
+  [
+   "BNB",
+   "696.30",
+   -0.11,
+   -6.91
+  ],
+  [
+   "SOL",
+   "93.18",
+   1.58,
+   -7.72
+  ],
+  [
+   "XRP",
+   "1.276",
+   2.89,
+   -3.56
+  ],
+  [
+   "ADA",
+   "0.1898",
+   1.32,
+   -7.59
+  ],
+  [
+   "DOGE",
+   "0.0751",
+   1.96,
+   -4.09
+  ]
+ ],
+ "g": {
+  "mcap": "2.60 T",
+  "dom": "59.90%",
+  "fg": "35/100",
+  "fg_label": "FEAR",
+  "etf": "102.8 B",
+  "oi": "$318.3B",
+  "oi_ch": "+10.75%",
+  "liq": "$49.8M",
+  "alt": "48/100",
+  "sentiment": "Market +0.91% in 24h, −2.99% in 7 days. BTC −3.81% on the week. Altcoin Season Index: 48 of 100.",
+  "takeaway": "a green day after a red week. Every major coin is down over 7 days, SOL weakest at −7.72%; ETH held up best at −2.20%. Fear &amp; Greed is 35 (Fear)."
+ },
+ "news": [
+  [
+   "SECURITY",
+   "Binance: $6.3B hack began with a fake job offer",
+   "Binance says North Korea-linked attackers spent five months on the Oct 29 breach, starting with a fake recruitment test. It has replaced 98% of affected assets; customers bear no losses."
+  ],
+  [
+   "BITCOIN",
+   "Tether says it holds 150,000 BTC",
+   "CEO Paolo Ardoino says 50,000 BTC more than its reserve report shows are held as company investments. The extra coins are not independently verified and are not new purchases."
+  ],
+  [
+   "TOKENIZATION",
+   "Tesla and SpaceX block OKX-ICE token stocks",
+   "Six more companies, incl. Amazon and Netflix, objected to their shares trading on the planned OKX-ICE tokenized-stock venue. The total is now 56 companies."
+  ]
+ ],
+ "news_sources": "Binance via Yahoo Finance, crypto.news, Yahoo Finance, Decrypt, CoinMarketCap"
+}
