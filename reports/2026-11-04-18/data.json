@@ -1,0 +1,34 @@
+{
+ "date": "4 NOV 2026",
+ "datedot": "04 · NOV · 2026",
+ "asof": "DATA AS OF 17:59 (CET)",
+ "kick": "DEMOCRATS SWEEP CONGRESS, BITCOIN RECLAIMS $80K",
+ "coins": [
+  ["BTC", "80,439", 3.58, -0.11],
+  ["ETH", "2,433", 5.95, 4.27],
+  ["BNB", "718.92", 3.11, -3.86],
+  ["SOL", "96.70", 3.54, -4.30],
+  ["XRP", "1.314", 2.89, 0.14],
+  ["ADA", "0.1985", 4.32, -1.65],
+  ["DOGE", "0.0776", 3.20, -1.84]
+ ],
+ "g": {
+  "mcap": "2.70 T",
+  "dom": "60.06%",
+  "fg": "43/100",
+  "fg_label": "NEUTRAL",
+  "etf": "102.8 B",
+  "oi": "$346.8B",
+  "oi_ch": "-4.62%",
+  "liq": "$402.5M",
+  "alt": "49/100",
+  "sentiment": "Market +3.56% in 24h, −0.33% in 7 days. BTC −0.11% on the week. Altcoin Season Index: 49 of 100.",
+  "takeaway": "every major coin is green, ETH leads with +5.95%. Over 7 days only ETH (+4.27%) and XRP (+0.14%) are up; SOL is weakest at −4.30%. Fear &amp; Greed rose to 43 (Neutral) from 35."
+ },
+ "news": [
+  ["POLITICS", "Democrats sweep Congress, BTC tops $80K", "Bitcoin fell to a seven-week low near $75,600 as midterm results came in, then reclaimed $80,000 at the Wall Street open. Democrats now hold leverage over the stalled CLARITY Act."],
+  ["DERIVATIVES", "$378M of shorts liquidated in one hour", "CoinGlass data: $466M in positions were liquidated in a single hour, 81% of them shorts, as BTC broke $80K. 24-hour liquidations reached $915M across 117,000+ traders."],
+  ["SECURITY", "Binance hack: $2.85B frozen or intercepted", "Binance says attackers began with a fake coding test. Privacy Cash paused new deposits after about $1.2M of theft-linked ETH and SOL reached its pools (Elliptic)."]
+ ],
+ "news_sources": "Yahoo Finance, CryptoPotato, crypto.news, TokenPost, The Defiant, CoinMarketCap"
+}
