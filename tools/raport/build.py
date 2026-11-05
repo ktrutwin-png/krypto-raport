@@ -33,7 +33,9 @@ SKY = f'<svg class="sky" viewBox="0 0 460 280"><polyline fill="none" stroke="{A}
 
 def head(big=True):
     tr = f'<div class="tr"><div class="nick">@erl.grey83</div>SYSTEM ONLINE<br>NEON MARKET FEED<br>{DATEDOT}{"<br><br><span style=color:"+A+">SWIPE LEFT ▸ MORE</span>" if big else ""}</div>'
-    if big:
+    if big and D.get("hook"):  # wzrost 5.11.2026: na slajdzie 1 duzy hook zamiast stalego "CRYPTO REPORT"
+        t = f'<div class="t1 t2" style="margin-top:14px;font-size:64px;line-height:1.02;max-width:610px;letter-spacing:-1px">{D["hook"]}</div><div style="font-size:24px;letter-spacing:8px;font-weight:300;margin-top:14px">CRYPTO REPORT · {DATE}</div><div class="lbl" style="color:{A}">{ASOF}</div>'
+    elif big:
         t = f'<div class="t1" style="margin-top:12px;font-size:104px">CRYPTO</div><div class="t1 t2" style="font-size:104px">REPORT</div><div style="font-size:34px;letter-spacing:10px;font-weight:300;margin-top:12px">{DATE}</div><div class="lbl" style="color:{A}">{ASOF}</div>'
     else:
         t = f'<div class="t1" style="font-size:84px;margin-top:10px">CRYPTO <span class="t2">REPORT</span></div>'
