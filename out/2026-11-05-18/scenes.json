@@ -1,0 +1,49 @@
+{
+ "date": "05.11.2026",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "big": "-$4,000",
+   "sub": "BITCOIN IN 2 HOURS",
+   "move": "in",
+   "say": "Bitcoin lost more than four thousand dollars in about two hours today. It slid from above eighty thousand to around seventy six thousand, down roughly five percent in a day."
+  },
+  {
+   "img": "s2.jpg",
+   "big": "-3.9%",
+   "sub": "NASDAQ TECH ROUT",
+   "move": "out",
+   "say": "The trigger, according to market reports, was a selloff in chip and A I stocks. The Nasdaq fell as much as three point nine percent, and crypto followed."
+  },
+  {
+   "img": "s3.jpg",
+   "big": "$700M+",
+   "sub": "LEVERAGE WIPED OUT",
+   "move": "up",
+   "say": "Leverage made it worse. Reportedly more than seven hundred million dollars in crypto positions were liquidated over the day, mostly traders betting on higher prices."
+  },
+  {
+   "img": "s4.jpg",
+   "big": "$2,265",
+   "sub": "ETHER DOWN 7%",
+   "move": "down",
+   "say": "Ether took a bigger hit. It dropped about seven percent in twenty four hours to around two thousand two hundred sixty five dollars, below the two thousand three hundred level."
+  },
+  {
+   "img": "s5.jpg",
+   "big": "+1.7%",
+   "sub": "GOLD AT $4,127",
+   "move": "in",
+   "say": "Meanwhile gold went the other way. It rose about one point seven percent to roughly four thousand one hundred twenty seven dollars an ounce, as money looked for safety."
+  },
+  {
+   "img": "s6.jpg",
+   "big": "34",
+   "sub": "FEAR",
+   "move": "out",
+   "say": "The Fear and Greed index sits at thirty four, in fear. Is this a dip or the start of something bigger? Tell me below, and follow for the facts every day."
+  }
+ ]
+}
