@@ -1,0 +1,13 @@
+{ "date": "05.11.2026", "mood": "uplift", "handle": "@erl.grey83",
+  "scenes": [
+  {"img": "s1.jpg", "big": "WELCOME", "sub": "CRYPTO × GOLD", "move": "in",
+   "say": "Welcome to the channel. Crypto and gold, the real numbers, in under a minute a day."},
+  {"img": "s2.jpg", "big": "BTC", "sub": "WHAT MOVED & WHY", "move": "out",
+   "say": "Bitcoin, Ether and the coins that move the market. What happened today, and why it matters."},
+  {"img": "s3.jpg", "big": "GOLD", "sub": "THE OLDEST SAFE HAVEN", "move": "up",
+   "say": "Gold, the oldest safe haven. When crypto shakes, we watch where the money goes."},
+  {"img": "s4.jpg", "big": "FACTS", "sub": "NO HYPE · NO HOT TIPS", "move": "down",
+   "say": "No hype, no hot tips, no promises. Just facts, checked against more than one source."},
+  {"img": "s5.jpg", "big": "DAILY", "sub": "NEW REPORT EVERY DAY", "move": "in",
+   "say": "A new report every single day. Crypto or gold, which one are you watching? Tell me below, and subscribe for the facts every day."}
+  ]}
