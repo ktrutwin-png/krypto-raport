@@ -81,7 +81,9 @@ CSS = f"""*{{box-sizing:border-box;margin:0;padding:0}}body{{width:{W}px;height:
 .glitch:before{{color:{MG};transform:translate(-5px,2px);opacity:.7;mix-blend-mode:screen}}.glitch:after{{color:{CY};transform:translate(5px,-2px);opacity:.7;mix-blend-mode:screen}}"""
 FONT = '<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;800;900&display=swap" rel="stylesheet">'
 def top(left): return f'<div class="top"><span class="nm" style="font-size:24px">{left}</span><span class="nc" style="font-size:30px;letter-spacing:0">@erl.grey83</span></div>'
-def foot(right="SWIPE ▸"): return f'<div class="foot"><span class="nc">FACTS, NOT HYPE</span><span class="nm">{right}</span></div><div style="position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:15px;color:#9ab">For information only, not investment advice.</div>'
+def foot(right=None):
+    right = right or D.get("swipe", "SWIPE ▸")
+    return f'<div class="foot"><span class="nc">FACTS, NOT HYPE</span><span class="nm">{right}</span></div><div style="position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:15px;color:#9ab">For information only, not investment advice.</div>'
 
 def spark(pts, w=900, h=150):
     mn, mx = min(pts), max(pts); xs = [i * w / (len(pts) - 1) for i in range(len(pts))]

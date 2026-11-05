@@ -17,3 +17,8 @@ Nowe pola: `"btc7d"` (ok. 8-12 cen BTC z 7 dni z CoinGecko get-coin-market-chart
 ## Tla AI (znak rozpoznawczy: postac "The Watcher")
 Folder `tools/raport/bg/` - tla wygenerowane AI (bez tekstu/logo). Ustaw w data.json `"bg": "watcher_01.png"` (szablon sam znajdzie plik w bg/). Z tlem AI wykres BTC na slajdzie 1 jest ukryty, zeby nie zaslanial postaci. `"bgpos"` (domyslnie "12% center") przesuwa kadr.
 Kiedy w bg/ jest kilka plikow, uzywaj ich po kolei (dzien miesiaca modulo liczba plikow).
+
+## Raport jako film z muzyka (od 5.11.2026, domyslnie)
+Po `build.py` uruchom `python3 tools/raport/video.py reports/RRRR-MM-DD-18 <nastroj>` -> `report.mp4` (ok. 17,5 s, 1080x1920) + `cover.jpg`.
+Nastroj muzyki wg dnia: tense (spadki/hack/likwidacje), uplift (wzrosty), gold (zloto/Fed/makro), calm (spokojny dzien).
+W data.json ustaw `"swipe": "FOLLOW @ERL.GREY83"` (w filmie nie ma przesuwania). Publikacja: Windsor `create_video_post` (Reel, share_to_feed true).
