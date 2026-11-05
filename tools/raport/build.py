@@ -49,8 +49,14 @@ def globe(cx, cy, r, seed):
 SEED = sum(map(ord, DATE))
 def background(dim=0.0, horizon=1000):
     if D.get("bg"):
-        src = D["bg"] if D["bg"].startswith("http") else "file://" + os.path.abspath(os.path.join(OUT, D["bg"]))
-        return f'<div style="position:absolute;inset:0;background:url(\'{src}\') center/cover"></div><div style="position:absolute;inset:0;background:linear-gradient(180deg,#05010fdd 0%,#05010f88 45%,#05010f55 70%,#05010fcc 100%)"></div><div class="scan"></div>'
+        if D["bg"].startswith("http"): src = D["bg"]
+        else:
+            import base64
+            f = D["bg"] if os.path.isabs(D["bg"]) else os.path.join(OUT, D["bg"])
+            if not os.path.exists(f): f = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bg", os.path.basename(D["bg"]))
+            src = "data:image/png;base64," + base64.b64encode(open(f, "rb").read()).decode()
+        pos = D.get("bgpos", "12% center")
+        return f'<div style="position:absolute;inset:0;background:url(\'{src}\') {pos}/cover no-repeat"></div><div style="position:absolute;inset:0;background:linear-gradient(180deg,#05010f99 0%,#05010f33 40%,#05010f22 65%,#05010fcc 100%)"></div><div style="position:absolute;inset:0;background:#05010f;opacity:{dim}"></div><div class="scan"></div>'
     return f'''<svg style="position:absolute;top:0;left:0" width="{W}" height="{H}"><defs>
 <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a0230"/><stop offset=".55" stop-color="#3a0660"/><stop offset=".72" stop-color="{MG}" stop-opacity=".55"/><stop offset=".8" stop-color="#05010f"/></linearGradient>
 <radialGradient id="gl"><stop offset="0" stop-color="{CY}" stop-opacity=".35"/><stop offset="1" stop-color="{CY}" stop-opacity=".05"/></radialGradient></defs>
@@ -85,7 +91,7 @@ def spark(pts, w=900, h=150):
 # ---------- slajd 1: hook + BTC
 hs = 118 if len(HOOK) <= 18 else 96 if len(HOOK) <= 30 else 80
 btc = coins[0]; eth = coins[1]
-sp = f'<div class="lbl" style="font-size:18px;text-shadow:0 0 6px #000">BTC · 7 DAYS</div><div style="margin-top:8px">{spark(D["btc7d"])}</div>' if D.get("btc7d") else ""
+sp = f'<div class="lbl" style="font-size:18px;text-shadow:0 0 6px #000">BTC · 7 DAYS</div><div style="margin-top:8px">{spark(D["btc7d"])}</div>' if D.get("btc7d") and not D.get("bg") else ""
 s1 = background() + top("◉ LIVE · " + DATE) + f'''
 <div class="panel" style="top:130px;left:60px;right:60px;padding:36px 44px">
  <div class="lbl">{KICK}</div>

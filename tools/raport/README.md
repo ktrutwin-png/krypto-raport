@@ -13,3 +13,7 @@ Bez pola `hook` slajd wygląda jak dawniej.
 `build.py` robi 3 slajdy **1080x1350 (4:5)** w neonowym stylu (cyjan = krypto, roz = alarm, zolty = wnioski/zloto), haslo "FACTS, NOT HYPE" na kazdym slajdzie.
 Nowe pola: `"btc7d"` (ok. 8-12 cen BTC z 7 dni z CoinGecko get-coin-market-chart, do wykresu na slajdzie 1), `"bg"` (opcjonalne tlo AI bez tekstu, plik obok data.json albo URL; bez niego rysowane jest neonowe miasto).
 `kick` = krotki podtytul (max ~40 znakow). Stary kwadratowy szablon: `build_old_square.py`.
+
+## Tla AI (znak rozpoznawczy: postac "The Watcher")
+Folder `tools/raport/bg/` - tla wygenerowane AI (bez tekstu/logo). Ustaw w data.json `"bg": "watcher_01.png"` (szablon sam znajdzie plik w bg/). Z tlem AI wykres BTC na slajdzie 1 jest ukryty, zeby nie zaslanial postaci. `"bgpos"` (domyslnie "12% center") przesuwa kadr.
+Kiedy w bg/ jest kilka plikow, uzywaj ich po kolei (dzien miesiaca modulo liczba plikow).
