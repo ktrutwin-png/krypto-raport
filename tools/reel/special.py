@@ -40,7 +40,7 @@ def horror(n, sr):
         for det in (-.006, .006):
             ph = 2 * np.pi * f * (1 + det) * t
             dr += a * (np.sin(ph) + .5 * (2 * ((f * (1 + det) * t) % 1) - 1))
-    dr = _lp(dr, 1100, sr) * (.75 + .25 * np.sin(2 * np.pi * .13 * t)) * .09
+    dr = _lp(dr, 1100, sr) * (.75 + .25 * np.sin(2 * np.pi * .13 * t)) * .13
     m.add(dr * _env(n, sr * 2, sr * 2), 0, .45); m.add(dr * _env(n, sr * 2, sr * 2), 0, .55)
     # 2) wiatr / szum grozy
     wind = _lp(rng.standard_normal(n), 900, sr) * (.5 + .5 * np.sin(2 * np.pi * .07 * t + 1)) * .05
@@ -81,7 +81,7 @@ def horror(n, sr):
         boom = np.sin(2 * np.pi * np.cumsum(60 * np.exp(-k * 3) + 28) / sr) * np.exp(-k * 2) * .6
         return s + _lp(hit, 3000, sr) + boom
     for x in [0.05] + list(np.arange(8.0, T - 2.5, 8.0)):
-        b = braam(); m.add(b, x, .45, 1.0); m.add(b, x + .012, .55, 1.0)
+        b = braam(); m.add(b, x, .45, 1.5); m.add(b, x + .012, .55, 1.5)
 
     # 6) upiorna pozytywka (minor + tryton, rozstrojona) w wysokim rejestrze
     mel = [587.3, 554.4, 415.3, 0, 587.3, 523.3, 370.0, 0, 466.2, 440.0, 311.1, 0, 587.3, 0, 415.3, 0]
@@ -94,7 +94,9 @@ def horror(n, sr):
             s = (np.sin(ph) + .4 * np.sin(2.76 * ph) + .2 * np.sin(5.4 * ph)) * np.exp(-k * 3) * .1
             m.add(s, x, .65)
         x += step; i += 1
-    return [m.L, m.R]
+    # ciezar: nasycenie (lekki przester) calosci
+    pk = max(abs(m.L).max(), abs(m.R).max()) or 1
+    return [np.tanh(2.2 * m.L / pk), np.tanh(2.2 * m.R / pk)]
 
 
 # ---------------------------------------------------------------- NIEBO
