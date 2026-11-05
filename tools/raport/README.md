@@ -22,3 +22,7 @@ Kiedy w bg/ jest kilka plikow, uzywaj ich po kolei (dzien miesiaca modulo liczba
 Po `build.py` uruchom `python3 tools/raport/video.py reports/RRRR-MM-DD-18 <nastroj>` -> `report.mp4` (ok. 17,5 s, 1080x1920) + `cover.jpg`.
 Nastroj muzyki wg dnia: tense (spadki/hack/likwidacje), uplift (wzrosty), gold (zloto/Fed/makro), calm (spokojny dzien).
 W data.json ustaw `"swipe": "FOLLOW @ERL.GREY83"` (w filmie nie ma przesuwania). Publikacja: Windsor `create_video_post` (Reel, share_to_feed true).
+
+## Lektor (od 5.11.2026)
+W folderze ze slajdami zapisz `narration.json` = lista 3 tekstow po angielsku (slajd 1: hook i "dlaczego", slajd 2: 3 newsy z wyjasnieniem, slajd 3: tydzien, wniosek, pytanie do komentarzy + follow). Liczby slownie lub prosto ("eighty thousand dollars"), skroty literami ("X R P"). Fakty z zastrzezeniem, bez porad.
+Glos: `tools/reel/voice/en_US-joe-medium.onnx` (+ .onnx.json) - pobierz jak w `tools/reel/README.md` jesli brak. `python3 video.py <dir> <nastroj>` - czas slajdow wg dlugosci narracji (~35-50 s), muzyka sciszana pod glosem.
