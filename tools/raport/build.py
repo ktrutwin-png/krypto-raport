@@ -76,6 +76,7 @@ CSS = f"""*{{box-sizing:border-box;margin:0;padding:0}}body{{width:{W}px;height:
 .lbl{{font-size:22px;letter-spacing:5px;color:#9ef}}
 .top{{position:absolute;top:48px;left:60px;right:60px;display:flex;justify-content:space-between;font-weight:800;letter-spacing:5px}}
 .foot{{position:absolute;bottom:44px;left:60px;right:60px;display:flex;justify-content:space-between;font-weight:800;font-size:22px;letter-spacing:5px}}
+.hook{{color:#eafcff;text-shadow:0 0 6px {CY}66,0 2px 0 #05010f}}
 .glitch{{position:relative}}.glitch:before,.glitch:after{{content:attr(data-t);position:absolute;left:0;top:0}}
 .glitch:before{{color:{MG};transform:translate(-5px,2px);opacity:.7;mix-blend-mode:screen}}.glitch:after{{color:{CY};transform:translate(5px,-2px);opacity:.7;mix-blend-mode:screen}}"""
 FONT = '<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;800;900&display=swap" rel="stylesheet">'
@@ -95,7 +96,7 @@ sp = f'<div class="lbl" style="font-size:18px;text-shadow:0 0 6px #000">BTC · 7
 s1 = background() + top("◉ LIVE · " + DATE) + f'''
 <div class="panel" style="top:130px;left:60px;right:60px;padding:36px 44px">
  <div class="lbl">{KICK}</div>
- <div class="glitch orb nc" data-t="{HOOK}" style="font-weight:900;font-size:{hs}px;line-height:1.02;margin-top:14px">{HOOK}</div>
+ <div class="orb hook" style="font-weight:900;font-size:{hs}px;line-height:1.02;margin-top:14px">{HOOK}</div>
  <div class="lbl" style="margin-top:18px;color:#fbe">{ASOF}</div></div>
 <div class="panel pm" style="top:1010px;left:60px;right:60px;padding:24px 44px;display:flex;justify-content:space-between;align-items:center">
  <div><div class="lbl" style="color:#fbe">BITCOIN</div><div class="orb" style="font-weight:900;font-size:64px">${btc[1]}</div></div>
