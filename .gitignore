@@ -1,1 +1,3 @@
 tools/reel/voice/
+__pycache__/
+*.pyc
