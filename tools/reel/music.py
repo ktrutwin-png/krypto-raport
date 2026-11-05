@@ -2,8 +2,9 @@
 Uzycie: python3 music.py <czas_s> [nastroj]
 Nastroje:
   calm    - spokojny (dzien bez wielkich ruchow, edukacja CRYPTO 101, WEEK IN 30s)
-  tense   - napiecie, ciemny moll, puls (spadki, krach, hack, likwidacje, CLAIM CHECK)
-  uplift  - energiczny, dur, szybszy (wzrosty, rekordy, BIGGEST MOVE w gore)
+  tense   - HORROR (szef 5.11.2026): drastyczna muzyka jak z horroru - niski dysonansowy dron, bicie serca,
+            piszczace smyczki, uderzenia "braam", upiorna pozytywka (spadki, krach, hack, likwidacje)
+  uplift  - NIEBIANSKA, ANIELSKA (szef 5.11.2026): chor "aaa", harfa, dzwoneczki, jasny dur (wzrosty, wszystko na zielono)
   gold    - cieply, dostojny, wolny (GOLD vs DOLLAR, Fed, makro)
 Wynik: melody.wav (potem efekt i miks jak w README)."""
 import numpy as np, wave, sys
@@ -36,15 +37,17 @@ def kick():
 def bass(f, d):
     t = np.arange(int(sr * d)) / sr; return (np.sin(2*np.pi*f/2*t) + .3*np.sin(2*np.pi*f*t)) * np.exp(-t * 3) * .18
 t = 0; k = 0
-while t < dur + 1:
+while mood not in ("tense", "uplift") and t < dur + 1:
     ch, mel = CFG["chords"][k % 4]; add(pad(ch, bar + .8), t)
     for i, f in enumerate(mel):
         if f: add(pluck(f), t + i * eighth, pan=.35 + .3 * ((i % 3) / 2))
     if CFG["kick"] and t > bar * .99:
         for b in range(4): add(kick(), t + b * beat, g=1.0); add(bass(ch[0], beat * .9), t + b * beat + beat / 2, g=1.0)
     t += bar; k += 1
+if mood in ("tense", "uplift"):
+    import special; out = special.render(mood, n, sr)
 x = np.stack(out, 1)[:int(sr * (dur + .5))]
-fi, fo = int(sr * 1.5), int(sr * 2.5); x[:fi] *= np.linspace(0, 1, fi)[:, None]; x[-fo:] *= np.linspace(1, 0, fo)[:, None]
+fi, fo = int(sr * (.03 if mood in ("tense", "uplift") else 1.5)), int(sr * 2.5); x[:fi] *= np.linspace(0, 1, fi)[:, None]; x[-fo:] *= np.linspace(1, 0, fo)[:, None]
 x /= abs(x).max(); x *= .9
 w = wave.open("melody.wav", "wb"); w.setnchannels(2); w.setsampwidth(2); w.setframerate(sr); w.writeframes((x * 32767).astype(np.int16).tobytes()); w.close()
 print("melody.wav", mood, f"{dur}s")

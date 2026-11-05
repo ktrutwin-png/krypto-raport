@@ -75,7 +75,9 @@ run(["ffmpeg", "-y", *inp, "-filter_complex", chain + f"{last}format=yuv420p[v]"
 # dzwiek: lektor + muzyka sciszana pod glosem
 run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", "_l.txt", "-af", f"atrim=0:{T}", "_vo.wav"])
 run([sys.executable, os.path.join(REEL, "music.py"), str(T + 1), CFG.get("mood", "calm")])
-run(["ffmpeg", "-y", "-i", "melody.wav", "-af", "lowpass=f=3500,aecho=0.8:0.55:380|760:0.3|0.2", "_mel.wav"])
+FX = {"tense": "lowpass=f=6000,aecho=0.8:0.6:310|690:0.35|0.25",          # horror: ciemny, duzo pogłosu
+      "uplift": "highpass=f=70,aecho=0.8:0.75:140|290|560|1100:0.38|0.3|0.22|0.15"}  # niebo: jasny, katedralny pogłos
+run(["ffmpeg", "-y", "-i", "melody.wav", "-af", FX.get(CFG.get("mood", "calm"), "lowpass=f=3500,aecho=0.8:0.55:380|760:0.3|0.2"), "_mel.wav"])
 mix = ("[0]aresample=44100,aformat=channel_layouts=stereo,volume=0.55[m];[1]aresample=44100,aformat=channel_layouts=stereo,"
        "equalizer=f=140:t=q:w=1:g=3,asplit[v1][v2];[m][v1]sidechaincompress=threshold=0.015:ratio=5:attack=30:release=600:makeup=1[duck];"
        "[duck][v2]amix=inputs=2:normalize=0:weights=1 1.3,loudnorm=I=-14:TP=-1.5:LRA=7[out]")
