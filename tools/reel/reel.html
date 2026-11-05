@@ -3,7 +3,7 @@
 <script src="prices.js"></script>
 <script>
 const cv=document.getElementById('c'),g=cv.getContext('2d');
-const TEAL='#4fd1c5',PINK='#ff7aa8',RED='#ff4d6d',GRN='#3dffa8',F="Inter, 'DejaVu Sans', sans-serif";
+const TEAL='#00f0ff',PINK='#ff2bd6',GOLD='#ffe600',RED='#ff4d6d',GRN='#3dffa8',F="Inter, 'DejaVu Sans', sans-serif";
 let S=[[0,7.2],[7.2,18],[18,27],[27,38.7],[38.7,50.6],[50.6,56.9]],T=57.5;
 const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),lerp=(a,b,t)=>a+(b-a)*t;
 const eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
@@ -11,17 +11,23 @@ function rnd(s){s=Math.sin(s*127.1+311.7)*43758.5453;return s-Math.floor(s)}
 const fmt=n=>Math.round(n).toLocaleString('en-US');
 function txt(s,x,y,size,col,a=1,al='left',w=800,glow=0){g.save();g.globalAlpha=cl(a);g.font=`${w} ${size}px ${F}`;g.textAlign=al;g.textBaseline='alphabetic';g.fillStyle=col;if(glow){g.shadowColor=col;g.shadowBlur=glow}g.fillText(s,x,y);g.restore()}
 function rr(x,y,w,h,r){g.beginPath();g.moveTo(x+r,y);g.arcTo(x+w,y,x+w,y+h,r);g.arcTo(x+w,y+h,x,y+h,r);g.arcTo(x,y+h,x,y,r);g.arcTo(x,y,x+w,y,r);g.closePath()}
-function card(x,y,w,h,col,a=1,fillA=.55){g.save();g.globalAlpha=cl(a);rr(x,y,w,h,18);const gr=g.createLinearGradient(x,y,x+w,y+h);gr.addColorStop(0,'rgba(5,45,45,'+fillA+')');gr.addColorStop(1,'rgba(50,10,35,'+fillA+')');g.fillStyle=gr;g.fill();g.lineWidth=2.5;g.strokeStyle=col;g.shadowColor=col;g.shadowBlur=22;g.stroke();g.restore()}
+function card(x,y,w,h,col,a=1,fillA=.55){g.save();g.globalAlpha=cl(a);rr(x,y,w,h,18);const gr=g.createLinearGradient(x,y,x+w,y+h);gr.addColorStop(0,'rgba(8,3,40,'+Math.max(fillA,.82)+')');gr.addColorStop(1,'rgba(30,3,50,'+Math.max(fillA,.82)+')');g.fillStyle=gr;g.fill();g.lineWidth=2.5;g.strokeStyle=col;g.shadowColor=col;g.shadowBlur=22;g.stroke();g.restore()}
 function glowLine(pts,col,wd,blur){g.save();g.strokeStyle=col;g.lineWidth=wd;g.lineJoin='round';g.lineCap='round';g.shadowColor=col;g.shadowBlur=blur;g.beginPath();pts.forEach((p,i)=>i?g.lineTo(p[0],p[1]):g.moveTo(p[0],p[1]));g.stroke();g.restore()}
 
 function bg(t){
  const gr=g.createLinearGradient(0,0,0,1920);gr.addColorStop(0,'#070818');gr.addColorStop(1,'#04070e');g.fillStyle=gr;g.fillRect(0,0,1080,1920);
  // orbs
  [[0,.3,TEAL,700],[1,.05,PINK,650],[.5,1,'#0a8a80',800]].forEach(([fx,fy,c,r],i)=>{const x=fx*1080+Math.sin(t*.4+i*2)*120,y=fy*1920+Math.cos(t*.33+i)*140;const o=g.createRadialGradient(x,y,0,x,y,r);o.addColorStop(0,c+'55');o.addColorStop(1,c+'00');g.fillStyle=o;g.fillRect(0,0,1080,1920)});
+ // neon skyline (styl cyberpunk @erl.grey83 od 5.11.2026)
+ const sky=g.createLinearGradient(0,500,0,1100);sky.addColorStop(0,'rgba(58,6,96,0)');sky.addColorStop(1,'rgba(255,43,214,.35)');g.fillStyle=sky;g.fillRect(0,500,1080,600);
+ [[PINK,.3,3,0.55],[TEAL,.65,9,1]].forEach(([col,op,sd,par])=>{let x=-20-((t*6*par)%40),i=0;while(x<1100){const w=50+rnd(sd*100+i)*80,h=1100*(.14+rnd(sd*100+i+.5)*.28),y=1100-h;g.fillStyle='#07031a';g.fillRect(x,y,w,h);g.strokeStyle=col;g.globalAlpha=op;g.lineWidth=2;g.strokeRect(x,y,w,h);
+  for(let wy=y+14;wy<1090;wy+=22)for(let wx=x+8;wx<x+w-8;wx+=16){const q=rnd(wx*.37+wy*.11+sd);if(q<.28){g.globalAlpha=.35+.6*Math.abs(Math.sin(t*.8+q*40));g.fillStyle=[TEAL,PINK,GOLD,TEAL][Math.floor(q*14)%4];g.fillRect(wx,wy,7,10)}}
+  g.globalAlpha=1;x+=w+4+rnd(sd*100+i+.7)*14;i++}});
+ g.fillStyle=PINK;g.shadowColor=PINK;g.shadowBlur=18;g.fillRect(0,1098,1080,4);g.shadowBlur=0;
  // perspective grid floor
  g.save();g.beginPath();g.rect(0,1100,1080,820);g.clip();
  const hz=1100,off=(t*.5)%1;
- g.strokeStyle='rgba(79,209,197,.22)';g.lineWidth=2;
+ g.strokeStyle='rgba(255,43,214,.35)';g.lineWidth=2;
  for(let i=-14;i<=14;i++){g.beginPath();g.moveTo(540+i*40,hz);g.lineTo(540+i*260,1920);g.stroke()}
  for(let k=0;k<14;k++){const p=Math.pow((k+off)/14,2.2);const y=hz+p*820;g.globalAlpha=.15+p*.5;g.beginPath();g.moveTo(0,y);g.lineTo(1080,y);g.stroke()}
  g.restore();

@@ -8,3 +8,8 @@
 Pole `"hook"` w data.json: duży nagłówek slajdu 1 (max ok. 7 słów, liczba albo pytanie, WIELKIE LITERY, np. "$466M OF SHORTS GONE IN 1 HOUR").
 Zastępuje stały napis "CRYPTO REPORT" (ten idzie małą linijką pod hookiem z datą). `"kick"` zostaje jako krótki podtytuł nad hookiem.
 Bez pola `hook` slajd wygląda jak dawniej.
+
+## Styl CYBERPUNK (od 5.11.2026) - domyslny
+`build.py` robi 3 slajdy **1080x1350 (4:5)** w neonowym stylu (cyjan = krypto, roz = alarm, zolty = wnioski/zloto), haslo "FACTS, NOT HYPE" na kazdym slajdzie.
+Nowe pola: `"btc7d"` (ok. 8-12 cen BTC z 7 dni z CoinGecko get-coin-market-chart, do wykresu na slajdzie 1), `"bg"` (opcjonalne tlo AI bez tekstu, plik obok data.json albo URL; bez niego rysowane jest neonowe miasto).
+`kick` = krotki podtytul (max ~40 znakow). Stary kwadratowy szablon: `build_old_square.py`.

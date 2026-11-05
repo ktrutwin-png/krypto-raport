@@ -14,3 +14,7 @@ Copy this folder to a scratchpad, then:
    `ffmpeg -framerate 30 -i f/%05d.jpg -i mix.m4a -shortest -c:v libx264 -pix_fmt yuv420p -crf 21 -movflags +faststart reel.mp4`
 6. Cover = a frame around 5-6 s (jpg). Push mp4 + cover + caption.txt to `reports/YYYY-MM-DD-reel/`, publish with Windsor `create_video_post` (raw GitHub URLs, share_to_feed true).
 Caption: hook first line, 3 facts, a question for comments, "Follow @erl.grey83", disclaimer, 5-8 hashtags.
+
+## Styl CYBERPUNK (od 5.11.2026)
+Tlo `bg()` ma neonowe miasto (cyjan #00f0ff + roz #ff2bd6 + zolte okna), rozowa linie horyzontu i siatke. Karty sa ciemne (min. 82% krycia), zeby tekst byl czytelny.
+Zasady wzrostu z zadania 12:00 (hook w 1 s, 20-35 s, filar dnia) maja pierwszenstwo przed czasami scen w tym README.

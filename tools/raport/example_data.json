@@ -3,7 +3,7 @@
  "date": "3 NOV 2026",
  "datedot": "03 · NOV · 2026",
  "asof": "DATA AS OF 20:18 (CET)",
- "kick": "BINANCE: $6.3B HACK BEGAN WITH A FAKE JOB OFFER",
+ "kick": "BINANCE: $6.3B HACK BEGAN WITH A FAKE JO",
  "coins": [
   [
    "BTC",
@@ -78,5 +78,17 @@
    "Six more companies, incl. Amazon and Netflix, objected to their shares trading on the planned OKX-ICE tokenized-stock venue. The total is now 56 companies."
   ]
  ],
- "news_sources": "Binance via Yahoo Finance, crypto.news, Yahoo Finance, Decrypt, CoinMarketCap"
+ "news_sources": "Binance via Yahoo Finance, crypto.news, Yahoo Finance, Decrypt, CoinMarketCap",
+ "btc7d": [
+  80.6,
+  79.9,
+  78.1,
+  77.5,
+  77.4,
+  76.2,
+  75.6,
+  77.9,
+  79.1,
+  80.4
+ ]
 }
