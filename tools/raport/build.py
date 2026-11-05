@@ -55,7 +55,7 @@ def background(dim=0.0, horizon=1000):
             f = D["bg"] if os.path.isabs(D["bg"]) else os.path.join(OUT, D["bg"])
             if not os.path.exists(f): f = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bg", os.path.basename(D["bg"]))
             src = "data:image/png;base64," + base64.b64encode(open(f, "rb").read()).decode()
-        pos = D.get("bgpos", "12% center")
+        pos = D.get("bgpos", "15% center")
         return f'<div style="position:absolute;inset:0;background:url(\'{src}\') {pos}/cover no-repeat"></div><div style="position:absolute;inset:0;background:linear-gradient(180deg,#05010f99 0%,#05010f33 40%,#05010f22 65%,#05010fcc 100%)"></div><div style="position:absolute;inset:0;background:#05010f;opacity:{dim}"></div><div class="scan"></div>'
     return f'''<svg style="position:absolute;top:0;left:0" width="{W}" height="{H}"><defs>
 <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a0230"/><stop offset=".55" stop-color="#3a0660"/><stop offset=".72" stop-color="{MG}" stop-opacity=".55"/><stop offset=".8" stop-color="#05010f"/></linearGradient>
