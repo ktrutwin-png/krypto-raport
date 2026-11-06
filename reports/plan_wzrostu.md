@@ -1,5 +1,7 @@
 # PLAN WZROSTU @erl.grey83 (od 7.11.2026) – czytają go zadania Reel 10:00, Raport 18:00, YouTube Shorts i Opiekun
 
+**JEDYNY obowiązujący plan publikacji na IG i YT (szef 6.11.2026: „wszystko inne odrzucamy, działaj zgodnie z tym planem”). Ocena wyników 7.12.2026.**
+
 Diagnoza 6.11: IG 101 obserwujących, zasięg spoza obserwujących ~17%, skip 50–100%, 0 udostępnień, 0 zapisów. YT 7 subskrybentów, 0 wyświetleń.
 Algorytm (2026): najmocniejszy sygnał = udostępnienia w DM, potem obejrzenie do końca i zapisy; skip w 1–2 s zabija zasięg.
 
