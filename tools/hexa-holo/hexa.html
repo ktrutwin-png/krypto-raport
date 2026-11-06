@@ -103,7 +103,7 @@ void main(){
   float talk=uSpeak*exp(-pow((position.y-(2.4-mod(uTime*3.2,4.4)))*3.,2.));
   float back=nd<0.?.5:1.;
   vec3 wn=normalize(mat3(modelMatrix)*normal);float key=pow(max(0.,dot(wn,normalize(vec3(-.55,.55,.75)))),2.);
-  vB=(.2+key*.95+fres*1.35+lines*.35+sweep*(.55+uWork*1.2)+talk*1.3+uListen*.25)*back*mix(.55,1.,f)*(.75+.25*sin(uTime*2.+aRnd.y*30.));
+  vB=(.3+key*.95+fres*1.35+lines*.35+sweep*(.55+uWork*1.2)+talk*1.3+uListen*.25)*back*mix(.55,1.,f)*(.75+.25*sin(uTime*2.+aRnd.y*30.));
   vB*=uFlick;
   vC=mix(uTint,vec3(.85,.98,1.),clamp(fres*1.2+talk,0.,1.));
   if(aRnd.y>.985) vC=mix(vC,vec3(1.,.82,.25),.85);
@@ -135,7 +135,14 @@ const hair=new T.LineSegments(hg,new T.ShaderMaterial({uniforms:U,transparent:tr
 bust.add(hair);
 const og=new T.BufferGeometry();og.setAttribute('position',new T.BufferAttribute(new Float32Array(b64(HEXA_OV).buffer),3));
 og.setIndex(new T.BufferAttribute(new Uint16Array(b64(HEXA_OI).buffer),1));
-const occ=new T.Mesh(og,new T.MeshBasicMaterial({colorWrite:false,side:T.DoubleSide}));occ.renderOrder=-1;bust.add(occ);
+og.computeVertexNormals();
+const occ=new T.Mesh(og,new T.ShaderMaterial({uniforms:U,side:T.DoubleSide,blending:T.AdditiveBlending,depthWrite:true,transparent:true,
+ vertexShader:`varying vec3 vN;varying vec3 vV;varying float vY;void main(){vec4 mv=modelViewMatrix*vec4(position,1.);vN=normalize(normalMatrix*normal);vV=normalize(-mv.xyz);vY=position.y;gl_Position=projectionMatrix*mv;}`,
+ fragmentShader:`uniform vec3 uTint;uniform float uTime,uForm,uSpeak,uListen,uWork,uFlick;varying vec3 vN;varying vec3 vV;varying float vY;
+ void main(){float f=pow(1.-abs(dot(vN,vV)),2.2);float scan=.5+.5*sin(vY*60.-uTime*2.);
+  float band=exp(-pow((vY-(mod(uTime*.55,4.6)-1.6))*4.,2.));
+  float k=(.02+f*.32+band*.12+scan*.015+uSpeak*.15+uListen*.06+uWork*.1)*smoothstep(-1.45,-.7,vY)*uForm*uFlick;
+  gl_FragColor=vec4(mix(uTint,vec3(.8,.96,1.),f*.5)*k,1.);}`}));occ.renderOrder=-1;bust.add(occ);
 
 /* ---------- face light (no eyes, no mouth) ---------- */
 function radTex(stops){const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d'),gr=x.createRadialGradient(64,64,0,64,64,64);
@@ -214,8 +221,8 @@ const comp=new T.EffectComposer(R);comp.addPass(new T.RenderPass(scene,cam));
 const bloom=new T.UnrealBloomPass(new T.Vector2(256,256),.95,.5,.16);comp.addPass(bloom);
 
 function resize(){const w=innerWidth,h=innerHeight;R.setSize(w,h,false);comp.setSize(w,h);cam.aspect=w/h;
-  const fitH=6.6, fitW=4.6, d=Math.max(fitH/2/Math.tan(cam.fov*Math.PI/360), fitW/2/Math.tan(cam.fov*Math.PI/360)/cam.aspect);
-  cam.position.set(0,.9,d);cam.lookAt(0,1.25,0);cam.updateProjectionMatrix();U.uPx.value=DPR*h/900}
+  const fitH=7.0, fitW=4.9, d=Math.max(fitH/2/Math.tan(cam.fov*Math.PI/360), fitW/2/Math.tan(cam.fov*Math.PI/360)/cam.aspect);
+  cam.position.set(0,.9,d);cam.lookAt(0,1.15,0);cam.updateProjectionMatrix();U.uPx.value=DPR*h/900}
 addEventListener('resize',resize);resize();
 
 /* ---------- states ---------- */
@@ -263,7 +270,7 @@ function loop(){
   waves.forEach((w,i)=>{const ph=(t*.8+i/3)%1;w.scale.setScalar(1.2+ph*1.6+U.uMic.value*.15);w.material.opacity=(1-ph)*.6*U.uListen.value});
   const a=dg.attributes.position.array;for(let i=0;i<DN;i++){a[i*3+1]+=dv[i]*dt*(1+U.uWork.value*3);if(a[i*3+1]>4)a[i*3+1]=-2}dg.attributes.position.needsUpdate=true;
   hud.rotation.y=Math.sin(t*.05)*.08;
-  cam.position.x=Math.sin(t*.17)*.25;cam.lookAt(0,1.25,0);
+  cam.position.x=Math.sin(t*.17)*.25;cam.lookAt(0,1.15,0);
   bloom.strength=.9+sp*.5+U.uListen.value*.2;
   comp.render();requestAnimationFrame(loop);
 }

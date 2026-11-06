@@ -102,7 +102,7 @@ void main(){
   float talk=uSpeak*exp(-pow((position.y-(2.4-mod(uTime*3.2,4.4)))*3.,2.));
   float back=nd<0.?.5:1.;
   vec3 wn=normalize(mat3(modelMatrix)*normal);float key=pow(max(0.,dot(wn,normalize(vec3(-.55,.55,.75)))),2.);
-  vB=(.2+key*.95+fres*1.35+lines*.35+sweep*(.55+uWork*1.2)+talk*1.3+uListen*.25)*back*mix(.55,1.,f)*(.75+.25*sin(uTime*2.+aRnd.y*30.));
+  vB=(.3+key*.95+fres*1.35+lines*.35+sweep*(.55+uWork*1.2)+talk*1.3+uListen*.25)*back*mix(.55,1.,f)*(.75+.25*sin(uTime*2.+aRnd.y*30.));
   vB*=uFlick;
   vC=mix(uTint,vec3(.85,.98,1.),clamp(fres*1.2+talk,0.,1.));
   if(aRnd.y>.985) vC=mix(vC,vec3(1.,.82,.25),.85);
@@ -134,7 +134,14 @@ const hair=new T.LineSegments(hg,new T.ShaderMaterial({uniforms:U,transparent:tr
 bust.add(hair);
 const og=new T.BufferGeometry();og.setAttribute('position',new T.BufferAttribute(new Float32Array(b64(HEXA_OV).buffer),3));
 og.setIndex(new T.BufferAttribute(new Uint16Array(b64(HEXA_OI).buffer),1));
-const occ=new T.Mesh(og,new T.MeshBasicMaterial({colorWrite:false,side:T.DoubleSide}));occ.renderOrder=-1;bust.add(occ);
+og.computeVertexNormals();
+const occ=new T.Mesh(og,new T.ShaderMaterial({uniforms:U,side:T.DoubleSide,blending:T.AdditiveBlending,depthWrite:true,transparent:true,
+ vertexShader:`varying vec3 vN;varying vec3 vV;varying float vY;void main(){vec4 mv=modelViewMatrix*vec4(position,1.);vN=normalize(normalMatrix*normal);vV=normalize(-mv.xyz);vY=position.y;gl_Position=projectionMatrix*mv;}`,
+ fragmentShader:`uniform vec3 uTint;uniform float uTime,uForm,uSpeak,uListen,uWork,uFlick;varying vec3 vN;varying vec3 vV;varying float vY;
+ void main(){float f=pow(1.-abs(dot(vN,vV)),2.2);float scan=.5+.5*sin(vY*60.-uTime*2.);
+  float band=exp(-pow((vY-(mod(uTime*.55,4.6)-1.6))*4.,2.));
+  float k=(.02+f*.32+band*.12+scan*.015+uSpeak*.15+uListen*.06+uWork*.1)*smoothstep(-1.45,-.7,vY)*uForm*uFlick;
+  gl_FragColor=vec4(mix(uTint,vec3(.8,.96,1.),f*.5)*k,1.);}`}));occ.renderOrder=-1;bust.add(occ);
 
 /* ---------- face light (no eyes, no mouth) ---------- */
 function radTex(stops){const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d'),gr=x.createRadialGradient(64,64,0,64,64,64);
