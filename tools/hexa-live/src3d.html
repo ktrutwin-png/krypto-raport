@@ -1,0 +1,141 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Hexa 3D</title>
+<style>
+html,body{margin:0;height:100%;background:#02060f;overflow:hidden;touch-action:none}
+canvas{position:fixed;inset:0;width:100%;height:100%;display:block}
+#bg{background:radial-gradient(120% 70% at 50% 42%,#0a1d3c 0%,#04101f 45%,#02060f 100%)}
+</style></head><body>
+<canvas id="bg"></canvas><canvas id="gl"></canvas><canvas id="pt"></canvas>
+<script>
+const APP=/*APP*/false;
+const IMG="data:image/webp;base64,/*IMG*/", DEP="data:image/png;base64,/*DEP*/";
+const cv=document.getElementById('gl');
+const gl=cv.getContext('webgl',{alpha:true,premultipliedAlpha:false,antialias:true,depth:true});
+const VSRC=`attribute vec2 a;attribute float rnd;
+uniform sampler2D uDep,uImg;uniform float uT,uYaw,uPitch,uAsp,uZ,uPs,uJaw,uSpeak,uScat;
+varying vec2 vUv;varying float vA,vZ,vE;
+void main(){
+  vec2 uv=a; vec3 D=texture2D(uDep,uv).rgb;
+  float d=D.r, det=D.g-.5, hair=D.b;
+  float body=smoothstep(.20,.34,d);
+  vec3 p=vec3((uv.x-.5)*1.125,(.5-uv.y)*2.,(d-.62)*uZ+det*.10*body);
+  p.x+=hair*(sin(uT*1.1+uv.y*14.)*.010+sin(uT*2.3+uv.y*31.)*.003)*(1.+uSpeak*.6);
+  p.y+=sin(uT*1.25)*.006*smoothstep(.55,1.,uv.y);
+  vec2 mo=(uv-vec2(.501,.651))/vec2(.10,.045);
+  p.y-=uJaw*.012*smoothstep(1.,.2,length(mo))*step(0.,mo.y);
+#ifdef PTS
+  float edge=1.-body; float s=fract(rnd*7.13+uT*(.03+rnd*.05));
+  p+=vec3(sin(rnd*40.+uT*.7),s*1.6,cos(rnd*23.+uT*.5))*(edge*(.06+uScat*.25)+uScat*.05)*(.4+rnd);
+#endif
+  vec3 c=vec3(0.,.22,.0); vec3 q=p-c;
+  float cy=cos(uYaw),sy=sin(uYaw),cp=cos(uPitch),sp=sin(uPitch);
+  q=vec3(cy*q.x+sy*q.z,q.y,-sy*q.x+cy*q.z); q=vec3(q.x,cp*q.y-sp*q.z,sp*q.y+cp*q.z); p=q+c;
+  float w=3.2-p.z; float f=3.2;
+  gl_Position=vec4(p.x*f/w/uAsp,p.y*f/w,-p.z*.3,1.);
+  vUv=uv; vZ=p.z; vE=body;
+#ifdef PTS
+  gl_PointSize=uPs*f/w*(.7+rnd*.8);
+  float lum=dot(texture2D(uImg,uv).rgb,vec3(.3,.55,.15));
+  vA=smoothstep(.08,.35,lum)*mix(.35,1.,step(.15,s))*mix(1.,.6,body)*step(.55,fract(rnd*13.7));
+#else
+  vA=body;
+#endif
+}`;
+const FSRC=`precision mediump float;uniform sampler2D uImg;uniform highp float uT;uniform float uFlick,uGl,uGlY,uOp;uniform vec3 uTint;uniform vec2 uRes;
+varying vec2 vUv;varying float vA,vZ,vE;
+void main(){
+#ifdef PTS
+  vec2 c=gl_PointCoord-.5; float r=dot(c,c); if(r>.25) discard;
+#endif
+  vec2 uv=vUv; if(abs(gl_FragCoord.y/uRes.y-uGlY)<.012) uv.x+=uGl;
+  vec3 col=texture2D(uImg,uv+vec2(.0009,0)).rgb*vec3(1,0,0)+texture2D(uImg,uv).rgb*vec3(0,1,0)+texture2D(uImg,uv-vec2(.0009,0)).rgb*vec3(0,0,1);
+  float scan=.88+.12*sin(gl_FragCoord.y*1.25+uT*5.);
+  float l=dot(col,vec3(.3,.55,.15));
+#ifdef PTS
+  gl_FragColor=vec4((col*.8+uTint*.35)*uFlick,vA*(1.-r*3.)*.55);
+#else
+  col=mix(col,col*.55+uTint*l*.75,.25)*scan*uFlick;
+  float a=vA*uOp*mix(.55,1.,smoothstep(.04,.35,l));
+  gl_FragColor=vec4(col*(1.+vZ*.25),a);
+#endif
+}`;
+function sh(t,s){const x=gl.createShader(t);gl.shaderSource(x,s);gl.compileShader(x);if(!gl.getShaderParameter(x,gl.COMPILE_STATUS))throw gl.getShaderInfoLog(x);return x}
+function mk(def){const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,def+VSRC));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,def+FSRC));gl.linkProgram(pr);
+  if(!gl.getProgramParameter(pr,gl.LINK_STATUS))throw gl.getProgramInfoLog(pr);const U={};
+  ['uDep','uImg','uT','uYaw','uPitch','uAsp','uZ','uPs','uJaw','uSpeak','uScat','uFlick','uGl','uGlY','uTint','uRes','uOp'].forEach(n=>U[n]=gl.getUniformLocation(pr,n));
+  return {pr,U,a:gl.getAttribLocation(pr,'a'),r:gl.getAttribLocation(pr,'rnd')}}
+const PM=mk(''),PP=mk('#define PTS\n');
+// mesh (continuous face surface)
+const MW=160,MH=284;const mv=[],mr=[],mi=[];
+for(let j=0;j<MH;j++)for(let i=0;i<MW;i++){mv.push(i/(MW-1),j/(MH-1));mr.push(0)}
+for(let j=0;j<MH-1;j++)for(let i=0;i<MW-1;i++){const k=j*MW+i;mi.push(k,k+1,k+MW,k+1,k+MW+1,k+MW)}
+function buf(arr,T){const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new T(arr),gl.STATIC_DRAW);return b}
+const MB=buf(mv,Float32Array),MR=buf(mr,Float32Array);const MI=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,MI);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(mi),gl.STATIC_DRAW);const MN=mi.length;
+// sparkle points over the surface + dissolving edges
+const GW=APP?150:180,GH=Math.round(GW*16/9);const pts=[],rr=[];
+for(let j=0;j<GH;j++)for(let i=0;i<GW;i++){pts.push((i+Math.random())/GW,(j+Math.random())/GH);rr.push(Math.random())}
+const N=pts.length;const PB=buf(pts,Float32Array),PR=buf(rr,Float32Array);
+function bind(P,b,r){gl.useProgram(P.pr);gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.enableVertexAttribArray(P.a);gl.vertexAttribPointer(P.a,2,gl.FLOAT,false,0,0);
+  if(P.r>=0){gl.bindBuffer(gl.ARRAY_BUFFER,r);gl.enableVertexAttribArray(P.r);gl.vertexAttribPointer(P.r,1,gl.FLOAT,false,0,0)}}
+const TX=[];let ready=0;
+function tex(src,unit){const i=new Image();i.onload=()=>{const t=gl.createTexture();TX[unit]=t;gl.activeTexture(gl.TEXTURE0+unit);gl.bindTexture(gl.TEXTURE_2D,t);
+  gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,i);[gl.TEXTURE_WRAP_S,gl.TEXTURE_WRAP_T].forEach(k=>gl.texParameteri(gl.TEXTURE_2D,k,gl.CLAMP_TO_EDGE));
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);ready++};i.src=src}
+tex(IMG,0);tex(DEP,1);
+for(const P of [PM,PP]){gl.useProgram(P.pr);gl.uniform1i(P.U.uImg,0);gl.uniform1i(P.U.uDep,1)}
+gl.enable(gl.BLEND);
+// live face video
+let vidOn=0;const vd=document.createElement('video');vd.muted=true;vd.loop=true;vd.playsInline=true;vd.setAttribute('playsinline','');
+vd.addEventListener('playing',()=>{vidOn=1});vd.addEventListener('error',()=>{vidOn=0});
+if(APP){vd.src='hexa_vid.mp4';const go=()=>vd.play().catch(()=>{});go();addEventListener('pointerdown',go,{once:true});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)vd.pause();else go()})}
+// background bokeh + rising sparks
+const bg=document.getElementById('bg').getContext('2d'),pc=document.getElementById('pt'),px=pc.getContext('2d');
+const B=Array.from({length:26},()=>({x:Math.random(),y:Math.random(),r:8+Math.random()*30,v:.004+Math.random()*.01,a:.05+Math.random()*.12}));
+const P=Array.from({length:60},()=>({x:Math.random(),y:Math.random(),r:.6+Math.random()*2,v:.01+Math.random()*.03,ph:Math.random()*6}));
+const DPR=Math.min(APP?1.5:2,devicePixelRatio||1);
+function resize(){const w=innerWidth,h=innerHeight;for(const c of [cv,pc,document.getElementById('bg')]){c.width=w*DPR;c.height=h*DPR}gl.viewport(0,0,cv.width,cv.height)}
+addEventListener('resize',resize);resize();
+// state api (same as before)
+const TINT={idle:[.25,.7,1],listen:[.3,.82,1],speak:[.5,.88,1],work:[1,.75,.3],alert:[.72,.4,1]};
+let state='idle',micExt=-1;const tint=[.25,.7,1],S={listen:0,work:0,alert:0};let sp=0;
+let look=null,lookT=0,drag=null;
+window.hexa={setState:s=>{state=TINT[s]?s:'idle'},setMic:x=>{micExt=x},look:(x,y)=>{look=[x,y];lookT=performance.now()}};
+addEventListener('pointerdown',e=>{drag=[e.clientX,e.clientY,yawT,pitchT];look=[e.clientX/innerWidth,e.clientY/innerHeight];lookT=performance.now()});
+addEventListener('pointermove',e=>{if(drag){yawT=drag[2]+(e.clientX-drag[0])/innerWidth*1.6;pitchT=drag[3]+(e.clientY-drag[1])/innerHeight*1.0;lookT=performance.now()}});
+addEventListener('pointerup',()=>{drag=null});
+let gyro=[0,0],g0=null;
+addEventListener('deviceorientation',e=>{if(e.beta==null)return;if(!g0)g0=[e.gamma,e.beta];gyro=[(e.gamma-g0[0])/40,(e.beta-g0[1])/50];g0[0]+=(e.gamma-g0[0])*.004;g0[1]+=(e.beta-g0[1])*.004});
+let yaw=0,pitch=0,yawT=0,pitchT=0,last=performance.now(),t0=last,nextGl=2,glT=0;
+function frame(now){
+  const dt=Math.min(.05,(now-last)/1000);last=now;const t=(now-t0)/1000;const k=1-Math.pow(.03,dt);
+  ['listen','work','alert'].forEach(n=>S[n]+=((state===n?1:0)-S[n])*k);
+  const voice=state==='speak'?Math.max(0,(Math.sin(t*11)+Math.sin(t*6.7+1)+Math.sin(t*17.3))/3)*(Math.sin(t*1.9)>-.55?1:.1):0;sp+=(voice-sp)*(1-Math.pow(.0005,dt));
+  const tt=TINT[state];for(let i=0;i<3;i++)tint[i]+=(tt[i]-tint[i])*k;
+  const nowMs=performance.now();
+  if(!drag){const active=look&&nowMs-lookT<3500;
+    const ty=active?(look[0]-.5)*.9:Math.sin(t*.31)*.16+Math.sin(t*.13)*.08, tp=active?(look[1]-.45)*.5:Math.sin(t*.23)*.06;
+    yawT+=(ty-yawT)*(1-Math.pow(.3,dt));pitchT+=(tp-pitchT)*(1-Math.pow(.3,dt))}
+  yawT=Math.max(-.55,Math.min(.55,yawT));pitchT=Math.max(-.35,Math.min(.35,pitchT));
+  yaw+=(yawT+gyro[0]*.5-yaw)*(1-Math.pow(.02,dt));pitch+=(pitchT+gyro[1]*.4-pitch)*(1-Math.pow(.02,dt));
+  let gA=0,gY=-1,fl=.97+.03*Math.sin(t*37);if(t>nextGl){glT=.1+Math.random()*.12;nextGl=t+3+Math.random()*5}if(glT>0){glT-=dt;gA=(Math.random()-.5)*.02;gY=Math.random();fl=.85+Math.random()*.2}
+  // background
+  const bc=bg.canvas,W=bc.width,H=bc.height;bg.clearRect(0,0,W,H);
+  for(const o of B){o.y-=o.v*dt;if(o.y<-.1){o.y=1.1;o.x=Math.random()}const x=(o.x+yaw*.05)*W,y=o.y*H,r=o.r*DPR;const g=bg.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,`rgba(${tint.map(c=>Math.round(60+c*120)).join(',')},${o.a})`);g.addColorStop(1,'rgba(0,0,0,0)');bg.fillStyle=g;bg.fillRect(x-r,y-r,2*r,2*r)}
+  if(ready===2){
+    if(vidOn&&vd.readyState>=2){gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,TX[0]);try{gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,vd)}catch(e){vidOn=0}}
+    gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+    const set=P=>{const U=P.U;gl.uniform1f(U.uT,t);gl.uniform1f(U.uYaw,yaw);gl.uniform1f(U.uPitch,pitch);gl.uniform1f(U.uAsp,cv.width/cv.height);
+      gl.uniform1f(U.uZ,1.1);gl.uniform1f(U.uPs,(cv.height/GH)*1.1);gl.uniform1f(U.uJaw,Math.min(1,sp*1.6));gl.uniform1f(U.uSpeak,sp);
+      gl.uniform1f(U.uScat,S.work*.6+S.alert*.4);gl.uniform1f(U.uOp,.93);
+      gl.uniform1f(U.uFlick,fl);gl.uniform1f(U.uGl,gA);gl.uniform1f(U.uGlY,gY);gl.uniform3f(U.uTint,tint[0],tint[1],tint[2]);gl.uniform2f(U.uRes,cv.width,cv.height)};
+    bind(PM,MB,MR);set(PM);gl.enable(gl.DEPTH_TEST);gl.depthMask(true);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,MI);gl.drawElements(gl.TRIANGLES,MN,gl.UNSIGNED_SHORT,0);
+    bind(PP,PB,PR);set(PP);gl.depthMask(false);gl.blendFunc(gl.SRC_ALPHA,gl.ONE);gl.drawArrays(gl.POINTS,0,N);gl.depthMask(true);
+  }
+  const PW=pc.width,PH=pc.height;px.clearRect(0,0,PW,PH);
+  for(const p of P){p.y-=p.v*dt*(1+S.work*3);if(p.y<-.05){p.y=1.05;p.x=Math.random()}const a=.25+.35*Math.sin(t*1.5+p.ph);px.fillStyle=`rgba(${tint.map(c=>Math.round(140+c*115)).join(',')},${a})`;px.beginPath();px.arc((p.x+yaw*.12)*PW,p.y*PH,p.r*DPR,0,7);px.fill()}
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+</script></body></html>
