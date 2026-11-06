@@ -27,11 +27,12 @@ def _series(n, direction, seed):
 
 def candles(out, L, direction="up", label="", w=960, h=460, seed=7, fps=30, n=28):
     O, C, Hh, Lw = _series(n, direction, seed)
-    pad_l, pad_r, pad_t, pad_b = 26, 150, 26, 26
+    fnt, fnt_s = _font(34), _font(20)
+    tagw = ImageDraw.Draw(Image.new("RGBA", (8, 8))).textlength(label or "000.0", font=fnt)
+    pad_l, pad_r, pad_t, pad_b = 26, int(max(150, tagw + 60)), 26, 26
     lo_, hi_ = Lw.min() - 1, Hh.max() + 1
     Y = lambda v: pad_t + (hi_ - v) / (hi_ - lo_) * (h - pad_t - pad_b)
     cw = (w - pad_l - pad_r) / n
-    fnt, fnt_s = _font(34), _font(20)
     base = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(base)
     d.rounded_rectangle([0, 0, w - 1, h - 1], 18, fill=(4, 10, 30, 170), outline=CYAN + (150,), width=2)
     for gy in range(1, 5):
