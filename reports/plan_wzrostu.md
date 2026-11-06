@@ -21,6 +21,10 @@ Algorytm (2026): najmocniejszy sygnał = udostępnienia w DM, potem obejrzenie d
 - IG: pierwsza linia = fraza wyszukiwana (np. „Bitcoin price today: …”, „Gold price news: …”), potem 2–3 punkty, CTA, pytanie, źródła, disclaimer. 3–5 hashtagów niszowych (#bitcoin #crypto #btc #gold #cryptonews), nie więcej.
 - YT: tytuł zaczyna się od słowa kluczowego („Bitcoin…”, „Gold…”, „XRP…”), max 60 znaków + „#shorts”; pierwsze 2 linie opisu powtarzają frazę; 8–12 tagów.
 
+## Tematy (szef 6.11.2026)
+- Każdy film: krypto + wiadomości ze świata + banki + złoto. Szukaj newsów o bankach: banki centralne (Fed, EBC, BoJ, decyzje o stopach, zakupy złota przez banki centralne), duże banki i krypto (ETF-y, custody, stablecoiny, tokenizacja), regulacje (CLARITY Act, MiCA).
+- Raport 18:00 zawsze ma co najmniej jedną scenę o złocie i jedną o bankach/makro, jeśli był taki news w ciągu ostatnich 12 h.
+
 ## Kalendarz
 - 10:00 Reel wg filaru dnia (pon CLAIM CHECK, wt CRYPTO 101, śr ONE NUMBER + cheat sheet, czw GOLD vs DOLLAR, pt BIGGEST MOVE, sob MYTH vs FACT); niedziela Weekly Market Brief.
 - 10:23 i 18:23 ten sam film na YouTube Shorts.
