@@ -37,26 +37,49 @@ const cv=document.getElementById('stage'),gl=cv.getContext('webgl',{antialias:fa
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const VS=`attribute vec2 p;varying vec2 v;void main(){v=p*.5+.5;v.y=1.-v.y;gl_Position=vec4(p,0,1);}`;
 const FS=`precision highp float;varying vec2 v;
-uniform sampler2D uImg,uDep;uniform vec2 uRes,uImgSz;uniform float uT,uListen,uSpeak,uWork,uMic,uGl,uGlY,uFlick,uAlert;uniform vec3 uTint;
+uniform sampler2D uImg,uDep;uniform vec2 uRes,uImgSz;uniform float uT,uListen,uSpeak,uWork,uMic,uGl,uGlY,uFlick,uAlert,uBlink,uJaw;uniform vec3 uTint;uniform vec2 uHead,uGaze;
+const vec2 IS=vec2(864.,1536.);
 float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
 float n2(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
 void main(){
   // cover-fit the 9:16 portrait
   float ra=uRes.x/uRes.y, ia=uImgSz.x/uImgSz.y; vec2 uv=v;
   if(ra>ia){uv.y=(v.y-.5)*ia/ra+.5;}else{uv.x=(v.x-.5)*ra/ia+.5;}
-  vec3 D=texture2D(uDep,uv).rgb; float dep=D.r, hair=D.g, face=D.b;
-  // living motion: breathing, gentle head sway, hair drift, parallax drift
+  vec3 D=texture2D(uDep,uv).rgb; float dep=D.r, hair=D.g, hm=D.b;
   float t=uT;
-  vec2 drift=vec2(sin(t*.23),cos(t*.17))*.006;
-  vec2 q=uv+drift*(dep-.35);
-  q.y+= -dep*.0035*sin(t*1.25)*smoothstep(.55,1.,uv.y);                 // chest rises
-  q.x+= sin(t*.6)*.003*face;                                             // head sways
-  q+= hair*vec2(sin(t*1.3+uv.y*18.)*.0035,cos(t*1.1+uv.x*14.)*.002)*(.6+uSpeak*.6);
+  vec2 px=uv*IS; // pixel coords in the portrait
+  // ---- head turn & tilt (parallax by depth inside the head region) ----
+  vec2 q=uv;
+  q.x-= hm*(uHead.x*(.018+dep*.03));
+  q.y-= hm*(uHead.y*(.010+dep*.018));
+  // breathing + small drift
+  q.y+= -dep*.0035*sin(t*1.25)*smoothstep(.55,1.,uv.y);
+  q+= vec2(sin(t*.23),cos(t*.17))*.003*(dep-.35);
+  // hair drift
+  q+= hair*vec2(sin(t*1.3+uv.y*18.)*.003,cos(t*1.1+uv.x*14.)*.0018)*(.6+uSpeak*.6);
+  vec2 hp=q*IS; // head-space pixel
+  // ---- eyes: gaze + blink ----
+  vec2 E[2];E[0]=vec2(253.,719.);E[1]=vec2(404.,717.);vec2 ER[2];ER[0]=vec2(31.,13.);ER[1]=vec2(37.,14.);
+  for(int i=0;i<2;i++){
+    vec2 e=(hp-E[i])/ER[i];float r=length(e);
+    float m=smoothstep(1.,.45,r);
+    hp-= uGaze*vec2(7.,4.)*m;                        // iris follows the gaze
+    float lid=-1.15+2.3*uBlink;                       // lid line from top
+    float inLid=smoothstep(lid+.08,lid-.08,e.y)*smoothstep(1.25,.9,abs(e.x));
+    if(inLid>0.){hp=mix(hp,vec2(hp.x,E[i].y-ER[i].y*1.9+(e.y+1.)*2.),inLid*step(r,1.6));}
+  }
+  // ---- mouth: jaw drops while speaking ----
+  vec2 mo=(hp-vec2(292.,868.))/vec2(70.,60.);
+  float jaw=smoothstep(1.,.2,length(mo*vec2(1.,.8)))*step(0.,mo.y);
+  hp.y-= uJaw*9.*jaw;
+  float gap=exp(-pow((hp.y-868.)/3.5,2.))*smoothstep(1.,.3,abs(mo.x))*uJaw;
+  q=hp/IS;
   // glitch rows
   if(abs(uv.y-uGlY)<.012) q.x+=uGl;
   vec3 c;
   float ca=.0012+uGl*.08;
   c.r=texture2D(uImg,q+vec2(ca,0)).r; c.g=texture2D(uImg,q).g; c.b=texture2D(uImg,q-vec2(ca,0)).b;
+  c*=1.-gap*.75;
   float L=dot(c,vec3(.3,.5,.2));
   // sparkle: twinkling particles on bright skin/hair
   vec2 sp=floor(uv*uImgSz/2.);float tw=h(sp);float twk=pow(max(0.,sin(t*(2.+tw*4.)+tw*40.)),18.);
@@ -68,7 +91,7 @@ void main(){
   float sw=exp(-pow((uv.x+uv.y*.6)-mod(t*.22,2.6)+.3,2.)*90.);
   c+=vec3(.5,.85,1.)*sw*dep*.35;
   // speaking: soft pulse from mouth area + glow
-  float dm=distance(uv*vec2(ra<ia?1.:1.,1.),vec2(.33,.565));
+  float dm=distance(uv,vec2(.338,.565));
   c+=uTint*uSpeak*(.35*exp(-dm*9.)+.25*exp(-pow(dm*12.-mod(t*6.,6.),2.)))*1.2;
   // listening: rings around head reacting to voice
   float dh=distance(uv*vec2(1.,1.78),vec2(.42,.53*1.78));
@@ -92,7 +115,7 @@ function sh(t,s){const o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShade
 const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,VS));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,FS));gl.linkProgram(pr);gl.useProgram(pr);
 gl.bindBuffer(gl.ARRAY_BUFFER,gl.createBuffer());gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
 const ap=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(ap);gl.vertexAttribPointer(ap,2,gl.FLOAT,false,0,0);
-const U={};['uImg','uDep','uRes','uImgSz','uT','uListen','uSpeak','uWork','uMic','uGl','uGlY','uFlick','uAlert','uTint'].forEach(n=>U[n]=gl.getUniformLocation(pr,n));
+const U={};['uImg','uDep','uRes','uImgSz','uT','uListen','uSpeak','uWork','uMic','uGl','uGlY','uFlick','uAlert','uTint','uBlink','uJaw','uHead','uGaze'].forEach(n=>U[n]=gl.getUniformLocation(pr,n));
 function tex(src,unit,cb){const i=new Image();i.onload=()=>{const t=gl.createTexture();gl.activeTexture(gl.TEXTURE0+unit);gl.bindTexture(gl.TEXTURE_2D,t);
   gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,i);[gl.TEXTURE_WRAP_S,gl.TEXTURE_WRAP_T].forEach(k=>gl.texParameteri(gl.TEXTURE_2D,k,gl.CLAMP_TO_EDGE));
   gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);cb&&cb(i)};i.src=src}
@@ -114,7 +137,11 @@ let state='idle',demo=null,micExt=-1;const btns=[...document.querySelectorAll('.
 function setState(s){state=s;document.getElementById('status').textContent=LABEL[s];btns.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.s===s)))}
 btns.forEach(b=>b.addEventListener('click',()=>{clearTimeout(demo);setState(b.dataset.s)}));
 cv.addEventListener('click',()=>{clearTimeout(demo);setState('listen');demo=setTimeout(()=>{setState('speak');demo=setTimeout(()=>setState('idle'),3800)},2800)});
-window.hexa={setState:s=>{clearTimeout(demo);setState(LABEL[s]?s:'idle')},setMic:x=>{micExt=x}};
+let look=null,lookT=0;
+window.hexa={setState:s=>{clearTimeout(demo);setState(LABEL[s]?s:'idle')},setMic:x=>{micExt=x},look:(x,y)=>{look=[x,y];lookT=performance.now()}};
+addEventListener('pointermove',e=>{look=[e.clientX/innerWidth,e.clientY/innerHeight];lookT=performance.now()});
+addEventListener('pointerdown',e=>{look=[e.clientX/innerWidth,e.clientY/innerHeight];lookT=performance.now()});
+const head=[0,0],headT=[0,0],gaze=[0,0],gazeT=[0,0];let nextSac=1,nextBlink=2,blink=0,blinkPh=-1,headNext=0;
 
 const S={listen:0,speak:0,work:0,alert:0,mic:0},tint=[.25,.7,1];let sp=0,nextGl=2,glT=0,last=performance.now(),t0=last;
 function frame(now){
@@ -126,7 +153,20 @@ function frame(now){
   const tt=TINT[state];for(let i=0;i<3;i++)tint[i]+=(tt[i]-tint[i])*k;
   let gA=0,gY=-1,fl=.97+.03*Math.sin(t*37);
   if(!reduce){if(t>nextGl){glT=.1+Math.random()*.12;nextGl=t+3+Math.random()*5}if(glT>0){glT-=dt;gA=(Math.random()-.5)*.03;gY=Math.random();fl=.8+Math.random()*.25}}
+  // where she looks: finger (for 4 s after touch), the viewer while listening/speaking, otherwise wanders
+  const nowMs=performance.now();
+  if(look&&nowMs-lookT<4000){const lx=(look[0]-.38)*2.2,ly=(look[1]-.5)*2.2;gazeT[0]=Math.max(-1,Math.min(1,lx));gazeT[1]=Math.max(-1,Math.min(1,ly));headT[0]=gazeT[0]*.8;headT[1]=gazeT[1]*.6}
+  else if(state==='listen'||state==='speak'){if(t>nextSac){gazeT[0]=(Math.random()-.5)*.25;gazeT[1]=(Math.random()-.5)*.2;nextSac=t+.8+Math.random()*1.5}headT[0]=.15*Math.sin(t*.7);headT[1]=.1*Math.sin(t*.5)}
+  else{if(t>nextSac){gazeT[0]=(Math.random()-.45)*1.4;gazeT[1]=(Math.random()-.5)*.9;nextSac=t+1+Math.random()*2.5}
+    if(t>headNext){headT[0]=(Math.random()-.5)*1.4;headT[1]=(Math.random()-.5)*.8;headNext=t+3+Math.random()*4}}
+  if(state==='work'){headT[1]=-.4;gazeT[1]=-.7}
+  for(let i=0;i<2;i++){gaze[i]+=(gazeT[i]-gaze[i])*(1-Math.pow(.0000005,dt));head[i]+=(headT[i]-head[i])*(1-Math.pow(.25,dt))}
+  // blinking (more often when talking)
+  if(blinkPh<0&&t>nextBlink){blinkPh=0;nextBlink=t+2.2+Math.random()*4*(state==='speak'?.6:1)}
+  if(blinkPh>=0){blinkPh+=dt/0.17;blink=blinkPh<.5?blinkPh*2:2-blinkPh*2;if(blinkPh>=1){blinkPh=-1;blink=0}}
+  const jaw=Math.min(1,sp*1.6);
   if(ready===2){
+    gl.uniform1f(U.uBlink,reduce?0:blink);gl.uniform1f(U.uJaw,jaw);gl.uniform2f(U.uHead,reduce?0:head[0],reduce?0:head[1]);gl.uniform2f(U.uGaze,gaze[0],gaze[1]);
     gl.uniform2f(U.uRes,cv.width,cv.height);gl.uniform2f(U.uImgSz,iw,ih);gl.uniform1f(U.uT,reduce?0:t);
     gl.uniform1f(U.uListen,S.listen);gl.uniform1f(U.uSpeak,sp);gl.uniform1f(U.uWork,S.work);gl.uniform1f(U.uAlert,S.alert);gl.uniform1f(U.uMic,S.mic);
     gl.uniform1f(U.uGl,gA);gl.uniform1f(U.uGlY,gY);gl.uniform1f(U.uFlick,fl);gl.uniform3f(U.uTint,tint[0],tint[1],tint[2]);
