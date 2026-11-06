@@ -24,8 +24,8 @@ if not os.environ.get("KINO_VOICE") and not os.path.exists(os.path.join(VDIR, "e
         subprocess.run(["curl", "-sSfL", "-o", os.path.join(VDIR, f), "https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ryan/high/" + f], env=env)
 VOICE =os.environ.get("KINO_VOICE") or next((os.path.join(VDIR, v) for v in ("en_US-ryan-high.onnx", "en_US-joe-medium.onnx") if os.path.exists(os.path.join(VDIR, v))), "")
 PITCH = float(os.environ.get("KINO_PITCH", "0.9" if "ryan" in VOICE else "1.0"))
-W, H_, FPS, FADE = 1080, 1920, 30, 0.45
-CFG = json.load(open(os.path.join(D, "scenes.json"))); S = list(CFG["scenes"]); STYLE = CFG.get("style", "news")
+FPS, FADE = 30, 0.45
+CFG = json.load(open(os.path.join(D, "scenes.json"))); WIDE = CFG.get("format") == "landscape"; W, H_ = (1920, 1080) if WIDE else (1080, 1920); SS = 1.25 if WIDE else 2; S = list(CFG["scenes"]); STYLE = CFG.get("style", "news")
 HANDLE = CFG.get("handle", "@erl.grey83")
 if STYLE == "news":  # zgodnosc ze starym formatem scen (big/sub) -> naglowek u gory
     for s in S:
@@ -59,6 +59,7 @@ CSS = """<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter
  padding:26px 30px;font:400 64px/1.08 Anton;color:#fff;text-transform:uppercase;box-shadow:0 10px 40px rgba(0,0,0,.6)}
 .tk{display:inline-block;white-space:nowrap;height:64px;line-height:64px;padding:0 30px;background:rgba(4,8,22,.88);border-top:2px solid #2ad1ff;border-bottom:2px solid #2ad1ff;font:800 34px Inter;color:#fff;letter-spacing:1px}
 .tk .u{color:#3dff8f}.tk .d{color:#ff4d5e}
+.chap{position:absolute;top:150px;right:54px;font:800 22px Inter;letter-spacing:3px;color:#2ad1ff}
 .end{position:absolute;inset:0;background:rgba(3,5,14,.86);display:flex;flex-direction:column;align-items:center;justify-content:center}
 .end .a{font:400 76px Anton;color:#ffd23f;text-transform:uppercase;text-align:center;line-height:1.1}
 .end .b{font:700 40px Inter;color:#fff;margin-top:26px}
@@ -66,6 +67,10 @@ CSS = """<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter
 .big{position:absolute;bottom:560px;width:100%;text-align:center;font:900 150px Inter;color:#fff;letter-spacing:-2px;text-shadow:0 0 30px rgba(0,240,255,.35),0 6px 30px #000e}
 .csub{position:absolute;bottom:480px;width:100%;text-align:center;font:800 40px Inter;letter-spacing:6px;color:#00f0ff;text-shadow:0 2px 14px #000}
 </style>"""
+CSS_L = """<style>.gt{height:100%;background:linear-gradient(90deg,rgba(2,4,14,.92),rgba(2,4,14,.62) 45%,rgba(2,4,14,.1) 75%)}.gb{height:300px}
+.hd{top:40px;left:80px}.dis{top:44px;right:70px}.wrap{top:140px;left:80px;right:auto;width:1050px}.head{font-size:96px}.sub{font-size:52px}
+.note{left:80px;right:auto;width:960px;bottom:150px;font-size:54px}.end .a{font-size:96px}.chap{position:absolute;top:40px;left:50%;transform:translateX(-50%);font:800 24px Inter;letter-spacing:4px;color:#2ad1ff}</style>"""
+if WIDE: CSS = CSS.replace("width:1080px;height:1920px", "width:1920px;height:1080px") + CSS_L
 
 async def overlays():
     from playwright.async_api import async_playwright
@@ -79,7 +84,7 @@ async def overlays():
         if CFG.get("ticker"):
             t = H.escape(CFG["ticker"]); t = re.sub(r"(▲[^·]*)", r'<span class="u">\1</span>', t); t = re.sub(r"(▼[^·]*)", r'<span class="d">\1</span>', t)
             await pg.set_viewport_size({"width": 6000, "height": 70})
-            await pg.set_content(CSS.replace("width:1080px;height:1920px", "width:6000px;height:70px") + f'<div class="tk" id="tk">{t} &nbsp;·&nbsp; {t} &nbsp;·&nbsp;</div>')
+            await pg.set_content(CSS.replace(f"width:{W}px;height:{H_}px", "width:6000px;height:70px") + f'<div class="tk" id="tk">{t} &nbsp;·&nbsp; {t} &nbsp;·&nbsp;</div>')
             await pg.wait_for_timeout(700); await (await pg.query_selector("#tk")).screenshot(path="_tk.png", omit_background=True)
             await pg.set_viewport_size({"width": W, "height": H_})
         for i, s in enumerate(S):
@@ -91,7 +96,7 @@ async def overlays():
                 await shot(body, f"_t{i}.png"); await shot("", f"_n{i}.png"); continue
             head = "<br>".join(rich(x) for x in s.get("head", []))
             chip = s.get("chip", ""); cls = "chip r" if chip.startswith(("▼", "-", "−")) else "chip"
-            body = ('<div class="wrap">' + (f'<div class="tag">{rich(s["tag"])}</div><br>' if s.get("tag") else "")
+            body = (f'<div class="chap">{rich(s["chap"])}</div>' if s.get("chap") else "") + ('<div class="wrap">' + (f'<div class="tag">{rich(s["tag"])}</div><br>' if s.get("tag") else "")
                     + f'<div class="head">{head}</div>' + (f'<div class="sub">{rich(s["sub"])}</div>' if s.get("sub") else "")
                     + (f'<div class="{cls}">{H.escape(chip)}</div>' if chip else "") + "</div>")
             await shot(body, f"_t{i}.png")
@@ -121,7 +126,7 @@ for i, (s, L) in enumerate(zip(S, DUR)):
     z, x, y = [e.format(L=L) for e in MOVES.get(s.get("move", "in" if i % 2 == 0 else "out"), MOVES["in"])]
     nt = max(0.6, L * 0.38)
     end = s.get("end")
-    flt = (f"[0]scale={W*2}:{H_*2}:force_original_aspect_ratio=increase,crop={W*2}:{H_*2},setsar=1,"
+    flt = (f"[0]scale={int(W*SS)}:{int(H_*SS)}:force_original_aspect_ratio=increase,crop={int(W*SS)}:{int(H_*SS)},setsar=1,"
            f"scale=w='{W}*({z})':h='{H_}*({z})':eval=frame:flags=bicubic,crop={W}:{H_}:x='{x}':y='{y}',"
            f"eq=contrast=1.07:saturation=1.12{',boxblur=18:2' if end else ''},format=rgba[bg];"
            + ("[bg]null[a];" if end else "[bg][1]overlay=0:0[a];")
@@ -132,12 +137,12 @@ for i, (s, L) in enumerate(zip(S, DUR)):
     if a and not end:   # ruchome swieczki (anim.py)
         import anim
         an = a if isinstance(a, dict) else {"type": "candles", "dir": str(a)}
-        bx = an.get("box", [60, 770, 960, 400])
+        bx = an.get("box", [1060, 260, 780, 420] if WIDE else [60, 770, 960, 400])
         anim.candles(f"_an{i}.mov", L, an.get("dir", "up"), an.get("label", ""), w=bx[2], h=bx[3], seed=7 + i)
         extra += ["-i", f"_an{i}.mov"]; flt += f";[{k}]format=rgba,fade=t=in:st=0.25:d=0.35:alpha=1[an];{cur}[an]overlay={bx[0]}:{bx[1]}[z1]"; cur = "[z1]"; k += 1
     if CFG.get("ticker") and not end and os.path.exists("_tk.png"):   # przewijany pasek z cenami
         extra += ["-loop", "1", "-t", str(L), "-i", "_tk.png"]
-        flt += f";{cur}[{k}]overlay=x='-mod((t+{i*3})*150,overlay_w/2)':y={CFG.get("ticker_y", 1188)}[z2]"; cur = "[z2]"; k += 1
+        flt += f";{cur}[{k}]overlay=x='-mod((t+{i*3})*150,overlay_w/2)':y={CFG.get("ticker_y", 990 if WIDE else 1188)}[z2]"; cur = "[z2]"; k += 1
     flt += f";{cur}format=yuv420p"
     run(["ffmpeg", "-y", "-loop", "1", "-framerate", str(FPS), "-t", str(L), "-i", s["img"], "-loop", "1", "-t", str(L), "-i", "_hd.png",
          "-loop", "1", "-t", str(L), "-i", f"_t{i}.png", "-loop", "1", "-t", str(L), "-i", f"_n{i}.png", *extra,
