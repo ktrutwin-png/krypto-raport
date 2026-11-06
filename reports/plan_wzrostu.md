@@ -21,6 +21,13 @@ Algorytm (2026): najmocniejszy sygnał = udostępnienia w DM, potem obejrzenie d
 - IG: pierwsza linia = fraza wyszukiwana (np. „Bitcoin price today: …”, „Gold price news: …”), potem 2–3 punkty, CTA, pytanie, źródła, disclaimer. 3–5 hashtagów niszowych (#bitcoin #crypto #btc #gold #cryptonews), nie więcej.
 - YT: tytuł zaczyna się od słowa kluczowego („Bitcoin…”, „Gold…”, „XRP…”), max 60 znaków + „#shorts”; pierwsze 2 linie opisu powtarzają frazę; 8–12 tagów.
 
+## STANDARD JAKOŚCI (szef 6.11.2026: „jesteś za to 100% odpowiedzialny… ruchome, przejrzyste, czytelne, dobrze tłumaczone przez lektora, jak profesjonalista”)
+- RUCH: każda klatka w ruchu (kamera, paralaksa, animowane wykresy/liczby); żadnego statycznego obrazu dłużej niż 1 s.
+- CZYTELNOŚĆ: nagłówek max 3 linie, duży kontrast, nic w strefach UI Instagrama (górne 220 px, dolne 380 px, prawy pas 140 px); napisy pod lektorem zsynchronizowane.
+- LEKTOR (angielski): tłumaczy CO się stało, DLACZEGO i CO TO ZNACZY dla widza, prostymi słowami; jedna myśl na scenę; liczby zaokrąglone; bez czytania ekranu.
+- KONTROLA przed publikacją: obejrzyj klatki 0, 25%, 50%, 75%, koniec; jeśli coś nieczytelne, ucięte albo statyczne – popraw i wyrenderuj ponownie. Wadliwego filmu nie publikuj.
+- Opiekun codziennie wybiera jedną rzecz, która najbardziej podniesie jakość, i ją wdraża.
+
 ## Tematy (szef 6.11.2026)
 - Każdy film: krypto + wiadomości ze świata + banki + złoto. Szukaj newsów o bankach: banki centralne (Fed, EBC, BoJ, decyzje o stopach, zakupy złota przez banki centralne), duże banki i krypto (ETF-y, custody, stablecoiny, tokenizacja), regulacje (CLARITY Act, MiCA).
 - Raport 18:00 zawsze ma co najmniej jedną scenę o złocie i jedną o bankach/makro, jeśli był taki news w ciągu ostatnich 12 h.
