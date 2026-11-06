@@ -1,0 +1,19 @@
+{
+ "date": "06.11.2026",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "style": "news",
+ "ticker": "BTC $75,904 ▼0.6% · ETH $2,234 ▼1.4% · GOLD $4,067 ▼1.1% · FEAR & GREED 31",
+ "scenes": [
+  {"img": "s1.jpg", "tag": "LIVE MARKET UPDATE", "head": ["BITCOIN $75,900", "*ETFS BLEED*", "*$430 MILLION*"], "chip": "▼ -2% ON THE WEEK", "anim": {"dir": "down", "label": "$75,904"}, "note": "THURSDAY'S SPOT ETF OUTFLOWS", "move": "in",
+   "say": "Bitcoin is stuck near seventy six thousand dollars, down two percent on the week, as spot bitcoin E T Fs reportedly lost four hundred thirty million dollars on Thursday."},
+  {"img": "s2.jpg", "head": ["BRAZIL:", "*NUBANK & MERCADO PAGO*", "*PAUSE CRYPTO*"], "sub": "DEPOSITS & WITHDRAWALS OFF", "note": "BOTH BLAME AN OUTSIDE PROVIDER", "move": "out",
+   "say": "In Brazil, Nubank and Mercado Pago reportedly paused crypto deposits and withdrawals today, and both point to an outside provider."},
+  {"img": "s3.jpg", "head": ["GOLD $4,067 -", "*SLIPS UNDER*", "*THE $4,070 FLOOR*"], "chip": "▼ -1.1%", "note": "INTRADAY LOW $4,028", "move": "up",
+   "say": "Gold fell about one percent to four thousand sixty seven dollars, slipping under the four thousand seventy floor."},
+  {"img": "s4.jpg", "head": ["ETHER $2,234", "*FLAT ON THE WEEK*"], "chip": "▼ -1.4% TODAY", "move": "down",
+   "say": "Ether trades near two thousand two hundred thirty, down on the day but flat over seven days."},
+  {"img": "s5.jpg", "head": ["FEAR & GREED 31", "*WATCH $75,000*"], "sub": "STILL IN FEAR", "note": "CAN BITCOIN HOLD $75K?", "move": "in",
+   "say": "Fear and greed sits at thirty one. Can bitcoin hold seventy five thousand? Tell me below. This is not financial advice, just data."}
+ ]
+}
