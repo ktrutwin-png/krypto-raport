@@ -130,7 +130,8 @@ for i, (s, L) in enumerate(zip(S, DUR)):
            f"scale=w='{W}*({z})':h='{H_}*({z})':eval=frame:flags=bicubic,crop={W}:{H_}:x='{x}':y='{y}',"
            f"eq=contrast=1.07:saturation=1.12{',boxblur=18:2' if end else ''},format=rgba[bg];"
            + ("[bg]null[a];" if end else "[bg][1]overlay=0:0[a];")
-           + f"[2]format=rgba,fade=t=in:st=0.05:d=0.28:alpha=1[t];[a][t]overlay=0:0[b];"
+           + (f"[2]format=rgba[t];" if i == 0 else f"[2]format=rgba,fade=t=in:st=0.05:d=0.28:alpha=1[t];")  # plan wzrostu: naglowek widoczny od klatki 0
+           + "[a][t]overlay=0:0[b];"
            f"[3]format=rgba,fade=t=in:st={nt:.2f}:d=0.3:alpha=1[n];[b][n]overlay=0:0,format=yuv420p")
     extra = []; k = 4; flt = flt.replace(",format=yuv420p", "[z0]", 1) if flt.endswith(",format=yuv420p") else flt; cur = "[z0]"
     a = s.get("anim")

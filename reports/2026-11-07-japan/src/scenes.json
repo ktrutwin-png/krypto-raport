@@ -1,0 +1,19 @@
+{
+ "date": "07.11.2026",
+ "style": "news",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $75,871 · ETH $2,238 · XRP $1.18 · SOL $90.12 · 128 SHINKIN BANKS OFFLINE IN WESTERN JAPAN",
+ "scenes": [
+  {"img": "s1.jpg", "tag": "BREAKING", "head": ["128 BANKS", "*OFFLINE IN JAPAN*"], "chip": "▼ 3,430 BRANCHES",
+   "say": "One hundred twenty eight banks in Japan went offline at once. A T Ms, counters and online banking, all frozen.", "move": "in"},
+  {"img": "s2.jpg", "head": ["WHY?", "*ONE DATA CENTER*", "*FAILED*"], "note": "NO SIGNS OF A HACK",
+   "say": "Why? A hardware fault at one shared data center in western Japan. Officials say there are no signs of a cyberattack.", "move": "out"},
+  {"img": "s3.jpg", "head": ["NOT A COLLAPSE", "*A SYSTEM FAILURE*"], "sub": "THE MONEY IS STILL THERE",
+   "say": "To be clear, these banks did not go bust. The money is there. People just could not reach it.", "move": "up"},
+  {"img": "s4.jpg", "head": ["AGAIN", "*3RD BIG OUTAGE*", "*SINCE 2023*"], "note": "JAN 2026: 140 CO-OPS DOWN",
+   "say": "And it keeps happening. A two day payment outage in twenty twenty three, and a hundred forty credit co-ops down this January.", "move": "down"},
+  {"img": "s5.jpg", "tag": "THE BIG QUESTION", "head": ["ONE SERVER", "*OR THOUSANDS*", "*OF NODES?*"], "note": "SEND THIS TO A FRIEND WHO HOLDS BTC",
+   "say": "Bitcoin runs on thousands of independent computers, with no single center to fail. One server, or thousands of nodes? Not financial advice, just data.", "move": "in"}
+ ]
+}

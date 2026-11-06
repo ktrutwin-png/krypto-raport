@@ -46,3 +46,4 @@ Algorytm (2026): najmocniejszy sygnał = udostępnienia w DM, potem obejrzenie d
 
 ## Postęp
 - 2026-11-06: IG 101, YT 7 (start planu)
+- 2026-11-07: dodatkowy Reel BREAKING (128 banków shinkin offline w Japonii) – wyjątek „duże wydarzenie” z planu; kino.py: nagłówek sceny 1 widoczny od klatki 0
