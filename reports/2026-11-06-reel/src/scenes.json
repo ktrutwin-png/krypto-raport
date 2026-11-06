@@ -1,0 +1,66 @@
+{
+ "date": "06.11.2026",
+ "style": "news",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $75,596 ▼6.1% · ETH $2,228 ▼8.0% · XRP $1.19 ▼10.1% · SOL $89.64 ▼7.3% · GOLD $4,072 ▼1.0%",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "LIVE MARKET UPDATE",
+   "head": [
+    "$215 BILLION",
+    "*GONE IN 24 HOURS*"
+   ],
+   "chip": "▼ -7.7%",
+   "say": "Two hundred fifteen billion dollars, gone from crypto in one day. The whole market is down almost eight percent.",
+   "move": "in"
+  },
+  {
+   "img": "s2.jpg",
+   "head": [
+    "WHY?",
+    "*TECH STOCKS* *SOLD OFF*"
+   ],
+   "note": "RISK-OFF HITS CRYPTO",
+   "anim": {
+    "dir": "down",
+    "label": "BTC $75,596"
+   },
+   "say": "Why? Analysts point to a selloff in US tech stocks. Investors dumped risky bets.",
+   "move": "out"
+  },
+  {
+   "img": "s3.jpg",
+   "head": [
+    "$1.3 BILLION",
+    "*LIQUIDATED*"
+   ],
+   "sub": "IN 24 HOURS",
+   "note": "MOSTLY LONG BETS",
+   "say": "Leverage made it worse. Reportedly over one point two billion dollars in bets were liquidated.",
+   "move": "up"
+  },
+  {
+   "img": "s4.jpg",
+   "tag": "BIGGEST MOVE",
+   "head": [
+    "XRP -10%",
+    "*WORST OF THE* *TOP FIVE*"
+   ],
+   "chip": "▼ $1.19",
+   "say": "The biggest move: X R P, down ten percent. Ether minus eight, Bitcoin six.",
+   "move": "down"
+  },
+  {
+   "img": "s5.jpg",
+   "head": [
+    "$73K OR $80K?",
+    "*THE LINES TO WATCH*"
+   ],
+   "note": "$215B GONE IN A DAY",
+   "say": "Watch seventy three thousand and eighty thousand. Two hundred fifteen billion in a day. Not financial advice, just data.",
+   "move": "in"
+  }
+ ]
+}
