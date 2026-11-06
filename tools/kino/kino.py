@@ -14,6 +14,7 @@ style "cinema" = stary wyglad (duza liczba "big" + "sub" na srodku).
 Glos: piper en_US-ryan-high (energiczny meski), obnizony o ~10% (KINO_PITCH, domyslnie 0.9); KINO_VOICE nadpisuje model.
 Wynik: reel.mp4 (1080x1920, 30 fps) + cover.jpg."""
 import json, os, subprocess, sys, wave, asyncio, re, html as H
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 D = os.path.abspath(sys.argv[1]); HERE = os.path.dirname(os.path.abspath(__file__)); REEL = os.path.join(HERE, "..", "reel")
 VDIR = os.path.join(REEL, "voice")
 if not os.environ.get("KINO_VOICE") and not os.path.exists(os.path.join(VDIR, "en_US-ryan-high.onnx")):  # glos wzorcowy szefa – pobierz raz
@@ -54,8 +55,10 @@ CSS = """<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter
 .sub{margin-top:14px;font:400 62px/1.05 Anton;color:#3dff8f;text-transform:uppercase;text-shadow:3px 4px 0 #000}
 .chip{display:inline-block;margin-top:20px;font:800 44px Inter;color:#3dff8f;background:rgba(0,0,0,.45);padding:6px 16px;border-radius:8px}
 .chip.r{color:#ff4d5e}
-.note{position:absolute;left:60px;right:60px;bottom:330px;transform:skewX(-4deg);background:rgba(4,8,22,.86);border-left:8px solid #ffd23f;
+.note{position:absolute;left:60px;right:60px;bottom:520px;transform:skewX(-4deg);background:rgba(4,8,22,.86);border-left:8px solid #ffd23f;
  padding:26px 30px;font:400 64px/1.08 Anton;color:#fff;text-transform:uppercase;box-shadow:0 10px 40px rgba(0,0,0,.6)}
+.tk{display:inline-block;white-space:nowrap;height:64px;line-height:64px;padding:0 30px;background:rgba(4,8,22,.88);border-top:2px solid #2ad1ff;border-bottom:2px solid #2ad1ff;font:800 34px Inter;color:#fff;letter-spacing:1px}
+.tk .u{color:#3dff8f}.tk .d{color:#ff4d5e}
 .end{position:absolute;inset:0;background:rgba(3,5,14,.86);display:flex;flex-direction:column;align-items:center;justify-content:center}
 .end .a{font:400 76px Anton;color:#ffd23f;text-transform:uppercase;text-align:center;line-height:1.1}
 .end .b{font:700 40px Inter;color:#fff;margin-top:26px}
@@ -73,6 +76,12 @@ async def overlays():
             await pg.screenshot(path=path, omit_background=True)
         await shot(f'<div class="gt"></div><div class="gb"></div><div class="hd">{H.escape(HANDLE)}<b>{H.escape(CFG["date"])}</b></div>'
                    f'<div class="dis">For information only · not investment advice</div>', "_hd.png")
+        if CFG.get("ticker"):
+            t = H.escape(CFG["ticker"]); t = re.sub(r"(▲[^·]*)", r'<span class="u">\1</span>', t); t = re.sub(r"(▼[^·]*)", r'<span class="d">\1</span>', t)
+            await pg.set_viewport_size({"width": 6000, "height": 70})
+            await pg.set_content(CSS.replace("width:1080px;height:1920px", "width:6000px;height:70px") + f'<div class="tk" id="tk">{t} &nbsp;·&nbsp; {t} &nbsp;·&nbsp;</div>')
+            await pg.wait_for_timeout(700); await (await pg.query_selector("#tk")).screenshot(path="_tk.png", omit_background=True)
+            await pg.set_viewport_size({"width": W, "height": H_})
         for i, s in enumerate(S):
             if s.get("end"):
                 await shot(f'<div class="end"><div class="a">This is not<br>financial advice!</div><div class="b">Just data. {H.escape(HANDLE)}</div></div>', f"_t{i}.png")
@@ -118,8 +127,20 @@ for i, (s, L) in enumerate(zip(S, DUR)):
            + ("[bg]null[a];" if end else "[bg][1]overlay=0:0[a];")
            + f"[2]format=rgba,fade=t=in:st=0.05:d=0.28:alpha=1[t];[a][t]overlay=0:0[b];"
            f"[3]format=rgba,fade=t=in:st={nt:.2f}:d=0.3:alpha=1[n];[b][n]overlay=0:0,format=yuv420p")
+    extra = []; k = 4; flt = flt.replace(",format=yuv420p", "[z0]", 1) if flt.endswith(",format=yuv420p") else flt; cur = "[z0]"
+    a = s.get("anim")
+    if a and not end:   # ruchome swieczki (anim.py)
+        import anim
+        an = a if isinstance(a, dict) else {"type": "candles", "dir": str(a)}
+        bx = an.get("box", [60, 770, 960, 400])
+        anim.candles(f"_an{i}.mov", L, an.get("dir", "up"), an.get("label", ""), w=bx[2], h=bx[3], seed=7 + i)
+        extra += ["-i", f"_an{i}.mov"]; flt += f";[{k}]format=rgba,fade=t=in:st=0.25:d=0.35:alpha=1[an];{cur}[an]overlay={bx[0]}:{bx[1]}[z1]"; cur = "[z1]"; k += 1
+    if CFG.get("ticker") and not end and os.path.exists("_tk.png"):   # przewijany pasek z cenami
+        extra += ["-loop", "1", "-t", str(L), "-i", "_tk.png"]
+        flt += f";{cur}[{k}]overlay=x='-mod((t+{i*3})*150,overlay_w/2)':y={CFG.get("ticker_y", 1188)}[z2]"; cur = "[z2]"; k += 1
+    flt += f";{cur}format=yuv420p"
     run(["ffmpeg", "-y", "-loop", "1", "-framerate", str(FPS), "-t", str(L), "-i", s["img"], "-loop", "1", "-t", str(L), "-i", "_hd.png",
-         "-loop", "1", "-t", str(L), "-i", f"_t{i}.png", "-loop", "1", "-t", str(L), "-i", f"_n{i}.png",
+         "-loop", "1", "-t", str(L), "-i", f"_t{i}.png", "-loop", "1", "-t", str(L), "-i", f"_n{i}.png", *extra,
          "-filter_complex", flt, "-t", str(L), "-r", str(FPS), "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", f"_c{i}.mp4"])
     clips.append(f"_c{i}.mp4")
 inp = sum([["-i", c] for c in clips], []); chain = ""; off = 0; last = "[0]"
@@ -142,6 +163,6 @@ mix = (f"[0]aresample=44100,aformat=channel_layouts=stereo,volume={VOL}[m];[1]ar
 run(["ffmpeg", "-y", "-i", "_mel.wav", "-i", "_vo.wav", "-filter_complex", mix, "-map", "[out]", "-t", str(T), "-ar", "44100", "-c:a", "aac", "-b:a", "192k", "_m.m4a"])
 run(["ffmpeg", "-y", "-i", "_v.mp4", "-i", "_m.m4a", "-shortest", "-c:v", "copy", "-c:a", "copy", "-movflags", "+faststart", "reel.mp4"])
 run(["ffmpeg", "-y", "-ss", "1.2", "-i", "reel.mp4", "-frames:v", "1", "-q:v", "2", "cover.jpg"])
-for f in os.listdir("."):
+for f in ([] if os.environ.get("KINO_KEEP") else os.listdir(".")):
     if f.startswith("_") or f == "melody.wav": os.remove(f)
 print("reel.mp4", round(T, 1), "s", DUR)

@@ -4,6 +4,11 @@ Gruby naglowek u góry (Anton, biały + *żółty* + ~zielony~, lekko pochylony)
 Głos pobierz do tools/reel/voice/: https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ryan/high/en_US-ryan-high.onnx (+ .onnx.json), export no_proxy= NO_PROXY=. Folder voice/ jest w .gitignore.
 Prompt obrazu (news): "Futuristic holographic <temat> dashboard, vertical composition, <wykres/obiekt>, floating translucent data panels, deep navy background, neon cyan and gold light, ultra detailed 3D render, top third darker and empty for headline, no readable words".
 
+### Ruchome grafiki (od 6.11.2026 – szef: „żeby to naprawdę przyciągało oko”)
+- `"ticker": "BTC $78,934 ▼0.2% · ETH $2,640 ▼1.1% · GOLD $4,100 ▲0.4%"` (na poziomie pliku) – przewijany pasek z cenami na każdej scenie. Zawsze dodawaj (prawdziwe ceny z danych).
+- `"anim": {"dir": "up"|"down"|"chop", "label": "$4,100"}` w scenie – żywe świeczki rysowane klatka po klatce (pojawiają się po kolei, ostatnia drga, świecąca linia ceny). Używaj w 1–2 scenach o ruchu ceny; kierunek zgodny z faktami.
+- Obrazy NIE muszą być wykresami: dowolna scena w tym stylu (holo-hologramy, budynki, monety, sejfy, statki z ropą, chipy…), byle mocno przyciągała oko.
+
 ## Styl "cinema" (stary, "style":"cinema")
 Pełnoekranowe pionowe zdjęcia (9:16), wolny ruch kamery, duża liczba + podpis na każdej scenie, @erl.grey83 + data u góry, lektor (piper joe) i muzyka ściszana pod głosem. 5–7 scen, ok. 35–60 s.
 
