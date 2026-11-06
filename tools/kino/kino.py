@@ -16,11 +16,20 @@ Wynik: reel.mp4 (1080x1920, 30 fps) + cover.jpg."""
 import json, os, subprocess, sys, wave, asyncio, re, html as H
 D = os.path.abspath(sys.argv[1]); HERE = os.path.dirname(os.path.abspath(__file__)); REEL = os.path.join(HERE, "..", "reel")
 VDIR = os.path.join(REEL, "voice")
-VOICE = os.environ.get("KINO_VOICE") or next((os.path.join(VDIR, v) for v in ("en_US-ryan-high.onnx", "en_US-joe-medium.onnx") if os.path.exists(os.path.join(VDIR, v))), "")
+if not os.environ.get("KINO_VOICE") and not os.path.exists(os.path.join(VDIR, "en_US-ryan-high.onnx")):  # glos wzorcowy szefa – pobierz raz
+    os.makedirs(VDIR, exist_ok=True)
+    env = dict(os.environ, no_proxy="", NO_PROXY="")
+    for f in ("en_US-ryan-high.onnx", "en_US-ryan-high.onnx.json"):
+        subprocess.run(["curl", "-sSfL", "-o", os.path.join(VDIR, f), "https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ryan/high/" + f], env=env)
+VOICE =os.environ.get("KINO_VOICE") or next((os.path.join(VDIR, v) for v in ("en_US-ryan-high.onnx", "en_US-joe-medium.onnx") if os.path.exists(os.path.join(VDIR, v))), "")
 PITCH = float(os.environ.get("KINO_PITCH", "0.9" if "ryan" in VOICE else "1.0"))
 W, H_, FPS, FADE = 1080, 1920, 30, 0.45
 CFG = json.load(open(os.path.join(D, "scenes.json"))); S = list(CFG["scenes"]); STYLE = CFG.get("style", "news")
 HANDLE = CFG.get("handle", "@erl.grey83")
+if STYLE == "news":  # zgodnosc ze starym formatem scen (big/sub) -> naglowek u gory
+    for s in S:
+        if not s.get("head") and s.get("big"):
+            s["head"] = [s.pop("big")] + ([f"*{s.pop('sub')}*"] if s.get("sub") else [])
 S.append({"img": S[-1]["img"], "end": True, "say": "", "move": "in"})
 def run(c, **k): subprocess.run(c, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, **k)
 os.chdir(D)
