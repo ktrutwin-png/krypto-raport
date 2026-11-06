@@ -1,0 +1,191 @@
+<title>Hexa Hologram</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@600&display=swap">
+<style>
+/* Layout: full-screen living portrait of Hexa; name + state on top, state chips at the bottom */
+:root{--void:#01040c;--cyan:#2ad1ff;--ice:#c9f6ff;--gold:#ffd23f;
+  --display:"Orbitron","Rajdhani",system-ui,sans-serif;--ui:"Rajdhani",system-ui,sans-serif;color-scheme:dark}
+html,body{height:100%}
+body{background:var(--void);color:var(--ice);font-family:var(--ui);overflow:hidden;box-sizing:border-box;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+#stage{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:manipulation}
+.top{position:fixed;left:0;right:0;top:calc(env(safe-area-inset-top,0px) + 18px);text-align:center;pointer-events:none}
+.name{font-family:var(--display);font-weight:700;letter-spacing:.5em;padding-left:.5em;font-size:22px;text-shadow:0 0 16px var(--cyan),0 0 2px #fff}
+.status{margin-top:6px;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--cyan)}
+.chips{position:fixed;left:0;right:0;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);display:flex;flex-wrap:wrap;justify-content:center;gap:8px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.chips button{font-family:var(--ui);font-weight:600;font-size:14px;letter-spacing:.08em;color:var(--ice);background:rgba(4,16,34,.62);
+  border:1px solid rgba(42,209,255,.32);border-radius:999px;padding:8px 14px;cursor:pointer;backdrop-filter:blur(6px)}
+.chips button[aria-pressed="true"]{border-color:var(--cyan);color:#fff;box-shadow:0 0 14px rgba(42,209,255,.55),inset 0 0 10px rgba(42,209,255,.25)}
+.chips button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+body.app .top,body.app .chips{display:none}
+</style>
+<canvas id="stage" aria-label="Żywy hologram Hexy"></canvas>
+<div class="top"><div class="name">HEXA</div><div class="status" id="status">czuwam · dotknij, żeby mówić</div></div>
+<div class="chips" role="group" aria-label="Stan Hexy">
+  <button id="b-idle" data-s="idle" aria-pressed="true">Spoczynek</button>
+  <button id="b-listen" data-s="listen" aria-pressed="false">Słucham</button>
+  <button id="b-speak" data-s="speak" aria-pressed="false">Mówię</button>
+  <button id="b-work" data-s="work" aria-pressed="false">Pracuję</button>
+  <button id="b-alert" data-s="alert" aria-pressed="false">Ważne</button>
+</div>
+<script>
+(()=>{
+const APP=/*APP*/false; if(APP) document.body.classList.add('app');
+const IMG="data:image/webp;base64,/*IMG*/", DEP="data:image/png;base64,/*DEP*/";
+const cv=document.getElementById('stage'),gl=cv.getContext('webgl',{antialias:false,premultipliedAlpha:false});
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const VS=`attribute vec2 p;varying vec2 v;void main(){v=p*.5+.5;v.y=1.-v.y;gl_Position=vec4(p,0,1);}`;
+const FS=`precision highp float;varying vec2 v;
+uniform sampler2D uImg,uDep;uniform vec2 uRes,uImgSz;uniform float uT,uListen,uSpeak,uWork,uMic,uGl,uGlY,uFlick,uAlert,uBlink,uJaw;uniform vec3 uTint;uniform vec2 uHead,uGaze;uniform float uVid;
+const vec2 IS=vec2(864.,1536.);
+float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float n2(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
+void main(){
+  // cover-fit the 9:16 portrait
+  float ra=uRes.x/uRes.y, ia=uImgSz.x/uImgSz.y; vec2 uv=v;
+  if(ra>ia){uv.y=(v.y-.5)*ia/ra+.5;}else{uv.x=(v.x-.5)*ra/ia+.5;}
+  vec3 D=texture2D(uDep,uv).rgb; float dep=D.r, hair=D.g, hm=D.b;
+  float t=uT;
+  vec2 px=uv*IS; // pixel coords in the portrait
+  // ---- head turn & tilt (parallax by depth inside the head region) ----
+  vec2 q=uv;
+  q.x-= hm*(uHead.x*(.018+dep*.03));
+  q.y-= hm*(uHead.y*(.010+dep*.018));
+  // breathing + small drift
+  q.y+= -dep*.0035*sin(t*1.25)*smoothstep(.55,1.,uv.y);
+  q+= vec2(sin(t*.23),cos(t*.17))*.003*(dep-.35);
+  // hair drift
+  q+= hair*vec2(sin(t*1.1+uv.y*14.)*.006+sin(t*2.3+uv.y*31.)*.0015,cos(t*.9+uv.x*11.)*.003)*(.8+uSpeak*.6+uListen*.3);
+  vec2 hp=q*IS; // head-space pixel
+  // ---- eyes: gaze + blink ----
+  vec2 E[2];E[0]=vec2(342.,826.);E[1]=vec2(525.,826.);vec2 ER[2];ER[0]=vec2(42.,16.);ER[1]=vec2(44.,16.);
+  for(int i=0;i<2;i++){
+    vec2 e=(hp-E[i])/ER[i];float r=length(e);
+    float m=smoothstep(1.,.45,r);
+    hp-= uGaze*vec2(7.,4.)*m*(1.-uVid*.55);                        // iris follows the gaze
+    float lid=-1.15+2.3*uBlink;                       // lid line from top
+    float inLid=smoothstep(lid+.08,lid-.08,e.y)*smoothstep(1.25,.9,abs(e.x))*(1.-uVid);
+    if(inLid>0.){hp=mix(hp,vec2(hp.x,E[i].y-ER[i].y*1.9+(e.y+1.)*2.),inLid*step(r,1.6));}
+  }
+  // ---- mouth: jaw drops while speaking ----
+  vec2 mo=(hp-vec2(433.,999.))/vec2(85.,65.);
+  float jaw=smoothstep(1.,.2,length(mo*vec2(1.,.8)))*step(0.,mo.y);
+  hp.y-= uJaw*9.*jaw;
+  float gap=exp(-pow((hp.y-999.)/3.5,2.))*smoothstep(1.,.3,abs(mo.x))*uJaw;
+  q=hp/IS;
+  // glitch rows
+  if(abs(uv.y-uGlY)<.012) q.x+=uGl;
+  vec3 c;
+  float ca=.0012+uGl*.08;
+  c.r=texture2D(uImg,q+vec2(ca,0)).r; c.g=texture2D(uImg,q).g; c.b=texture2D(uImg,q-vec2(ca,0)).b;
+  c*=1.-gap*.75;
+  float L=dot(c,vec3(.3,.5,.2));
+  // sparkle: twinkling particles on bright skin/hair
+  vec2 sp=floor(uv*uImgSz/2.);float tw=h(sp);float twk=pow(max(0.,sin(t*(2.+tw*4.)+tw*40.)),18.);
+  c+=vec3(.6,.9,1.)*twk*step(.88,tw)*smoothstep(.25,.7,L)*.9;
+  // light flowing along hair strands
+  float flow=pow(.5+.5*sin(uv.y*40.-t*3.+n2(uv*vec2(8.,3.))*6.),6.);
+  c+=uTint*flow*hair*(.35+uSpeak*.5+uListen*.3);
+  // sheen sweep across the figure
+  float sw=exp(-pow((uv.x+uv.y*.6)-mod(t*.22,2.6)+.3,2.)*90.);
+  c+=vec3(.5,.85,1.)*sw*dep*.35;
+  // speaking: soft pulse from mouth area + glow
+  float dm=distance(uv,vec2(.501,.651));
+  c+=uTint*uSpeak*(.35*exp(-dm*9.)+.25*exp(-pow(dm*12.-mod(t*6.,6.),2.)))*1.2;
+  // listening: rings around head reacting to voice
+  float dh=distance(uv*vec2(1.,1.78),vec2(.42,.53*1.78));
+  float ring=0.;for(int i=0;i<3;i++){float ph=fract(t*.6+float(i)/3.);ring+=(1.-ph)*exp(-pow((dh-(.28+ph*.35)*(1.+uMic*.12))*90.,2.));}
+  c+=uTint*ring*0.;
+  // background data columns flicker
+  float col=step(.6,h(vec2(floor(uv.x*40.),0.)));
+  c+=uTint*col*(1.-dep)*.06*pow(.5+.5*sin(uv.y*30.+t*(1.5+h(vec2(floor(uv.x*40.),1.))*3.)),8.);
+  // mood colour: shift the blue towards gold (work) or violet (alert)
+  vec3 g=vec3(L*1.25,L*.95,L*.42); vec3 vio=vec3(c.b*.8+c.r*.3,c.g*.55,c.b*1.1);
+  c=mix(c,g*1.25,uWork*.45*smoothstep(.05,.3,L));
+  c=mix(c,vio,uAlert*.7);
+  c*=1.+uListen*.12+uSpeak*.18+uAlert*.25*sin(t*6.);
+  // hologram scanlines + flicker + vignette
+  c*=.93+.07*sin(v.y*uRes.y*1.6);
+  c*=uFlick;
+  float vg=smoothstep(1.25,.35,length((v-vec2(.5,.55))*vec2(1.,.85)));
+  gl_FragColor=vec4(c*vg,1.);
+}`;
+function sh(t,s){const o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS))console.error(gl.getShaderInfoLog(o));return o}
+const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,VS));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,FS));gl.linkProgram(pr);gl.useProgram(pr);
+gl.bindBuffer(gl.ARRAY_BUFFER,gl.createBuffer());gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+const ap=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(ap);gl.vertexAttribPointer(ap,2,gl.FLOAT,false,0,0);
+const U={};['uImg','uDep','uRes','uImgSz','uT','uListen','uSpeak','uWork','uMic','uGl','uGlY','uFlick','uAlert','uTint','uBlink','uJaw','uHead','uGaze','uVid'].forEach(n=>U[n]=gl.getUniformLocation(pr,n));
+function tex(src,unit,cb){const i=new Image();i.onload=()=>{const t=gl.createTexture();TX[unit]=t;gl.activeTexture(gl.TEXTURE0+unit);gl.bindTexture(gl.TEXTURE_2D,t);
+  gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,i);[gl.TEXTURE_WRAP_S,gl.TEXTURE_WRAP_T].forEach(k=>gl.texParameteri(gl.TEXTURE_2D,k,gl.CLAMP_TO_EDGE));
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);cb&&cb(i)};i.src=src}
+let ready=0,iw=864,ih=1536;const TX=[];
+tex(IMG,0,i=>{iw=i.width;ih=i.height;ready++});tex(DEP,1,()=>ready++);
+gl.uniform1i(U.uImg,0);gl.uniform1i(U.uDep,1);
+/* live face: looped LivePortrait clip streamed into the portrait texture */
+let vidOn=0;const vd=document.createElement('video');vd.muted=true;vd.loop=true;vd.playsInline=true;vd.setAttribute('playsinline','');vd.preload='auto';
+vd.addEventListener('playing',()=>{vidOn=1});vd.addEventListener('error',()=>{vidOn=0});
+if(APP){vd.src='hexa_vid.mp4';const go=()=>vd.play().catch(()=>{});go();addEventListener('pointerdown',go,{once:true});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)vd.pause();else go()})}
+
+/* particles overlay on a 2D canvas */
+const pc=document.createElement('canvas');pc.style.cssText='position:fixed;inset:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:screen';document.body.insertBefore(pc,cv.nextSibling);
+const px=pc.getContext('2d');const P=Array.from({length:70},()=>({x:Math.random(),y:Math.random(),r:.6+Math.random()*2.2,v:.008+Math.random()*.025,ph:Math.random()*6}));
+
+const DPR=Math.min(APP?1.5:2,devicePixelRatio||1);
+function resize(){const w=innerWidth,h=innerHeight;cv.width=w*DPR;cv.height=h*DPR;pc.width=w*DPR;pc.height=h*DPR;gl.viewport(0,0,cv.width,cv.height)}
+addEventListener('resize',resize);resize();
+
+const LABEL={idle:'czuwam · dotknij, żeby mówić',listen:'słucham…',speak:'mówię',work:'pracuję',alert:'ważna wiadomość'};
+const TINT={idle:[.25,.7,1],listen:[.3,.82,1],speak:[.5,.88,1],work:[1,.75,.3],alert:[.72,.4,1]};
+let state='idle',demo=null,micExt=-1;const btns=[...document.querySelectorAll('.chips button')];
+function setState(s){state=s;document.getElementById('status').textContent=LABEL[s];btns.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.s===s)))}
+btns.forEach(b=>b.addEventListener('click',()=>{clearTimeout(demo);setState(b.dataset.s)}));
+cv.addEventListener('click',()=>{clearTimeout(demo);setState('listen');demo=setTimeout(()=>{setState('speak');demo=setTimeout(()=>setState('idle'),3800)},2800)});
+let look=null,lookT=0;
+window.hexa={setState:s=>{clearTimeout(demo);setState(LABEL[s]?s:'idle')},setMic:x=>{micExt=x},look:(x,y)=>{look=[x,y];lookT=performance.now()}};
+addEventListener('pointermove',e=>{look=[e.clientX/innerWidth,e.clientY/innerHeight];lookT=performance.now()});
+addEventListener('pointerdown',e=>{look=[e.clientX/innerWidth,e.clientY/innerHeight];lookT=performance.now()});
+const head=[0,0],headT=[0,0],gaze=[0,0],gazeT=[0,0];let nextSac=1,nextBlink=2,blink=0,blinkPh=-1,headNext=0;
+
+const S={listen:0,speak:0,work:0,alert:0,mic:0},tint=[.25,.7,1];let sp=0,nextGl=2,glT=0,last=performance.now(),t0=last;
+function frame(now){
+  const dt=Math.min(.05,(now-last)/1000);last=now;const t=(now-t0)/1000;const k=1-Math.pow(.03,dt);
+  ['listen','work','alert'].forEach(n=>S[n]+=((state===n?1:0)-S[n])*k);
+  const voice=state==='speak'?Math.max(0,(Math.sin(t*11)+Math.sin(t*6.7+1)+Math.sin(t*17.3))/3)*(Math.sin(t*1.9)>-.55?1:.1):0;
+  sp+=(voice-sp)*(1-Math.pow(.0005,dt));
+  const mic=state==='listen'?(micExt>=0?Math.min(1,micExt*1.3):.5+.5*Math.abs(Math.sin(t*5.2)*Math.sin(t*2.3+1))):0;S.mic+=(mic-S.mic)*(1-Math.pow(.001,dt));
+  const tt=TINT[state];for(let i=0;i<3;i++)tint[i]+=(tt[i]-tint[i])*k;
+  let gA=0,gY=-1,fl=.97+.03*Math.sin(t*37);
+  if(!reduce){if(t>nextGl){glT=.1+Math.random()*.12;nextGl=t+3+Math.random()*5}if(glT>0){glT-=dt;gA=(Math.random()-.5)*.03;gY=Math.random();fl=.8+Math.random()*.25}}
+  // where she looks: finger (for 4 s after touch), the viewer while listening/speaking, otherwise wanders
+  const nowMs=performance.now();
+  if(look&&nowMs-lookT<4000){const lx=(look[0]-.5)*2.2,ly=(look[1]-.5)*2.2;gazeT[0]=Math.max(-1,Math.min(1,lx));gazeT[1]=Math.max(-1,Math.min(1,ly));headT[0]=gazeT[0]*.8;headT[1]=gazeT[1]*.6}
+  else if(state==='listen'||state==='speak'){if(t>nextSac){gazeT[0]=(Math.random()-.5)*.25;gazeT[1]=(Math.random()-.5)*.2;nextSac=t+.8+Math.random()*1.5}headT[0]=.15*Math.sin(t*.7);headT[1]=.1*Math.sin(t*.5)}
+  else{if(t>nextSac){gazeT[0]=(Math.random()-.45)*1.4;gazeT[1]=(Math.random()-.5)*.9;nextSac=t+1+Math.random()*2.5}
+    if(t>headNext){headT[0]=(Math.random()-.5)*1.4;headT[1]=(Math.random()-.5)*.8;headNext=t+3+Math.random()*4}}
+  if(state==='work'){headT[1]=-.4;gazeT[1]=-.7}
+  for(let i=0;i<2;i++){gaze[i]+=(gazeT[i]-gaze[i])*(1-Math.pow(.0000005,dt));head[i]+=(headT[i]-head[i])*(1-Math.pow(.25,dt))}
+  // blinking (more often when talking)
+  if(blinkPh<0&&t>nextBlink){blinkPh=0;nextBlink=t+2.2+Math.random()*4*(state==='speak'?.6:1)}
+  if(blinkPh>=0){blinkPh+=dt/0.17;blink=blinkPh<.5?blinkPh*2:2-blinkPh*2;if(blinkPh>=1){blinkPh=-1;blink=0}}
+  const jaw=Math.min(1,sp*1.6);
+  if(ready===2&&vidOn&&vd.readyState>=2){gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,TX[0]);
+    try{gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,vd)}catch(e){vidOn=0}}
+  if(ready===2){gl.uniform1f(U.uVid,vidOn);
+    gl.uniform1f(U.uBlink,reduce?0:blink);gl.uniform1f(U.uJaw,jaw);gl.uniform2f(U.uHead,reduce?0:head[0],reduce?0:head[1]);gl.uniform2f(U.uGaze,gaze[0],gaze[1]);
+    gl.uniform2f(U.uRes,cv.width,cv.height);gl.uniform2f(U.uImgSz,iw,ih);gl.uniform1f(U.uT,reduce?0:t);
+    gl.uniform1f(U.uListen,S.listen);gl.uniform1f(U.uSpeak,sp);gl.uniform1f(U.uWork,S.work);gl.uniform1f(U.uAlert,S.alert);gl.uniform1f(U.uMic,S.mic);
+    gl.uniform1f(U.uGl,gA);gl.uniform1f(U.uGlY,gY);gl.uniform1f(U.uFlick,fl);gl.uniform3f(U.uTint,tint[0],tint[1],tint[2]);
+    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+  }
+  // drifting light particles
+  const W=pc.width,H=pc.height;px.clearRect(0,0,W,H);
+  for(const p of P){p.y-=p.v*dt*(1+S.work*3);if(p.y<-.05){p.y=1.05;p.x=Math.random()}
+    const a=.25+.35*Math.sin(t*1.5+p.ph);const g=px.createRadialGradient(p.x*W,p.y*H,0,p.x*W,p.y*H,p.r*DPR*3);
+    g.addColorStop(0,`rgba(${tint.map(c=>Math.round(140+c*115)).join(',')},${a})`);g.addColorStop(1,'rgba(0,0,0,0)');px.fillStyle=g;px.fillRect(p.x*W-p.r*DPR*3,p.y*H-p.r*DPR*3,p.r*DPR*6,p.r*DPR*6)}
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+})();
+</script>
