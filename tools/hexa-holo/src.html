@@ -1,0 +1,269 @@
+<title>Hexa Hologram</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;600&display=swap">
+<style>
+/* Layout: full-screen 3D hologram stage; name + state on top, state chips at the bottom (phone home screen) */
+:root{
+  --void:#02060f; --cyan:#2ad1ff; --ice:#c9f6ff; --gold:#ffd23f; --dim:#6f8fae;
+  --display:"Orbitron","Rajdhani",system-ui,sans-serif; --ui:"Rajdhani",system-ui,sans-serif;
+  color-scheme:dark;
+}
+html,body{height:100%}
+body{background:var(--void);color:var(--ice);font-family:var(--ui);overflow:hidden;box-sizing:border-box;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+#stage{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none}
+.top{position:fixed;left:0;right:0;top:calc(env(safe-area-inset-top,0px) + 18px);text-align:center;pointer-events:none}
+.name{font-family:var(--display);font-weight:700;letter-spacing:.5em;padding-left:.5em;font-size:22px;color:var(--ice);text-shadow:0 0 16px var(--cyan),0 0 2px #fff}
+.status{margin-top:6px;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--cyan)}
+.chips{position:fixed;left:0;right:0;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);display:flex;flex-wrap:wrap;justify-content:center;gap:8px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.chips button{font-family:var(--ui);font-weight:600;font-size:14px;letter-spacing:.08em;color:var(--ice);background:rgba(4,16,34,.62);
+  border:1px solid rgba(42,209,255,.32);border-radius:999px;padding:8px 14px;cursor:pointer;backdrop-filter:blur(6px)}
+.chips button[aria-pressed="true"]{border-color:var(--cyan);color:#fff;box-shadow:0 0 14px rgba(42,209,255,.55),inset 0 0 10px rgba(42,209,255,.25)}
+.chips button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+#scan{position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(120,220,255,.035) 0 1px,transparent 1px 3px);mix-blend-mode:screen}
+#err{position:fixed;inset:auto 0 50% 0;text-align:center;color:var(--dim);font-size:14px}
+</style>
+
+<canvas id="stage" aria-label="Trójwymiarowy hologram Hexy"></canvas>
+<div id="scan"></div>
+<div class="top"><div class="name">HEXA</div><div class="status" id="status">czuwam · dotknij, żeby mówić</div></div>
+<div id="err" hidden>Ładowanie hologramu nie powiodło się.</div>
+<div class="chips" role="group" aria-label="Stan Hexy">
+  <button id="b-idle" data-s="idle" aria-pressed="true">Spoczynek</button>
+  <button id="b-listen" data-s="listen" aria-pressed="false">Słucham</button>
+  <button id="b-speak" data-s="speak" aria-pressed="false">Mówię</button>
+  <button id="b-work" data-s="work" aria-pressed="false">Pracuję</button>
+  <button id="b-alert" data-s="alert" aria-pressed="false">Ważne</button>
+  <button id="b-swarm" data-s="swarm" aria-pressed="false">Rój</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/shaders/CopyShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/postprocessing/RenderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+<script>/*DATA*/</script>
+<script>/*LINES*/</script>
+<script>/*HAIR*/</script>
+<script>/*OCC*/</script>
+<script>
+(()=>{
+if(!window.THREE){document.getElementById('err').hidden=false;return}
+const T=THREE, reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const cv=document.getElementById('stage');
+const R=new T.WebGLRenderer({canvas:cv,antialias:false,powerPreference:'high-performance'});
+const DPR=Math.min(1.75,devicePixelRatio||1);R.setPixelRatio(DPR);R.setClearColor(0x02060f,1);
+const scene=new T.Scene();scene.fog=new T.FogExp2(0x02060f,.055);
+const cam=new T.PerspectiveCamera(34,1,.1,100);
+
+/* ---------- decode point cloud ---------- */
+const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+const P=new Float32Array(b64(HEXA_P).buffer), Nraw=new Int8Array(b64(HEXA_N).buffer), N=P.length/3;
+const Nf=new Float32Array(N*3);for(let i=0;i<N*3;i++)Nf[i]=Nraw[i]/127;
+const rnd=new Float32Array(N*4),sw=new Float32Array(N*3);
+for(let i=0;i<N;i++){rnd.set([Math.random(),Math.random(),Math.random(),Math.random()],i*4);
+  const a=Math.random()*6.283,r=1.2+Math.random()*3.2,h=(Math.random()-.5)*5;sw.set([Math.cos(a)*r,h+.5,Math.sin(a)*r],i*3)}
+const g=new T.BufferGeometry();
+g.setAttribute('position',new T.BufferAttribute(P,3));g.setAttribute('normal',new T.BufferAttribute(Nf,3));
+g.setAttribute('aRnd',new T.BufferAttribute(rnd,4));g.setAttribute('aSwarm',new T.BufferAttribute(sw,3));
+
+const U={uTime:{value:0},uForm:{value:0},uListen:{value:0},uSpeak:{value:0},uWork:{value:0},uMic:{value:0},uTint:{value:new T.Color(.16,.62,1)},uGlY:{value:-9},uGlA:{value:0},uFlick:{value:1},uPx:{value:DPR*innerHeight/900}};
+const holo=new T.ShaderMaterial({uniforms:U,transparent:true,depthWrite:false,blending:T.AdditiveBlending,
+vertexShader:`
+uniform float uTime,uForm,uListen,uSpeak,uWork,uMic,uPx,uGlY,uGlA,uFlick;uniform vec3 uTint;
+attribute vec4 aRnd; attribute vec3 aSwarm;
+varying float vB; varying vec3 vC;
+void main(){
+  vec3 p=position;
+  p*=1.0+0.007*sin(uTime*1.3);
+  float dm=distance(p,vec3(0.,0.92,0.62));
+  p+=normal*uSpeak*0.035*sin(dm*16.-uTime*13.)*exp(-dm*1.1);
+  p+=normal*uListen*(0.006+uMic*0.02)*sin(p.y*34.+uTime*18.+aRnd.y*6.);
+  p+=normal*0.004*sin(uTime*3.+aRnd.z*40.);
+  // working: helix stream wrapping the body
+  float ha=p.y*2.4+uTime*2.6+aRnd.z*1.2, hr=1.35+aRnd.w*.5;
+  vec3 hel=vec3(cos(ha)*hr,p.y,sin(ha)*hr);
+  p=mix(p,hel,uWork*step(.72,aRnd.w)*.95);
+  // swarm <-> form
+  float a=uTime*(.15+aRnd.y*.25)+aRnd.z*6.283;
+  vec3 s=vec3(aSwarm.x*cos(a)-aSwarm.z*sin(a),aSwarm.y+sin(uTime*.6+aRnd.x*9.)*.3,aSwarm.x*sin(a)+aSwarm.z*cos(a));
+  float f=smoothstep(0.,1.,clamp(uForm*1.45-aRnd.x*.45,0.,1.));
+  p=mix(s,p,f);
+  if(abs(position.y-uGlY)<.07) p.x+=uGlA;
+  vec4 mv=modelViewMatrix*vec4(p,1.);
+  gl_Position=projectionMatrix*mv;
+  vec3 n=normalize(normalMatrix*normal), v=normalize(-mv.xyz);
+  float nd=dot(n,v), fres=pow(1.-abs(nd),2.4);
+  float lines=smoothstep(.86,1.,abs(sin((position.y*9.-uTime*.35)*3.1416)));
+  float sweep=exp(-pow((position.y-(mod(uTime*.55,4.6)-1.6))*4.,2.));
+  float talk=uSpeak*exp(-pow((position.y-(2.4-mod(uTime*3.2,4.4)))*3.,2.));
+  float back=nd<0.?.5:1.;
+  vec3 wn=normalize(mat3(modelMatrix)*normal);float key=pow(max(0.,dot(wn,normalize(vec3(-.55,.55,.75)))),2.);
+  vB=(.2+key*.95+fres*1.35+lines*.35+sweep*(.55+uWork*1.2)+talk*1.3+uListen*.25)*back*mix(.55,1.,f)*(.75+.25*sin(uTime*2.+aRnd.y*30.));
+  vB*=uFlick;
+  vC=mix(uTint,vec3(.85,.98,1.),clamp(fres*1.2+talk,0.,1.));
+  if(aRnd.y>.985) vC=mix(vC,vec3(1.,.82,.25),.85);
+  gl_PointSize=uPx*(1.25+fres*2.0+talk*2.)*(6./-mv.z);
+}`,
+fragmentShader:`
+varying float vB; varying vec3 vC;
+void main(){vec2 c=gl_PointCoord-.5;float d=dot(c,c);if(d>.25)discard;float a=exp(-d*14.);gl_FragColor=vec4(vC*vB*a,1.);}`});
+const bust=new T.Points(g,holo);bust.position.y=-.25;scene.add(bust);
+const Lp=new Float32Array(b64(HEXA_L).buffer),lg2=new T.BufferGeometry();lg2.setAttribute('position',new T.BufferAttribute(Lp,3));
+const lineMat=new T.ShaderMaterial({uniforms:U,transparent:true,depthWrite:false,blending:T.AdditiveBlending,
+ vertexShader:`uniform float uTime,uForm,uSpeak,uWork,uFlick,uGlY,uGlA;varying float vB;void main(){vec3 p=position;p*=1.0+0.007*sin(uTime*1.3);if(abs(position.y-uGlY)<.07) p.x+=uGlA;
+  vec4 mv=modelViewMatrix*vec4(p,1.);gl_Position=projectionMatrix*mv;
+  float flow=.5+.5*sin(position.y*6.-uTime*1.8+position.x*2.);
+  float face=position.z>0.?1.:.35;
+  vB=(.05+.13*flow+uSpeak*.25*flow+uWork*.15)*face*smoothstep(.6,1.,uForm)*smoothstep(-1.5,-.6,position.y)*uFlick;}`,
+ fragmentShader:`uniform vec3 uTint;varying float vB;void main(){gl_FragColor=vec4(mix(uTint,vec3(1.),.35)*vB,1.);}`});
+const wire=new T.LineSegments(lg2,lineMat);bust.add(wire);
+const hg=new T.BufferGeometry();hg.setAttribute('position',new T.BufferAttribute(new Float32Array(b64(HEXA_H).buffer),3));
+hg.setAttribute('aT',new T.BufferAttribute(new Float32Array(b64(HEXA_HT).buffer),1));hg.setAttribute('aS',new T.BufferAttribute(new Float32Array(b64(HEXA_HS).buffer),1));
+const hair=new T.LineSegments(hg,new T.ShaderMaterial({uniforms:U,transparent:true,depthWrite:false,blending:T.AdditiveBlending,
+ vertexShader:`uniform float uTime,uForm,uSpeak,uListen,uFlick;attribute float aT,aS;varying float vB;varying float vT;
+ void main(){vec3 p=position;float w=pow(aT,1.6);
+  p.x+=sin(uTime*1.1+aS*6.283+aT*3.)*.07*w;p.z+=cos(uTime*.8+aS*9.+aT*2.)*.05*w;p.y+=sin(uTime*1.7+aS*20.)*.01*w;
+  vec4 mv=modelViewMatrix*vec4(p,1.);gl_Position=projectionMatrix*mv;vT=aT;
+  float pulse=exp(-pow((aT-fract(uTime*.35+aS))*9.,2.));
+  vB=(.05+.11*(1.-aT)+pulse*(.3+uSpeak*.4)+uListen*.05)*smoothstep(.75,1.,uForm)*(1.-smoothstep(.75,1.,aT))*uFlick;}`,
+ fragmentShader:`uniform vec3 uTint;varying float vB;varying float vT;void main(){gl_FragColor=vec4(mix(vec3(.85,.97,1.),uTint,.5+.3*vT)*vB,1.);}`}));
+bust.add(hair);
+const og=new T.BufferGeometry();og.setAttribute('position',new T.BufferAttribute(new Float32Array(b64(HEXA_OV).buffer),3));
+og.setIndex(new T.BufferAttribute(new Uint16Array(b64(HEXA_OI).buffer),1));
+const occ=new T.Mesh(og,new T.MeshBasicMaterial({colorWrite:false,side:T.DoubleSide}));occ.renderOrder=-1;bust.add(occ);
+
+/* ---------- face light (no eyes, no mouth) ---------- */
+function radTex(stops){const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d'),gr=x.createRadialGradient(64,64,0,64,64,64);
+  stops.forEach(s=>gr.addColorStop(s[0],s[1]));x.fillStyle=gr;x.fillRect(0,0,128,128);return new T.CanvasTexture(c)}
+const glowTex=radTex([[0,'rgba(220,250,255,1)'],[.25,'rgba(42,209,255,.55)'],[1,'rgba(42,209,255,0)']]);
+const face=new T.Sprite(new T.SpriteMaterial({map:glowTex,blending:T.AdditiveBlending,transparent:true,depthWrite:false,opacity:.25}));
+face.scale.set(1.3,1.5,1);face.position.set(0,1.05,.95);scene.add(face);
+
+/* ---------- pedestal ---------- */
+const ped=new T.Group();ped.position.y=-1.78;scene.add(ped);
+const addMat=(c,o)=>new T.MeshBasicMaterial({color:c,transparent:true,opacity:o,blending:T.AdditiveBlending,depthWrite:false,side:T.DoubleSide});
+const rings=[];
+[[1.05,1.12,0x2ad1ff,.9,0,6.283],[1.3,1.33,0xffd23f,.55,0,6.283],[1.5,1.56,0x2ad1ff,.5,.2,4.2],[1.78,1.8,0x2ad1ff,.35,0,6.283],[1.95,2.02,0x2ad1ff,.28,1.,2.6],[.6,.66,0xbff4ff,.6,0,5.4]]
+ .forEach((r,i)=>{const m=new T.Mesh(new T.RingGeometry(r[0],r[1],128,1,r[4],r[5]),addMat(r[2],r[3]));m.rotation.x=-Math.PI/2;m.position.y=i*.004;ped.add(m);rings.push(m)});
+const disc=new T.Mesh(new T.CircleGeometry(1.1,64),new T.MeshBasicMaterial({map:radTex([[0,'rgba(210,250,255,.9)'],[.5,'rgba(42,209,255,.35)'],[1,'rgba(42,209,255,0)']]),transparent:true,blending:T.AdditiveBlending,depthWrite:false}));
+disc.rotation.x=-Math.PI/2;disc.position.y=.01;ped.add(disc);
+// tick marks around the pedestal
+{const pos=[];for(let i=0;i<120;i++){const a=i/120*6.283,r1=2.12,r2=i%10?2.18:2.3;pos.push(Math.cos(a)*r1,0,Math.sin(a)*r1,Math.cos(a)*r2,0,Math.sin(a)*r2)}
+ const lg=new T.BufferGeometry();lg.setAttribute('position',new T.Float32BufferAttribute(pos,3));
+ const ticks=new T.LineSegments(lg,new T.LineBasicMaterial({color:0x2ad1ff,transparent:true,opacity:.45,blending:T.AdditiveBlending}));ped.add(ticks);rings.push(ticks)}
+
+/* ---------- light beam ---------- */
+const beamU={uTime:U.uTime,uGlow:{value:.6},uTint:{value:new T.Color(.16,.62,1)}};
+const beam=new T.Mesh(new T.CylinderGeometry(1.75,1.08,4.4,64,1,true),new T.ShaderMaterial({uniforms:beamU,transparent:true,depthWrite:false,blending:T.AdditiveBlending,side:T.DoubleSide,
+ vertexShader:`varying vec2 vUv;varying vec3 vN;varying vec3 vV;void main(){vUv=uv;vec4 mv=modelViewMatrix*vec4(position,1.);vN=normalize(normalMatrix*normal);vV=normalize(-mv.xyz);gl_Position=projectionMatrix*mv;}`,
+ fragmentShader:`uniform float uTime,uGlow;uniform vec3 uTint;varying vec2 vUv;varying vec3 vN;varying vec3 vV;
+ void main(){float edge=pow(1.-abs(dot(vN,vV)),1.5);float fade=pow(1.-vUv.y,1.6);
+ float st=.6+.4*sin(vUv.x*80.+uTime*.8)*sin(vUv.y*30.-uTime*2.);
+ gl_FragColor=vec4(uTint*fade*(.05+.28*edge)*st*uGlow*1.6,1.);}`}));
+beam.position.y=-1.78+2.2;scene.add(beam);
+
+/* ---------- listening wave rings ---------- */
+const waves=[];for(let i=0;i<3;i++){const m=new T.Mesh(new T.RingGeometry(1,1.012,128),addMat(0x2ad1ff,0));m.position.set(0,1.05,.2);scene.add(m);waves.push(m)}
+
+/* ---------- data streams: into the head while working, out of the face while speaking ---------- */
+const SN=46,SP=40,sA=new Float32Array(SN*SP*3),sB=new Float32Array(SN*SP*3),sC=new Float32Array(SN*SP*3),sO=new Float32Array(SN*SP*2);
+for(let i=0;i<SN;i++){const a=(i/SN)*6.283+Math.random()*.2,el=(Math.random()-.4)*1.6,R=5.5+Math.random()*2;
+  const A=[Math.cos(a)*R,1.0+el*2.2,Math.sin(a)*R-1],C=[Math.cos(a)*.6,1.1+el*.35,Math.sin(a)*.6],B=[Math.cos(a+.9)*2.6,1.4+el*1.4+Math.random(),Math.sin(a+.9)*2.6];
+  for(let k=0;k<SP;k++){const o=(i*SP+k);sA.set(A,o*3);sB.set(B,o*3);sC.set(C,o*3);sO.set([k/SP,Math.random()],o*2)}}
+const sg=new T.BufferGeometry();sg.setAttribute('position',new T.BufferAttribute(sA,3));sg.setAttribute('aB',new T.BufferAttribute(sB,3));
+sg.setAttribute('aC',new T.BufferAttribute(sC,3));sg.setAttribute('aO',new T.BufferAttribute(sO,2));
+const streams=new T.Points(sg,new T.ShaderMaterial({uniforms:U,transparent:true,depthWrite:false,blending:T.AdditiveBlending,
+ vertexShader:`uniform float uTime,uWork,uSpeak,uPx;uniform vec3 uTint;attribute vec3 aB,aC;attribute vec2 aO;varying float vB;
+ void main(){float sp=.32+aO.y*.1;float t=fract(aO.x+uTime*sp);float inw=uWork,outw=uSpeak*(1.-uWork);
+  float tt=mix(t,1.-t,step(inw,outw));vec3 A=position,B=aB,C=aC;
+  vec3 p=mix(mix(A,B,tt),mix(B,C,tt),tt);vec4 mv=modelViewMatrix*vec4(p,1.);gl_Position=projectionMatrix*mv;
+  float head=fract(aO.x*7.31+uTime*sp*1.);float tail=smoothstep(.0,.15,t)*smoothstep(1.,.8,t);
+  vB=max(inw,outw*1.4)*tail*(.35+.65*step(.85,fract(aO.x*40.-uTime*3.)));
+  gl_PointSize=uPx*2.4*(6./-mv.z);}`,
+ fragmentShader:`uniform vec3 uTint;varying float vB;void main(){vec2 c=gl_PointCoord-.5;float d=dot(c,c);if(d>.25)discard;gl_FragColor=vec4(mix(uTint,vec3(1.),.4)*vB*exp(-d*12.),1.);}`}));
+streams.position.y=-.25;scene.add(streams);
+
+/* ---------- dust ---------- */
+const DN=900,dp=new Float32Array(DN*3),dv=new Float32Array(DN);
+for(let i=0;i<DN;i++){const a=Math.random()*6.283,r=Math.sqrt(Math.random())*5;dp.set([Math.cos(a)*r,Math.random()*6-2,Math.sin(a)*r-1],i*3);dv[i]=.05+Math.random()*.25}
+const dg=new T.BufferGeometry();dg.setAttribute('position',new T.BufferAttribute(dp,3));
+const dust=new T.Points(dg,new T.PointsMaterial({size:.025,color:0x7fdcff,transparent:true,opacity:.6,blending:T.AdditiveBlending,depthWrite:false,map:glowTex}));scene.add(dust);
+
+/* ---------- control-room HUD panels behind ---------- */
+function panelTex(seed){const c=document.createElement('canvas');c.width=512;c.height=320;const x=c.getContext('2d');let s=seed;const r=()=>(s=(s*9301+49297)%233280)/233280;
+  x.fillStyle='rgba(8,40,80,.55)';x.fillRect(0,0,512,320);x.strokeStyle='rgba(42,209,255,.8)';x.lineWidth=2;x.strokeRect(4,4,504,312);
+  x.fillStyle='rgba(42,209,255,.9)';for(let i=0;i<6;i++)x.fillRect(20,24+i*14,60+r()*120,5);
+  if(seed%2){x.beginPath();x.arc(380,170,95,0,6.283);x.stroke();x.beginPath();x.arc(380,170,60,0,4.5);x.lineWidth=6;x.stroke();x.lineWidth=2;
+    for(let i=0;i<24;i++){const a=i/24*6.283;x.beginPath();x.moveTo(380+Math.cos(a)*100,170+Math.sin(a)*100);x.lineTo(380+Math.cos(a)*112,170+Math.sin(a)*112);x.stroke()}}
+  else{let y=220;x.beginPath();x.moveTo(20,y);for(let i=1;i<48;i++){y+=(r()-.48)*22;y=Math.max(140,Math.min(300,y));x.lineTo(20+i*10,y)}x.stroke();
+    for(let i=0;i<22;i++){const h=20+r()*90;x.fillStyle=r()>.5?'rgba(61,255,143,.8)':'rgba(255,90,110,.75)';x.fillRect(260+i*11,300-h,6,h)}}
+  return new T.CanvasTexture(c)}
+const hud=new T.Group();scene.add(hud);
+for(let i=0;i<8;i++){const a=(i-3.5)*.36,m=new T.Mesh(new T.PlaneGeometry(2.4,1.5),new T.MeshBasicMaterial({map:panelTex(i+3),transparent:true,opacity:.42,blending:T.AdditiveBlending,depthWrite:false}));
+  const rr=7.5;m.position.set(Math.sin(a)*rr,(i%2?2.6:.6),-Math.cos(a)*rr+1);m.lookAt(0,m.position.y,1);hud.add(m)}
+// floor grid
+const grid=new T.GridHelper(40,80,0x0a3355,0x0a3355);grid.position.y=-1.8;grid.material.transparent=true;grid.material.opacity=.35;scene.add(grid);
+
+/* ---------- bloom ---------- */
+const comp=new T.EffectComposer(R);comp.addPass(new T.RenderPass(scene,cam));
+const bloom=new T.UnrealBloomPass(new T.Vector2(256,256),.95,.5,.16);comp.addPass(bloom);
+
+function resize(){const w=innerWidth,h=innerHeight;R.setSize(w,h,false);comp.setSize(w,h);cam.aspect=w/h;
+  const fitH=4.75, fitW=4.3, d=Math.max(fitH/2/Math.tan(cam.fov*Math.PI/360), fitW/2/Math.tan(cam.fov*Math.PI/360)/cam.aspect);
+  cam.position.set(0,.55,d);cam.lookAt(0,.25,0);cam.updateProjectionMatrix();U.uPx.value=DPR*h/900}
+addEventListener('resize',resize);resize();
+
+/* ---------- states ---------- */
+const LABEL={idle:'czuwam · dotknij, żeby mówić',listen:'słucham…',speak:'mówię',work:'pracuję',alert:'ważna wiadomość',swarm:'rój'};
+let state='idle',demo=null;const btns=[...document.querySelectorAll('.chips button')];
+function setState(s){state=s;document.getElementById('status').textContent=LABEL[s];btns.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.s===s)))}
+btns.forEach(b=>b.addEventListener('click',()=>{clearTimeout(demo);setState(b.dataset.s)}));
+// drag to turn her, tap to talk
+let drag=null,yaw=0,yawT=0,moved=0;
+cv.addEventListener('pointerdown',e=>{drag=e.clientX;moved=0});
+addEventListener('pointermove',e=>{if(drag!==null){yawT+=(e.clientX-drag)*.006;moved+=Math.abs(e.clientX-drag);drag=e.clientX}});
+addEventListener('pointerup',()=>{if(drag!==null&&moved<6){clearTimeout(demo);setState('listen');demo=setTimeout(()=>{setState('speak');demo=setTimeout(()=>setState('idle'),3800)},2800)}drag=null});
+
+const clock=new T.Clock();let sp=0;
+const TINT={idle:[.16,.62,1],listen:[.2,.78,1],speak:[.45,.86,1],work:[1,.72,.22],alert:[.68,.32,1],swarm:[.16,.62,1]},tintTo=new T.Color(),tintC=new T.Color();
+let glT=0,nextGl=2;
+// hologram tint drives rings, beam, waves too
+const tinted=[];
+function loop(){
+  const dt=Math.min(.05,clock.getDelta()),t=clock.elapsedTime;U.uTime.value=t;
+  const k=1-Math.pow(.03,dt);
+  U.uForm.value+=((state==='swarm'?0:1)-U.uForm.value)*(1-Math.pow(.3,dt));
+  U.uListen.value+=((state==='listen'?1:0)-U.uListen.value)*k;
+  U.uWork.value+=((state==='work'?1:0)-U.uWork.value)*k;
+  const voice=state==='speak'?Math.max(0,(Math.sin(t*11)+Math.sin(t*6.7+1)+Math.sin(t*17.3))/3)*(Math.sin(t*1.9)>-.55?1:.1):0;
+  sp+=(voice-sp)*(1-Math.pow(.0005,dt));U.uSpeak.value=sp;
+  U.uMic.value=state==='listen'?.5+.5*Math.abs(Math.sin(t*5.2)*Math.sin(t*2.3+1)):0;
+  const glow=.6+U.uListen.value*.3+sp*.8+(state==='alert'?.35+.35*Math.sin(t*6):0);
+  tintTo.setRGB(...TINT[state]);U.uTint.value.lerp(tintTo,1-Math.pow(.05,dt));
+  rings.forEach((r,i)=>{if(i!==1&&r.material.color)r.material.color.copy(U.uTint.value)});
+  waves.forEach(w=>w.material.color.copy(U.uTint.value));grid.material.color.copy(U.uTint.value).multiplyScalar(.35);
+  beamU.uTint.value.copy(U.uTint.value);
+  // hologram flicker + glitch bursts
+  if(!reduce){if(t>nextGl){glT=.12+Math.random()*.15;nextGl=t+2.5+Math.random()*4;U.uGlY.value=-1+Math.random()*3.4}
+    if(glT>0){glT-=dt;U.uGlA.value=(Math.random()-.5)*.18;U.uFlick.value=.75+Math.random()*.3}else{U.uGlA.value=0;U.uGlY.value=-9;U.uFlick.value=.96+.04*Math.sin(t*37)}}
+  // body turn: idle sway + drag
+  yaw+=(yawT-yaw)*.08;yawT*=.985;
+  bust.rotation.y=.38+yaw+(reduce?0:Math.sin(t*.3)*.32);bust.rotation.x=reduce?0:Math.sin(t*.21)*.03;
+  face.position.x=Math.sin(bust.rotation.y)*.95;face.position.z=Math.cos(bust.rotation.y)*.95;
+  face.material.color.copy(U.uTint.value).lerp(new T.Color(1,1,1),.5);face.material.opacity=(.18+U.uListen.value*.2+sp*.45)*U.uForm.value;
+  rings.forEach((r,i)=>{r.rotation.z=(i%2?-1:1)*t*(.08+i*.03)});
+  beamU.uGlow.value=glow;disc.material.opacity=.55+.45*glow;
+  waves.forEach((w,i)=>{const ph=(t*.8+i/3)%1;w.scale.setScalar(1.2+ph*1.6+U.uMic.value*.15);w.material.opacity=(1-ph)*.6*U.uListen.value});
+  const a=dg.attributes.position.array;for(let i=0;i<DN;i++){a[i*3+1]+=dv[i]*dt*(1+U.uWork.value*3);if(a[i*3+1]>4)a[i*3+1]=-2}dg.attributes.position.needsUpdate=true;
+  hud.rotation.y=Math.sin(t*.05)*.08;
+  cam.position.x=Math.sin(t*.17)*.25;cam.lookAt(0,.25,0);
+  bloom.strength=.9+sp*.5+U.uListen.value*.2;
+  comp.render();requestAnimationFrame(loop);
+}
+loop();
+})();
+</script>
