@@ -46,7 +46,7 @@ CSS = """<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter
 .gb{position:absolute;left:0;right:0;bottom:0;height:560px;background:linear-gradient(transparent,rgba(2,4,14,.75))}
 .hd{position:absolute;top:88px;left:54px;color:#fff;font:700 30px Inter;text-shadow:0 2px 8px #000}
 .hd b{display:block;font:500 22px Inter;opacity:.75;letter-spacing:2px;margin-top:4px}
-.dis{position:absolute;bottom:150px;width:100%;text-align:center;font:500 22px Inter;color:#fff9}
+.dis{position:absolute;top:96px;right:54px;text-align:right;font:500 20px Inter;color:#fffa;text-shadow:0 2px 6px #000}
 .wrap{position:absolute;top:190px;left:50px;right:50px;transform:skewX(-6deg)}
 .tag{display:inline-block;background:#0a1a3a;border:2px solid #2ad1ff;color:#fff;font:800 26px Inter;letter-spacing:2px;padding:8px 16px;margin-bottom:18px;box-shadow:0 0 22px rgba(42,209,255,.45)}
 .head{font:400 118px/1.02 Anton;color:#fff;text-transform:uppercase;letter-spacing:1px;
