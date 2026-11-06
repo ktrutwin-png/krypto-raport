@@ -1,0 +1,105 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Hexa 3D</title>
+<style>
+html,body{margin:0;height:100%;background:#02060f;overflow:hidden;touch-action:none}
+canvas{position:fixed;inset:0;width:100%;height:100%;display:block}
+#bg{z-index:2;pointer-events:none;mix-blend-mode:screen;background:radial-gradient(110% 70% at 50% 45%,#0c2a5c 0%,#061634 42%,#02060f 100%)}
+</style></head><body>
+<canvas id="bg"></canvas><canvas id="gl"></canvas>
+<script src="three.min.js"></script>
+<script src="GLTFLoader.js"></script>
+<script src="MeshSurfaceSampler.js"></script>
+<script src="CopyShader.js"></script>
+<script src="LuminosityHighPassShader.js"></script>
+<script src="EffectComposer.js"></script>
+<script src="RenderPass.js"></script>
+<script src="ShaderPass.js"></script>
+<script src="UnrealBloomPass.js"></script>
+<script>
+const GLB="/*GLB*/";
+const DPR=Math.min(1.75,devicePixelRatio||1);
+const cv=document.getElementById('gl');
+const r=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});r.setPixelRatio(DPR);r.setClearColor(0x000000,0);
+const scene=new THREE.Scene();const cam=new THREE.PerspectiveCamera(30,1,.01,100);
+const U={t:{value:0},yCut:{value:-9},tint:{value:new THREE.Color(.35,.72,1)},glow:{value:0},flick:{value:1}};
+const comp=new THREE.EffectComposer(r);comp.addPass(new THREE.RenderPass(scene,cam));
+const bloom=new THREE.UnrealBloomPass(new THREE.Vector2(256,256),.6,.5,.42);comp.addPass(bloom);
+function holoMat(map){return new THREE.ShaderMaterial({transparent:true,depthWrite:true,side:THREE.FrontSide,
+  uniforms:{map:{value:map},yCut:U.yCut,t:U.t,tint:U.tint,glow:U.glow,flick:U.flick},
+  vertexShader:`varying vec2 vUv;varying vec3 vN,vV;varying float vY;void main(){vUv=uv;vec4 w=modelMatrix*vec4(position,1.);vY=w.y;vN=normalize(mat3(modelMatrix)*normal);vV=normalize(cameraPosition-w.xyz);gl_Position=projectionMatrix*viewMatrix*w;}`,
+  fragmentShader:`uniform sampler2D map;uniform float yCut,t,glow,flick;uniform vec3 tint;varying vec2 vUv;varying vec3 vN,vV;varying float vY;
+  void main(){if(vY<yCut)discard;vec3 c=texture2D(map,vUv).rgb;float l=dot(c,vec3(.3,.55,.15));
+   float fr=pow(1.-abs(dot(normalize(vN),vV)),1.8);
+   vec3 h=tint*pow(l,.75)*1.05+c*vec3(.5,.75,1.05)*.5+mix(tint,vec3(.6,.9,1.),.4)*fr*(.85+glow*.6);
+   h*=1.+glow*.25;
+   float scan=.86+.14*sin(gl_FragCoord.y*1.3-t*5.);
+   float band=smoothstep(.0,.02,abs(fract(vY*1.6-t*.25)-.5)-.47)*.0+1.;
+   float fade=smoothstep(yCut,yCut+.16,vY);gl_FragColor=vec4(h*scan*flick*band,(.66+fr*.3)*fade);}`})}
+// glowing stars on the skin + swarm-like sparks
+let surf=null;const NS=2600;
+const sg=new THREE.BufferGeometry(),sp=new Float32Array(NS*3),sr=new Float32Array(NS);
+const sMat=new THREE.ShaderMaterial({transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,uniforms:{t:U.t,tint:U.tint,yCut:U.yCut,glow:U.glow},
+  vertexShader:`attribute float s;uniform float t,yCut,glow;varying float a;void main(){vec3 p=position;vec4 w=modelMatrix*vec4(p,1.);
+    float tw=pow(max(0.,sin(t*(1.2+s*2.5)+s*60.)),6.);a=(.25+tw*.9+glow*.3)*smoothstep(yCut,yCut+.14,w.y);
+    vec4 m=viewMatrix*w;gl_PointSize=(1.2+s*2.4+tw*2.)*${DPR.toFixed(2)}*(2.2/-m.z);gl_Position=projectionMatrix*m;}`,
+  fragmentShader:`uniform vec3 tint;varying float a;void main(){vec2 c=gl_PointCoord-.5;float d=dot(c,c);if(d>.25)discard;gl_FragColor=vec4(mix(tint,vec3(1.),.55),a*(1.-d*4.));}`});
+const NP=700,pg=new THREE.BufferGeometry(),pp=new Float32Array(NP*3),ps=new Float32Array(NP);
+for(let i=0;i<NP;i++){const a=Math.random()*6.283,rr=.32+Math.random()*.55;pp[i*3]=Math.cos(a)*rr;pp[i*3+1]=Math.random()*1.4-.6;pp[i*3+2]=Math.sin(a)*rr-.15;ps[i]=Math.random()}
+pg.setAttribute('position',new THREE.BufferAttribute(pp,3));pg.setAttribute('s',new THREE.BufferAttribute(ps,1));
+const pts=new THREE.Points(pg,new THREE.ShaderMaterial({transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,uniforms:{t:U.t,tint:U.tint,glow:U.glow},
+  vertexShader:`attribute float s;uniform float t,glow;varying float a;void main(){vec3 p=position;p.y=mod(p.y+t*(.02+s*.04)*(1.+glow*2.)+.6,1.4)-.6;
+    a=(.25+.6*fract(s*7.))*smoothstep(-.6,-.4,p.y)*smoothstep(.8,.55,p.y);vec4 m=modelViewMatrix*vec4(p,1.);gl_PointSize=(1.+s*2.5)*${DPR.toFixed(2)}*(2.4/-m.z);gl_Position=projectionMatrix*m;}`,
+  fragmentShader:`uniform vec3 tint;varying float a;void main(){vec2 c=gl_PointCoord-.5;float d=dot(c,c);if(d>.25)discard;gl_FragColor=vec4(mix(tint,vec3(1.),.4),a*(1.-d*4.));}`}));
+scene.add(pts);
+let piv=null,H=1;
+const bin=Uint8Array.from(atob(GLB),c=>c.charCodeAt(0)).buffer;
+new THREE.GLTFLoader().parse(bin,'',g=>{
+  const m=g.scene;const b=new THREE.Box3().setFromObject(m),ctr=b.getCenter(new THREE.Vector3()),sz=b.getSize(new THREE.Vector3());
+  m.position.sub(ctr);H=sz.y;U.yCut.value=-sz.y/2+sz.y*.085;
+  let mesh=null;m.traverse(o=>{if(o.isMesh){if(!o.geometry.attributes.normal)o.geometry.computeVertexNormals();o.material=holoMat(o.material.map);mesh=mesh||o}});
+  piv=new THREE.Group();piv.add(m);scene.add(piv);
+  if(mesh){const smp=new THREE.MeshSurfaceSampler(mesh).build(),v=new THREE.Vector3();
+    for(let i=0;i<NS;i++){smp.sample(v);sp[i*3]=v.x;sp[i*3+1]=v.y;sp[i*3+2]=v.z;sr[i]=Math.random()}
+    sg.setAttribute('position',new THREE.BufferAttribute(sp,3));sg.setAttribute('s',new THREE.BufferAttribute(sr,1));
+    const st=new THREE.Points(sg,sMat);st.position.copy(mesh.position);st.quaternion.copy(mesh.quaternion);st.scale.copy(mesh.scale);
+    mesh.parent.add(st)}
+  resize();window.hexaReady=1});
+// background bokeh
+const bg=document.getElementById('bg').getContext('2d');
+const B=Array.from({length:30},()=>({x:Math.random(),y:Math.random(),r:10+Math.random()*34,v:.004+Math.random()*.01,a:.06+Math.random()*.14}));
+function resize(){const w=innerWidth,h=innerHeight;r.setSize(w,h,false);comp.setSize(w,h);const bc=document.getElementById('bg');bc.width=w*DPR;bc.height=h*DPR;
+  cam.aspect=w/h;cam.updateProjectionMatrix();
+  const vis=H*1.28;const d=vis/(2*Math.tan(15*Math.PI/180));
+  const top=H/2,ty0=top-0.30*vis;cam.position.set(0,ty0,d);cam.lookAt(0,ty0,0)}
+addEventListener('resize',resize);resize();
+// ---- state api (same as the 2D Hexa) ----
+const TINT={idle:[.35,.72,1],listen:[.4,.85,1],speak:[.55,.9,1],work:[1,.75,.3],alert:[.75,.45,1]};
+let state='idle',micExt=-1,look=null,lookT=0,drag=null;
+window.hexa={setState:s=>{state=TINT[s]?s:'idle'},setMic:x=>{micExt=x},look:(x,y)=>{look=[x,y];lookT=performance.now()}};
+addEventListener('pointerdown',e=>{drag=[e.clientX,e.clientY,ty,tp];look=[e.clientX/innerWidth,e.clientY/innerHeight];lookT=performance.now()});
+addEventListener('pointermove',e=>{if(drag){ty=drag[2]+(e.clientX-drag[0])/innerWidth*3;tp=Math.max(-.45,Math.min(.45,drag[3]+(e.clientY-drag[1])/innerHeight*1.2));lookT=performance.now()}});
+addEventListener('pointerup',()=>{drag=null});
+let gyro=[0,0],g0=null;addEventListener('deviceorientation',e=>{if(e.beta==null)return;if(!g0)g0=[e.gamma,e.beta];gyro=[(e.gamma-g0[0])/45,(e.beta-g0[1])/60];g0[0]+=(e.gamma-g0[0])*.003;g0[1]+=(e.beta-g0[1])*.003});
+document.addEventListener('visibilitychange',()=>{running=!document.hidden;if(running)requestAnimationFrame(loop)});
+const tint=[.35,.72,1];let yaw=0,pitch=0,ty=0,tp=0,spk=0,glow=0,running=true,last=performance.now(),t0=last,nextGl=3,glT=0;
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function loop(now){if(!running)return;const dt=Math.min(.05,(now-last)/1000);last=now;const t=(now-t0)/1000;U.t.value=t;
+  const k=1-Math.pow(.04,dt);const tt=TINT[state];for(let i=0;i<3;i++)tint[i]+=(tt[i]-tint[i])*k;U.tint.value.setRGB(tint[0],tint[1],tint[2]);
+  const voice=state==='speak'?Math.max(0,(Math.sin(t*11)+Math.sin(t*6.7+1)+Math.sin(t*17.3))/3):0;
+  const mic=state==='listen'?(micExt>=0?Math.min(1,micExt*1.3):.4+.3*Math.abs(Math.sin(t*4))):0;
+  spk+=(Math.max(voice,mic)-spk)*(1-Math.pow(.001,dt));glow+=((state==='work'||state==='alert'?.6:0)+spk*.9-glow)*k;U.glow.value=glow;
+  let fl=.97+.03*Math.sin(t*37);if(t>nextGl){glT=.08+Math.random()*.1;nextGl=t+4+Math.random()*6}if(glT>0){glT-=dt;fl=.75+Math.random()*.3}U.flick.value=fl;
+  const nowMs=performance.now();
+  if(!drag){if(look&&nowMs-lookT<3500){ty+=((look[0]-.5)*1.1-ty)*(1-Math.pow(.2,dt));tp+=((look[1]-.45)*.5-tp)*(1-Math.pow(.2,dt))}
+    else if(!reduce){ty+=(Math.sin(t*.29)*.32+Math.sin(t*.11)*.12-ty)*(1-Math.pow(.5,dt));tp+=(Math.sin(t*.21)*.06-tp)*(1-Math.pow(.5,dt))}}
+  if(state==='work')tp+=(-.18-tp)*k;
+  yaw+=(ty+gyro[0]*.6-yaw)*(1-Math.pow(.01,dt));pitch+=(tp+gyro[1]*.4-pitch)*(1-Math.pow(.01,dt));
+  if(piv){piv.rotation.y=yaw;piv.rotation.x=pitch;piv.position.y=reduce?0:Math.sin(t*1.15)*.005}
+  pts.rotation.y=t*.04;
+  const bc=bg.canvas,W=bc.width,Hh=bc.height;bg.clearRect(0,0,W,Hh);
+  for(const o of B){o.y-=o.v*dt;if(o.y<-.1){o.y=1.1;o.x=Math.random()}const x=(o.x-yaw*.05)*W,y=o.y*Hh,rr=o.r*DPR;const g=bg.createRadialGradient(x,y,0,x,y,rr);
+    g.addColorStop(0,`rgba(${tint.map(c=>Math.round(50+c*130)).join(',')},${o.a})`);g.addColorStop(1,'rgba(0,0,0,0)');bg.fillStyle=g;bg.fillRect(x-rr,y-rr,2*rr,2*rr)}
+  comp.render();requestAnimationFrame(loop)}
+requestAnimationFrame(loop);
+</script></body></html>
