@@ -1,4 +1,10 @@
-# KINO – filmowy Reel z lektorem (styl główny od 5.11.2026)
+# KINO – Reel z lektorem
+## Styl "news" (DOMYŚLNY od 6.11.2026 – wzór szefa: „taka forma jest najlepsza dla YT i Insta”)
+Gruby naglowek u góry (Anton, biały + *żółty* + ~zielony~, lekko pochylony), opcjonalnie tag (np. LIVE MARKET UPDATE), sub, chip (▲/▼ liczba), note (ciemna ramka wchodząca w połowie sceny). Obrazy = holograficzne sceny z wykresami/panelami danych (bank: *_holo_*). Szybki energiczny lektor: piper **en_US-ryan-high** (obniżony o 10%), ~2,5 słowa/s. Na końcu automatyczna plansza „This Is Not Financial Advice! Just data. @erl.grey83”. 4–6 scen, 25–40 s.
+Głos pobierz do tools/reel/voice/: https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ryan/high/en_US-ryan-high.onnx (+ .onnx.json), export no_proxy= NO_PROXY=. Folder voice/ jest w .gitignore.
+Prompt obrazu (news): "Futuristic holographic <temat> dashboard, vertical composition, <wykres/obiekt>, floating translucent data panels, deep navy background, neon cyan and gold light, ultra detailed 3D render, top third darker and empty for headline, no readable words".
+
+## Styl "cinema" (stary, "style":"cinema")
 Pełnoekranowe pionowe zdjęcia (9:16), wolny ruch kamery, duża liczba + podpis na każdej scenie, @erl.grey83 + data u góry, lektor (piper joe) i muzyka ściszana pod głosem. 5–7 scen, ok. 35–60 s.
 
 ## Użycie
