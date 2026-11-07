@@ -22,5 +22,13 @@ MT5: Hexa (830083), Turbo (830099) · IBKR paper: IB Skaner · Kraken: Freqtrade
 - Bez wyjść czasowych; koszty (spread/prowizja) zawsze w teście.
 - Nigdy: real, ręczne pozycje szefa, hasła/klucze, uruchamianie wyłączonych botów.
 
+## Projekt „Bot Szefa” – skalping bez SL (cel: start realnego konta 1.01.2027)
+- Wzorzec = ręczne transakcje szefa na demo MT5 (magic 0, XAUUSD), tylko ODCZYT historii. Baza 2–6.11.2026: 46 transakcji, 83% wygranych, śr. +0,18% ruchu na wejście, śr. czas 2,5 h, ~2,2–2,5% ruchu złota łapane dziennie.
+- Zasady bota: bez SL, maks. 3 pozycje naraz, lot = reguła szefa (3 pozycje przetrwają ruch 25%, maks. strata 60% kapitału), krótkie TP.
+- Zadania: co tydzień przelicz statystyki szefa (dzień po dniu) → szukaj w danych M5/M15, co łączy jego wejścia (godzina, kierunek trendu H1, odległość od EMA, ATR) → zbuduj regułę wejścia → test na historii lat (najgorszy dołek, czas zamrożenia, czy konto przeżywa), z kosztami i dźwignią 1:20 (UE).
+- Gotowe do wdrożenia dopiero gdy: ≥ 200 transakcji w teście, wynik dodatni w obu połowach historii, konto przeżywa najgorszy okres. Bot tylko na demo; uruchamia szef.
+- Tygodniowo: tabela „szef vs Bot Szefa” + tempo wyzwania 5 000 € → 1 000 000 €.
+
 ## Postęp
 - 2026-11-07: start planu
+- 2026-11-07: dodany projekt „Bot Szefa” (skalping bez SL) i cel realnego konta od 1.01.2027
