@@ -4,11 +4,11 @@ Szef 7.11.2026: „ułóż plan każdemu agentowi… chcę widzieć wyniki w ka�
 
 ## ROZKAZY OD MÓZGU (🔧 Mechanik) – czytaj NAJPIERW, wykonuj po kolei
 Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie. Po wykonaniu: zmień [ ] na [x] i dopisz do „Postęp” jedną linijkę „ROZKAZ Rn: zrobione – dowód (plik/liczby)”. Nie da się? „ROZKAZ Rn: blokada – dlaczego”.
-- [ ] M1 (7.11) Bot Szefa: test KONFLUENCJI reguł szefa (3 świece + knot + dolar) na 2,5 roku M15, wynik do boty_rozwoj.log.
-- [ ] M2 (7.11) Przygotuj listę wszystkiego, co trzeba przenieść na serwer (procesy, foldery, autostart, pliki stanu) – serwer Contabo Windows od 8.11.
+- [x] M1 (7.11) Bot Szefa: test KONFLUENCJI reguł szefa (3 świece + knot + dolar) na 2,5 roku M15, wynik do boty_rozwoj.log.
+- [x] M2 (7.11) Przygotuj listę wszystkiego, co trzeba przenieść na serwer (procesy, foldery, autostart, pliki stanu) – serwer Contabo Windows od 8.11.
 
-- [ ] M3 (7.11) Kontrola wszystkich agentów: przy każdym przebiegu list_triggers (wszystkie strony) – ostatni przebieg każdego agenta i zadania (Reżyser/Reels, Weekly, Analityk, Zwiadowca/Opiekun Skanera, Pisarz, eToro…), błędy, czy jest wpis w dzienniku zespołu, czy rozkazy w planach nie stoją > 7 dni. Problem → „UWAGA DLA <Agent>” w dzienniku + gotowa poprawka dla Mózgu.
-- [ ] M4 (7.11) Po każdym przebiegu jedna linijka w reports/dziennik_zespolu.md.
+- [x] M3 (7.11) Kontrola wszystkich agentów: przy każdym przebiegu list_triggers (wszystkie strony) – ostatni przebieg każdego agenta i zadania (Reżyser/Reels, Weekly, Analityk, Zwiadowca/Opiekun Skanera, Pisarz, eToro…), błędy, czy jest wpis w dzienniku zespołu, czy rozkazy w planach nie stoją > 7 dni. Problem → „UWAGA DLA <Agent>” w dzienniku + gotowa poprawka dla Mózgu.
+- [x] M4 (7.11) Po każdym przebiegu jedna linijka w reports/dziennik_zespolu.md.
 ## UMIEJĘTNOŚCI I NARZĘDZIA (🔧 Mechanik)
 - Narzędzia: laptop (desktop-commander, PowerShell), Python + MetaTrader5, MT5 historia, eToro (odczyt), IB paper, Freqtrade dry-run; testy w trading\testy_agenta.
 - Potrzebujesz nowego narzędzia? „PROŚBA DO MÓZGU: …” w „Postęp”.
@@ -47,3 +47,8 @@ MT5: Hexa (830083), Turbo (830099) · IBKR paper: IB Skaner · Kraken: Freqtrade
 - 2026-11-07: start planu
 - 2026-11-07: dodany projekt „Bot Szefa” (skalping bez SL) i cel realnego konta od 1.01.2027
 - 2026-11-07: reguły szefa (3 świece, knoty, dolar) + dziennik głosowy w panelu
+- 2026-11-07: BAZA tydz. 1 w boty_rozwoj.log – Hexa 4 tr PF 2.41 +131 USD; Turbo 5 tr PF 0.91 −45; IB 0 tr; Freqtrade NIE DZIAŁA od 26.10 (0 tr); eToro demo bez kopii 60 tr PF 0.30 −1746 (kwalifikuje się do przebudowy); szef 50 tr PF 3.50.
+- ROZKAZ M1: zrobione – konfluencja 1+2+3 na XAUUSD M15 05.2024–11.2026: 321 tr, PF 0.88, śr. R −0.064 (obie połowy ujemne) → ODRZUCONY; skrypt testy_agenta\konfluencja_szefa.py.
+- ROZKAZ M2: zrobione – testy_agenta\lista_serwer.txt (10 procesów, foldery, pliki stanu; brak autostartu botów; Hexa i Turbo mają po 2 procesy – do wyjaśnienia).
+- ROZKAZ M3: zrobione (ten przebieg) – 34 zadania: eToro kontrola maszyny i eToro przegląd tygodnia ostatnio FAILED 01.11 (limit), Kronikarz FAILED 02.11 i dubluje Pisarza; reszta aktywnych OK.
+- ROZKAZ M4: zrobione – linijka w dziennik_zespolu.md.
