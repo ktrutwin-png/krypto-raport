@@ -16,6 +16,9 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 
 - [ ] R6 (7.11) Reżyser zespołu: raz w tygodniu (poniedziałek, przy przeglądzie filarów) przeczytaj reports/zespol.md, plany innych agentów i dziennik zespołu; dopisz 1–3 konkretne propozycje ulepszeń dla innych agentów do sekcji „Propozycje Reżysera” w reports/zespol.md.
 - [ ] R7 (7.11) Po każdej publikacji jedna linijka w reports/dziennik_zespolu.md.
+- [ ] R8 (7.11) Strumień 4 z reports/plan_biznes.md: lista 5 programów partnerskich (giełdy/brokerzy dostępni w NL/UE) – prowizja, warunki, wymogi oznaczania reklam; zapisz w plan_biznes.md „Postęp”.
+- [ ] R9 (7.11) Strumień 5: wybierz 20 najlepszych obrazów z tools/kino/bank* (bez logo, bez osób), przygotuj paczkę + tytuły i słowa kluczowe EN pod Adobe Stock (AI-generated) w out/stock/.
+- [ ] R10 (7.11) Strumień 3 (z Pisarzem): okładka e-booka „Czytanie świec – przeciąganie liny” 1600x2560 + 3 grafiki do rozdziału 1.
 ## UMIEJĘTNOŚCI I NARZĘDZIA (🎬 Reżyser)
 - Narzędzia: KINO (tools/kino/kino.py, styl news), lektor piper, obrazy: bank tools/kino/bank*, Unsplash, Figma generate_image; publikacja: Metricool (YT), Windsor (IG); dane: Twelve_Data, CoinGecko.
 - Potrzebujesz nowego narzędzia? Zapisz w „Postęp”: „PROŚBA DO MÓZGU: …” (co i po co) – Mózg podepnie.

@@ -8,6 +8,7 @@ Szef rozmawia TYLKO z Claude („mózg”). Claude prowadzi agentów, uczy ich, 
 | 🔧 Mechanik | Boty (Hexa, Turbo, Kraken, eToro, IB) | reports/plan_boty.md | zdrowie i wyniki botów, testy ulepszeń, budowa Bota Szefa |
 | 🔭 Zwiadowca | Skanery (sygnały, rynki) | reports/plan_skanery.md | jakość sygnałów, wyniki w R, filtry, nowe rynki |
 | ✍️ Pisarz | Książka „Filozofia tradingu” | laptop ksiazka\\rozdzialy.md (zasady stylu) | co niedzielę 15:23 wpis do dziennika + jeden rozdział, po cichu, pokaz po roku |
+| 💼 Handlowiec | Biznes – usługi AI dla firm, sprzedaż produktów | reports/plan_biznes.md | oferty, cenniki, lista firm, szkice wiadomości – wysyła szef |
 | 📐 Projektant | (później) projekt wózka dziecięcego | – | uruchamiany, gdy szef zacznie projekt |
 
 Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia szef, przegląd miesięczny 7.12.2026.

@@ -9,6 +9,7 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 
 - [x] M3 (7.11) Kontrola wszystkich agentów: przy każdym przebiegu list_triggers (wszystkie strony) – ostatni przebieg każdego agenta i zadania (Reżyser/Reels, Weekly, Analityk, Zwiadowca/Opiekun Skanera, Pisarz, eToro…), błędy, czy jest wpis w dzienniku zespołu, czy rozkazy w planach nie stoją > 7 dni. Problem → „UWAGA DLA <Agent>” w dzienniku + gotowa poprawka dla Mózgu.
 - [x] M4 (7.11) Po każdym przebiegu jedna linijka w reports/dziennik_zespolu.md.
+- [ ] M5 (7.11) Strumień 2 z reports/plan_biznes.md: wskaźnik MT5 (MQL5) „3S+K+DXY” – strzałki na wykresie, gdy 3 świece M15 + knot + dolar są zgodne; skompiluj w MetaEditor, test na demo, zrzuty ekranu i opis produktu w trading\produkty\. Bez handlu (tylko wskaźnik).
 ## UMIEJĘTNOŚCI I NARZĘDZIA (🔧 Mechanik)
 - Narzędzia: laptop (desktop-commander, PowerShell), Python + MetaTrader5, MT5 historia, eToro (odczyt), IB paper, Freqtrade dry-run; testy w trading\testy_agenta.
 - Potrzebujesz nowego narzędzia? „PROŚBA DO MÓZGU: …” w „Postęp”.
