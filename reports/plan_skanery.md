@@ -1,6 +1,15 @@
 # PLAN AGENTA SKANERY (7.11–7.12.2026) – czyta go zadanie „Opiekun Skanera Claude”
 Szef 7.11.2026: „ułóż plan każdemu agentowi… chcę widzieć wyniki od każdego agenta”. Skaner tylko wysyła sygnały na Telegram – nie handluje.
 
+
+## ROZKAZY OD MÓZGU (🔭 Zwiadowca) – czytaj NAJPIERW, wykonuj po kolei
+Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie. Po wykonaniu: zmień [ ] na [x] i dopisz do „Postęp” jedną linijkę „ROZKAZ Rn: zrobione – dowód (plik/liczby)”. Nie da się? „ROZKAZ Rn: blokada – dlaczego”.
+- [ ] Z1 (7.11) Sprawdź, czy sygnały skanera na złocie zgadzają się z regułą szefa „3 świece M15 + dolar” – ile sygnałów było zgodnych, jaki wynik w R.
+
+## UMIEJĘTNOŚCI I NARZĘDZIA (🔭 Zwiadowca)
+- Narzędzia: skanery na laptopie (skaner_dzienny.py, ib_skaner.py), sygnaly_wyniki.csv, MT5 historia, Twelve_Data.
+- Potrzebujesz nowego narzędzia? „PROŚBA DO MÓZGU: …” w „Postęp”.
+
 ## Skanery w zakresie
 skaner_dzienny.py (MT5, D1, pętla co 2 min) · IB Skaner (paper) – tylko obserwacja jego sygnałów.
 

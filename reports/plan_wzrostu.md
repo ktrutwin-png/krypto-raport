@@ -5,6 +5,19 @@
 Diagnoza 6.11: IG 101 obserwujących, zasięg spoza obserwujących ~17%, skip 50–100%, 0 udostępnień, 0 zapisów. YT 7 subskrybentów, 0 wyświetleń.
 Algorytm (2026): najmocniejszy sygnał = udostępnienia w DM, potem obejrzenie do końca i zapisy; skip w 1–2 s zabija zasięg.
 
+
+## ROZKAZY OD MÓZGU (🎬 Reżyser) – czytaj NAJPIERW, wykonuj po kolei
+Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie. Po wykonaniu: zmień [ ] na [x] i dopisz do „Postęp” jedną linijkę „ROZKAZ Rn: zrobione – dowód (plik/liczby)”. Nie da się? „ROZKAZ Rn: blokada – dlaczego”.
+- [ ] R1 (7.11) Każdy Reel ≤ 30 s, max 5 scen.
+- [ ] R2 (7.11) Podpisy (sub/note) min. 44 px, pełna biel/żółty, pasek pod tekstem.
+- [ ] R3 (7.11) Jeden obraz max raz na 3 dni; ostatnia scena z własnym obrazem.
+- [ ] R4 (7.11) W każdej scenie ruch kamery + jeden element animowany.
+- [ ] R5 (7.11) Ticker nie niżej niż y=1480 (pion) – poprawione w kino.py, pilnuj w scenes.json.
+
+## UMIEJĘTNOŚCI I NARZĘDZIA (🎬 Reżyser)
+- Narzędzia: KINO (tools/kino/kino.py, styl news), lektor piper, obrazy: bank tools/kino/bank*, Unsplash, Figma generate_image; publikacja: Metricool (YT), Windsor (IG); dane: Twelve_Data, CoinGecko.
+- Potrzebujesz nowego narzędzia? Zapisz w „Postęp”: „PROŚBA DO MÓZGU: …” (co i po co) – Mózg podepnie.
+
 ## Cele na 30 dni (do 7.12.2026)
 - IG: 101 → 150 obserwujących; zasięg spoza obserwujących > 40%; skip < 60%; ≥ 1 udostępnienie na Reel.
 - YT: 7 → 30 subskrybentów; ≥ 100 wyświetleń na Short średnio.

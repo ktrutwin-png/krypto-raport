@@ -1,6 +1,16 @@
 # PLAN AGENTA BOTY (7.11–7.12.2026) – czyta go zadanie „Agent Boty”
 Szef 7.11.2026: „ułóż plan każdemu agentowi… chcę widzieć wyniki w każdej dziedzinie od każdego agenta”. Wszystko DEMO / paper / dry-run. Agent tylko mierzy i testuje; wdrożenie po „wdróż” szefa w rozmowie z Claude.
 
+
+## ROZKAZY OD MÓZGU (🔧 Mechanik) – czytaj NAJPIERW, wykonuj po kolei
+Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie. Po wykonaniu: zmień [ ] na [x] i dopisz do „Postęp” jedną linijkę „ROZKAZ Rn: zrobione – dowód (plik/liczby)”. Nie da się? „ROZKAZ Rn: blokada – dlaczego”.
+- [ ] M1 (7.11) Bot Szefa: test KONFLUENCJI reguł szefa (3 świece + knot + dolar) na 2,5 roku M15, wynik do boty_rozwoj.log.
+- [ ] M2 (7.11) Przygotuj listę wszystkiego, co trzeba przenieść na serwer (procesy, foldery, autostart, pliki stanu) – serwer Contabo Windows od 8.11.
+
+## UMIEJĘTNOŚCI I NARZĘDZIA (🔧 Mechanik)
+- Narzędzia: laptop (desktop-commander, PowerShell), Python + MetaTrader5, MT5 historia, eToro (odczyt), IB paper, Freqtrade dry-run; testy w trading\testy_agenta.
+- Potrzebujesz nowego narzędzia? „PROŚBA DO MÓZGU: …” w „Postęp”.
+
 ## Boty w zakresie
 MT5: Hexa (830083), Turbo (830099) · IBKR paper: IB Skaner · Kraken: Freqtrade/FreqAI dry-run · eToro demo: Pula 500, Pula 500 Turbo, Pula 1k, łowcy sygnałów (EU/USA). Ręczne transakcje szefa (magic 0) tylko do porównania.
 

@@ -11,3 +11,8 @@ Szef rozmawia TYLKO z Claude („mózg”). Claude prowadzi agentów, uczy ich, 
 | 📐 Projektant | (później) projekt wózka dziecięcego | – | uruchamiany, gdy szef zacznie projekt |
 
 Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia szef, przegląd miesięczny 7.12.2026.
+
+## Jak dowodzi Mózg
+- Rozkazy: sekcja „ROZKAZY OD MÓZGU” na górze planu każdego agenta (plan_wzrostu, plan_boty, plan_skanery). Agent czyta je najpierw, wykonuje, odhacza [x] i zapisuje dowód w „Postęp”.
+- Umiejętności: sekcja „UMIEJĘTNOŚCI I NARZĘDZIA” w tym samym planie. Brakuje narzędzia → agent pisze „PROŚBA DO MÓZGU”, Mózg podpina.
+- Kontrola: Mózg sprawdza odhaczone rozkazy i dowody przy każdej rozmowie z szefem o agentach i w przeglądzie 7.12.
