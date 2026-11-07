@@ -14,6 +14,8 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - [ ] R4 (7.11) W każdej scenie ruch kamery + jeden element animowany.
 - [ ] R5 (7.11) Ticker nie niżej niż y=1480 (pion) – poprawione w kino.py, pilnuj w scenes.json.
 
+- [ ] R6 (7.11) Reżyser zespołu: raz w tygodniu (poniedziałek, przy przeglądzie filarów) przeczytaj reports/zespol.md, plany innych agentów i dziennik zespołu; dopisz 1–3 konkretne propozycje ulepszeń dla innych agentów do sekcji „Propozycje Reżysera” w reports/zespol.md.
+- [ ] R7 (7.11) Po każdej publikacji jedna linijka w reports/dziennik_zespolu.md.
 ## UMIEJĘTNOŚCI I NARZĘDZIA (🎬 Reżyser)
 - Narzędzia: KINO (tools/kino/kino.py, styl news), lektor piper, obrazy: bank tools/kino/bank*, Unsplash, Figma generate_image; publikacja: Metricool (YT), Windsor (IG); dane: Twelve_Data, CoinGecko.
 - Potrzebujesz nowego narzędzia? Zapisz w „Postęp”: „PROŚBA DO MÓZGU: …” (co i po co) – Mózg podepnie.
