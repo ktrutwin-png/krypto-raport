@@ -1,0 +1,67 @@
+{
+ "date": "07.11.2026",
+ "style": "news",
+ "mood": "calm",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $76,047 ▲0.6% · ETH $2,246 ▲0.9% · XRP $1.18 ▼0.9% · SOL $90.21 ▲0.6% · GOLD $4,066 · 1 BTC = 100,000,000 SATS",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "MYTH vs FACT",
+   "head": [
+    "MYTH:",
+    "*YOU NEED $76,000*",
+    "*FOR BITCOIN*"
+   ],
+   "anim": {
+    "dir": "chop",
+    "label": "$76,047"
+   },
+   "say": "Myth: you need seventy six thousand dollars to own Bitcoin. Wrong.",
+   "move": "in"
+  },
+  {
+   "img": "s2.jpg",
+   "head": [
+    "FACT:",
+    "*1 BTC =*",
+    "~100 MILLION SATS~"
+   ],
+   "note": "SATS = THE SMALLEST UNIT",
+   "say": "One Bitcoin splits into a hundred million tiny units, called sats.",
+   "move": "out"
+  },
+  {
+   "img": "s3.jpg",
+   "head": [
+    "$10 =",
+    "*~13,000 SATS*"
+   ],
+   "chip": "▲ AT $76,047 PER BTC",
+   "say": "At today's price, ten dollars is about thirteen thousand sats.",
+   "move": "up"
+  },
+  {
+   "img": "s4.jpg",
+   "head": [
+    "21 MILLION",
+    "*MAX SUPPLY*"
+   ],
+   "sub": "~96% ALREADY MINED",
+   "chip": "▲ 20.1M IN CIRCULATION",
+   "say": "The price looks huge because only twenty one million coins will ever exist.",
+   "move": "down"
+  },
+  {
+   "img": "s5.jpg",
+   "tag": "YOUR TURN",
+   "head": [
+    "DID YOU KNOW?",
+    "*✅ YES / ❌ NO*"
+   ],
+   "note": "SEND THIS TO A FRIEND WHO HOLDS ZERO BTC",
+   "say": "So, one whole coin, or a few sats? Not financial advice, just data.",
+   "move": "in"
+  }
+ ]
+}
