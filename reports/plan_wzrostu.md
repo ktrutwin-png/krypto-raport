@@ -8,14 +8,14 @@ Algorytm (2026): najmocniejszy sygnał = udostępnienia w DM, potem obejrzenie d
 
 ## ROZKAZY OD MÓZGU (🎬 Reżyser) – czytaj NAJPIERW, wykonuj po kolei
 Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie. Po wykonaniu: zmień [ ] na [x] i dopisz do „Postęp” jedną linijkę „ROZKAZ Rn: zrobione – dowód (plik/liczby)”. Nie da się? „ROZKAZ Rn: blokada – dlaczego”.
-- [ ] R1 (7.11) Każdy Reel ≤ 30 s, max 5 scen.
-- [ ] R2 (7.11) Podpisy (sub/note) min. 44 px, pełna biel/żółty, pasek pod tekstem.
-- [ ] R3 (7.11) Jeden obraz max raz na 3 dni; ostatnia scena z własnym obrazem.
-- [ ] R4 (7.11) W każdej scenie ruch kamery + jeden element animowany.
-- [ ] R5 (7.11) Ticker nie niżej niż y=1480 (pion) – poprawione w kino.py, pilnuj w scenes.json.
+- [x] R1 (7.11) Każdy Reel ≤ 30 s, max 5 scen.
+- [x] R2 (7.11) Podpisy (sub/note) min. 44 px, pełna biel/żółty, pasek pod tekstem.
+- [x] R3 (7.11) Jeden obraz max raz na 3 dni; ostatnia scena z własnym obrazem.
+- [x] R4 (7.11) W każdej scenie ruch kamery + jeden element animowany.
+- [x] R5 (7.11) Ticker nie niżej niż y=1480 (pion) – poprawione w kino.py, pilnuj w scenes.json.
 
 - [ ] R6 (7.11) Reżyser zespołu: raz w tygodniu (poniedziałek, przy przeglądzie filarów) przeczytaj reports/zespol.md, plany innych agentów i dziennik zespołu; dopisz 1–3 konkretne propozycje ulepszeń dla innych agentów do sekcji „Propozycje Reżysera” w reports/zespol.md.
-- [ ] R7 (7.11) Po każdej publikacji jedna linijka w reports/dziennik_zespolu.md.
+- [x] R7 (7.11) Po każdej publikacji jedna linijka w reports/dziennik_zespolu.md.
 - [ ] R8 (7.11) Strumień 4 z reports/plan_biznes.md: lista 5 programów partnerskich (giełdy/brokerzy dostępni w NL/UE) – prowizja, warunki, wymogi oznaczania reklam; zapisz w plan_biznes.md „Postęp”.
 - [ ] R9 (7.11) Strumień 5: wybierz 20 najlepszych obrazów z tools/kino/bank* (bez logo, bez osób), przygotuj paczkę + tytuły i słowa kluczowe EN pod Adobe Stock (AI-generated) w out/stock/.
 - [ ] R10 (7.11) Strumień 3 (z Pisarzem): okładka e-booka „Czytanie świec – przeciąganie liny” 1600x2560 + 3 grafiki do rozdziału 1.
@@ -75,3 +75,4 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - 2026-11-06: IG 101, YT 7 (start planu)
 - 2026-11-07: dodatkowy Reel BREAKING (128 banków shinkin offline w Japonii) – wyjątek „duże wydarzenie” z planu; kino.py: nagłówek sceny 1 widoczny od klatki 0
 - 2026-11-07: przegląd grafiki przez Mózg (6 poprawek w STANDARDZIE JAKOŚCI), ticker przeniesiony nad strefę UI IG
+- ROZKAZ R1–R5, R7: zrobione – Reel 07.11 10:00: 24,0 s, 5 scen; note 64 px biel na ciemnym pasku, sub/chip zielone ≥44 px; 5 nowych obrazów (bank *_holo_01 z 7.11), ostatnia scena z własnym obrazem; każda scena move + anim/chip/note; ticker y≈1470; wpis w dzienniku zespołu (reports/2026-11-07-reel)
