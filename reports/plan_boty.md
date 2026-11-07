@@ -26,9 +26,12 @@ MT5: Hexa (830083), Turbo (830099) · IBKR paper: IB Skaner · Kraken: Freqtrade
 - Wzorzec = ręczne transakcje szefa na demo MT5 (magic 0, XAUUSD), tylko ODCZYT historii. Baza 2–6.11.2026: 46 transakcji, 83% wygranych, śr. +0,18% ruchu na wejście, śr. czas 2,5 h, ~2,2–2,5% ruchu złota łapane dziennie.
 - Zasady bota: bez SL, maks. 3 pozycje naraz, lot = reguła szefa (3 pozycje przetrwają ruch 25%, maks. strata 60% kapitału), krótkie TP.
 - Zadania: co tydzień przelicz statystyki szefa (dzień po dniu) → szukaj w danych M5/M15, co łączy jego wejścia (godzina, kierunek trendu H1, odległość od EMA, ATR) → zbuduj regułę wejścia → test na historii lat (najgorszy dołek, czas zamrożenia, czy konto przeżywa), z kosztami i dźwignią 1:20 (UE).
+- Reguły szefa (7.11, z jego słów): (1) kierunek 3 ostatnich zamkniętych świec M15 = kierunek wejścia (u szefa 72% wejść, 88% wygranych); (2) 6 świec: czerwona z dolnym knotem pod dołkami 5 poprzednich → spadek w ≤45 min; potem zielona z górnym knotem ponad ostatnią czerwoną → wybicie w 15–45 min; (3) dolar (DXY z 6 par, wykres.dxy) – przy skokach na newsach złoto reaguje odwrotnie w tej samej świecy (82%). Każda reguła osobno ≈ 50% na 2,5 roku M15 → testuj KONFLUENCJĘ 1+2+3 razem oraz porównanie sygnałów wziętych vs pominiętych przez szefa.
+- Dziennik szefa: panel_tg\notatki\ (głosówka .ogg + tekst + wykres + świece + pozycje w .json, zbiorczo notatki.csv) – czytaj co tydzień i łącz z jego transakcjami.
 - Gotowe do wdrożenia dopiero gdy: ≥ 200 transakcji w teście, wynik dodatni w obu połowach historii, konto przeżywa najgorszy okres. Bot tylko na demo; uruchamia szef.
 - Tygodniowo: tabela „szef vs Bot Szefa” + tempo wyzwania 5 000 € → 1 000 000 €.
 
 ## Postęp
 - 2026-11-07: start planu
 - 2026-11-07: dodany projekt „Bot Szefa” (skalping bez SL) i cel realnego konta od 1.01.2027
+- 2026-11-07: reguły szefa (3 świece, knoty, dolar) + dziennik głosowy w panelu
