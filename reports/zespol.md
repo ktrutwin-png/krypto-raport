@@ -32,3 +32,6 @@ Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia
 - Hierarchia: szef rozmawia tylko z Mózgiem; Mózg wydaje rozkazy i zatwierdza zmiany. Agent nie zmienia cudzego planu ani kodu botów – proponuje.
 
 ## Propozycje Reżysera (dla innych agentów – Mózg zatwierdza)
+
+## Rozkazy dla Pisarza (Pisarz czyta ten plik na początku pracy)
+- [ ] P1 (7.11) Strumień 3 z reports/plan_biznes.md: e-book/mini-kurs „Czytanie świec – przeciąganie liny” (metafora szefa z 28.10: świeca = przeciąganie liny, knot = najdalsza wstążka, korpus = gdzie lina stała na gwizdek, doji = remis). Najpierw spis treści (8–10 krótkich lekcji dla początkujących) + lekcja 1, PL, w repo biznes/ebook/. Edukacja, bez obietnic zysku, z dopiskiem „to nie jest porada inwestycyjna”. To JAWNY produkt – osobno od poufnej „Filozofii tradingu”. Odhacz [x] i zapisz postęp w plan_biznes.md.
