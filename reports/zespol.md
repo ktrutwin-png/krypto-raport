@@ -35,3 +35,6 @@ Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia
 
 ## Rozkazy dla Pisarza (Pisarz czyta ten plik na początku pracy)
 - [ ] P1 (7.11) Strumień 3 z reports/plan_biznes.md: e-book/mini-kurs „Czytanie świec – przeciąganie liny” (metafora szefa z 28.10: świeca = przeciąganie liny, knot = najdalsza wstążka, korpus = gdzie lina stała na gwizdek, doji = remis). Najpierw spis treści (8–10 krótkich lekcji dla początkujących) + lekcja 1, PL, w repo biznes/ebook/. Edukacja, bez obietnic zysku, z dopiskiem „to nie jest porada inwestycyjna”. To JAWNY produkt – osobno od poufnej „Filozofii tradingu”. Odhacz [x] i zapisz postęp w plan_biznes.md.
+
+## Rozkazy dla Analityka (czytaj na początku pracy)
+- [ ] A1 (7.11) Rozdzielaj handel szefa na dwa koszyki: PANEL (komentarz pozycji „PanelTG…”, szybkie pewne strzały z Telegrama) i MT5 RĘCZNY (reszta, magic 0). Dla każdego osobno: wejścia, % wygranych, czas do TP (+0,3%), najgłębszy minus po drodze, śr. % na wejście. To czas do zysku i głębokość minusa mierzą przewagę szefa – nie sam % wygranych (test 7.11: bez SL oba kierunki zwykle trafiają TP).
