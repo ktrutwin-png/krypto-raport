@@ -1,0 +1,19 @@
+{
+ "date": "07.11.2026",
+ "style": "news",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $75,680 ▼0.3% · ETH $2,232 ▼0.1% · XRP $1.16 ▼3.1% · SOL $89.46 ▼1.2% · GOLD $4,066 ▲0.1% · FEAR & GREED 25",
+ "scenes": [
+  {"img": "s1.jpg", "tag": "LIVE MARKET UPDATE", "head": ["BITCOIN ETFS", "*-$412 MILLION*", "*IN ONE DAY*"], "chip": "▼ FRIDAY OUTFLOWS", "anim": {"dir": "down", "label": "$75,680"}, "move": "in",
+   "say": "Bitcoin E T Fs reportedly bled four hundred twelve million dollars on Friday."},
+  {"img": "s2.jpg", "head": ["2026 ETF FLOWS:", "*NOW NEGATIVE*"], "sub": "BLACKROCK REPORTEDLY LED THE SELLING", "note": "ETF ASSETS ~$100B, FROM $109B A MONTH AGO", "move": "out",
+   "say": "Reports say BlackRock led the selling, and twenty twenty six flows just turned negative."},
+  {"img": "s3.jpg", "head": ["XRP $1.16 -", "*WORST OF THE MAJORS*"], "chip": "▼ -7% THIS WEEK", "note": "-3% IN 24 HOURS", "move": "up",
+   "say": "X R P fell hardest, down seven percent this week."},
+  {"img": "s4.jpg", "head": ["GOLD $4,066 -", "*FLAT, JUST UNDER*", "*THE $4,070 FLOOR*"], "chip": "▲ +0.1%", "note": "MARKETS CLOSED FOR THE WEEKEND", "move": "down",
+   "say": "Gold sits flat near four thousand sixty six."},
+  {"img": "s5.jpg", "head": ["FEAR & GREED 25", "*BULL OR BEAR*", "*BY FRIDAY?*"], "sub": "🐂 OR 🐻 — TELL ME BELOW", "anim": {"dir": "chop", "label": "$75,000?"}, "note": "SEND THIS TO A FRIEND WHO HOLDS BTC", "move": "in",
+   "say": "Fear hits twenty five, extreme fear. Bull or bear by Friday? Watch the E T F flows. This is not financial advice, just data."}
+ ]
+}
