@@ -143,7 +143,7 @@ for i, (s, L) in enumerate(zip(S, DUR)):
         extra += ["-i", f"_an{i}.mov"]; flt += f";[{k}]format=rgba,fade=t=in:st=0.25:d=0.35:alpha=1[an];{cur}[an]overlay={bx[0]}:{bx[1]}[z1]"; cur = "[z1]"; k += 1
     if CFG.get("ticker") and not end and os.path.exists("_tk.png"):   # przewijany pasek z cenami
         extra += ["-loop", "1", "-t", str(L), "-i", "_tk.png"]
-        flt += f";{cur}[{k}]overlay=x='-mod((t+{i*3})*150,overlay_w/2)':y={CFG.get("ticker_y", 990 if WIDE else 1840)}[z2]"; cur = "[z2]"; k += 1
+        flt += f";{cur}[{k}]overlay=x='-mod((t+{i*3})*150,overlay_w/2)':y={CFG.get("ticker_y", 990 if WIDE else 1470)}[z2]"; cur = "[z2]"; k += 1
     flt += f";{cur}format=yuv420p"
     run(["ffmpeg", "-y", "-loop", "1", "-framerate", str(FPS), "-t", str(L), "-i", s["img"], "-loop", "1", "-t", str(L), "-i", "_hd.png",
          "-loop", "1", "-t", str(L), "-i", f"_t{i}.png", "-loop", "1", "-t", str(L), "-i", f"_n{i}.png", *extra,

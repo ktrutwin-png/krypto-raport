@@ -28,6 +28,15 @@ Algorytm (2026): najmocniejszy sygnał = udostępnienia w DM, potem obejrzenie d
 - KONTROLA przed publikacją: obejrzyj klatki 0, 25%, 50%, 75%, koniec; jeśli coś nieczytelne, ucięte albo statyczne – popraw i wyrenderuj ponownie. Wadliwego filmu nie publikuj.
 - Opiekun codziennie wybiera jedną rzecz, która najbardziej podniesie jakość, i ją wdraża.
 
+### Przegląd grafiki – Mózg, 7.11.2026 (Reels 6.11 i 7.11, klatka po klatce)
+- DOBRZE: nagłówek od klatki 0, duże żółto-białe litery, mocne obrazy neon/holo, liczba na początku nagłówka. Trzymać.
+- 1. Długość: Japan 37,5 s, 6.11 32,5 s – poza normą 20–30 s dla Reela. Tnij do ≤ 30 s (max 5 scen po ~5 s, jedna myśl na scenę).
+- 2. Pasek z cenami: był na dole kadru (y≈1840) – w strefie interfejsu Instagrama (dół 380 px), więc zasłonięty. Poprawione w kino.py: domyślnie y=1470 w pionie. Nie ustawiaj ticker_y niżej niż 1480.
+- 3. Mały tekst (sub/note) bywa za blady i za mały („JAN 2026: 140 CO-OPS DOWN” ledwo widoczny): min. 44 px, pełna biel albo żółty, cień/pasek pod tekstem; sprawdź na klatce w skali telefonu.
+- 4. Powtórki obrazów: ten sam hologram bitcoina zamykał oba filmy z rzędu – jeden obraz max raz na 3 dni; ostatnia scena (pętla/pytanie) ma mieć własny obraz związany z tematem.
+- 5. Ruch: każda scena ma mieć ruch kamery (move) ORAZ jeden element animowany (anim, chip, licznik liczby) – w 6.11 dwie ostatnie sceny to ten sam stojący kadr.
+- 6. Kontrast nagłówka na jasnych obrazach: ciemny gradient od góry kadru (już jest) – pilnuj go przy jasnych zdjęciach (budynki, niebo).
+
 ## Tematy (szef 6.11.2026)
 - Każdy film: krypto + wiadomości ze świata + banki + złoto. Szukaj newsów o bankach: banki centralne (Fed, EBC, BoJ, decyzje o stopach, zakupy złota przez banki centralne), duże banki i krypto (ETF-y, custody, stablecoiny, tokenizacja), regulacje (CLARITY Act, MiCA).
 - Raport 18:00 zawsze ma co najmniej jedną scenę o złocie i jedną o bankach/makro, jeśli był taki news w ciągu ostatnich 12 h.
@@ -47,3 +56,4 @@ Algorytm (2026): najmocniejszy sygnał = udostępnienia w DM, potem obejrzenie d
 ## Postęp
 - 2026-11-06: IG 101, YT 7 (start planu)
 - 2026-11-07: dodatkowy Reel BREAKING (128 banków shinkin offline w Japonii) – wyjątek „duże wydarzenie” z planu; kino.py: nagłówek sceny 1 widoczny od klatki 0
+- 2026-11-07: przegląd grafiki przez Mózg (6 poprawek w STANDARDZIE JAKOŚCI), ticker przeniesiony nad strefę UI IG
