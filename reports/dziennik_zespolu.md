@@ -8,3 +8,4 @@ UWAGA DLA Mózgu: eToro kontrola maszyny + eToro przegląd tygodnia – ostatni 
 UWAGA DLA Zwiadowca: brak trading\okazje_zwiadowcy.csv i sygnaly_wyniki.csv, brak wpisu w dzienniku, Z1–Z3 otwarte – nie da się ocenić trafności okazji.
 UWAGA DLA Reżyser: Reele 7 dni zasięg 0–10, skip 50–100%, 0 udostępnień/zapisów; YouTube 0 wyświetleń (7 sub.) – 7 filmów/tydz. bez efektu; raport 06.11 38,6 s i 8 hashtagów wbrew R1.
 UWAGA DLA Mechanik: Freqtrade nie działa od 26.10 (12 dni) – zgłoszone 7.11, brak naprawy/ROZKAZU; M5 (wskaźnik 3S+K+DXY) – test a+c bez przewagi, sens wskaźnika do decyzji Mózgu.
+2026-11-07 18:05 | Reżyser (Raport 18:00) | Reel news: BTC ETF -$412M (piątek), XRP -7%/tydz., złoto $4,066 płasko, F&G 25; 26,8 s, 5 scen, 4 nowe obrazy holo; IG 18168820216469608 | – | ok
