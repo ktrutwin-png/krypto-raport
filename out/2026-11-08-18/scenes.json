@@ -1,0 +1,76 @@
+{
+ "date": "08.11.2026",
+ "style": "news",
+ "mood": "gold",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $75,700 ▲0.0% · ETH $2,228 ▼0.2% · XRP $1.15 ▼0.5% · SOL $88.93 ▼0.6% · GOLD $4,069 ▲0.1% · FEAR & GREED 32",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "LIVE MARKET UPDATE",
+   "head": [
+    "GOLD +5%,",
+    "*BITCOIN -3%*",
+    "*THIS WEEK*"
+   ],
+   "chip": "▲ GOLD $4,069",
+   "anim": {
+    "dir": "up",
+    "label": "$4,069"
+   },
+   "move": "in",
+   "say": "Gold up five percent this week, bitcoin down three. The split is getting wider."
+  },
+  {
+   "img": "s2.jpg",
+   "head": [
+    "GOLD $4,069 -",
+    "*HOLDING ABOVE*",
+    "*$4,050*"
+   ],
+   "chip": "▲ FROM $3,875 ON NOV 1",
+   "note": "WEEKEND: FLAT, NO SELLING",
+   "move": "out",
+   "say": "Gold climbed from three thousand eight seventy five and is holding it."
+  },
+  {
+   "img": "s3.jpg",
+   "head": [
+    "BTC ETF ASSETS",
+    "*BELOW $100B*"
+   ],
+   "chip": "▼ $99.5B",
+   "note": "FROM ~$109B A MONTH AGO",
+   "move": "up",
+   "say": "Bitcoin E T F assets slipped under one hundred billion, from one hundred nine a month ago."
+  },
+  {
+   "img": "s4.jpg",
+   "head": [
+    "CLARITY ACT",
+    "*ODDS ~6%*",
+    "*BEFORE 2027*"
+   ],
+   "sub": "AFTER DEMOCRATS' MIDTERM SWEEP",
+   "note": "PREDICTION MARKETS, REPORTEDLY",
+   "move": "down",
+   "say": "After the midterms, prediction markets reportedly give the CLARITY Act six percent odds."
+  },
+  {
+   "img": "s5.jpg",
+   "head": [
+    "BTC $75,000",
+    "*GOLD OR BITCOIN*",
+    "*BY FRIDAY?*"
+   ],
+   "sub": "🥇 OR ₿ — TELL ME BELOW",
+   "anim": {
+    "dir": "chop",
+    "label": "$75,700"
+   },
+   "note": "SEND THIS TO A FRIEND WHO HOLDS BTC",
+   "move": "in",
+   "say": "Fear is thirty two. Watch seventy five thousand. Gold or bitcoin by Friday? This is not financial advice, just data."
+  }
+ ]
+}
