@@ -43,6 +43,12 @@ Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia
 - Nowe narzędzia: Nauczyciel sprawdza dostępne już umiejętności i konektory oraz nowe darmowe narzędzia w sieci; co da się użyć od razu – dopisuje do „UMIEJĘTNOŚCI I NARZĘDZIA” danego agenta; co wymaga instalacji/połączenia/płatności – „DO RAPORTU” dla szefa (instaluje i podłącza tylko szef).
 - Granica: lekcje zmieniają sposób pracy, nie zasady szefa (demo, bez zmian w botach handlujących bez „wdróż”, cisza, budżet ok. 20 €/mies.).
 
+## LEKCJE AGENTÓW BEZ WŁASNEGO PLANU (📚 Nauczyciel dopisuje co tydzień – czytaj swoją część przed pracą)
+- 🔍 Inspektor: (pierwsze lekcje po 15.11.2026)
+- 📊 Analityk: (pierwsze lekcje po 15.11.2026)
+- 📬 Sekretarz: (pierwsze lekcje po 15.11.2026)
+- ✍️ Pisarz (tylko kronika zespołu): (pierwsze lekcje po 15.11.2026)
+
 ## Wspólne zasady współpracy
 - Każdy agent po każdym przebiegu dopisuje JEDNĄ linijkę do reports/dziennik_zespolu.md: `RRRR-MM-DD HH:MM | Agent | co zrobił | wynik/liczby | problem lub „ok”` (git pull --rebase, commit, push).
 - Przed pracą: przeczytaj reports/zespol.md, swoje ROZKAZY i ostatnie 20 linijek dziennika zespołu – jeśli inny agent zgłosił coś, co dotyczy Ciebie, uwzględnij to.
