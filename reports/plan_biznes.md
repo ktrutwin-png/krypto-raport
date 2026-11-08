@@ -12,3 +12,8 @@ Zasada: agenci PRZYGOTOWUJĄ (oferty, produkty, szkice wiadomości); szef wysył
 
 ## Postęp
 - 2026-11-07: plan utworzony przez Mózg; strumienie przydzielone
+
+
+## LEKCJE (📚 Nauczyciel dopisuje co tydzień – czytaj przed pracą i stosuj)
+- (pierwsze lekcje po niedzieli 15.11.2026)
+

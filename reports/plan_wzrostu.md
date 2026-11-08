@@ -20,6 +20,9 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - [ ] R9 (7.11) Strumień 5: wybierz 20 najlepszych obrazów z tools/kino/bank* (bez logo, bez osób), przygotuj paczkę + tytuły i słowa kluczowe EN pod Adobe Stock (AI-generated) w out/stock/.
 - [ ] R10 (7.11) Strumień 3 (z Pisarzem): okładka e-booka „Czytanie świec – przeciąganie liny” 1600x2560 + 3 grafiki do rozdziału 1.
 - [ ] R11 (7.11) Temat „33 countries urge 72h emergency stockpiles – what gold does when governments get nervous”. IG karuzela (mapa krajów + dni: UE 72h, FR/UK 72h, CA/JP/MX/NL 3 dni, SE/NO tydzień, DE 10 dni, US kilka dni) + YT Short 30–45 s z wykresem złota w okresach ostrzeżeń. EN, same fakty, zero straszenia i zero „kupuj złoto”, na końcu „not financial advice”. Źródła: thevibes.com (2.11.2026), Euronews (26.03.2025), EU civil-protection NL. Publikacja raz. Analityk sprawdza liczby przed publikacją.
+## LEKCJE (📚 Nauczyciel dopisuje co tydzień – czytaj przed pracą i stosuj)
+- (pierwsze lekcje po niedzieli 15.11.2026)
+
 ## UMIEJĘTNOŚCI I NARZĘDZIA (🎬 Reżyser)
 - Narzędzia: KINO (tools/kino/kino.py, styl news), lektor piper, obrazy: bank tools/kino/bank*, Unsplash, Figma generate_image; publikacja: Metricool (YT), Windsor (IG); dane: Twelve_Data, CoinGecko.
 - Potrzebujesz nowego narzędzia? Zapisz w „Postęp”: „PROŚBA DO MÓZGU: …” (co i po co) – Mózg podepnie.

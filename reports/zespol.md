@@ -10,6 +10,7 @@ Szef rozmawia TYLKO z Claude („mózg”). Claude prowadzi agentów, uczy ich, 
 | 🔭 Zwiadowca | Skanery (sygnały, rynki) | reports/plan_skanery.md | jakość sygnałów, wyniki w R, filtry, nowe rynki |
 | ✍️ Pisarz | Książka „Filozofia tradingu” | laptop ksiazka\\rozdzialy.md (zasady stylu) | co niedzielę 15:23 wpis do dziennika + jeden rozdział, po cichu, pokaz po roku |
 | 💼 Handlowiec | Biznes – usługi AI dla firm, sprzedaż produktów | reports/plan_biznes.md | oferty, cenniki, lista firm, szkice wiadomości – wysyła szef |
+| 📚 Nauczyciel | Nauka zespołu | sekcje LEKCJE w planach | co niedzielę 16:37: lekcje z wyników, nowe umiejętności i narzędzia dla agentów |
 | 📐 Projektant | (później) projekt wózka dziecięcego | – | uruchamiany, gdy szef zacznie projekt |
 
 Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia szef, przegląd miesięczny 7.12.2026.
@@ -35,6 +36,12 @@ Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia
 
 ## 🔕 CISZA (szef 8.11.2026 – nadrzędna dla WSZYSTKICH agentów)
 Żadnych powiadomień push ani wiadomości do szefa w ciągu tygodnia – ani o sukcesie, ani o błędzie, ani o decyzji. Problemy → „BŁĄD: …” w dzienniku zespołu (dla Inspektora). Sprawy dla szefa (np. „wdróż”, awans, mail czekający na jego ruch) → „DO RAPORTU: …” w dzienniku zespołu. Szef dostaje TYLKO jeden raport tygodnia od 📊 Analityka (sobota 11:17): co się działo między agentami, poprawki, naprawy, 🏆 najlepszy agent. Wyjątek nie dotyczy agentów: raport tradingowy poranny i wieczorny 22:00 zostają.
+
+## 📚 NAUKA (szef 8.11.2026 – „agenci mają się uczyć, z dnia na dzień coraz lepsi”)
+- Każdy plan agenta (plan_wzrostu, plan_boty, plan_skanery, plan_biznes) ma sekcję „LEKCJE” – agent czyta ją przed pracą i stosuje. Lekcja = jedna linijka: co działa / co nie działa + liczba-dowód (np. „hook z liczbą w 1. s: skip 48% vs 71% bez liczby”).
+- 📚 Nauczyciel (niedziela 16:37) co tydzień: wyciąga z logów i wyników nowe lekcje i dopisuje je do planów; skreśla lekcje obalone przez nowe liczby; max 15 lekcji na plan (najmocniejsze).
+- Nowe narzędzia: Nauczyciel sprawdza dostępne już umiejętności i konektory oraz nowe darmowe narzędzia w sieci; co da się użyć od razu – dopisuje do „UMIEJĘTNOŚCI I NARZĘDZIA” danego agenta; co wymaga instalacji/połączenia/płatności – „DO RAPORTU” dla szefa (instaluje i podłącza tylko szef).
+- Granica: lekcje zmieniają sposób pracy, nie zasady szefa (demo, bez zmian w botach handlujących bez „wdróż”, cisza, budżet ok. 20 €/mies.).
 
 ## Wspólne zasady współpracy
 - Każdy agent po każdym przebiegu dopisuje JEDNĄ linijkę do reports/dziennik_zespolu.md: `RRRR-MM-DD HH:MM | Agent | co zrobił | wynik/liczby | problem lub „ok”` (git pull --rebase, commit, push).
