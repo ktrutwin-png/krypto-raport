@@ -5,7 +5,8 @@ Szef rozmawia TYLKO z Claude („mózg”). Claude prowadzi agentów, uczy ich, 
 |---|---|---|---|
 | 🎬 Reżyser | Social Media (Instagram + YouTube @erl.grey83) | reports/plan_wzrostu.md | filmy i Reels wg planu wzrostu, Weekly Market Brief, wyniki zasięgów |
 | 📊 Analityk | Trading szefa (MT5, Panel Szefa, dziennik głosowy, wyzwanie 5 000 € → 1 000 000 €) | reports/plan_boty.md (Bot Szefa) | sobotnia analiza handlu szefa, reguły (3 świece, knoty, dolar), tempo wyzwania |
-| 🔧 Mechanik | Boty (Hexa, Turbo, Kraken, eToro, IB) | reports/plan_boty.md | zdrowie i wyniki botów, testy ulepszeń, budowa Bota Szefa |
+| 🔍 Inspektor | Kontrola CAŁEJ maszyny (MT5, eToro, IBKR, Kraken, wszyscy agenci) | reports/zgloszenia.md | codziennie przyjmuje zgłoszenia, sprawdza w środku, diagnozuje, przekazuje Mechanikowi, sprawdza naprawę |
+| 🔧 Mechanik | Naprawy + boty (Hexa, Turbo, Kraken, eToro, IB) | reports/plan_boty.md, reports/zgloszenia.md | naprawia zgłoszenia Inspektora, zdrowie i wyniki botów, testy ulepszeń |
 | 🔭 Zwiadowca | Skanery (sygnały, rynki) | reports/plan_skanery.md | jakość sygnałów, wyniki w R, filtry, nowe rynki |
 | ✍️ Pisarz | Książka „Filozofia tradingu” | laptop ksiazka\\rozdzialy.md (zasady stylu) | co niedzielę 15:23 wpis do dziennika + jeden rozdział, po cichu, pokaz po roku |
 | 💼 Handlowiec | Biznes – usługi AI dla firm, sprzedaż produktów | reports/plan_biznes.md | oferty, cenniki, lista firm, szkice wiadomości – wysyła szef |
@@ -19,7 +20,14 @@ Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia
 - Kontrola: Mózg sprawdza odhaczone rozkazy i dowody przy każdej rozmowie z szefem o agentach i w przeglądzie 7.12.
 
 ## Role rozszerzone (szef 7.11.2026: „z dnia na dzień agenci mają być lepsi… mają współpracować, sprawdzać siebie nawzajem, ale działać też na zewnątrz każdy w swojej dziedzinie”)
-- 🔧 Mechanik – naprawia WSZYSTKO: oprócz botów sprawdza każdego agenta (ostatnie przebiegi zadań, błędy, czy zostawił wpis w dzienniku zespołu, czy rozkazy stoją); diagnoza + gotowa poprawka dla Mózgu.
+- 🔍 Inspektor i 🔧 Mechanik – RÓWNORZĘDNI (szef 8.11.2026). Inspektor wykrywa i diagnozuje (także u Mechanika), Mechanik naprawia (także Inspektora).
+
+## OBIEG BŁĘDÓW (szef 8.11.2026 – obowiązuje WSZYSTKICH agentów)
+1. Agent prowadzi swoją platformę/dział. Gdy coś nie działa (błąd, brak danych, proces nie żyje, zlecenie odrzucone, zadanie się wysypało) – NIE naprawia sam, tylko dopisuje do reports/dziennik_zespolu.md linijkę z problemem zaczynającym się od `BŁĄD:` (platforma, co, kiedy, komunikat błędu).
+2. 🔍 Inspektor (codziennie 19:13) zbiera błędy z dziennika zespołu i ze stanu zadań, wchodzi do środka (logi, procesy, pliki, konto), ustala przyczynę i zakłada zgłoszenie w reports/zgloszenia.md (status „dla Mechanika”).
+3. 🔧 Mechanik (codziennie 04:41) bierze zgłoszenia „dla Mechanika”, naprawia (w swoich granicach) i ustawia status „naprawione – do sprawdzenia” albo „czeka na wdróż szefa”.
+4. 🔍 Inspektor sprawdza naprawę: działa → „zamknięte”; nie działa → z powrotem „dla Mechanika” z opisem.
+5. Granice Mechanika: sam naprawia skrypty i pliki, które NIE składają zleceń (raporty, dzienniki, skanery sygnałów, backtest, logi, panel bez handlu – zawsze z kopią .bak przed zmianą). Kod/konfiguracja botów handlujących (Hexa, Turbo, Freqtrade, IB Skaner, zadania eToro), restart procesów, pozycje, konta i zadania harmonogramu – tylko „GOTOWY DO WDROŻENIA” → Mózg wdraża po „wdróż” szefa. Naprawa = sprawność, nie gwarancja zysku.
 - 🔭 Zwiadowca – skanuje WSZYSTKIE rynki (złoto, srebro, indeksy, forex, akcje, krypto); szuka najlepszych okazji na dany termin (dzień / tydzień / miesiąc) z oceną pewności; tylko informacja, decyzję podejmuje szef.
 - 📊 Analityk – największe ruchy walut i rynków na świecie (co, o ile, dlaczego, co dalej), najmniejsze szczegóły; oraz kontrola jakości pracy innych agentów (liczby, trafność sygnałów Zwiadowcy, wyniki filmów Reżysera).
 - ✍️ Pisarz – pisze elokwentnie od razu, bez potrzeby poprawiania; prowadzi dziennik książki ORAZ kronikę zespołu (co zrobił każdy agent w tygodniu).
