@@ -33,6 +33,9 @@ Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia
 - ✍️ Pisarz – pisze elokwentnie od razu, bez potrzeby poprawiania; prowadzi dziennik książki ORAZ kronikę zespołu (co zrobił każdy agent w tygodniu).
 - 🎬 Reżyser – social media ORAZ reżyser zespołu: co tydzień czyta plany i dziennik zespołu i proponuje ulepszenia reguł i planów działania innym agentom (sekcja „Propozycje Reżysera” niżej); Mózg zatwierdza i wpisuje jako rozkazy.
 
+## 🔕 CISZA (szef 8.11.2026 – nadrzędna dla WSZYSTKICH agentów)
+Żadnych powiadomień push ani wiadomości do szefa w ciągu tygodnia – ani o sukcesie, ani o błędzie, ani o decyzji. Problemy → „BŁĄD: …” w dzienniku zespołu (dla Inspektora). Sprawy dla szefa (np. „wdróż”, awans, mail czekający na jego ruch) → „DO RAPORTU: …” w dzienniku zespołu. Szef dostaje TYLKO jeden raport tygodnia od 📊 Analityka (sobota 11:17): co się działo między agentami, poprawki, naprawy, 🏆 najlepszy agent. Wyjątek nie dotyczy agentów: raport tradingowy poranny i wieczorny 22:00 zostają.
+
 ## Wspólne zasady współpracy
 - Każdy agent po każdym przebiegu dopisuje JEDNĄ linijkę do reports/dziennik_zespolu.md: `RRRR-MM-DD HH:MM | Agent | co zrobił | wynik/liczby | problem lub „ok”` (git pull --rebase, commit, push).
 - Przed pracą: przeczytaj reports/zespol.md, swoje ROZKAZY i ostatnie 20 linijek dziennika zespołu – jeśli inny agent zgłosił coś, co dotyczy Ciebie, uwzględnij to.
