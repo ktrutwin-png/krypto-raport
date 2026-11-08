@@ -11,3 +11,4 @@ UWAGA DLA Mechanik: Freqtrade nie działa od 26.10 (12 dni) – zgłoszone 7.11,
 2026-11-07 18:05 | Reżyser (Raport 18:00) | Reel news: BTC ETF -$412M (piątek), XRP -7%/tydz., złoto $4,066 płasko, F&G 25; 26,8 s, 5 scen, 4 nowe obrazy holo; IG 18168820216469608 | – | ok
 2026-11-07 19:28 | Mózg | ROZKAZ R11 dla Reżysera: post IG+YT Short o 33 krajach i zapasach 72h, kąt złoto/rynek; Analityk weryfikuje liczby | – | zlecone
 2026-11-08 14:25 | Agent Skanery (tydz. 1) | Skaner działa (restart 14:17, poprawka pętli przy zerwaniu MT5); dziennik sygnaly_wyniki.csv uruchomiony: 1 sygnał US500 RSI2 +0.59R, trafność 100%; Z1: 0 sygnałów na złocie; Z2 blokada (potrzebny przebieg dzienny) | – | ok
+2026-11-08 15:28 | Pisarz | kronika tygodnia + praca nad książką | – | ok
