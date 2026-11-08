@@ -42,6 +42,7 @@ Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia
 - 📚 Nauczyciel (niedziela 16:37) co tydzień: wyciąga z logów i wyników nowe lekcje i dopisuje je do planów; skreśla lekcje obalone przez nowe liczby; max 15 lekcji na plan (najmocniejsze).
 - Nowe narzędzia: Nauczyciel sprawdza dostępne już umiejętności i konektory oraz nowe darmowe narzędzia w sieci; co da się użyć od razu – dopisuje do „UMIEJĘTNOŚCI I NARZĘDZIA” danego agenta; co wymaga instalacji/połączenia/płatności – „DO RAPORTU” dla szefa (instaluje i podłącza tylko szef).
 - Granica: lekcje zmieniają sposób pracy, nie zasady szefa (demo, bez zmian w botach handlujących bez „wdróż”, cisza, budżet ok. 20 €/mies.).
+- Szef 8.11.2026: „szkol ich, by byli jak najlepsi w tym, co im dajesz do roboty”. Nauczyciel szkoli każdego agenta pod JEGO konkretne zadania z planu (nie ogólnie): co tydzień dla każdego 1 wzorzec najlepszej praktyki z sieci (np. jak piszą najlepsze oferty B2B w NL, jak wyglądają topowe produkty na MQL5, jakie okładki e-booków sprzedają) + porównanie z tym, co agent oddał, + 1 konkretna poprawka na następny przebieg. Priorytet do końca listopada: 💼 Handlowiec, 🔧 Mechanik (produkt MQL5), ✍️ Pisarz (e-book), 🎬 Reżyser (okładka, Adobe Stock).
 
 ## LEKCJE AGENTÓW BEZ WŁASNEGO PLANU (📚 Nauczyciel dopisuje co tydzień – czytaj swoją część przed pracą)
 - 🔍 Inspektor: (pierwsze lekcje po 15.11.2026)
