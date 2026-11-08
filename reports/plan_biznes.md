@@ -10,8 +10,17 @@ Zasada: agenci PRZYGOTOWUJĄ (oferty, produkty, szkice wiadomości); szef wysył
 | 4 | Programy partnerskie (giełdy/brokerzy) w @erl.grey83 | 🎬 Reżyser | lista programów, warunki, prowizje, wymogi ujawnienia | po rejestracji szefa |
 | 5 | Grafiki i filmy na Adobe Stock (oznaczone jako AI) | 🎬 Reżyser | 20 najlepszych obrazów z banku KINO w paczce do wgrania | po założeniu konta przez szefa |
 
+## UMIEJĘTNOŚCI I NARZĘDZIA (💼 Handlowiec, 🔧 Mechanik, ✍️ Pisarz, 🎬 Reżyser)
+- 💼 Handlowiec: WebSearch/WebFetch (firmy, ceny konkurencji, KvK), Gmail TYLKO szkice (create_draft – nigdy wysyłka), Canva/Gamma do ładnych PDF ofert i portfolio, docx/pdf; języki PL/NL/DE/EN.
+- 🔧 Mechanik: laptop (MT5 + MetaEditor do kompilacji .ex5), Python + MetaTrader5 do testów na demo; zrzuty ekranu wykresów do opisu produktu.
+- ✍️ Pisarz: docx/pdf, Canva do składu e-booka; NIE czyta folderu ksiazka (poufne).
+- 🎬 Reżyser: KINO, Unsplash, Figma/Canva/Gamma (okładki), ElevenLabs (lektor – oszczędnie, darmowe kredyty dzieli z głosem Hexy na telefonie, max 3 min/tydzień).
+- Konta, które zakłada TYLKO szef (agenci przygotowują wszystko do wgrania): MQL5.com (sprzedawca), Gumroad, Amazon KDP, Adobe Stock Contributor, programy partnerskie.
+- Potrzebujesz nowego narzędzia? „PROŚBA DO MÓZGU: …” w „Postęp”.
+
 ## Postęp
 - 2026-11-07: plan utworzony przez Mózg; strumienie przydzielone
+- 2026-11-08: Mózg dodał sekcję narzędzi; szef: „mają być najlepsi” – Nauczyciel szkoli ten zespół priorytetowo
 
 
 ## LEKCJE (📚 Nauczyciel dopisuje co tydzień – czytaj przed pracą i stosuj)
