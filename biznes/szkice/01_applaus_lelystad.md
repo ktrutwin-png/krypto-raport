@@ -10,4 +10,8 @@ Mijn idee: 8 korte video's per maand van jullie eigen foto's, automatisch ingepl
 Ik zoek drie bedrijven voor een pilot met 30% korting. Mag ik één gratis voorbeeldvideo maken van jullie menu, zodat u kunt zien hoe het eruit ziet? Geen verplichtingen.
 
 Met vriendelijke groet,
-[Naam] · [telefoon/e-mail]
+
+
+---
+*[Naam] · [KvK-nummer] · [postadres] · [telefoon/e-mail]*
+*Liever geen berichten meer van mij? Antwoord met „stop” en ik neem geen contact meer op.*

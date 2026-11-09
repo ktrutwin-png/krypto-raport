@@ -10,4 +10,8 @@ Ik maak een AI-assistent die bij elke binnenkomende aanvraag een conceptantwoord
 Graag laat ik het in 15 minuten zien met twee voorbeeldmails. Wie is daarvoor de juiste persoon?
 
 Met vriendelijke groet,
-[Naam] · [telefoon/e-mail]
+
+
+---
+*[Naam] · [KvK-nummer] · [postadres] · [telefoon/e-mail]*
+*Liever geen berichten meer van mij? Antwoord met „stop” en ik neem geen contact meer op.*

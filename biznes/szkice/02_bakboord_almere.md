@@ -10,4 +10,8 @@ Ik bouw voor lokale bedrijven een eenvoudige WhatsApp-bot die zulke vragen 24/7 
 Ik zoek drie bedrijven in Flevoland voor een pilot met 30% korting. Zal ik op basis van jullie website een korte demo maken die u zelf kunt uitproberen? Duurt voor u twee minuten.
 
 Met vriendelijke groet,
-[Naam] · [telefoon/e-mail]
+
+
+---
+*[Naam] · [KvK-nummer] · [postadres] · [telefoon/e-mail]*
+*Liever geen berichten meer van mij? Antwoord met „stop” en ik neem geen contact meer op.*

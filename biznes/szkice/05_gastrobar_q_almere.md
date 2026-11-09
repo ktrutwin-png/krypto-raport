@@ -6,4 +6,8 @@ Goedendag! "All you can share" leent zich perfect voor korte video's: tafel vol,
 Pilot voor 3 bedrijven in Flevoland: 30% korting. Zal ik één voorbeeldvideo voor jullie maken? Geen verplichtingen.
 
 Met vriendelijke groet,
-[Naam] · [telefoon/e-mail]
+
+
+---
+*[Naam] · [KvK-nummer] · [postadres] · [telefoon/e-mail]*
+*Liever geen berichten meer van mij? Antwoord met „stop” en ik neem geen contact meer op.*
