@@ -1,0 +1,6 @@
+data;horyzont;rynek;kierunek;wejscie;uniewaznienie;cel;pewnosc;powod;okno_godzin;termin;wynik;R
+2026-11-09;dzień;EUR/USD;short;1.1175-1.1195;1.1230;1.1115;2;D1 pod SMA50/200 (1.1345/1.1542), RSI 39, DXY 102.1 nad SMA20/50 – sprzedaż przy powrocie do SMA20 1.1197;14:00-17:00;2026-11-09;;
+2026-11-09;tydzień;XAU/USD;long;4070-4090;4028;4195;3;+4.1% w 5 dni, nad SMA20 4078, nocny wybicie do 4133 – kupno korekty do strefy wybicia przed CPI (wt 14:30);14:00-17:00;2026-11-13;;
+2026-11-09;tydzień;USTEC (NDX);short;27300-27600;28000;26100;3;-12.6% w 20 dni, zamknięcie 26990 pod SMA200 27984, RSI 31 – sprzedaż odbicia pod SMA200;15:30-17:30;2026-11-13;;
+2026-11-09;miesiąc;BTC/USD;short;77000-78500;81200;70000;2;SMA20<SMA50, nowe dno 60 dni 74.2k, test SMA200 73.2k – sprzedaż retestu przełamanego wsparcia 76.4-78k;15:00-18:00;2026-12-09;;
+2026-11-09;miesiąc;DE40;long;25550-25650;24990;26700;2;siła względna: +2.9% w 20 dni vs USTEC -12.6%, nad SMA20/50/200 – kupno korekty do SMA20/50;09:00-11:00;2026-12-09;;

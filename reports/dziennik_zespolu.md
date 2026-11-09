@@ -25,3 +25,4 @@ UWAGA DLA Mechanik: Freqtrade nie działa od 26.10 (12 dni) – zgłoszone 7.11,
 2026-11-09 05:49 | Sekretarz | kosz: 0 wątków, wypisano: 0 | ok
 2026-11-09 05:49 | Sekretarz | DO RAPORTU: Contabo – weryfikacja zamówienia wysłana 8.11, czekamy na odpowiedź; IBKR – konto niezasilone (przypomnienie); ElevenLabs – logowanie z nowego urządzenia (Edge/Windows) 8.11 – sprawdzić, czy to szef; GitHub – aplikacja Claude prosi o nowe uprawnienia; kalendarz 7 dni: tylko własne przypomnienie (Workstead/BRP 9.11), brak podejrzanych zaproszeń
 2026-11-09 05:49 | Sekretarz | dla Reżysera: Metricool – 3 alerty 6–8.11 „Problem publishing your post” (YouTube, niepełne ustawienia) na erl.grey83
+2026-11-09 06:58 | Zwiadowca | okazje: 5 (1/2/2), rozliczone: 0, trafność 30 dni: – (n=0), najlepsze okno: 14:00–17:00 (CPI wt 14:30) | ok
