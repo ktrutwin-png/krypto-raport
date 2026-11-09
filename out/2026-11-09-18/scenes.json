@@ -1,0 +1,75 @@
+{
+ "date": "09.11.2026",
+ "style": "news",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $75,006 ▼0.9% · ETH $2,132 ▼4.3% · XRP $1.10 ▼4.7% · SOL $86.98 ▼2.2% · GOLD $4,110 ▲1.1% · FEAR & GREED 28",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "LIVE MARKET UPDATE",
+   "head": [
+    "ETH -4% -",
+    "*$460M IN LONGS*",
+    "*WIPED OUT*"
+   ],
+   "chip": "▼ ETH $2,132",
+   "anim": {
+    "dir": "down",
+    "label": "$2,132"
+   },
+   "move": "in",
+   "say": "Ether just dropped four percent, wiping out about four hundred sixty million in leveraged longs."
+  },
+  {
+   "img": "s2.jpg",
+   "head": [
+    "ETH vs BTC",
+    "*LOWEST*",
+    "*SINCE JULY*"
+   ],
+   "chip": "▼ ETH/BTC 0.028",
+   "note": "ONE WHALE LOST ~$45M, REPORTEDLY",
+   "move": "out",
+   "say": "Against bitcoin, ether is at its weakest since July."
+  },
+  {
+   "img": "s3.jpg",
+   "head": [
+    "BTC $75K -",
+    "*TWO-MONTH LOW*",
+    "*TOUCHED $73.5K*"
+   ],
+   "chip": "▼ ETF OUTFLOWS $1.28B LAST WEEK",
+   "move": "up",
+   "say": "Bitcoin touched a two month low as E T Fs bled one point three billion last week."
+  },
+  {
+   "img": "s4.jpg",
+   "head": [
+    "GOLD $4,110 +",
+    "*BACK ABOVE*",
+    "*$4,100*"
+   ],
+   "chip": "▲ +1.1% TODAY",
+   "anim": {
+    "dir": "up",
+    "label": "$4,110"
+   },
+   "move": "down",
+   "say": "Gold did the opposite, back above four thousand one hundred."
+  },
+  {
+   "img": "s5.jpg",
+   "tag": "WATCH NEXT",
+   "head": [
+    "US CPI",
+    "*TUESDAY 14:30 CET*"
+   ],
+   "sub": "BULL OR BEAR BY FRIDAY? 🐂/🐻",
+   "note": "SEND THIS TO A FRIEND WHO HOLDS ETH",
+   "move": "in",
+   "say": "Tomorrow's inflation data decides if ether's four percent drop deepens. Bull or bear by Friday? Not financial advice, just data."
+  }
+ ]
+}
