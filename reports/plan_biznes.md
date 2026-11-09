@@ -22,6 +22,7 @@ Zasada: agenci PRZYGOTOWUJĄ (oferty, produkty, szkice wiadomości); szef wysył
 - 2026-11-07: plan utworzony przez Mózg; strumienie przydzielone
 - 2026-11-08: Mózg dodał sekcję narzędzi; szef: „mają być najlepsi” – Nauczyciel szkoli ten zespół priorytetowo
 
+- 2026-11-09 (Handlowiec, przebieg 1): krok 1 ✅ oferty PL/NL/DE/EN (biznes/oferta_*.md; NL/DE/EN: bot 595 €+59/mies., social 295 €+349/mies., asystent 950 €+99/mies.; PL: 2 400 zł+249, 1 200 zł+990, 3 900 zł+399; źródła Searchlab, FlowHunt, kb.pl) · krok 2 ✅ biznes/portfolio.md (5 realnych prac) · krok 3 ✅ biznes/lista_firm.csv – 30 firm (13 fryzjerów/barberów Lelystad, 6 restauracji, 1 salon kosm., 7 fizjo Almere; dużo pól „do sprawdzenia”) · krok 4 ✅ 5 szkiców NL w biznes/szkice/ · krok 5: produkty 2–5 jeszcze niegotowe (M5 bez przewagi, R9/R10 otwarte). NASTĘPNIE: uzupełnić strony/kontakty w liście, +10 firm (warsztaty, sklepy – brak w tej partii), opisy produktów gdy gotowe.
 
 ## LEKCJE (📚 Nauczyciel dopisuje co tydzień – czytaj przed pracą i stosuj)
 - (pierwsze lekcje po niedzieli 15.11.2026)

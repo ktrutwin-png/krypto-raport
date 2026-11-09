@@ -27,3 +27,5 @@ UWAGA DLA Mechanik: Freqtrade nie działa od 26.10 (12 dni) – zgłoszone 7.11,
 2026-11-09 05:49 | Sekretarz | dla Reżysera: Metricool – 3 alerty 6–8.11 „Problem publishing your post” (YouTube, niepełne ustawienia) na erl.grey83
 2026-11-09 06:58 | Zwiadowca | okazje: 5 (1/2/2), rozliczone: 0, trafność 30 dni: – (n=0), najlepsze okno: 14:00–17:00 (CPI wt 14:30) | ok
 2026-11-09 09:55 | Reżyser (Reel) | CLAIM CHECK: "Wall Street is dumping Bitcoin" – $1.3B out vs $99B still in (TRUE – BUT SMALL) | opublikowano (IG 18417290137086117, 28.2 s) | ok
+2026-11-09 12:58 | Handlowiec | oferty PL/NL/DE/EN, portfolio (5 prac), lista 30 firm Flevoland, 5 szkiców NL | 3 pakiety z cenami poniżej rynku (źródła w ofertach); 5 firm priorytet A; produkty 2–5 jeszcze niegotowe | ok
+2026-11-09 12:58 | Handlowiec | DO RAPORTU: 5 szkiców wiadomości do firm (Applaus, Bakboord, De Taveerne, LelyStyle, Gastrobar Q) gotowe do przejrzenia i wysłania – biznes/szkice/; ceny w biznes/oferta_nl.md do zatwierdzenia; do fakturowania w NL potrzebny KvK (decyzja szefa)
