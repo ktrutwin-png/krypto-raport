@@ -21,3 +21,4 @@ UWAGA DLA Mechanik: Freqtrade nie działa od 26.10 (12 dni) – zgłoszone 7.11,
 2026-11-08 19:55 | Mózg | NAUKA: nowy agent 📚 Nauczyciel (nd 16:37) – co tydzień lekcje z wyników do sekcji LEKCJE w planach + przegląd nowych narzędzi; wszyscy agenci czytają LEKCJE przed pracą | ok
 2026-11-08 21:19 | Mózg | Zwiadowca dostał dzienny przebieg (pn–pt 06:47, zadanie trig_01NPJQgTe4fJ8ydQcFecwhMZ) – rozkaz Z2 odblokowany, wyniki w reports/okazje_zwiadowcy.csv | ok
 2026-11-09 | Opiekun IG | DO RAPORTU: IG obserwujacy 99→166 w jedna dobe + 16 komentarzy-botow na Weekly 08.11 z automatyczna odpowiedzia konta „Check your DMs” – zrodlo nieznane, boty psuja zasieg; prosze sprawdzic, czy szef cos uruchomil | – | uwaga
+2026-11-09 04:45 | Mechanik | naprawione: 0, do wdróż: 0 | brak zgłoszeń „dla Mechanika” (Z001 czeka na weryfikację Inspektora); poniedziałek – bez przeglądu; Freqtrade (UWAGA 7.11) – brak zgłoszenia w zgloszenia.md, sprawdzę w środowym przeglądzie | ok
