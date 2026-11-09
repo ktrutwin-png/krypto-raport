@@ -17,3 +17,9 @@ Serwer: Contabo, Windows Server 2025, nazwa urządzenia vmi3737651 (Tailscale 10
 4. ORB/adb (telefon) – narzędzia budowania są na laptopie; przenieść później.
 5. Czyszczenie laptopa DOPIERO gdy serwer działa dobę: pokazać szefowi listę, nic nie usuwać bez jego „tak”.
 Zasady bez zmian: konta demo/paper, nie uruchamiam botów handlujących sam, nie ruszam ręcznych pozycji szefa (magic 0), cisza w tygodniu, książka (ksiazka) poufna.
+
+## Postęp 9.11 ~19:00 (Mózg)
+- Sesja Claude połączona z serwerem vmi3737651 (device bridge działa: Desktop Commander lokalnie, PowerShell).
+- Pliki na serwerze OK: C:\Users\ktrut\Claude-telefon (boty_poprawki, panel_tg, trading, ib…), kraken-boty (bazy Donch4hBTC/Mom1dBTC żyją, zapis 18:25).
+- Ustalenie: większość agentów (Inspektor, Mechanik, Sekretarz, Handlowiec, Pisarz, Nauczyciel, Zwiadowca, rozliczenie 7.12) to zadania CHMUROWE, które sięgają po laptop przez konektor Remote_Desktop_Commander. Ten konektor widzi dziś tylko DESKTOP-20N25SR (offline). Klucz do pkt 1–2: dodać serwer jako urządzenie w Remote_Desktop_Commander (npx @wonderwhy-er/desktop-commander@0.3.1 remote na serwerze + zatwierdzenie w przeglądarce). Próba instalacji przez Mózg zablokowana przez zabezpieczenia – czeka na decyzję szefa.
+- update_trigger nie zmienia przypisanego komputera; zadania z bound_device = laptop (np. przypomnienie 10.11 07:17) trzeba przepiąć w aplikacji Claude na serwerze („Require this computer”) albo utworzyć na nowo z serwerem.
