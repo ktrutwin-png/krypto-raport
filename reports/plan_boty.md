@@ -10,11 +10,13 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - [x] M3 (7.11) Kontrola wszystkich agentów: przy każdym przebiegu list_triggers (wszystkie strony) – ostatni przebieg każdego agenta i zadania (Reżyser/Reels, Weekly, Analityk, Zwiadowca/Opiekun Skanera, Pisarz, eToro…), błędy, czy jest wpis w dzienniku zespołu, czy rozkazy w planach nie stoją > 7 dni. Problem → „UWAGA DLA <Agent>” w dzienniku + gotowa poprawka dla Mózgu.
 - [x] M4 (7.11) Po każdym przebiegu jedna linijka w reports/dziennik_zespolu.md.
 - [ ] M5 (7.11) Strumień 2 z reports/plan_biznes.md: wskaźnik MT5 (MQL5) „3S+K+DXY” – strzałki na wykresie, gdy 3 świece M15 + knot + dolar są zgodne; skompiluj w MetaEditor, test na demo, zrzuty ekranu i opis produktu w trading\produkty\. Bez handlu (tylko wskaźnik).
+- [ ] M6 (9.11, PILNE – szef: „Kraken trzeba gęsto pilnować i poprawiać, dawno nic nie robiliśmy i nie wiemy, jak działają”) KRAKEN NA SERWERZE. Od 9.11 18:24 Freqtrade chodzi na serwerze vmi3737651 (dry-run, portfel 1000 EUR): C:\Users\ktrut\kraken-boty, strategie Donch4hBTC i Mom1dBTC (user_data\strategies\KrakenTrendBTC.py), bazy Donch4hBTC.sqlite / Mom1dBTC.sqlite, logi user_data\logs\*.log. Przy KAŻDYM przebiegu (codziennie 04:41): (a) czy oba procesy freqtrade żyją i log jest świeży (heartbeat), błędy/wyjątki z logu; (b) z baz sqlite (tylko odczyt, sqlite3 w Pythonie): otwarte i zamknięte transakcje, wynik dnia i od 9.11 (EUR i %), trafność, PF, maks. obsunięcie; (c) raz w tygodniu (środa) backtest obu strategii na świeżych danych (freqtrade backtesting w .venv, osobny katalog wyników) i porównanie z wynikiem dry-run – czy strategia w ogóle ma przewagę; (d) jedna hipoteza poprawy na tydzień (np. filtr trendu, ATR-stop, inny interwał, inne pary EUR), test w obu połowach historii, ≥ 30 transakcji – wynik do boty_rozwoj.log jako GOTOWY DO WDROŻENIA albo ODRZUCONY. Zmiany w configach/strategii i restart Freqtrade – TYLKO po „wdróż” szefa (przez Mózg). Karta wyników Kraken w boty_rozwoj.log co przebieg. Problem → „BŁĄD: Kraken …” w dzienniku zespołu (Inspektor).
 ## LEKCJE (📚 Nauczyciel dopisuje co tydzień – czytaj przed pracą i stosuj)
 - (pierwsze lekcje po niedzieli 15.11.2026)
 
 ## UMIEJĘTNOŚCI I NARZĘDZIA (🔧 Mechanik)
-- Narzędzia: laptop (desktop-commander, PowerShell), Python + MetaTrader5, MT5 historia, eToro (odczyt), IB paper, Freqtrade dry-run; testy w trading\testy_agenta.
+- Maszyna: od 9.11 SERWER vmi3737651 (Remote_Desktop_Commander – urządzenie vmi3737651; laptop DESKTOP-20N25SR wyłączony z obiegu, te same ścieżki C:\Users\ktrut\…). MT5 konto demo 10013544792 (3000 USD, 1:25), Hexa/Turbo po 0,01 lota.
+- Narzędzia: desktop-commander, PowerShell, Python + MetaTrader5, MT5 historia, eToro (odczyt), IB paper, Freqtrade dry-run; testy w trading\testy_agenta.
 - Potrzebujesz nowego narzędzia? „PROŚBA DO MÓZGU: …” w „Postęp”.
 
 ## Boty w zakresie

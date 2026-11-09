@@ -34,6 +34,11 @@ Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia
 - ✍️ Pisarz – pisze elokwentnie od razu, bez potrzeby poprawiania; prowadzi dziennik książki ORAZ kronikę zespołu (co zrobił każdy agent w tygodniu).
 - 🎬 Reżyser – social media ORAZ reżyser zespołu: co tydzień czyta plany i dziennik zespołu i proponuje ulepszenia reguł i planów działania innym agentom (sekcja „Propozycje Reżysera” niżej); Mózg zatwierdza i wpisuje jako rozkazy.
 
+## 🪙 KRAKEN (szef 9.11.2026: „gęsto tego pilnować i poprawiać”)
+- 🔧 Mechanik: rozkaz M6 w plan_boty.md – codzienna karta wyników Kraken (Freqtrade dry-run na serwerze), cotygodniowy backtest i jedna hipoteza poprawy; zmiany tylko po „wdróż”.
+- 🔍 Inspektor: codziennie – czy oba procesy freqtrade (Donch4hBTC, Mom1dBTC) żyją na serwerze vmi3737651, świeżość logów, błędy → zgłoszenia.
+- 📊 Analityk: w sobotnim raporcie osobna linijka Kraken (wynik tygodnia, PF, czy strategia ma przewagę vs backtest).
+
 ## 🔕 CISZA (szef 8.11.2026 – nadrzędna dla WSZYSTKICH agentów)
 Żadnych powiadomień push ani wiadomości do szefa w ciągu tygodnia – ani o sukcesie, ani o błędzie, ani o decyzji. Problemy → „BŁĄD: …” w dzienniku zespołu (dla Inspektora). Sprawy dla szefa (np. „wdróż”, awans, mail czekający na jego ruch) → „DO RAPORTU: …” w dzienniku zespołu. Szef dostaje TYLKO jeden raport tygodnia od 📊 Analityka (sobota 11:17): co się działo między agentami, poprawki, naprawy, 🏆 najlepszy agent. Wyjątek nie dotyczy agentów: raport tradingowy poranny i wieczorny 22:00 zostają.
 
