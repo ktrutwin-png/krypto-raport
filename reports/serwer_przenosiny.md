@@ -26,3 +26,4 @@ Zasady bez zmian: konta demo/paper, nie uruchamiam botów handlujących sam, nie
 - 19:00 Desktop Commander Remote ZAINSTALOWANY na serwerze (C:\dcremote, start.cmd, log remote.log); serwer zweryfikowany i Online w Remote_Desktop_Commander (device 0b708a8f…). Test: agenci chmurowi czytają C:\Users\ktrut\Claude-telefon\trading – wykonane na vmi3737651. Pkt 1–2 dla zadań chmurowych załatwione (te same ścieżki).
 - Brak autostartu po restarcie serwera (zadanie Windows DC_Remote zablokowane przez zabezpieczenia – czeka na „autostart” szefa). Po restarcie serwera trzeba uruchomić C:\dcremote\start.cmd.
 - Skrypty raportu (raport_wieczor.py, raport_wieczorny.py) biorą konto zalogowane w MT5 → na serwerze liczą 10013544792.
+- 19:05 Autostart: Startup\DC_Remote.vbs (Administrator) – rusza po zalogowaniu Administratora. Serwer nie ma automatycznego logowania: po restarcie trzeba się raz zalogować (RDP), dotyczy też botów i aplikacji Claude.
