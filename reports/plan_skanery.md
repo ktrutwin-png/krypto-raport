@@ -7,6 +7,7 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - [x] Z1 (7.11) Sprawdź, czy sygnały skanera na złocie zgadzają się z regułą szefa „3 świece M15 + dolar” – ile sygnałów było zgodnych, jaki wynik w R.
 
 - [ ] Z2 (7.11) Skan WSZYSTKICH rynków: złoto, srebro, indeksy (US500, USTEC, DE40…), forex (główne pary), akcje z listy skanera i krypto (BTC, ETH, SOL, XRP + top 20 wg wolumenu – CoinGecko/Twelve_Data). Raz dziennie lista 3–5 najlepszych okazji na dzień / tydzień / miesiąc z oceną pewności i powodem; zapis do trading\\okazje_zwiadowcy.csv; wynik każdej okazji sprawdź po terminie (trafność).
+- [ ] Z4 (9.11, PILNE) Fałszywy sygnał: 9.11 17:05 skaner_dzienny wysłał „SPRZEDAŻ USDJPY (DON) – cena przebiła minimum z 55 dni (152.888)”, a cena była ~158.16 (minimum NIE przebite). Znajdź przyczynę (warunek DON, indeksy świec, dane D1 z MT5, tekst powodu), dopisz test, który by to złapał, i zgłoś poprawkę Mechanikowi przez Inspektora. Do czasu naprawy – sygnały DON z dopiskiem „do weryfikacji”. Szef: „zapisać w dzienniku agenta, który był za to odpowiedzialny”.
 - [x] Z3 (7.11) Po każdym przebiegu jedna linijka w reports/dziennik_zespolu.md.
 ## LEKCJE (📚 Nauczyciel dopisuje co tydzień – czytaj przed pracą i stosuj)
 - (pierwsze lekcje po niedzieli 15.11.2026)
@@ -37,3 +38,4 @@ skaner_dzienny.py (MT5, D1, pętla co 2 min) · IB Skaner (paper) – tylko obse
 - ROZKAZ Z2: blokada – codzienny skan wszystkich rynków (3–5 okazji, okazje_zwiadowcy.csv) wymaga zadania dziennego; ten agent działa raz w tygodniu (nd). PROŚBA DO MÓZGU: przypisz Z2 do zadania codziennego Zwiadowcy albo dodaj mi dzienny przebieg.
 - ROZKAZ Z3: zrobione – linijka w reports/dziennik_zespolu.md (8.11).
 - ROZKAZ Z2: dzienny przebieg działa (pn–pt 06:47) – 9.11: 5 okazji w reports/okazje_zwiadowcy.csv (dane: Twelve_Data XAU/BTC, CoinGecko top 20, Yahoo Finance D1+1h dla 15 rynków), godziny w reports/godziny_rynkow.md. Uwaga: CSV w repo (reports/), nie w trading\\ na laptopie – przebieg chmurowy nie ma dostępu do laptopa.
+- 2026-11-09 17:08 (Mózg): ⚠️ BŁĄD Zwiadowcy – fałszywy sygnał USDJPY SELL (DON) wysłany szefowi; minus do karty jakości tygodnia. Rozkaz Z4.
