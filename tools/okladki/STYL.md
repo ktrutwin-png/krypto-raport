@@ -25,3 +25,4 @@ Szablon: wzor_okladki.html (podmień bg, teksty), render Playwright 1080x1080 (f
 - Różne ujęcia w jednym filmie: inne kadry, kolory, obiekty (wykresy, ludzie, miasta, giełdy, symbole), nie 3× ta sama moneta.
 - Lektor: domyślnie polski/angielski Piper (pl_PL-darkman-medium / en_US-joe), czyta i dopowiada wyjaśnienia.
 - Ruch obowiązkowy (szef 10.11): każda scena się rusza (zoom/przesuw, przejścia slide, animowane napisy) – jakość grafik jak dotąd, tylko bez powtórek.
+- Te zasady (świeże grafiki, ruch, lektor) obowiązują tak samo na YouTube: Shorts, Weekly Market Brief i miniatury (szef 10.11).
