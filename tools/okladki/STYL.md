@@ -18,3 +18,9 @@ Szablon: wzor_okladki.html (podmień bg, teksty), render Playwright 1080x1080 (f
 - Reel = kilka scen co 3–5 s (nie jeden obraz), same mocne grafiki tematu z hexa_gen (BTC/XRP/złoto/flagi krajów…) z liczbą dnia + pytanie/CTA na końcu. Przejścia xfade slideleft 0.4 s, lekki zoom.
 - SZEF RZADKO (decyzja 10.11 18:29): jego zdjęcie najwyżej w 1 na 3–5 Reelsów (ok. raz na 1–2 tygodnie), wtedy jedna scena ~1 s. Może być prawdziwe zdjęcie albo wygenerowane, byle bez wąsów. Reszta = grafika „dojebana” jak we wzorze reel_szef_v2.
 - Nakładki: nakladki_scen.py (Playwright, przezroczyste PNG 1080x1920).
+
+## ZASADA ŚWIEŻYCH GRAFIK (szef 10.11.2026)
+- Każdy reel/Short = NOWE grafiki do każdej sceny, generowane pod temat dnia (C:\Hexa\generatory\hexa_gen.py → obraz(..., "9:16", ...)).
+- Ta sama grafika najwyżej raz – nie powtarzamy tej samej monety/sejfu/tła w kolejnych filmach.
+- Różne ujęcia w jednym filmie: inne kadry, kolory, obiekty (wykresy, ludzie, miasta, giełdy, symbole), nie 3× ta sama moneta.
+- Lektor: domyślnie polski/angielski Piper (pl_PL-darkman-medium / en_US-joe), czyta i dopowiada wyjaśnienia.
