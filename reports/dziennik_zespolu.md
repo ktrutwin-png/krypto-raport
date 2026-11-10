@@ -51,3 +51,4 @@ BŁĄD: serwer vmi3737651 offline w Desktop Commander od ~20:40 9.11 (last seen 
 2026-11-10 10:26 | Reżyser (YouTube) | Short 10.11 (CRYPTO 101 Bitcoin vs gold, CPI) zaplanowany na YT 10:31 – Metricool id 422903113
 2026-11-10 10:50 | Mózg | serwer: zawieszenie 9.11 ~20:00 (MT5→DC Remote→boty), restart 10:28, wszystko działa; Strażnik serwera co godzinę, pagefile 8 GB, WU bez auto-restartu, autostart START_WSZYSTKO | ok
 2026-11-10 11:00 | Mózg | ROZKAZ M7: nowy szybki bot IBKR (paper) – Mechanik prowadzi, Zwiadowca rynki/godziny, Analityk ocena, Inspektor kontrola, Nauczyciel wzorce; start handlu tylko po „wdróż” | ok
+2026-11-10 11:27 | Mózg | ROZKAZ R12 dla Reżysera: strona erlgrey83-crypto-freaq.vercel.app – lepsza grafika i tematy, co tydzień jedno ulepszenie (Analityk liczby, Nauczyciel wzorce) | ok
