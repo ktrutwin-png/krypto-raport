@@ -54,3 +54,4 @@ BŁĄD: serwer vmi3737651 offline w Desktop Commander od ~20:40 9.11 (last seen 
 2026-11-10 11:27 | Mózg | ROZKAZ R12 dla Reżysera: strona erlgrey83-crypto-freaq.vercel.app – lepsza grafika i tematy, co tydzień jedno ulepszenie (Analityk liczby, Nauczyciel wzorce) | ok
 2026-11-10 15:58 | Mózg | narzędzia: reports/narzedzia.md – darmowe generatory obrazów/wideo dla Reżysera, Handlowca, Pisarza; HF Spaces czeka na włączenie przez szefa | ok
 - 2026-11-10 Mózg: zasada narzędzi — wszyscy agenci używają hexa_gen.py, brakujące programy piszą sami (C:\Hexa\narzedzia\). Następne: wideo (Wan 2.2) i lektor (Chatterbox) w hexa_gen.
+2026-11-10 18:13 | Reżyser (Raport 18) | BTC $72.8K – hot CPI +0.4% vs 0.3%, $570M longs liquidated, gold -2.7% (31.1 s, 5 nowych obrazów holo, media 17991573483083682) | posted | ok
