@@ -1,0 +1,66 @@
+{
+ "date": "10.11.2026",
+ "style": "news",
+ "mood": "gold",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $74,455 ▲0.3% · ETH $2,111 ▼0.0% · XRP $1.09 ▼0.5% · SOL $85.61 ▼0.8% · GOLD $4,117 · FEAR & GREED 28",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "CRYPTO 101 IN 30s",
+   "head": [
+    "BITCOIN VS GOLD:",
+    "*ONE NUMBER TODAY*"
+   ],
+   "chip": "CPI · 8:30 AM ET",
+   "say": "Bitcoin and gold are both waiting for one number today. It's called C P I.",
+   "move": "in"
+  },
+  {
+   "img": "s2.jpg",
+   "head": [
+    "CPI =",
+    "*WHAT LIFE COSTS*"
+   ],
+   "sub": "FOOD · RENT · FUEL",
+   "note": "LAST READING: +3.7% IN A YEAR",
+   "say": "C P I tracks what you pay for food, rent and fuel. Last time: up three point seven percent.",
+   "move": "out"
+  },
+  {
+   "img": "s3.jpg",
+   "head": [
+    "HOT INFLATION =",
+    "*HIGHER RATES*"
+   ],
+   "sub": "~80% ODDS OF A DEC FED HIKE",
+   "say": "Hot inflation pushes the Fed toward hikes. Markets see about eighty percent odds in December.",
+   "move": "up"
+  },
+  {
+   "img": "s4.jpg",
+   "head": [
+    "BTC FEELS RATES",
+    "~GOLD FEELS THE DOLLAR~"
+   ],
+   "anim": {
+    "dir": "chop",
+    "label": "$74,455"
+   },
+   "say": "Higher rates usually squeeze risky assets like Bitcoin. Gold mostly watches the dollar.",
+   "move": "down"
+  },
+  {
+   "img": "s5.jpg",
+   "tag": "TODAY 8:30 AM ET",
+   "head": [
+    "HOT OR COOL?",
+    "*BTC VS GOLD*"
+   ],
+   "sub": "HOT 🔥 / COOL ❄️ – COMMENT ONE",
+   "note": "SEND THIS TO A FRIEND WHO HOLDS BTC",
+   "say": "So, one number for Bitcoin and gold. Hot or cool? Not financial advice, just data.",
+   "move": "in"
+  }
+ ]
+}
