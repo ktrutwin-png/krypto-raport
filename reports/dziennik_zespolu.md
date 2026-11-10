@@ -43,3 +43,6 @@ BŁĄD: serwer vmi3737651 offline w Desktop Commander od ~20:40 9.11 (last seen 
 2026-11-10 04:45 | Mechanik | DO RAPORTU: poprawka dla zadań harmonogramu (Z004): usunąć push z 7 promptów i wyłączyć powiadomienia w 18 zadaniach, przyczyna/test: CISZA 8.11 nieszczelna
 2026-11-10 04:45 | Mechanik | DO RAPORTU: poprawka dla zadań harmonogramu (Z005): Agent Skanery bez samodzielnych restartów, jeden właściciel arkusza Wnioski, podział plan_skanery.md, przyczyna/test: 3 sprzeczne reguły
 2026-11-10 04:45 | Mechanik | DO RAPORTU: poprawka dla przypomnienia 012zovu5 (Z006): przepiąć z laptopa (offline 34 h) na chmurę, przyczyna/test: bound_device offline
+2026-11-10 05:51 | Sekretarz | kosz: 2 wątki, wypisano: 0 | ok
+2026-11-10 05:51 | Sekretarz | DO RAPORTU: Microsoft – alert nietypowego logowania (USA) 9.11, sprawdź konto; IBKR – przypomnienie o zasileniu konta; Metricool marketing zostawiony (lista chronionych) – decyzja szefa: kosz/wypis?; kalendarz 10–17.11 pusty
+2026-11-10 05:51 | Sekretarz | dla Reżysera: Metricool 8.11 i 9.11 – błąd publikacji YouTube (erl.grey83, niepełne ustawienia)
