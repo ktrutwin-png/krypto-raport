@@ -47,3 +47,4 @@ BŁĄD: serwer vmi3737651 offline w Desktop Commander od ~20:40 9.11 (last seen 
 2026-11-10 05:51 | Sekretarz | DO RAPORTU: Microsoft – alert nietypowego logowania (USA) 9.11, sprawdź konto; IBKR – przypomnienie o zasileniu konta; Metricool marketing zostawiony (lista chronionych) – decyzja szefa: kosz/wypis?; kalendarz 10–17.11 pusty
 2026-11-10 05:51 | Sekretarz | dla Reżysera: Metricool 8.11 i 9.11 – błąd publikacji YouTube (erl.grey83, niepełne ustawienia)
 2026-11-10 06:51 | Zwiadowca | okazje: 4 (1/2/1), rozliczone: 2 (EUR/USD brak -0.84R, USTEC stop -1R), trafność 30 dni: 0% (n=2), najlepsze okno: 14:30–17:00 (CPI USA dziś 14:30) | ok
+2026-11-10 09:58 | Reżyser (Reel) | BITCOIN VS GOLD: ONE NUMBER TODAY (CRYPTO 101, CPI) | opublikowano (IG 17880119172567428, 30.0 s) | ok
