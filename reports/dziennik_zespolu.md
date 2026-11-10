@@ -56,3 +56,5 @@ BŁĄD: serwer vmi3737651 offline w Desktop Commander od ~20:40 9.11 (last seen 
 - 2026-11-10 Mózg: zasada narzędzi — wszyscy agenci używają hexa_gen.py, brakujące programy piszą sami (C:\Hexa\narzedzia\). Następne: wideo (Wan 2.2) i lektor (Chatterbox) w hexa_gen.
 2026-11-10 18:13 | Reżyser (Raport 18) | BTC $72.8K – hot CPI +0.4% vs 0.3%, $570M longs liquidated, gold -2.7% (31.1 s, 5 nowych obrazów holo, media 17991573483083682) | posted | ok
 2026-11-10 18:25 | Reżyser (YouTube) | Short 18:00 zaplanowany (Metricool 423448187, 18:28); statystyki 7d w youtube.log
+2026-11-10 19:24 | Inspektor | nowe: 2, zamknięte: 3 (Z003 panel TG – SSL ustąpił po restarcie, Z006, Z007 zawieszenie serwera – wszystkie procesy żyją, MT5 connected), otwarte: 4 | dla Mechanika: Z002, Z008 | ok
+2026-11-10 19:24 | Inspektor | DO RAPORTU: Strażnik serwera może wysłać szefowi fałszywy alarm „MT5 nie odpowiada” (Z008) – czyta 2 ostatnie linie panel_tg.log bez czasu, a MT5 wrócił 18:33 – prompt Strażnika do poprawki (wdróż); nadal czekają na „wdróż”: Z004 (CISZA nieszczelna, 15 zadań z push), Z005 (Agent Skanery sam restartuje skaner)
