@@ -49,3 +49,4 @@ BŁĄD: serwer vmi3737651 offline w Desktop Commander od ~20:40 9.11 (last seen 
 2026-11-10 06:51 | Zwiadowca | okazje: 4 (1/2/1), rozliczone: 2 (EUR/USD brak -0.84R, USTEC stop -1R), trafność 30 dni: 0% (n=2), najlepsze okno: 14:30–17:00 (CPI USA dziś 14:30) | ok
 2026-11-10 09:58 | Reżyser (Reel) | BITCOIN VS GOLD: ONE NUMBER TODAY (CRYPTO 101, CPI) | opublikowano (IG 17880119172567428, 30.0 s) | ok
 2026-11-10 10:26 | Reżyser (YouTube) | Short 10.11 (CRYPTO 101 Bitcoin vs gold, CPI) zaplanowany na YT 10:31 – Metricool id 422903113
+2026-11-10 10:50 | Mózg | serwer: zawieszenie 9.11 ~20:00 (MT5→DC Remote→boty), restart 10:28, wszystko działa; Strażnik serwera co godzinę, pagefile 8 GB, WU bez auto-restartu, autostart START_WSZYSTKO | ok
