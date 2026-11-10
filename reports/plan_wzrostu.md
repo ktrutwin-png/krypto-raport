@@ -83,3 +83,9 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - 2026-11-07: przegląd grafiki przez Mózg (6 poprawek w STANDARDZIE JAKOŚCI), ticker przeniesiony nad strefę UI IG
 - ROZKAZ R1–R5, R7: zrobione – Reel 07.11 10:00: 24,0 s, 5 scen; note 64 px biel na ciemnym pasku, sub/chip zielone ≥44 px; 5 nowych obrazów (bank *_holo_01 z 7.11), ostatnia scena z własnym obrazem; każda scena move + anim/chip/note; ticker y≈1470; wpis w dzienniku zespołu (reports/2026-11-07-reel)
 - 2026-11-09: IG 166 (skok +67 w 1 dzien – prawdopodobnie boty, do wyjasnienia), YT 10, spoza obserwujacych ~25% (7 dni) | najlepszy filar tyg. 1: WEEK IN 30s (skip 54.5%); hook-wzor: kontrast dwoch aktywow
+
+## R13 NOWY STYL WIDEO (od szefa 10.11) — OBOWIĄZUJE Reels I YouTube Shorts
+- Każdy Reel i każdy Short w stylu tools/okladki/STYL.md (wzór: reel_szef_v2): kilka scen po 3–5 s z hexa_gen, krzykliwe nagłówki Anton, liczba dnia na żółto, lektor + muzyka, CTA pytanie.
+- Ten sam film idzie na Instagram i YouTube Shorts; niedzielny ~5-min przegląd tygodnia na YouTube też w tym stylu (więcej scen, rozdziały).
+- Miniatury YouTube: 1280x720 wg wzoru okladka_wzor.jpg.
+- Nie spoczywać na laurach: co tydzień Reżyser testuje 1 ulepszenie (nowy typ sceny, przejście, dźwięk, ruch) i porównuje zasięgi; lepsze zostaje.
