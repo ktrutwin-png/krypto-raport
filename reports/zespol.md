@@ -39,6 +39,13 @@ Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia
 - 🔍 Inspektor: codziennie – czy oba procesy freqtrade (Donch4hBTC, Mom1dBTC) żyją na serwerze vmi3737651, świeżość logów, błędy → zgłoszenia.
 - 📊 Analityk: w sobotnim raporcie osobna linijka Kraken (wynik tygodnia, PF, czy strategia ma przewagę vs backtest).
 
+## ⚡ SZYBKI BOT IBKR (szef 10.11.2026: „zleć wszystkim agentom”)
+- 🔧 Mechanik – prowadzi (rozkaz M7 w plan_boty.md): dane, koszty, backtest, kod w trybie obserwacji; start handlu tylko po „wdróż”.
+- 🔭 Zwiadowca – wybór rynków i najlepszych okien godzinowych dla szybkich transakcji (z godziny_rynkow.md), wynik do plan_boty.md „Postęp” jako „Zwiadowca → M7: …”.
+- 📊 Analityk – ocena wyników testów (PF, obsunięcie, koszty) w sobotnim raporcie.
+- 🔍 Inspektor – po starcie trybu obserwacji: czy proces żyje na serwerze, logi, czy na pewno konto paper.
+- 📚 Nauczyciel – co tydzień 1 wzorzec najlepszych praktyk dla szybkich botów (koszty, poślizg, dane w czasie rzeczywistym).
+
 ## 🔕 CISZA (szef 8.11.2026 – nadrzędna dla WSZYSTKICH agentów)
 Żadnych powiadomień push ani wiadomości do szefa w ciągu tygodnia – ani o sukcesie, ani o błędzie, ani o decyzji. Problemy → „BŁĄD: …” w dzienniku zespołu (dla Inspektora). Sprawy dla szefa (np. „wdróż”, awans, mail czekający na jego ruch) → „DO RAPORTU: …” w dzienniku zespołu. Szef dostaje TYLKO jeden raport tygodnia od 📊 Analityka (sobota 11:17): co się działo między agentami, poprawki, naprawy, 🏆 najlepszy agent. Wyjątek nie dotyczy agentów: raport tradingowy poranny i wieczorny 22:00 zostają.
 
