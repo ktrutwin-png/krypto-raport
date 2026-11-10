@@ -25,6 +25,7 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - (pierwsze lekcje po niedzieli 15.11.2026)
 
 ## UMIEJĘTNOŚCI I NARZĘDZIA (🎬 Reżyser)
+- 10.11 (Mózg): darmowe generatory – lista i zasady w reports/narzedzia.md (Canva generate-image działa; Hugging Face Spaces z wideo Wan 2.2 po włączeniu przez szefa; Pollinations tylko szkice; ElevenLabs wideo płatne).
 - Narzędzia: KINO (tools/kino/kino.py, styl news), lektor piper, obrazy: bank tools/kino/bank*, Unsplash, Figma generate_image; publikacja: Metricool (YT), Windsor (IG); dane: Twelve_Data, CoinGecko.
 - Potrzebujesz nowego narzędzia? Zapisz w „Postęp”: „PROŚBA DO MÓZGU: …” (co i po co) – Mózg podepnie.
 
