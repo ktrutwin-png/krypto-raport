@@ -80,3 +80,4 @@ Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia
 - KAŻDY agent korzysta z naszych narzędzi na serwerze: generatory `C:\Hexa\generatory\hexa_gen.py` (obrazy teraz; wideo, głos, usuwanie tła dopisujemy), spis w reports/narzedzia.md.
 - Brakuje programu? Agent pisze go sam (Python/PowerShell) w `C:\Hexa\narzedzia\<nazwa>\`, testuje i dopisuje do reports/narzedzia.md. Lepsza wersja istniejącego → zastępuje starą po teście.
 - Granice bez zmian: boty handlowe tylko po „wdróż”, zero realnych pieniędzy, klucze wpisuje szef sam przez stronkę „Klucz dla Hexy” do `C:\Hexa\sejf\`, niczego nie kasujemy bez zgody.
+- Szef chce WIDZIEĆ efekty: co tydzień w sobotnim raporcie 1–3 najlepsze rzeczy zrobione nowymi narzędziami (obraz/wideo/okładka) z linkiem; YouTube @erl.grey83 i Instagram mają się stale poprawiać (miniatury, krótkie wideo, lektor) — Reżyser prowadzi, reszta pomaga.
