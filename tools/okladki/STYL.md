@@ -15,5 +15,6 @@ Szablon: wzor_okladki.html (podmień bg, teksty), render Playwright 1080x1080 (f
 ## POPRAWKI SZEFA (10.11, 18:17)
 - Szef NIE MA wąsów: tylko bródka na brodzie, zwykłe czarne prostokątne okulary (nie przeciwsłoneczne), krótki irokez.
 - FLUX Kontext dorysowuje wąsy → do scen z szefem używaj jego PRAWDZIWYCH zdjęć (C:\Hexa\generatory\szef\: studio, dubai, miasto, moto, usmiech). Kontext tylko gdy nie ma pasującego zdjęcia i zawsze sprawdź twarz.
-- Reel = kilka scen co 3–5 s (nie jeden obraz): 1) szef + hook, 2–4) sceny tematu z hexa_gen (BTC/XRP/złoto…) z liczbą dnia, 5) szef + pytanie/CTA. Przejścia xfade slideleft 0.4 s, lekki zoom. Szef pojawia się co jakiś czas, nie cały czas.
+- Reel = kilka scen co 3–5 s (nie jeden obraz), same mocne grafiki tematu z hexa_gen (BTC/XRP/złoto/flagi krajów…) z liczbą dnia + pytanie/CTA na końcu. Przejścia xfade slideleft 0.4 s, lekki zoom.
+- SZEF RZADKO (decyzja 10.11 18:29): jego zdjęcie najwyżej w 1 na 3–5 Reelsów (ok. raz na 1–2 tygodnie), wtedy jedna scena ~1 s. Może być prawdziwe zdjęcie albo wygenerowane, byle bez wąsów. Reszta = grafika „dojebana” jak we wzorze reel_szef_v2.
 - Nakładki: nakladki_scen.py (Playwright, przezroczyste PNG 1080x1920).
