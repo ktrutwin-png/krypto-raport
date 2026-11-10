@@ -75,3 +75,8 @@ Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia
 
 ## Rozkazy dla Analityka (czytaj na początku pracy)
 - [ ] A1 (7.11) Rozdzielaj handel szefa na dwa koszyki: PANEL (komentarz pozycji „PanelTG…”, szybkie pewne strzały z Telegrama) i MT5 RĘCZNY (reszta, magic 0). Dla każdego osobno: wejścia, % wygranych, czas do TP (+0,3%), najgłębszy minus po drodze, śr. % na wejście. To czas do zysku i głębokość minusa mierzą przewagę szefa – nie sam % wygranych (test 7.11: bez SL oba kierunki zwykle trafiają TP).
+
+## 🛠️ ZASADA NARZĘDZI (od szefa, 10.11)
+- KAŻDY agent korzysta z naszych narzędzi na serwerze: generatory `C:\Hexa\generatory\hexa_gen.py` (obrazy teraz; wideo, głos, usuwanie tła dopisujemy), spis w reports/narzedzia.md.
+- Brakuje programu? Agent pisze go sam (Python/PowerShell) w `C:\Hexa\narzedzia\<nazwa>\`, testuje i dopisuje do reports/narzedzia.md. Lepsza wersja istniejącego → zastępuje starą po teście.
+- Granice bez zmian: boty handlowe tylko po „wdróż”, zero realnych pieniędzy, klucze wpisuje szef sam przez stronkę „Klucz dla Hexy” do `C:\Hexa\sejf\`, niczego nie kasujemy bez zgody.
