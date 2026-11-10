@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Erl.grey83 · Crypto Freaq</title>
+<meta name="description" content="Krypto i złoto bez ściemy: ceny na żywo, krótki brief dnia, filmy i podstawy. Erl.grey83 crypto freaq.">
+<meta property="og:title" content="Erl.grey83 · Crypto Freaq">
+<meta property="og:description" content="Ceny na żywo, brief dnia, Reels i YouTube Shorts. Tylko fakty, bez obietnic.">
+<meta name="theme-color" content="#04070f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23071433' stroke='%23ffc94a' stroke-width='3'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' font-family='Georgia' font-weight='700' fill='%23ffc94a'%3E%E2%82%BF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;800&family=Manrope:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+:root{--bg:#04070f;--panel:rgba(12,20,44,.72);--line:rgba(255,201,74,.22);--fg:#eef3ff;--mut:#9aa8c9;--gold:#ffc94a;--gold2:#fff0b8;--up:#38e08c;--dn:#ff5466;--r:18px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:Manrope,system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+#sparks{position:fixed;inset:0;z-index:0;pointer-events:none}
+.glow{position:fixed;inset:-20% -10% auto;height:70vh;background:radial-gradient(ellipse at 50% 20%,rgba(255,180,40,.22),transparent 60%);z-index:0;pointer-events:none}
+main{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 16px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:Oxanium;font-weight:800;letter-spacing:.06em;color:var(--gold)}
+nav a{color:var(--mut);text-decoration:none;font-weight:600;margin-left:18px;font-size:15px}
+nav a:hover{color:var(--gold)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:40px 0 30px}
+.tag{display:inline-block;font:700 12px 'JetBrains Mono';letter-spacing:.14em;color:var(--gold);border:1px solid var(--line);padding:6px 12px;border-radius:99px;background:rgba(255,201,74,.06)}
+h1{font-family:Oxanium;font-weight:800;font-size:clamp(40px,7vw,78px);line-height:1;margin:18px 0 14px;background:linear-gradient(180deg,#fff7d6,#ffc94a 55%,#a8740f);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 22px rgba(255,190,60,.35))}
+.lead{color:var(--mut);font-size:18px;max-width:34em}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:14px;font-weight:800;text-decoration:none;color:#fff;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.yt{background:#e62117}.ig{background:linear-gradient(90deg,#f58529,#dd2a7b,#8134af)}
+.ghost{border:1px solid var(--line);color:var(--gold)}
+.pw{position:relative}.portrait{position:relative;aspect-ratio:4/5;border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:0 0 60px rgba(255,180,40,.18)}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(4,7,15,.85))}
+.coin{position:absolute;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font:800 28px Oxanium;color:#2a1a00;background:radial-gradient(circle at 35% 30%,#fff3c0,#ffc94a 45%,#a8740f);box-shadow:0 0 24px rgba(255,190,60,.5);animation:spin 7s linear infinite,float 5s ease-in-out infinite;z-index:2}
+.c1{top:6%;left:-18px}.c2{top:42%;right:-14px;animation-delay:-2s,-1s;width:52px;height:52px;font-size:22px}.c3{bottom:10%;left:12%;animation-delay:-4s,-3s;width:44px;height:44px;font-size:18px}
+@keyframes spin{from{transform:rotateY(0)}to{transform:rotateY(360deg)}}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -14px}}
+section{padding:46px 0}
+h2{font-family:Oxanium;font-weight:800;font-size:clamp(26px,4vw,38px);margin-bottom:8px}
+h2 span{color:var(--gold)}
+.sub{color:var(--mut);margin-bottom:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px;backdrop-filter:blur(8px)}
+.tick .sym{font:700 13px 'JetBrains Mono';color:var(--mut);letter-spacing:.1em}
+.tick .px{font:800 26px Oxanium;margin:6px 0 2px}
+.tick .ch{font:700 15px 'JetBrains Mono'}
+.up{color:var(--up)}.dn{color:var(--dn)}
+.brief{font-size:18px;line-height:1.7}
+.brief b{color:var(--gold)}
+.small{font-size:13px;color:var(--mut);margin-top:12px}
+.learn h3{font-family:Oxanium;font-size:20px;color:var(--gold);margin-bottom:6px}
+.learn p{color:var(--mut);font-size:15px}
+.vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.vid{display:block;text-decoration:none;color:var(--fg);padding:26px;border-radius:var(--r);border:1px solid var(--line);background:linear-gradient(135deg,rgba(255,201,74,.10),rgba(12,20,44,.8))}
+.vid strong{display:block;font:800 22px Oxanium;margin-bottom:6px}
+.vid span{color:var(--mut)}
+footer{position:relative;z-index:1;text-align:center;color:var(--mut);font-size:13px;padding:40px 16px 60px;border-top:1px solid var(--line);margin-top:30px}
+@media(max-width:820px){.hero{grid-template-columns:1fr}.pw{max-width:420px;margin:0 auto;width:100%}nav a.hide{display:none}}
+@media(prefers-reduced-motion:reduce){.coin{animation:none}}
+</style>
+</head>
+<body>
+<canvas id="sparks"></canvas><div class="glow"></div>
+<main>
+<nav><div class="logo">ERL.GREY83</div><div><a href="#rynek">Rynek</a><a href="#brief" class="hide">Brief</a><a href="#nauka" class="hide">Krypto 101</a><a href="#filmy">Filmy</a></div></nav>
+
+<header class="hero">
+  <div>
+    <span class="tag">CRYPTO FREAQ · KRYPTO · ZŁOTO</span>
+    <h1>Rynek bez ściemy.</h1>
+    <p class="lead">Ceny na żywo, krótki brief dnia i filmy, które w 30 sekund mówią, co się dzieje z kryptowalutami i złotem. Same fakty, zero obietnic.</p>
+    <div class="btns">
+      <a class="btn yt" href="https://www.youtube.com/@erl.grey83?sub_confirmation=1" target="_blank" rel="noopener">▶ YouTube</a>
+      <a class="btn ig" href="https://www.instagram.com/erl.grey83/" target="_blank" rel="noopener">◎ Instagram</a>
+      <a class="btn ghost" href="#rynek">Ceny na żywo ↓</a>
+    </div>
+  </div>
+  <div class="pw">
+    <div class="portrait"><img src="assets/postac.avif" alt="Erl.grey83" width="640" height="800"></div>
+    <div class="coin c1">₿</div><div class="coin c2">Ξ</div><div class="coin c3">✕</div>
+  </div>
+</header>
+
+<section id="rynek">
+  <h2>Rynek <span>na żywo</span></h2>
+  <p class="sub">Odświeża się co minutę · zmiana z ostatnich 24 godzin</p>
+  <div class="grid" id="ticks"></div>
+  <p class="small" id="upd">Ładuję dane…</p>
+</section>
+
+<section id="brief">
+  <h2>Brief <span>dnia</span></h2>
+  <div class="card brief" id="briefTxt">Ładuję…</div>
+  <p class="small">Tekst powstaje automatycznie z cen na żywo. Tylko informacja, nie porada inwestycyjna.</p>
+</section>
+
+<section id="nauka">
+  <h2>Krypto <span>101</span></h2>
+  <p class="sub">Podstawy w jednym zdaniu – bez żargonu.</p>
+  <div class="grid learn">
+    <div class="card"><h3>Bitcoin</h3><p>Pierwsza kryptowaluta. Jest go maksymalnie 21 milionów, dlatego wielu traktuje go jak „cyfrowe złoto”.</p></div>
+    <div class="card"><h3>Altcoiny</h3><p>Wszystkie monety poza bitcoinem. Zwykle ruszają się mocniej – w górę i w dół.</p></div>
+    <div class="card"><h3>Złoto</h3><p>Od tysięcy lat przechowalnia wartości. Często rośnie, gdy ludzie boją się o gospodarkę.</p></div>
+    <div class="card"><h3>Stop loss</h3><p>Zlecenie, które samo zamyka pozycję przy ustalonej stracie. Chroni przed dużą wpadką.</p></div>
+    <div class="card"><h3>Ryzyko</h3><p>Ryzykuj tylko tyle, ile możesz stracić. Na rynku nikt nie zna przyszłości na pewno.</p></div>
+  </div>
+</section>
+
+<section id="filmy">
+  <h2>Filmy <span>i Reels</span></h2>
+  <p class="sub">Nowe codziennie: krótki przegląd rynku, w ruchu, z lektorem.</p>
+  <div class="vids">
+    <a class="vid" href="https://www.youtube.com/@erl.grey83/shorts" target="_blank" rel="noopener"><strong>YouTube Shorts</strong><span>Codzienne 30-sekundowe podsumowania rynku.</span></a>
+    <a class="vid" href="https://www.youtube.com/@erl.grey83" target="_blank" rel="noopener"><strong>Weekly Market Brief</strong><span>Co niedzielę: tydzień na rynku w kilka minut.</span></a>
+    <a class="vid" href="https://www.instagram.com/erl.grey83/reels/" target="_blank" rel="noopener"><strong>Instagram Reels</strong><span>Krypto i złoto w pigułce – obserwuj, by nie przegapić.</span></a>
+  </div>
+</section>
+</main>
+<footer>© Erl.grey83 · Crypto Freaq — tylko informacja, nie porada inwestycyjna. Dane: CoinGecko.</footer>
+
+<script>
+const A=[["bitcoin","BTC","Bitcoin"],["ethereum","ETH","Ethereum"],["ripple","XRP","XRP"],["solana","SOL","Solana"],["pax-gold","ZŁOTO","Złoto (PAXG, 1 uncja)"]];
+const f=(v)=>v>=1000?v.toLocaleString('pl-PL',{maximumFractionDigits:0}):v.toLocaleString('pl-PL',{maximumFractionDigits:v<10?3:2});
+const pc=(v)=>(v>=0?"+":"")+v.toFixed(1).replace(".",",")+"%";
+async function load(){
+  try{
+    const r=await fetch("https://api.coingecko.com/api/v3/simple/price?ids="+A.map(a=>a[0]).join(",")+"&vs_currencies=usd&include_24hr_change=true");
+    const d=await r.json();
+    document.getElementById("ticks").innerHTML=A.map(([id,s,n])=>{const x=d[id];if(!x)return"";const c=x.usd_24h_change||0;
+      return `<div class="card tick"><div class="sym">${s}</div><div class="px">${f(x.usd)} $</div><div class="ch ${c>=0?"up":"dn"}">${pc(c)}</div><div class="small" style="margin-top:4px">${n}</div></div>`}).join("");
+    document.getElementById("upd").textContent="Aktualizacja: "+new Date().toLocaleTimeString("pl-PL",{hour:"2-digit",minute:"2-digit"});
+    const b=d.bitcoin,g=d["pax-gold"],alts=["ethereum","ripple","solana"].map(k=>d[k]?.usd_24h_change||0),avg=alts.reduce((a,c)=>a+c,0)/alts.length;
+    const bc=b.usd_24h_change,mood=bc<=-3?"mocno w dół":bc<0?"lekko w dół":bc<3?"lekko w górę":"mocno w górę";
+    let t=`Bitcoin jest dziś <b>${mood}</b>: ${f(b.usd)} $ (${pc(bc)}). `;
+    t+=`Duże altcoiny średnio <b>${pc(avg)}</b>${Math.abs(avg)>Math.abs(bc)?" – ruszają się mocniej niż bitcoin, jak zwykle":""}. `;
+    if(g)t+=`Złoto (PAXG) ${f(g.usd)} $ za uncję, <b>${pc(g.usd_24h_change||0)}</b>${Math.abs(g.usd_24h_change||0)<0.5?" – dziś spokojnie":""}.`;
+    document.getElementById("briefTxt").innerHTML=t;
+  }catch(e){document.getElementById("upd").textContent="Nie udało się pobrać cen – spróbuj za chwilę.";document.getElementById("briefTxt").textContent="Brak danych w tej chwili.";}
+}
+load();setInterval(load,60000);
+// złote iskry
+const cv=document.getElementById("sparks"),cx=cv.getContext("2d");let P=[];
+function rs(){cv.width=innerWidth;cv.height=innerHeight}rs();addEventListener("resize",rs);
+const N=matchMedia("(prefers-reduced-motion: reduce)").matches?0:Math.min(70,Math.floor(innerWidth/14));
+for(let i=0;i<N;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,v:.2+Math.random()*.7,r:.6+Math.random()*1.8,a:Math.random()});
+(function tick(){cx.clearRect(0,0,cv.width,cv.height);for(const p of P){p.y-=p.v;p.x+=Math.sin(p.y/40)*.3;p.a+=.02;if(p.y<-10){p.y=cv.height+10;p.x=Math.random()*cv.width}
+cx.globalAlpha=.35+.35*Math.sin(p.a);cx.fillStyle="#ffc94a";cx.beginPath();cx.arc(p.x,p.y,p.r,0,7);cx.fill()}requestAnimationFrame(tick)})();
+</script>
+</body>
+</html>
