@@ -98,3 +98,9 @@ Giełdy (z godzin świec w danych 1h): NYSE/Nasdaq kasowa 15:30–22:00, Xetra (
 
 ## Okna, w których okazje Zwiadowcy trafiały (z okazje_zwiadowcy.csv)
 - 2026-11-09: brak rozliczonych okazji (start Z2) – statystyka od pierwszych rozliczeń.
+- 2026-11-10: rozliczone 2 (dane 1h Yahoo Finance; R liczone od środka strefy wejścia, „brak” = wynik na zamknięciu terminu):
+  | okno_godzin | n | cel | stop | brak | śr. R |
+  |---|---|---|---|---|---|
+  | 14:00-17:00 (EUR/USD short, dzień 9.11) | 1 | 0 | 0 | 1 | -0.84 |
+  | 15:30-17:30 (USTEC short, tydz., stop 9.11 20:30) | 1 | 0 | 1 | 0 | -1.00 |
+  Za mało danych (n=2) na wniosek o oknach – obserwacja: obie okazje wbrew krótkoterminowemu odbiciu (EUR/USD i NDX odbiły 9.11 po południu).

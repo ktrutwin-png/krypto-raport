@@ -1,6 +1,10 @@
 data;horyzont;rynek;kierunek;wejscie;uniewaznienie;cel;pewnosc;powod;okno_godzin;termin;wynik;R
-2026-11-09;dzień;EUR/USD;short;1.1175-1.1195;1.1230;1.1115;2;D1 pod SMA50/200 (1.1345/1.1542), RSI 39, DXY 102.1 nad SMA20/50 – sprzedaż przy powrocie do SMA20 1.1197;14:00-17:00;2026-11-09;;
+2026-11-09;dzień;EUR/USD;short;1.1175-1.1195;1.1230;1.1115;2;D1 pod SMA50/200 (1.1345/1.1542), RSI 39, DXY 102.1 nad SMA20/50 – sprzedaż przy powrocie do SMA20 1.1197;14:00-17:00;2026-11-09;brak;-0.84
 2026-11-09;tydzień;XAU/USD;long;4070-4090;4028;4195;3;+4.1% w 5 dni, nad SMA20 4078, nocny wybicie do 4133 – kupno korekty do strefy wybicia przed CPI (wt 14:30);14:00-17:00;2026-11-13;;
-2026-11-09;tydzień;USTEC (NDX);short;27300-27600;28000;26100;3;-12.6% w 20 dni, zamknięcie 26990 pod SMA200 27984, RSI 31 – sprzedaż odbicia pod SMA200;15:30-17:30;2026-11-13;;
+2026-11-09;tydzień;USTEC (NDX);short;27300-27600;28000;26100;3;-12.6% w 20 dni, zamknięcie 26990 pod SMA200 27984, RSI 31 – sprzedaż odbicia pod SMA200;15:30-17:30;2026-11-13;stop;-1.00
 2026-11-09;miesiąc;BTC/USD;short;77000-78500;81200;70000;2;SMA20<SMA50, nowe dno 60 dni 74.2k, test SMA200 73.2k – sprzedaż retestu przełamanego wsparcia 76.4-78k;15:00-18:00;2026-12-09;;
 2026-11-09;miesiąc;DE40;long;25550-25650;24990;26700;2;siła względna: +2.9% w 20 dni vs USTEC -12.6%, nad SMA20/50/200 – kupno korekty do SMA20/50;09:00-11:00;2026-12-09;;
+2026-11-10;dzień;AUD/USD;short;0.6955-0.6975;0.7010;0.6880;2;D1 pod SMA20/50/200 (0.6989/0.7040/0.7056), RSI 42, -1.1% w 5 dni – sprzedaż odbicia do SMA20 po CPI (14:30);14:30-17:00;2026-11-10;;
+2026-11-10;tydzień;ETH/USD;short;2150-2190;2295;2000;3;zamknięcie 2127 pod SMA200 2153, SMA20<SMA50, -12.2% w 5 dni, nowe dno 60 dni 2081 – sprzedaż retestu przełamanej SMA200;15:00-18:00;2026-11-17;;
+2026-11-10;tydzień;GBP/USD;long;1.3400-1.3425;1.3350;1.3500;2;jedyna główna para USD nad SMA20/50/200 (1.3364/1.3362/1.3420), RSI 57, +1.8% w 20 dni – kupno korekty do SMA200, cel szczyt 20 dni 1.3502;14:00-17:00;2026-11-17;;
+2026-11-10;miesiąc;US500;long;7330-7380;7200;7800;2;W1 nad SMA40t 7324, D1 korekta -3.3% w 20 dni do strefy SMA200 7328 / dna 20 dni 7350 – kupno testu wsparcia;15:30-17:30;2026-12-10;;
