@@ -1,4 +1,6 @@
 # Styl okładek i Reels (od szefa, 10.11) — wzór: okladka_wzor.jpg
+
+> ⛔ ZAKAZ (szef 10.11, 22:34): ŻADNYCH zdjęć szefa (prawdziwych ani wygenerowanych) w Reels, Shorts, YouTube, okładkach i miniaturach. Sekcje „Z SZEFEM” i „SZEF RZADKO” poniżej są NIEAKTUALNE. Tylko grafika bez jego twarzy.
 Inspiracja: konto o XRP z 78 tys. obserwujących (styl, nie kopiujemy ich twarzy, logo ani grafik).
 1. Tło: fotorealistyczna scena filmowa z hexa_gen.py (ludzie z emocją, flagi/miasta krajów z newsa, wielka złota 3D moneta). Prompt kończ "no text".
 2. Nagłówek 2–3 słowa, Anton kursywa, biały + czerwony/złoty, gruby czarny obrys, w górnej 1/3.
