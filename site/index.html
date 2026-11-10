@@ -47,6 +47,7 @@ h1{font-family:Oxanium;font-weight:800;font-size:clamp(40px,7vw,78px);line-heigh
 .silv{--m1:#d9dee8;--m2:#9aa3b5;--m3:#5b6478;--hi:#ffffff;--ink:#3a4152}
 .copp{--m1:#e8925a;--m2:#b45f2c;--m3:#6e3412;--hi:#ffd2b0;--ink:#4a1f05}
 .blue{--m1:#7fb2ff;--m2:#3f6fd1;--m3:#1d3a80;--hi:#e3efff;--ink:#0d2257}
+.btc{--m1:#f7931a;--m2:#c9730f;--m3:#7d4505;--hi:#ffd28c;--ink:#fff}.btc span{transform:rotate(14deg);color:#fff;text-shadow:0 2px 3px rgba(0,0,0,.35)}
 .purp{--m1:#c79bff;--m2:#8a55d8;--m3:#4a2390;--hi:#f1e5ff;--ink:#2a0d5e}
 .c1{top:4%;left:-22px;--s:72px}.c2{top:38%;right:-20px;--s:56px;--t:9s;animation-delay:-2s,-1s}.c3{bottom:8%;left:10%;--s:48px;--t:6s;animation-delay:-4s,-3s}
 .c4{top:-14px;right:22%;--s:44px;--t:8s;animation-delay:-1s,-2s}.c5{bottom:-12px;right:14%;--s:60px;--t:10s;animation-delay:-3s,-4s}.c6{top:62%;left:-14px;--s:40px;--t:7.5s;animation-delay:-5s,-2.5s}
@@ -58,6 +59,7 @@ h2 span{color:var(--gold)}
 .sub{color:var(--mut);margin-bottom:24px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px;backdrop-filter:blur(8px)}
+.tick .sym{display:flex;align-items:center;gap:8px;}.tick .sym img{width:26px;height:26px;border-radius:50%}
 .tick .sym{font:700 13px 'JetBrains Mono';color:var(--mut);letter-spacing:.1em}
 .tick .px{font:800 26px Oxanium;margin:6px 0 2px}
 .tick .ch{font:700 15px 'JetBrains Mono'}
@@ -94,7 +96,7 @@ footer{position:relative;z-index:1;text-align:center;color:var(--mut);font-size:
   </div>
   <div class="pw">
     <div class="portrait"><img src="https://raw.githubusercontent.com/ktrutwin-png/krypto-raport/main/site/assets/postac.avif" alt="Erl.grey83" width="640" height="800"></div>
-    <div class="coin c1 gold"><i></i><div class="f"><span>₿</span></div><div class="b"><span>₿</span></div></div><div class="coin c2 silv"><i></i><div class="f"><span>Ξ</span></div><div class="b"><span>Ξ</span></div></div><div class="coin c3 blue"><i></i><div class="f"><span>✕</span></div><div class="b"><span>✕</span></div></div><div class="coin c4 purp"><i></i><div class="f"><span>◎</span></div><div class="b"><span>◎</span></div></div><div class="coin c5 copp"><i></i><div class="f"><span>Ł</span></div><div class="b"><span>Ł</span></div></div><div class="coin c6 gold"><i></i><div class="f"><span>₿</span></div><div class="b"><span>₿</span></div></div>
+    <div class="coin c1 btc"><i></i><div class="f"><span>₿</span></div><div class="b"><span>₿</span></div></div><div class="coin c2 silv"><i></i><div class="f"><span>Ξ</span></div><div class="b"><span>Ξ</span></div></div><div class="coin c3 blue"><i></i><div class="f"><span>✕</span></div><div class="b"><span>✕</span></div></div><div class="coin c4 purp"><i></i><div class="f"><span>◎</span></div><div class="b"><span>◎</span></div></div><div class="coin c5 copp"><i></i><div class="f"><span>Ł</span></div><div class="b"><span>Ł</span></div></div><div class="coin c6 btc"><i></i><div class="f"><span>₿</span></div><div class="b"><span>₿</span></div></div>
   </div>
 </header>
 
@@ -136,15 +138,15 @@ footer{position:relative;z-index:1;text-align:center;color:var(--mut);font-size:
 <footer>© Erl.grey83 · Crypto Freaq — tylko informacja, nie porada inwestycyjna. Dane: CoinGecko.</footer>
 
 <script>
-const A=[["bitcoin","BTC","Bitcoin"],["ethereum","ETH","Ethereum"],["ripple","XRP","XRP"],["solana","SOL","Solana"],["pax-gold","ZŁOTO","Złoto (PAXG, 1 uncja)"]];
+const A=[["bitcoin","BTC","Bitcoin","1/small/bitcoin.png"],["ethereum","ETH","Ethereum","279/small/ethereum.png"],["ripple","XRP","XRP","44/small/xrp-symbol-white-128.png"],["solana","SOL","Solana","4128/small/solana.png"],["pax-gold","ZŁOTO","Złoto (PAXG, 1 uncja)","9519/small/asset-paxg.png"]];
 const f=(v)=>v>=1000?v.toLocaleString('pl-PL',{maximumFractionDigits:0}):v.toLocaleString('pl-PL',{maximumFractionDigits:v<10?3:2});
 const pc=(v)=>(v>=0?"+":"")+v.toFixed(1).replace(".",",")+"%";
 async function load(){
   try{
     const r=await fetch("https://api.coingecko.com/api/v3/simple/price?ids="+A.map(a=>a[0]).join(",")+"&vs_currencies=usd&include_24hr_change=true");
     const d=await r.json();
-    document.getElementById("ticks").innerHTML=A.map(([id,s,n])=>{const x=d[id];if(!x)return"";const c=x.usd_24h_change||0;
-      return `<div class="card tick"><div class="sym">${s}</div><div class="px">${f(x.usd)} $</div><div class="ch ${c>=0?"up":"dn"}">${pc(c)}</div><div class="small" style="margin-top:4px">${n}</div></div>`}).join("");
+    document.getElementById("ticks").innerHTML=A.map(([id,s,n,ic])=>{const x=d[id];if(!x)return"";const c=x.usd_24h_change||0;
+      return `<div class="card tick"><div class="sym"><img src="https://coin-images.coingecko.com/coins/images/${ic}" alt="" loading="lazy">${s}</div><div class="px">${f(x.usd)} $</div><div class="ch ${c>=0?"up":"dn"}">${pc(c)}</div><div class="small" style="margin-top:4px">${n}</div></div>`}).join("");
     document.getElementById("upd").textContent="Aktualizacja: "+new Date().toLocaleTimeString("pl-PL",{hour:"2-digit",minute:"2-digit"});
     const b=d.bitcoin,g=d["pax-gold"],alts=["ethereum","ripple","solana"].map(k=>d[k]?.usd_24h_change||0),avg=alts.reduce((a,c)=>a+c,0)/alts.length;
     const bc=b.usd_24h_change,mood=bc<=-3?"mocno w dół":bc<0?"lekko w dół":bc<3?"lekko w górę":"mocno w górę";
