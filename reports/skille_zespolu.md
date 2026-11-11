@@ -38,5 +38,14 @@ Agent w chmurze: zanim zacznie zadanie z listy niżej, czyta odpowiedni `SKILL.m
 - `ui-ux-pro-max` (11.11) – wiedza o układzie, paletach (192), parach fontów (74), dostępności i 120 zasadach UX; pytaj go przy każdej zmianie wyglądu strony/ORB/Hexy. `banner-design` – rozmiary i układy banerów, miniatur YT, okładek.
 - Biblioteka DESIGN.md znanych marek: `C:\Hexa\design-md\` (awesome-design-md) – wzorce układu/typografii; nie kopiujemy logo ani nazw marek.
 
+## Nauka i jakość pracy (11.11, wszyscy agenci – rozkaz R16)
+- `self-improvement` (pskoett/pskoett-ai-skills, ★330) – zapis błędów, poprawek szefa i braków do `reports/nauka/` (format w `reports/nauka/README.md`).
+- `learning-aggregator` – Inspektor w niedzielę: grupuje wpisy, liczy powtórzenia, wzorce ≥3 → propozycja zasady.
+- `eval-creator` – z wypromowanej zasady robi test w `reports/nauka/TESTY.md`; Inspektor sprawdza co tydzień, czy zasada dalej trzyma.
+- `verification-before-completion` (obra/superpowers, ★316k, MIT) – żadnego „gotowe” bez dowodu (klatki filmu, kod wyjścia, zrzut strony).
+- `systematic-debugging` (superpowers) – przy błędzie: najpierw przyczyna, potem poprawka (Mechanik, Opiekun, Mózg).
+- `writing-skills` (superpowers) – Mózg pisze i testuje nowe własne skille dla agentów (test na agencie przed i po).
+- Odrzucone: `self-improving-agent` (wersja tylko dla OpenClaw), `verify-gate`/`skill-tester` (pod cudze repo z kodem), hooki automatyczne (niepotrzebne – zapis robi agent).
+
 ## Ogólne
 - `no-ai-slop` – teksty (opisy, książka, skrypty lektora), `unlazy` – duże zadania z bramkami, `find-skills` – szukanie nowych skilli (instalujemy tylko sprawdzone: najpierw serwer, potem laptop).
