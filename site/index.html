@@ -82,8 +82,8 @@ h2 span{background:linear-gradient(90deg,#22d3ee,#e879f9);-webkit-background-cli
 .gloss dt{font:800 20px Oxanium;color:var(--gold);text-shadow:0 0 12px rgba(34,211,238,.5)}
 .gloss dd{margin:0;color:var(--mut);font-size:16px;max-width:60ch}
 @media(max-width:820px){.gloss{grid-template-columns:1fr}.gloss div{grid-template-columns:1fr;gap:4px}}
-.show{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:40px;align-items:center}
-.show video{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px;border:1px solid rgba(232,121,249,.45);box-shadow:0 0 30px rgba(168,85,247,.35),0 18px 50px rgba(0,0,0,.55);background:#0a0820}
+.show{display:grid;grid-template-columns:minmax(0,1.3fr) 1fr;gap:40px;align-items:center}
+.show .showimg{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:22px;border:1px solid rgba(232,121,249,.45);box-shadow:0 0 30px rgba(168,85,247,.35),0 18px 50px rgba(0,0,0,.55);background:#0a0820}
 .plats{display:grid;gap:0;border-top:1px solid var(--line)}
 .plat{display:grid;grid-template-columns:44px 1fr auto;gap:16px;align-items:center;padding:20px 0;border-bottom:1px solid rgba(34,211,238,.14);color:var(--fg);text-decoration:none}
 .plat svg{width:30px;height:30px;color:var(--gold)}
@@ -92,7 +92,7 @@ h2 span{background:linear-gradient(90deg,#22d3ee,#e879f9);-webkit-background-cli
 .plat b{color:var(--gold);font-weight:700;white-space:nowrap}
 .plat:hover strong{color:var(--gold);text-shadow:0 0 14px rgba(34,211,238,.6)}
 .plat svg{filter:drop-shadow(0 0 6px rgba(34,211,238,.6))}
-@media(max-width:820px){.show{grid-template-columns:1fr}.show video{max-width:360px;margin:0 auto}}
+@media(max-width:820px){.show{grid-template-columns:1fr}.show .showimg{max-width:100%}}
 footer{position:relative;z-index:1;text-align:center;color:var(--mut);font-size:13px;padding:40px 16px 60px;border-top:1px solid var(--line);margin-top:30px}
 @media(max-width:600px){#ticks .card::before{display:none}#ticks{grid-template-columns:1fr;gap:0;border:1px solid var(--line);border-radius:var(--r);background:var(--panel);overflow:hidden}#ticks .card{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:14px;border:0;border-radius:0;background:none;backdrop-filter:none;padding:14px 16px;border-top:1px solid rgba(34,211,238,.12)}#ticks .card:first-child{border-top:0}#ticks .px{margin:0;font-size:20px;justify-self:end}#ticks .small,#ticks .wk{display:none}#ticks .spark{width:100%;max-width:120px;height:26px;margin:0;justify-self:center}#ticks .tick:hover{transform:none}#ticks .ch{min-width:62px;text-align:right}}
 @media(max-width:820px){.hero{grid-template-columns:1fr}.pw{max-width:420px;margin:0 auto;width:100%}nav a.hide{display:none}}
@@ -170,7 +170,7 @@ footer{position:relative;z-index:1;text-align:center;color:var(--mut);font-size:
   <h2>Filmy <span>i Reels</span></h2>
   <p class="sub">Nowe codziennie: krótki przegląd rynku, w ruchu, z lektorem.</p>
   <div class="show">
-    <video src="assets/zloto3d.mp4" poster="assets/zloto3d.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Sceny 3D z naszych filmów: waga bitcoin kontra złoto, liczba dnia, globus"></video>
+    <img class="showimg" src="assets/sala_m.webp" srcset="assets/sala_m.webp 960w, assets/sala.webp 1920w" sizes="(max-width:820px) 100vw, 640px" alt="Neonowa sala giełdowa z monetami bitcoin i złotem" width="960" height="540" loading="lazy">
     <div class="plats">
       <a class="plat" href="https://www.youtube.com/@erl.grey83/shorts" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor" opacity=".18"/><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg><div><strong>YouTube Shorts</strong><span>Codziennie 30 sekund o rynku krypto i złota.</span></div><b>Oglądaj</b></a>
       <a class="plat" href="https://www.youtube.com/@erl.grey83" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor" opacity=".18"/><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg><div><strong>Weekly Market Brief</strong><span>Co niedzielę cały tydzień na rynku w kilka minut.</span></div><b>Subskrybuj</b></a>
@@ -241,11 +241,7 @@ addEventListener('DOMContentLoaded',()=>{
 </script>
 <script>
 // Monety 3D wyrenderowane tym samym programem co filmy (tools/3d/monety_sprite.html: metal PBR, studio, relief) - 48 klatek kolysania.
-(function(){const R='https://raw.githubusercontent.com/ktrutwin-png/krypto-raport/main/site/assets/moneta_';
- const els=[...document.querySelectorAll('.sc')],still=matchMedia('(prefers-reduced-motion: reduce)').matches;
- els.forEach((e,i)=>{e.style.backgroundImage='url('+R+e.dataset.k+'.webp)';e.dataset.ph=i*.31});
- function draw(ms){const t=ms/1000;for(const e of els){const f=still?0:Math.floor(((t*+e.dataset.sp+ +e.dataset.ph)%1)*48);e.style.backgroundPosition=((f%8)*100/7)+'% '+(Math.floor(f/8)*100/5)+'%'}if(!still)requestAnimationFrame(draw)}
- requestAnimationFrame(draw)})();
+
 </script>
 
 </body>
