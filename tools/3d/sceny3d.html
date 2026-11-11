@@ -11,6 +11,10 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+import { FilmPass } from 'three/addons/postprocessing/FilmPass.js';
+import { RGBShiftShader } from 'three/addons/shaders/RGBShiftShader.js';
+import { VignetteShader } from 'three/addons/shaders/VignetteShader.js';
 import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 
@@ -376,7 +380,14 @@ const composer = new EffectComposer(renderer, new THREE.WebGLRenderTarget(W, H, 
 composer.addPass(new RenderPass(scene, camera));
 composer.addPass(new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.55, 0.5, 1.6));
 composer.addPass(new OutputPass());
-window.renderAt = t => { update(t); sparkStep(t); composer.render(); return true; };
+// "filmowe" wykonczenie: lekka aberracja na brzegach, winieta, ziarno (P.czysto=1 wylacza)
+let film = null;
+if (!P.czysto) {
+  const ca = new ShaderPass(RGBShiftShader); ca.uniforms.amount.value = 0.0011; ca.uniforms.angle.value = 0.6; composer.addPass(ca);
+  const vg = new ShaderPass(VignetteShader); vg.uniforms.offset.value = 1.05; vg.uniforms.darkness.value = 1.15; composer.addPass(vg);
+  film = new FilmPass(0.12, false); composer.addPass(film);
+}
+window.renderAt = t => { update(t); sparkStep(t); if (film) film.uniforms.time.value = t * 7.3; composer.render(); return true; };
 window.ready = true;
 </script>
 </body></html>

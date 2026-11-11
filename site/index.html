@@ -62,6 +62,13 @@ h2 span{color:var(--gold)}
 .spark{display:block;width:100%;height:38px;margin-top:10px;overflow:visible}.spark path{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
 .spark .ar{stroke:none;opacity:.14}.wk{font:500 11px 'JetBrains Mono';color:var(--mut);letter-spacing:.08em;margin-top:4px;display:flex;justify-content:space-between}
 @keyframes flash{0%{color:var(--gold);text-shadow:0 0 18px rgba(255,201,74,.7)}100%{color:inherit;text-shadow:none}}.px.fl{animation:flash 1.2s ease-out}
+.chartbox{margin-top:22px;padding:18px 18px 10px}
+.ctabs{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.ctabs button{font:700 13px 'JetBrains Mono';letter-spacing:.08em;color:var(--mut);background:transparent;border:1px solid rgba(255,201,74,.25);border-radius:99px;padding:8px 14px;cursor:pointer;min-height:36px}
+.ctabs button[aria-pressed="true"]{color:#1a1204;background:var(--gold);border-color:var(--gold)}
+.ctabs .cinfo{margin-left:auto;font:700 14px 'JetBrains Mono'}
+#chart{height:320px;width:100%}
+@media(max-width:600px){#chart{height:240px}.ctabs .cinfo{width:100%;margin-left:0}}
 .up{color:var(--up)}.dn{color:var(--dn)}
 .brief{font-size:18px;line-height:1.7}
 .brief b{color:var(--gold)}
@@ -113,6 +120,16 @@ footer{position:relative;z-index:1;text-align:center;color:var(--mut);font-size:
   <p class="sub">Odświeża się co minutę · zmiana z 24 godzin · wykres z 7 dni</p>
   <div class="grid" id="ticks"></div>
   <p class="small" id="upd">Ładuję dane…</p>
+  <div class="card chartbox">
+    <div class="ctabs" role="group" aria-label="Wybierz wykres">
+      <button type="button" data-id="bitcoin" aria-pressed="true">BTC</button>
+      <button type="button" data-id="pax-gold" aria-pressed="false">ZŁOTO</button>
+      <button type="button" data-id="ethereum" aria-pressed="false">ETH</button>
+      <span class="cinfo" id="cinfo"></span>
+    </div>
+    <div id="chart" role="img" aria-label="Wykres ceny z 30 dni"></div>
+    <p class="small" style="margin-top:6px">30 dni · dane CoinGecko · wykres: TradingView Lightweight Charts</p>
+  </div>
 </section>
 
 <section id="brief">
@@ -186,6 +203,26 @@ const N=matchMedia("(prefers-reduced-motion: reduce)").matches?0:Math.min(70,Mat
 for(let i=0;i<N;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,v:.2+Math.random()*.7,r:.6+Math.random()*1.8,a:Math.random()});
 (function tick(){cx.clearRect(0,0,cv.width,cv.height);for(const p of P){p.y-=p.v;p.x+=Math.sin(p.y/40)*.3;p.a+=.02;if(p.y<-10){p.y=cv.height+10;p.x=Math.random()*cv.width}
 cx.globalAlpha=.35+.35*Math.sin(p.a);cx.fillStyle="#ffc94a";cx.beginPath();cx.arc(p.x,p.y,p.r,0,7);cx.fill()}requestAnimationFrame(tick)})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js" defer></script>
+<script>
+// Duzy wykres 30 dni (TradingView Lightweight Charts, Apache-2.0)
+addEventListener('DOMContentLoaded',()=>{
+  const el=document.getElementById('chart'),info=document.getElementById('cinfo'),cache={};let chart,series,cur='bitcoin';
+  function make(){if(!window.LightweightCharts)return false;
+    chart=LightweightCharts.createChart(el,{autoSize:true,layout:{background:{type:'solid',color:'transparent'},textColor:'#a9b5d3',fontFamily:'JetBrains Mono'},
+      grid:{vertLines:{color:'rgba(255,201,74,.06)'},horzLines:{color:'rgba(255,201,74,.06)'}},rightPriceScale:{borderVisible:false},timeScale:{borderVisible:false,timeVisible:true},
+      crosshair:{vertLine:{color:'rgba(255,201,74,.4)',labelBackgroundColor:'#6b5420'},horzLine:{color:'rgba(255,201,74,.4)',labelBackgroundColor:'#6b5420'}},handleScroll:false,handleScale:false,localization:{locale:'pl-PL',priceFormatter:v=>v.toLocaleString('pl-PL',{maximumFractionDigits:v<10?3:v<1000?2:0})+' $'}});
+    series=chart.addAreaSeries({lineColor:'#ffc94a',topColor:'rgba(255,201,74,.35)',bottomColor:'rgba(255,201,74,0)',lineWidth:2,priceLineColor:'#ffc94a'});return true}
+  async function show(id){cur=id;document.querySelectorAll('.ctabs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.id===id));
+    try{if(!cache[id]){const r=await fetch(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=30`);if(!r.ok)throw 0;
+        const j=await r.json(),seen=new Set();cache[id]=j.prices.map(([t,v])=>({time:Math.floor(t/1000),value:v})).filter(p=>!seen.has(p.time)&&seen.add(p.time))}
+      if(cur!==id)return;const d=cache[id],a=d[0].value,b=d[d.length-1].value,ch=(b/a-1)*100,up=ch>=0;
+      series.applyOptions({lineColor:up?'#38e08c':'#ff5466',topColor:up?'rgba(56,224,140,.3)':'rgba(255,84,102,.28)',bottomColor:'rgba(0,0,0,0)',priceLineColor:up?'#38e08c':'#ff5466'});
+      series.setData(d);chart.timeScale().fitContent();info.innerHTML=`<span class="${up?'up':'dn'}">${(up?'+':'')+ch.toFixed(1).replace('.',',')}% / 30 dni</span>`}
+    catch(e){info.textContent='Wykres chwilowo niedostępny'}}
+  let tries=0;(function go(){if(make()){show('bitcoin');document.querySelectorAll('.ctabs button').forEach(b=>b.onclick=()=>show(b.dataset.id))}else if(tries++<40)setTimeout(go,150)})();
+});
 </script>
 <script>
 // Monety 3D wyrenderowane tym samym programem co filmy (tools/3d/monety_sprite.html: metal PBR, studio, relief) - 48 klatek kolysania.
