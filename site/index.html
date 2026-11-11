@@ -111,6 +111,26 @@ footer{position:relative;z-index:1;text-align:center;color:var(--mut);font-size:
 .tick{transform-style:preserve-3d}.tick:hover{transform:perspective(700px) rotateX(7deg) translateY(-6px)}
 @media(max-width:820px){.hero{min-height:auto;padding-top:120px;padding-bottom:70px}.hbg::before{background-image:url(assets/globus_m.webp);background-position:60% 30%}.hbg::after{background:linear-gradient(0deg,#05040f 0%,rgba(5,4,15,.6) 45%,rgba(5,4,15,.35) 100%)}.rbg::before{background-image:url(assets/sala_m.webp)}}
 @media(prefers-reduced-motion:reduce){.hbg::before,.rbg::before{animation:none}}
+
+section.deep{position:relative;padding:90px 0}
+.rbg.b-dach::before{background-image:url(assets/dach.webp);background-position:50% 40%}
+.rbg.b-skarb::before{background-image:url(assets/skarbiec.webp);background-position:50% 50%}
+.rbg.b-skarb::after{background:rgba(5,4,15,.68)}
+@media(max-width:820px){.rbg.b-dach::before{background-image:url(assets/dach_m.webp)}.rbg.b-skarb::before{background-image:url(assets/skarbiec_m.webp)}}
+#nauka .gloss{background:linear-gradient(160deg,rgba(34,26,92,.45),rgba(8,6,24,.7));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:var(--r);padding:0 24px;box-shadow:0 34px 60px -22px rgba(0,0,0,.85),inset 0 1px 0 rgba(255,255,255,.12)}
+
+/* ruch liter i cyfr */
+h1,h2 span,h1 em{background-size:220% 100%!important;animation:shim 6s ease-in-out infinite}
+@keyframes shim{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+h1{background-image:linear-gradient(100deg,#ffffff 0%,#bfe9ff 25%,#7dd3fc 40%,#ffffff 50%,#c084fc 70%,#e879f9 85%,#bfe9ff 100%)!important}
+.logo{animation:flick 7s infinite}
+@keyframes flick{0%,92%,100%{opacity:1}93%{opacity:.45}94%{opacity:1}96%{opacity:.6}97%{opacity:1}}
+.rv{opacity:0;transform:perspective(800px) translateY(34px) rotateX(10deg);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.tick .px{text-shadow:0 0 14px rgba(34,211,238,.35)}
+.tick .sym img{animation:bob 4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotateY(0)}50%{transform:translateY(-3px) rotateY(180deg)}}
+@media(prefers-reduced-motion:reduce){h1,h2 span,h1 em,.logo,.tick .sym img{animation:none}.rv{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -147,13 +167,13 @@ footer{position:relative;z-index:1;text-align:center;color:var(--mut);font-size:
   </div>
 </section>
 
-<section id="brief">
+<section id="brief" class="deep"><div class="rbg b-dach" aria-hidden="true"></div>
   <h2>Brief <span>dnia</span></h2>
   <div class="card brief" id="briefTxt">Ładuję…</div>
   <p class="small">Tekst powstaje automatycznie z cen na żywo. Tylko informacja, nie porada inwestycyjna.</p>
 </section>
 
-<section id="nauka">
+<section id="nauka" class="deep"><div class="rbg b-skarb" aria-hidden="true"></div>
   <h2>Krypto <span>101</span></h2>
   <p class="sub">Podstawy w jednym zdaniu – bez żargonu.</p>
   <dl class="gloss">
@@ -244,5 +264,24 @@ addEventListener('DOMContentLoaded',()=>{
 
 </script>
 
+<script>
+(()=>{const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// wjazd sekcji
+const els=[...document.querySelectorAll('section h2,section .sub,.chartbox,.brief,.gloss,.show,.plat,.hero h1,.hero .lead,.btns')];
+if(!still&&'IntersectionObserver' in window){els.forEach((e,i)=>{e.classList.add('rv');e.style.transitionDelay=(i%4)*90+'ms'});
+ const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});els.forEach(e=>io.observe(e));}
+// cyfry się nabijają
+const RX=/\d[\d\u00a0\u202f ]*(?:[.,]\d+)?/;
+function count(el){const t=el.textContent,m=t.match(RX);if(!m)return;const raw=m[0].replace(/[\s\u00a0\u202f]+$/,''),dm=raw.match(/[.,](\d+)$/),dec=dm?dm[1].length:0,sep=dm?raw[raw.length-dec-1]:',';
+ const v=parseFloat(raw.replace(/[\s\u00a0\u202f]/g,'').replace(',','.'));if(!isFinite(v))return;const t0=performance.now(),D=1300;
+ (function f(n){const k=Math.min(1,(n-t0)/D),e=1-Math.pow(1-k,3);let x=(v*e).toFixed(dec);if(sep===',')x=x.replace('.',',');
+  const ip=x.split(/[.,]/)[0],grp=ip.length>4?ip.replace(/\B(?=(\d{3})+(?!\d))/g,'\u00a0'):ip;x=grp+(dec?sep+x.split(/[.,]/)[1]:'');
+  el.textContent=k<1?t.replace(raw,x):t;if(k<1)requestAnimationFrame(f)})(t0)}
+if(!still){const box=document.getElementById('ticks');let done=false;
+ let seen=false,ready=false;const go=()=>{if(done||!seen||!ready)return;done=true;box.querySelectorAll('.px,.ch').forEach(count)};
+ new MutationObserver(()=>{if(box.querySelector('.px')){ready=true;go()}}).observe(box,{childList:true,subtree:true});
+ new IntersectionObserver(es=>{if(es[0].isIntersecting){seen=true;go()}},{threshold:.3}).observe(box);}
+})();
+</script>
 </body>
 </html>
