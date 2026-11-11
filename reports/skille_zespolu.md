@@ -15,5 +15,12 @@ Agent w chmurze: zanim zacznie zadanie z listy niżej, czyta odpowiedni `SKILL.m
 ## Grafika 3D (Reżyser, agent strony)
 - threejs-* (13) + `3d-metal-material`, `3d-sky-rays`, `3d-high-resolution-textures`, `3d-retina-resolution` → szczegóły w `tools/okladki/STYL.md` i szablon `tools/3d/`.
 
+## Strona i design (agent strony, Reżyser – okładki/miniatury)
+- `design-taste-frontend` (taste-skill) – kierunek artystyczny zamiast „generycznej strony AI”, referencje, sprawdzenie w przeglądarce.
+- `impeccable` – słownik designu: polish/bolder, krytyka i audyt, wyłapuje AI-slop przed publikacją. Każda zmiana strony przechodzi audyt impeccable.
+- `playwright-cli` – zrzuty ekranu i sprawdzanie strony w przeglądarce (narzędzie `playwright-cli` zainstalowane globalnie na serwerze).
+- `img2threejs` – z obrazka referencyjnego model 3D w three.js (np. moneta, sztabka, logo) – łączyć z `3d-metal-material`.
+- Biblioteka DESIGN.md znanych marek: `C:\Hexa\design-md\` (awesome-design-md) – wzorce układu/typografii; nie kopiujemy logo ani nazw marek.
+
 ## Ogólne
 - `no-ai-slop` – teksty (opisy, książka, skrypty lektora), `unlazy` – duże zadania z bramkami, `find-skills` – szukanie nowych skilli (instalujemy tylko sprawdzone: najpierw serwer, potem laptop).
