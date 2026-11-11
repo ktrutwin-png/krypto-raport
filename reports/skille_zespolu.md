@@ -49,3 +49,13 @@ Agent w chmurze: zanim zacznie zadanie z listy niżej, czyta odpowiedni `SKILL.m
 
 ## Ogólne
 - `no-ai-slop` – teksty (opisy, książka, skrypty lektora), `unlazy` – duże zadania z bramkami, `find-skills` – szukanie nowych skilli (instalujemy tylko sprawdzone: najpierw serwer, potem laptop).
+
+## Gwiazdki na GitHubie (szef 11.11: „jeśli działa zajebiście – daj im gwiazdki”)
+Zasada: repo dostaje gwiazdkę od szefa dopiero, gdy jego skill/narzędzie działa u nas dobrze co najmniej 2 tygodnie (bez błędów w reports/nauka, realnie używany). Zwiadowca skilli co tydzień dopisuje tu kandydatów; Mózg daje szefowi listę linków (kliknięcie ★ zajmuje sekundę – my nie mamy tokenu do jego konta GitHub).
+| repo | używane od | stan | gwiazdka |
+|---|---|---|---|
+| obra/superpowers | 11.11.2026 | test | – |
+| pskoett/pskoett-ai-skills | 11.11.2026 | test | – |
+| heygen-com/hyperframes | 11.11.2026 | test | – |
+| nextlevelbuilder/ui-ux-pro-max-skill | 11.11.2026 | test | – |
+| mrdoob/three.js | 11.11.2026 | działa (sceny 3D) | do dania 25.11 |
