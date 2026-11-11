@@ -29,7 +29,7 @@ Szablon: wzor_okladki.html (podmień bg, teksty), render Playwright 1080x1080 (f
 - Ruch obowiązkowy (szef 10.11): każda scena się rusza (zoom/przesuw, przejścia slide, animowane napisy) – jakość grafik jak dotąd, tylko bez powtórek.
 - Te zasady (świeże grafiki, ruch, lektor) obowiązują tak samo na YouTube: Shorts, Weekly Market Brief i miniatury (szef 10.11).
 - Monety 3D (szef 10.11): na stronie są prawdziwe monety WebGL (site/index.html, three.js). Reżyser może używać tych samych monet 3D jako ruchomych elementów w Reels/Shorts (render przez Playwright z przezroczystym tłem) – BTC w oryginalnych kolorach, pozostałe jako symbole w metalu.
-- Wdrożenie strony: edytuj site/index.html, commit+push, potem redeploy na Vercel (build pobiera plik z repo po SHA).
+- Wdrożenie strony: edytuj site/index.html, commit+push, potem redeploy na Vercel (build pobiera z repo po SHA: index.html + assets/zloto3d.mp4/.jpg – nowe pliki z site/assets trzeba dopisać do pętli w buildCommand). Przed wdrożeniem: audyt skillem impeccable + sprawdzenie playwright (bez poziomego przewijania na 390px).
 
 ## SKILLE 3D (szef 11.11.2026) – obowiązkowe przy każdej grafice/animacji 3D
 - Na serwerze (główna siedziba) w `C:\Users\Administrator\.claude\skills\` leżą skille: threejs-* (13: animation, fundamentals, geometry, interaction, lighting, loaders, materials, performance, postprocessing, react-three-fiber, shaders, textures, asset-pipeline) oraz 3d-metal-material, 3d-sky-rays, 3d-high-resolution-textures, 3d-retina-resolution.
