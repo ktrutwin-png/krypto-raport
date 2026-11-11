@@ -1,3 +1,5 @@
+> **OD 11.11.2026 (wieczór): STYL GŁĘBIA – szef: „to jest to, o co mi chodziło od samego początku”.** Tła = fotorealistyczne sceny AI z głębią jak `tools/neon/wzory/wzor_globus.webp` i `wzor_sala.webp` (punkt zbiegu, mokre odbicia, poświata, neon cyjan/fiolet/magenta, złote monety). Przepis: rozkaz R17 w `reports/plan_wzrostu.md` i sekcja GŁĘBIA w `tools/neon/README.md`.
+
 > **STYL DOMOWY OD 11.11.2026: STYL NEON** – patrz `tools/neon/README.md` i `tools/neon/wzor_neon.jpg` (szef: „mój ulubiony styl, jaskrawy, pełen energii”). Wszystkie nowe grafiki i filmy w tej palecie i z tymi elementami.
 
 # Styl okładek i Reels (od szefa, 10.11) — wzór: okladka_wzor.jpg
