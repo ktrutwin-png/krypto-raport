@@ -1,0 +1,15 @@
+{"opis_pliku":"Stan roju dla aplikacji ORB (Hexa). s: praca | czeka | blad. Agenci mogą aktualizować swoje pole 'ostatnio' i 's'.",
+ "agenci":[
+  {"n":"Raport 12","s":"czeka","ostatnio":"11.11 – Reel ONE NUMBER (CPI)"},
+  {"n":"Raport 18","s":"praca","ostatnio":"11.11 18:35 – BTC +1.9% · GOLD UNDER $4,000 (3D waga)"},
+  {"n":"Reżyser","s":"blad","ostatnio":"11.11 18:31 – Short 18:00 nie wrzucony (film za późno)"},
+  {"n":"Opiekun","s":"czeka","ostatnio":"11.11 – 190 obserwujących (+14)"},
+  {"n":"Skanery","s":"praca","ostatnio":"skaner dzienny chodzi na serwerze, sygnały na Telegram"},
+  {"n":"Inspektor","s":"czeka","ostatnio":"11.11 11:53 – sprawdził sceny 3D i stronę"},
+  {"n":"Zwiadowca","s":"czeka","ostatnio":"pierwszy przebieg w nocy z soboty na niedzielę"},
+  {"n":"Nauczyciel","s":"czeka","ostatnio":"nowe lekcje: E-20261111-02/03"},
+  {"n":"Strażnik","s":"praca","ostatnio":"18:44 – serwer ok, zapora Contabo działa"},
+  {"n":"Hexa","s":"praca","ostatnio":"bot złoto spokojny – demo MT5"},
+  {"n":"Turbo","s":"praca","ostatnio":"bot złoto agresywny – demo MT5"},
+  {"n":"Indeksy","s":"praca","ostatnio":"11.11 – start, DAX DCH + SPY D15 (demo)"},
+  {"n":"Panel","s":"czeka","ostatnio":"czeka na Twoje zlecenia"}]}
