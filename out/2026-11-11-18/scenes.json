@@ -1,0 +1,88 @@
+{
+ "date": "11.11.2026",
+ "style": "news",
+ "mood": "gold",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $74,179 ▲1.9% · ETH $2,074 ▲2.9% · XRP $1.07 ▲2.5% · SOL $84.70 ▲3.5% · GOLD $4,000 ▼0.8% · FEAR & GREED 29",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "d3": {
+    "typ": "waga",
+    "p": {
+     "przechyl": -0.6,
+     "seed": 11
+    }
+   },
+   "tag": "LIVE MARKET UPDATE",
+   "head": [
+    "BTC +1.9% ·",
+    "*GOLD UNDER*",
+    "*$4,000*"
+   ],
+   "chip": "▲ BTC $74,179",
+   "move": "in",
+   "say": "Bitcoin bounced two percent today, while gold slipped under four thousand."
+  },
+  {
+   "img": "s2.jpg",
+   "head": [
+    "GOLD $4,000",
+    "*DOLLAR FIRMS*",
+    "*HIKE BETS RISE*"
+   ],
+   "chip": "▼ -0.8% TODAY",
+   "note": "HOT CPI · FED HIKE BETS",
+   "anim": {
+    "dir": "down",
+    "label": "$4,000"
+   },
+   "move": "out",
+   "say": "Gold fell almost one percent, reportedly on a firmer dollar and Fed hike bets."
+  },
+  {
+   "img": "s3.jpg",
+   "head": [
+    "NYSE PICKS",
+    "*AVALANCHE*",
+    "~TOKEN STOCKS~"
+   ],
+   "chip": "▲ AVAX +4%",
+   "note": "24/7 MARKET PLANNED",
+   "move": "up",
+   "say": "And the New York Stock Exchange will reportedly settle tokenized stocks on Avalanche."
+  },
+  {
+   "img": "s4.jpg",
+   "d3": {
+    "typ": "pokretlo",
+    "p": {
+     "od": 0.32,
+     "do": 0.29,
+     "seed": 4
+    }
+   },
+   "head": [
+    "FEAR 29",
+    "*BTC -8%*",
+    "*IN 7 DAYS*"
+   ],
+   "sub": "ETH -14% IN 7 DAYS",
+   "move": "down",
+   "say": "Still, fear rules: the index sits at twenty nine, and bitcoin is down eight percent this week."
+  },
+  {
+   "img": "s5.jpg",
+   "tag": "WATCH NEXT",
+   "head": [
+    "BTC $74K ·",
+    "*GOLD $4,000*",
+    "*WHO WINS?*"
+   ],
+   "sub": "BULL OR BEAR BY FRIDAY? 🐂/🐻",
+   "note": "SEND THIS TO A FRIEND WHO HOLDS BTC",
+   "move": "in",
+   "say": "Bitcoin seventy four thousand, gold four thousand. Bull or bear by Friday? This is not financial advice, just data."
+  }
+ ]
+}
