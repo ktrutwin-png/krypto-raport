@@ -12,10 +12,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;800&family=Manrope:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap">
 <style>
-:root{--bg:#04070f;--panel:rgba(12,20,44,.72);--line:rgba(255,201,74,.22);--fg:#eef3ff;--mut:#9aa8c9;--gold:#ffc94a;--gold2:#fff0b8;--up:#38e08c;--dn:#ff5466;--r:18px}
+:root{--bg:#04070f;--panel:rgba(12,20,44,.72);--line:rgba(255,201,74,.22);--fg:#eef3ff;--mut:#a9b5d3;--gold:#ffc94a;--gold2:#fff0b8;--up:#38e08c;--dn:#ff5466;--r:18px}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--fg);font-family:Manrope,system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:clip;scrollbar-color:#6b5420 #04070f;accent-color:#ffc94a}
+::selection{background:#ffc94a;color:#1a1204}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:10px}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#04070f}::-webkit-scrollbar-thumb{background:#4a3a14;border-radius:10px}
+body{caret-color:var(--gold)}
+body{background:var(--bg);color:var(--fg);font-family:Manrope,system-ui,sans-serif;line-height:1.55;overflow-x:clip}
 #sparks{position:fixed;inset:0;z-index:0;pointer-events:none}
 .glow{position:fixed;inset:-20% -10% auto;height:70vh;background:radial-gradient(ellipse at 50% 20%,rgba(255,180,40,.22),transparent 60%);z-index:0;pointer-events:none}
 main{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 16px}
@@ -25,13 +29,16 @@ nav a{color:var(--mut);text-decoration:none;font-weight:600;margin-left:18px;fon
 nav a:hover{color:var(--gold)}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:40px 0 30px}
 .tag{display:inline-block;font:700 12px 'JetBrains Mono';letter-spacing:.14em;color:var(--gold);border:1px solid var(--line);padding:6px 12px;border-radius:99px;background:rgba(255,201,74,.06)}
-h1{font-family:Oxanium;font-weight:800;font-size:clamp(40px,7vw,78px);line-height:1;margin:18px 0 14px;background:linear-gradient(180deg,#fff7d6,#ffc94a 55%,#a8740f);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 22px rgba(255,190,60,.35))}
+h1{font-family:Oxanium;font-weight:800;font-size:clamp(40px,7vw,78px);line-height:1;margin:0 0 18px;color:var(--gold);letter-spacing:-.02em;text-wrap:balance;text-shadow:0 4px 28px rgba(255,170,30,.28)}
+h1 em{font-style:normal;color:var(--fg)}
 .lead{color:var(--mut);font-size:18px;max-width:34em}
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:14px;font-weight:800;text-decoration:none;color:#fff;transition:transform .2s}
 .btn:hover{transform:translateY(-2px)}
-.yt{background:#e62117}.ig{background:linear-gradient(90deg,#f58529,#dd2a7b,#8134af)}
-.ghost{border:1px solid var(--line);color:var(--gold)}
+.btn svg{width:20px;height:20px;flex:none}
+.pri{background:var(--gold);color:#1a1204;box-shadow:0 8px 24px rgba(255,190,60,.25)}.pri:hover{background:#ffd76e}
+.sec{border:1px solid rgba(255,201,74,.45);color:var(--fg)}.sec:hover{border-color:var(--gold)}
+.tl{color:var(--gold);font-weight:700;text-decoration:none;align-self:center;padding:8px 4px;text-underline-offset:5px}.tl:hover{text-decoration:underline}
 .pw{position:relative}.portrait{position:relative;aspect-ratio:4/5;border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:0 0 60px rgba(255,180,40,.18)}
 .portrait img{width:100%;height:100%;object-fit:cover;display:block}
 .portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(4,7,15,.85))}
@@ -67,14 +74,24 @@ h2 span{color:var(--gold)}
 .up{color:var(--up)}.dn{color:var(--dn)}
 .brief{font-size:18px;line-height:1.7}
 .brief b{color:var(--gold)}
-.small{font-size:13px;color:var(--mut);margin-top:12px}
-.learn h3{font-family:Oxanium;font-size:20px;color:var(--gold);margin-bottom:6px}
-.learn p{color:var(--mut);font-size:15px}
-.vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.vid{display:block;text-decoration:none;color:var(--fg);padding:26px;border-radius:var(--r);border:1px solid var(--line);background:linear-gradient(135deg,rgba(255,201,74,.10),rgba(12,20,44,.8))}
-.vid strong{display:block;font:800 22px Oxanium;margin-bottom:6px}
-.vid span{color:var(--mut)}
+.small{font-size:14px;color:var(--mut);margin-top:12px}
+.gloss{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px;border-top:1px solid var(--line)}
+.gloss div{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid rgba(255,201,74,.14)}
+.gloss dt{font:800 20px Oxanium;color:var(--gold)}
+.gloss dd{margin:0;color:var(--mut);font-size:16px;max-width:60ch}
+@media(max-width:820px){.gloss{grid-template-columns:1fr}.gloss div{grid-template-columns:1fr;gap:4px}}
+.show{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:40px;align-items:center}
+.show video{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.55);background:#0a0d18}
+.plats{display:grid;gap:0;border-top:1px solid var(--line)}
+.plat{display:grid;grid-template-columns:44px 1fr auto;gap:16px;align-items:center;padding:20px 0;border-bottom:1px solid rgba(255,201,74,.14);color:var(--fg);text-decoration:none}
+.plat svg{width:30px;height:30px;color:var(--gold)}
+.plat strong{display:block;font:800 22px Oxanium}
+.plat span{color:var(--mut)}
+.plat b{color:var(--gold);font-weight:700;white-space:nowrap}
+.plat:hover strong{color:var(--gold)}
+@media(max-width:820px){.show{grid-template-columns:1fr}.show video{max-width:360px;margin:0 auto}}
 footer{position:relative;z-index:1;text-align:center;color:var(--mut);font-size:13px;padding:40px 16px 60px;border-top:1px solid var(--line);margin-top:30px}
+@media(max-width:600px){#ticks{grid-template-columns:1fr;gap:0;border:1px solid var(--line);border-radius:var(--r);background:var(--panel);overflow:hidden}#ticks .card{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:14px;border:0;border-radius:0;background:none;backdrop-filter:none;padding:14px 16px;border-top:1px solid rgba(255,201,74,.12)}#ticks .card:first-child{border-top:0}#ticks .px{margin:0;font-size:20px}#ticks .small{display:none}#ticks .ch{min-width:62px;text-align:right}}
 @media(max-width:820px){.hero{grid-template-columns:1fr}.pw{max-width:420px;margin:0 auto;width:100%}nav a.hide{display:none}}
 @media(prefers-reduced-motion:reduce){.coin{animation:none}}
 </style>
@@ -86,13 +103,12 @@ footer{position:relative;z-index:1;text-align:center;color:var(--mut);font-size:
 
 <header class="hero">
   <div>
-    <span class="tag">CRYPTO FREAQ · KRYPTO · ZŁOTO</span>
-    <h1>Rynek bez ściemy.</h1>
+    <h1>Rynek <em>bez</em> ściemy.</h1>
     <p class="lead">Ceny na żywo, krótki brief dnia i filmy, które w 30 sekund mówią, co się dzieje z kryptowalutami i złotem. Same fakty, zero obietnic.</p>
     <div class="btns">
-      <a class="btn yt" href="https://www.youtube.com/@erl.grey83?sub_confirmation=1" target="_blank" rel="noopener">▶ YouTube</a>
-      <a class="btn ig" href="https://www.instagram.com/erl.grey83/" target="_blank" rel="noopener">◎ Instagram</a>
-      <a class="btn ghost" href="#rynek">Ceny na żywo ↓</a>
+      <a class="btn pri" href="https://www.instagram.com/erl.grey83/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="17.4" cy="6.6" r="1.25" fill="currentColor"/></svg>Obserwuj na Instagramie</a>
+      <a class="btn sec" href="https://www.youtube.com/@erl.grey83?sub_confirmation=1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor" opacity=".18"/><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg>Subskrybuj YouTube</a>
+      <a class="tl" href="#rynek">Zobacz ceny na żywo</a>
     </div>
   </div>
   <div class="pw">
@@ -117,22 +133,25 @@ footer{position:relative;z-index:1;text-align:center;color:var(--mut);font-size:
 <section id="nauka">
   <h2>Krypto <span>101</span></h2>
   <p class="sub">Podstawy w jednym zdaniu – bez żargonu.</p>
-  <div class="grid learn">
-    <div class="card"><h3>Bitcoin</h3><p>Pierwsza kryptowaluta. Jest go maksymalnie 21 milionów, dlatego wielu traktuje go jak „cyfrowe złoto”.</p></div>
-    <div class="card"><h3>Altcoiny</h3><p>Wszystkie monety poza bitcoinem. Zwykle ruszają się mocniej – w górę i w dół.</p></div>
-    <div class="card"><h3>Złoto</h3><p>Od tysięcy lat przechowalnia wartości. Często rośnie, gdy ludzie boją się o gospodarkę.</p></div>
-    <div class="card"><h3>Stop loss</h3><p>Zlecenie, które samo zamyka pozycję przy ustalonej stracie. Chroni przed dużą wpadką.</p></div>
-    <div class="card"><h3>Ryzyko</h3><p>Ryzykuj tylko tyle, ile możesz stracić. Na rynku nikt nie zna przyszłości na pewno.</p></div>
-  </div>
+  <dl class="gloss">
+    <div><dt>Bitcoin</dt><dd>Pierwsza kryptowaluta. Jest go maksymalnie 21 milionów, dlatego wielu traktuje go jak „cyfrowe złoto”.</dd></div>
+    <div><dt>Altcoiny</dt><dd>Wszystkie monety poza bitcoinem. Zwykle ruszają się mocniej – w górę i w dół.</dd></div>
+    <div><dt>Złoto</dt><dd>Od tysięcy lat przechowalnia wartości. Często rośnie, gdy ludzie boją się o gospodarkę.</dd></div>
+    <div><dt>Stop loss</dt><dd>Zlecenie, które samo zamyka pozycję przy ustalonej stracie. Chroni przed dużą wpadką.</dd></div>
+    <div><dt>Ryzyko</dt><dd>Ryzykuj tylko tyle, ile możesz stracić. Na rynku nikt nie zna przyszłości na pewno.</dd></div>
+  </dl>
 </section>
 
 <section id="filmy">
   <h2>Filmy <span>i Reels</span></h2>
   <p class="sub">Nowe codziennie: krótki przegląd rynku, w ruchu, z lektorem.</p>
-  <div class="vids">
-    <a class="vid" href="https://www.youtube.com/@erl.grey83/shorts" target="_blank" rel="noopener"><strong>YouTube Shorts</strong><span>Codzienne 30-sekundowe podsumowania rynku.</span></a>
-    <a class="vid" href="https://www.youtube.com/@erl.grey83" target="_blank" rel="noopener"><strong>Weekly Market Brief</strong><span>Co niedzielę: tydzień na rynku w kilka minut.</span></a>
-    <a class="vid" href="https://www.instagram.com/erl.grey83/reels/" target="_blank" rel="noopener"><strong>Instagram Reels</strong><span>Krypto i złoto w pigułce – obserwuj, by nie przegapić.</span></a>
+  <div class="show">
+    <video src="assets/zloto3d.mp4" poster="assets/zloto3d.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Złota moneta 3D – próbka stylu naszych filmów"></video>
+    <div class="plats">
+      <a class="plat" href="https://www.youtube.com/@erl.grey83/shorts" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor" opacity=".18"/><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg><div><strong>YouTube Shorts</strong><span>Codziennie 30 sekund o rynku krypto i złota.</span></div><b>Oglądaj</b></a>
+      <a class="plat" href="https://www.youtube.com/@erl.grey83" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor" opacity=".18"/><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg><div><strong>Weekly Market Brief</strong><span>Co niedzielę cały tydzień na rynku w kilka minut.</span></div><b>Subskrybuj</b></a>
+      <a class="plat" href="https://www.instagram.com/erl.grey83/reels/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="17.4" cy="6.6" r="1.25" fill="currentColor"/></svg><div><strong>Instagram Reels</strong><span>Krypto i złoto w pigułce, w ruchu i z lektorem.</span></div><b>Obserwuj</b></a>
+    </div>
   </div>
 </section>
 </main>
@@ -186,8 +205,14 @@ cx.globalAlpha=.35+.35*Math.sin(p.a);cx.fillStyle="#ffc94a";cx.beginPath();cx.ar
   const t=new THREE.CanvasTexture(k);t.anisotropy=4;return t}
  function edge(c){const k=document.createElement('canvas');k.width=256;k.height=16;const x=k.getContext('2d');for(let i=0;i<64;i++){x.fillStyle=i%2?c[1]:c[2];x.fillRect(i*4,0,4,16)}x.fillStyle='rgba(255,255,255,.18)';x.fillRect(0,5,256,3);return new THREE.CanvasTexture(k)}
  const D=[['₿','btc',.02,.10,78,.9,.24],['Ξ','silv',1.0,.44,60,.7,0],['✕','blue',.18,.88,52,1.1,0],['◎','purp',.72,.0,48,.8,0],['Ł','copp',.80,1.0,64,.6,0],['₿','btc',.0,.66,44,1.0,.24]];
+ const es=new THREE.Scene();es.background=new THREE.Color(.045,.05,.06);
+ const card=(w,h,p,c)=>{const q=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:new THREE.Color(c[0],c[1],c[2]),side:THREE.DoubleSide}));q.position.set(p[0],p[1],p[2]);q.lookAt(0,0,0);es.add(q)};
+ for(let i=0;i<4;i++)for(let j=0;j<3;j++)card(1.08,1.2,[-5+(i-1.5)*1.3,4.2+(j-1)*1.47,4.8],[3.8,3.55,3.05]);
+ card(3,5.4,[6,1.6,2],[.52,.68,.9]);card(2,4.6,[2.5,2.2,-5.5],[1.5,1.22,.88]);card(7.5,2.2,[0,6,0],[.52,.55,.6]);card(9,9,[0,-4,0],[.18,.12,.07]);
+ const env=new THREE.PMREMGenerator(R).fromScene(es,.02).texture;R.outputEncoding=THREE.sRGBEncoding;R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.05;
+ const mat=(map,rough)=>{map.encoding=THREE.sRGBEncoding;return new THREE.MeshStandardMaterial({map,metalness:1,roughness:rough,envMap:env,envMapIntensity:1.15})};
  const coins=D.map(([sym,col,fx,fy,size,sp,tilt],i)=>{const c=C[col],fa=face(sym,c,tilt),fb=face(sym,c,tilt);
-  const m=new THREE.Mesh(new THREE.CylinderGeometry(1,1,.2,64),[new THREE.MeshBasicMaterial({map:edge(c)}),new THREE.MeshBasicMaterial({map:fa}),new THREE.MeshBasicMaterial({map:fb})]);
+  const m=new THREE.Mesh(new THREE.CylinderGeometry(1,1,.18,96),[mat(edge(c),.34),mat(fa,.22),mat(fb,.22)]);
   m.rotation.x=Math.PI/2;const g=new THREE.Group();g.add(m);g.userData={fx,fy,size,sp,ph:i*1.3};sc.add(g);return g});
  function fit(){const w=pw.clientWidth,h=pw.clientHeight;W=w+2*M;H=h+2*M;R.setSize(W,H,false);cv.style.width=W+'px';cv.style.height=H+'px';
   cam=new THREE.OrthographicCamera(0,W,H,0,-500,500);const k=Math.min(1,w/420);
