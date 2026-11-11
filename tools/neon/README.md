@@ -23,5 +23,6 @@ wjazd ramki i nagłówków, karty wjeżdżają na zmianę z lewej/prawej, liczby
 - tła z generatora obrazów mogą być bogatsze (miasto, globus, monety) – liczby i napisy zawsze w kodzie na wierzchu
 - render: `python3 dane.py` (dane) → `node render.js still` (klatki) lub `node render.js` (film 9 s)
 
-## GŁĘBIA (zasada od 11.11)
-Każda grafika, Reels i strona ma mieć głębię „jakbyś stał obok”: punkt zbiegu w środku, 3+ warstwy (daleko / środek / blisko), elementy wylatujące do kamery, poświata horyzontu, deszcz/mgła na pierwszym planie, winieta. Bez zdjęć szefa. Wzór: canvas `#deep` w site/index.html (neonowy tunel-miasto + moneta ₿ w punkcie zbiegu, paralaksa za kursorem).
+## GŁĘBIA (zasada od 11.11, szef zatwierdził)
+Głębia = fotorealistyczne tła AI, nie rysunki z kodu. Wzór: site/assets/globus.webp (holograficzny globus nad neonowym miastem, mokra ulica do punktu zbiegu) i sala.webp (neonowa sala giełdowa z monetami). Ten sam styl do każdego Reelsa, miniatury i strony: punkt zbiegu w środku, mokre odbicia, poświata, cyjan/niebieski/fiolet/magenta, mocne cienie. Bez zdjęć szefa.
+Jak zrobić: Canva generate-image (prompt po angielsku: "cinematic deep perspective ... neon ... volumetric light, no text") → wstaw media do projektu 1920×1080 (edit-design insert_fill) → export-design jpg → webp. Miniatura z get-assets ma tylko 200 px, pełny rozmiar tylko przez export.

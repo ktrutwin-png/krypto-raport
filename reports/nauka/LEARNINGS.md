@@ -10,3 +10,4 @@
 - Klucz: elevenlabs-darmowy-limit
 - Powtórzenia: 1
 - Status: nowy
+- L-20261111-02: Pełne obrazy z Canva generate-image pobieramy tylko przez projekt + export-design (link z get-assets to miniatura 200 px z podpisem, zmiana rozmiaru = 403). Vercel buildCommand max 256 znaków → skrypt b.sh w files.
