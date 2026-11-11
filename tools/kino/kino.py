@@ -10,6 +10,9 @@ scenes.json:
                "chip": "▲ +1.6%",                                          # maly znaczek pod naglowkiem
                "say": "lektor...", "move": "in"}, ... ] }
 Na koncu automatycznie plansza "This Is Not Financial Advice! Just data. @handle" (2,2 s).
+Scena 3D zamiast obrazu (od 11.11.2026): "d3": {"typ": "waga", "p": {"przechyl": 0.7}} – kino samo renderuje ruchoma scene 3D
+(tools/3d/scena.js; typy i parametry: tools/3d/README.md) na dlugosc lektora. "img" moze tez byc gotowym filmem (.mp4/.mov).
+Naglowki same dopasowuja wielkosc (jedna linia = jeden wiersz, bez osieroconych slow). U gory zloty pasek postepu.
 style "cinema" = stary wyglad (duza liczba "big" + "sub" na srodku).
 Glos: piper en_US-ryan-high (energiczny meski), obnizony o ~10% (KINO_PITCH, domyslnie 0.9); KINO_VOICE nadpisuje model.
 Wynik: reel.mp4 (1080x1920, 30 fps) + cover.jpg."""
@@ -31,7 +34,7 @@ if STYLE == "news":  # zgodnosc ze starym formatem scen (big/sub) -> naglowek u 
     for s in S:
         if not s.get("head") and s.get("big"):
             s["head"] = [s.pop("big")] + ([f"*{s.pop('sub')}*"] if s.get("sub") else [])
-S.append({"img": S[-1]["img"], "end": True, "say": "", "move": "in"})
+S.append({"img": S[-1].get("img"), "end": True, "say": "", "move": "in", "_of": len(S) - 1})
 def run(c, **k): subprocess.run(c, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, **k)
 os.chdir(D)
 
@@ -52,7 +55,8 @@ CSS = """<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter
 .tag{display:inline-block;background:#0a1a3a;border:2px solid #2ad1ff;color:#fff;font:800 26px Inter;letter-spacing:2px;padding:8px 16px;margin-bottom:18px;box-shadow:0 0 22px rgba(42,209,255,.45)}
 .head{font:400 118px/1.02 Anton;color:#fff;text-transform:uppercase;letter-spacing:1px;
  text-shadow:0 0 2px #000,4px 6px 0 #000,0 0 30px rgba(0,0,0,.8)}
-.sub{margin-top:14px;font:400 62px/1.05 Anton;color:#3dff8f;text-transform:uppercase;text-shadow:3px 4px 0 #000}
+.hl{display:block;white-space:nowrap}
+.sub{margin-top:14px;font:400 62px/1.05 Anton;color:#3dff8f;text-transform:uppercase;white-space:nowrap;text-shadow:3px 4px 0 #000,0 0 16px #000,0 0 34px rgba(0,0,0,.9)}
 .chip{display:inline-block;margin-top:20px;font:800 44px Inter;color:#3dff8f;background:rgba(0,0,0,.45);padding:6px 16px;border-radius:8px}
 .chip.r{color:#ff4d5e}
 .note{position:absolute;left:60px;right:60px;bottom:520px;transform:skewX(-4deg);background:rgba(4,8,22,.86);border-left:8px solid #ffd23f;
@@ -63,6 +67,8 @@ CSS = """<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter
 .end{position:absolute;inset:0;background:rgba(3,5,14,.86);display:flex;flex-direction:column;align-items:center;justify-content:center}
 .end .a{font:400 76px Anton;color:#ffd23f;text-transform:uppercase;text-align:center;line-height:1.1}
 .end .b{font:700 40px Inter;color:#fff;margin-top:26px}
+.end .l{width:120px;height:6px;background:#ffd23f;margin:38px 0 34px;box-shadow:0 0 24px rgba(255,210,63,.7)}
+.end .c{font:800 34px Inter;letter-spacing:3px;color:#2ad1ff;text-transform:uppercase}
 /* cinema */
 .big{position:absolute;bottom:560px;width:100%;text-align:center;font:900 150px Inter;color:#fff;letter-spacing:-2px;text-shadow:0 0 30px rgba(0,240,255,.35),0 6px 30px #000e}
 .csub{position:absolute;bottom:480px;width:100%;text-align:center;font:800 40px Inter;letter-spacing:6px;color:#00f0ff;text-shadow:0 2px 14px #000}
@@ -78,6 +84,10 @@ async def overlays():
         b = await p.chromium.launch(); pg = await b.new_page(viewport={"width": W, "height": H_})
         async def shot(body, path):
             await pg.set_content(CSS + body); await pg.wait_for_timeout(700)
+            await pg.evaluate("""async () => { await document.fonts.ready;      // kazda linia w jednym wierszu: zmniejsz czcionke zamiast lamac
+              document.querySelectorAll('.hl,.sub,.note').forEach(e => { let f = parseFloat(getComputedStyle(e).fontSize); const min = f * 0.6;
+                e.style.whiteSpace = 'nowrap'; while (e.scrollWidth > e.clientWidth && f > min) { f -= 2; e.style.fontSize = f + 'px'; }
+                if (e.scrollWidth > e.clientWidth) { e.style.whiteSpace = 'normal'; e.style.textWrap = 'balance'; } }); }""")
             await pg.screenshot(path=path, omit_background=True)
         await shot(f'<div class="gt"></div><div class="gb"></div><div class="hd">{H.escape(HANDLE)}<b>{H.escape(CFG["date"])}</b></div>'
                    f'<div class="dis">For information only · not investment advice</div>', "_hd.png")
@@ -89,12 +99,12 @@ async def overlays():
             await pg.set_viewport_size({"width": W, "height": H_})
         for i, s in enumerate(S):
             if s.get("end"):
-                await shot(f'<div class="end"><div class="a">This is not<br>financial advice!</div><div class="b">Just data. {H.escape(HANDLE)}</div></div>', f"_t{i}.png")
+                await shot(f'<div class="end"><div class="a">This is not<br>financial advice!</div><div class="b">Just data. {H.escape(HANDLE)}</div><div class="l"></div><div class="c">Follow · new numbers daily</div></div>', f"_t{i}.png")
                 await shot("", f"_n{i}.png"); continue
             if STYLE == "cinema":
                 body = (f'<div class="big">{rich(s["big"])}</div>' if s.get("big") else "") + (f'<div class="csub">{rich(s["sub"])}</div>' if s.get("sub") else "")
                 await shot(body, f"_t{i}.png"); await shot("", f"_n{i}.png"); continue
-            head = "<br>".join(rich(x) for x in s.get("head", []))
+            head = "".join(f'<span class="hl">{rich(x)}</span>' for x in s.get("head", []))
             chip = s.get("chip", ""); cls = "chip r" if chip.startswith(("▼", "-", "−")) else "chip"
             body = (f'<div class="chap">{rich(s["chap"])}</div>' if s.get("chap") else "") + ('<div class="wrap">' + (f'<div class="tag">{rich(s["tag"])}</div><br>' if s.get("tag") else "")
                     + f'<div class="head">{head}</div>' + (f'<div class="sub">{rich(s["sub"])}</div>' if s.get("sub") else "")
@@ -118,6 +128,22 @@ for i, s in enumerate(S):
     run(["ffmpeg", "-y", "-i", f"_a{i}.wav", "-af", f"{pf}adelay=120|120,apad=whole_dur={L - (0 if last else FADE):.2f},aresample=44100", "-ac", "2", f"_p{i}.wav"])
 open("_l.txt", "w").write("".join(f"file '_p{i}.wav'\n" for i in range(len(S))))
 
+# sceny 3D ("d3") renderowane na dlugosc lektora; gotowy film jako "img" tez dziala
+D3 = os.path.join(HERE, "..", "3d")
+for i, (s, L) in enumerate(zip(S, DUR)):
+    d = s.get("d3")
+    if not d or s.get("end"): continue
+    try:
+        if not os.path.exists(os.path.join(D3, "node_modules", "three")): run(["npm", "i", "--no-audit", "--no-fund"], cwd=D3)
+        full = os.environ.get("KINO_3D_FULL"); w3, h3 = ((W, H_) if full else ((1440, 810) if WIDE else (810, 1440)))
+        run(["node", os.path.join(D3, "scena.js"), d.get("typ", "liczba"), json.dumps(d.get("p", {})), os.path.join(D, f"_d3_{i}.mp4"), f"{L:.2f}", str(w3), str(h3), str(FPS)])
+        s["img"] = f"_d3_{i}.mp4"
+    except Exception as e:
+        print("3D nieudane, scena", i + 1, "->", "obraz zapasowy" if s.get("img") else "BRAK obrazu", getattr(e, "stderr", b"")[-300:] if hasattr(e, "stderr") else e)
+        if not s.get("img"): raise
+for s in S:
+    if s.get("end"): s["img"] = S[s["_of"]]["img"]
+ISVID = lambda p: p.lower().endswith((".mp4", ".mov", ".webm"))
 MOVES = {"in": ("1.0+0.09*t/{L}", "(iw-ow)/2", "(ih-oh)/2"), "out": ("1.09-0.09*t/{L}", "(iw-ow)/2", "(ih-oh)/2"),
          "up": ("1.08", "(iw-ow)/2", "(ih-oh)*(1-t/{L})"), "down": ("1.08", "(iw-ow)/2", "(ih-oh)*t/{L}"),
          "left": ("1.08", "(iw-ow)*(1-t/{L})", "(ih-oh)/2"), "right": ("1.08", "(iw-ow)*t/{L}", "(ih-oh)/2")}
@@ -126,13 +152,15 @@ for i, (s, L) in enumerate(zip(S, DUR)):
     z, x, y = [e.format(L=L) for e in MOVES.get(s.get("move", "in" if i % 2 == 0 else "out"), MOVES["in"])]
     nt = max(0.6, L * 0.38)
     end = s.get("end")
-    flt = (f"[0]scale={int(W*SS)}:{int(H_*SS)}:force_original_aspect_ratio=increase,crop={int(W*SS)}:{int(H_*SS)},setsar=1,"
+    vid = ISVID(s["img"]); ss = 1 if vid else SS
+    if vid and not end: z, x, y = "1.0", "(iw-ow)/2", "(ih-oh)/2"   # scena 3D ma wlasny ruch kamery - bez dodatkowego zoomu (nic sie nie ucina)
+    flt = (f"[0]{'tpad=stop_mode=clone:stop_duration=90,fps=%d,' % FPS if vid else ''}scale={int(W*ss)}:{int(H_*ss)}:force_original_aspect_ratio=increase:flags=lanczos,crop={int(W*ss)}:{int(H_*ss)},setsar=1,"
            f"scale=w='{W}*({z})':h='{H_}*({z})':eval=frame:flags=bicubic,crop={W}:{H_}:x='{x}':y='{y}',"
            f"eq=contrast=1.07:saturation=1.12{',boxblur=18:2' if end else ''},format=rgba[bg];"
            + ("[bg]null[a];" if end else "[bg][1]overlay=0:0[a];")
            + (f"[2]format=rgba[t];" if i == 0 else f"[2]format=rgba,fade=t=in:st={FADE}:d=0.25:alpha=1[t];")  # nowy naglowek po przejsciu (bez nakladania tekstow); plan wzrostu: naglowek widoczny od klatki 0
-           + "[a][t]overlay=0:0[b];"
-           f"[3]format=rgba,fade=t=in:st={nt:.2f}:d=0.3:alpha=1[n];[b][n]overlay=0:0,format=yuv420p")
+           + ("[a][t]overlay=0:0[b];" if i == 0 else f"[a][t]overlay=x='if(lt(t,{FADE + 0.3:.2f}),-70*pow(1-(t-{FADE:.2f})/0.3,2),0)':y=0[b];")   # naglowek wjezdza z lewej
+           + f"[3]format=rgba,fade=t=in:st={nt:.2f}:d=0.3:alpha=1[n];[b][n]overlay=0:0,format=yuv420p")
     extra = []; k = 4; flt = flt.replace(",format=yuv420p", "[z0]", 1) if flt.endswith(",format=yuv420p") else flt; cur = "[z0]"
     a = s.get("anim")
     if a and not end:   # ruchome swieczki (anim.py)
@@ -145,7 +173,7 @@ for i, (s, L) in enumerate(zip(S, DUR)):
         extra += ["-loop", "1", "-t", str(L), "-i", "_tk.png"]
         flt += f";{cur}[{k}]overlay=x='-mod((t+{i*3})*150,overlay_w/2)':y={CFG.get("ticker_y", 990 if WIDE else 1470)}[z2]"; cur = "[z2]"; k += 1
     flt += f";{cur}format=yuv420p"
-    run(["ffmpeg", "-y", "-loop", "1", "-framerate", str(FPS), "-t", str(L), "-i", s["img"], "-loop", "1", "-t", str(L), "-i", "_hd.png",
+    run(["ffmpeg", "-y", *(["-i", s["img"]] if vid else ["-loop", "1", "-framerate", str(FPS), "-t", str(L), "-i", s["img"]]), "-loop", "1", "-t", str(L), "-i", "_hd.png",
          "-loop", "1", "-t", str(L), "-i", f"_t{i}.png", "-loop", "1", "-t", str(L), "-i", f"_n{i}.png", *extra,
          "-filter_complex", flt, "-t", str(L), "-r", str(FPS), "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", f"_c{i}.mp4"])
     clips.append(f"_c{i}.mp4")
@@ -155,6 +183,7 @@ for i in range(1, len(clips)):
     tr = "fade" if (i == len(clips) - 1 or i % 2) else "smoothleft"
     chain += f"{last}[{i}]xfade=transition={tr}:duration={FADE}:offset={off:.2f}{out};"; last = out
 T = sum(DUR) - FADE * (len(DUR) - 1)
+chain += f"color=c=0xffd23f:s={W}x8:r={FPS}:d={T + 1:.2f}[pb];{last}[pb]overlay=x='-W+W*t/{T:.2f}':y=0:shortest=1[pv];"; last = "[pv]"   # zloty pasek postepu
 run(["ffmpeg", "-y", *inp, "-filter_complex", chain + f"{last}format=yuv420p[v]", "-map", "[v]", "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "_v.mp4"])
 run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", "_l.txt", "-af", f"atrim=0:{T}", "_vo.wav"])
 run([sys.executable, os.path.join(REEL, "music.py"), str(T + 1), CFG.get("mood", "calm")])
