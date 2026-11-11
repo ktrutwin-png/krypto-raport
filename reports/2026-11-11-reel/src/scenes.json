@@ -1,0 +1,68 @@
+{
+ "date": "11.11.2026",
+ "style": "news",
+ "mood": "gold",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $73,689 ▼1.0% · ETH $2,057 ▼2.6% · XRP $1.06 ▼2.6% · SOL $83.12 ▼2.9% · GOLD $4,060 ▲0.7% · FEAR & GREED 26",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "ONE NUMBER · CHEAT SHEET",
+   "head": [
+    "CPI 0.4%:",
+    "*BTC -1% · GOLD +0.7%*"
+   ],
+   "chip": "▲ CPI +0.4% IN OCTOBER",
+   "say": "One number split Bitcoin and gold. US inflation rose zero point four percent.",
+   "move": "in"
+  },
+  {
+   "img": "s2.jpg",
+   "head": [
+    "0.4% VS 0.3%",
+    "*HOTTER THAN EXPECTED*"
+   ],
+   "sub": "CORE CPI +0.3% · 3RD MONTH IN A ROW",
+   "note": "FOOD +0.5% · ENERGY +0.7%",
+   "say": "Economists expected zero point three. Food and energy pushed prices higher.",
+   "move": "out"
+  },
+  {
+   "img": "s3.jpg",
+   "head": [
+    "~88% ODDS:",
+    "*FED HIKE IN DECEMBER*"
+   ],
+   "sub": "FED'S WALLER: EVEN 0.5% ON THE TABLE",
+   "say": "Markets now see a December rate hike as likely. Higher rates hit risky assets first.",
+   "move": "up"
+  },
+  {
+   "img": "s4.jpg",
+   "tag": "SAVE THIS FOR LATER",
+   "head": [
+    "CHEAT SHEET:",
+    "*TODAY'S NUMBERS*"
+   ],
+   "sub": "BTC $73.7K · GOLD $4,060",
+   "note": "FEAR & GREED 26 · BTC ETFs $99B",
+   "anim": {
+    "dir": "down",
+    "label": "$73,689"
+   },
+   "say": "Save these: Bitcoin seventy three thousand, gold four thousand sixty, fear index twenty six.",
+   "move": "down"
+  },
+  {
+   "img": "s5.jpg",
+   "head": [
+    "HOT CPI:",
+    "*BTC OR GOLD?*"
+   ],
+   "sub": "🐂 BTC / 🥇 GOLD – COMMENT ONE",
+   "note": "SEND THIS TO A FRIEND WHO HOLDS BTC",
+   "say": "One number, two moves. Bitcoin or gold? Not financial advice, just data.",
+   "move": "in"
+  }
+ ]
+}
