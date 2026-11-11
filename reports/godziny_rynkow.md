@@ -104,3 +104,10 @@ Giełdy (z godzin świec w danych 1h): NYSE/Nasdaq kasowa 15:30–22:00, Xetra (
   | 14:00-17:00 (EUR/USD short, dzień 9.11) | 1 | 0 | 0 | 1 | -0.84 |
   | 15:30-17:30 (USTEC short, tydz., stop 9.11 20:30) | 1 | 0 | 1 | 0 | -1.00 |
   Za mało danych (n=2) na wniosek o oknach – obserwacja: obie okazje wbrew krótkoterminowemu odbiciu (EUR/USD i NDX odbiły 9.11 po południu).
+- 2026-11-11: rozliczone kolejne 3 (dane 1h Yahoo Finance): XAU/USD long tydz. – stop 10.11 17:00 (-1.00), GBP/USD long tydz. – stop 10.11 16:00 (-1.00), AUD/USD short dzień 10.11 – brak (strefa 0.6955–0.6975 nietknięta, cena spadła od razu do 0.6847; R 0.00). Razem n=5:
+  | okno_godzin | n | cel | stop | brak | śr. R |
+  |---|---|---|---|---|---|
+  | 14:00-17:00 | 4 | 0 | 2 | 2 | -0.71 |
+  | 15:30-17:30 | 1 | 0 | 1 | 0 | -1.00 |
+  Obserwacja (n=5, za mało na regułę): oba stopy 10.11 padły w oknie 16:00–17:00 w dniu CPI – kupno korekt pod prąd silnego USD (DXY 102.3 nad SMA20/50/200). Od 11.11 Zwiadowca wybiera wejścia zgodne z trendem USD.
+- Makro 11–13.11 (stockhub.kr, tydzień 9–13.11): śr 11.11 Veterans Day – rynek obligacji USA zamknięty, akcje normalnie (mniejsza płynność USD po 14:00); czw 12.11 ok. 08:00 PKB UK Q3, 16:00 sprzedaż domów USA + Barr (Fed), 19:00 aukcja 30-latek; pt 13.11 14:30 PPI USA, 16:50 Bowman (Fed).
