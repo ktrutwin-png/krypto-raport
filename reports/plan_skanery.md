@@ -32,6 +32,12 @@ skaner_dzienny.py (MT5, D1, pętla co 2 min) · IB Skaner (paper) – tylko obse
 - Tydzień 4 (29.11): test nowego rynku dla najlepszej strategii.
 
 ## Postęp
+Zasada (Z005c, 11.11): każdy pisze TYLKO w swojej podsekcji – Zwiadowca w „### Zwiadowca”, Agent Skanery w „### Agent Skanery”. Starsze wpisy poniżej zostają, jak są.
+
+### Agent Skanery
+- (brak wpisów)
+
+### Zwiadowca
 - 2026-11-07: start planu
 - 2026-11-08 (tydz. 1): ZDROWIE ok – skaner działa, stan co 2 min; 137× ERR 'No IPC' przy weekendowych zerwaniach MT5 (sam wraca po 2–4 min) → poprawka: po nieudanym połączeniu pomija rynki; restart 14:17 OK. Dane D1 świeże dla 6 rynków. ZADANIE TYG.: sygnaly_wyniki.py + sygnaly_wyniki.csv uruchomione i uzupełnione wstecz z logu (od 3.11): 1 sygnał – US500 RSI2 long 3.11→cel 5.11 = +0.59R netto, trafność 100% (n=1). Test ulepszenia: brak (wg planu).
 - ROZKAZ Z1: zrobione – od 3.11 skaner nie wysłał ŻADNEGO sygnału na złocie (log: 0 wejść XAUUSD), więc 0 sygnałów do porównania z regułą „3 świece M15 + dolar”, wynik 0 R; skaner jest D1 (DON/SMA/USD), reguła szefa M15 – sprawdzać, gdy pojawi się pierwszy sygnał.
