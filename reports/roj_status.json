@@ -24,7 +24,7 @@
   {
    "n": "Skanery",
    "s": "praca",
-   "ostatnio": "skaner dzienny chodzi na serwerze, sygnały na Telegram"
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
   },
   {
    "n": "Inspektor",
@@ -49,22 +49,40 @@
   {
    "n": "Hexa 💧",
    "s": "praca",
-   "ostatnio": "bot złoto spokojny – demo MT5"
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
   },
   {
    "n": "Turbo 🔥",
    "s": "praca",
-   "ostatnio": "bot złoto agresywny – demo MT5"
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
   },
   {
    "n": "Indeksy",
    "s": "praca",
-   "ostatnio": "11.11 – start, DAX DCH + SPY D15 (demo)"
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
   },
   {
    "n": "Panel",
    "s": "czeka",
-   "ostatnio": "czeka na Twoje zlecenia"
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+  },
+  {
+   "n": "Kraken Donchian",
+   "s": "praca",
+   "opis": "bot krypto Freqtrade, strategia Donchian 4h na BTC (na sucho).",
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+  },
+  {
+   "n": "Kraken Momentum",
+   "s": "praca",
+   "opis": "bot krypto Freqtrade, strategia Momentum 1d na BTC (na sucho).",
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+  },
+  {
+   "n": "IB Skaner",
+   "s": "praca",
+   "opis": "obserwuje rynek przez Interactive Brokers i szuka sygnałów.",
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
   }
  ]
 }
