@@ -1,3 +1,5 @@
+> **OBOWIĄZKOWE od 11.11.2026 (szef: „tak, robić”): w KAŻDYM filmie (Reel, Raport 18:00, Weekly) 1–2 sceny 3D** – pole `"d3"` w scenie, opis niżej i w `tools/3d/README.md` (przeczytaj przed budową filmu). Typ dobrany do tematu, inny niż w poprzednim filmie, parametry zgodne z faktami. Przed publikacją obejrzyj 3 klatki z gotowego filmu i sprawdź teksty skillem `no-ai-slop` (szczegóły: `tools/okladki/STYL.md`, sekcja „SCENY 3D W KAŻDYM FILMIE + KONTROLA JAKOŚCI”). Weekly: 2 sceny 3D na cały film (w poziomie obiekt sam staje po prawej).
+
 # KINO – Reel z lektorem
 ## Styl "news" (DOMYŚLNY od 6.11.2026 – wzór szefa: „taka forma jest najlepsza dla YT i Insta”)
 Gruby naglowek u góry (Anton, biały + *żółty* + ~zielony~, lekko pochylony), opcjonalnie tag (np. LIVE MARKET UPDATE), sub, chip (▲/▼ liczba), note (ciemna ramka wchodząca w połowie sceny). Obrazy = holograficzne sceny z wykresami/panelami danych (bank: *_holo_*). Szybki energiczny lektor: piper **en_US-ryan-high** (obniżony o 10%), ~2,5 słowa/s. Na końcu automatyczna plansza „This Is Not Financial Advice! Just data. @erl.grey83”. 4–6 scen, 25–40 s.
