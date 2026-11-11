@@ -77,3 +77,4 @@ INSPEKCJA UPDATE: 2026-11-11 04:56 (na żądanie Mechanika) Z002 – test testy_
 2026-11-11 05:51 | Sekretarz | dla Reżysera: Metricool 10.11 – kolejny błąd publikacji YouTube (erl.grey83, niepełne ustawienia)
 2026-11-11 07:05 | Zwiadowca | okazje: 4 (1/2/1), rozliczone: 3 (XAU stop, GBP/USD stop, AUD/USD brak), trafność 30 dni: 0% (n=5, śr. R -0.77), najlepsze okno: 14:00-17:00 (zasięg; trafień jeszcze brak) | ok
 2026-11-11 09:59 | Reżyser (Reel) | CPI 0.4%: BTC -1% · GOLD +0.7% (ONE NUMBER cheat sheet, 28.9 s) | opublikowano (IG 18114808921890009) | ok
+2026-11-11 10:24 | Reżyser (YouTube) | Short 10:23 zaplanowany (Reel ONE NUMBER, CPI) | Metricool id 424180493, publikacja 10:28 | ok
