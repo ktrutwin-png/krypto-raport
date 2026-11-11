@@ -1,3 +1,5 @@
+> **OBOWIĄZKOWE od 11.11.2026: skille graficzne** – przed każdą grafiką przeczytaj `tools/skille/README.md` (ui-ux-pro-max, banner-design, bang-motion, hyperframes) i stosuj; miniatury YT wg banner-design + wzór `tools/skille/wzory/miniatura.html`.
+>
 > **OBOWIĄZKOWE od 11.11.2026 (szef: „tak, robić”): w KAŻDYM filmie (Reel, Raport 18:00, Weekly) 1–2 sceny 3D** – pole `"d3"` w scenie, opis niżej i w `tools/3d/README.md` (przeczytaj przed budową filmu). Typ dobrany do tematu, inny niż w poprzednim filmie, parametry zgodne z faktami. Przed publikacją obejrzyj 3 klatki z gotowego filmu i sprawdź teksty skillem `no-ai-slop` (szczegóły: `tools/okladki/STYL.md`, sekcja „SCENY 3D W KAŻDYM FILMIE + KONTROLA JAKOŚCI”). Weekly: 2 sceny 3D na cały film (w poziomie obiekt sam staje po prawej).
 
 # KINO – Reel z lektorem

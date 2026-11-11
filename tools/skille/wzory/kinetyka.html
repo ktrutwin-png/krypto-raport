@@ -1,0 +1,33 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#03050b;font-family:Inter}
+.bg{position:absolute;inset:0;background:radial-gradient(60% 40% at 50% 38%,#0c2254,#03050b 70%)}
+.grid{position:absolute;inset:-200px;background-image:linear-gradient(rgba(42,209,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(42,209,255,.12) 1px,transparent 1px);background-size:90px 90px}
+.w{position:absolute;left:0;right:0;text-align:center;font:400 220px/0.9 Anton;color:#fff;text-transform:uppercase;letter-spacing:2px}
+.w span{display:inline-block}
+.y{color:#ffd23f}.g{color:#3dff8f}.r{color:#ff4d5e}
+#l1{top:520px}#l2{top:740px}#n{top:1060px;font-size:300px}
+.bar{position:absolute;left:140px;right:140px;top:1400px;height:14px;background:#ffd23f;transform-origin:left;box-shadow:0 0 40px rgba(255,210,63,.7)}
+.sub{position:absolute;left:0;right:0;top:1460px;text-align:center;font:900 46px Inter;letter-spacing:6px;color:#2ad1ff}
+.h{position:absolute;top:90px;left:60px;font:800 32px Inter;color:#fff;opacity:.85}
+</style></head><body>
+<div class="bg"></div><div class="grid" id="grid"></div><div class="h">@erl.grey83</div>
+<div class="w" id="l1">INFLATION</div><div class="w y" id="l2">JUST HIT</div>
+<div class="w g" id="n">0.4%</div><div class="bar" id="bar"></div><div class="sub" id="sub">HOTTER THAN EXPECTED</div>
+<script>
+// literki osobno (jak SplitText) – kazda wpada z innym opoznieniem
+for (const id of ['l1','l2','n']) { const e = document.getElementById(id); e.innerHTML = [...e.textContent].map(c => `<span>${c === ' ' ? '&nbsp;' : c}</span>`).join(''); }
+const tl = gsap.timeline({ paused: true });
+tl.from('#grid', { scale: 1.25, rotation: 4, duration: 5, ease: 'none' }, 0)
+  .from('#l1 span', { yPercent: 120, rotateX: -90, opacity: 0, duration: .55, stagger: .035, ease: 'back.out(2)' }, .1)
+  .from('#l2 span', { yPercent: -120, opacity: 0, duration: .5, stagger: .04, ease: 'power3.out' }, .6)
+  .from('#n span', { scale: 3, opacity: 0, filter: 'blur(20px)', duration: .6, stagger: .06, ease: 'expo.out' }, 1.25)
+  .to('#n', { scale: 1.06, duration: .12, yoyo: true, repeat: 1, ease: 'power1.inOut' }, 1.95)
+  .from('#bar', { scaleX: 0, duration: .7, ease: 'expo.out' }, 2.1)
+  .from('#sub', { y: 40, opacity: 0, letterSpacing: '30px', duration: .7, ease: 'power3.out' }, 2.3)
+  .to(['#l1','#l2'], { y: -30, duration: 2.5, ease: 'none' }, 2.4)
+  .to('#n', { y: -12, duration: 2.5, ease: 'none' }, 2.4);
+window.seek = t => { tl.seek(t, false); };
+</script></body></html>
