@@ -1,0 +1,143 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:transparent;overflow:hidden}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+import * as THREE from 'three';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+
+const W = +new URLSearchParams(location.search).get('w') || 1080;
+const H = +new URLSearchParams(location.search).get('h') || 1350;
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true, alpha: true });
+renderer.setPixelRatio(1); renderer.setSize(W, H);
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.0;
+document.body.appendChild(renderer.domElement);
+
+/* --- skill 3d-metal-material: ciemne studio z jasnymi "kartami" + PMREM --- */
+function buildEnv() {
+  const s = new THREE.Scene(); s.background = new THREE.Color().setRGB(0.045, 0.05, 0.06);
+  const card = (w, h, pos, rgb) => {
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h),
+      new THREE.MeshBasicMaterial({ color: new THREE.Color().setRGB(...rgb), side: THREE.DoubleSide, toneMapped: false }));
+    m.position.set(...pos); m.lookAt(0, 0, 0); s.add(m);
+  };
+  // okno 4x3 szyby z szerokimi szprosami (0.22) zeby PMREM nie rozmyl krat
+  for (let i = 0; i < 4; i++) for (let j = 0; j < 3; j++)
+    card(1.08, 1.2, [-5 + (i - 1.5) * 1.30, 4.2 + (j - 1) * 1.47, 4.8], [3.8, 3.55, 3.05]);
+  card(3.0, 5.4, [6, 1.6, 2], [0.52, 0.68, 0.90]);      // chlodna boczna
+  card(2.0, 4.6, [2.5, 2.2, -5.5], [1.5, 1.22, 0.88]);   // ciepla tylna
+  card(7.5, 2.2, [0, 6, 0], [0.52, 0.55, 0.60]);         // gorna
+  card(9, 9, [0, -4, 0], [0.18, 0.12, 0.07]);            // odbicie podlogi
+  const pm = new THREE.PMREMGenerator(renderer);
+  return pm.fromScene(s, 0.006).texture;
+}
+const env = buildEnv();
+
+/* --- roughness: smugi + rysy w dwoch kierunkach + ziarno (krok 4 skilla) --- */
+function roughMap(seed) {
+  const c = document.createElement('canvas'); c.width = c.height = 1024; const g = c.getContext('2d');
+  let r = Math.abs(seed) * 7919 + 13; const rnd = () => (r = (r * 16807) % 2147483647) / 2147483647;
+  g.fillStyle = 'rgb(0,40,0)'; g.fillRect(0, 0, 1024, 1024);              // baza ~0.16
+  for (let i = 0; i < 26; i++) {                                           // odciski / smugi
+    const x = rnd() * 1024, y = rnd() * 1024, rr = 40 + rnd() * 130;
+    const gr = g.createRadialGradient(x, y, 0, x, y, rr);
+    gr.addColorStop(0, 'rgba(0,95,0,0.55)'); gr.addColorStop(1, 'rgba(0,95,0,0)');
+    g.fillStyle = gr; g.fillRect(x - rr, y - rr, rr * 2, rr * 2);
+  }
+  for (const ang of [0.35, -0.9]) for (let i = 0; i < 140; i++) {        // mikro-rysy
+    const x = rnd() * 1024, y = rnd() * 1024, l = 30 + rnd() * 180;
+    g.strokeStyle = `rgba(0,${110 + rnd() * 60 | 0},0,${0.05 + rnd() * 0.12})`; g.lineWidth = 0.6 + rnd();
+    g.beginPath(); g.moveTo(x, y); g.lineTo(x + Math.cos(ang) * l, y + Math.sin(ang) * l); g.stroke();
+  }
+  const id = g.getImageData(0, 0, 1024, 1024);                            // ziarno
+  for (let i = 0; i < id.data.length; i += 4) id.data[i + 1] = Math.max(0, Math.min(255, id.data[i + 1] + (rnd() - 0.5) * 14));
+  g.putImageData(id, 0, 0);
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.NoColorSpace; t.anisotropy = 8; return t;
+}
+
+/* --- relief awersu: wypukly znak + napis w otoku (bump) --- */
+function faceBump(symbol, ring) {
+  const c = document.createElement('canvas'); c.width = c.height = 1024; const g = c.getContext('2d');
+  g.fillStyle = '#000'; g.fillRect(0, 0, 1024, 1024);
+  g.translate(512, 512);
+  g.strokeStyle = '#fff'; g.lineWidth = 14; g.beginPath(); g.arc(0, 0, 430, 0, Math.PI * 2); g.stroke();
+  g.lineWidth = 5; g.beginPath(); g.arc(0, 0, 340, 0, Math.PI * 2); g.stroke();
+  g.filter = 'blur(2px)';
+  g.fillStyle = '#fff'; g.font = 'bold 470px DejaVu Sans'; g.textAlign = 'center'; g.textBaseline = 'middle';
+  g.fillText(symbol, 0, 24);
+  g.font = 'bold 54px DejaVu Sans';
+  const chars = ring.split(''); const step = (Math.PI * 2) / chars.length;
+  chars.forEach((ch, i) => { g.save(); g.rotate(i * step); g.fillText(ch, 0, -386); g.restore(); });
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.NoColorSpace; return t;
+}
+
+const GOLD = new THREE.Color().setRGB(1.0, 0.71, 0.29, THREE.LinearSRGBColorSpace);
+const SILVER = new THREE.Color().setRGB(0.56, 0.57, 0.58, THREE.LinearSRGBColorSpace);
+function metal(color, seed, extra = {}) {
+  return new THREE.MeshStandardMaterial({ color, metalness: 1, roughness: 1, roughnessMap: roughMap(seed),
+    envMap: env, envMapIntensity: 1.0, ...extra });
+}
+
+/* moneta: profil tokarski z fazowanym rantem (krok 5: bevel lapie swiatlo) */
+function coin(color, symbol, ring, seed) {
+  const R = 1, T = 0.16, b = 0.025, rim = 0.07;
+  const p = [];
+  p.push(new THREE.Vector2(0, -T / 2 + 0.012));
+  p.push(new THREE.Vector2(R - rim, -T / 2 + 0.012));
+  p.push(new THREE.Vector2(R - rim + 0.01, -T / 2));
+  p.push(new THREE.Vector2(R - b, -T / 2));
+  for (let k = 1; k <= 4; k++) { const a = -Math.PI / 2 + (k / 4) * (Math.PI / 2); p.push(new THREE.Vector2(R - b + Math.cos(a) * b, -T / 2 + b + Math.sin(a) * b)); }
+  for (let k = 0; k <= 4; k++) { const a = (k / 4) * (Math.PI / 2); p.push(new THREE.Vector2(R - b + Math.cos(a) * b, T / 2 - b + Math.sin(a) * b)); }
+  p.push(new THREE.Vector2(R - rim + 0.01, T / 2));
+  p.push(new THREE.Vector2(R - rim, T / 2 - 0.012));
+  p.push(new THREE.Vector2(0, T / 2 - 0.012));
+  const body = new THREE.Mesh(new THREE.LatheGeometry(p, 160), metal(color, seed));
+  const grp = new THREE.Group(); grp.add(body);
+  const bump = faceBump(symbol, ring);
+  for (const side of [1, -1]) {
+    const f = new THREE.Mesh(new THREE.CircleGeometry(R - rim, 128),
+      metal(color, seed + side * 7, { bumpMap: bump, bumpScale: 3.2 }));
+    f.rotation.x = -side * Math.PI / 2; f.position.y = side * (T / 2 - 0.011);
+    if (side < 0) f.rotation.z = Math.PI;
+    grp.add(f);
+  }
+  grp.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
+  return grp;
+}
+
+/* sztabka: fazowany prostopadloscian */
+function ingot() {
+  const s = new THREE.Shape(); const w = 1.25, d = 0.62, r = 0.07;
+  s.moveTo(-w + r, -d); s.lineTo(w - r, -d); s.quadraticCurveTo(w, -d, w, -d + r); s.lineTo(w, d - r);
+  s.quadraticCurveTo(w, d, w - r, d); s.lineTo(-w + r, d); s.quadraticCurveTo(-w, d, -w, d - r); s.lineTo(-w, -d + r); s.quadraticCurveTo(-w, -d, -w + r, -d);
+  const geo = new THREE.ExtrudeGeometry(s, { depth: 0.42, bevelEnabled: true, bevelThickness: 0.06, bevelSize: 0.06, bevelSegments: 4 });
+  geo.rotateX(-Math.PI / 2); geo.center();
+  const m = new THREE.Mesh(geo, metal(GOLD, 99)); m.castShadow = m.receiveShadow = true; return m;
+}
+
+
+const COINS = { btc:[GOLD,'₿',' BITCOIN • 21 000 000 • ERL.GREY83 •',3], eth:[SILVER,'Ξ',' ETHEREUM • ERL.GREY83 • ',11], au:[GOLD,'Au',' GOLD • 999.9 • ERL.GREY83 • ',21] };
+const scene = new THREE.Scene(); scene.background = null;
+renderer.setClearColor(0x000000, 0);
+const key = new THREE.DirectionalLight(0xfff1dc, 2.0); key.position.set(-4, 7, 5); scene.add(key);
+const rimL = new THREE.PointLight(0x7fb0ff, 20, 12); rimL.position.set(3.5, 1.6, -2.5); scene.add(rimL);
+const camera = new THREE.PerspectiveCamera(22, 1, 0.1, 100); camera.position.set(0, 0.9, 6.4); camera.lookAt(0, 0, 0);
+const composer = new EffectComposer(renderer, new THREE.WebGLRenderTarget(W, H, { type: THREE.HalfFloatType, samples: 4 }));
+composer.addPass(new RenderPass(scene, camera)); composer.addPass(new OutputPass());
+let cur = null;
+window.setCoin = (k) => { if (cur) scene.remove(cur); const c = COINS[k]; cur = coin(c[0], c[1], c[2], c[3]); scene.add(cur); };
+window.renderAt = (t) => { // t in [0,1): one full swing period, seamless loop
+  const a = Math.sin(t * Math.PI * 2);
+  cur.rotation.set(Math.PI / 2 - 0.22, 0, 0);       // face to camera, slight tilt back
+  cur.rotateOnWorldAxis(new THREE.Vector3(0, 1, 0), a * 0.95);
+  cur.rotateOnWorldAxis(new THREE.Vector3(0, 0, 1), -0.12 + 0.05 * Math.cos(t * Math.PI * 2));
+  renderer.setClearColor(0x000000, 0); composer.render(); return true;
+};
+window.ready = true;
+</script>
+</body></html>

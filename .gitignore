@@ -1,3 +1,4 @@
 __pycache__/
 *.pyc
 tools/reel/voice/
+tools/3d/sprite_frames/
