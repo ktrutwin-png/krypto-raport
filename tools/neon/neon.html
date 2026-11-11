@@ -55,7 +55,7 @@ function city(t,mirror){for(const l of L){for(const b of l.row){const x=b.x-(t*6
  for(const n of NE){const a=.55+.45*Math.sin(t*3+n.ph);bg.shadowBlur=24;bg.shadowColor=n.c;bg.strokeStyle=n.c;bg.globalAlpha=a;bg.lineWidth=4;bg.strokeRect(n.x,n.y,n.w,22);bg.globalAlpha=1;bg.shadowBlur=0}}
 function draw(t){sky(t);city(t);
  // wet floor reflection
- bg.save();bg.translate(0,2*830);bg.scale(1,-1);bg.globalAlpha=.32;bg.filter='blur(6px)';city(t);bg.restore();bg.filter='none';bg.globalAlpha=1;
+ bg.save();bg.translate(0,2*830);bg.scale(1,-1);bg.globalAlpha=.22;city(t);bg.restore();bg.globalAlpha=1;
  const fl=bg.createLinearGradient(0,830,0,H);fl.addColorStop(0,'#06071ab0');fl.addColorStop(1,'#020310f0');bg.fillStyle=fl;bg.fillRect(0,830,W,H-830);
  // perspective grid
  bg.strokeStyle='#22d3ee30';bg.lineWidth=1.5;for(let i=-10;i<=10;i++){bg.beginPath();bg.moveTo(W/2+i*30,840);bg.lineTo(W/2+i*260,H);bg.stroke()}
