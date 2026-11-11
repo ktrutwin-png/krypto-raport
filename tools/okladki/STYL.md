@@ -30,3 +30,9 @@ Szablon: wzor_okladki.html (podmień bg, teksty), render Playwright 1080x1080 (f
 - Te zasady (świeże grafiki, ruch, lektor) obowiązują tak samo na YouTube: Shorts, Weekly Market Brief i miniatury (szef 10.11).
 - Monety 3D (szef 10.11): na stronie są prawdziwe monety WebGL (site/index.html, three.js). Reżyser może używać tych samych monet 3D jako ruchomych elementów w Reels/Shorts (render przez Playwright z przezroczystym tłem) – BTC w oryginalnych kolorach, pozostałe jako symbole w metalu.
 - Wdrożenie strony: edytuj site/index.html, commit+push, potem redeploy na Vercel (build pobiera plik z repo po SHA).
+
+## SKILLE 3D (szef 11.11.2026) – obowiązkowe przy każdej grafice/animacji 3D
+- Na serwerze (główna siedziba) w `C:\Users\Administrator\.claude\skills\` leżą skille: threejs-* (13: animation, fundamentals, geometry, interaction, lighting, loaders, materials, performance, postprocessing, react-three-fiber, shaders, textures, asset-pipeline) oraz 3d-metal-material, 3d-sky-rays, 3d-high-resolution-textures, 3d-retina-resolution.
+- Agent w chmurze: PRZED pracą 3D przeczytaj odpowiedni `SKILL.md` z serwera (Remote_Desktop_Commander → read_file, deviceId 0b708a8f-66a5-4eeb-8a28-ac5878aae932) i stosuj go. Złoto/srebro/monety = zawsze 3d-metal-material (metalness 1, kolor F0, ciemne studio z jasnymi kartami przez PMREM, zmienna chropowatość, fazowane krawędzie, bloom z wysokim progiem).
+- Gotowy szablon: `tools/3d/scena_zloto.html` (złota moneta ₿ + sztabka + monety Au/Ag, iskry, bloom) i `tools/3d/render.js` (`node render.js still 1080 1350` → still.png, `node render.js video 1080 1920 150` → klatki do ffmpeg). Wzór efektu: `tools/3d/wzor_zloto_3d.png`. Wymaga `npm i three@0.169.0` w tym folderze.
+- Zasada świeżych grafik dalej obowiązuje: zmieniaj ujęcie kamery, układ obiektów, symbole i kolory w każdym filmie – szablon to punkt startu, nie gotowa klatka do powtarzania.
