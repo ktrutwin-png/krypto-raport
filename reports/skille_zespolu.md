@@ -22,6 +22,13 @@ Agent w chmurze: zanim zacznie zadanie z listy niżej, czyta odpowiedni `SKILL.m
 - `hyperframes` + `hyperframes-cli` (11.11, HeyGen, Apache-2.0) – HTML → MP4 klatka po klatce: animowane wykresy, mapy, napisy, plansze tytułowe. Użyj, gdy potrzebny element, którego kino nie ma (np. animowany wykres słupkowy, mapa z liczbami, napisy słowo po słowie). Telemetria wyłączona (`npx hyperframes telemetry disable`); NIE uruchamiaj `npx hyperframes events` (to beacon telemetrii ze skilla – pomijamy). Tylko darmowe funkcje, bez planu Pro.
 - `lemo-opuscar` (11.11) – biblioteka 66 stylów filmowych robionych w kodzie (np. caption-news, briefing-board, countdown, blueprint, „Evidence Films” z liczbami ze źródłami). Inspiracja, gdy Weekly albo specjalny film ma mieć inny charakter; zasada świeżych grafik dalej obowiązuje.
 
+## Grafika – narzędzia open source (11.11, wybrane z najlepszych repo GitHub)
+- `bang-motion` (skill, MIT) – motion design: openery, kinetic typography, explainery jako jeden index.html; render przez hyperframes/Playwright.
+- `rembg` (MIT, CPU) – wycinanie tła z obrazów do okładek i miniatur: `C:\Hexa\grafika\.venv\Scripts\rembg.exe i wejscie.jpg wyjscie.png`.
+- TradingView **Lightweight Charts** (Apache-2.0) – na stronie duży wykres 30 dni (BTC/złoto/ETH); zostaw logo TradingView (wymóg licencji).
+- Sceny 3D: filmowe wykończenie (winieta, ziarno, lekka aberracja) – domyślnie włączone, `"czysto": 1` wyłącza.
+- Odrzucone: ComfyUI/Stable Diffusion (potrzebują karty graficznej, serwer jej nie ma), Remotion (licencja firmowa), Upscayl (AGPL), Vanta/Theatre (porzucone).
+
 ## Strona i design (agent strony, Reżyser – okładki/miniatury)
 - `design-taste-frontend` (taste-skill) – kierunek artystyczny zamiast „generycznej strony AI”, referencje, sprawdzenie w przeglądarce.
 - `impeccable` – słownik designu: polish/bolder, krytyka i audyt, wyłapuje AI-slop przed publikacją. Każda zmiana strony przechodzi audyt impeccable.
