@@ -22,3 +22,6 @@ wjazd ramki i nagłówków, karty wjeżdżają na zmianę z lewej/prawej, liczby
 - bez zdjęć szefa
 - tła z generatora obrazów mogą być bogatsze (miasto, globus, monety) – liczby i napisy zawsze w kodzie na wierzchu
 - render: `python3 dane.py` (dane) → `node render.js still` (klatki) lub `node render.js` (film 9 s)
+
+## GŁĘBIA (zasada od 11.11)
+Każda grafika, Reels i strona ma mieć głębię „jakbyś stał obok”: punkt zbiegu w środku, 3+ warstwy (daleko / środek / blisko), elementy wylatujące do kamery, poświata horyzontu, deszcz/mgła na pierwszym planie, winieta. Bez zdjęć szefa. Wzór: canvas `#deep` w site/index.html (neonowy tunel-miasto + moneta ₿ w punkcie zbiegu, paralaksa za kursorem).
