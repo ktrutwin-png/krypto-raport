@@ -1,3 +1,5 @@
+> **STYL DOMOWY OD 11.11.2026: STYL NEON** – patrz `tools/neon/README.md` i `tools/neon/wzor_neon.jpg` (szef: „mój ulubiony styl, jaskrawy, pełen energii”). Wszystkie nowe grafiki i filmy w tej palecie i z tymi elementami.
+
 # Styl okładek i Reels (od szefa, 10.11) — wzór: okladka_wzor.jpg
 
 > ⛔ ZAKAZ (szef 10.11, 22:34): ŻADNYCH zdjęć szefa (prawdziwych ani wygenerowanych) w Reels, Shorts, YouTube, okładkach i miniaturach. Sekcje „Z SZEFEM” i „SZEF RZADKO” poniżej są NIEAKTUALNE. Tylko grafika bez jego twarzy.
