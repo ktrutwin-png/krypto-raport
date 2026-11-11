@@ -162,6 +162,13 @@ for i, (s, L) in enumerate(zip(S, DUR)):
            + ("[a][t]overlay=0:0[b];" if i == 0 else f"[a][t]overlay=x='if(lt(t,{FADE + 0.3:.2f}),-70*pow(1-(t-{FADE:.2f})/0.3,2),0)':y=0[b];")   # naglowek wjezdza z lewej
            + f"[3]format=rgba,fade=t=in:st={nt:.2f}:d=0.3:alpha=1[n];[b][n]overlay=0:0,format=yuv420p")
     extra = []; k = 4; flt = flt.replace(",format=yuv420p", "[z0]", 1) if flt.endswith(",format=yuv420p") else flt; cur = "[z0]"
+    if not vid and not end and not os.environ.get("KINO_BEZ_ZYWEGO"):   # R17: tło ma żyć (poświata, błysk, deszcz, iskry, odbicia)
+        try:
+            import zywe_tlo
+            vp = s.get("vp", [0.5, 0.36]); fx = zywe_tlo.make(W, H_, FPS, (float(vp[0]), float(vp[1])))
+            extra += ["-stream_loop", "-1", "-i", fx]
+            flt = flt.replace("[bg][1]overlay=0:0[a];", f"[{k}]format=rgba[fx];[bg][fx]overlay=0:0:shortest=0[bgx];[bgx][1]overlay=0:0[a];", 1); k += 1
+        except Exception as e: print("zywe tlo pominiete:", e)
     a = s.get("anim")
     if a and not end:   # ruchome swieczki (anim.py)
         import anim
