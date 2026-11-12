@@ -15,3 +15,4 @@ Pełny system (wersje, ikony, favicon): artefakt „Logo szefa – Erl.grey83”
 - `Enso_ikona.png`: ikona aplikacji 2048 (ORB, Hexa)
 - `Enso_awatar.png`: awatar Instagram/YouTube (jasne koło)
 - `Enso_favicon.png`: favicon, przezroczyste tło
+- `Profil_Erl.grey83_1080.png`: OFICJALNE zdjęcie profilowe Insta + YouTube (wybór szefa 12.11: tłoczona czerń + złota linia, bez napisu)
