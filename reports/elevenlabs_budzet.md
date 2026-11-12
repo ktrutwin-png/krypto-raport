@@ -26,3 +26,4 @@ Konektor: ElevenLabs-619b9b4c (mcp__ElevenLabs-619b9b4c__*). Konto wspólne z g�
 | Data | Agent | Pula | Co | Model | ~Kredyty |
 |---|---|---|---|---|---|
 | 2026-11-12 | Mózg | Hexa | twarz Hexy (wideo seedance ×4) + test głosów | seedance-v2.5 / eleven_v4 | ~60 000 |
+| 2026-11-12 | Mózg | Rezerwa | tła wzoru raportów 22:00 i briefingu 8:00 (4 obrazy) | seedream-5-pro | ~3 300 |
