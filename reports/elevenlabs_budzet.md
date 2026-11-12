@@ -28,3 +28,4 @@ Konektor: ElevenLabs-619b9b4c (mcp__ElevenLabs-619b9b4c__*). Konto wspólne z g�
 | 2026-11-12 | Mózg | Hexa | twarz Hexy (wideo seedance ×4) + test głosów | seedance-v2.5 / eleven_v4 | ~60 000 |
 | 2026-11-12 | Mózg | Rezerwa | tła wzoru raportów 22:00 i briefingu 8:00 (4 obrazy) | seedream-5-pro | ~3 300 |
 | 2026-11-13 | Mózg | Obrazy | próbka slajdu karuzeli z Hexą (referencja) | gemini-3-pro-image | ~1 830 |
+| 2026-11-13 | Mózg | Lektor | próbka głosu Hexy (Pola, EN, 10 s) do filmu /brain | eleven_v4 | ~150 |
