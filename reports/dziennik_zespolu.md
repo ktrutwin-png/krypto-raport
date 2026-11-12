@@ -122,3 +122,4 @@ INSPEKCJA UPDATE: 2026-11-13 00:00 (na żądanie, UPDATE 12.11 23:40 – kino "g
 UPDATE: 2026-11-12 23:55 (Mózg) nowy wzór raportu 22:00 i briefingu 8:00 – tła GŁĘBIA z ElevenLabs (C:\Hexa\narzedzia\raport22\tlo\), szklane panele, znak Ensō; kopie .bak_20261112; zadania bez zmian (te same skrypty)
 2026-11-13 00:10 | Mózg | ROZKAZ R24 dla Reżysera: karuzela IG „ONE AI BRAIN · 8 AGENTS” na sobotę 14.11 ~19:00 | ok
 2026-11-13 00:20 | Mózg | ROZKAZY R25 (Hexa jako postać marki) i R26 (słowo w komentarzu + strona /<słowo>/); odpowiedzi na słowa robi Reżyser przy każdym przebiegu | ok
+UPDATE: 2026-11-13 00:35 (Mózg) strona /brain/ na żywo (mapa systemu + 17 linków do repo open source), wdrożenie dpl_4HNetuqY6aXZ1CV2xMJUi9YMFQdc; R27: Hexa prowadzi /brain/ filmem
