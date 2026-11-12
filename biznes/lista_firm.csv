@@ -1,31 +1,41 @@
-nr,nazwa,branza,miasto,adres,strona,kontakt_publiczny,co_by_pomoglo,zrodlo,priorytet,status
-1,Restaurant & Grand Café Applaus,restauracja (teatr Agora),Lelystad,"Agorabaan 14, 8224 JS",instagram.com/restaurant_applaus_,"eet@restaurantapplaus.nl; 0320 239 248",Reels z menu/lunchu + bot rezerwacji przed spektaklem,visitflevoland.nl,A,szkic gotowy
-2,Restaurant Bakboord,restauracja,Almere Haven,"Veerkade 10, 1357 PK",restaurantbakboord.nl,"info@restaurantbakboord.nl; 036 540 4040",Reels taras/marina + bot FAQ (rezerwacje grup; NL/EN/DE dla żeglarzy),visitalmere.com,A,szkic gotowy
-3,De Taveerne (Batavialand),restauracja muzealna,Lelystad,"Oostvaardersdijk 1, 8242 PA",batavialand.nl/plan-je-bezoek/restaurant/,formularz na batavialand.nl,bot FAQ grup/przyjęć + asystent maili (zapytania grupowe),visitflevoland.nl,A,szkic gotowy
-4,LelyStyle,fryzjer,Lelystad,Weversstraat 34,profil Fresha,rezerwacja/wiadomość przez Fresha,Reels przed/po + bot WhatsApp z linkiem do Fresha,fresha.com,A,szkic gotowy
-5,Gastrobar Q,restauracja (sharing),Almere Haven,Havenkom,do sprawdzenia (Google Maps),do sprawdzenia,Reels „All you can share” + bot godzin/rezerwacji (zamknięte wt–śr),visitalmere.com,A,szkic gotowy
-6,KrullenTemmer,fryzjer (loki),Lelystad,"Punter 10, 8242 DC",profil Fresha,przez Fresha,Reels przed/po (krullen = świetny materiał wideo),fresha.com,B,
-7,Charmed Hair,fryzjer,Lelystad,Platinastraat 70,profil Fresha,przez Fresha,bot FAQ + Reels,fresha.com,B,
-8,Wahid The Barber,barber,Lelystad,"Kamp 4215, 8225 HN",profil Fresha,przez Fresha,Reels fade/przed-po + bot terminów,fresha.com,B,
-9,Coupe De borah,fryzjer,Lelystad,"Koriander 73, 8245 HA",profil Fresha,przez Fresha,bot FAQ + przypomnienia,fresha.com,C,
-10,Noux hair,fryzjer,Lelystad,"Vijfherenlanden 104, 8245 BC",profil Fresha,przez Fresha,Reels,fresha.com,C,
-11,GLOSS haar studio,fryzjer,Lelystad,"Waterland 11, 8245 GG",profil Fresha,przez Fresha,Reels + bot,fresha.com,B,
-12,Devi HairFashion,fryzjer,Lelystad,"Kolkweg 20, 8243 PN",profil Fresha,przez Fresha,bot FAQ,fresha.com,C,
-13,CFH Care For Hair,fryzjer,Lelystad,"Ranonkellaan 5, 8245 HE",profil Fresha,przez Fresha,Reels + bot,fresha.com,C,
-14,Haarinstituut Head of Hair,fryzjer,Lelystad,"Groene Velden 7, 8211 BA",profil Fresha,przez Fresha,asystent maili + bot,fresha.com,B,
-15,Kapsalon De Knip Corner,fryzjer,Lelystad,"De Promesse 17a, 8232 VX",profil Fresha,przez Fresha,bot FAQ,fresha.com,C,
-16,Barbershop Michael,barber,Lelystad,"Neringweg 304, 8224 KL",profil Fresha,przez Fresha,Reels + bot terminów,fresha.com,B,
-17,Rombout Kapsalon Walter,fryzjer,Lelystad,Koopmansstraat 13,do sprawdzenia,openingstijden.nl,bot godzin/FAQ,openingstijden.nl,C,
-18,De Lelystadse Barbier,barber,Lelystad,do sprawdzenia,do sprawdzenia,do sprawdzenia,Reels,bedrijvenregister.nl,C,
-19,Casa Coiffure,fryzjer,Lelystad,do sprawdzenia,do sprawdzenia,do sprawdzenia,bot FAQ,bedrijvenregister.nl,C,
-20,Bianca's Haarmode,fryzjer,Lelystad,do sprawdzenia,do sprawdzenia,do sprawdzenia,bot FAQ,bedrijvenregister.nl,C,
-21,Pannenkoekenrestaurant De Kemphaan,restauracja rodzinna,Almere,do sprawdzenia,do sprawdzenia,do sprawdzenia,Reels dla rodzin + bot urodzin dzieci,fijnuit.nl,B,
-22,The Black Cockatoo Vegan Lunchcafé,lunchcafé,Almere Centrum,do sprawdzenia,do sprawdzenia,do sprawdzenia,Reels dania dnia,fijnuit.nl,B,
-23,Tasja's Care (pedicure & schoonheid),salon kosmetyczny,Almere,Marktgracht 13,do sprawdzenia,openingstijden.nl,bot terminów + przypomnienia,openingstijden.nl,B,
-24,Van de Kraats Fysiotherapie,fizjoterapia,Almere,do sprawdzenia,do sprawdzenia,zorgkaartnederland.nl,bot FAQ (bez danych medycznych) + asystent maili,zorgkaartnederland.nl,B,
-25,Fysiotherapie De Roef,fizjoterapia,Almere,do sprawdzenia,do sprawdzenia,zorgkaartnederland.nl,asystent maili + Reels ćwiczeń,zorgkaartnederland.nl,B,
-26,Fysiotherapie Ryan Haafkens,fizjoterapia,Almere,do sprawdzenia,do sprawdzenia,zorgkaartnederland.nl,Reels ćwiczeń + bot FAQ,zorgkaartnederland.nl,B,
-27,Topvorm Fysiotherapie,fizjoterapia,Almere,do sprawdzenia,do sprawdzenia,zorgkaartnederland.nl,Reels + bot,zorgkaartnederland.nl,C,
-28,CorpusPro,fizjoterapia,Almere,do sprawdzenia,do sprawdzenia,zorgkaartnederland.nl,asystent maili,zorgkaartnederland.nl,C,
-29,Fysio Better Motions,fizjoterapia,Almere,do sprawdzenia,do sprawdzenia,zorgkaartnederland.nl,Reels (młoda praktyka – potrzebuje zasięgu),zorgkaartnederland.nl,B,
-30,FysioHaven,fizjoterapia,Almere Haven,do sprawdzenia,do sprawdzenia,zorgkaartnederland.nl,Reels + bot FAQ,zorgkaartnederland.nl,C,
+nr,nazwa,branza,miasto,adres,strona,kontakt_publiczny,co_by_pomoglo,zrodlo,priorytet,status,kanal
+1,Restaurant & Grand Café Applaus,restauracja (teatr Agora),Lelystad,"Agorabaan 14, 8224 JS",instagram.com/restaurant_applaus_,eet@restaurantapplaus.nl; 0320 239 248,Reels z menu/lunchu + bot rezerwacji przed spektaklem,visitflevoland.nl,A,szkic gotowy,wizyta/IG
+2,Restaurant Bakboord,restauracja,Almere Haven,"Veerkade 10, 1357 PK",restaurantbakboord.nl,info@restaurantbakboord.nl; 036 540 4040,Reels taras/marina + bot FAQ (rezerwacje grup; NL/EN/DE dla żeglarzy),visitalmere.com,A,szkic gotowy,mail-ofertowy (info@)
+3,De Taveerne (Batavialand),restauracja muzealna,Lelystad,"Oostvaardersdijk 1, 8242 PA",batavialand.nl/plan-je-bezoek/restaurant/,formularz na batavialand.nl,bot FAQ grup/przyjęć + asystent maili (zapytania grupowe),visitflevoland.nl,A,szkic gotowy,formularz
+4,LelyStyle,fryzjer,Lelystad,Weversstraat 34,profil Fresha,rezerwacja/wiadomość przez Fresha,Reels przed/po + bot WhatsApp z linkiem do Fresha,fresha.com,A,szkic gotowy,wizyta/IG (Fresha tylko do rezerwacji)
+5,Gastrobar Q,restauracja (sharing),Almere Haven,"Havenzicht 14 (wejście od Sluiskade), 1357 NN",brak własnej (visitalmere.com),do sprawdzenia na miejscu,Reels „All you can share” + bot godzin/rezerwacji (zamknięte wt–śr),visitalmere.com; trip.com,A,szkic gotowy,wizyta
+6,KrullenTemmer,fryzjer (loki),Lelystad,"Punter 10, 8242 DC",profil Fresha,przez Fresha,Reels przed/po (krullen = świetny materiał wideo),fresha.com,B,,wizyta/IG (Fresha tylko do rezerwacji)
+7,Charmed Hair,fryzjer,Lelystad,Platinastraat 70,profil Fresha,przez Fresha,bot FAQ + Reels,fresha.com,B,,wizyta/IG (Fresha tylko do rezerwacji)
+8,Wahid The Barber,barber,Lelystad,"Kamp 4215, 8225 HN",profil Fresha,przez Fresha,Reels fade/przed-po + bot terminów,fresha.com,B,,wizyta/IG (Fresha tylko do rezerwacji)
+9,Coupe De borah,fryzjer,Lelystad,"Koriander 73, 8245 HA",profil Fresha,przez Fresha,bot FAQ + przypomnienia,fresha.com,C,,wizyta/IG (Fresha tylko do rezerwacji)
+10,Noux hair,fryzjer,Lelystad,"Vijfherenlanden 104, 8245 BC",profil Fresha,przez Fresha,Reels,fresha.com,C,,wizyta/IG (Fresha tylko do rezerwacji)
+11,GLOSS haar studio,fryzjer,Lelystad,"Waterland 11, 8245 GG",profil Fresha,przez Fresha,Reels + bot,fresha.com,B,,wizyta/IG (Fresha tylko do rezerwacji)
+12,Devi HairFashion,fryzjer,Lelystad,"Kolkweg 20, 8243 PN",profil Fresha,przez Fresha,bot FAQ,fresha.com,C,,wizyta/IG (Fresha tylko do rezerwacji)
+13,CFH Care For Hair,fryzjer,Lelystad,"Ranonkellaan 5, 8245 HE",profil Fresha,przez Fresha,Reels + bot,fresha.com,C,,wizyta/IG (Fresha tylko do rezerwacji)
+14,Haarinstituut Head of Hair,fryzjer,Lelystad,"Groene Velden 7, 8211 BA",profil Fresha,przez Fresha,asystent maili + bot,fresha.com,B,,wizyta/IG (Fresha tylko do rezerwacji)
+15,Kapsalon De Knip Corner,fryzjer,Lelystad,"De Promesse 17a, 8232 VX",profil Fresha,przez Fresha,bot FAQ,fresha.com,C,,wizyta/IG (Fresha tylko do rezerwacji)
+16,Barbershop Michael,barber,Lelystad,"Neringweg 304, 8224 KL",profil Fresha,przez Fresha,Reels + bot terminów,fresha.com,B,,wizyta/IG (Fresha tylko do rezerwacji)
+17,Rombout Kapsalon Walter,fryzjer,Lelystad,Koopmansstraat 13,do sprawdzenia,openingstijden.nl,bot godzin/FAQ,openingstijden.nl,C,,wizyta
+18,De Lelystadse Barbier,barber,Lelystad,do sprawdzenia,do sprawdzenia,do sprawdzenia,Reels,bedrijvenregister.nl,C,,wizyta
+19,Casa Coiffure,fryzjer,Lelystad,do sprawdzenia,do sprawdzenia,do sprawdzenia,bot FAQ,bedrijvenregister.nl,C,,wizyta
+20,Bianca's Haarmode,fryzjer,Lelystad,do sprawdzenia,do sprawdzenia,do sprawdzenia,bot FAQ,bedrijvenregister.nl,C,,wizyta
+21,Pannenkoekenrestaurant De Kemphaan,restauracja rodzinna,Almere,"Kemphaanpad 8, 1358 AC",profil fijnuit.nl (Stadslandgoed De Kemphaan),036 785 3508,Reels dla rodzin + bot urodzin dzieci,fijnuit.nl,B,,formularz/wizyta
+22,The Black Cockatoo Vegan Lunchcafé,lunchcafé,Almere Centrum,"Almere Centrum (wt–nd 10–17, pn zamknięte)",profil visitflevoland.nl / happycow.net,do sprawdzenia (Instagram),Reels dania dnia,visitflevoland.nl,B,,IG/wizyta
+23,Tasja's Care (pedicure & schoonheid),salon kosmetyczny,Almere,Marktgracht 13,do sprawdzenia,openingstijden.nl,bot terminów + przypomnienia,openingstijden.nl,B,,wizyta
+24,Van de Kraats Fysiotherapie,fizjoterapia,Almere,do sprawdzenia,do sprawdzenia,zorgkaartnederland.nl (bez tel.); terapeuta pracuje też w Topvorm,bot FAQ (bez danych medycznych) – połączyć z nr 27 Topvorm,zorgkaartnederland.nl,B,,formularz na www (do znalezienia)
+25,Fysiotherapie De Roef,fizjoterapia,Almere,do sprawdzenia,do sprawdzenia,zorgkaartnederland.nl,asystent maili + Reels ćwiczeń,zorgkaartnederland.nl,B,,formularz na www (do znalezienia)
+26,Fysiotherapie Ryan Haafkens,fizjoterapia,Almere,do sprawdzenia,do sprawdzenia,zorgkaartnederland.nl,Reels ćwiczeń + bot FAQ,zorgkaartnederland.nl,B,,formularz na www (do znalezienia)
+27,Topvorm Fysiotherapie,fizjoterapia,Almere,do sprawdzenia,do sprawdzenia,zorgkaartnederland.nl,Reels + bot,zorgkaartnederland.nl,C,,formularz na www (do znalezienia)
+28,CorpusPro,fizjoterapia,Almere,do sprawdzenia,do sprawdzenia,zorgkaartnederland.nl,asystent maili,zorgkaartnederland.nl,C,,formularz na www (do znalezienia)
+29,Fysio Better Motions,fizjoterapia,Almere,do sprawdzenia,do sprawdzenia,zorgkaartnederland.nl,Reels (młoda praktyka – potrzebuje zasięgu),zorgkaartnederland.nl,B,,formularz na www (do znalezienia)
+30,FysioHaven,fizjoterapia,Almere Haven,"Leemwierde 133, 1353 LP",fysiohaven.com,036 521 5559,Reels + bot FAQ,zorgkaartnederland.nl,C,,formularz na www
+31,Autobedrijf Van der Feer,warsztat + occasions,Lelystad,"Nikkelstraat 31, 8211 AJ",vanderfeer-occasions.nl,formularz/tel. przez autoscout24,bot WhatsApp: termin APK/serwisu + FAQ; Reels z occasions,autoscout24.nl,A,nowa 12.11,formularz na www
+32,Kuyper Auto,handel autami (96 ofert),Lelystad,"Loodsweg 16, 8243 PH",profil autoscout24,formularz autoscout24,Reels/posty z nowymi autami automatycznie + asystent maili (zapytania o auta),autoscout24.nl,A,nowa 12.11,formularz/wizyta
+33,Autobaan B.V.,handel autami (BV),Lelystad,"Zuiveringweg 99, 8243 PE",auto-baan.nl,formularz na www,asystent maili (inkoop/trade-in) + Reels ofert,autoscout24.nl,B,nowa 12.11,mail-ofertowy/formularz (BV)
+34,Bike Totaal Schulting,sklep + serwis rowerów,Almere,"Markerkant 10-1, 1316 AA",biketotaal.nl/schulting-almere,info@schultingtweewielers.nl; 036 534 7961,bot WhatsApp: status naprawy/termin serwisu + FAQ e-bike,biketotaal.nl,A,nowa 12.11,mail-ofertowy (info@)
+35,Salon Monira,salon kosmetyczny,Lelystad,Pascallaan 22x,profil Treatwell,przez Treatwell,Reels zabiegów + bot FAQ/cennik,treatwell.nl,B,nowa 12.11,wizyta/IG
+36,Zen Balance & Beautycare,salon kosmetyczny/masaż,Lelystad,Merwede 60,profil Treatwell,przez Treatwell,"bot terminów + przypomnienia, Reels relaks",treatwell.nl,C,nowa 12.11,wizyta/IG
+37,SYL – Shape Your Lifestyle,studio body/beauty,Lelystad,Zaanstraat 6-I,profil Treatwell,przez Treatwell,Reels przed/po (z zgodą klientów) + bot FAQ,treatwell.nl,B,nowa 12.11,wizyta/IG
+38,Estelle's beautysalon,salon kosmetyczny,Lelystad,Sont (bez nr),profil Treatwell,przez Treatwell,bot FAQ + posty na autopilocie,treatwell.nl,C,nowa 12.11,wizyta/IG
+39,Fa's Bakery,cukiernia (torty na zamówienie),Almere,"Brink 37, 1354 HL",fasbakery.com,+31 6 8199 9197 (firmowy),"bot zamówień tortów (formularz: data, smak, liczba osób) + Reels dekorowania",kidsproof.nl,A,nowa 12.11,formularz na www/IG
+40,Lady Cakery,piekarnia amerykańska + gelato,Almere,"Insulindeplein 19, 1335 JT",instagram.com/ladycakery.nl,DM Instagram,Reels produktów dnia + bot zamówień/godzin,kidsproof.nl,A,nowa 12.11,IG
