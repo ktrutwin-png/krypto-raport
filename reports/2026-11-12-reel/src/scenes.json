@@ -1,0 +1,75 @@
+{
+ "date": "12.11.2026",
+ "style": "news",
+ "mood": "gold",
+ "handle": "@erl.grey83",
+ "ticker": "GOLD $3,943 ▼1.1% · EUR/USD 1.109 ▼0.03% · BTC $73,444 ▼0.4% · ETH $2,046 ▼0.6% · XRP $1.04 ▼1.2% · SOL $82.85 ▼0.2%",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "GOLD vs DOLLAR",
+   "head": [
+    "GOLD -1.1%",
+    "*DOLLAR NEAR*",
+    "*1-YEAR HIGH*"
+   ],
+   "chip": "▼ GOLD $3,943",
+   "say": "Gold slipped below four thousand dollars. The dollar sits near a one year high against the euro.",
+   "move": "in"
+  },
+  {
+   "img": "s2.jpg",
+   "head": [
+    "WHY?",
+    "*RATE HIKE BETS*"
+   ],
+   "sub": "MARKETS SEE A DECEMBER FED HIKE",
+   "note": "GOLD PAYS NO INTEREST",
+   "say": "Why? Markets reportedly expect a December Fed hike. Cash pays more, gold pays nothing.",
+   "move": "out"
+  },
+  {
+   "d3": {
+    "typ": "swiece",
+    "p": {
+     "dir": "down",
+     "n": 10,
+     "seed": 12
+    }
+   },
+   "img": "s3.jpg",
+   "head": [
+    "-30%",
+    "*FROM THE $5,595 HIGH*"
+   ],
+   "sub": "1-YEAR LOW: $3,866",
+   "say": "Gold is now thirty percent below its record, just above its one year low.",
+   "move": "up"
+  },
+  {
+   "img": "s4.jpg",
+   "head": [
+    "BTC -0.4%",
+    "~HOLDING $73K~"
+   ],
+   "sub": "NEXT: US PRODUCER PRICES, FRIDAY",
+   "anim": {
+    "dir": "chop",
+    "label": "$73,444"
+   },
+   "say": "Bitcoin barely moved, near seventy three thousand. Friday brings US producer prices.",
+   "move": "down"
+  },
+  {
+   "img": "s5.jpg",
+   "head": [
+    "STRONG DOLLAR:",
+    "*GOLD OR BTC?*"
+   ],
+   "sub": "🥇 GOLD / 🐂 BTC – COMMENT ONE",
+   "note": "SEND THIS TO A FRIEND WHO HOLDS GOLD",
+   "say": "Strong dollar, weaker gold. Which holds up better? Not financial advice, just data.",
+   "move": "in"
+  }
+ ]
+}
