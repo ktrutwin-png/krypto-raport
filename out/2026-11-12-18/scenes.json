@@ -1,0 +1,89 @@
+{
+ "date": "12.11.2026",
+ "style": "news",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $71,740 ▼3.4% · ETH $2,007 ▼3.3% · XRP $1.03 ▼4.3% · SOL $81.40 ▼4.0% · GOLD $3,880 ▼2.7% · FEAR & GREED 23",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "d3": {
+    "typ": "liczba",
+    "p": {
+     "text": "-2.7%",
+     "sub": "GOLD TODAY",
+     "kolor": "gold",
+     "kolor2": "silver",
+     "seed": 12
+    }
+   },
+   "tag": "LIVE MARKET UPDATE",
+   "head": [
+    "GOLD -2.7% ·",
+    "*BTC -3.4%*",
+    "*BOTH SLIDE*"
+   ],
+   "chip": "▼ GOLD $3,880",
+   "move": "in",
+   "say": "Gold and bitcoin both slid today: gold almost three percent, bitcoin over three."
+  },
+  {
+   "img": "s2.jpg",
+   "head": [
+    "GOLD $3,880",
+    "*LOWEST SINCE*",
+    "*OCT 2025*"
+   ],
+   "chip": "▼ -2.7% TODAY",
+   "note": "FED HIKE ODDS ~91%",
+   "anim": {
+    "dir": "down",
+    "label": "$3,880"
+   },
+   "move": "out",
+   "say": "Hot inflation pushed Fed hike odds near ninety one percent, and gold hit a one year low."
+  },
+  {
+   "img": "s3.jpg",
+   "d3": {
+    "typ": "skarbiec",
+    "p": {
+     "seed": 7
+    }
+   },
+   "head": [
+    "675 TONNES",
+    "*CENTRAL BANKS*",
+    "*STILL BUYING*"
+   ],
+   "sub": "+6% VS 2025 SO FAR",
+   "move": "up",
+   "say": "Central banks reportedly bought six hundred seventy five tonnes this year. Not enough against a strong dollar."
+  },
+  {
+   "img": "s4.jpg",
+   "head": [
+    "BTC $71.7K",
+    "*$292M*",
+    "*LIQUIDATED*"
+   ],
+   "chip": "▼ -5.6% IN 7 DAYS",
+   "sub": "FEAR & GREED 23",
+   "move": "down",
+   "say": "Bitcoin fell to seventy one thousand seven hundred, with nearly three hundred million liquidated."
+  },
+  {
+   "img": "s5.jpg",
+   "tag": "WATCH NEXT",
+   "head": [
+    "GOLD $3,900 ·",
+    "*BTC $70K*",
+    "*WHO BOUNCES?*"
+   ],
+   "sub": "BULL OR BEAR BY FRIDAY? 🐂/🐻",
+   "note": "SEND THIS TO A FRIEND WHO HOLDS GOLD",
+   "move": "in",
+   "say": "Watch gold at thirty nine hundred, bitcoin at seventy K. Bull or bear by Friday? This is not financial advice, just data."
+  }
+ ]
+}
