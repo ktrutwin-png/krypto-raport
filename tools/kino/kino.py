@@ -120,11 +120,15 @@ for i, s in enumerate(S):
     last = i == len(S) - 1
     if s.get("end") or not s.get("say", "").strip():
         L = 2.2; run(["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-t", f"{L - (0 if last else FADE):.2f}", f"_p{i}.wav"]); DUR.append(L); continue
-    assert VOICE and os.path.exists(VOICE), "brak glosu piper w tools/reel/voice (patrz tools/reel/README.md)"
-    run([sys.executable, "-m", "piper", "-m", VOICE, "--length-scale", "0.96", "--sentence-silence", "0.18", "-f", f"_a{i}.wav"], input=s["say"].encode())
+    gl = s.get("glos")  # gotowe nagranie lektora (np. ElevenLabs mp3/wav) - wtedy bez piper i bez obnizania tonu
+    if gl and os.path.exists(gl):
+        run(["ffmpeg", "-y", "-i", gl, "-ar", "44100", "-ac", "1", f"_a{i}.wav"]); pitch_s = 1.0
+    else:
+        assert VOICE and os.path.exists(VOICE), "brak glosu piper w tools/reel/voice (patrz tools/reel/README.md)"
+        run([sys.executable, "-m", "piper", "-m", VOICE, "--length-scale", "0.96", "--sentence-silence", "0.18", "-f", f"_a{i}.wav"], input=s["say"].encode()); pitch_s = PITCH
     w = wave.open(f"_a{i}.wav"); d = w.getnframes() / w.getframerate(); sr = w.getframerate(); w.close()
     L = round(d + 0.35 + (0 if last else FADE), 2); DUR.append(L)
-    pf = f"asetrate={int(sr*PITCH)},aresample={sr},atempo={1/PITCH:.4f}," if PITCH != 1.0 else ""
+    pf = f"asetrate={int(sr*pitch_s)},aresample={sr},atempo={1/pitch_s:.4f}," if pitch_s != 1.0 else ""
     run(["ffmpeg", "-y", "-i", f"_a{i}.wav", "-af", f"{pf}adelay=120|120,apad=whole_dur={L - (0 if last else FADE):.2f},aresample=44100", "-ac", "2", f"_p{i}.wav"])
 open("_l.txt", "w").write("".join(f"file '_p{i}.wav'\n" for i in range(len(S))))
 
