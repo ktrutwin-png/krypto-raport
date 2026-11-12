@@ -6,3 +6,12 @@ Typografia: Space Grotesk Light (ERL.GREY83, szerokie odstępy), Cormorant Garam
 Motto: „Nie możesz używać cudzej mapy”.
 Zasada: logo ma przyciągać, nie krzyczeć. Na okładce książki tłoczenie na ślepo w skórze.
 Pełny system (wersje, ikony, favicon): artefakt „Logo szefa – Erl.grey83” na płótnie, plansza Finał B.
+
+## Pliki (wszystkie zatwierdzone przez szefa 12.11)
+- `Erl.grey83_Enso_logo.png`: główne, ciemne tło, z mottem
+- `Enso_papier.png`: jasne tło, tusz (druk, dokumenty)
+- `Enso_skora.png`: tłoczenie na ślepo w skórze (okładka książki)
+- `Enso_poziome.png`: wersja pozioma 2400×600 (baner YouTube, nagłówek strony, stopka)
+- `Enso_ikona.png`: ikona aplikacji 2048 (ORB, Hexa)
+- `Enso_awatar.png`: awatar Instagram/YouTube (jasne koło)
+- `Enso_favicon.png`: favicon, przezroczyste tło
