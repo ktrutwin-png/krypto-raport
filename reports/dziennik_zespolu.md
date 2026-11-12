@@ -121,4 +121,4 @@ INSPEKCJA UPDATE: 2026-11-13 00:00 (na żądanie, UPDATE 12.11 23:40 – kino "g
 2026-11-13 00:00 | Inspektor | nowe: 1 (Z016), zamknięte: 0, otwarte: 9 (Z004, Z005b, Z009, Z010, Z011, Z013, Z014, Z015, Z016) | dla Mechanika: Z013, Z014, Z015, Z016 | ok
 UPDATE: 2026-11-12 23:55 (Mózg) nowy wzór raportu 22:00 i briefingu 8:00 – tła GŁĘBIA z ElevenLabs (C:\Hexa\narzedzia\raport22\tlo\), szklane panele, znak Ensō; kopie .bak_20261112; zadania bez zmian (te same skrypty)
 2026-11-13 00:10 | Mózg | ROZKAZ R24 dla Reżysera: karuzela IG „ONE AI BRAIN · 8 AGENTS” na sobotę 14.11 ~19:00 | ok
-2026-11-13 00:20 | Mózg | ROZKAZY R25 (Hexa jako postać marki) i R26 (słowo w komentarzu + strona /<słowo>/); nowe zadanie 💬 Odpowiadacz komentarzy | ok
+2026-11-13 00:20 | Mózg | ROZKAZY R25 (Hexa jako postać marki) i R26 (słowo w komentarzu + strona /<słowo>/); odpowiedzi na słowa robi Reżyser przy każdym przebiegu | ok
