@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Brain · Erl.grey83</title>
+<meta name="description" content="The real map of the AI system behind @erl.grey83: one AI brain, 9 agents, 7 bots on demo accounts. What each part does, what it costs, what it doesn't do.">
+<meta property="og:title" content="The Brain · Erl.grey83">
+<meta property="og:description" content="One AI brain. 16 workers. The real map – no hype, no profit promises.">
+<meta property="og:image" content="https://erlgrey83-crypto-freaq.vercel.app/assets/hexa_og.jpg">
+<meta name="theme-color" content="#0b0b0d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' rx='80' fill='%230b0b0d'/%3E%3Cpath d='M 322 116 A 150 150 0 1 0 338 182' fill='none' stroke='%23d9d6cf' stroke-width='44' stroke-linecap='round'/%3E%3Cpath d='M120 262 L292 138' stroke='%23c9a54a' stroke-width='46' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap">
+<style>
+:root{--bg:#0b0b0d;--fg:#d9d6cf;--hi:#f1eee7;--mut:#b9b5ac;--gold:#c9a54a;--line:#26252a;--card:#121216;--serif:'Cormorant Garamond',Georgia,serif}
+*{box-sizing:border-box;margin:0}
+html{overflow-x:clip;accent-color:var(--gold)}
+body{background:var(--bg);color:var(--fg);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.6;overflow-x:clip}
+a{color:var(--gold)}a:hover{color:#ead18a}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{padding:22px 0;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--hi);text-decoration:none;font-weight:300;letter-spacing:.32em;font-size:13px}
+.hero{padding:clamp(48px,9vw,96px) 0 32px;background:radial-gradient(60% 70% at 50% 0%,rgba(201,165,74,.14),transparent 70%)}
+.kick{color:var(--gold);letter-spacing:.24em;font-size:12px;text-transform:uppercase}
+h1{font-size:clamp(38px,7vw,72px);line-height:1.02;color:var(--hi);font-weight:700;letter-spacing:-.02em;margin:12px 0 16px}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--gold)}
+.lead{max-width:640px;color:var(--mut);font-size:18px}
+h2{color:var(--hi);font-size:clamp(24px,3.6vw,34px);margin:56px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--mut);margin-bottom:22px}
+.brain{margin-top:28px;border:1px solid var(--gold);border-radius:18px;padding:22px;background:linear-gradient(180deg,rgba(201,165,74,.10),rgba(201,165,74,.02))}
+.brain b{color:var(--hi)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{color:var(--hi);font-size:17px;margin-bottom:6px}
+.card p{font-size:15px;color:var(--mut)}
+.tag{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,165,74,.4);border-radius:99px;padding:2px 9px;margin-bottom:10px}
+ol.flow{counter-reset:s;list-style:none;padding:0;display:grid;gap:10px}
+ol.flow li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 56px;position:relative}
+ol.flow li::before{content:counter(s);position:absolute;left:16px;top:13px;width:26px;height:26px;border-radius:50%;background:var(--gold);color:#0b0b0d;font-weight:700;display:grid;place-items:center;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--gold);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.no{background:var(--card);border-left:3px solid var(--gold);border-radius:8px;padding:16px 18px}
+.no li{margin:4px 0 4px 18px}
+.cta{margin:56px 0;text-align:center;padding:36px 20px;border:1px solid var(--line);border-radius:18px}
+.cta a.btn{display:inline-block;margin-top:14px;background:var(--gold);color:#0b0b0d;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:99px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);font-size:13px}
+@media (max-width:560px){.wrap{padding:0 16px}th:nth-child(3),td:nth-child(3){display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <a class="logo" href="/" aria-label="Erl.grey83 home"><svg width="28" height="28" viewBox="0 0 400 400" aria-hidden="true"><path d="M 322 116 A 150 150 0 1 0 338 182" fill="none" stroke="#d9d6cf" stroke-width="30" stroke-linecap="round"/><path d="M120 262 L292 138" stroke="#c9a54a" stroke-width="32" stroke-linecap="round"/></svg>ERL.GREY83</a>
+ <a href="https://www.instagram.com/erl.grey83/">Instagram</a>
+</div></header>
+
+<main class="wrap">
+<section class="hero">
+ <p class="kick">The real map · updated 13 Nov 2026</p>
+ <h1>One AI brain.<br><em>16 workers.</em></h1>
+ <p class="lead">This is the actual system that runs @erl.grey83 – built by one person, not a team. Below: every part, what it really does, and what it does <b>not</b> do. No hype, no screenshots of fake numbers.</p>
+ <div class="brain"><b>🧠 The Brain – Claude (Anthropic).</b> Plans the work, writes the rules for every agent, checks their results and fixes what breaks. Agents don't talk to the owner during the week – they report to the Brain, and the owner gets one short weekly report.</div>
+</section>
+
+<h2>9 AI agents</h2>
+<p class="sub">Each one is a scheduled Claude task with its own written plan. They run on their own, on a timetable.</p>
+<div class="grid">
+ <div class="card"><span class="tag">Content</span><h3>🎬 Director</h3><p>Picks the day's crypto, gold and bank news, writes a 20–30 s script and builds the video: AI visuals, 3D scenes, captions, voice. Publishes to Instagram and YouTube.</p></div>
+ <div class="card"><span class="tag">Content</span><h3>📰 Noon &amp; evening report</h3><p>Two daily market videos (10:00 and 18:00 CET). Prices come from live data feeds, every number has a source.</p></div>
+ <div class="card"><span class="tag">Quality</span><h3>🛠 Caretaker</h3><p>Improves one thing in the video pipeline every day – readability, motion, timing.</p></div>
+ <div class="card"><span class="tag">Markets</span><h3>📡 Scanners</h3><p>Watches gold, indices and crypto 24/7 and logs setups. It only observes and reports – it never places trades.</p></div>
+ <div class="card"><span class="tag">Control</span><h3>🔍 Inspector</h3><p>Checks the whole machine after every change and once a week: is every process alive, are logs fresh, did anything break.</p></div>
+ <div class="card"><span class="tag">Control</span><h3>🛡 Server guard</h3><p>Hourly health check of the server (memory, processes). Speaks up only when something is actually down.</p></div>
+ <div class="card"><span class="tag">Learning</span><h3>🔎 Scout</h3><p>Every weekend searches GitHub for better open-source skills and tools, reviews them for safety and installs only what helps.</p></div>
+ <div class="card"><span class="tag">Learning</span><h3>📚 Teacher</h3><p>Turns mistakes into written lessons, so the same error doesn't happen twice.</p></div>
+ <div class="card"><span class="tag">Voice</span><h3>✨ Hexa</h3><p>The voice assistant on the owner's phone – listens, answers and opens apps. The face you see on our posts.</p></div>
+</div>
+
+<h2>7 bots &amp; tools – demo accounts only</h2>
+<p class="sub">These are tests. They run on practice (demo / paper / dry-run) accounts. No real money is at stake and nothing here is a signal service.</p>
+<table>
+ <thead><tr><th>Part</th><th>What it does</th><th>Where</th></tr></thead>
+ <tbody>
+  <tr><td>Hexa · Turbo</td><td>Two gold (XAU/USD) bots: one calm, one aggressive</td><td>MetaTrader 5 demo</td></tr>
+  <tr><td>Indices</td><td>Index bot (DAX ETF, SPY)</td><td>MetaTrader 5 demo</td></tr>
+  <tr><td>Kraken × 2</td><td>Two crypto strategies (breakout, momentum)</td><td>Freqtrade dry-run</td></tr>
+  <tr><td>IB scanner</td><td>Market scanner</td><td>Interactive Brokers paper</td></tr>
+  <tr><td>Panel</td><td>Private Telegram panel for the owner's own manual trades</td><td>Telegram</td></tr>
+ </tbody>
+</table>
+
+<h2>How one video gets made</h2>
+<ol class="flow">
+ <li>The agent reads its plan and the lessons from past mistakes.</li>
+ <li>Pulls live prices and checks today's news against at least two sources.</li>
+ <li>Writes a short script – facts only, one question left to the viewer.</li>
+ <li>Generates visuals, renders 1–2 real 3D scenes, adds voice and captions.</li>
+ <li>Watches its own frames (start, middle, end) and re-renders anything unreadable.</li>
+ <li>Publishes, then logs the result so next week's numbers can be compared.</li>
+</ol>
+
+<h2>The real toolset</h2>
+<table>
+ <thead><tr><th>Job</th><th>Tool</th><th>Cost</th></tr></thead>
+ <tbody>
+  <tr><td>Brain &amp; agents</td><td>Claude (Anthropic) scheduled tasks</td><td>Claude Max subscription</td></tr>
+  <tr><td>Always-on machine</td><td>Windows VPS</td><td>≈ €20 / month</td></tr>
+  <tr><td>Voice &amp; hero images</td><td>ElevenLabs</td><td>Creator plan</td></tr>
+  <tr><td>Other images</td><td>Canva, open-source models on Hugging Face</td><td>free tiers</td></tr>
+  <tr><td>Video &amp; 3D</td><td>ffmpeg, three.js, Python</td><td>free / open source</td></tr>
+  <tr><td>Publishing &amp; stats</td><td>Windsor.ai (Instagram), Metricool (YouTube)</td><td>free tiers</td></tr>
+  <tr><td>Market data</td><td>CoinGecko, CoinMarketCap, Twelve Data</td><td>free tiers</td></tr>
+  <tr><td>This website</td><td>Vercel</td><td>free</td></tr>
+ </tbody>
+</table>
+
+<h2>Built with – open source you can use too</h2>
+<p class="sub">Everything below is public on GitHub. This is exactly what our agents run on – start with Claude Code and add the rest as you need it.</p>
+<div class="grid">
+ <div class="card"><span class="tag">The brain</span><h3><a href="https://github.com/anthropics/claude-code">Claude Code</a></h3><p>The agent that runs everything. Our agents are its scheduled tasks.</p></div>
+ <div class="card"><span class="tag">Skills</span><h3><a href="https://github.com/anthropics/skills">Anthropic Skills</a></h3><p>Official skill library – how to teach an agent a new job with one SKILL.md file.</p></div>
+ <div class="card"><span class="tag">Skills</span><h3><a href="https://github.com/obra/superpowers">Superpowers</a></h3><p>Debugging and "prove it before you say done" – keeps agents honest.</p></div>
+ <div class="card"><span class="tag">Learning</span><h3><a href="https://github.com/pskoett/pskoett-ai-skills">Self-improvement skills</a></h3><p>Agents log their mistakes and turn them into rules.</p></div>
+ <div class="card"><span class="tag">Memory</span><h3><a href="https://github.com/basicmachines-co/basic-memory">Basic Memory</a></h3><p>Shared notes every agent searches before it starts.</p></div>
+ <div class="card"><span class="tag">Video</span><h3><a href="https://github.com/FFmpeg/FFmpeg">FFmpeg</a></h3><p>Cuts, mixes and renders every video.</p></div>
+ <div class="card"><span class="tag">Video</span><h3><a href="https://github.com/heygen-com/hyperframes">HyperFrames</a></h3><p>HTML → MP4: animated charts and titles.</p></div>
+ <div class="card"><span class="tag">3D</span><h3><a href="https://github.com/mrdoob/three.js">three.js</a></h3><p>The real 3D scenes in our videos.</p></div>
+ <div class="card"><span class="tag">Voice</span><h3><a href="https://github.com/rhasspy/piper">Piper TTS</a></h3><p>Free offline voice – our fallback narrator.</p></div>
+ <div class="card"><span class="tag">Design</span><h3><a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill">UI/UX Pro Max</a></h3><p>Layout, colour and type rules for every graphic.</p></div>
+ <div class="card"><span class="tag">Images</span><h3><a href="https://github.com/danielgatis/rembg">rembg</a></h3><p>Background removal for covers and thumbnails.</p></div>
+ <div class="card"><span class="tag">Charts</span><h3><a href="https://github.com/tradingview/lightweight-charts">Lightweight Charts</a></h3><p>The live price chart on our site.</p></div>
+ <div class="card"><span class="tag">Testing</span><h3><a href="https://github.com/microsoft/playwright">Playwright</a></h3><p>Agents open the site and check it like a person would.</p></div>
+ <div class="card"><span class="tag">Crypto bots</span><h3><a href="https://github.com/freqtrade/freqtrade">Freqtrade</a></h3><p>Crypto bot framework – we run it in dry-run (no money).</p></div>
+ <div class="card"><span class="tag">Backtests</span><h3><a href="https://github.com/polakowo/vectorbt">vectorbt</a> · <a href="https://github.com/ranaroussi/quantstats">QuantStats</a></h3><p>Testing a strategy honestly before any bot changes.</p></div>
+ <div class="card"><span class="tag">Research</span><h3><a href="https://github.com/TauricResearch/TradingAgents">TradingAgents</a></h3><p>Multi-agent market research – we use parts of it for analysis only.</p></div>
+</div>
+
+<h2>What this system does NOT do</h2>
+<div class="no"><ul>
+ <li>It does not trade real money. Every bot is on a demo, paper or dry-run account.</li>
+ <li>It does not sell signals, courses or "guaranteed" strategies.</li>
+ <li>It does not reply to DMs automatically – a person reads them.</li>
+ <li>It does not promise profit. Markets can and do go against any system.</li>
+</ul></div>
+
+<section class="cta">
+ <p class="kick">On your path, other people's maps won't work</p>
+ <h2 style="margin-top:10px">Build your own – start small</h2>
+ <p class="sub" style="margin:8px auto 0;max-width:560px">Take one boring task you do every day, give it to one AI agent with a written plan, and check its work for a week. Then add the next one. That's how this map grew.</p>
+ <a class="btn" href="https://www.instagram.com/erl.grey83/">Follow the build on Instagram</a>
+</section>
+</main>
+
+<footer><div class="wrap">For information only, not financial advice. All trading shown is on demo accounts. · <a href="/">erl.grey83</a></div></footer>
+</body>
+</html>
