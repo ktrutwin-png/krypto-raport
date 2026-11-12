@@ -112,3 +112,4 @@ UPDATE: 2026-11-11 17:22 (Mózg + szef w panelu Contabo) BEZPIECZEŃSTWO: zapora
 2026-11-12 10:01 | Reżyser (Reel) | GOLD -1.1% · DOLLAR NEAR 1-YEAR HIGH | opublikowano (IG 18111104198266237, 28.0 s, 3D swiece) | ok
 2026-11-12 14:10 | Handlowiec | lista firm 40 (+10: warsztaty, rowery, beauty, cukiernie) + kolumna kanał, oferta NL 1-stronicowa PDF | Reel-przykład przesunięty na następny przebieg | ok
 2026-11-12 14:10 | Handlowiec | DO RAPORTU: oferta NL w PDF gotowa do przejrzenia (biznes/oferta_nl_1pagina.pdf – stopka z polami Naam/KvK do uzupełnienia po rejestracji eenmanszaak); 5 szkiców NL nadal czeka na przegląd i wysyłkę przez szefa (biznes/szkice/)
+2026-11-12 18:33 | Reżyser (Raport 18) | GOLD -2.7% · BTC -3.4% · BOTH SLIDE | posted (IG 18128958922905372, 31.9 s, 5 scen, 3D liczba+skarbiec) | ok

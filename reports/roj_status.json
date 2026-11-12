@@ -1,88 +1,88 @@
 {
-  "opis_pliku": "Stan roju dla aplikacji ORB (Hexa) – aplikacja czyta ten plik co 10 min. KAŻDY wpis = jedno światełko wokół Hexy. s: praca (złote) | czeka (niebieskie) | blad (czerwone). Nowy agent/bot = dopisz wpis {n, s, opis, ostatnio} (max 40). Agent po każdym przebiegu aktualizuje swoje 's' i 'ostatnio'.",
-  "agenci": [
-    {
-      "n": "Raport 12",
-      "s": "praca",
-      "ostatnio": "12.11 10:15 – Reel GOLD vs DOLLAR (gold -1.1%, 3D swiece)"
-    },
-    {
-      "n": "Raport 18",
-      "s": "praca",
-      "ostatnio": "11.11 18:35 – BTC +1.9% · GOLD UNDER $4,000 (3D waga)"
-    },
-    {
-      "n": "Reżyser",
-      "s": "praca",
-      "ostatnio": "12.11 18:31 – Short 18:00 wrzucony na YouTube (Metricool 425999771)"
-    },
-    {
-      "n": "Opiekun",
-      "s": "czeka",
-      "ostatnio": "11.11 – 190 obserwujących (+14)"
-    },
-    {
-      "n": "Skanery",
-      "s": "praca",
-      "ostatnio": "11.11 21:02 – proces działa na serwerze"
-    },
-    {
-      "n": "Inspektor",
-      "s": "czeka",
-      "ostatnio": "11.11 11:53 – sprawdził sceny 3D i stronę"
-    },
-    {
-      "n": "Zwiadowca",
-      "s": "czeka",
-      "ostatnio": "pierwszy przebieg w nocy z soboty na niedzielę"
-    },
-    {
-      "n": "Nauczyciel",
-      "s": "czeka",
-      "ostatnio": "nowe lekcje: E-20261111-02/03"
-    },
-    {
-      "n": "Strażnik",
-      "s": "praca",
-      "ostatnio": "18:44 – serwer ok, zapora Contabo działa"
-    },
-    {
-      "n": "Hexa 💧",
-      "s": "praca",
-      "ostatnio": "11.11 21:02 – proces działa na serwerze"
-    },
-    {
-      "n": "Turbo 🔥",
-      "s": "praca",
-      "ostatnio": "11.11 21:02 – proces działa na serwerze"
-    },
-    {
-      "n": "Indeksy",
-      "s": "praca",
-      "ostatnio": "11.11 21:02 – proces działa na serwerze"
-    },
-    {
-      "n": "Panel",
-      "s": "czeka",
-      "ostatnio": "11.11 21:02 – proces działa na serwerze"
-    },
-    {
-      "n": "Kraken Donchian",
-      "s": "praca",
-      "opis": "bot krypto Freqtrade, strategia Donchian 4h na BTC (na sucho).",
-      "ostatnio": "11.11 21:02 – proces działa na serwerze"
-    },
-    {
-      "n": "Kraken Momentum",
-      "s": "praca",
-      "opis": "bot krypto Freqtrade, strategia Momentum 1d na BTC (na sucho).",
-      "ostatnio": "11.11 21:02 – proces działa na serwerze"
-    },
-    {
-      "n": "IB Skaner",
-      "s": "praca",
-      "opis": "obserwuje rynek przez Interactive Brokers i szuka sygnałów.",
-      "ostatnio": "11.11 21:02 – proces działa na serwerze"
-    }
-  ]
+ "opis_pliku": "Stan roju dla aplikacji ORB (Hexa) – aplikacja czyta ten plik co 10 min. KAŻDY wpis = jedno światełko wokół Hexy. s: praca (złote) | czeka (niebieskie) | blad (czerwone). Nowy agent/bot = dopisz wpis {n, s, opis, ostatnio} (max 40). Agent po każdym przebiegu aktualizuje swoje 's' i 'ostatnio'.",
+ "agenci": [
+  {
+   "n": "Raport 12",
+   "s": "praca",
+   "ostatnio": "12.11 10:15 – Reel GOLD vs DOLLAR (gold -1.1%, 3D swiece)"
+  },
+  {
+   "n": "Raport 18",
+   "s": "praca",
+   "ostatnio": "12.11 18:33 – GOLD -2.7% · BTC -3.4% (3D liczba + skarbiec)"
+  },
+  {
+   "n": "Reżyser",
+   "s": "praca",
+   "ostatnio": "12.11 18:31 – Short 18:00 wrzucony na YouTube (Metricool 425999771)"
+  },
+  {
+   "n": "Opiekun",
+   "s": "czeka",
+   "ostatnio": "11.11 – 190 obserwujących (+14)"
+  },
+  {
+   "n": "Skanery",
+   "s": "praca",
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+  },
+  {
+   "n": "Inspektor",
+   "s": "czeka",
+   "ostatnio": "11.11 11:53 – sprawdził sceny 3D i stronę"
+  },
+  {
+   "n": "Zwiadowca",
+   "s": "czeka",
+   "ostatnio": "pierwszy przebieg w nocy z soboty na niedzielę"
+  },
+  {
+   "n": "Nauczyciel",
+   "s": "czeka",
+   "ostatnio": "nowe lekcje: E-20261111-02/03"
+  },
+  {
+   "n": "Strażnik",
+   "s": "praca",
+   "ostatnio": "18:44 – serwer ok, zapora Contabo działa"
+  },
+  {
+   "n": "Hexa 💧",
+   "s": "praca",
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+  },
+  {
+   "n": "Turbo 🔥",
+   "s": "praca",
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+  },
+  {
+   "n": "Indeksy",
+   "s": "praca",
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+  },
+  {
+   "n": "Panel",
+   "s": "czeka",
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+  },
+  {
+   "n": "Kraken Donchian",
+   "s": "praca",
+   "opis": "bot krypto Freqtrade, strategia Donchian 4h na BTC (na sucho).",
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+  },
+  {
+   "n": "Kraken Momentum",
+   "s": "praca",
+   "opis": "bot krypto Freqtrade, strategia Momentum 1d na BTC (na sucho).",
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+  },
+  {
+   "n": "IB Skaner",
+   "s": "praca",
+   "opis": "obserwuje rynek przez Interactive Brokers i szuka sygnałów.",
+   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+  }
+ ]
 }
