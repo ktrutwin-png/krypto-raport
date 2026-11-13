@@ -14,6 +14,11 @@ Konektor: ElevenLabs-619b9b4c (mcp__ElevenLabs-619b9b4c__*). Konto wspólne z g�
 
 **Bieżący cykl (do odnowienia planu):** ~60 000 kredytów już zużyte 12.11 (budowa twarzy Hexy). Do odnowienia: limity tygodniowe ×0,5, wideo = 0.
 
+## HEXA W FILMACH (szef 13.11: „wdrażamy”) – ok. 12–14 tys./mies.
+- INTRO HEXY (zrobione 13.11): `site/assets/hexa_intro.mp4` (+ wersja pionowa `hexa_intro_9x16.mp4`) – ~6 s, usta zgrane, „Hi, I'm Hexa – the voice of Erl.grey83. Pure information, no noise. Let's begin.” Otwiera KAŻDY cotygodniowy film Hexy i film na /brain/. NIE generować ponownie.
+- Treść tygodnia: głos Hexy (Pola `lqJpYZ185uAhVny7fXot`, eleven_v4, ~1 kr./znak) nad nowymi grafikami/3D – 500–1000 kr. na film, z puli Lektor.
+- Raz w miesiącu nowy fragment z ruchem ust (creatify-aurora ~1 000 kr./s, max 10 s) – z puli Wideo zamiast klipu seedance.
+
 ## Zasady
 1. Przed użyciem przeczytaj tabelę „Zużycie” i policz sumę tygodnia (pon–nd) w swojej puli. Limit przekroczony → wróć do darmowych (piper, Canva, HF hexa_gen.py) i nic nie generuj w ElevenLabs.
 2. Po każdej generacji dopisz wiersz do „Zużycie” (data, agent, pula, co, model, ~kredyty). Lektor: kredyty ≈ liczba znaków tekstu (multilingual v2 / v3), flash ≈ połowa.
@@ -29,3 +34,4 @@ Konektor: ElevenLabs-619b9b4c (mcp__ElevenLabs-619b9b4c__*). Konto wspólne z g�
 | 2026-11-12 | Mózg | Rezerwa | tła wzoru raportów 22:00 i briefingu 8:00 (4 obrazy) | seedream-5-pro | ~3 300 |
 | 2026-11-13 | Mózg | Obrazy | próbka slajdu karuzeli z Hexą (referencja) | gemini-3-pro-image | ~1 830 |
 | 2026-11-13 | Mózg | Lektor | próbka głosu Hexy (Pola, EN, 10 s) do filmu /brain | eleven_v4 | ~150 |
+| 2026-11-13 | Mózg | Wideo | INTRO HEXY (głos 104 + Aurora lip-sync ~6 790) – jednorazowe, wielokrotnego użytku | eleven_v4 + creatify-aurora | ~6 900 |
