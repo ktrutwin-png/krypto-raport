@@ -105,3 +105,9 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - Ten sam film idzie na Instagram i YouTube Shorts; niedzielny ~5-min przegląd tygodnia na YouTube też w tym stylu (więcej scen, rozdziały).
 - Miniatury YouTube: 1280x720 wg wzoru okladka_wzor.jpg.
 - Nie spoczywać na laurach: co tydzień Reżyser testuje 1 ulepszenie (nowy typ sceny, przejście, dźwięk, ruch) i porównuje zasięgi; lepsze zostaje.
+
+## R30 – HEXA: KIERUNEK ROZWOJU POSTACI (13.11.2026, od szefa)
+- Wizerunek (marka/Hexa_postac.png, marka/Hexa_cala.png) i głos (Pola) są STAŁE. Nie zmieniamy, tylko ulepszamy.
+- Kierunek: coraz bardziej 3D. Docelowo każdy włos porusza się osobno (telefon/ORB, filmy). Postać ma być dopracowana do perfekcji i interaktywna.
+- Etapy: (1) filmy: lepszy lip-sync i ruch ciała, ta sama twarz; (2) ORB na telefonie: animowana Hexa 2.5D, potem 3D (model + fizyka włosów); (3) interakcja: rozmowa z ludźmi, rozpoznawanie głosu szefa, robione NA KOŃCU.
+- Każde ulepszenie porównujemy z referencją. Wygląd i rysy twarzy się nie zmieniają; zmianę wyglądu akceptuje tylko szef.
