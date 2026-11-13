@@ -11,3 +11,9 @@
 
 ## 🔐 SEJF KLUCZY
 Wszystkie klucze szefa: C:\Hexa\sejf\ na serwerze, spis w SPIS.md (bez wartości). Nowy klucz wpisuje ZAWSZE szef sam przez stronkę „Klucz dla Hexy” (wzór: laptop C:\Users\ktrut\migracja\hfform.ps1 + adb reverse na telefon). Agent nigdy nie przepisuje kluczy.
+
+## Kandydat: latent-spaces/brag (13.11.2026)
+- Skill do Claude Code: z projektu (index.html, CSS, README) robi 15-25 s film „launch” z muzyką i grafiką (silnik Hyperframes). MIT, ok. 20,1 tys. gwiazdek, darmowy, bez kluczy API.
+- Do czego u nas: promo /brain i strony jako Reel/Short.
+- Wymaga: Node 22+ (serwer ma 22.11), FFmpeg (C:\Hexa\narzedzia\ffmpeg), npx hyperframes.
+- Status: instalacja zatrzymana przez blokadę uprawnień (kod z zewnątrz) – czeka na zgodę szefa.
