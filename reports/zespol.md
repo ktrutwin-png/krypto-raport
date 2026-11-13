@@ -28,6 +28,7 @@ Za każdym razem, gdy przybywa agent, bot albo nowe repo z GitHuba, w tym samym 
 4. KARUZELA/LICZBY – wszędzie aktualna liczba z roj_status.json, nigdy z pamięci.
 5. DZIENNIK – linia „UPDATE: nowy agent/repo <nazwa> – światełko, /brain, odcinek zaplanowany” + fire Inspektora.
 Usunięcie agenta = odwrotnie (światełko, karta, licznik), bez odcinka.
+WYMIANA NA LEPSZE (repo, skill, narzędzie, agent): wszystko jest połączone – w tym samym dniu usuń stare WSZĘDZIE i wstaw nowe: `reports/skille_zespolu.md` / `reports/narzedzia.md` (stare → „Zastąpione: X przez Y (powód)”), karta i znaczek gwiazdek na /brain/, światełko i opis w roj_status.json, linki w opisach. W najbliższym odcinku Hexa mówi jednym zdaniem, co wymieniliśmy i dlaczego („We replaced X with Y – it does Z better”). Na stronie nigdy nie zostaje coś, czego już nie używamy. Inspektor co niedzielę porównuje: /brain/ ↔ roj_status.json ↔ skille_zespolu.md – każda różnica = zgłoszenie.
 
 ## Jak dowodzi Mózg
 - Rozkazy: sekcja „ROZKAZY OD MÓZGU” na górze planu każdego agenta (plan_wzrostu, plan_boty, plan_skanery). Agent czyta je najpierw, wykonuje, odhacza [x] i zapisuje dowód w „Postęp”.
