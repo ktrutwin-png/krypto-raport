@@ -1,0 +1,124 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts.css">
+<style>
+:root{--bg:#0b0b0d;--fg:#d9d6cf;--hi:#f1eee7;--mut:#b9b5ac;--gold:#c9a54a;--line:#26252a;--card:#121216}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;background:var(--bg);overflow:hidden;font-family:'Space Grotesk',sans-serif;color:var(--fg)}
+.sc{position:absolute;inset:0;opacity:0}
+.bgimg{position:absolute;inset:0;background-size:cover;background-position:50% 50%}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,13,.25) 0%,rgba(11,11,13,.1) 40%,rgba(11,11,13,.92) 72%,#0b0b0d 100%)}
+.big{font-weight:700;font-size:118px;line-height:1.02;letter-spacing:-2px;color:var(--hi)}
+.gold{color:var(--gold)}
+.lbl{font-size:30px;letter-spacing:9px;text-transform:uppercase;color:var(--mut)}
+.it{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500}
+.row{display:flex;align-items:center;gap:22px;padding:18px 26px;border:1px solid var(--line);background:var(--card);border-radius:18px;margin-bottom:14px;font-size:38px;color:var(--hi)}
+.row small{font-size:26px;color:var(--mut);margin-left:auto}
+.pill{display:inline-block;padding:14px 24px;border:1px solid #3a3420;border-radius:999px;margin:0 12px 16px 0;font-size:31px;color:var(--hi);background:#14130f}
+.pill b{color:var(--gold);font-weight:500}
+.no{display:flex;align-items:center;gap:30px;font-size:66px;font-weight:700;color:var(--hi);margin-bottom:46px}
+.no i{font-style:normal;color:#e05a5a;font-size:70px}
+.glow{position:absolute;border-radius:50%;filter:blur(60px)}
+</style></head><body>
+
+<!-- S1 hook -->
+<div class="sc" id="s1">
+  <div class="bgimg" id="s1img" style="background-image:url(hexa.webp)"></div>
+  <div class="shade"></div>
+  <div style="position:absolute;left:80px;right:80px;bottom:300px">
+    <div class="lbl" id="s1l" style="margin-bottom:30px">The real map · @erl.grey83</div>
+    <div class="big" id="s1a">One AI brain.</div>
+    <div class="big gold" id="s1b">22 workers.</div>
+  </div>
+</div>
+
+<!-- S2 reveal -->
+<div class="sc" id="s2">
+  <div class="glow" id="s2g" style="left:240px;top:420px;width:600px;height:600px;background:rgba(201,165,74,.22)"></div>
+  <img id="s2logo" src="enso.png" style="mix-blend-mode:lighten;position:absolute;left:290px;top:470px;width:500px;height:500px">
+  <div style="position:absolute;left:80px;right:80px;top:1060px;text-align:center">
+    <div class="big" id="s2a" style="font-size:96px">Built by one person.</div>
+    <div class="big it gold" id="s2b" style="font-size:110px;margin-top:10px">Not a team.</div>
+    <div class="lbl" id="s2c" style="margin-top:60px">The Brain · Erl.grey83</div>
+  </div>
+</div>
+
+<!-- S3 agenci -->
+<div class="sc" id="s3">
+  <div style="position:absolute;left:70px;right:70px;top:150px">
+    <div class="big" id="s3t" style="font-size:104px">15 AI agents.</div>
+    <div class="lbl" id="s3c" style="margin:22px 0 46px">Each one has a written plan</div>
+    <div id="s3list"></div>
+  </div>
+</div>
+
+<!-- S4 repo -->
+<div class="sc" id="s4">
+  <div style="position:absolute;left:70px;right:70px;top:420px">
+    <div class="lbl" id="s4l">Built with</div>
+    <div class="big" id="s4t" style="font-size:100px;margin:16px 0 56px">Open source<br><span class="gold">you can use too.</span></div>
+    <div id="s4list"></div>
+    <div class="lbl" id="s4c" style="margin-top:40px;letter-spacing:5px;color:var(--fg)">Every repo linked · ★ live stars</div>
+  </div>
+</div>
+
+<!-- S5 uczciwosc -->
+<div class="sc" id="s5">
+  <div style="position:absolute;left:90px;right:90px;top:520px">
+    <div class="lbl" id="s5l" style="margin-bottom:30px">No hype</div>
+    <div class="big" id="s5t" style="font-size:92px;margin-bottom:90px">What it does <span class="gold">NOT</span> do.</div>
+    <div class="no" id="n1"><i>✕</i>Trade real money</div>
+    <div class="no" id="n2"><i>✕</i>Sell signals</div>
+    <div class="no" id="n3"><i>✕</i>Promise profit</div>
+  </div>
+</div>
+
+<!-- S6 outro -->
+<div class="sc" id="s6">
+  <div class="bgimg" id="s6img" style="background-image:url(hexa.webp)"></div>
+  <div class="shade"></div>
+  <div style="position:absolute;left:80px;right:80px;bottom:250px;text-align:center">
+    <div class="it" id="s6a" style="font-size:88px;line-height:1.08;color:var(--hi)">On your path, other people's maps won't work.</div>
+    <div id="s6b" style="margin-top:70px;font-size:40px;color:var(--gold);font-weight:500">See the real map →</div>
+    <div id="s6c" style="margin-top:14px;font-size:34px;color:var(--fg)">erlgrey83-crypto-freaq.vercel.app/brain</div>
+    <div id="s6d" style="margin-top:70px;font-size:22px;color:var(--mut);letter-spacing:1px">Demo accounts only · not financial advice<br>Music: Sascha Ende, ende.app (CC BY 4.0)</div>
+  </div>
+</div>
+
+<script>
+const AG=[["🎬","Director","Content"],["📰","Noon & evening report","Content"],["🛠","Caretaker","Quality"],["📡","Scanners","Markets"],["🔍","Inspector","Control"],["🛡","Server guard","Control"],["🔎","Scout","Learning"],["📚","Teacher","Learning"],["🔧","Mechanic","Control"],["📊","Analyst","Control"],["🗓","Secretary","Owner"],["🌙","Evening report","Owner"],["💼","Sales","Business"],["✍️","Writer","Writing"],["✨","Hexa","Voice"]];
+const RP=["Claude Code","Anthropic Skills","Superpowers","Self-improvement","Basic Memory","FFmpeg","HyperFrames","three.js","Piper TTS","UI/UX Pro Max","rembg","Lightweight Charts","Playwright","Freqtrade","vectorbt","QuantStats","TradingAgents"];
+document.getElementById('s3list').innerHTML=AG.map((a,i)=>`<div class="row" id="ag${i}"><span>${a[0]}</span>${a[1]}<small>${a[2]}</small></div>`).join('');
+document.getElementById('s4list').innerHTML=RP.map((r,i)=>`<span class="pill" id="rp${i}"><b>★</b> ${r}</span>`).join('');
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const eo=x=>1-Math.pow(1-cl(x),3);
+const SC=[["s1",0,2.46],["s2",2.46,5.74],["s3",5.74,10.38],["s4",10.38,14.73],["s5",14.73,18.55],["s6",18.55,21.83]];
+function inn(el,t,t0,d=.35,dy=40){const p=eo((t-t0)/d);el.style.opacity=p;el.style.transform=`translateY(${(1-p)*dy}px)`}
+window.render=function(t){
+  for(const [id,a,b] of SC){const e=$(id);
+    let o=0; if(t>=a&&t<b){o=Math.min(cl((t-a)/.18),cl((b-t)/.16)); if(a===0)o=Math.min(1,cl((b-t)/.16)); if(id==='s6')o=cl((t-a)/.18);} e.style.opacity=o;}
+  // S1
+  $('s1img').style.transform=`scale(${1.75+t*.05})`; $('s1img').style.backgroundPosition='50% 40%';
+  inn($('s1l'),t,0.0,.3); inn($('s1a'),t,0.27); inn($('s1b'),t,1.37,.3,60);
+  // S2
+  const p2=eo((t-2.46)/.6); $('s2logo').style.transform=`scale(${.6+.4*p2}) rotate(${(1-p2)*-90}deg)`; $('s2logo').style.opacity=p2;
+  $('s2g').style.opacity=.6+.4*Math.sin(t*3);
+  inn($('s2a'),t,2.64); inn($('s2b'),t,3.55); inn($('s2c'),t,4.10);
+  // S3
+  inn($('s3t'),t,5.82); inn($('s3c'),t,6.28);
+  AG.forEach((a,i)=>inn($('ag'+i),t,6.5+i*.17,.3,50));
+  // S4
+  inn($('s4l'),t,10.45); inn($('s4t'),t,10.6);
+  RP.forEach((r,i)=>{const e=$('rp'+i),p=eo((t-11.2-i*.12)/.3);e.style.opacity=p;e.style.transform=`scale(${.7+.3*p})`});
+  inn($('s4c'),t,13.11);
+  // S5
+  inn($('s5l'),t,14.80); inn($('s5t'),t,14.9); inn($('n1'),t,15.82,.3,0); inn($('n2'),t,16.38,.3,0); inn($('n3'),t,16.93,.3,0);
+  ['n1','n2','n3'].forEach((n,i)=>{$(n).style.transform=`translateX(${(1-eo((t-[15.82,16.38,16.93][i])/.3))*-80}px)`});
+  // S6
+  $('s6img').style.transform=`scale(${1.9-(t-18.55)*.04})`; $('s6img').style.backgroundPosition='50% 38%';
+  $('s6img').style.filter='brightness(.75)';
+  inn($('s6a'),t,18.6,.45); inn($('s6b'),t,19.64); inn($('s6c'),t,19.9); inn($('s6d'),t,20.19);
+};
+render(0);
+</script></body></html>

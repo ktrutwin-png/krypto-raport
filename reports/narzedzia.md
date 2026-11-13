@@ -16,4 +16,4 @@ Wszystkie klucze szefa: C:\Hexa\sejf\ na serwerze, spis w SPIS.md (bez wartości
 - Skill do Claude Code: z projektu (index.html, CSS, README) robi 15-25 s film „launch” z muzyką i grafiką (silnik Hyperframes). MIT, ok. 20,1 tys. gwiazdek, darmowy, bez kluczy API.
 - Do czego u nas: promo /brain i strony jako Reel/Short.
 - Wymaga: Node 22+ (serwer ma 22.11), FFmpeg (C:\Hexa\narzedzia\ffmpeg), npx hyperframes.
-- Status: instalacja zatrzymana przez blokadę uprawnień (kod z zewnątrz) – czeka na zgodę szefa.
+- Status 13.11 03:27: zgoda szefa; sklonowany na serwer do C:\Hexa\narzedzia\brag. Pierwszy film (wideo/brag/brag.mp4, 22 s, pionowy) zrobiony trybem brag-slim. Muzyka z paczki: CC BY 4.0, zawsze podpis „Music: Sascha Ende, ende.app (CC BY 4.0)”.
