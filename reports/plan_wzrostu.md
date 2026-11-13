@@ -111,3 +111,9 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - Kierunek: coraz bardziej 3D. Docelowo każdy włos porusza się osobno (telefon/ORB, filmy). Postać ma być dopracowana do perfekcji i interaktywna.
 - Etapy: (1) filmy: lepszy lip-sync i ruch ciała, ta sama twarz; (2) ORB na telefonie: animowana Hexa 2.5D, potem 3D (model + fizyka włosów); (3) interakcja: rozmowa z ludźmi, rozpoznawanie głosu szefa, robione NA KOŃCU.
 - 13.11 02:31 szef doprecyzował: Claude może sam ULEPSZAĆ Hexę (jakość, 3D, ruch, włosy, mimika, nowe modele i techniki), ale GŁOS (Pola) i WIZERUNEK (twarz, postać, styl z referencji) ZOSTAJĄ bez zmian. Każde ulepszenie porównujemy z referencją; szef dostaje porównanie przed i po.
+
+## R31 – DM Z LINKIEM ZA „BRAIN” (13.11.2026, decyzja szefa)
+- Komentarz „BRAIN” pod postem/Reelem → automatyczny DM z linkiem do /brain, ALE tylko gdy osoba obserwuje @erl.grey83. Nie obserwuje → linku nie wysyłamy (w DM tylko prośba: „zaobserwuj i napisz BRAIN jeszcze raz”).
+- Tylko na słowo BRAIN. Na inne DM-y dalej odpowiada człowiek (zgodnie z /brain).
+- Do sprawdzenia przez Claude: narzędzie (np. ManyChat; darmowy plan, warunek „is follower”, zgodność z zasadami Meta, prywatna odpowiedź na komentarz); podłączenie do IG robi szef sam (logowanie).
+- Po wdrożeniu poprawić zdanie na /brain o DM-ach, żeby dalej było prawdziwe.
