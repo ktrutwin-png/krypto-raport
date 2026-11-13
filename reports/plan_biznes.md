@@ -31,3 +31,9 @@ Zasada: agenci PRZYGOTOWUJĄ (oferty, produkty, szkice wiadomości); szef wysył
 ## LEKCJE (📚 Nauczyciel dopisuje co tydzień – czytaj przed pracą i stosuj)
 - (pierwsze lekcje po niedzieli 15.11.2026)
 
+
+## Lista oczekująca: publiczne repo marki (decyzja szefa 13.11.2026)
+- Idea: oddać społeczności coś w zamian — publikować wybrane narzędzia jako open source pod marką Erl.grey83.
+- Kandydaci: generator Ensō sumi-e (tools/enso_sumie.py), szablon „mózgu z agentami” (bez sekretów).
+- Zasada: zero kluczy, haseł, ID kont, danych szefa; przed publikacją skan sekretów + licencja MIT.
+- Z czasem: osobny agent „Opiekun Repo” (publikacja, odpowiedzi na zgłoszenia, gwiazdki). Start: gdy marka i zespół okrzepną — nie wcześniej niż po kursie AI (grudzień).
