@@ -19,6 +19,16 @@ Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia
 ## ✨ RÓJ HEXY – OBOWIĄZUJE WSZYSTKICH (13.11, szef: „czy ilość agentów zgadza się z ilością światełek?”)
 Każdy agent i bot ma swoje światełko w `reports/roj_status.json` (aplikacja ORB czyta go co 10 min). Po KAŻDYM przebiegu zaktualizuj swój wpis: `s` = praca / czeka / blad, `ostatnio` = data + jedno zdanie. Nowy agent lub bot = Mózg dopisuje wpis. JSON musi zostać poprawny (`python -m json.tool`). Inspektor co niedzielę sprawdza, czy liczba światełek = liczba działających zadań i botów.
 
+
+## ➕ NOWY AGENT / BOT / REPO – PROCEDURA (13.11, szef: „przybywa agent → przybywa światełko, zmiana na stronie i odcinek Hexy”)
+Za każdym razem, gdy przybywa agent, bot albo nowe repo z GitHuba, w tym samym dniu:
+1. ŚWIATEŁKO – Mózg dopisuje wpis do `reports/roj_status.json` (aplikacja ORB pokaże je sama).
+2. STRONA /brain/ – karta agenta (co robi, prawdziwie) w sekcji agentów, licznik „N workers” i „N AI agents” = liczba wpisów w roj_status.json; nowe repo → karta w „Built with” z linkiem i znaczkiem gwiazdek (`class="star" data-repo="owner/repo"`). Wdrożenie na Vercel + sprawdzenie na telefonie.
+3. ODCINEK HEXY – Reżyser w najbliższym cotygodniowym odcinku (R27/R28): intro → Hexa przedstawia nowego agenta („Meet our new agent: …”), co robi i z jakiego repo jest zbudowany (nazwa projektu na ekranie, link w opisie YT, „link in bio” na IG) → jeśli pasuje, „PREVIOUSLY” z odcinka o agencie, z którym współpracuje.
+4. KARUZELA/LICZBY – wszędzie aktualna liczba z roj_status.json, nigdy z pamięci.
+5. DZIENNIK – linia „UPDATE: nowy agent/repo <nazwa> – światełko, /brain, odcinek zaplanowany” + fire Inspektora.
+Usunięcie agenta = odwrotnie (światełko, karta, licznik), bez odcinka.
+
 ## Jak dowodzi Mózg
 - Rozkazy: sekcja „ROZKAZY OD MÓZGU” na górze planu każdego agenta (plan_wzrostu, plan_boty, plan_skanery). Agent czyta je najpierw, wykonuje, odhacza [x] i zapisuje dowód w „Postęp”.
 - Umiejętności: sekcja „UMIEJĘTNOŚCI I NARZĘDZIA” w tym samym planie. Brakuje narzędzia → agent pisze „PROŚBA DO MÓZGU”, Mózg podpina.
