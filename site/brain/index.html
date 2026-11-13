@@ -23,13 +23,17 @@ a{color:var(--gold)}a:hover{color:#ead18a}
 header{padding:22px 0;border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .logo{display:flex;align-items:center;gap:10px;color:var(--hi);text-decoration:none;font-weight:300;letter-spacing:.32em;font-size:13px}
-.hero{padding:clamp(48px,9vw,96px) 0 32px;background:radial-gradient(60% 70% at 50% 0%,rgba(201,165,74,.14),transparent 70%)}
+.hero{padding:clamp(28px,5vw,56px) 0 32px;background:radial-gradient(60% 70% at 50% 0%,rgba(201,165,74,.14),transparent 70%)}
 .kick{color:var(--gold);letter-spacing:.24em;font-size:12px;text-transform:uppercase}
 h1{font-size:clamp(38px,7vw,72px);line-height:1.02;color:var(--hi);font-weight:700;letter-spacing:-.02em;margin:12px 0 16px}
 h1 em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--gold)}
 .lead{max-width:640px;color:var(--mut);font-size:18px}
 h2{color:var(--hi);font-size:clamp(24px,3.6vw,34px);margin:56px 0 8px;letter-spacing:-.01em}
 .sub{color:var(--mut);margin-bottom:22px}
+.hexa{position:relative;margin:0 0 28px;border-radius:20px;overflow:hidden;border:1px solid rgba(201,165,74,.35);box-shadow:0 30px 80px -30px rgba(120,90,255,.45)}
+.hexa img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.hexa::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,11,13,.85))}
+.hexa figcaption{position:absolute;left:18px;bottom:14px;z-index:1;color:var(--gold);font-size:12px;letter-spacing:.24em;text-transform:uppercase}
 .brain{margin-top:28px;border:1px solid var(--gold);border-radius:18px;padding:22px;background:linear-gradient(180deg,rgba(201,165,74,.10),rgba(201,165,74,.02))}
 .brain b{color:var(--hi)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
@@ -62,6 +66,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
 
 <main class="wrap">
 <section class="hero">
+ <figure class="hexa"><picture><source media="(max-width:700px)" srcset="/assets/hexa_m.webp"><img src="/assets/hexa.webp" width="1280" height="720" alt="Hexa – the face and voice of Erl.grey83" fetchpriority="high"></picture><figcaption>Hexa · your guide through the map</figcaption></figure>
  <p class="kick">The real map · updated 13 Nov 2026</p>
  <h1>One AI brain.<br><em>22 workers.</em></h1>
  <p class="lead">This is the actual system that runs @erl.grey83 – built by one person, not a team. Below: every part, what it really does, and what it does <b>not</b> do. No hype, no screenshots of fake numbers.</p>
