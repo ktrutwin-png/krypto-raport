@@ -47,6 +47,9 @@ th{color:var(--gold);font-weight:500;font-size:12px;letter-spacing:.14em;text-tr
 .no li{margin:4px 0 4px 18px}
 .cta{margin:56px 0;text-align:center;padding:36px 20px;border:1px solid var(--line);border-radius:18px}
 .cta a.btn{display:inline-block;margin-top:14px;background:var(--gold);color:#0b0b0d;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:99px}
+.star{display:inline-block;font-size:12px;font-weight:500;color:var(--gold);text-decoration:none;border:1px solid rgba(201,165,74,.45);border-radius:99px;padding:1px 8px;margin-left:4px;vertical-align:middle;white-space:nowrap}
+.star:hover{background:var(--gold);color:#0b0b0d}
+.thanks{margin-top:14px;color:var(--mut);font-size:15px}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);font-size:13px}
 @media (max-width:560px){.wrap{padding:0 16px}th:nth-child(3),td:nth-child(3){display:none}}
 </style>
@@ -118,24 +121,24 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
 </table>
 
 <h2>Built with – open source you can use too</h2>
-<p class="sub">Everything below is public on GitHub. This is exactly what our agents run on – start with Claude Code and add the rest as you need it.</p>
+<p class="sub">Everything below is public on GitHub. This is exactly what our agents run on – start with Claude Code and add the rest as you need it. <b style="color:var(--hi)">★ = GitHub stars, live.</b> These projects gave us a lot – if one helps you too, give it a star.</p>
 <div class="grid">
- <div class="card"><span class="tag">The brain</span><h3><a href="https://github.com/anthropics/claude-code">Claude Code</a></h3><p>The agent that runs everything. Our agents are its scheduled tasks.</p></div>
- <div class="card"><span class="tag">Skills</span><h3><a href="https://github.com/anthropics/skills">Anthropic Skills</a></h3><p>Official skill library – how to teach an agent a new job with one SKILL.md file.</p></div>
- <div class="card"><span class="tag">Skills</span><h3><a href="https://github.com/obra/superpowers">Superpowers</a></h3><p>Debugging and "prove it before you say done" – keeps agents honest.</p></div>
- <div class="card"><span class="tag">Learning</span><h3><a href="https://github.com/pskoett/pskoett-ai-skills">Self-improvement skills</a></h3><p>Agents log their mistakes and turn them into rules.</p></div>
- <div class="card"><span class="tag">Memory</span><h3><a href="https://github.com/basicmachines-co/basic-memory">Basic Memory</a></h3><p>Shared notes every agent searches before it starts.</p></div>
- <div class="card"><span class="tag">Video</span><h3><a href="https://github.com/FFmpeg/FFmpeg">FFmpeg</a></h3><p>Cuts, mixes and renders every video.</p></div>
- <div class="card"><span class="tag">Video</span><h3><a href="https://github.com/heygen-com/hyperframes">HyperFrames</a></h3><p>HTML → MP4: animated charts and titles.</p></div>
- <div class="card"><span class="tag">3D</span><h3><a href="https://github.com/mrdoob/three.js">three.js</a></h3><p>The real 3D scenes in our videos.</p></div>
- <div class="card"><span class="tag">Voice</span><h3><a href="https://github.com/rhasspy/piper">Piper TTS</a></h3><p>Free offline voice – our fallback narrator.</p></div>
- <div class="card"><span class="tag">Design</span><h3><a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill">UI/UX Pro Max</a></h3><p>Layout, colour and type rules for every graphic.</p></div>
- <div class="card"><span class="tag">Images</span><h3><a href="https://github.com/danielgatis/rembg">rembg</a></h3><p>Background removal for covers and thumbnails.</p></div>
- <div class="card"><span class="tag">Charts</span><h3><a href="https://github.com/tradingview/lightweight-charts">Lightweight Charts</a></h3><p>The live price chart on our site.</p></div>
- <div class="card"><span class="tag">Testing</span><h3><a href="https://github.com/microsoft/playwright">Playwright</a></h3><p>Agents open the site and check it like a person would.</p></div>
- <div class="card"><span class="tag">Crypto bots</span><h3><a href="https://github.com/freqtrade/freqtrade">Freqtrade</a></h3><p>Crypto bot framework – we run it in dry-run (no money).</p></div>
- <div class="card"><span class="tag">Backtests</span><h3><a href="https://github.com/polakowo/vectorbt">vectorbt</a> · <a href="https://github.com/ranaroussi/quantstats">QuantStats</a></h3><p>Testing a strategy honestly before any bot changes.</p></div>
- <div class="card"><span class="tag">Research</span><h3><a href="https://github.com/TauricResearch/TradingAgents">TradingAgents</a></h3><p>Multi-agent market research – we use parts of it for analysis only.</p></div>
+ <div class="card"><span class="tag">The brain</span><h3><a href="https://github.com/anthropics/claude-code">Claude Code</a> <a class="star" data-repo="anthropics/claude-code" href="https://github.com/anthropics/claude-code/stargazers" aria-label="GitHub stars of anthropics/claude-code">★ <span>…</span></a></h3><p>The agent that runs everything. Our agents are its scheduled tasks.</p></div>
+ <div class="card"><span class="tag">Skills</span><h3><a href="https://github.com/anthropics/skills">Anthropic Skills</a> <a class="star" data-repo="anthropics/skills" href="https://github.com/anthropics/skills/stargazers" aria-label="GitHub stars of anthropics/skills">★ <span>…</span></a></h3><p>Official skill library – how to teach an agent a new job with one SKILL.md file.</p></div>
+ <div class="card"><span class="tag">Skills</span><h3><a href="https://github.com/obra/superpowers">Superpowers</a> <a class="star" data-repo="obra/superpowers" href="https://github.com/obra/superpowers/stargazers" aria-label="GitHub stars of obra/superpowers">★ <span>…</span></a></h3><p>Debugging and "prove it before you say done" – keeps agents honest.</p></div>
+ <div class="card"><span class="tag">Learning</span><h3><a href="https://github.com/pskoett/pskoett-ai-skills">Self-improvement skills</a> <a class="star" data-repo="pskoett/pskoett-ai-skills" href="https://github.com/pskoett/pskoett-ai-skills/stargazers" aria-label="GitHub stars of pskoett/pskoett-ai-skills">★ <span>…</span></a></h3><p>Agents log their mistakes and turn them into rules.</p></div>
+ <div class="card"><span class="tag">Memory</span><h3><a href="https://github.com/basicmachines-co/basic-memory">Basic Memory</a> <a class="star" data-repo="basicmachines-co/basic-memory" href="https://github.com/basicmachines-co/basic-memory/stargazers" aria-label="GitHub stars of basicmachines-co/basic-memory">★ <span>…</span></a></h3><p>Shared notes every agent searches before it starts.</p></div>
+ <div class="card"><span class="tag">Video</span><h3><a href="https://github.com/FFmpeg/FFmpeg">FFmpeg</a> <a class="star" data-repo="FFmpeg/FFmpeg" href="https://github.com/FFmpeg/FFmpeg/stargazers" aria-label="GitHub stars of FFmpeg/FFmpeg">★ <span>…</span></a></h3><p>Cuts, mixes and renders every video.</p></div>
+ <div class="card"><span class="tag">Video</span><h3><a href="https://github.com/heygen-com/hyperframes">HyperFrames</a> <a class="star" data-repo="heygen-com/hyperframes" href="https://github.com/heygen-com/hyperframes/stargazers" aria-label="GitHub stars of heygen-com/hyperframes">★ <span>…</span></a></h3><p>HTML → MP4: animated charts and titles.</p></div>
+ <div class="card"><span class="tag">3D</span><h3><a href="https://github.com/mrdoob/three.js">three.js</a> <a class="star" data-repo="mrdoob/three.js" href="https://github.com/mrdoob/three.js/stargazers" aria-label="GitHub stars of mrdoob/three.js">★ <span>…</span></a></h3><p>The real 3D scenes in our videos.</p></div>
+ <div class="card"><span class="tag">Voice</span><h3><a href="https://github.com/rhasspy/piper">Piper TTS</a> <a class="star" data-repo="rhasspy/piper" href="https://github.com/rhasspy/piper/stargazers" aria-label="GitHub stars of rhasspy/piper">★ <span>…</span></a></h3><p>Free offline voice – our fallback narrator.</p></div>
+ <div class="card"><span class="tag">Design</span><h3><a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill">UI/UX Pro Max</a> <a class="star" data-repo="nextlevelbuilder/ui-ux-pro-max-skill" href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/stargazers" aria-label="GitHub stars of nextlevelbuilder/ui-ux-pro-max-skill">★ <span>…</span></a></h3><p>Layout, colour and type rules for every graphic.</p></div>
+ <div class="card"><span class="tag">Images</span><h3><a href="https://github.com/danielgatis/rembg">rembg</a> <a class="star" data-repo="danielgatis/rembg" href="https://github.com/danielgatis/rembg/stargazers" aria-label="GitHub stars of danielgatis/rembg">★ <span>…</span></a></h3><p>Background removal for covers and thumbnails.</p></div>
+ <div class="card"><span class="tag">Charts</span><h3><a href="https://github.com/tradingview/lightweight-charts">Lightweight Charts</a> <a class="star" data-repo="tradingview/lightweight-charts" href="https://github.com/tradingview/lightweight-charts/stargazers" aria-label="GitHub stars of tradingview/lightweight-charts">★ <span>…</span></a></h3><p>The live price chart on our site.</p></div>
+ <div class="card"><span class="tag">Testing</span><h3><a href="https://github.com/microsoft/playwright">Playwright</a> <a class="star" data-repo="microsoft/playwright" href="https://github.com/microsoft/playwright/stargazers" aria-label="GitHub stars of microsoft/playwright">★ <span>…</span></a></h3><p>Agents open the site and check it like a person would.</p></div>
+ <div class="card"><span class="tag">Crypto bots</span><h3><a href="https://github.com/freqtrade/freqtrade">Freqtrade</a> <a class="star" data-repo="freqtrade/freqtrade" href="https://github.com/freqtrade/freqtrade/stargazers" aria-label="GitHub stars of freqtrade/freqtrade">★ <span>…</span></a></h3><p>Crypto bot framework – we run it in dry-run (no money).</p></div>
+ <div class="card"><span class="tag">Backtests</span><h3><a href="https://github.com/polakowo/vectorbt">vectorbt</a> <a class="star" data-repo="polakowo/vectorbt" href="https://github.com/polakowo/vectorbt/stargazers" aria-label="GitHub stars of polakowo/vectorbt">★ <span>…</span></a> · <a href="https://github.com/ranaroussi/quantstats">QuantStats</a> <a class="star" data-repo="ranaroussi/quantstats" href="https://github.com/ranaroussi/quantstats/stargazers" aria-label="GitHub stars of ranaroussi/quantstats">★ <span>…</span></a></h3><p>Testing a strategy honestly before any bot changes.</p></div>
+ <div class="card"><span class="tag">Research</span><h3><a href="https://github.com/TauricResearch/TradingAgents">TradingAgents</a> <a class="star" data-repo="TauricResearch/TradingAgents" href="https://github.com/TauricResearch/TradingAgents/stargazers" aria-label="GitHub stars of TauricResearch/TradingAgents">★ <span>…</span></a></h3><p>Multi-agent market research – we use parts of it for analysis only.</p></div>
 </div>
 
 <h2>What this system does NOT do</h2>
@@ -155,5 +158,23 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
 </main>
 
 <footer><div class="wrap">For information only, not financial advice. All trading shown is on demo accounts. · <a href="/">erl.grey83</a></div></footer>
+<script>
+(function(){
+ var K='erl_stars_v1',DAY=864e5,c={};
+ try{c=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+ function fmt(n){return n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?(n/1e3).toFixed(n>=1e4?0:1)+'k':String(n)}
+ function show(r,n){document.querySelectorAll('.star[data-repo="'+r+'"] span').forEach(function(s){s.textContent=fmt(n)})}
+ document.querySelectorAll('.star[data-repo]').forEach(function(a){
+  var r=a.dataset.repo,h=c[r];
+  if(h&&Date.now()-h.t<DAY){show(r,h.n);return}
+  if(h)show(r,h.n);
+  fetch('https://api.github.com/repos/'+r).then(function(x){return x.ok?x.json():null}).then(function(d){
+   if(!d||typeof d.stargazers_count!=='number'){if(!h)a.querySelector('span').textContent='GitHub';return}
+   c[r]={n:d.stargazers_count,t:Date.now()};show(r,d.stargazers_count);
+   try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}
+  }).catch(function(){if(!h)a.querySelector('span').textContent='GitHub'})
+ });
+})();
+</script>
 </body>
 </html>
