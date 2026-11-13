@@ -37,3 +37,12 @@ Zasada: agenci PRZYGOTOWUJĄ (oferty, produkty, szkice wiadomości); szef wysył
 - Kandydaci: generator Ensō sumi-e (tools/enso_sumie.py), szablon „mózgu z agentami” (bez sekretów).
 - Zasada: zero kluczy, haseł, ID kont, danych szefa; przed publikacją skan sekretów + licencja MIT.
 - Z czasem: osobny agent „Opiekun Repo” (publikacja, odpowiedzi na zgłoszenia, gwiazdki). Start: gdy marka i zespół okrzepną — nie wcześniej niż po kursie AI (grudzień).
+
+## Głos szefa — plan (decyzja 14.11.2026, bez pośpiechu: najpierw książka)
+1. TEST GŁOSU (ElevenLabs Creator, Instant Voice Clone — w cenie planu):
+   - szef nagrywa ~2 min po polsku + ~2 min po angielsku (spokojnie, cicho w pokoju, telefon 20–30 cm od ust);
+   - teksty do nagrania: fragment „świeca spada” (PL) i jego tłumaczenie (EN) — Claude przygotuje kartkę do czytania;
+   - porównanie ten sam fragment: głos szefa (klon) vs Hexa (Pola), PL i EN; decyzja szefa.
+2. AUDIOBOOK: jeśli klon brzmi jak szef i mu się podoba → książkę czyta głos szefa; jeśli nie → czyta Hexa, szef nagrywa tylko wstęp + motto. Przed publikacją sprawdzić aktualne zasady AI-narracji (Audible/ACX, Storytel, Audioteka).
+3. HEXA ROZPOZNAJE SZEFA (później): weryfikacja mówcy (odcisk głosu z tych samych nagrań, lokalnie na telefonie/serwerze). Polecenia wykonuje TYLKO na głos szefa; z innymi może rozmawiać, ale nic nie uruchamia (bezpieczeństwo). Odpowiedź dla szefa ma pierwszeństwo.
+- Nagrania głosu szefa = dane prywatne: tylko serwer + kopia szyfrowana, nigdy w publicznym repo.
