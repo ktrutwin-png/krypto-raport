@@ -44,3 +44,4 @@ Wieczór 13.11 (przy laptopie, krok po kroku):
 3. Przegląd laptopa: lista wszystkiego, co jest związane z firmą (Claude-telefon, orb-src, platform-tools/strażnik ADB, MT5 + MetaEditor Mechanika, kraken-boty, LivePortrait, foldery testów botów, pliki na pulpicie).
 4. Przeniesienie na serwer tego, czego jeszcze tam nie ma (porównanie z C:\Hexa) + strażnik połączenia z telefonem i kompilacja MQL5 na serwerze.
 5. Usuwanie z laptopa TYLKO z listy i po „tak” szefa (zasada: nic nie kasujemy bez listy).
+6. ZASADA 3 KOPII (szef 13.11: „ubezpiecza nam całą firmę”): (1) serwer = praca; (2) codzienna nocna kopia POZA serwerem (Google Drive szefa albo prywatne repo; hasła/tokeny zaszyfrowane, nigdy w publicznym repo); (3) migawka całego serwera w Contabo. Raz w miesiącu próbne odtworzenie jednego pliku – kopia, której nie sprawdzono, nie istnieje.
