@@ -14,6 +14,8 @@ Scena 3D zamiast obrazu (od 11.11.2026): "d3": {"typ": "waga", "p": {"przechyl":
 (tools/3d/scena.js; typy i parametry: tools/3d/README.md) na dlugosc lektora. "img" moze tez byc gotowym filmem (.mp4/.mov).
 Naglowki same dopasowuja wielkosc (jedna linia = jeden wiersz, bez osieroconych slow). U gory zloty pasek postepu.
 style "cinema" = stary wyglad (duza liczba "big" + "sub" na srodku).
+"glos": "lektor1.mp3" (od 12.11.2026) – gotowe nagranie lektora (ElevenLabs) zamiast piper, bez obnizania tonu; dziala tez przy pustym "say";
+sciezka wzgledna liczona od folderu scen; brak pliku = ostrzezenie "GLOS brak pliku" i powrot do piper. Budzet kredytow: reports/elevenlabs_budzet.md.
 Glos: piper en_US-ryan-high (energiczny meski), obnizony o ~10% (KINO_PITCH, domyslnie 0.9); KINO_VOICE nadpisuje model.
 Wynik: reel.mp4 (1080x1920, 30 fps) + cover.jpg."""
 import json, os, subprocess, sys, wave, asyncio, re, html as H
@@ -118,10 +120,12 @@ asyncio.run(overlays())
 DUR = []
 for i, s in enumerate(S):
     last = i == len(S) - 1
-    if s.get("end") or not s.get("say", "").strip():
+    gl = s.get("glos")  # gotowe nagranie lektora (np. ElevenLabs mp3/wav) - wtedy bez piper i bez obnizania tonu; sciezka wzgledna = od folderu scen
+    if gl and not s.get("end") and not os.path.exists(gl):
+        print(f"GLOS brak pliku: {gl} (scena {i + 1}) -> " + ("piper z 'say'" if s.get("say", "").strip() else "cisza 2,2 s"), file=sys.stderr); gl = None
+    if s.get("end") or not (s.get("say", "").strip() or gl):
         L = 2.2; run(["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-t", f"{L - (0 if last else FADE):.2f}", f"_p{i}.wav"]); DUR.append(L); continue
-    gl = s.get("glos")  # gotowe nagranie lektora (np. ElevenLabs mp3/wav) - wtedy bez piper i bez obnizania tonu
-    if gl and os.path.exists(gl):
+    if gl:
         run(["ffmpeg", "-y", "-i", gl, "-ar", "44100", "-ac", "1", f"_a{i}.wav"]); pitch_s = 1.0
     else:
         assert VOICE and os.path.exists(VOICE), "brak glosu piper w tools/reel/voice (patrz tools/reel/README.md)"
