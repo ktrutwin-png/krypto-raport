@@ -123,3 +123,4 @@ UPDATE: 2026-11-12 23:55 (Mózg) nowy wzór raportu 22:00 i briefingu 8:00 – t
 2026-11-13 00:10 | Mózg | ROZKAZ R24 dla Reżysera: karuzela IG „ONE AI BRAIN · 8 AGENTS” na sobotę 14.11 ~19:00 | ok
 2026-11-13 00:20 | Mózg | ROZKAZY R25 (Hexa jako postać marki) i R26 (słowo w komentarzu + strona /<słowo>/); odpowiedzi na słowa robi Reżyser przy każdym przebiegu | ok
 UPDATE: 2026-11-13 00:35 (Mózg) strona /brain/ na żywo (mapa systemu + 17 linków do repo open source), wdrożenie dpl_4HNetuqY6aXZ1CV2xMJUi9YMFQdc; R27: Hexa prowadzi /brain/ filmem
+UPDATE: 2026-11-13 02:40 (Opiekun) tools/3d/sceny3d.html – scena 3D "liczba": start animacji duzy i czytelny od klatki 0 (skala 0.86 zamiast 0.55, obrot -0.42 zamiast -1.1 rad); test render przed/po w scratchpadzie OK

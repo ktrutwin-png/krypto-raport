@@ -193,9 +193,9 @@ function sLiczba() {
   const cy = FLOOR_Y + (h * s) / 2 + (sub ? 1.15 : 0.45);
   return t => {
     const k = eback(t / 0.9);
-    g.scale.setScalar(0.55 + 0.45 * k);
+    g.scale.setScalar(0.86 + 0.14 * k);                       // klatka 0: liczba juz duza i czytelna (plan wzrostu, R23a), dalej lekki "dojazd"
     g.position.set(0, cy + Math.sin(t * 1.4) * 0.05, 0);
-    g.rotation.set(Math.sin(t * 0.9) * 0.05, -1.1 * (1 - eo(t / 1.1)) + Math.sin(t * 0.85 + 0.4) * 0.34, 0);
+    g.rotation.set(Math.sin(t * 0.9) * 0.05, -0.42 * (1 - eo(t / 1.1)) + Math.sin(t * 0.85 + 0.4) * 0.34, 0);
     orbit(t, -0.12, 0.12, cy + 0.9, [0, cy - 0.05, 0]);
   };
 }
