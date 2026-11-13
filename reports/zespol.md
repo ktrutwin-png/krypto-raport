@@ -15,6 +15,10 @@ Szef rozmawia TYLKO z Claude („mózg”). Claude prowadzi agentów, uczy ich, 
 
 Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia szef, przegląd miesięczny 7.12.2026.
 
+
+## ✨ RÓJ HEXY – OBOWIĄZUJE WSZYSTKICH (13.11, szef: „czy ilość agentów zgadza się z ilością światełek?”)
+Każdy agent i bot ma swoje światełko w `reports/roj_status.json` (aplikacja ORB czyta go co 10 min). Po KAŻDYM przebiegu zaktualizuj swój wpis: `s` = praca / czeka / blad, `ostatnio` = data + jedno zdanie. Nowy agent lub bot = Mózg dopisuje wpis. JSON musi zostać poprawny (`python -m json.tool`). Inspektor co niedzielę sprawdza, czy liczba światełek = liczba działających zadań i botów.
+
 ## Jak dowodzi Mózg
 - Rozkazy: sekcja „ROZKAZY OD MÓZGU” na górze planu każdego agenta (plan_wzrostu, plan_boty, plan_skanery). Agent czyta je najpierw, wykonuje, odhacza [x] i zapisuje dowód w „Postęp”.
 - Umiejętności: sekcja „UMIEJĘTNOŚCI I NARZĘDZIA” w tym samym planie. Brakuje narzędzia → agent pisze „PROŚBA DO MÓZGU”, Mózg podpina.

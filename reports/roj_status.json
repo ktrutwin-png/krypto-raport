@@ -83,6 +83,42 @@
    "s": "praca",
    "opis": "obserwuje rynek przez Interactive Brokers i szuka sygnałów.",
    "ostatnio": "11.11 21:02 – proces działa na serwerze"
+  },
+  {
+   "n": "Mechanik",
+   "s": "praca",
+   "opis": "Naprawy i boty: codziennie 04:41 bierze zgłoszenia od Inspektora i naprawia.",
+   "ostatnio": "12.11 04:56 – przebieg napraw"
+  },
+  {
+   "n": "Sekretarz",
+   "s": "praca",
+   "opis": "Poranny briefing 8:00: kalendarz i poczta szefa, grafika na Telegram.",
+   "ostatnio": "12.11 05:52 – briefing"
+  },
+  {
+   "n": "Raport 22",
+   "s": "praca",
+   "opis": "Raport dnia 22:00: zysk i strata wszystkich botów, grafika na Telegram.",
+   "ostatnio": "12.11 21:54 – raport wysłany"
+  },
+  {
+   "n": "Handlowiec",
+   "s": "praca",
+   "opis": "Biznes: oferty usług AI dla firm, produkty, programy partnerskie.",
+   "ostatnio": "12.11 14:10 – praca nad ofertą"
+  },
+  {
+   "n": "Analityk",
+   "s": "czeka",
+   "opis": "Sobota: kontrola jakości wszystkich agentów i raport tygodnia z nagrodami.",
+   "ostatnio": "czeka na sobotę 14.11"
+  },
+  {
+   "n": "Pisarz",
+   "s": "czeka",
+   "opis": "Niedziela: książka „Filozofia tradingu” – kilka rozdziałów naraz, wg nastroju szefa i rynku.",
+   "ostatnio": "czeka na niedzielę 15.11"
   }
  ]
 }
