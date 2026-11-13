@@ -24,3 +24,8 @@ Wszystkie klucze szefa: C:\Hexa\sejf\ na serwerze, spis w SPIS.md (bez wartości
 - Dla Reżysera i Handlowca: hooki, scenariusze Reelsów, opisy i CTA, diagnoza słabego Reela. Wiedzę bierzemy, reklam ich apki nie.
 - find-skills (vercel-labs) było już zainstalowane 11.11.
 - Gwiazdka dla obu repo — na liście gwiazdek ~25.11.
+
+## Zasada „mało, ale najlepsze” (13.11.2026, decyzja szefa)
+- Co niedzielę Inspektor sprawdza, których narzędzi/umiejętności agenci faktycznie użyli w ostatnim tygodniu.
+- Nieużywane przez 30 dni → na listę do usunięcia w tygodniowym raporcie zespołu; usuwamy po „tak” szefa.
+- Nowe narzędzie wchodzi tylko, jeśli robi coś, czego obecne nie robią, albo robi to wyraźnie lepiej.
