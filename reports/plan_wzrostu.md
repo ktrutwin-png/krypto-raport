@@ -110,4 +110,4 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - Wizerunek (marka/Hexa_postac.png, marka/Hexa_cala.png) i głos (Pola) są STAŁE. Nie zmieniamy, tylko ulepszamy.
 - Kierunek: coraz bardziej 3D. Docelowo każdy włos porusza się osobno (telefon/ORB, filmy). Postać ma być dopracowana do perfekcji i interaktywna.
 - Etapy: (1) filmy: lepszy lip-sync i ruch ciała, ta sama twarz; (2) ORB na telefonie: animowana Hexa 2.5D, potem 3D (model + fizyka włosów); (3) interakcja: rozmowa z ludźmi, rozpoznawanie głosu szefa, robione NA KOŃCU.
-- Każde ulepszenie porównujemy z referencją. Wygląd i rysy twarzy się nie zmieniają; zmianę wyglądu akceptuje tylko szef.
+- Każde ulepszenie porównujemy z referencją. 13.11 02:31 szef pozwolił: jeśli Claude znajdzie coś lepszego (model, styl, technikę), może ulepszać i zmieniać Hexę sam. Zostaje rozpoznawalna (ta sama postać i głos), a szef dostaje porównanie przed i po.
