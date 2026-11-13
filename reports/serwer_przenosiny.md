@@ -35,3 +35,12 @@ Zasady bez zmian: konta demo/paper, nie uruchamiam botów handlujących sam, nie
 - 9.11 ~20:00 MT5 przestał odpowiadać (panel: „MT5 nie odpowiada”), ~20:40 padł DC Remote, ~23:45 stanęły boty, pulpit zawieszony. 10.11 10:28 restart z panelu Contabo (szef), 10:35 IB zalogowany, 10:36 START_WSZYSTKO (szef) – wszystko działa.
 - Zabezpieczenia (szef „tak” 10.11 10:39): (1) zadanie „🛡️ Strażnik serwera” co godzinę (trig_01QkTbZga6uyx7jBqVQgjieB) – log reports/straz_serwera.csv, alarm do szefa tylko gdy coś padło; (2) pagefile 8 GB stały (było 1,9 GB; zadziała po następnym restarcie), Windows Update bez automatycznego restartu (NoAutoRebootWithLoggedOnUsers=1, AUOptions=3); (3) autostart START_WSZYSTKO.lnk w Autostarcie Administratora (po zalogowaniu RDP). IB po restarcie nadal wymaga logowania szefa.
 - Do obserwacji: RAM 8 GB, nie trzymać na serwerze otwartej aplikacji Claude/Edge bez potrzeby.
+
+## 13.11.2026 – decyzja szefa: LAPTOP BEZ FIRMY
+„Na laptopie ma nic nie zostać związanego z nami – wszystko na serwer i telefon.” Laptop może leżeć wyłączony tygodniami, włączany tylko do logowań.
+Wieczór 13.11 (przy laptopie, krok po kroku):
+1. Autologowanie serwera + autostart START_WSZYSTKO.ps1 (hasło wpisuje szef).
+2. IBKR / IB Gateway – logowanie i automatyczne logowanie na demo.
+3. Przegląd laptopa: lista wszystkiego, co jest związane z firmą (Claude-telefon, orb-src, platform-tools/strażnik ADB, MT5 + MetaEditor Mechanika, kraken-boty, LivePortrait, foldery testów botów, pliki na pulpicie).
+4. Przeniesienie na serwer tego, czego jeszcze tam nie ma (porównanie z C:\Hexa) + strażnik połączenia z telefonem i kompilacja MQL5 na serwerze.
+5. Usuwanie z laptopa TYLKO z listy i po „tak” szefa (zasada: nic nie kasujemy bez listy).
