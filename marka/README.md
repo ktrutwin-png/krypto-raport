@@ -17,3 +17,5 @@ Pełny system (wersje, ikony, favicon): artefakt „Logo szefa – Erl.grey83”
 - `Enso_favicon.png`: favicon, przezroczyste tło
 - `Profil_Erl.grey83_1080.png`: OFICJALNE zdjęcie profilowe Insta + YouTube (wybór szefa 12.11: tłoczona czerń + złota linia, bez napisu)
 - `Hexa_postac.png`: OFICJALNA twarz Hexy (wybór szefa 12.11): holograficzna młoda kobieta, złote oczy, Ensō na czole, luźne orby agentów. Głos: ElevenLabs „Hexa” (starsza, mądra kobieta). Flow ElevenLabs: „Hexa – postać”.
+
+- `wideo/umiejetnosci/Grafika_umiejetnosci.mp4`: ZACHOWAĆ (szef 13.11: „podoba mi się”). Film o umiejętnościach graficznych, 21 s, cały w kodzie. Źródło: film.html. Nie usuwać.
