@@ -1,1 +1,18 @@
-[]
+[
+ {
+  "plik": "site/assets/hexa_intro.mp4",
+  "sek": 7.2,
+  "typ": "intro",
+  "opis": "Intro Hexy, usta zgrane: Hi, I'm Hexa – the voice of Erl.grey83. Pure information, no noise. Let's begin.",
+  "zrodlo": "creatify-aurora 13.11.2026",
+  "uzyto": []
+ },
+ {
+  "plik": "site/assets/hexa_intro_9x16.mp4",
+  "sek": 7.2,
+  "typ": "intro",
+  "opis": "to samo w pionie 9:16 (rozmyte tło)",
+  "zrodlo": "ffmpeg z hexa_intro.mp4",
+  "uzyto": []
+ }
+]
