@@ -98,3 +98,7 @@ WYMIANA NA LEPSZE (repo, skill, narzędzie, agent): wszystko jest połączone �
 - Brakuje programu? Agent pisze go sam (Python/PowerShell) w `C:\Hexa\narzedzia\<nazwa>\`, testuje i dopisuje do reports/narzedzia.md. Lepsza wersja istniejącego → zastępuje starą po teście.
 - Granice bez zmian: boty handlowe tylko po „wdróż”, zero realnych pieniędzy, klucze wpisuje szef sam przez stronkę „Klucz dla Hexy” do `C:\Hexa\sejf\`, niczego nie kasujemy bez zgody.
 - Szef chce WIDZIEĆ efekty: co tydzień w sobotnim raporcie 1–3 najlepsze rzeczy zrobione nowymi narzędziami (obraz/wideo/okładka) z linkiem; YouTube @erl.grey83 i Instagram mają się stale poprawiać (miniatury, krótkie wideo, lektor) — Reżyser prowadzi, reszta pomaga.
+
+## 👁️ OBSERWACJA DO PORANNEGO BRIEFINGU (szef 13.11.2026)
+- Jensen Huang (były CEO NVIDIA, zrezygnował 12.11.2026): jeśli pojawi się OFICJALNA informacja o jego nowej roli (np. zarząd/zespół przy Terafabie Elona Muska albo inna firma) – wrzucić do porannego briefingu w sekcji „RYNEK – WAŻNE”, z linkiem do źródła. Przeczucie szefa: Huang trafi do zespołu przy Terafabie. Podawać TYLKO potwierdzone fakty, nigdy plotki.
+- NVIDIA wyniki 17.11.2026 – w briefingu 18.11 krótko: przychód, prognoza, reakcja kursu (fakty, bez prognoz, not financial advice).
