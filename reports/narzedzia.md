@@ -29,3 +29,5 @@ Wszystkie klucze szefa: C:\Hexa\sejf\ na serwerze, spis w SPIS.md (bez wartości
 - Co niedzielę Inspektor sprawdza, których narzędzi/umiejętności agenci faktycznie użyli w ostatnim tygodniu.
 - Nieużywane przez 30 dni → na listę do usunięcia w tygodniowym raporcie zespołu; usuwamy po „tak” szefa.
 - Nowe narzędzie wchodzi tylko, jeśli robi coś, czego obecne nie robią, albo robi to wyraźnie lepiej.
+- agency-agents (msitarzewski, ~168k★, MIT): wzięte tylko 5 ról marketingowych → C:\Hexa\wiedza\marketing (13.11). Na listę gwiazdek.
+- Odrzucone 13.11: lista „9 repo zamiast płatnych narzędzi” oraz „20 Claude repos” (dublują to, co mamy); katalogi awesome-claude-code i awesome-mcp-servers → źródła Zwiadowcy.

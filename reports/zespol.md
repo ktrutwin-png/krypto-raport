@@ -102,3 +102,8 @@ WYMIANA NA LEPSZE (repo, skill, narzędzie, agent): wszystko jest połączone �
 ## 👁️ OBSERWACJA DO PORANNEGO BRIEFINGU (szef 13.11.2026)
 - Jensen Huang (były CEO NVIDIA, zrezygnował 12.11.2026): jeśli pojawi się OFICJALNA informacja o jego nowej roli (np. zarząd/zespół przy Terafabie Elona Muska albo inna firma) – wrzucić do porannego briefingu w sekcji „RYNEK – WAŻNE”, z linkiem do źródła. Przeczucie szefa: Huang trafi do zespołu przy Terafabie. Podawać TYLKO potwierdzone fakty, nigdy plotki.
 - NVIDIA wyniki 17.11.2026 – w briefingu 18.11 krótko: przychód, prognoza, reakcja kursu (fakty, bez prognoz, not financial advice).
+
+## Podręcznik marketingowy (13.11.2026)
+- Reżyser i Handlowiec przed planowaniem treści czytają C:\Hexa\wiedza\marketing (5 ról z agency-agents, MIT): Instagram Curator, Carousel Growth Engine, Content Creator, Growth Hacker, Social Media Strategist + README z naszymi zasadami.
+- Do tego umiejętności content-skills (viral-hooks, viral-instagram-reels, viral-captions-and-ctas…).
+- Bez nowych kluczy API i bez zewnętrznej autopublikacji. Żadnych „growth hacków” łamiących zasady Instagrama.
