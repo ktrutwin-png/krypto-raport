@@ -133,3 +133,4 @@ UPDATE: 2026-11-13 04:05 (Mechanik) site/index.html – landmark <main id="tresc
 2026-11-13 05:53 | Sekretarz | DO REŻYSERA: Metricool – kolejny alert „Problem publishing your post” (YouTube, erl.grey83) 12.11
 2026-11-13 06:51 | Zwiadowca | okazje: 3 (1/1/1: USD/CHF long, GBP/USD short, EUR/USD short), rozliczone: 1 (DE40 12.11 brak 0R – bez wejścia, cena uciekła w górę), trafność 30 dni: 0% (n=7, śr. R -0.55), najlepsze okno: 14:30-17:00 (dziś PPI USA 14:30); krypto -5…-8% w 24h (BTC 68.5k, RSI 27) – bez nowych shortów, otwarte BTC short 11.11 na +1.15R | ok
 2026-11-13 10:04 | Reżyser (Reel) | BTC -6.5% · UNDER $70K (BIGGEST MOVE, 3D liczba + pokretlo, 24.2 s) | opublikowano (IG 18224807311342053) | ok
+2026-11-13 10:24 | Reżyser (YouTube) | Short z Reela 13.11 zaplanowany na YT (Metricool 426715787, 10:29) | tytuł-pytanie R23d, okładka, link /brain/ | ok
