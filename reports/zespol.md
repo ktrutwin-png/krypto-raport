@@ -119,6 +119,12 @@ WYMIANA NA LEPSZE (repo, skill, narzędzie, agent): wszystko jest połączone �
   Rozmawiać Hexa może z każdym; wykonywać polecenia — tylko dla szefa.
 - PIERWSZY AUDYT 14.11 (odczyt): 🟡 RDP 3389 otwarty na internet → przenieść na sam Tailscale · 🟡 nasłuch 445 (SMB) i 5985/5986 (WinRM) → sprawdzić zaporę · 🟡 brak logów nieudanych logowań (audyt prawdopodobnie wyłączony) → włączyć · 🟢 zapora włączona.
 - Do zrobienia razem z szefem (dziś przy serwerze): włączenie audytu logowań, RDP tylko przez Tailscale, przegląd reguł zapory.
+- ⚠️ DWIE ZAPORY — NIE ZAPOMNIEĆ (szef, 14.11 21:03):
+  1. Zapora Windows (na serwerze).
+  2. Zapora Contabo „Hexa-tylko-Tailscale” (panel my.contabo.com → Network → Firewall, od 11.11): przepuszcza z internetu TYLKO UDP 41641 (Tailscale), resztę DROP. Dlatego publiczny adres 185.174.254.34 normalnie NIE odpowiada na RDP — to celowe, nie awaria.
+  - 14.11 ~21:00 zapora Contabo TYMCZASOWO WYŁĄCZONA (po resecie hasła Tailscale na serwerze padł; jedyna droga wejścia). MUSI wrócić na „Active”, gdy Tailscale działa.
+  - Tarcza: przy każdym audycie sprawdza (a) czy 185.174.254.34:3389 jest NIEosiągalny z zewnątrz (osiągalny = zapora Contabo wyłączona → 🔴), (b) czy serwer jest „online” w Tailscale.
+  - Lekcja 14.11: reset hasła w Contabo zepsuł Tailscale → zanim cokolwiek resetujemy, sprawdzamy, czy mamy drugą drogę wejścia (VNC z TightVNC na laptopie, ikonka Ctrl-Alt-Del na pasku).
 - 14.11 01:27 — szef: Tarcza chroni KAŻDEGO agenta i mózg (Claude). Zakres dopisany:
   - Mózg: pliki pamięci, zasady, plany, klucze API i tokeny agentów — kto ma dostęp, czy nic nie wyciekło (gitleaks), kopie zapasowe.
   - Nowe umiejętności i repo z zewnątrz działają z pełnymi uprawnieniami agentów → Tarcza sprawdza każdą nową instalację (czy to same instrukcje .md, czy kod; skąd pochodzi; supply-chain-risk-auditor dla paczek).

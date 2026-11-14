@@ -30,3 +30,8 @@ Zasada: krok po kroku, jeden naraz. Szef wpisuje hasła i zatwierdza zmiany zabe
 ## E. Na koniec
 19. [ ] Raport 22:00 z lampką Tarczy — sprawdzić, że przyszedł.
 20. [ ] Wpis do dziennika zespołu + aktualizacja planów.
+
+
+## ⚠️ OTWARTE 14.11 21:03
+- Zapora Contabo „Hexa-tylko-Tailscale” WYŁĄCZONA tymczasowo → włączyć z powrotem po naprawie Tailscale na serwerze (Network → Firewall → Enable).
+- Hasło Administratora zresetowane przez Contabo (szef ma je w Proton Pass). Logowanie: vmi3737651\Administrator.
