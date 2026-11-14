@@ -122,7 +122,7 @@ WYMIANA NA LEPSZE (repo, skill, narzędzie, agent): wszystko jest połączone �
 - ⚠️ DWIE ZAPORY — NIE ZAPOMNIEĆ (szef, 14.11 21:03):
   1. Zapora Windows (na serwerze).
   2. Zapora Contabo „Hexa-tylko-Tailscale” (panel my.contabo.com → Network → Firewall, od 11.11): przepuszcza z internetu TYLKO UDP 41641 (Tailscale), resztę DROP. Dlatego publiczny adres 185.174.254.34 normalnie NIE odpowiada na RDP — to celowe, nie awaria.
-  - 14.11 ~21:00 zapora Contabo TYMCZASOWO WYŁĄCZONA (po resecie hasła Tailscale na serwerze padł; jedyna droga wejścia). MUSI wrócić na „Active”, gdy Tailscale działa.
+  - 14.11 20:59–21:07 zapora Contabo była tymczasowo wyłączona (jedyna droga wejścia po awarii) — 21:07 przywrócona na ACTIVE, sprawdzone: publiczny 3389 zamknięty, Tailscale OK.
   - Tarcza: przy każdym audycie sprawdza (a) czy 185.174.254.34:3389 jest NIEosiągalny z zewnątrz (osiągalny = zapora Contabo wyłączona → 🔴), (b) czy serwer jest „online” w Tailscale.
   - Lekcja 14.11: reset hasła w Contabo zepsuł Tailscale → zanim cokolwiek resetujemy, sprawdzamy, czy mamy drugą drogę wejścia (VNC z TightVNC na laptopie, ikonka Ctrl-Alt-Del na pasku).
 - 14.11 01:27 — szef: Tarcza chroni KAŻDEGO agenta i mózg (Claude). Zakres dopisany:
