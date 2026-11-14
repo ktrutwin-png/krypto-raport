@@ -122,3 +122,9 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - Hexa w filmach (szczególnie o systemie, agentach, /brain) wspomina: „Zabezpieczenia serwera zawsze na pierwszym miejscu — bez tego nie uruchamia się żadnego projektu.”
 - Pomysł na Reel: „Prawie daliśmy się zaskoczyć” — szczera historia z 14.11: serwer 2 lata bez aktualizacji, otwarty pulpit zdalny, brak logów → agent Tarcza. Bez szczegółów technicznych, które pomogłyby włamywaczowi (żadnych IP, portów, nazw kont, zrzutów konfiguracji).
 - Lekcja dla widza (3 kroki): aktualizacje, dostęp tylko przez prywatną sieć (VPN/Tailscale), zapis logowań + 2FA.
+
+## R33 — Więcej XRP (decyzja szefa 14.11.2026)
+- Instagram i YouTube: odrobinę więcej treści o XRP — ok. 1 na 4–5 publikacji (nie zdominować profilu; reszta: złoto, BTC, tokenizacja, system/Hexa).
+- Tematy: fakty i wydarzenia (Ripple, XRP Ledger, ETF/regulacje, tokenizacja na XRPL, płatności transgraniczne), co się wydarzyło i dlaczego to ważne; wykres tygodnia XRP w naszym stylu; „XRP w 30 sekund” (wyjaśnienia dla początkujących).
+- Zasady: tylko sprawdzone źródła (oficjalne komunikaty, dokumenty, renomowane media), daty i liczby weryfikowane; zero prognoz cen, zero „to the moon”, zawsze „to nie jest porada finansowa”; nie promujemy giełd/brokerów (AFM).
+- Odpowiedzialni: Reżyser (pomysły/kalendarz), Handlowiec (Reelsy), skaner wiadomości dostarcza fakty.
