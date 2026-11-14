@@ -47,6 +47,13 @@ Agent w chmurze: zanim zacznie zadanie z listy niżej, czyta odpowiedni `SKILL.m
 - `writing-skills` (superpowers) – Mózg pisze i testuje nowe własne skille dla agentów (test na agencie przed i po).
 - Odrzucone: `self-improving-agent` (wersja tylko dla OpenClaw), `verify-gate`/`skill-tester` (pod cudze repo z kodem), hooki automatyczne (niepotrzebne – zapis robi agent).
 
+## Kolejka do instalacji (Zwiadowca skilli 15.11 – serwer był offline, wstępny przegląd zrobiony w chmurze)
+Instalować w następnym przebiegu po końcowym przeglądzie na serwerze (C:\Hexa\przeglad\<repo>), pojedynczo przez `-s <skill>`, bez pluginów i hooków:
+- `AgriciDaniel/claude-seo` (★29k, MIT, aktualizacja 14.11) – skille `seo-audit`, `seo-technical`, `seo-geo`, `seo-schema`, `seo-page` dla agenta strony (audyt SEO + widoczność w ChatGPT/Perplexity). Rdzeń bez telemetrii i bez kluczy; NIE instalować wersji plugin (ma hook PostToolUse na Edit/Write) ani rozszerzeń płatnych (DataForSEO, Ahrefs, SE Ranking, Firecrawl).
+- `coreyhaines31/marketingskills` (★60k, MIT, 11.11) – `social`, `copywriting`, `content-strategy`, `video` dla Reżysera/Social Media (Instagram/YouTube). Bez hooków; `tools/clis/*` wymagają płatnych kluczy – pomijamy.
+- Do oceny: `tt-a1i/archify` (★96k, Apache-2.0) – interaktywne diagramy z planu/kodu (strona /brain/, wyjaśnienia dla szefa).
+- Odrzucone: OpenMontage (AGPL-3.0), alpaca-skills / hypergrok-trading-desk / roman-rr/trading-skills (składanie zleceń lub sygnały na żywo), aiskillstore/marketplace (brak licencji).
+
 ## Ogólne
 - `no-ai-slop` – teksty (opisy, książka, skrypty lektora), `unlazy` – duże zadania z bramkami, `find-skills` – szukanie nowych skilli (instalujemy tylko sprawdzone: najpierw serwer, potem laptop).
 

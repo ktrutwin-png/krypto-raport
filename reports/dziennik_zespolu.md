@@ -167,3 +167,4 @@ INSPEKCJA UPDATE: 2026-11-14 19:14 (UPDATE 14.11 11:15 Mózg – Z014/Z015/Z017/
 2026-11-14 19:14 | Inspektor | nowe: 0, zamknięte: 2 (Z014, Z015), otwarte: 9 (Z004, Z005b, Z009, Z010, Z011, Z013, Z017, Z018, Z019) | dla Mechanika: – | ok
 
 - 2026-11-14 22:40 BŁĄD: Strażnik – 🔴 Tarcza czerwona: 30 nieudanych prób logowania w 24 h, logowanie spoza Tailscale z 31.138.95.228. Powiadomiono szefa. Dodatkowo brak procesu IB Gateway (1. przebieg).
+UPDATE: 2026-11-15 00:10 (Zwiadowca skilli) nowe: – (serwer offline, instalacja przełożona; w kolejce: claude-seo [seo-audit/technical/geo/schema/page], marketingskills [social/copywriting/content-strategy/video], archify do oceny) | odrzucone: OpenMontage (AGPL), alpaca-skills/hypergrok/roman-rr trading-skills (zlecenia/sygnały na żywo), aiskillstore/marketplace (brak licencji) | serwer offline | laptop offline (150 h)
