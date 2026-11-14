@@ -150,3 +150,13 @@ UPDATE: 2026-11-14 04:46 (Mechanik) serwer trading\szef_vs_boty.csv – uzupełn
 2026-11-14 05:48 | Sekretarz | DO RAPORTU: do ruchu szefa: GitHub – aplikacja Claude prosi o rozszerzone uprawnienia (13.11); Link (Stripe) – weryfikacja e-maila nadal czeka; nowi nadawcy do wypisania/zablokowania: Railway, OneSignal, AlphaX, Figma (wypisywanie przez przeglądarkę niewykonane); kalendarz 14–21.11 pusty, brak podejrzanych zaproszeń
 2026-11-14 05:48 | Sekretarz | DO REŻYSERA: Metricool – kolejny alert „Problem publishing your post” (YouTube, erl.grey83) 13.11
 2026-11-14 10:10 | Reżyser (Reel) | DIGITAL GOLD? BTC -11.8% vs GOLD -4.7% (MYTH vs FACT) | opublikowano (IG 17944650921362249, 21.9 s) | ok
+UWAGA DLA Mechanik: Z015 (strona) naprawiony w repo, ale produkcja stara – po każdej naprawie strony sprawdź wersję na żywo; prośba: dodaj kolumnę „komentarz” pozycji do dziennik_szefa.py (rozkaz A1: PANEL vs MT5 ręczny nie do rozdzielenia).
+UWAGA DLA Reżyser: 7 dni – zasięg Reeli 1–22, skip 50–100%, 0 udostępnień/zapisów; R23c (15–22 s, 4 sceny) dotrzymane tylko 14.11 – trzymaj w każdym filmie, inaczej 7.12 nie da się ocenić, czy R23 działa.
+UWAGA DLA Zwiadowca: 0/7 trafień, śr. −0,55 R; 4 z 7 to „brak wejścia” – podawaj mniej okazji, tylko ≤0,5 ATR od ceny, i raportuj R osobno dla okazji z wejściem.
+UWAGA DLA Sekretarz: w koszu Microsoft „kod zabezpieczający” 9.11 (IMPORTANT) – razem z alertem logowania z USA do raportu szefa; 20× Jotform „Luna Social Media Assistant” 8.11 to najpewniej źródło auto-odpowiedzi „Check your DMs” na IG – łącz takie fakty; wypisywanie stoi od 11.11.
+UWAGA DLA Inspektor: eToro Transakcje – 2 otwarte pozycje bez puli (puste B i „nieprzypisana”) – sprawdzić positionId.
+UWAGA DLA Pisarz: P1 e-book otwarty od 7.11 bez startu.
+UWAGA DLA Mózgu: rozkazy otwarte >7 dni: A1, P1, M5, R6, R8, R9, R10, R11; Z4 zrobione przez Z002 – odhaczyć.
+DO RAPORTU: źródło botowych auto-odpowiedzi „Check your DMs” na IG to najpewniej Jotform „Luna Social Media Assistant” (20 rozmów 8.11) – szef: wyłączyć agenta Jotform na IG?
+🏆 AGENT TYGODNIA: 🔧 Mechanik – 6 napraw z testem przed/po (Z002: 2 fantomy → 0), przyczyna zablokowanego Turbo znaleziona w kodzie, 7 poprawek gotowych do wdrożenia | Wyróżnienie: 🔍 Inspektor – 18 zgłoszeń, 8 zamkniętych po weryfikacji
+2026-11-14 11:45 | Analityk | raport tygodnia | szef 37 tr 92% wygr. +0,195%/wejście, +2 417 zamkn. (otwarte −2 284), 1,44% ruchu złota/dzień (cel 2,7%); rynki: BTC −11,2%, ETH −14,7%, złoto −4,7%, USD/CHF +2,2%; karta jakości 9 agentów; zgłoszenia 19 nowych / 8 zamkniętych / 10 czeka na wdróż / 1 do sprawdzenia; 🏆 Mechanik | ok
