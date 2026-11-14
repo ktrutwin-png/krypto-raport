@@ -168,3 +168,4 @@ INSPEKCJA UPDATE: 2026-11-14 19:14 (UPDATE 14.11 11:15 Mózg – Z014/Z015/Z017/
 
 - 2026-11-14 22:40 BŁĄD: Strażnik – 🔴 Tarcza czerwona: 30 nieudanych prób logowania w 24 h, logowanie spoza Tailscale z 31.138.95.228. Powiadomiono szefa. Dodatkowo brak procesu IB Gateway (1. przebieg).
 UPDATE: 2026-11-15 00:10 (Zwiadowca skilli) nowe: – (serwer offline, instalacja przełożona; w kolejce: claude-seo [seo-audit/technical/geo/schema/page], marketingskills [social/copywriting/content-strategy/video], archify do oceny) | odrzucone: OpenMontage (AGPL), alpaca-skills/hypergrok/roman-rr trading-skills (zlecenia/sygnały na żywo), aiskillstore/marketplace (brak licencji) | serwer offline | laptop offline (150 h)
+- 2026-11-15 00:40 BŁĄD: Strażnik – serwer vmi3737651 Offline w Desktop Commander drugi przebieg z rzędu (ostatnio widziany ~2 h temu). Powiadomiono szefa: my.contabo.com → Restart, potem zaloguj IB.
