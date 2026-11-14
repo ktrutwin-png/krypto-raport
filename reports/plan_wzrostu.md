@@ -117,3 +117,8 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - Tylko na słowo BRAIN. Na inne DM-y dalej odpowiada człowiek (zgodnie z /brain).
 - Do sprawdzenia przez Claude: narzędzie (np. ManyChat; darmowy plan, warunek „is follower”, zgodność z zasadami Meta, prywatna odpowiedź na komentarz); podłączenie do IG robi szef sam (logowanie).
 - Po wdrożeniu poprawić zdanie na /brain o DM-ach, żeby dalej było prawdziwe.
+
+## R32 — Bezpieczeństwo w treściach (decyzja szefa 14.11.2026)
+- Hexa w filmach (szczególnie o systemie, agentach, /brain) wspomina: „Zabezpieczenia serwera zawsze na pierwszym miejscu — bez tego nie uruchamia się żadnego projektu.”
+- Pomysł na Reel: „Prawie daliśmy się zaskoczyć” — szczera historia z 14.11: serwer 2 lata bez aktualizacji, otwarty pulpit zdalny, brak logów → agent Tarcza. Bez szczegółów technicznych, które pomogłyby włamywaczowi (żadnych IP, portów, nazw kont, zrzutów konfiguracji).
+- Lekcja dla widza (3 kroki): aktualizacje, dostęp tylko przez prywatną sieć (VPN/Tailscale), zapis logowań + 2FA.
