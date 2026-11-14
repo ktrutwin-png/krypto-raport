@@ -135,3 +135,4 @@ UPDATE: 2026-11-13 04:05 (Mechanik) site/index.html – landmark <main id="tresc
 2026-11-13 10:04 | Reżyser (Reel) | BTC -6.5% · UNDER $70K (BIGGEST MOVE, 3D liczba + pokretlo, 24.2 s) | opublikowano (IG 18224807311342053) | ok
 2026-11-13 10:24 | Reżyser (YouTube) | Short z Reela 13.11 zaplanowany na YT (Metricool 426715787, 10:29) | tytuł-pytanie R23d, okładka, link /brain/ | ok
 2026-11-13 18:13 | Reżyser (Raport 18) | BTC -9% · IN 7 DAYS (cooler PPI, $740M liquidated, gold $3,880 flat) | posted (IG 17957613972031220, 30.5 s, 5 scen, 3D swiece+waga) | ok
+UPDATE: 2026-11-14 03:26 tools/3d/sceny3d.html – scena 3D "swiece": ~45% swiec widoczne od klatki 0 (R23a), linia ceny po ostatniej swiecy (Opiekun konta)
