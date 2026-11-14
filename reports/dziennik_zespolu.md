@@ -149,3 +149,4 @@ UPDATE: 2026-11-14 04:46 (Mechanik) serwer trading\szef_vs_boty.csv – uzupełn
 2026-11-14 05:48 | Sekretarz | kosz: 4 wątki, wypisano: 0 | ok
 2026-11-14 05:48 | Sekretarz | DO RAPORTU: do ruchu szefa: GitHub – aplikacja Claude prosi o rozszerzone uprawnienia (13.11); Link (Stripe) – weryfikacja e-maila nadal czeka; nowi nadawcy do wypisania/zablokowania: Railway, OneSignal, AlphaX, Figma (wypisywanie przez przeglądarkę niewykonane); kalendarz 14–21.11 pusty, brak podejrzanych zaproszeń
 2026-11-14 05:48 | Sekretarz | DO REŻYSERA: Metricool – kolejny alert „Problem publishing your post” (YouTube, erl.grey83) 13.11
+2026-11-14 10:10 | Reżyser (Reel) | DIGITAL GOLD? BTC -11.8% vs GOLD -4.7% (MYTH vs FACT) | opublikowano (IG 17944650921362249, 21.9 s) | ok
