@@ -107,3 +107,15 @@ WYMIANA NA LEPSZE (repo, skill, narzędzie, agent): wszystko jest połączone �
 - Reżyser i Handlowiec przed planowaniem treści czytają C:\Hexa\wiedza\marketing (5 ról z agency-agents, MIT): Instagram Curator, Carousel Growth Engine, Content Creator, Growth Hacker, Social Media Strategist + README z naszymi zasadami.
 - Do tego umiejętności content-skills (viral-hooks, viral-instagram-reels, viral-captions-and-ctas…).
 - Bez nowych kluczy API i bez zewnętrznej autopublikacji. Żadnych „growth hacków” łamiących zasady Instagrama.
+
+## 🛡️ NOWY AGENT: Tarcza (bezpieczeństwo) — szef: „wdrożyć natychmiast” (14.11.2026, 01:17)
+- Rola: kontrola bezpieczeństwa całej firmy, część Hexy. Sprawdza KAŻDĄ próbę logowania i wszystko poniżej. Sam nie zmienia ustawień systemu/zabezpieczeń — poprawki po „tak” szefa, robione razem z szefem.
+- Co niedzielę + na bieżąco: serwer (otwarte porty, nieudane logowania, aktualizacje, zapora, konta, urządzenia w Tailscale), telefon (adb tylko przez Tailscale, nieznane aplikacje), repo (skan sekretów), pliki z tokenami, kopie zapasowe, boty (tylko demo, magic 0 nietykalne), 2FA na kontach.
+- Raport: 🟢/🟡/🔴 w tygodniowym raporcie zespołu; 🔴 pilne → od razu wiadomość do szefa na Telegram (zgoda szefa 14.11).
+- TOŻSAMOŚĆ SZEFA (Hexa + Tarcza): ważne polecenia (handel, usuwanie, ustawienia, przelewy) tylko po potwierdzeniu, że to szef:
+  1) teraz: odcisk palca / twarz przez systemowe BiometricPrompt Androida w ORB (dane biometryczne zostają w telefonie, nie wychodzą na serwer);
+  2) później: głos szefa (z nagrań testu głosu) jako druga warstwa;
+  3) w przyszłości: tęczówka — jeśli telefon/urządzenie będzie to wspierać.
+  Rozmawiać Hexa może z każdym; wykonywać polecenia — tylko dla szefa.
+- PIERWSZY AUDYT 14.11 (odczyt): 🟡 RDP 3389 otwarty na internet → przenieść na sam Tailscale · 🟡 nasłuch 445 (SMB) i 5985/5986 (WinRM) → sprawdzić zaporę · 🟡 brak logów nieudanych logowań (audyt prawdopodobnie wyłączony) → włączyć · 🟢 zapora włączona.
+- Do zrobienia razem z szefem (dziś przy serwerze): włączenie audytu logowań, RDP tylko przez Tailscale, przegląd reguł zapory.
