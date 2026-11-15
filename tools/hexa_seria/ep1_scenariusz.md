@@ -24,3 +24,8 @@ Plan produkcji (po wykupieniu Pro, najpóźniej śr 18.11):
 3. Szef nagrywa telefonem siebie mówiącego tekst z gestami (instrukcja krok po kroku od Mózgu) – tylko ruch, bez jego twarzy w filmie.
 4. Sceny 2–6, kolor znaku w obróbce, napisy NEON, muzyka cicha pod głosem.
 5. Publikacja sob 21.11 przez Metricool (IG Reel + YT Short), wersja 16:9 na /brain/.
+
+## Próbka 15.11 (ZATWIERDZONA przez szefa: „wygląda doskonale”)
+- Flow ElevenLabs 8XgK5aWkYdmhl4YZDo4L: portret `marka/Hexa_postac.png` + głos Pola (eleven_v4, EN, tagi [calm, warm]/[confident]) → OmniHuman 1.5, 1080p, prompt: spokojna, naturalna mimika, lekkie skinienia, mrugnięcia, włosy płyną.
+- Koszt: głos 145 kr. (9 s), wideo 8 842 kr. (9,16 s) ≈ 965 kr./s.
+- Ten sposób = standard serii. Act-Two (nagranie szefa) tylko do ujęć z gestami całego ciała, jeśli będą potrzebne.
