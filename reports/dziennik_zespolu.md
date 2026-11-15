@@ -171,3 +171,4 @@ UPDATE: 2026-11-15 00:10 (Zwiadowca skilli) nowe: – (serwer offline, instalacj
 - 2026-11-15 00:40 BŁĄD: Strażnik – serwer vmi3737651 Offline w Desktop Commander drugi przebieg z rzędu (ostatnio widziany ~2 h temu). Powiadomiono szefa: my.contabo.com → Restart, potem zaloguj IB.
 - 2026-11-15 01:40 BŁĄD: Strażnik – serwer vmi3737651 nadal Offline (3. przebieg z rzędu, ostatnio widziany ~3 h temu). Ponownie powiadomiono szefa: my.contabo.com → Restart, potem zaloguj IB.
 - 2026-11-15 02:41 BŁĄD: Strażnik – serwer vmi3737651 nadal Offline (4. przebieg z rzędu, ostatnio widziany ~4 h temu). Ponownie powiadomiono szefa: my.contabo.com → Restart, potem zaloguj IB.
+UPDATE: 2026-11-15 03:33 tools/kino/kino.py – pasek z cenami przewija sie ciagle przez caly film (faza = czas globalny), bez dublowania tekstu w przejsciach (Opiekun konta)
