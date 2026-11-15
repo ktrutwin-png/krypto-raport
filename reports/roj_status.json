@@ -369,6 +369,19 @@
    "gdzie": "Kraken Pro paper sim",
    "nazwa_en": "KP Bollinger TP5",
    "teraz_en": "New bot: watching for its first signal."
+  },
+  {
+   "n": "Kalendarz",
+   "s": "praca",
+   "opis": "kalendarz ekonomiczny: ważne dane (High impact) na tydzień, przerwa botów ±30 min, sekcja na stronie.",
+   "ostatnio": "15.11 – start, 7 ważnych wydarzeń w tym tygodniu",
+   "typ": "agent",
+   "ikona": "📅",
+   "tag": "Markets",
+   "nazwa_en": "Calendar",
+   "en": "Tracks this week's big economic releases. Our demo bots pause new trades 30 minutes around each one.",
+   "gdzie": "Server",
+   "teraz_en": "Watching 7 high-impact releases this week."
   }
  ]
 }
