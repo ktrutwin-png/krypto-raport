@@ -190,7 +190,7 @@ for i, (s, L) in enumerate(zip(S, DUR)):
     flt += f";{cur}format=yuv420p"
     run(["ffmpeg", "-y", *(["-i", s["img"]] if vid else ["-loop", "1", "-framerate", str(FPS), "-t", str(L), "-i", s["img"]]), "-loop", "1", "-t", str(L), "-i", "_hd.png",
          "-loop", "1", "-t", str(L), "-i", f"_t{i}.png", "-loop", "1", "-t", str(L), "-i", f"_n{i}.png", *extra,
-         "-filter_complex", flt, "-t", str(L), "-r", str(FPS), "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", f"_c{i}.mp4"])
+         "-filter_complex", flt, "-t", str(L), "-r", str(FPS), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "19", f"_c{i}.mp4"])
     clips.append(f"_c{i}.mp4")
 inp = sum([["-i", c] for c in clips], []); chain = ""; off = 0; last = "[0]"
 for i in range(1, len(clips)):
@@ -199,7 +199,7 @@ for i in range(1, len(clips)):
     chain += f"{last}[{i}]xfade=transition={tr}:duration={FADE}:offset={off:.2f}{out};"; last = out
 T = sum(DUR) - FADE * (len(DUR) - 1)
 chain += f"color=c=0xffd23f:s={W}x8:r={FPS}:d={T + 1:.2f}[pb];{last}[pb]overlay=x='-W+W*t/{T:.2f}':y=0:shortest=1[pv];"; last = "[pv]"   # zloty pasek postepu
-run(["ffmpeg", "-y", *inp, "-filter_complex", chain + f"{last}format=yuv420p[v]", "-map", "[v]", "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "_v.mp4"])
+run(["ffmpeg", "-y", *inp, "-filter_complex", chain + f"{last}format=yuv420p[v]", "-map", "[v]", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "19", "_v.mp4"])
 run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", "_l.txt", "-af", f"atrim=0:{T}", "_vo.wav"])
 run([sys.executable, os.path.join(REEL, "music.py"), str(T + 1), CFG.get("mood", "calm")])
 FX = {"tense": "lowpass=f=6000,aecho=0.8:0.6:310|690:0.35|0.25",          # horror: ciemny, duzo pogłosu

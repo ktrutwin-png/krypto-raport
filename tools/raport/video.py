@@ -30,12 +30,12 @@ for i, d in enumerate(DUR, 1):
     flt = (f"[0]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=30:3,eq=brightness=-0.08:saturation=1.2[bg];"
            f"[0]scale=1080:1350,zoompan=z='1+0.035*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s=1080x1350:fps={FPS}[fg];"
            f"[bg][fg]overlay=0:285,format=yuv420p")
-    run(["ffmpeg", "-y", "-loop", "1", "-t", str(d), "-i", f"slide{i}.png", "-filter_complex", flt, "-t", str(d), "-r", str(FPS), "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", out])
+    run(["ffmpeg", "-y", "-loop", "1", "-t", str(d), "-i", f"slide{i}.png", "-filter_complex", flt, "-t", str(d), "-r", str(FPS), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "20", out])
     clips.append(out)
 T = sum(DUR) - FADE * (len(DUR) - 1)
 o1 = DUR[0] - FADE; o2 = o1 + DUR[1] - FADE
 xf = f"[0][1]xfade=transition=fade:duration={FADE}:offset={o1}[a];[a][2]xfade=transition=slideleft:duration={FADE}:offset={o2},format=yuv420p[v]"
-run(["ffmpeg", "-y", "-i", clips[0], "-i", clips[1], "-i", clips[2], "-filter_complex", xf, "-map", "[v]", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "_v.mp4"])
+run(["ffmpeg", "-y", "-i", clips[0], "-i", clips[1], "-i", clips[2], "-filter_complex", xf, "-map", "[v]", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "20", "_v.mp4"])
 run([sys.executable, os.path.join(REEL, "music.py"), str(T + 1), MOOD])
 run(["ffmpeg", "-y", "-i", "melody.wav", "-af", "lowpass=f=3500,aecho=0.8:0.55:380|760:0.3|0.2", "_mel.wav"])
 if NAR:
