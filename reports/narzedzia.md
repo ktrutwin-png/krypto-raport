@@ -31,3 +31,13 @@ Wszystkie klucze szefa: C:\Hexa\sejf\ na serwerze, spis w SPIS.md (bez wartości
 - Nowe narzędzie wchodzi tylko, jeśli robi coś, czego obecne nie robią, albo robi to wyraźnie lepiej.
 - agency-agents (msitarzewski, ~168k★, MIT): wzięte tylko 5 ról marketingowych → C:\Hexa\wiedza\marketing (13.11). Na listę gwiazdek.
 - Odrzucone 13.11: lista „9 repo zamiast płatnych narzędzi” oraz „20 Claude repos” (dublują to, co mamy); katalogi awesome-claude-code i awesome-mcp-servers → źródła Zwiadowcy.
+
+## Przegląd Nauczyciela 15.11.2026 (nazwa | do czego | komu | od kiedy)
+- Metricool getBestTimeToPostByNetwork + getAnalyticsDataByMetrics (konektor, odczyt) | najlepsze godziny publikacji; skip rate i zasięg spoza obserwujących per Reel | 🎬 Reżyser, 👁 Opiekun IG | 15.11.2026
+- CoinMarketCap get_upcoming_macro_events / crypto_upcoming_event_calendar (konektor, odczyt) | kalendarz makro i wydarzeń krypto | 🔭 Zwiadowca, 📊 Analityk | 15.11.2026
+- CoinGecko get-trending (konektor) | co się rusza w krypto dziś | 🔭 Zwiadowca, 🎬 Reżyser (R35) | 15.11.2026
+- skill quanterlab:walk-forward-check | test „czy backtest nie jest dopasowany” (akcje/ETF) | 🔧 Mechanik | 15.11.2026
+- skille marketing:email-sequence, marketing:draft-content, canva:brand-check | szkice wiadomości do firm, zgodność PDF z marką | 💼 Handlowiec | 15.11.2026
+- Gmail create_label + label_thread | etykiety zamiast wypisów, które nie działają | 📬 Sekretarz | 15.11.2026
+- Vercel get_deployment / get_runtime_errors | dowód, że produkcja = commit z naprawą | 🔍 Inspektor | 15.11.2026
+- PROPOZYCJA (DO RAPORTU): TEXT_TO_QUANT (konektor już podłączony, plan tylko krypto Binance spot) | walk-forward / overfit dla strategii Kraken (BTC) | 🔧 Mechanik | koszt: kredyty planu – najpierw get_usage, zgoda szefa

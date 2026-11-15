@@ -17,6 +17,7 @@ Zasada: agenci PRZYGOTOWUJĄ (oferty, produkty, szkice wiadomości); szef wysył
 - 🎬 Reżyser: KINO, Unsplash, Figma/Canva/Gamma (okładki), ElevenLabs (lektor – oszczędnie, darmowe kredyty dzieli z głosem Hexy na telefonie, max 3 min/tydzień).
 - Konta, które zakłada TYLKO szef (agenci przygotowują wszystko do wgrania): MQL5.com (sprzedawca), Gumroad, Amazon KDP, Adobe Stock Contributor, programy partnerskie.
 - Potrzebujesz nowego narzędzia? „PROŚBA DO MÓZGU: …” w „Postęp”.
+- 15.11 (Nauczyciel) 💼 Handlowiec: skill `marketing:email-sequence` i `marketing:draft-content` – struktura krótkiej wiadomości/sekwencji follow-up do firm (tylko szkice w Gmail, wysyła szef); skill `canva:brand-check` przed PDF oferty – zgodność z kolorami marki Ensō.
 
 ## Postęp
 - 2026-11-07: plan utworzony przez Mózg; strumienie przydzielone
@@ -29,7 +30,10 @@ Zasada: agenci PRZYGOTOWUJĄ (oferty, produkty, szkice wiadomości); szef wysył
 - 2026-11-13 (Mózg, decyzja szefa): „pobaw się tym, bez ciśnienia” – cel skromny: drobne na serwer, ElevenLabs, płatne aplikacje i repo. Zmiany: (a) strumień 4 tylko afiliacje narzędzi, bez giełd/brokerów (zasady AFM dla promocji krypto/tradingu); (b) NOWY strumień 6: przycisk „wesprzyj projekt” (Ko-fi lub podobny) na /brain – konto zakłada szef; (c) produkty cyfrowe (e-book, wskaźnik, szablony) docelowo w jednym sklepie (Gumroad) – konto szefa. ZADANIA: 🎬 Reżyser – lista programów partnerskich narzędzi z /brain (czy istnieją, prowizja, zasady ujawnienia, czy działa w NL) do 20.11; ✍️ Pisarz – spis treści + rozdział 1 e-booka do 22.11; 🔧 Mechanik – stan wskaźnika M5 (czy ma przewagę na demo; jeśli nie – zamiast niego darmowy/tani panel lub szablon); 💼 Handlowiec – Reel-przykład „menu dnia”. Bez presji czasu na przychód; raport tylko w tygodniowym raporcie zespołu.
 
 ## LEKCJE (📚 Nauczyciel dopisuje co tydzień – czytaj przed pracą i stosuj)
-- (pierwsze lekcje po niedzieli 15.11.2026)
+- L1 (15.11) Handlowiec: 13 z 40 firm nadal „do sprawdzenia” (głównie fizjo bez www – zorgkaart nie podaje adresów) → nowe firmy wybieraj tylko z publicznym kanałem (Fresha/Treatwell/IG/strona z formularzem); fizjo bez www pomiń.
+- L2 (15.11) Handlowiec: Reel-przykład „menu dnia” przesunięty 2× (12.11 i zadanie Mózgu 13.11) – to jedyny brakujący element pierwszej oferty; zrób go NA POCZĄTKU przebiegu, 1 scena na gotowym KINO (scenes.json + bank), oznaczony „przykład”.
+- L3 (15.11) Handlowiec: oferta ze źródłem ceny (Searchlab/FlowHunt) oceniona 4/5 przez Analityka – każda nowa cena/pakiet zawsze ze źródłem i datą.
+- L4 (15.11) Pisarz/e-book P1: otwarty 8 dni bez startu (Z023) – zacznij od spisu treści (8–10 tytułów, 1 linijka każdy), to 1 przebieg; lekcja 1 w następnym.
 
 
 ## Lista oczekująca: publiczne repo marki (decyzja szefa 13.11.2026)

@@ -10,11 +10,18 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - [ ] Z4 (9.11, PILNE) Fałszywy sygnał: 9.11 17:05 skaner_dzienny wysłał „SPRZEDAŻ USDJPY (DON) – cena przebiła minimum z 55 dni (152.888)”, a cena była ~158.16 (minimum NIE przebite). Znajdź przyczynę (warunek DON, indeksy świec, dane D1 z MT5, tekst powodu), dopisz test, który by to złapał, i zgłoś poprawkę Mechanikowi przez Inspektora. Do czasu naprawy – sygnały DON z dopiskiem „do weryfikacji”. Szef: „zapisać w dzienniku agenta, który był za to odpowiedzialny”.
 - [x] Z3 (7.11) Po każdym przebiegu jedna linijka w reports/dziennik_zespolu.md.
 ## LEKCJE (📚 Nauczyciel dopisuje co tydzień – czytaj przed pracą i stosuj)
-- (pierwsze lekcje po niedzieli 15.11.2026)
+- L1 (15.11) Okazje Zwiadowcy 9–13.11: 0/7 trafień, śr. −0,55 R; WSZYSTKIE 3 okazje z wejściem skończyły się stopem (śr. −1,0 R) – liczy się R okazji z wejściem, raportuj go osobno od „brak wejścia”.
+- L2 (15.11) 4 z 7 okazji = brak wejścia (strefa za daleko od ceny) → strefa wejścia ≤0,5 ATR od ostatniego zamknięcia (stosowane od 12.11 – zmierz w tygodniu 16–20.11).
+- L3 (15.11) Kontry pod trend przegrywają: XAU long 9.11 i GBP/USD long 10.11 = stopy; od 11.11 tylko „z trendem” (D1 pod/nad SMA20/50/200) – trzymaj, porównaj trafność po n≥10.
+- L4 (15.11) Skala pewności nie kalibruje: obie okazje z pewnością 3 (XAU, USTEC 9.11) = −1 R. Co piątek tabela pewność → wynik; jeśli 3 nie bije 2 przy n≥10, zmień kryteria pewności.
+- L5 (15.11) Cele 2–3 R przy stopie ~1 ATR dają 0 trafień w tygodniu z dużymi ruchami – HIPOTEZA: dla horyzontu „dzień” cel 1–1,5 R; sprawdź na historii okazji po n≥10.
+- L6 (15.11) Skaner D1 (bt_ranking.py): najlepsze XAU SMA +1,65 R (n79), XAG SMA +0,94 R (n123); usunięty USDJPY DON short (−0,21 R od 2020). Decyzje o CFG tylko z rankingu historii – sygnaly_wyniki.csv ma n=1 (brak sygnałów od 3.11).
+- L7 (15.11) Każdy warunek wybicia na ticku najpierw waliduje tick (ask>0, ask≥bid, spread ≤0,5%) – fantom USDJPY 9.11 powstał z pustego ticka (Z002).
 
 ## UMIEJĘTNOŚCI I NARZĘDZIA (🔭 Zwiadowca)
 - Narzędzia: skanery na laptopie (skaner_dzienny.py, ib_skaner.py), sygnaly_wyniki.csv, MT5 historia, Twelve_Data.
 - Potrzebujesz nowego narzędzia? „PROŚBA DO MÓZGU: …” w „Postęp”.
+- 15.11 (Nauczyciel): CoinMarketCap `get_upcoming_macro_events` i `crypto_upcoming_event_calendar` (konektor, odczyt) – okna godzinowe okazji ustawiaj pod realne publikacje (CPI, FOMC, NFP) zamiast stałego 14:00–17:00; CoinGecko `get-trending` – szybki przegląd krypto, które się ruszają.
 
 ## Skanery w zakresie
 skaner_dzienny.py (MT5, D1, pętla co 2 min) · IB Skaner (paper) – tylko obserwacja jego sygnałów.

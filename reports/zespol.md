@@ -75,10 +75,26 @@ WYMIANA NA LEPSZE (repo, skill, narzędzie, agent): wszystko jest połączone �
 - Szef 8.11.2026: „szkol ich, by byli jak najlepsi w tym, co im dajesz do roboty”. Nauczyciel szkoli każdego agenta pod JEGO konkretne zadania z planu (nie ogólnie): co tydzień dla każdego 1 wzorzec najlepszej praktyki z sieci (np. jak piszą najlepsze oferty B2B w NL, jak wyglądają topowe produkty na MQL5, jakie okładki e-booków sprzedają) + porównanie z tym, co agent oddał, + 1 konkretna poprawka na następny przebieg. Priorytet do końca listopada: 💼 Handlowiec, 🔧 Mechanik (produkt MQL5), ✍️ Pisarz (e-book), 🎬 Reżyser (okładka, Adobe Stock).
 
 ## LEKCJE AGENTÓW BEZ WŁASNEGO PLANU (📚 Nauczyciel dopisuje co tydzień – czytaj swoją część przed pracą)
-- 🔍 Inspektor: (pierwsze lekcje po 15.11.2026)
-- 📊 Analityk: (pierwsze lekcje po 15.11.2026)
-- 📬 Sekretarz: (pierwsze lekcje po 15.11.2026)
-- ✍️ Pisarz (tylko kronika zespołu): (pierwsze lekcje po 15.11.2026)
+- 🔍 Inspektor:
+  - L1 (15.11) Weryfikacja w środku działa: 8/18 zgłoszeń zamkniętych po własnym teście – trzymaj; po własnym błędzie odczytu klatki (14.11 03:50) przed „zamknięte” zawsze 2 niezależne dowody (plik + proces/produkcja na żywo).
+  - L2 (15.11) Po każdym restarcie serwera porównaj procesy z testy_agenta\lista_serwer.txt + Kraken Pro: Z021 (Kraken Pro nie wstał) złapany dopiero ~5 h po restarcie.
+  - L3 (15.11) Ten sam problem = jedno zgłoszenie: laptop offline dał 3 osobne (Z006, Z012, Z022) – przy nowym dopisz się do otwartego, z licznikiem.
+  - L4 (15.11) „Naprawione” w repo sprawdzaj na PRODUKCJI (Z015: repo OK, strona stara 1 dzień).
+  - Narzędzie (15.11): Vercel `get_runtime_errors` / `get_deployment` – szybki dowód, czy wdrożona wersja strony = commit z naprawą.
+- 📊 Analityk:
+  - L1 (15.11) Karta jakości z liczbą-dowodem przy każdej ocenie (14.11) – wzór do utrzymania; powiązanie Jotform ↔ auto-odpowiedzi IG to Twój najlepszy wniosek tygodnia (łącz fakty z różnych agentów).
+  - L2 (15.11) Do Top 5 rynków tylko rzeczy ze źródłem: 7.11 pozycja 3 (HK50) „NIEZWERYFIKOWANE” – zamiast tego weź następny potwierdzony ruch.
+  - L3 (15.11) W tygodniu 8–14.11 w dzienniku 33× „DO RAPORTU” – raport szefa: na górze max 3 decyzje do podjęcia (np. wdróż Z011/Z020/Z022, IB Gateway), reszta zbiorczo z licznikiem.
+  - L4 (15.11) A1 odblokowane (Mechanik 15.11: kolumna komentarz/koszyk), ale 0 transakcji PanelTG od 9.11 – rozdział koszyków podawaj z n; przy n=0 jedna linijka, nie analiza.
+  - Narzędzie (15.11): CoinMarketCap `get_upcoming_macro_events` – kalendarz „Co dalej” z datami z jednego źródła.
+- 📬 Sekretarz:
+  - L1 (15.11) Ważny Microsoft „kod zabezpieczający” 9.11 trafił do kosza (zbieg z alertem logowania z USA) → maile ze słowami code/security/verify/sign-in/kod/weryfikacja/beveiliging NIGDY do kosza – do „DO RAPORTU”.
+  - L2 (15.11) Wypisy nie działają: OneSignal, Unsplash, AlphaX, Metricool wracają co tydzień → po 2. powrocie nadawcy zamiast kolejnego wypisu etykieta Gmail (`create_label` + `label_thread`) i jedna zbiorcza linijka DO RAPORTU.
+  - L3 (15.11) Ten sam alert raz, z licznikiem: Metricool „Problem publishing” (YouTube) zgłoszony osobno 6× (9–15.11) → „Metricool YT błąd publikacji – 6× od 9.11”.
+  - L4 (15.11) Łącz fakty: 20× Jotform „Luna Social Media Assistant” 8.11 = źródło auto-odpowiedzi „Check your DMs” na IG – wykrył Analityk, nie Ty; seria >5 maili z jednego narzędzia w dniu = pytanie „co to uruchomiło?”.
+- ✍️ Pisarz (tylko kronika zespołu):
+  - L1 (15.11) Kronika terminowa 2/2 tygodnie i rzetelna (liczby z dziennika) – trzymaj.
+  - L2 (15.11) Kronika 15.11 (453 słowa) pomija Handlowca, Sekretarza, Tarczę i Nauczyciela – przed oddaniem sprawdź listę agentów z tabeli w zespol.md: każdy = min. 1 zdanie z liczbą (także „w tym tygodniu bez pracy”).
 
 ## Wspólne zasady współpracy
 - Każdy agent po każdym przebiegu dopisuje JEDNĄ linijkę do reports/dziennik_zespolu.md: `RRRR-MM-DD HH:MM | Agent | co zrobił | wynik/liczby | problem lub „ok”` (git pull --rebase, commit, push).
