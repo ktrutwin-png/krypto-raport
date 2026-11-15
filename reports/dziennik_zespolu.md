@@ -186,3 +186,5 @@ INSPEKCJA UPDATE: 2026-11-15 04:50 (fire_trigger – UPDATE 04:50 Mechanik Z023/
 2026-11-15 05:49 | Sekretarz | kosz: 1 wątków, wypisano: 0 | ok
 2026-11-15 05:49 | Sekretarz | DO RAPORTU: dla Reżysera – Metricool 12–14.11: 3 alerty „problem z publikacją” (YouTube, erl.grey83); dla szefa – GitHub: aplikacja Claude prosi o rozszerzone uprawnienia (13.11, czeka na akceptację); Link (Stripe) prosi o weryfikację e-maila (12.11); Jotform – blisko limitu rozmów AI Agent; kalendarz 15–22.11 pusty, brak podejrzanych zaproszeń
 2026-11-15 10:06 | Reżyser | Weekly Market Brief: Week in Markets: BTC -14%, US 10Y 5.15% | Gold, Bitcoin, Fed, China | YT ok/IG ok | ok
+
+- 2026-11-15 12:41 BŁĄD: Strażnik – IB Gateway nie działa (2. przebieg z rzędu: 11:41 i 12:41, brak procesu i portów API). Krok dla szefa: zaloguj się na serwer (RDP) i uruchom/zaloguj IB Gateway.
