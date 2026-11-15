@@ -15,6 +15,12 @@ Koszty jak na Kraken Pro (najniższy próg): wejście rynkowe 0.40%, TP limitem 
 otwarcie marginu 0.02%, rollover 0.02% co 4 h.
 """
 import json, os, sys, time, csv, urllib.request, urllib.parse
+sys.path.insert(0, r"C:\Hexa\kalendarz")
+try:
+    from kalendarz import przerwa
+except Exception:
+    def przerwa(*a, **k):
+        return None
 from datetime import datetime, timezone
 
 KAT = os.path.dirname(os.path.abspath(__file__))
@@ -249,8 +255,12 @@ def obieg():
                     if p["para"] in ceny:
                         bid, ask, _ = ceny[p["para"]]
                         zamknij(nazwa, st, p, bid if p["kierunek"] == "LONG" else ask, "LIKWIDACJA", FEE_TAKER)
-        # nowe wejścia – raz na zamkniętą świecę M15
-        for para, (m15, h1) in dane.items():
+        # nowe wejścia – raz na zamkniętą świecę M15 (przerwa ±30 min wokół ważnych danych z USA)
+        news = przerwa(("USD",))
+        if news and not st.get("_news") == news:
+            log(f"[{nazwa}] przerwa w wejściach: {news}")
+        st["_news"] = news
+        for para, (m15, h1) in ([] if news else dane.items()):
             if len(m15) < 3 or len(h1) < 60:
                 continue
             ost_sw = m15[-1][0]

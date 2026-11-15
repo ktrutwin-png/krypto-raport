@@ -12,6 +12,12 @@ Bot sprawdza, że konto jest PAPER (zaczyna się od "DU") – na prawdziwym konc
 """
 import csv, json, os, sys, time
 from datetime import datetime, timezone, timedelta
+sys.path.insert(0, r"C:\Hexa\kalendarz")
+try:
+    from kalendarz import przerwa
+except Exception:
+    def przerwa(*a, **k):
+        return None
 from ib_async import IB, Forex, MarketOrder, LimitOrder, util
 
 KAT = os.path.dirname(os.path.abspath(__file__))
@@ -184,6 +190,10 @@ class Bot:
                 continue
             self.st["ostatnia_swieca"][para] = ost
             if para in self.st["pozycje"] or len(self.st["pozycje"]) >= MAX_POZYCJI:
+                continue
+            news = przerwa((para[:3], para[3:]))
+            if news:
+                log(f"{para}: przerwa w wejściach – {news}")
                 continue
             o = zamkn[-3:]
             zielone = all(x.close > x.open for x in o)

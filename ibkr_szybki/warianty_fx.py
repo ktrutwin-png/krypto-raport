@@ -10,6 +10,12 @@ Wynik w USD i pipsach -> warianty_transakcje.csv, stan w warianty_stan.json.
 """
 import csv, json, os, sys, time
 from datetime import datetime, timezone, timedelta
+sys.path.insert(0, r"C:\Hexa\kalendarz")
+try:
+    from kalendarz import przerwa
+except Exception:
+    def przerwa(*a, **k):
+        return None
 from ib_async import IB, Forex, util
 
 KAT = os.path.dirname(os.path.abspath(__file__))
@@ -164,6 +170,8 @@ class Tester:
                     continue
                 s["ostatnia_swieca"][para] = ost
                 if para in s["pozycje"]:
+                    continue
+                if przerwa((para[:3], para[3:])):
                     continue
                 o = zamkn[-3:]
                 kier = None
