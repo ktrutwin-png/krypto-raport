@@ -141,3 +141,11 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - Odpowiedzialni: Reżyser (pomysły/kalendarz), Handlowiec (Reelsy), skaner wiadomości dostarcza fakty.
 
 - [ ] R34 (14.11 22:45, szef) SERIA HEXY – ZAPOWIEDŹ OPUBLIKOWANA (Metricool 428378699, IG Reel + YT Short, 22:52): obiecaliśmy publicznie rozkład → TRZYMAĆ DATY: Ep.1 sob 21.11 „Hexa explains the map” (=R27), Ep.2 sob 28.11 „Where Hexa came from” (origin story – ZAAKCEPTOWANA przez szefa 14.11 22:49, cała seria zaakceptowana), Ep.3 sob 5.12 „The Shield” (=R32, historia 14.11: reset hasła, 8 min bez zapory, bot 13 prób – wszystkie odparte), Ep.4 sob 12.12 „Meet the agent”, potem co sobotę nowy agent. Każdy odcinek otwiera intro Hexy. Karta/wideo: tools/hexa_seria/. Jeśli data się przesuwa – krótka informacja na IG/YT.
+
+### R37 – Poranny telefon od Mózgu zamiast briefingu (szef 15.11.2026)
+- Codziennie o 8:00 Mózg DZWONI do szefa przez Telegram (głos, nie grafika) i mówi krótko:
+  „Szefie, stoi to i to” → co zrobione → co czeka do zrobienia → jakie abonamenty płacimy jutro.
+- Szef może od razu porozmawiać (pytania, polecenia głosem) – to ma być rozmowa, nie odczyt.
+- Źródła: Kalendarz Google (zadania + abonamenty 💳/📱), reports/dziennik_zespolu.md, lista do-zrobienia szefa.
+- Technika do sprawdzenia: CallMeBot (darmowe połączenia Telegram) + głos Hexy/Poli z ElevenLabs; rozmowa dwustronna – Telegram voice/ElevenLabs Agent.
+- Do czasu wdrożenia zostaje graficzny briefing 8:00 (od 15.11 z abonamentami na jutro).
