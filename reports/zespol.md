@@ -16,6 +16,9 @@ Szef rozmawia TYLKO z Claude („mózg”). Claude prowadzi agentów, uczy ich, 
 Zasady wspólne: konta demo/paper, nic nie zmieniają bez zgody szefa, uruchamia szef, przegląd miesięczny 7.12.2026.
 
 
+## 🪙 TEMATY FILMÓW – OBOWIĄZUJE Reżysera, Raport 12, Raport 18 (15.11, szef: „w typowych filmikach ma być więcej o kryptowalutach, nie tylko samo złoto”)
+Zwykłe Reels/Shorts (nie seria Hexy): kryptowaluty mają przewagę. Na każde 3 filmy co najmniej 2 o krypto (BTC, ETH, XRP, ogólny rynek krypto, ETF-y krypto, tokenizacja, stablecoiny, regulacje), najwyżej 1 o złocie/srebrze. Złoto tylko wtedy, gdy dzieje się coś naprawdę ważnego albo jako porównanie z BTC. Przed wyborem tematu sprawdź w `reports/` ostatnie 3 filmy i trzymaj proporcję. Dalej obowiązuje: tylko prawda i sprawdzone liczby, zawsze dopisek „not financial advice”, bez zdjęć szefa.
+
 ## ✨ RÓJ HEXY – OBOWIĄZUJE WSZYSTKICH (13.11, szef: „czy ilość agentów zgadza się z ilością światełek?”)
 Każdy agent i bot ma swoje światełko w `reports/roj_status.json` (aplikacja ORB czyta go co 10 min). Po KAŻDYM przebiegu zaktualizuj swój wpis: `s` = praca / czeka / blad, `ostatnio` = data + jedno zdanie. Nowy agent lub bot = Mózg dopisuje wpis. JSON musi zostać poprawny (`python -m json.tool`). Inspektor co niedzielę sprawdza, czy liczba światełek = liczba działających zadań i botów.
 
