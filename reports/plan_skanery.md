@@ -35,7 +35,7 @@ skaner_dzienny.py (MT5, D1, pętla co 2 min) · IB Skaner (paper) – tylko obse
 Zasada (Z005c, 11.11): każdy pisze TYLKO w swojej podsekcji – Zwiadowca w „### Zwiadowca”, Agent Skanery w „### Agent Skanery”. Starsze wpisy poniżej zostają, jak są.
 
 ### Agent Skanery
-- (brak wpisów)
+- 2026-11-15 (tydz. 2): ZDROWIE ok – skaner na serwerze żyje (1 proces, stan co 2 min), 7 dni bez ERR poza 8.11, po wyłączeniu serwera 14.11 22:51 wstał sam 15.11 04:03; poprawka Z002 (tick ask=0) jest w kodzie. SYGNAŁY: brak nowych od 3.11 – sygnaly_wyniki.csv n=1, +0.59R, 100%. RANKING (trading\\bt_ranking.py, D1 MT5, po spreadzie): XAU SMA +1.65R n79, XAG SMA +0.94 n123, XAU DON +0.61 n46, XAG DON +0.35 n29, XAU USD +0.25 n133, US500 RSI2 +0.17 n126, USTEC +0.16 n39, USDJPY DON L +0.16 n67, US30 +0.11 n128 – dodatnie w obu połówkach; USDJPY DON SHORT -0.03R (od2020 -0.21) → usunięty z CFG (kopia .bak_20261115, py_compile OK), restart zgłoszony (Z024). Dotyczy też Z4: SPRZEDAŻ USDJPY DON (źródło fantomu 9.11) po restarcie nie będzie wysyłana.
 
 ### Zwiadowca
 - 2026-11-07: start planu

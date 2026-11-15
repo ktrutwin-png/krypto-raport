@@ -189,3 +189,5 @@ INSPEKCJA UPDATE: 2026-11-15 04:50 (fire_trigger – UPDATE 04:50 Mechanik Z023/
 
 - 2026-11-15 12:41 BŁĄD: Strażnik – IB Gateway nie działa (2. przebieg z rzędu: 11:41 i 12:41, brak procesu i portów API). Krok dla szefa: zaloguj się na serwer (RDP) i uruchom/zaloguj IB Gateway.
 - 2026-11-15 13:41 BŁĄD: Strażnik – IB Gateway nadal nie działa (3. przebieg z rzędu, brak procesu i portów API). Ponownie powiadomiono szefa: zaloguj się na serwer (RDP) i uruchom/zaloguj IB Gateway.
+2026-11-15 14:25 | Skanery | zdrowie ok (1 proces, stan co 2 min, 0 ERR w 7 dni poza 8.11; wstał po restarcie serwera 15.11 04:03); sygnały: brak nowych od 3.11, razem n=1 +0.59R 100%; ranking bt_ranking.py: 9/10 kombinacji dodatnie w obu połówkach, USDJPY DON short -0.03R → usunięty z CFG (czeka na restart, Z024) | ok
+UPDATE: 2026-11-15 14:25 skaner_dzienny.py (serwer, trading\) – CFG USDJPY DON tylko KUPNO (usunięta SPRZEDAŻ wg bt_ranking.py); nowy skrypt trading\bt_ranking.py; działa po restarcie (Z024)

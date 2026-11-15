@@ -24,3 +24,10 @@
 - Klucz: tekst-poza-kadrem
 - Powtórzenia: 1
 - Status: nowy
+
+### E-20261115-01 [skaner] mt5.initialize z Desktop Commandera trwa ~60 s
+- Co się stało: bt_ranking.py uruchomiony przez Start-Process przez ~1 min nic nie wypisywał (CPU ~1 s) – wyglądało na zawieszenie; mt5.initialize przy 8+ klientach MT5 na serwerze zwraca True dopiero po ~60 s, cały ranking 10 kombinacji ~6 min.
+- Wniosek / zasada: backtesty MT5 na serwerze odpalaj Start-Process z -u i wyjściem do pliku, czekaj min. 2 min przed uznaniem, że wisi; nie zabijaj po 30 s.
+- Klucz: mt5-initialize-wolny
+- Powtórzenia: 1
+- Status: nowy
