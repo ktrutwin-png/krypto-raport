@@ -1,184 +1,280 @@
 {
- "opis_pliku": "Stan roju dla aplikacji ORB (Hexa) – aplikacja czyta ten plik co 10 min. KAŻDY wpis = jedno światełko wokół Hexy. s: praca (złote) | czeka (niebieskie) | blad (czerwone). Nowy agent/bot = dopisz wpis {n, s, opis, ostatnio} (max 40). Agent po każdym przebiegu aktualizuje swoje 's' i 'ostatnio'.",
+ "opis_pliku": "Stan roju dla aplikacji ORB (Hexa) – aplikacja czyta ten plik co 10 min. KAŻDY wpis = jedno światełko wokół Hexy. s: praca (złote) | czeka (niebieskie) | blad (czerwone). Nowy agent/bot = dopisz wpis {n, s, opis, ostatnio} (max 40). Agent po każdym przebiegu aktualizuje swoje 's' i 'ostatnio'. Pola dla strony /brain/ (publiczne, EN): typ = agent | bot, en = opis po angielsku, gdzie = platforma. Strona /brain/ czyta ten plik na żywo – nowy wpis od razu pokazuje się na stronie. Pole ostatnio NIE jest pokazywane publicznie.",
  "agenci": [
   {
    "n": "Raport 12",
    "s": "praca",
-   "ostatnio": "14.11 10:12 – Reel MYTH vs FACT: DIGITAL GOLD? BTC -11.8% vs gold -4.7% (3D liczba + skarbiec, 21.9 s)"
+   "ostatnio": "14.11 10:12 – Reel MYTH vs FACT: DIGITAL GOLD? BTC -11.8% vs gold -4.7% (3D liczba + skarbiec, 21.9 s)",
+   "typ": "agent",
+   "en": "Noon market video (Reel/Short), live prices with sources",
+   "gdzie": "Instagram · YouTube"
   },
   {
    "n": "Raport 18",
    "s": "praca",
-   "ostatnio": "13.11 18:13 – BTC -9% IN 7 DAYS · cooler PPI (3D swiece + waga, 30.5 s)"
+   "ostatnio": "13.11 18:13 – BTC -9% IN 7 DAYS · cooler PPI (3D swiece + waga, 30.5 s)",
+   "typ": "agent",
+   "en": "Evening market video, live prices with sources",
+   "gdzie": "Instagram · YouTube"
   },
   {
    "n": "Reżyser",
    "s": "praca",
-   "ostatnio": "12.11 18:31 – Short 18:00 wrzucony na YouTube (Metricool 425999771)"
+   "ostatnio": "12.11 18:31 – Short 18:00 wrzucony na YouTube (Metricool 425999771)",
+   "typ": "agent",
+   "en": "Director: scripts, visuals, captions and publishing",
+   "gdzie": "Instagram · YouTube"
   },
   {
    "n": "Opiekun",
    "s": "czeka",
-   "ostatnio": "11.11 – 190 obserwujących (+14)"
+   "ostatnio": "11.11 – 190 obserwujących (+14)",
+   "typ": "agent",
+   "en": "Community: tracks followers and reach",
+   "gdzie": "Instagram"
   },
   {
    "n": "Skanery",
    "s": "praca",
-   "ostatnio": "15.11 04:07 – proces działa na serwerze"
+   "ostatnio": "15.11 04:07 – proces działa na serwerze",
+   "typ": "agent",
+   "en": "Looks after the market scanners and their signal quality",
+   "gdzie": "Server"
   },
   {
    "n": "Inspektor",
    "s": "czeka",
-   "ostatnio": "11.11 11:53 – sprawdził sceny 3D i stronę"
+   "ostatnio": "11.11 11:53 – sprawdził sceny 3D i stronę",
+   "typ": "agent",
+   "en": "Checks every agent and bot, files problems",
+   "gdzie": "Server"
   },
   {
    "n": "Zwiadowca",
    "s": "czeka",
-   "ostatnio": "pierwszy przebieg w nocy z soboty na niedzielę"
+   "ostatnio": "pierwszy przebieg w nocy z soboty na niedzielę",
+   "typ": "agent",
+   "en": "Scout: scans markets and new tools",
+   "gdzie": "Server"
   },
   {
    "n": "Nauczyciel",
    "s": "czeka",
-   "ostatnio": "nowe lekcje: E-20261111-02/03"
+   "ostatnio": "nowe lekcje: E-20261111-02/03",
+   "typ": "agent",
+   "en": "Teacher: turns results into lessons for the team",
+   "gdzie": "Server"
   },
   {
    "n": "Strażnik",
    "s": "praca",
-   "ostatnio": "18:44 – serwer ok, zapora Contabo działa"
+   "ostatnio": "18:44 – serwer ok, zapora Contabo działa",
+   "typ": "agent",
+   "en": "Guard: watches the server and its security",
+   "gdzie": "Server"
   },
   {
    "n": "Hexa 💧",
    "s": "praca",
-   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+   "ostatnio": "11.11 21:02 – proces działa na serwerze",
+   "typ": "bot",
+   "en": "Calm gold bot (XAU/USD)",
+   "gdzie": "MetaTrader 5 demo"
   },
   {
    "n": "Turbo 🔥",
    "s": "praca",
-   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+   "ostatnio": "11.11 21:02 – proces działa na serwerze",
+   "typ": "bot",
+   "en": "Aggressive gold bot (XAU/USD)",
+   "gdzie": "MetaTrader 5 demo"
   },
   {
    "n": "Indeksy",
    "s": "praca",
-   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+   "ostatnio": "11.11 21:02 – proces działa na serwerze",
+   "typ": "bot",
+   "en": "Index bot (DAX ETF, SPY)",
+   "gdzie": "MetaTrader 5 demo"
   },
   {
    "n": "Panel",
    "s": "czeka",
-   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+   "ostatnio": "11.11 21:02 – proces działa na serwerze",
+   "typ": "bot",
+   "en": "Private Telegram panel for the owner's own manual trades",
+   "gdzie": "Telegram"
   },
   {
    "n": "Kraken Donchian",
    "s": "praca",
    "opis": "bot krypto Freqtrade, strategia Donchian 4h na BTC (na sucho).",
-   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+   "ostatnio": "11.11 21:02 – proces działa na serwerze",
+   "typ": "bot",
+   "en": "Crypto breakout strategy, BTC 4h",
+   "gdzie": "Freqtrade dry-run"
   },
   {
    "n": "Kraken Momentum",
    "s": "praca",
    "opis": "bot krypto Freqtrade, strategia Momentum 1d na BTC (na sucho).",
-   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+   "ostatnio": "11.11 21:02 – proces działa na serwerze",
+   "typ": "bot",
+   "en": "Crypto momentum strategy, BTC 1d",
+   "gdzie": "Freqtrade dry-run"
   },
   {
    "n": "IB Skaner",
    "s": "praca",
    "opis": "obserwuje rynek przez Interactive Brokers i szuka sygnałów.",
-   "ostatnio": "11.11 21:02 – proces działa na serwerze"
+   "ostatnio": "11.11 21:02 – proces działa na serwerze",
+   "typ": "bot",
+   "en": "Market scanner",
+   "gdzie": "Interactive Brokers paper"
   },
   {
    "n": "Mechanik",
    "s": "praca",
    "opis": "Naprawy i boty: codziennie 04:41 bierze zgłoszenia od Inspektora i naprawia.",
-   "ostatnio": "12.11 04:56 – przebieg napraw"
+   "ostatnio": "12.11 04:56 – przebieg napraw",
+   "typ": "agent",
+   "en": "Mechanic: fixes what the Inspector finds",
+   "gdzie": "Server"
   },
   {
    "n": "Sekretarz",
    "s": "praca",
    "opis": "Poranny briefing 8:00: kalendarz i poczta szefa, grafika na Telegram.",
-   "ostatnio": "12.11 05:52 – briefing"
+   "ostatnio": "12.11 05:52 – briefing",
+   "typ": "agent",
+   "en": "Morning briefing for the owner: calendar and mail",
+   "gdzie": "Telegram"
   },
   {
    "n": "Raport 22",
    "s": "praca",
    "opis": "Raport dnia 22:00: zysk i strata wszystkich botów, grafika na Telegram.",
-   "ostatnio": "12.11 21:54 – raport wysłany"
+   "ostatnio": "12.11 21:54 – raport wysłany",
+   "typ": "agent",
+   "en": "Daily 22:00 results of all demo bots",
+   "gdzie": "Telegram"
   },
   {
    "n": "Handlowiec",
    "s": "praca",
    "opis": "Biznes: oferty usług AI dla firm, produkty, programy partnerskie.",
-   "ostatnio": "12.11 14:10 – praca nad ofertą"
+   "ostatnio": "12.11 14:10 – praca nad ofertą",
+   "typ": "agent",
+   "en": "Business: AI service offers for companies",
+   "gdzie": "—"
   },
   {
    "n": "Analityk",
    "s": "praca",
    "opis": "Sobota: kontrola jakości wszystkich agentów i raport tygodnia z nagrodami.",
-   "ostatnio": "14.11 11:45 – raport tygodnia: karta jakości, nagrody (🏆 Mechanik), analiza 37 transakcji szefa"
+   "ostatnio": "14.11 11:45 – raport tygodnia: karta jakości, nagrody (🏆 Mechanik), analiza 37 transakcji szefa",
+   "typ": "agent",
+   "en": "Analyst: weekly quality check and fact-checking",
+   "gdzie": "Server"
   },
   {
    "n": "Pisarz",
    "s": "czeka",
    "opis": "Niedziela: książka „Filozofia tradingu” – kilka rozdziałów naraz, wg nastroju szefa i rynku.",
-   "ostatnio": "czeka na niedzielę 15.11"
+   "ostatnio": "czeka na niedzielę 15.11",
+   "typ": "agent",
+   "en": "Writer: the trading-philosophy book, quietly",
+   "gdzie": "Server"
   },
   {
    "n": "Kraken Pro krótki",
    "s": "praca",
    "opis": "bot margin 10x na Krakenie (na sucho), TP 0.8% + przesuwany SL, XRP/BTC/ETH.",
-   "ostatnio": "15.11 – 6 TP, przesuwany SL od dziś"
+   "ostatnio": "15.11 – 6 TP, przesuwany SL od dziś",
+   "typ": "bot",
+   "en": "10x margin test, short take-profit + trailing stop",
+   "gdzie": "Kraken Pro paper sim"
   },
   {
    "n": "Kraken Pro średni",
    "s": "praca",
    "opis": "bot margin 10x na Krakenie (na sucho), TP 1.2% + przesuwany SL.",
-   "ostatnio": "15.11 – 6 TP, przesuwany SL od dziś"
+   "ostatnio": "15.11 – 6 TP, przesuwany SL od dziś",
+   "typ": "bot",
+   "en": "10x margin test, medium take-profit + trailing stop",
+   "gdzie": "Kraken Pro paper sim"
   },
   {
    "n": "Kraken Pro ATR",
    "s": "praca",
    "opis": "bot margin 10x na Krakenie (na sucho), TP wg zmienności (ATR) + przesuwany SL.",
-   "ostatnio": "15.11 – 1 TP, przesuwany SL od dziś"
+   "ostatnio": "15.11 – 1 TP, przesuwany SL od dziś",
+   "typ": "bot",
+   "en": "10x margin test, volatility-based take-profit",
+   "gdzie": "Kraken Pro paper sim"
   },
   {
    "n": "IBKR Szybki",
    "s": "czeka",
    "opis": "szybkie transakcje forex na koncie demo IBKR (EUR/USD, GBP/USD, USD/JPY), świece 5 min.",
-   "ostatnio": "15.11 – podłączony do IB Gateway, czeka na otwarcie forexu (niedz. ~23:00)"
+   "ostatnio": "15.11 – podłączony do IB Gateway, czeka na otwarcie forexu (niedz. ~23:00)",
+   "typ": "bot",
+   "en": "Fast forex trades (EUR/USD, GBP/USD, USD/JPY)",
+   "gdzie": "Interactive Brokers paper"
   },
   {
    "n": "IBKR Warianty",
    "s": "czeka",
    "opis": "tester 4 wariantów TP na forexie (M5/M15, 3–6 pips) na prawdziwych cenach IBKR, na sucho.",
-   "ostatnio": "15.11 – start, czeka na otwarcie forexu"
+   "ostatnio": "15.11 – start, czeka na otwarcie forexu",
+   "typ": "bot",
+   "en": "Tests 4 take-profit variants on live forex prices",
+   "gdzie": "Interactive Brokers paper sim"
   },
   {
    "n": "KP EMA TP5 SL",
    "s": "praca",
    "opis": "Kraken Pro margin 10x na sucho: przecięcie EMA9/21 w trendzie, TP 5%, przesuwany SL, wejście limit.",
-   "ostatnio": "15.11 – nowy bot z backtestu 6 mies."
+   "ostatnio": "15.11 – nowy bot z backtestu 6 mies.",
+   "typ": "bot",
+   "en": "EMA-cross rule, 5% target, trailing stop",
+   "gdzie": "Kraken Pro paper sim"
   },
   {
    "n": "KP EMA TP5",
    "s": "praca",
    "opis": "Kraken Pro margin 10x na sucho: przecięcie EMA9/21 w trendzie, TP 5%, bez SL, wejście limit.",
-   "ostatnio": "15.11 – nowy bot z backtestu 6 mies."
+   "ostatnio": "15.11 – nowy bot z backtestu 6 mies.",
+   "typ": "bot",
+   "en": "EMA-cross rule, 5% target",
+   "gdzie": "Kraken Pro paper sim"
   },
   {
    "n": "KP EMA TP3",
    "s": "praca",
    "opis": "Kraken Pro margin 10x na sucho: przecięcie EMA9/21 w trendzie, TP 3%, bez SL, wejście limit.",
-   "ostatnio": "15.11 – nowy bot z backtestu 6 mies."
+   "ostatnio": "15.11 – nowy bot z backtestu 6 mies.",
+   "typ": "bot",
+   "en": "EMA-cross rule, 3% target",
+   "gdzie": "Kraken Pro paper sim"
   },
   {
    "n": "KP 3 świece TP5",
    "s": "praca",
    "opis": "Kraken Pro margin 10x na sucho: reguła szefa (3 świece), duży TP 5%, bez SL, wejście limit.",
-   "ostatnio": "15.11 – nowy bot z backtestu 6 mies."
+   "ostatnio": "15.11 – nowy bot z backtestu 6 mies.",
+   "typ": "bot",
+   "en": "Three-candle rule, 5% target",
+   "gdzie": "Kraken Pro paper sim"
   },
   {
    "n": "KP Bollinger TP5",
    "s": "praca",
    "opis": "Kraken Pro margin 10x na sucho: powrót do wstęgi Bollingera w trendzie, TP 5%, bez SL, wejście limit.",
-   "ostatnio": "15.11 – nowy bot z backtestu 6 mies."
+   "ostatnio": "15.11 – nowy bot z backtestu 6 mies.",
+   "typ": "bot",
+   "en": "Bollinger-band rule, 5% target",
+   "gdzie": "Kraken Pro paper sim"
   }
  ]
 }

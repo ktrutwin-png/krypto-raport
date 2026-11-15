@@ -6,7 +6,7 @@
 <title>The Brain · Erl.grey83</title>
 <meta name="description" content="Not a map to copy – the building blocks behind @erl.grey83: one AI brain, AI agents and bots on demo accounts. What each piece does and what it doesn't, so you can draw your own map.">
 <meta property="og:title" content="The Brain · Erl.grey83">
-<meta property="og:description" content="One AI brain. 22 workers. Not a map to copy – the pieces to draw your own. No hype, no profit promises.">
+<meta property="og:description" content="One AI brain. 32 workers. Not a map to copy – the pieces to draw your own. No hype, no profit promises.">
 <meta property="og:image" content="https://erlgrey83-crypto-freaq.vercel.app/assets/hexa_og.jpg">
 <meta name="theme-color" content="#0b0b0d">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' rx='80' fill='%230b0b0d'/%3E%3Cpath d='M 322 116 A 150 150 0 1 0 338 182' fill='none' stroke='%23d9d6cf' stroke-width='44' stroke-linecap='round'/%3E%3Cpath d='M120 262 L292 138' stroke='%23c9a54a' stroke-width='46' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -57,6 +57,13 @@ th{color:var(--gold);font-weight:500;font-size:12px;letter-spacing:.14em;text-tr
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);font-size:13px}
 @media (max-width:560px){.wrap{padding:0 16px}th:nth-child(3),td:nth-child(3){display:none}}
 </style>
+<style>
+.swarm{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}
+.swarm .w{display:inline-flex;align-items:center;gap:7px;padding:6px 11px;border:1px solid rgba(255,255,255,.12);border-radius:999px;font-size:13px;background:rgba(255,255,255,.03)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;vertical-align:middle;margin:0 3px 0 8px}
+.swarm .dot{margin:0}
+.dot.g{background:#f2c14e;box-shadow:0 0 8px #f2c14e}.dot.b{background:#4fb3ff;box-shadow:0 0 8px #4fb3ff}.dot.r{background:#ff4d5e;box-shadow:0 0 8px #ff4d5e}
+</style>
 </head>
 <body>
 <header><div class="wrap">
@@ -67,13 +74,17 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
 <main class="wrap">
 <section class="hero">
  <figure class="hexa"><picture><source media="(max-width:700px)" srcset="/assets/hexa_m.webp"><img src="/assets/hexa.webp" width="1280" height="720" alt="Hexa – the face and voice of Erl.grey83" fetchpriority="high"></picture><figcaption>Hexa · shows you the pieces</figcaption></figure>
- <p class="kick">Our map, not yours · updated 13 Nov 2026</p>
- <h1>One AI brain.<br><em>22 workers.</em></h1>
+ <p class="kick">Our map, not yours · <span id="roj-upd">live from the server</span></p>
+ <h1>One AI brain.<br><em><span data-roj="all">32</span> workers.</em></h1>
  <p class="lead">This is how one person – not a team – built the system behind @erl.grey83. It's our map, not one to copy. Below are the pieces: what each one really does and what it does <b>not</b> do, so you can draw <b>your own</b>. No hype, no screenshots of fake numbers.</p>
  <div class="brain"><b>🧠 The Brain – Claude (Anthropic).</b> Plans the work, writes the rules for every agent, checks their results and fixes what breaks. Agents don't talk to the owner during the week – they report to the Brain, and the owner gets one short weekly report.</div>
 </section>
 
-<h2>15 AI agents</h2>
+<h2>The swarm, live</h2>
+<p class="sub">Every light around Hexa on the owner's phone is one worker below. This list is read live from the same file the phone app uses – a new agent or bot on the server appears here automatically. <span class="dot g"></span> working <span class="dot b"></span> waiting <span class="dot r"></span> problem</p>
+<div class="swarm" id="swarm"></div>
+
+<h2><span data-roj="agent">15</span> AI agents</h2>
 <p class="sub">Each one is a scheduled Claude task with its own written plan. They run on their own, on a timetable.</p>
 <div class="grid">
  <div class="card"><span class="tag">Content</span><h3>🎬 Director</h3><p>Picks the day's crypto, gold and bank news, writes a 20–30 s script and builds the video: AI visuals, 3D scenes, captions, voice. Publishes to Instagram and YouTube.</p></div>
@@ -93,15 +104,16 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
  <div class="card"><span class="tag">Voice</span><h3>✨ Hexa</h3><p>The voice assistant on the owner's phone – listens, answers and opens apps. The face you see on our posts.</p></div>
 </div>
 
-<h2>7 bots &amp; tools – demo accounts only</h2>
-<p class="sub">These are tests. They run on practice (demo / paper / dry-run) accounts. No real money is at stake and nothing here is a signal service.</p>
+<h2><span data-roj="bot">17</span> bots &amp; tools – demo accounts only</h2>
+<p class="sub">These are tests. They run on practice (demo / paper / dry-run / simulated) accounts. No real money is at stake and nothing here is a signal service.</p>
 <table>
  <thead><tr><th>Part</th><th>What it does</th><th>Where</th></tr></thead>
- <tbody>
+ <tbody id="roj-bots">
   <tr><td>Hexa · Turbo</td><td>Two gold (XAU/USD) bots: one calm, one aggressive</td><td>MetaTrader 5 demo</td></tr>
   <tr><td>Indices</td><td>Index bot (DAX ETF, SPY)</td><td>MetaTrader 5 demo</td></tr>
   <tr><td>Kraken × 2</td><td>Two crypto strategies (breakout, momentum)</td><td>Freqtrade dry-run</td></tr>
-  <tr><td>IB scanner</td><td>Market scanner</td><td>Interactive Brokers paper</td></tr>
+  <tr><td>Kraken Pro × 8</td><td>10x margin tests with different rules and targets</td><td>Kraken Pro paper sim</td></tr>
+  <tr><td>IBKR × 3</td><td>Scanner, fast forex bot, take-profit tester</td><td>Interactive Brokers paper</td></tr>
   <tr><td>Panel</td><td>Private Telegram panel for the owner's own manual trades</td><td>Telegram</td></tr>
  </tbody>
 </table>
@@ -185,6 +197,22 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
    try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}
   }).catch(function(){if(!h)a.querySelector('span').textContent='GitHub'})
  });
+})();
+</script>
+<script>
+(function(){
+ var U='https://raw.githubusercontent.com/ktrutwin-png/krypto-raport/main/reports/roj_status.json';
+ var NM={'Reżyser':'Director','Opiekun':'Community','Skanery':'Scanners','Inspektor':'Inspector','Zwiadowca':'Scout','Nauczyciel':'Teacher','Strażnik':'Guard','Mechanik':'Mechanic','Sekretarz':'Secretary','Raport 12':'Noon report','Raport 18':'Evening report','Raport 22':'22:00 results','Handlowiec':'Sales','Analityk':'Analyst','Pisarz':'Writer','Indeksy':'Indices','IB Skaner':'IB scanner','Kraken Pro krótki':'Kraken Pro short','Kraken Pro średni':'Kraken Pro medium','IBKR Szybki':'IBKR fast','IBKR Warianty':'IBKR variants','KP 3 świece TP5':'KP 3 candles TP5'};
+ function esc(t){var d=document.createElement('div');d.textContent=t==null?'':t;return d.innerHTML}
+ fetch(U,{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(d){
+  if(!d||!d.agenci)return;
+  var a=d.agenci,ag=a.filter(function(x){return x.typ==='agent'}),bo=a.filter(function(x){return x.typ==='bot'});
+  var n={all:a.length,agent:ag.length,bot:bo.length};
+  document.querySelectorAll('[data-roj]').forEach(function(e){e.textContent=n[e.dataset.roj]});
+  var cls={praca:'g',czeka:'b',blad:'r'};
+  document.getElementById('swarm').innerHTML=a.map(function(x){return '<span class="w" title="'+esc(x.en||'')+'"><span class="dot '+(cls[x.s]||'b')+'"></span>'+esc(NM[x.n]||x.n)+'</span>'}).join('');
+  if(bo.length)document.getElementById('roj-bots').innerHTML=bo.map(function(x){return '<tr><td>'+esc(NM[x.n]||x.n)+'</td><td>'+esc(x.en||'')+'</td><td>'+esc(x.gdzie||'')+'</td></tr>'}).join('');
+ }).catch(function(){});
 })();
 </script>
 </body>
