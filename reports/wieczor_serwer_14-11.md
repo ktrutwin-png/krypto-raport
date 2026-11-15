@@ -49,3 +49,18 @@ Plan przy laptopie: 1) podgląd TightVNC (co na ekranie) 2) twardy stop/start 3)
 - Aktualizacje zainstalowane: KB5122871 (2026-09 Security), KB5127690 (.NET). 03:02 twardy restart (zdarzenie 41) – bez skutków.
 - ✅ 15.11 03:58 CZĘŚĆ 2: autologowanie Windows (Sysinternals Autologon, podpis Microsoft, hasło wpisał szef, zaszyfrowane w LSA) + Autostart (START_WSZYSTKO.lnk, DC_Remote.vbs w Startup) + ZABLOKUJ_EKRAN.cmd (blokada ekranu 2 min po starcie, procesy działają dalej).
 - ✅ 04:00 TEST RESTARTU (reboot z panelu Contabo): start 04:00:38, autologowanie 04:00, Tailscale + Claude połączeni ~2,5 min po restarcie, MT5 + boty działają. SERWER WSTAJE SAM. Pozostaje tylko IB Gateway (logowanie szefa / IBC).
+
+## ✅ 15.11 04:28 KOPIA ZAPASOWA POZA SERWEREM (krok 16)
+- Serwer: zadanie „Hexa Kopia dzienna” 03:30 → C:\Hexa\narzedzia\kopia\kopia_dzienna.ps1: Hexa + Claude-telefon + kraken-boty + profile/EA MT5 → ZIP (~800 MB, 21 tys. plików), BEZ sekretów (sejf, .env, klucze, adbkey), bez venv/logów/wideo; 3 ostatnie lokalnie; wysyłka Taildrop na laptop.
+- Laptop: Taildrop zapisuje do Pobranych → zadanie „Odbierz kopie serwera” (05:00 + przy logowaniu) przenosi do C:\Users\ktrut\KopieSerwera, trzyma 3 ostatnie.
+- Test 04:28: ZIP 804 MB doszedł na laptop, 21 471 plików, w środku tylko adbkey.pub (publiczny – OK).
+- Zasada 3 kopii: serwer + laptop + snapshot Contabo (ręcznie przed dużymi zmianami).
+
+## 🔎 PRZEGLĄD LAPTOPA (tylko odczyt, NIC nie usunięte – czeka na „tak” szefa)
+Wolne 75 GB z 238 GB. Najwięksi kandydaci do sprzątnięcia:
+- Documents\Codex\2026-10-19\…\Heksa-pelna-kopia-20261019 – 20 GB (stara pełna kopia z 19.10)
+- LivePortrait (folder 9,5 GB) + Downloads\LivePortrait…zip 5 GB
+- .gradle 5,8 GB (cache budowania Androida – ORB budujemy na serwerze)
+- stare testy botów: NexScalperDemo 5,4 GB, Nex_Github_Gold_Tests 2 GB, NexRSIDemo 0,7 GB, OpenSourceBotResearch 0,7 GB
+- .cache 4 GB, .codex 1,3 GB, instalatory w Pobranych (~0,7 GB)
+Razem ~55 GB do odzyskania. Przed usunięciem: sprawdzić, czy coś z tych folderów nie jest jedyną kopią (porównać z serwerem).
