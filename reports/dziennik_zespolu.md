@@ -198,3 +198,4 @@ INSPEKCJA UPDATE: 2026-11-15 14:29 (fire_trigger – UPDATE 14:25 Skanery Z024) 
 2026-11-15 15:30 | Pisarz | kronika tygodnia + praca nad książką | – | ok
 2026-11-15 16:50 | Nauczyciel | lekcje: +45, skreślone: 0, nowe narzędzia: 7 | Reżyser: hook-kontrast dwóch aktywów (skip 50–57%, zasięg 21–22) bije hook jednego aktywa (skip 67–100%, zasięg 3), a 4× „BTC −X%” z rzędu zbiło zasięg do 1–4 | ok
 2026-11-15 16:50 | Nauczyciel | DO RAPORTU: propozycja narzędzia TEXT_TO_QUANT dla Mechanika – walk-forward/overfit backtestów Kraken (BTC), koszt: kredyty planu (konektor już podłączony; sprawdzić get_usage przed użyciem)
+2026-11-15 18:11 | Reżyser (Raport 18) | BTC $62K→$64K: BOUNCE OR TRAP? | posted (IG media 17916992574511152) | ok
