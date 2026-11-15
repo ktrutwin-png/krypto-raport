@@ -80,6 +80,13 @@ footer .t a{color:#8f8b83;text-decoration:none;display:inline-block;padding:4px 
  .dzis{padding-top:56px;padding-bottom:56px;gap:28px}.dzis article{gap:18px}.pyt div{padding:60px 22px}footer{justify-content:center;text-align:center}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.cta{transition:none}}
 </style>
+<style>
+.kal{padding:48px 0 8px}.kal h2{margin:8px 0 6px}.kal-sub{color:var(--mut);max-width:640px;font-size:15px}
+#kalLista{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:8px}
+#kalLista li{display:flex;gap:14px;align-items:baseline;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.02)}
+#kalLista .t{color:var(--gold);min-width:150px;font-variant-numeric:tabular-nums}#kalLista .c{font-weight:700;color:var(--hi);min-width:38px}
+#kalLista li.past{opacity:.45}#kalLista li.now{border-color:#ff4d5e;box-shadow:0 0 14px #ff4d5e55}
+</style>
 </head>
 <body>
 <main id="tresc">
@@ -124,6 +131,13 @@ footer .t a{color:#8f8b83;text-decoration:none;display:inline-block;padding:4px 
     <article><div class="n">2</div><div><h3>Gold</h3><p>Loading…</p></div></article>
     <article><div class="n">3</div><div><h3>Altcoins</h3><p>Loading…</p></div></article>
   </div>
+</section>
+
+<section id="kalendarz" class="wrap kal" aria-label="This week's market events">
+  <div class="eyebrow">This week's market events</div>
+  <h2>Big data releases – markets can move fast</h2>
+  <p class="kal-sub">High-impact releases only (USD, EUR, GBP, JPY, CNY), shown in your local time. Our demo bots pause new trades 30 minutes before and after each one. Source: ForexFactory. Not financial advice.</p>
+  <ul id="kalLista"><li>Loading…</li></ul>
 </section>
 
 <section class="pyt" id="pytanie">
@@ -174,6 +188,23 @@ const Q=["Whose map are you following today?","When you look at a chart, do you 
 $("pyt").textContent=Q[Math.floor(Date.now()/864e5)%Q.length];
 // calm section reveal
 if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver" in window){const els=[...document.querySelectorAll(".dzis .l,.dzis .r,.pyt div")];els.forEach(e=>e.classList.add("rv"));const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1});els.forEach(e=>io.observe(e))}
+</script>
+<script>
+(function(){
+ var U='https://raw.githubusercontent.com/ktrutwin-png/krypto-raport/main/reports/kalendarz.json';
+ var el=document.getElementById('kalLista');if(!el)return;
+ function esc(t){var d=document.createElement('div');d.textContent=t==null?'':t;return d.innerHTML}
+ fetch(U,{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(d){
+  var ev=d&&d.wydarzenia;if(ev&&!Array.isArray(ev))ev=[ev];
+  if(!ev||!ev.length){el.innerHTML='<li>No high-impact releases this week.</li>';return}
+  var now=Date.now(),okno=(d.przerwa_min||30)*6e4;
+  el.innerHTML=ev.map(function(e){var t=new Date(e.czas_utc),ms=t.getTime();
+   var cls=ms+okno<now?'past':(Math.abs(ms-now)<=okno?'now':'');
+   var when=t.toLocaleString(undefined,{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+   var extra=e.prognoza?' · forecast '+esc(e.prognoza)+(e.poprzednio?' (prev '+esc(e.poprzednio)+')':''):'';
+   return '<li class="'+cls+'"><span class="t">'+esc(when)+'</span><span class="c">'+esc(e.waluta)+'</span><span>'+esc(e.nazwa)+extra+'</span></li>'}).join('');
+ }).catch(function(){el.innerHTML='<li>Calendar unavailable right now.</li>'});
+})();
 </script>
 </body>
 </html>
