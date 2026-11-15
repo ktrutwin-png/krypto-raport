@@ -188,3 +188,4 @@ INSPEKCJA UPDATE: 2026-11-15 04:50 (fire_trigger – UPDATE 04:50 Mechanik Z023/
 2026-11-15 10:06 | Reżyser | Weekly Market Brief: Week in Markets: BTC -14%, US 10Y 5.15% | Gold, Bitcoin, Fed, China | YT ok/IG ok | ok
 
 - 2026-11-15 12:41 BŁĄD: Strażnik – IB Gateway nie działa (2. przebieg z rzędu: 11:41 i 12:41, brak procesu i portów API). Krok dla szefa: zaloguj się na serwer (RDP) i uruchom/zaloguj IB Gateway.
+- 2026-11-15 13:41 BŁĄD: Strażnik – IB Gateway nadal nie działa (3. przebieg z rzędu, brak procesu i portów API). Ponownie powiadomiono szefa: zaloguj się na serwer (RDP) i uruchom/zaloguj IB Gateway.
