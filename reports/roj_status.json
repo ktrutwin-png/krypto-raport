@@ -149,6 +149,36 @@
    "s": "czeka",
    "opis": "tester 4 wariantów TP na forexie (M5/M15, 3–6 pips) na prawdziwych cenach IBKR, na sucho.",
    "ostatnio": "15.11 – start, czeka na otwarcie forexu"
+  },
+  {
+   "n": "KP EMA TP5 SL",
+   "s": "praca",
+   "opis": "Kraken Pro margin 10x na sucho: przecięcie EMA9/21 w trendzie, TP 5%, przesuwany SL, wejście limit.",
+   "ostatnio": "15.11 – nowy bot z backtestu 6 mies."
+  },
+  {
+   "n": "KP EMA TP5",
+   "s": "praca",
+   "opis": "Kraken Pro margin 10x na sucho: przecięcie EMA9/21 w trendzie, TP 5%, bez SL, wejście limit.",
+   "ostatnio": "15.11 – nowy bot z backtestu 6 mies."
+  },
+  {
+   "n": "KP EMA TP3",
+   "s": "praca",
+   "opis": "Kraken Pro margin 10x na sucho: przecięcie EMA9/21 w trendzie, TP 3%, bez SL, wejście limit.",
+   "ostatnio": "15.11 – nowy bot z backtestu 6 mies."
+  },
+  {
+   "n": "KP 3 świece TP5",
+   "s": "praca",
+   "opis": "Kraken Pro margin 10x na sucho: reguła szefa (3 świece), duży TP 5%, bez SL, wejście limit.",
+   "ostatnio": "15.11 – nowy bot z backtestu 6 mies."
+  },
+  {
+   "n": "KP Bollinger TP5",
+   "s": "praca",
+   "opis": "Kraken Pro margin 10x na sucho: powrót do wstęgi Bollingera w trendzie, TP 5%, bez SL, wejście limit.",
+   "ostatnio": "15.11 – nowy bot z backtestu 6 mies."
   }
  ]
 }
