@@ -1,0 +1,286 @@
+{
+ "date": "WEEK 46 · 09–13.11.2026",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "style": "news",
+ "ticker": "BTC $64,100 ▼14% W/W · ETH $1,785 ▼16% W/W · GOLD $3,874 ▼4.6% W/W · S&P 500 ▲2.5% W/W · US 10Y 5.15% ▲30BP · DXY 103.4 ▲1.1% · BRENT $96 ▼2% W/W · USD/CNY 6.67",
+ "scenes": [
+  {
+   "img": "market_cap_crash_holo_01.jpg",
+   "tag": "WEEKLY MARKET BRIEF",
+   "chap": "WEEK 46 · 2026",
+   "head": [
+    "BTC -14%.",
+    "*US 10Y 5.15%.*",
+    "*GOLD: 1-YEAR LOW.*"
+   ],
+   "sub": "AND STOCKS? UP 2.5%",
+   "move": "in",
+   "say": "Bitcoin lost fourteen percent in a week and touched sixty two thousand dollars. The US ten year yield jumped above five percent. And gold sank to its lowest level in more than a year. Yet stocks went up. This is your week in markets, in five minutes, with facts, not hype."
+  },
+  {
+   "img": "gold_bars_breakdown_red_holo_01.jpg",
+   "chap": "01 · GOLD",
+   "head": [
+    "GOLD",
+    "*$4,149 → $3,853*"
+   ],
+   "chip": "▼ -4.6% ON THE WEEK",
+   "anim": {
+    "dir": "down",
+    "label": "$3,875"
+   },
+   "note": "HIGH TUESDAY · LOW THURSDAY",
+   "move": "right",
+   "say": "Let's start with gold. On Tuesday it touched about four thousand one hundred forty nine dollars an ounce. Then the selling started. By Thursday it hit about three thousand eight hundred fifty three, its lowest level since October last year."
+  },
+  {
+   "img": "gold_under_4000_threshold_holo_01.jpg",
+   "chap": "01 · GOLD",
+   "head": [
+    "CLOSE $3,875",
+    "*-4.6% ON THE WEEK*"
+   ],
+   "note": "KEY LEVEL: $3,850",
+   "move": "out",
+   "say": "Gold closed Friday near three thousand eight hundred seventy five, down about four point six percent on the week. The problem was not weak demand. It was a stronger dollar and higher yields, which make a metal that pays no interest less attractive. The level to watch now is three thousand eight hundred fifty."
+  },
+  {
+   "img": "china_yuan_gold_holo_01.jpg",
+   "chap": "02 · CHINA",
+   "head": [
+    "TRADE SURPLUS",
+    "*$105 BILLION*"
+   ],
+   "chip": "EXPORTS +35% · IMPORTS +42%",
+   "note": "OCTOBER, YEAR ON YEAR",
+   "move": "in",
+   "say": "Now China. October trade data showed exports up about thirty five percent from a year earlier, and imports up almost forty two percent. Imports grew faster, so the trade surplus shrank to about one hundred five billion dollars, below forecasts."
+  },
+  {
+   "img": "china_yuan_gold_holo_01.jpg",
+   "chap": "02 · CHINA",
+   "head": [
+    "YUAN 6.67",
+    "*CALM IN THE STORM*"
+   ],
+   "chip": "FX RESERVE RATIO 6% FROM TODAY",
+   "note": "XI & TRUMP EXPECTED AT APEC SHENZHEN",
+   "move": "left",
+   "say": "The yuan barely moved this week, holding near six point six seven per dollar. From today, Chinese banks must hold six percent of foreign currency deposits in reserve, up from four. And Xi and Trump are reportedly expected to meet at the APEC summit in Shenzhen, with tariffs on the table."
+  },
+  {
+   "img": "cpi_cart_beats_forecast_holo_01.jpg",
+   "chap": "03 · USA",
+   "head": [
+    "CPI +0.4%",
+    "*FORECAST: 0.3%*"
+   ],
+   "chip": "CORE +0.3% · THIRD MONTH IN A ROW",
+   "move": "in",
+   "say": "In the United States, the big data point came on Tuesday. Consumer prices rose zero point four percent in October, above the zero point three percent forecast. Core inflation, without food and energy, rose zero point three percent for the third month in a row. Hot, again."
+  },
+  {
+   "img": "rates_press_btc_gold_dollar_holo_01.jpg",
+   "chap": "03 · USA",
+   "head": [
+    "US 10Y 5.15%",
+    "*+30 BP IN ONE WEEK*"
+   ],
+   "chip": "▲ DOLLAR INDEX 103.4",
+   "note": "DOLLAR NEAR A 19-MONTH HIGH",
+   "move": "right",
+   "say": "Bond markets reacted fast. The ten year Treasury yield jumped about thirty basis points in one week, to around five point one five percent. The dollar index climbed to about one hundred three point four, near its strongest level in nineteen months. That pressured gold and crypto all week."
+  },
+  {
+   "img": "hot_cool_buttons_holo_01.jpg",
+   "chap": "03 · USA",
+   "head": [
+    "S&P 500 +2.5%",
+    "*STOCKS SHRUG IT OFF*"
+   ],
+   "sub": "FIRST WEEKLY GAIN IN FIVE WEEKS",
+   "note": "PPI +0.3% · FORECAST 0.4%",
+   "move": "out",
+   "say": "And yet, stocks rose. The S and P five hundred gained about two and a half percent, snapping a four week losing streak. On Friday, producer prices for October rose zero point three percent, a bit cooler than the zero point four percent forecast."
+  },
+  {
+   "img": "fed_lever_rate_dial_holo_01.jpg",
+   "chap": "04 · THE FED",
+   "head": [
+    "DECEMBER HIKE?",
+    "*~90% ODDS*"
+   ],
+   "chip": "FED MEETS DEC 8–9",
+   "d3": {
+    "typ": "pokretlo",
+    "p": {
+     "od": 0.8,
+     "do": 0.97,
+     "seed": 46
+    }
+   },
+   "move": "in",
+   "say": "That brings us to the Fed. Before the inflation report, markets priced roughly an eighty percent chance of a rate hike in December. After it, about ninety percent, according to CME FedWatch. The Fed meets on December eighth and ninth."
+  },
+  {
+   "img": "inflation_thermometer_fed_holo_01.jpg",
+   "chap": "04 · THE FED",
+   "head": [
+    "HALF A POINT?",
+    "*NOW ON THE TABLE*"
+   ],
+   "note": "FED RATE TODAY: 3.75–4.00%",
+   "move": "left",
+   "say": "Fed Governor Christopher Waller reportedly said that core inflation around zero point three percent could justify an even bigger, half point hike. Rates sit at three point seven five to four percent. A Fed that hikes into a strong dollar is the toughest backdrop for both Bitcoin and gold."
+  },
+  {
+   "img": "btc_chart_holo_01.jpg",
+   "chap": "05 · BITCOIN",
+   "head": [
+    "BITCOIN",
+    "*$75.6K → $62K*"
+   ],
+   "chip": "▼ -14% IN 7 DAYS",
+   "anim": {
+    "dir": "down",
+    "label": "$64,100"
+   },
+   "note": "LOWEST IN ABOUT THREE MONTHS",
+   "move": "in",
+   "say": "Now Bitcoin. On Monday it traded near seventy five thousand six hundred. It fell almost every day, broke below seventy thousand on Friday, and this weekend touched about sixty two thousand, its lowest level in about three months. It now sits near sixty four thousand, down roughly fourteen percent in seven days."
+  },
+  {
+   "img": "etf_outflows_holo_01.jpg",
+   "chap": "05 · BITCOIN",
+   "head": [
+    "ETF OUTFLOWS",
+    "*-$1.07 BILLION*"
+   ],
+   "sub": "SECOND WEEK IN A ROW",
+   "note": "ETHER ETFS: -$399 MILLION",
+   "move": "right",
+   "say": "The funds kept selling. US spot Bitcoin E T Fs lost about one point zero seven billion dollars this week, with outflows on all five trading days. The second straight week above one billion. Ether E T Fs lost about four hundred million."
+  },
+  {
+   "img": "liquidation_meter_holo_01.jpg",
+   "chap": "05 · BITCOIN",
+   "head": [
+    "$750 MILLION",
+    "*BTC POSITIONS WIPED OUT*"
+   ],
+   "chip": "IN 24 HOURS · ~80% LONGS",
+   "d3": {
+    "typ": "waga",
+    "p": {
+     "przechyl": 0.6,
+     "seed": 46
+    }
+   },
+   "move": "out",
+   "say": "Leverage made it worse. According to CoinGlass, about seven hundred fifty million dollars in Bitcoin positions were liquidated in twenty four hours, roughly eighty percent of them longs. Compare that with gold: minus four and a half percent this week, against minus fourteen for Bitcoin."
+  },
+  {
+   "img": "eth_long_tower_collapse_holo_01.jpg",
+   "chap": "06 · CRYPTO",
+   "head": [
+    "ETHER",
+    "*$2,160 → $1,711*"
+   ],
+   "chip": "▼ -16% IN 7 DAYS",
+   "anim": {
+    "dir": "down",
+    "label": "$1,785"
+   },
+   "move": "in",
+   "say": "Ether fell even harder. It started the week near two thousand one hundred sixty and this weekend dropped to about seventeen hundred. That is roughly sixteen percent down in seven days, as Ether funds bled and leveraged bets unwound."
+  },
+  {
+   "img": "claim_check_magnifier_holo_01.jpg",
+   "chap": "06 · CRYPTO",
+   "head": [
+    "KAVA HACK",
+    "*~$3.8 MILLION*"
+   ],
+   "chip": "KAVA TOKEN ▼ ~40%",
+   "note": "BINANCE: OCTOBER HACK LOSSES COVERED",
+   "move": "left",
+   "say": "In security news, the Kava Lend protocol was reportedly drained of about three point eight million dollars late on Friday, and the KAVA token fell close to forty percent. Binance said it has now covered the assets hit in its six point three billion dollar October hack."
+  },
+  {
+   "img": "clarity_odds_dome_holo_01.jpg",
+   "chap": "06 · CRYPTO",
+   "head": [
+    "COINBASE",
+    "*FEDERAL TRUST CHARTER*"
+   ],
+   "sub": "FINAL OCC APPROVAL",
+   "note": "JOINS CIRCLE AND RIPPLE",
+   "move": "out",
+   "say": "On regulation, Coinbase received final approval from the O C C for a national trust charter, joining Circle and Ripple. But it brings a major crypto custodian under federal supervision."
+  },
+  {
+   "img": "nyse_tokenized_stocks_chain_holo_01.jpg",
+   "chap": "07 · TOKENIZATION",
+   "head": [
+    "NYSE PICKS",
+    "*AVALANCHE*"
+   ],
+   "sub": "FOR 24/7 TOKENIZED STOCKS",
+   "note": "STILL NEEDS REGULATORY APPROVAL",
+   "move": "in",
+   "say": "Now tokenization, the quiet long term story. The New York Stock Exchange selected the Avalanche blockchain to settle trades on its planned twenty four seven platform for tokenized stocks, after about a year of testing. It still needs regulatory approval."
+  },
+  {
+   "img": "tokenization_cubes_holo_01.jpg",
+   "chap": "07 · TOKENIZATION",
+   "head": [
+    "$270 MILLION",
+    "*BANK STABLECOIN*"
+   ],
+   "chip": "GOLDMAN · CITI · SANTANDER · DEUTSCHE",
+   "note": "TARGET: FIRST HALF OF 2027",
+   "move": "right",
+   "say": "And big banks are building their own rails. Goldman Sachs, Citi, Santander, Deutsche Bank and others reportedly committed about two hundred seventy million dollars to a joint stablecoin company, aiming to launch in the first half of twenty twenty seven. Even in a crash week, the plumbing keeps getting built."
+  },
+  {
+   "img": "oil_barrel_plunge_holo_01.jpg",
+   "chap": "08 · OIL",
+   "head": [
+    "BRENT $96",
+    "*10-WEEK LOW: $91.5*"
+   ],
+   "chip": "▼ ~2% ON THE WEEK",
+   "anim": {
+    "dir": "chop",
+    "label": "$96"
+   },
+   "move": "in",
+   "say": "Oil was calmer than last week. Brent hit a ten week low near ninety one and a half dollars on Tuesday, then bounced to about ninety six, as hopes for a quick US Iran deal faded. For the week, Brent lost about two percent."
+  },
+  {
+   "img": "week_ahead_calendar_holo_01.jpg",
+   "chap": "NEXT WEEK",
+   "head": [
+    "NEXT WEEK:",
+    "*NVIDIA · TUE NOV 17*"
+   ],
+   "chip": "FED MINUTES · WED NOV 18",
+   "note": "WATCH: GOLD $3,850 · BTC $62K",
+   "move": "out",
+   "say": "So what's next? Monday brings China's activity data. Tuesday: US retail sales, and Nvidia earnings after the close. Wednesday: minutes from the Fed's October meeting. Friday: China's loan prime rate. The levels to watch: three thousand eight hundred fifty on gold, and sixty two thousand on Bitcoin."
+  },
+  {
+   "img": "btc_vs_gold_arena_holo_01.jpg",
+   "chap": "SEE YOU NEXT SUNDAY",
+   "head": [
+    "GOLD OR BITCOIN",
+    "*WHO BOUNCES FIRST?*"
+   ],
+   "sub": "TELL US IN THE COMMENTS",
+   "note": "SUBSCRIBE · INSTAGRAM @ERL.GREY83",
+   "move": "in",
+   "say": "So, after Bitcoin's worst week in months, which bounces first, gold or Bitcoin? Tell me in the comments. Subscribe for daily crypto and gold facts, and see you next Sunday. This is not financial advice, just data."
+  }
+ ]
+}
