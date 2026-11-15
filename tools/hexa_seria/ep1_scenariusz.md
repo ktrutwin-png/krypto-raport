@@ -1,21 +1,22 @@
 # Hexa – Ep. 1 „Hexa explains the map” (sobota 21.11.2026)
 
-Format: 9:16 (Reel/Short) + 16:9 (YouTube, strona /brain/). Długość ok. 35 s. Głos: Pola (ElevenLabs), angielski.
+Format: 9:16 (Reel/Short) + 16:9 (YouTube, strona /brain/). Długość ok. 37 s. Głos: Pola (ElevenLabs), angielski.
 Emocje i kolor znaku na czole wg `marka/Hexa_emocje.md`. Ruch Hexy: Runway Act-Two (wzór ruchu = nagranie szefa, bez jego twarzy) albo OmniHuman 1.5.
+PRZESŁANIE (szef 15.11): nie dajemy gotowej mapy i nie krytykujemy cudzych – pokazujemy naszą jako przykład i dajemy klocki/wskazówki, żeby widz zbudował WŁASNĄ (zgodnie z mottem). Seria uczy, jak tworzyć własną mapę.
 Liczby tylko prawdziwe (stan 15.11: 32 światełka w `reports/roj_status.json` = agenci + boty). Przed publikacją Analityk sprawdza liczby.
 
 | # | Czas | Obraz | Hexa (gest, emocja, znak) | Tekst (EN, głos Pola) |
 |---|---|---|---|---|
-| 1 | 0–4 s | Intro: ciemność, znak na czole zapala się na niebiesko, Hexa otwiera oczy | spokój → lekki uśmiech; znak niebieski → złoty | "Hi. I'm Hexa. Let me show you the map." |
+| 1 | 0–4 s | Intro: ciemność, znak na czole zapala się na niebiesko, Hexa otwiera oczy | spokój → lekki uśmiech; znak niebieski → złoty | "Hi. I'm Hexa. Let me show you how we drew our map." |
 | 2 | 4–10 s | Hexa w neonowym mieście (styl GŁĘBIA), za nią świecący „mózg” | wskazuje dłonią na mózg; złoty, pulsuje | "In the center is one AI brain. It plans, checks and fixes everything." |
 | 3 | 10–17 s | Wokół mózgu rozbłyskują światełka (rój agentów) | rozkłada ręce, jakby pokazywała rój; złoty | "Around it: thirty-two workers. Agents that make videos, scan markets, guard the server." |
 | 4 | 17–23 s | Ekrany z wykresami, napis DEMO ONLY | stanowczy gest, lekko zmarszczone brwi; czerwony błysk przy „never” | "Our trading bots run on demo accounts only. We test first. We never gamble your trust." |
 | 5 | 23–30 s | Klocki/narzędzia open source układają się w mapę | ciepły uśmiech, otwarte dłonie; jaśniejszy złoty | "Everything is built from free, open-source pieces. No magic button. Just honest work." |
-| 6 | 30–35 s | Hexa bliżej kamery, logo Ensō + ERL.GREY83 | spokój, patrzy w obiektyw; znak gaśnie do niebieskiego | "Follow the map with me. On your path, other people's maps won't work." |
+| 6 | 30–37 s | Hexa bliżej kamery, mapa za nią rozpada się na pojedyncze klocki, logo Ensō + ERL.GREY83 | spokój, ciepło, patrzy w obiektyw; znak gaśnie do niebieskiego | "This is our map, not yours. Take the pieces, draw your own. Because on your path, other people's maps won't work." |
 
 Napis końcowy: „Ep. 2 – Where Hexa came from · Sat 28.11” + „Not financial advice”.
 
-Opis IG/YT (EN): pierwsza linia „One AI brain, 32 workers, demo accounts only – here's the real map.”, link w bio → /brain/, 3–5 hashtagów (#ai #crypto #aiagents #bitcoin #buildinpublic), „Not financial advice.”
+Opis IG/YT (EN): pierwsza linia „Not a map to copy – the pieces to draw your own. One AI brain, 32 workers, demo only.”, link w bio → /brain/, 3–5 hashtagów (#ai #crypto #aiagents #bitcoin #buildinpublic), „Not financial advice.”
 
 Plan produkcji (po wykupieniu Pro, najpóźniej śr 18.11):
 1. Głos Pola – cały tekst (tani, ok. 1 kr./znak).
