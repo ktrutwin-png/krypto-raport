@@ -124,6 +124,7 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - 13.11 02:31 szef doprecyzował: Claude może sam ULEPSZAĆ Hexę (jakość, 3D, ruch, włosy, mimika, nowe modele i techniki), ale GŁOS (Pola) i WIZERUNEK (twarz, postać, styl z referencji) ZOSTAJĄ bez zmian. Każde ulepszenie porównujemy z referencją; szef dostaje porównanie przed i po.
 
 ## R31 – DM Z LINKIEM ZA „BRAIN” (13.11.2026, decyzja szefa)
+- ✅ WDROŻONE 15.11.2026 23:55: ManyChat (plan darmowy, 25 kontaktów/mies.) – komentarz HEXA/BRAIN pod Reelem z Hexą https://www.instagram.com/reel/Dfx3tFTgbcq/ ALBO DM z tym słowem → publiczna odpowiedź pod komentarzem + DM Hexy z przyciskiem „Open the map” → /brain/. Pomysł szefa: Hexa sama reklamuje słowo HEXA. Warunek „obserwuje” jest płatny – prosimy o follow w opisie. Konto ManyChat działa w Chrome (logowanie szefa).
 - Komentarz „BRAIN” pod postem/Reelem → automatyczny DM z linkiem do /brain, ALE tylko gdy osoba obserwuje @erl.grey83. Nie obserwuje → linku nie wysyłamy (w DM tylko prośba: „zaobserwuj i napisz BRAIN jeszcze raz”).
 - Tylko na słowo BRAIN. Na inne DM-y dalej odpowiada człowiek (zgodnie z /brain).
 - Do sprawdzenia przez Claude: narzędzie (np. ManyChat; darmowy plan, warunek „is follower”, zgodność z zasadami Meta, prywatna odpowiedź na komentarz); podłączenie do IG robi szef sam (logowanie).
