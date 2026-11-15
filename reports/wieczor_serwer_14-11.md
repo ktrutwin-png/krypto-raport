@@ -41,3 +41,9 @@ Zasada: krok po kroku, jeden naraz. Szef wpisuje hasła i zatwierdza zmiany zabe
 ## 🔴 PRIORYTET 1 (szef 15.11 01:44: „musimy to zabezpieczyć”)
 Serwer 2x nie wrócił sam po restarcie (14.11 ~19:52 po resecie hasła; 14.11 ~22:53 po aktualizacjach – offline w Tailscale >2 h, Strażnik alarm 01:41). Wieczorem pomógł dopiero twardy stop/start w panelu Contabo.
 Plan przy laptopie: 1) podgląd TightVNC (co na ekranie) 2) twardy stop/start 3) przyczyna: dziennik System (zdarzenia 41/6008, usługi przy starcie, Tailscale), sterownik sieci 4) autologowanie + START_WSZYSTKO przy logowaniu, Tailscale jako usługa automatyczna z odzyskiwaniem 5) test: restart i sprawdzenie, że wszystko wstaje samo w <10 min.
+
+## ✅ 15.11 03:55 PRZYCZYNA ZNALEZIONA + CZĘŚĆ 1 NAPRAWIONA
+- Serwer po aktualizacjach wstał normalnie o 23:00 (zdarzenie 6005) – nie wisiał. Tailscale był „offline”, bo działał w trybie przypiętym do zalogowanego użytkownika: bez logowania na pulpit = brak Tailscale = brak dostępu (a publiczny RDP zamknięty zaporą). Do tego Desktop Commander i boty startują dopiero po zalogowaniu.
+- Naprawa 1 (03:56): `tailscale set --unattended=true` → ForceDaemon=true. Tailscale łączy się teraz zaraz po starcie Windows, bez logowania.
+- Do zrobienia (część 2): start botów + Desktop Commander bez logowania (autologowanie – hasło wpisuje szef, albo zadania przy starcie systemu) i test restartu.
+- Aktualizacje zainstalowane: KB5122871 (2026-09 Security), KB5127690 (.NET). 03:02 twardy restart (zdarzenie 41) – bez skutków.
