@@ -6,7 +6,10 @@ Nie składa ŻADNYCH zleceń. Używa tylko publicznych cen Krakena (bez kluczy A
 Każdy bot ma własne wirtualne 500 EUR, gra LONG i SHORT na XRP/EUR, BTC/EUR, ETH/EUR.
 Wejście (reguła szefa nr 1 z MT5): 3 ostatnie zamknięte świece M15 w tym samym kolorze
 = kierunek, potwierdzony trendem H1 (EMA20 vs EMA50).
-Wyjście: tylko KRÓTKI TP (styl szefa: bez SL). Ochrona = likwidacja jak na Krakenie
+Wyjście: KRÓTKI TP + przesuwany SL (od 15.11 na życzenie szefa): start 1,5 x odległość do TP,
+gdy cena przejdzie połowę drogi do TP -> SL na zero (pokrywa opłaty), potem SL idzie za ceną
+w odległości 0,5 x dystans TP (im bliżej celu, tym ciaśniej). Pozycje otwarte przed 15.11 grają po staremu (bez SL).
+Dodatkowa ochrona = likwidacja jak na Krakenie
 (cross margin: poziom depozytu < 40% całego konta bota → zamknięcie wszystkiego).
 Koszty jak na Kraken Pro (najniższy próg): wejście rynkowe 0.40%, TP limitem 0.25%,
 otwarcie marginu 0.02%, rollover 0.02% co 4 h.
@@ -23,6 +26,10 @@ MAX_POZYCJI = 3
 FEE_TAKER, FEE_MAKER = 0.0040, 0.0025
 FEE_MARGIN_OPEN, FEE_ROLLOVER = 0.0002, 0.0002
 LIKWIDACJA = 0.40
+SL_START = 1.5      # SL startowy = 1,5 x odległość wejście->TP
+SL_PROG_BE = 0.5    # po przejściu 50% drogi do TP SL idzie na zero (z opłatami)
+SL_TRAIL = 0.5      # potem SL ciągnie się za najlepszą ceną w odległości 0,5 x dystans TP
+KOSZT_RT = FEE_TAKER + FEE_MAKER + FEE_MARGIN_OPEN   # koszty wejścia+wyjścia (do progu „na zero")
 
 # Krótkie TP – nasze liczby. TP szefa na złocie (+0.3%) nie pokryje opłat Krakena
 # (ok. 0.65-0.8% w obie strony), więc najkrótsze sensowne TP to ok. 0.8%.
@@ -156,6 +163,28 @@ def obieg():
                 poz["oplaty"] += koszt
                 ost = ost.fromtimestamp(ost.timestamp() + 4 * 3600, timezone.utc)
             poz["rollover"] = ost.isoformat()
+        # przesuwany SL (tylko pozycje z polem "sl")
+        for poz in list(st["pozycje"]):
+            if "sl" not in poz or poz["para"] not in ceny:
+                continue
+            bid, ask, _ = ceny[poz["para"]]
+            dyst = abs(poz["tp"] - poz["wejscie"])
+            if poz["kierunek"] == "LONG":
+                poz["best"] = max(poz["best"], bid)
+                postep = (poz["best"] - poz["wejscie"]) / dyst
+                if postep >= SL_PROG_BE:
+                    nowy = max(poz["wejscie"] * (1 + KOSZT_RT), poz["best"] - SL_TRAIL * dyst)
+                    poz["sl"] = max(poz["sl"], nowy)
+                if bid <= poz["sl"]:
+                    zamknij(nazwa, st, poz, poz["sl"], "SL" if poz["sl"] < poz["wejscie"] else "SL_TRAIL", FEE_TAKER)
+            else:
+                poz["best"] = min(poz["best"], ask)
+                postep = (poz["wejscie"] - poz["best"]) / dyst
+                if postep >= SL_PROG_BE:
+                    nowy = min(poz["wejscie"] * (1 - KOSZT_RT), poz["best"] + SL_TRAIL * dyst)
+                    poz["sl"] = min(poz["sl"], nowy)
+                if ask >= poz["sl"]:
+                    zamknij(nazwa, st, poz, poz["sl"], "SL" if poz["sl"] > poz["wejscie"] else "SL_TRAIL", FEE_TAKER)
         # TP (zlecenie limit = maker)
         for poz in list(st["pozycje"]):
             if poz["para"] not in ceny:
@@ -199,10 +228,12 @@ def obieg():
             oplata = wej * ilosc * (FEE_TAKER + FEE_MARGIN_OPEN)
             st["gotowka"] -= oplata
             tp = wej * (1 + tp_pct) if kier == "LONG" else wej * (1 - tp_pct)
+            sl = wej * (1 - SL_START * tp_pct) if kier == "LONG" else wej * (1 + SL_START * tp_pct)
             st["pozycje"].append({"para": para, "kierunek": kier, "wejscie": wej, "ilosc": ilosc, "tp": tp,
+                                  "sl": sl, "best": wej,
                                   "otwarta": t.isoformat(timespec="seconds"), "rollover": t.isoformat(),
                                   "oplaty": oplata})
-            log(f"[{nazwa}] OTWARTA {kier} {para} @ {wej} TP {tp:.5f} ({tp_pct:.2%}) | 50 EUR x10")
+            log(f"[{nazwa}] OTWARTA {kier} {para} @ {wej} TP {tp:.5f} ({tp_pct:.2%}) SL {sl:.5f} (przesuwany) | 50 EUR x10")
         # podsumowanie
         kapital = st["gotowka"] + sum(pnl(p, ceny[p["para"]][2]) for p in st["pozycje"] if p["para"] in ceny)
         st["kapital"] = round(kapital, 2)
