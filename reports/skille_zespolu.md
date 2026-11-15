@@ -66,3 +66,4 @@ Zasada: repo dostaje gwiazdkę od szefa dopiero, gdy jego skill/narzędzie dzia�
 | heygen-com/hyperframes | 11.11.2026 | test | – |
 | nextlevelbuilder/ui-ux-pro-max-skill | 11.11.2026 | test | – |
 | mrdoob/three.js | 11.11.2026 | działa (sceny 3D) | do dania 25.11 |
+- Odłożone (16.11.2026): ethanplusai/sellbird (~5,7k ★) – automat cold-mail B2B; przyda się dopiero na etapie sprzedaży usług; uwaga RODO/NL. Zasada szefa: mało ale najlepsze.
