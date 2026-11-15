@@ -119,6 +119,36 @@
    "s": "czeka",
    "opis": "Niedziela: książka „Filozofia tradingu” – kilka rozdziałów naraz, wg nastroju szefa i rynku.",
    "ostatnio": "czeka na niedzielę 15.11"
+  },
+  {
+   "n": "Kraken Pro krótki",
+   "s": "praca",
+   "opis": "bot margin 10x na Krakenie (na sucho), TP 0.8% + przesuwany SL, XRP/BTC/ETH.",
+   "ostatnio": "15.11 – 6 TP, przesuwany SL od dziś"
+  },
+  {
+   "n": "Kraken Pro średni",
+   "s": "praca",
+   "opis": "bot margin 10x na Krakenie (na sucho), TP 1.2% + przesuwany SL.",
+   "ostatnio": "15.11 – 6 TP, przesuwany SL od dziś"
+  },
+  {
+   "n": "Kraken Pro ATR",
+   "s": "praca",
+   "opis": "bot margin 10x na Krakenie (na sucho), TP wg zmienności (ATR) + przesuwany SL.",
+   "ostatnio": "15.11 – 1 TP, przesuwany SL od dziś"
+  },
+  {
+   "n": "IBKR Szybki",
+   "s": "czeka",
+   "opis": "szybkie transakcje forex na koncie demo IBKR (EUR/USD, GBP/USD, USD/JPY), świece 5 min.",
+   "ostatnio": "15.11 – podłączony do IB Gateway, czeka na otwarcie forexu (niedz. ~23:00)"
+  },
+  {
+   "n": "IBKR Warianty",
+   "s": "czeka",
+   "opis": "tester 4 wariantów TP na forexie (M5/M15, 3–6 pips) na prawdziwych cenach IBKR, na sucho.",
+   "ostatnio": "15.11 – start, czeka na otwarcie forexu"
   }
  ]
 }
