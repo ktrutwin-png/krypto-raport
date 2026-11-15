@@ -109,3 +109,4 @@ czas;online;procesy_ok;brakuje;ram_wolne_gb;commit_gb;top_procesy;uwagi
 2026-11-14T23:40;nie;;;;;;serwer Offline w Desktop Commander (ostatnio widziany 52 min temu) - pierwszy przebieg bez odpowiedzi, bez alarmu; brak IB z poprzedniego wpisu nie do sprawdzenia; tarcza=brak_danych
 2026-11-15T00:40;nie;;;;;;serwer Offline w Desktop Commander (ostatnio widziany 2 h temu) - drugi przebieg z rzedu bez odpowiedzi - ALARM; procesy/RAM/logi nie do sprawdzenia; tarcza=brak_danych
 2026-11-15T01:40;nie;;;;;;serwer Offline w Desktop Commander (ostatnio widziany 3 h temu) - trzeci przebieg z rzedu bez odpowiedzi - ALARM; procesy/RAM/logi nie do sprawdzenia; tarcza=brak_danych
+2026-11-15T02:41;nie;;;;;;serwer Offline w Desktop Commander (ostatnio widziany 4 h temu) - czwarty przebieg z rzedu bez odpowiedzi - ALARM; procesy/RAM/logi nie do sprawdzenia; tarcza=brak_danych
