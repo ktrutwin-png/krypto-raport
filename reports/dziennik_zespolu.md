@@ -195,3 +195,4 @@ INSPEKCJA UPDATE: 2026-11-15 14:28 (UPDATE 15.11 14:25 Skanery – skaner_dzienn
 2026-11-15 14:28 | Inspektor | nowe: 0, zamknięte: 0, otwarte: 11 (Z004, Z005b, Z009, Z010, Z011, Z013, Z017, Z020, Z022, Z023, Z024) | dla Mechanika: – | BŁĄD Strażnika (IB Gateway 11:41–13:41) dopisany do Z010 | ok
 2026-11-15 14:28 | Inspektor | DO RAPORTU: IB Gateway nie działa (Strażnik 3× z rzędu 11:41–13:41, brak procesu i portów) – IB Skaner ślepy od ~5 dni (Z010) – szef: RDP na serwer i logowanie IB Gateway | Z024 restart skanera dziennego czeka na Mózga – do tego czasu skaner nadal może dać sygnał SPRZEDAŻ USDJPY DON
 INSPEKCJA UPDATE: 2026-11-15 14:29 (fire_trigger – UPDATE 14:25 Skanery Z024) potwierdzone ponownie: plik skaner_dzienny.py bez zmian od 14:25, CFG USDJPY DON (1,), stan 14:27 świeży; proces nadal PID 1136 z 04:03 → nowy CFG czeka na restart (Z024 dla Mózgu). Bez nowych zgłoszeń.
+2026-11-15 15:30 | Pisarz | kronika tygodnia + praca nad książką | – | ok
