@@ -64,3 +64,8 @@ Wolne 75 GB z 238 GB. Najwięksi kandydaci do sprzątnięcia:
 - stare testy botów: NexScalperDemo 5,4 GB, Nex_Github_Gold_Tests 2 GB, NexRSIDemo 0,7 GB, OpenSourceBotResearch 0,7 GB
 - .cache 4 GB, .codex 1,3 GB, instalatory w Pobranych (~0,7 GB)
 Razem ~55 GB do odzyskania. Przed usunięciem: sprawdzić, czy coś z tych folderów nie jest jedyną kopią (porównać z serwerem).
+
+## Snapshot (15.11)
+- Stary snapshot 2L84U (14.11, sprzed napraw) usunięty.
+- Nowy snapshot **po-naprawach-15-11**: autostart, Tailscale unattended, zapora, aktualizacje, Tarcza, Kraken Pro. Auto-usunięcie po ~30 dniach (Contabo), limit 1 snapshot.
+- Auto Backup w Contabo: włączony.
