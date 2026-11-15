@@ -69,3 +69,9 @@ Razem ~55 GB do odzyskania. Przed usunięciem: sprawdzić, czy coś z tych folde
 - Stary snapshot 2L84U (14.11, sprzed napraw) usunięty.
 - Nowy snapshot **po-naprawach-15-11**: autostart, Tailscale unattended, zapora, aktualizacje, Tarcza, Kraken Pro. Auto-usunięcie po ~30 dniach (Contabo), limit 1 snapshot.
 - Auto Backup w Contabo: włączony.
+
+## IBKR na serwerze (15.11)
+- IB Gateway 10.50 (podpis IB OK) w C:\Jts\ibgateway\1050 + IBC 3.24.2 w C:\IBC.
+- Konto paper DUR315177, API 127.0.0.1:4002 (tylko lokalnie), test API OK: NetLiq 1 000 825 USD.
+- IBC: auto-restart codziennie 05:30, pełne ponowne logowanie w niedzielę 07:00; dane logowania wpisał szef sam (config.ini tylko dla Administratora).
+- Gateway dodany do START_WSZYSTKO (startuje po restarcie serwera). Biblioteka ib_async zainstalowana.
