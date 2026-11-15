@@ -116,8 +116,13 @@ class Bot:
             if wej.orderStatus.status == "Filled":
                 break
         if wej.orderStatus.status != "Filled":
-            log(f"{para}: wejście niewypełnione ({wej.orderStatus.status}) – anuluję")
-            self.ib.cancelOrder(wej.order)
+            powod = "; ".join(f"{e.errorCode} {e.message}" for e in wej.log if e.errorCode) or "-"
+            log(f"{para}: wejście niewypełnione ({wej.orderStatus.status}) – anuluję | IB: {powod[:200]}")
+            if wej.orderStatus.status not in ("Cancelled", "Inactive", "ApiCancelled"):
+                self.ib.cancelOrder(wej.order)
+            # bezpiecznik: po odrzuceniu ta para odpoczywa 60 min, żeby nie powtarzać błędu co świecę
+            self.st.setdefault("blokada", {})[para] = (teraz() + timedelta(minutes=60)).isoformat(timespec="seconds")
+            stan_zapisz(self.st)
             return
         cena = wej.orderStatus.avgFillPrice
         tp = cena + dystans if kier == "LONG" else cena - dystans
@@ -190,6 +195,9 @@ class Bot:
                 continue
             self.st["ostatnia_swieca"][para] = ost
             if para in self.st["pozycje"] or len(self.st["pozycje"]) >= MAX_POZYCJI:
+                continue
+            blok = self.st.get("blokada", {}).get(para)
+            if blok and teraz() < datetime.fromisoformat(blok):
                 continue
             news = przerwa((para[:3], para[3:]))
             if news:
