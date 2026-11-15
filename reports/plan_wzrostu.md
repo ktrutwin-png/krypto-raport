@@ -149,3 +149,8 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - Źródła: Kalendarz Google (zadania + abonamenty 💳/📱), reports/dziennik_zespolu.md, lista do-zrobienia szefa.
 - Technika do sprawdzenia: CallMeBot (darmowe połączenia Telegram) + głos Hexy/Poli z ElevenLabs; rozmowa dwustronna – Telegram voice/ElevenLabs Agent.
 - Do czasu wdrożenia zostaje graficzny briefing 8:00 (od 15.11 z abonamentami na jutro).
+
+### R38 – Pierwsze 2 sekundy = zaskoczenie (szef 15.11.2026)
+- Ludzie przewijają po ~3 s, bo nic ich nie zaskakuje („oklepane”). Każdy Reel/Short musi w 0–2 s pokazać coś, czego widz się nie spodziewa: ruch Hexy, zapalający się znak, pytanie wprost do widza, liczba-szok – NIE logo, NIE wstęp, NIE spokojny wykres.
+- Najpierw oko, potem treść: grafika na poziomie filmu, nie „wystarczająco dobra”.
+- Analityk co tydzień sprawdza w Metricool średni czas oglądania / retencję 3 s i porównuje Reelsy: co zatrzymało, co przewinięto → wnioski do reports/nauka.
