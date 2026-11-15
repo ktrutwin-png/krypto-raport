@@ -1,77 +1,113 @@
 {
- "opis_pliku": "Stan roju dla aplikacji ORB (Hexa) – aplikacja czyta ten plik co 10 min. KAŻDY wpis = jedno światełko wokół Hexy. s: praca (złote) | czeka (niebieskie) | blad (czerwone). Nowy agent/bot = dopisz wpis {n, s, opis, ostatnio} (max 40). Agent po każdym przebiegu aktualizuje swoje 's' i 'ostatnio'. Pola dla strony /brain/ (publiczne, EN): typ = agent | bot, en = opis po angielsku, gdzie = platforma. Strona /brain/ czyta ten plik na żywo – nowy wpis od razu pokazuje się na stronie. Pole ostatnio NIE jest pokazywane publicznie.",
+ "opis_pliku": "Stan roju dla aplikacji ORB (Hexa) – aplikacja czyta ten plik co 10 min. KAŻDY wpis = jedno światełko wokół Hexy. s: praca (złote) | czeka (niebieskie) | blad (czerwone). Nowy agent/bot = dopisz wpis {n, s, opis, ostatnio} (max 40). Agent po każdym przebiegu aktualizuje swoje 's' i 'ostatnio'. Pola dla strony /brain/ (publiczne, EN): typ = agent | bot, en = opis po angielsku, gdzie = platforma. Strona /brain/ czyta ten plik na żywo – nowy wpis od razu pokazuje się na stronie. Pole ostatnio NIE jest pokazywane publicznie. Publiczne: nazwa_en, ikona, tag, en, gdzie, s oraz teraz_en = co agent/bot robi TERAZ, jedno krótkie zdanie po angielsku (bez liczb kont, ID, haseł, szczegółów serwera) – aktualizuj przy każdym przebiegu razem z ostatnio.",
  "agenci": [
   {
    "n": "Raport 12",
    "s": "praca",
    "ostatnio": "14.11 10:12 – Reel MYTH vs FACT: DIGITAL GOLD? BTC -11.8% vs gold -4.7% (3D liczba + skarbiec, 21.9 s)",
    "typ": "agent",
-   "en": "Noon market video (Reel/Short), live prices with sources",
-   "gdzie": "Instagram · YouTube"
+   "en": "Daily market video at 10:00 CET. Prices come from live data feeds, every number has a source.",
+   "gdzie": "Instagram · YouTube",
+   "ikona": "📰",
+   "tag": "Content",
+   "nazwa_en": "Noon report",
+   "teraz_en": "Preparing tomorrow's 10:00 market video."
   },
   {
    "n": "Raport 18",
    "s": "praca",
    "ostatnio": "13.11 18:13 – BTC -9% IN 7 DAYS · cooler PPI (3D swiece + waga, 30.5 s)",
    "typ": "agent",
-   "en": "Evening market video, live prices with sources",
-   "gdzie": "Instagram · YouTube"
+   "en": "Daily market video at 18:00 CET. Prices come from live data feeds, every number has a source.",
+   "gdzie": "Instagram · YouTube",
+   "ikona": "📰",
+   "tag": "Content",
+   "nazwa_en": "Evening report",
+   "teraz_en": "Preparing tomorrow's 18:00 market video."
   },
   {
    "n": "Reżyser",
    "s": "praca",
    "ostatnio": "12.11 18:31 – Short 18:00 wrzucony na YouTube (Metricool 425999771)",
    "typ": "agent",
-   "en": "Director: scripts, visuals, captions and publishing",
-   "gdzie": "Instagram · YouTube"
+   "en": "Picks the day's crypto, gold and bank news, writes a 20–30 s script and builds the video: AI visuals, 3D scenes, captions, voice. Publishes to Instagram and YouTube.",
+   "gdzie": "Instagram · YouTube",
+   "ikona": "🎬",
+   "tag": "Content",
+   "nazwa_en": "Director",
+   "teraz_en": "Planning this week's Reels – more crypto, less gold."
   },
   {
    "n": "Opiekun",
    "s": "czeka",
    "ostatnio": "11.11 – 190 obserwujących (+14)",
    "typ": "agent",
-   "en": "Community: tracks followers and reach",
-   "gdzie": "Instagram"
+   "en": "Looks after the channel: reach, followers and one small improvement to the videos every day.",
+   "gdzie": "Instagram",
+   "ikona": "🛠",
+   "tag": "Quality",
+   "nazwa_en": "Caretaker",
+   "teraz_en": "Waiting for its next daily check of reach."
   },
   {
    "n": "Skanery",
    "s": "praca",
    "ostatnio": "15.11 04:07 – proces działa na serwerze",
    "typ": "agent",
-   "en": "Looks after the market scanners and their signal quality",
-   "gdzie": "Server"
+   "en": "Watches gold, indices and crypto 24/7 and logs setups. It only observes and reports – it never places trades.",
+   "gdzie": "Server",
+   "ikona": "📡",
+   "tag": "Markets",
+   "nazwa_en": "Scanners",
+   "teraz_en": "Watching markets around the clock."
   },
   {
    "n": "Inspektor",
    "s": "czeka",
    "ostatnio": "11.11 11:53 – sprawdził sceny 3D i stronę",
    "typ": "agent",
-   "en": "Checks every agent and bot, files problems",
-   "gdzie": "Server"
+   "en": "Checks the whole machine after every change and once a week: is every process alive, are logs fresh, did anything break.",
+   "gdzie": "Server",
+   "ikona": "🔍",
+   "tag": "Control",
+   "nazwa_en": "Inspector",
+   "teraz_en": "Waiting for its next check of the machine."
   },
   {
    "n": "Zwiadowca",
    "s": "czeka",
    "ostatnio": "pierwszy przebieg w nocy z soboty na niedzielę",
    "typ": "agent",
-   "en": "Scout: scans markets and new tools",
-   "gdzie": "Server"
+   "en": "Every weekend searches GitHub for better open-source skills and tools, reviews them for safety and installs only what helps.",
+   "gdzie": "Server",
+   "ikona": "🔎",
+   "tag": "Learning",
+   "nazwa_en": "Scout",
+   "teraz_en": "Next search for new tools: Saturday night."
   },
   {
    "n": "Nauczyciel",
    "s": "czeka",
    "ostatnio": "nowe lekcje: E-20261111-02/03",
    "typ": "agent",
-   "en": "Teacher: turns results into lessons for the team",
-   "gdzie": "Server"
+   "en": "Turns mistakes into written lessons, so the same error doesn't happen twice.",
+   "gdzie": "Server",
+   "ikona": "📚",
+   "tag": "Learning",
+   "nazwa_en": "Teacher",
+   "teraz_en": "Next lessons for the team: Sunday afternoon."
   },
   {
    "n": "Strażnik",
    "s": "praca",
    "ostatnio": "18:44 – serwer ok, zapora Contabo działa",
    "typ": "agent",
-   "en": "Guard: watches the server and its security",
-   "gdzie": "Server"
+   "en": "Hourly health and security check of the server. Speaks up only when something is actually wrong.",
+   "gdzie": "Server",
+   "ikona": "🛡",
+   "tag": "Control",
+   "nazwa_en": "Server guard",
+   "teraz_en": "Checking the server every hour."
   },
   {
    "n": "Hexa 💧",
@@ -79,7 +115,9 @@
    "ostatnio": "11.11 21:02 – proces działa na serwerze",
    "typ": "bot",
    "en": "Calm gold bot (XAU/USD)",
-   "gdzie": "MetaTrader 5 demo"
+   "gdzie": "MetaTrader 5 demo",
+   "nazwa_en": "Hexa 💧",
+   "teraz_en": "Waiting for the gold market to open."
   },
   {
    "n": "Turbo 🔥",
@@ -87,7 +125,9 @@
    "ostatnio": "11.11 21:02 – proces działa na serwerze",
    "typ": "bot",
    "en": "Aggressive gold bot (XAU/USD)",
-   "gdzie": "MetaTrader 5 demo"
+   "gdzie": "MetaTrader 5 demo",
+   "nazwa_en": "Turbo 🔥",
+   "teraz_en": "Waiting for the gold market to open."
   },
   {
    "n": "Indeksy",
@@ -95,7 +135,9 @@
    "ostatnio": "11.11 21:02 – proces działa na serwerze",
    "typ": "bot",
    "en": "Index bot (DAX ETF, SPY)",
-   "gdzie": "MetaTrader 5 demo"
+   "gdzie": "MetaTrader 5 demo",
+   "nazwa_en": "Indices",
+   "teraz_en": "Waiting for index markets to open."
   },
   {
    "n": "Panel",
@@ -103,7 +145,9 @@
    "ostatnio": "11.11 21:02 – proces działa na serwerze",
    "typ": "bot",
    "en": "Private Telegram panel for the owner's own manual trades",
-   "gdzie": "Telegram"
+   "gdzie": "Telegram",
+   "nazwa_en": "Panel",
+   "teraz_en": "Ready for the owner's manual trades."
   },
   {
    "n": "Kraken Donchian",
@@ -112,7 +156,9 @@
    "ostatnio": "11.11 21:02 – proces działa na serwerze",
    "typ": "bot",
    "en": "Crypto breakout strategy, BTC 4h",
-   "gdzie": "Freqtrade dry-run"
+   "gdzie": "Freqtrade dry-run",
+   "nazwa_en": "Kraken Donchian",
+   "teraz_en": "Watching BTC on the 4-hour chart."
   },
   {
    "n": "Kraken Momentum",
@@ -121,7 +167,9 @@
    "ostatnio": "11.11 21:02 – proces działa na serwerze",
    "typ": "bot",
    "en": "Crypto momentum strategy, BTC 1d",
-   "gdzie": "Freqtrade dry-run"
+   "gdzie": "Freqtrade dry-run",
+   "nazwa_en": "Kraken Momentum",
+   "teraz_en": "Watching BTC on the daily chart."
   },
   {
    "n": "IB Skaner",
@@ -130,7 +178,9 @@
    "ostatnio": "11.11 21:02 – proces działa na serwerze",
    "typ": "bot",
    "en": "Market scanner",
-   "gdzie": "Interactive Brokers paper"
+   "gdzie": "Interactive Brokers paper",
+   "nazwa_en": "IB scanner",
+   "teraz_en": "Scanning markets on the paper account."
   },
   {
    "n": "Mechanik",
@@ -138,8 +188,12 @@
    "opis": "Naprawy i boty: codziennie 04:41 bierze zgłoszenia od Inspektora i naprawia.",
    "ostatnio": "12.11 04:56 – przebieg napraw",
    "typ": "agent",
-   "en": "Mechanic: fixes what the Inspector finds",
-   "gdzie": "Server"
+   "en": "Takes every problem the Inspector finds and fixes it – then the Inspector checks the fix really works.",
+   "gdzie": "Server",
+   "ikona": "🔧",
+   "tag": "Control",
+   "nazwa_en": "Mechanic",
+   "teraz_en": "Next round of fixes: tomorrow early morning."
   },
   {
    "n": "Sekretarz",
@@ -147,8 +201,12 @@
    "opis": "Poranny briefing 8:00: kalendarz i poczta szefa, grafika na Telegram.",
    "ostatnio": "12.11 05:52 – briefing",
    "typ": "agent",
-   "en": "Morning briefing for the owner: calendar and mail",
-   "gdzie": "Telegram"
+   "en": "Morning briefing at 8:00 – only the owner's calendar and important mail, as one graphic.",
+   "gdzie": "Telegram",
+   "ikona": "🗓",
+   "tag": "Owner",
+   "nazwa_en": "Secretary",
+   "teraz_en": "Next morning briefing: tomorrow 8:00."
   },
   {
    "n": "Raport 22",
@@ -156,8 +214,12 @@
    "opis": "Raport dnia 22:00: zysk i strata wszystkich botów, grafika na Telegram.",
    "ostatnio": "12.11 21:54 – raport wysłany",
    "typ": "agent",
-   "en": "Daily 22:00 results of all demo bots",
-   "gdzie": "Telegram"
+   "en": "At 22:00: what every demo bot won and lost today, one graphic, nothing more.",
+   "gdzie": "Telegram",
+   "ikona": "🌙",
+   "tag": "Owner",
+   "nazwa_en": "22:00 results",
+   "teraz_en": "Next results: today 22:00."
   },
   {
    "n": "Handlowiec",
@@ -165,8 +227,12 @@
    "opis": "Biznes: oferty usług AI dla firm, produkty, programy partnerskie.",
    "ostatnio": "12.11 14:10 – praca nad ofertą",
    "typ": "agent",
-   "en": "Business: AI service offers for companies",
-   "gdzie": "—"
+   "en": "Works on offers for small businesses that want their own AI helpers.",
+   "gdzie": "—",
+   "ikona": "💼",
+   "tag": "Business",
+   "nazwa_en": "Sales",
+   "teraz_en": "Working on an offer for small businesses."
   },
   {
    "n": "Analityk",
@@ -174,8 +240,12 @@
    "opis": "Sobota: kontrola jakości wszystkich agentów i raport tygodnia z nagrodami.",
    "ostatnio": "14.11 11:45 – raport tygodnia: karta jakości, nagrody (🏆 Mechanik), analiza 37 transakcji szefa",
    "typ": "agent",
-   "en": "Analyst: weekly quality check and fact-checking",
-   "gdzie": "Server"
+   "en": "Every Saturday checks how well each agent did its job, fact-checks numbers and writes one short team report.",
+   "gdzie": "Server",
+   "ikona": "📊",
+   "tag": "Control",
+   "nazwa_en": "Analyst",
+   "teraz_en": "Next team report: Saturday."
   },
   {
    "n": "Pisarz",
@@ -183,8 +253,12 @@
    "opis": "Niedziela: książka „Filozofia tradingu” – kilka rozdziałów naraz, wg nastroju szefa i rynku.",
    "ostatnio": "czeka na niedzielę 15.11",
    "typ": "agent",
-   "en": "Writer: the trading-philosophy book, quietly",
-   "gdzie": "Server"
+   "en": "Every Sunday adds to the owner's book on the philosophy of trading.",
+   "gdzie": "Server",
+   "ikona": "✍️",
+   "tag": "Writing",
+   "nazwa_en": "Writer",
+   "teraz_en": "Writing this Sunday's chapter."
   },
   {
    "n": "Kraken Pro krótki",
@@ -193,7 +267,9 @@
    "ostatnio": "15.11 – 6 TP, przesuwany SL od dziś",
    "typ": "bot",
    "en": "10x margin test, short take-profit + trailing stop",
-   "gdzie": "Kraken Pro paper sim"
+   "gdzie": "Kraken Pro paper sim",
+   "nazwa_en": "Kraken Pro short",
+   "teraz_en": "Holding paper positions on BTC, ETH and XRP."
   },
   {
    "n": "Kraken Pro średni",
@@ -202,7 +278,9 @@
    "ostatnio": "15.11 – 6 TP, przesuwany SL od dziś",
    "typ": "bot",
    "en": "10x margin test, medium take-profit + trailing stop",
-   "gdzie": "Kraken Pro paper sim"
+   "gdzie": "Kraken Pro paper sim",
+   "nazwa_en": "Kraken Pro medium",
+   "teraz_en": "Holding paper positions on BTC, ETH and XRP."
   },
   {
    "n": "Kraken Pro ATR",
@@ -211,7 +289,9 @@
    "ostatnio": "15.11 – 1 TP, przesuwany SL od dziś",
    "typ": "bot",
    "en": "10x margin test, volatility-based take-profit",
-   "gdzie": "Kraken Pro paper sim"
+   "gdzie": "Kraken Pro paper sim",
+   "nazwa_en": "Kraken Pro ATR",
+   "teraz_en": "Holding paper positions on BTC, ETH and XRP."
   },
   {
    "n": "IBKR Szybki",
@@ -220,7 +300,9 @@
    "ostatnio": "15.11 – podłączony do IB Gateway, czeka na otwarcie forexu (niedz. ~23:00)",
    "typ": "bot",
    "en": "Fast forex trades (EUR/USD, GBP/USD, USD/JPY)",
-   "gdzie": "Interactive Brokers paper"
+   "gdzie": "Interactive Brokers paper",
+   "nazwa_en": "IBKR fast",
+   "teraz_en": "Waiting for the forex market to open (Sunday ~23:00 CET)."
   },
   {
    "n": "IBKR Warianty",
@@ -229,7 +311,9 @@
    "ostatnio": "15.11 – start, czeka na otwarcie forexu",
    "typ": "bot",
    "en": "Tests 4 take-profit variants on live forex prices",
-   "gdzie": "Interactive Brokers paper sim"
+   "gdzie": "Interactive Brokers paper sim",
+   "nazwa_en": "IBKR variants",
+   "teraz_en": "Waiting for the forex market to open (Sunday ~23:00 CET)."
   },
   {
    "n": "KP EMA TP5 SL",
@@ -238,7 +322,9 @@
    "ostatnio": "15.11 – nowy bot z backtestu 6 mies.",
    "typ": "bot",
    "en": "EMA-cross rule, 5% target, trailing stop",
-   "gdzie": "Kraken Pro paper sim"
+   "gdzie": "Kraken Pro paper sim",
+   "nazwa_en": "KP EMA TP5 SL",
+   "teraz_en": "New bot: watching for its first signal."
   },
   {
    "n": "KP EMA TP5",
@@ -247,7 +333,9 @@
    "ostatnio": "15.11 – nowy bot z backtestu 6 mies.",
    "typ": "bot",
    "en": "EMA-cross rule, 5% target",
-   "gdzie": "Kraken Pro paper sim"
+   "gdzie": "Kraken Pro paper sim",
+   "nazwa_en": "KP EMA TP5",
+   "teraz_en": "New bot: watching for its first signal."
   },
   {
    "n": "KP EMA TP3",
@@ -256,7 +344,9 @@
    "ostatnio": "15.11 – nowy bot z backtestu 6 mies.",
    "typ": "bot",
    "en": "EMA-cross rule, 3% target",
-   "gdzie": "Kraken Pro paper sim"
+   "gdzie": "Kraken Pro paper sim",
+   "nazwa_en": "KP EMA TP3",
+   "teraz_en": "New bot: watching for its first signal."
   },
   {
    "n": "KP 3 świece TP5",
@@ -265,7 +355,9 @@
    "ostatnio": "15.11 – nowy bot z backtestu 6 mies.",
    "typ": "bot",
    "en": "Three-candle rule, 5% target",
-   "gdzie": "Kraken Pro paper sim"
+   "gdzie": "Kraken Pro paper sim",
+   "nazwa_en": "KP 3 candles TP5",
+   "teraz_en": "New bot: watching for its first signal."
   },
   {
    "n": "KP Bollinger TP5",
@@ -274,7 +366,9 @@
    "ostatnio": "15.11 – nowy bot z backtestu 6 mies.",
    "typ": "bot",
    "en": "Bollinger-band rule, 5% target",
-   "gdzie": "Kraken Pro paper sim"
+   "gdzie": "Kraken Pro paper sim",
+   "nazwa_en": "KP Bollinger TP5",
+   "teraz_en": "New bot: watching for its first signal."
   }
  ]
 }

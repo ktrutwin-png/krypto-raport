@@ -64,6 +64,15 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
 .swarm .dot{margin:0}
 .dot.g{background:#f2c14e;box-shadow:0 0 8px #f2c14e}.dot.b{background:#4fb3ff;box-shadow:0 0 8px #4fb3ff}.dot.r{background:#ff4d5e;box-shadow:0 0 8px #ff4d5e}
 </style>
+<style>
+.swarm a.w{color:inherit;text-decoration:none;cursor:pointer}
+.swarm a.w:hover{border-color:#f2c14e}
+.card .now,#roj-bots .now{display:block;margin-top:8px;font-size:13px;color:#f2c14e}
+.card .st{float:right;font-size:12px;opacity:.75}
+.hl{animation:hl 2.4s ease-out}
+@keyframes hl{0%{box-shadow:0 0 0 3px #f2c14e,0 0 30px #f2c14e88}100%{box-shadow:0 0 0 0 transparent}}
+[id^="w-"]{scroll-margin-top:90px}
+</style>
 </head>
 <body>
 <header><div class="wrap">
@@ -81,12 +90,12 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
 </section>
 
 <h2>The swarm, live</h2>
-<p class="sub">Every light around Hexa on the owner's phone is one worker below. This list is read live from the same file the phone app uses – a new agent or bot on the server appears here automatically. <span class="dot g"></span> working <span class="dot b"></span> waiting <span class="dot r"></span> problem</p>
+<p class="sub">Every light around Hexa on the owner's phone is one worker below – tap one to see what it does and what it's doing right now. This list is read live from the same file the phone app uses – a new agent or bot on the server appears here automatically. <span class="dot g"></span> working <span class="dot b"></span> waiting <span class="dot r"></span> problem</p>
 <div class="swarm" id="swarm"></div>
 
 <h2><span data-roj="agent">15</span> AI agents</h2>
-<p class="sub">Each one is a scheduled Claude task with its own written plan. They run on their own, on a timetable.</p>
-<div class="grid">
+<p class="sub">Each one is a scheduled Claude task with its own written plan. They run on their own, on a timetable. Tap a light above to jump to it.</p>
+<div class="grid" id="roj-agents">
  <div class="card"><span class="tag">Content</span><h3>🎬 Director</h3><p>Picks the day's crypto, gold and bank news, writes a 20–30 s script and builds the video: AI visuals, 3D scenes, captions, voice. Publishes to Instagram and YouTube.</p></div>
  <div class="card"><span class="tag">Content</span><h3>📰 Noon &amp; evening report</h3><p>Two daily market videos (10:00 and 18:00 CET). Prices come from live data feeds, every number has a source.</p></div>
  <div class="card"><span class="tag">Quality</span><h3>🛠 Caretaker</h3><p>Improves one thing in the video pipeline every day – readability, motion, timing.</p></div>
@@ -202,16 +211,25 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);fon
 <script>
 (function(){
  var U='https://raw.githubusercontent.com/ktrutwin-png/krypto-raport/main/reports/roj_status.json';
- var NM={'Reżyser':'Director','Opiekun':'Community','Skanery':'Scanners','Inspektor':'Inspector','Zwiadowca':'Scout','Nauczyciel':'Teacher','Strażnik':'Guard','Mechanik':'Mechanic','Sekretarz':'Secretary','Raport 12':'Noon report','Raport 18':'Evening report','Raport 22':'22:00 results','Handlowiec':'Sales','Analityk':'Analyst','Pisarz':'Writer','Indeksy':'Indices','IB Skaner':'IB scanner','Kraken Pro krótki':'Kraken Pro short','Kraken Pro średni':'Kraken Pro medium','IBKR Szybki':'IBKR fast','IBKR Warianty':'IBKR variants','KP 3 świece TP5':'KP 3 candles TP5'};
+ var ST={praca:['g','working'],czeka:['b','waiting'],blad:['r','problem']};
  function esc(t){var d=document.createElement('div');d.textContent=t==null?'':t;return d.innerHTML}
+ function slug(t){return 'w-'+String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
+ function go(id){var e=document.getElementById(id);if(!e)return;e.scrollIntoView({behavior:'smooth',block:'center'});e.classList.remove('hl');void e.offsetWidth;e.classList.add('hl')}
  fetch(U,{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(d){
   if(!d||!d.agenci)return;
   var a=d.agenci,ag=a.filter(function(x){return x.typ==='agent'}),bo=a.filter(function(x){return x.typ==='bot'});
   var n={all:a.length,agent:ag.length,bot:bo.length};
   document.querySelectorAll('[data-roj]').forEach(function(e){e.textContent=n[e.dataset.roj]});
-  var cls={praca:'g',czeka:'b',blad:'r'};
-  document.getElementById('swarm').innerHTML=a.map(function(x){return '<span class="w" title="'+esc(x.en||'')+'"><span class="dot '+(cls[x.s]||'b')+'"></span>'+esc(NM[x.n]||x.n)+'</span>'}).join('');
-  if(bo.length)document.getElementById('roj-bots').innerHTML=bo.map(function(x){return '<tr><td>'+esc(NM[x.n]||x.n)+'</td><td>'+esc(x.en||'')+'</td><td>'+esc(x.gdzie||'')+'</td></tr>'}).join('');
+  function nm(x){return x.nazwa_en||x.n}
+  function st(x){return ST[x.s]||ST.czeka}
+  document.getElementById('swarm').innerHTML=a.map(function(x){return '<a class="w" href="#'+slug(x.n)+'" data-go="'+slug(x.n)+'"><span class="dot '+st(x)[0]+'"></span>'+esc(nm(x))+'</a>'}).join('');
+  var hexa=document.querySelector('#roj-agents .card:last-child');var hx=hexa?hexa.outerHTML:'';
+  if(ag.length)document.getElementById('roj-agents').innerHTML=ag.map(function(x){
+   return '<div class="card" id="'+slug(x.n)+'"><span class="tag">'+esc(x.tag||'Agent')+'</span><span class="st"><span class="dot '+st(x)[0]+'"></span>'+st(x)[1]+'</span><h3>'+esc((x.ikona?x.ikona+' ':'')+nm(x))+'</h3><p>'+esc(x.en||'')+'</p>'+(x.teraz_en?'<span class="now">Now: '+esc(x.teraz_en)+'</span>':'')+'</div>'}).join('')+hx;
+  if(bo.length)document.getElementById('roj-bots').innerHTML=bo.map(function(x){
+   return '<tr id="'+slug(x.n)+'"><td><span class="dot '+st(x)[0]+'" style="margin:0 6px 0 0"></span>'+esc(nm(x))+'</td><td>'+esc(x.en||'')+(x.teraz_en?'<span class="now">Now: '+esc(x.teraz_en)+'</span>':'')+'</td><td>'+esc(x.gdzie||'')+'</td></tr>'}).join('');
+  document.getElementById('swarm').addEventListener('click',function(ev){var t=ev.target.closest('[data-go]');if(!t)return;ev.preventDefault();history.replaceState(null,'','#'+t.dataset.go);go(t.dataset.go)});
+  if(location.hash)setTimeout(function(){go(location.hash.slice(1))},300);
  }).catch(function(){});
 })();
 </script>
