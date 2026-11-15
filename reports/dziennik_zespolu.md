@@ -185,3 +185,4 @@ INSPEKCJA UPDATE: 2026-11-15 04:49 (UPDATE 15.11 04:50 Mechanik – dziennik_sze
 INSPEKCJA UPDATE: 2026-11-15 04:50 (fire_trigger – UPDATE 04:50 Mechanik Z023/A1 + Z021) potwierdzone ponownie: paper_margin PID 5072 żyje, stan_KP_*.json 04:49 świeże; dziennik_szefa.csv wszystkie linie 33 pola – bez zmian względem inspekcji 04:49 (Z021 zamknięte, Z023 czeka na decyzje Mózga).
 2026-11-15 05:49 | Sekretarz | kosz: 1 wątków, wypisano: 0 | ok
 2026-11-15 05:49 | Sekretarz | DO RAPORTU: dla Reżysera – Metricool 12–14.11: 3 alerty „problem z publikacją” (YouTube, erl.grey83); dla szefa – GitHub: aplikacja Claude prosi o rozszerzone uprawnienia (13.11, czeka na akceptację); Link (Stripe) prosi o weryfikację e-maila (12.11); Jotform – blisko limitu rozmów AI Agent; kalendarz 15–22.11 pusty, brak podejrzanych zaproszeń
+2026-11-15 10:06 | Reżyser | Weekly Market Brief: Week in Markets: BTC -14%, US 10Y 5.15% | Gold, Bitcoin, Fed, China | YT ok/IG ok | ok
