@@ -33,10 +33,17 @@ KOSZT_RT = FEE_TAKER + FEE_MAKER + FEE_MARGIN_OPEN   # koszty wejścia+wyjścia 
 
 # Krótkie TP – nasze liczby. TP szefa na złocie (+0.3%) nie pokryje opłat Krakena
 # (ok. 0.65-0.8% w obie strony), więc najkrótsze sensowne TP to ok. 0.8%.
+# regula: 3_swiece | ema_cross | bollinger ; sl: trail | brak ; wej: rynek (taker) | limit (maker, po bid/ask)
+# Nowe boty (15.11) wybrane z backtestu 6 mies. (szukaj_reguly.py) – najlepsze w okresie sprawdzianu.
 BOTY = {
-    "KP_krotki_0.8": {"tp": 0.008},
-    "KP_sredni_1.2": {"tp": 0.012},
-    "KP_ATR":        {"tp": "atr"},   # max(0.8%, 1x ATR(14) z H1)
+    "KP_krotki_0.8":     {"tp": 0.008, "regula": "3_swiece",  "sl": "trail", "wej": "rynek"},
+    "KP_sredni_1.2":     {"tp": 0.012, "regula": "3_swiece",  "sl": "trail", "wej": "rynek"},
+    "KP_ATR":            {"tp": "atr", "regula": "3_swiece",  "sl": "trail", "wej": "rynek"},  # max(0.8%, 1x ATR(14) z H1)
+    "KP_EMA_TP5_trail":  {"tp": 0.05,  "regula": "ema_cross", "sl": "trail", "wej": "limit"},
+    "KP_EMA_TP5_bezSL":  {"tp": 0.05,  "regula": "ema_cross", "sl": "brak",  "wej": "limit"},
+    "KP_EMA_TP3_bezSL":  {"tp": 0.03,  "regula": "ema_cross", "sl": "brak",  "wej": "limit"},
+    "KP_3sw_TP5_bezSL":  {"tp": 0.05,  "regula": "3_swiece",  "sl": "brak",  "wej": "limit"},
+    "KP_Boll_TP5_bezSL": {"tp": 0.05,  "regula": "bollinger", "sl": "brak",  "wej": "limit"},
 }
 
 
@@ -83,6 +90,43 @@ def ema(v, n):
 def atr_pct(s, n=14):
     tr = [max(s[i][2] - s[i][3], abs(s[i][2] - s[i - 1][4]), abs(s[i][3] - s[i - 1][4])) for i in range(1, len(s))]
     return (sum(tr[-n:]) / n) / s[-1][4]
+
+
+def ema_lista(v, n):
+    k, e, out = 2 / (n + 1), v[0], []
+    for x in v:
+        e = x * k + e * (1 - k)
+        out.append(e)
+    return out
+
+
+def sygnal_regula(regula, m15, h1):
+    if regula == "3_swiece":
+        return sygnal(m15, h1)
+    zam = [x[4] for x in h1[-120:]]
+    w_gore = ema(zam, 20) > ema(zam, 50)
+    c = [x[4] for x in m15]
+    if regula == "ema_cross":
+        e9, e21 = ema_lista(c, 9), ema_lista(c, 21)
+        up = e9[-2] <= e21[-2] and e9[-1] > e21[-1]
+        dn = e9[-2] >= e21[-2] and e9[-1] < e21[-1]
+    elif regula == "bollinger":
+        def pas(kon):
+            okno = c[kon - 20:kon]
+            m = sum(okno) / 20
+            sd = (sum((x - m) ** 2 for x in okno) / 20) ** 0.5
+            return m - 2 * sd, m + 2 * sd
+        lo_p, hi_p = pas(len(c) - 1)
+        lo, hi = pas(len(c))
+        up = c[-2] < lo_p and c[-1] > lo
+        dn = c[-2] > hi_p and c[-1] < hi
+    else:
+        return None
+    if up and w_gore:
+        return "LONG"
+    if dn and not w_gore:
+        return "SHORT"
+    return None
 
 
 def sygnal(m15, h1):
@@ -215,25 +259,31 @@ def obieg():
             st["ostatnia_swieca"][para] = ost_sw
             if len(st["pozycje"]) >= MAX_POZYCJI or any(p["para"] == para for p in st["pozycje"]):
                 continue
-            kier = sygnal(m15, h1)
+            kier = sygnal_regula(cfg.get("regula", "3_swiece"), m15, h1)
             if not kier:
                 continue
             uzyty = sum(p["wejscie"] * p["ilosc"] / DZWIGNIA for p in st["pozycje"])
             if st["gotowka"] - uzyty < DEPOZYT_NA_POZYCJE:
                 continue
             bid, ask, _ = ceny[para]
-            wej = ask if kier == "LONG" else bid
+            limit = cfg.get("wej") == "limit"
+            # limit = zlecenie po naszej stronie księgi (LONG po bid, SHORT po ask), opłata maker
+            wej = (bid if kier == "LONG" else ask) if limit else (ask if kier == "LONG" else bid)
             tp_pct = cfg["tp"] if cfg["tp"] != "atr" else max(0.008, atr_pct(h1))
             ilosc = DEPOZYT_NA_POZYCJE * DZWIGNIA / wej
-            oplata = wej * ilosc * (FEE_TAKER + FEE_MARGIN_OPEN)
+            oplata = wej * ilosc * ((FEE_MAKER if limit else FEE_TAKER) + FEE_MARGIN_OPEN)
             st["gotowka"] -= oplata
             tp = wej * (1 + tp_pct) if kier == "LONG" else wej * (1 - tp_pct)
             sl = wej * (1 - SL_START * tp_pct) if kier == "LONG" else wej * (1 + SL_START * tp_pct)
-            st["pozycje"].append({"para": para, "kierunek": kier, "wejscie": wej, "ilosc": ilosc, "tp": tp,
-                                  "sl": sl, "best": wej,
+            nowa = {"para": para, "kierunek": kier, "wejscie": wej, "ilosc": ilosc, "tp": tp}
+            if cfg.get("sl", "trail") == "trail":
+                nowa.update({"sl": sl, "best": wej})
+            st["pozycje"].append({**nowa,
                                   "otwarta": t.isoformat(timespec="seconds"), "rollover": t.isoformat(),
                                   "oplaty": oplata})
-            log(f"[{nazwa}] OTWARTA {kier} {para} @ {wej} TP {tp:.5f} ({tp_pct:.2%}) SL {sl:.5f} (przesuwany) | 50 EUR x10")
+            opis_sl = f"SL {sl:.5f} (przesuwany)" if "sl" in nowa else "bez SL"
+            log(f"[{nazwa}] OTWARTA {kier} {para} @ {wej} ({cfg.get('regula', '3_swiece')}, {'limit' if limit else 'rynek'}) "
+                f"TP {tp:.5f} ({tp_pct:.2%}) {opis_sl} | 50 EUR x10")
         # podsumowanie
         kapital = st["gotowka"] + sum(pnl(p, ceny[p["para"]][2]) for p in st["pozycje"] if p["para"] in ceny)
         st["kapital"] = round(kapital, 2)
