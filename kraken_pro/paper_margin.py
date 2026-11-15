@@ -7,7 +7,7 @@ Każdy bot ma własne wirtualne 500 EUR, gra LONG i SHORT na XRP/EUR, BTC/EUR, E
 Wejście (reguła szefa nr 1 z MT5): 3 ostatnie zamknięte świece M15 w tym samym kolorze
 = kierunek, potwierdzony trendem H1 (EMA20 vs EMA50).
 Wyjście: KRÓTKI TP + przesuwany SL (od 15.11 na życzenie szefa): start 1,5 x odległość do TP,
-gdy cena przejdzie połowę drogi do TP -> SL na zero (pokrywa opłaty), potem SL idzie za ceną
+gdy cena przejdzie połowę drogi do TP -> SL na cenę wejścia, potem SL idzie za ceną
 w odległości 0,5 x dystans TP (im bliżej celu, tym ciaśniej). Pozycje otwarte przed 15.11 grają po staremu (bez SL).
 Dodatkowa ochrona = likwidacja jak na Krakenie
 (cross margin: poziom depozytu < 40% całego konta bota → zamknięcie wszystkiego).
@@ -173,7 +173,7 @@ def obieg():
                 poz["best"] = max(poz["best"], bid)
                 postep = (poz["best"] - poz["wejscie"]) / dyst
                 if postep >= SL_PROG_BE:
-                    nowy = max(poz["wejscie"] * (1 + KOSZT_RT), poz["best"] - SL_TRAIL * dyst)
+                    nowy = poz["best"] - SL_TRAIL * dyst      # przy 50% drogi = cena wejścia
                     poz["sl"] = max(poz["sl"], nowy)
                 if bid <= poz["sl"]:
                     zamknij(nazwa, st, poz, poz["sl"], "SL" if poz["sl"] < poz["wejscie"] else "SL_TRAIL", FEE_TAKER)
@@ -181,7 +181,7 @@ def obieg():
                 poz["best"] = min(poz["best"], ask)
                 postep = (poz["wejscie"] - poz["best"]) / dyst
                 if postep >= SL_PROG_BE:
-                    nowy = min(poz["wejscie"] * (1 - KOSZT_RT), poz["best"] + SL_TRAIL * dyst)
+                    nowy = poz["best"] + SL_TRAIL * dyst
                     poz["sl"] = min(poz["sl"], nowy)
                 if ask >= poz["sl"]:
                     zamknij(nazwa, st, poz, poz["sl"], "SL" if poz["sl"] > poz["wejscie"] else "SL_TRAIL", FEE_TAKER)
