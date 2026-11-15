@@ -127,11 +127,12 @@ def sygnal(regula, s, w, i):
 
 REGULY = ["3_swiece_trend (obecna)", "EMA9/21_przeciecie_trend", "RSI_cofniecie_w_trendzie",
           "Bollinger_powrot_w_trendzie", "Wybicie_20_swiec_trend", "MACD_zwrot_w_trendzie"]
-TPY = {"TP 0.8%": 0.008, "TP 1.2%": 0.012, "TP 2%": 0.02, "TP ATR": "atr"}
+TPY = {"TP 1.2%": 0.012, "TP 2%": 0.02, "TP 3%": 0.03, "TP 5%": 0.05}
+WEJSCIA = {"rynek": F_TAKER, "limit": F_MAKER}
 TRYBY = ["trail", "bez_SL"]
 
 
-def symuluj(regula, tp_cfg, s, w, od, do, tryb="trail"):
+def symuluj(regula, tp_cfg, s, w, od, do, tryb="trail", f_wej=F_TAKER):
     wyniki, poz = [], None
     for i in range(od, do):
         hi, lo = s[i][2], s[i][3]
@@ -160,7 +161,7 @@ def symuluj(regula, tp_cfg, s, w, od, do, tryb="trail"):
                 cena, fee = zamk
                 ruch = (cena - wej) / wej if kier == "LONG" else (wej - cena) / wej
                 rollover = ((i - start) * 15 // 240) * F_ROLL
-                wyniki.append(POZ * (ruch - F_TAKER - F_OPEN - fee - rollover))
+                wyniki.append(POZ * (ruch - f_wej - F_OPEN - fee - rollover))
                 poz = None
             else:
                 poz = (kier, wej, tp, sl, best, dyst, start)
@@ -171,7 +172,7 @@ def symuluj(regula, tp_cfg, s, w, od, do, tryb="trail"):
             pct = tp_cfg if tp_cfg != "atr" else max(0.008, 4 * w["atr"][i] / s[i][4])
             dyst = wej * pct
             tp = wej + dyst if kier == "LONG" else wej - dyst
-            sm = SL_START if tryb == "trail" else 0.06 / pct      # bez SL: zamknięcie dopiero ok. -6% (okolice likwidacji)
+            sm = SL_START if tryb == "trail" else max(0.06, 1.5 * pct) / pct      # bez SL: zamknięcie dopiero ok. -6% (okolice likwidacji)
             sl = wej - sm * dyst if kier == "LONG" else wej + sm * dyst
             poz = (kier, wej, tp, sl, wej, dyst, i + 1)
     return wyniki
@@ -200,16 +201,17 @@ def main():
     wiersze = []
     for regula in REGULY:
       for tryb in TRYBY:
+       for wn, wf in WEJSCIA.items():
         for tpn, tpv in TPY.items():
             nauka, spr = [], []
             for para, (s, w) in dane.items():
                 gr = len(s) * 2 // 3
-                nauka += symuluj(regula, tpv, s, w, 60, gr, tryb)
-                spr += symuluj(regula, tpv, s, w, gr, len(s), tryb)
+                nauka += symuluj(regula, tpv, s, w, 60, gr, tryb, wf)
+                spr += symuluj(regula, tpv, s, w, gr, len(s), tryb, wf)
             a, b = statystyki(nauka), statystyki(spr)
-            tpn2 = f"{tpn} {tryb}"
+            tpn2 = f"{tpn} {tryb} {wn}"
             wiersze.append((regula, tpn2, a, b))
-            print(f"{regula:30s} {tpn2:16s} | NAUKA n={a['n']:4d} {a['wynik']:+9.2f}€ traf {a['trafnosc']:5.1f}% PF {a['pf']:5.2f} | "
+            print(f"{regula:30s} {tpn2:22s} | NAUKA n={a['n']:4d} {a['wynik']:+9.2f}€ traf {a['trafnosc']:5.1f}% PF {a['pf']:5.2f} | "
                   f"SPRAWDZIAN n={b['n']:4d} {b['wynik']:+9.2f}€ traf {b['trafnosc']:5.1f}% PF {b['pf']:5.2f} DD {b['dd']:.2f}€", flush=True)
     json.dump([dict(regula=r, tp=t, nauka=a, sprawdzian=b) for r, t, a, b in wiersze],
               open(os.path.join(KAT, "szukaj_reguly_wynik.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
