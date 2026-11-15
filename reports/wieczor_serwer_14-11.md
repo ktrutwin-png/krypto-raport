@@ -47,3 +47,5 @@ Plan przy laptopie: 1) podgląd TightVNC (co na ekranie) 2) twardy stop/start 3)
 - Naprawa 1 (03:56): `tailscale set --unattended=true` → ForceDaemon=true. Tailscale łączy się teraz zaraz po starcie Windows, bez logowania.
 - Do zrobienia (część 2): start botów + Desktop Commander bez logowania (autologowanie – hasło wpisuje szef, albo zadania przy starcie systemu) i test restartu.
 - Aktualizacje zainstalowane: KB5122871 (2026-09 Security), KB5127690 (.NET). 03:02 twardy restart (zdarzenie 41) – bez skutków.
+- ✅ 15.11 03:58 CZĘŚĆ 2: autologowanie Windows (Sysinternals Autologon, podpis Microsoft, hasło wpisał szef, zaszyfrowane w LSA) + Autostart (START_WSZYSTKO.lnk, DC_Remote.vbs w Startup) + ZABLOKUJ_EKRAN.cmd (blokada ekranu 2 min po starcie, procesy działają dalej).
+- ✅ 04:00 TEST RESTARTU (reboot z panelu Contabo): start 04:00:38, autologowanie 04:00, Tailscale + Claude połączeni ~2,5 min po restarcie, MT5 + boty działają. SERWER WSTAJE SAM. Pozostaje tylko IB Gateway (logowanie szefa / IBC).
