@@ -37,3 +37,7 @@ Zasada: krok po kroku, jeden naraz. Szef wpisuje hasła i zatwierdza zmiany zabe
 - Hasło Administratora zresetowane przez Contabo (szef ma je w Proton Pass). Logowanie: vmi3737651\Administrator.
 - ✅ 21:07 NAPRAWIONE: serwer wstał po twardym restarcie (stop/start w panelu), szef zalogowany przez RDP, Tailscale działa, zapora Contabo z powrotem ACTIVE (publiczny 3389 zamknięty, Tailscale 3389 otwarty). Wszystkie boty/panel/MT5 chodzą (START_WSZYSTKO OK). Brak tylko IB Gateway (wymaga logowania szefa → krok 10).
 - Autostart po zalogowaniu działa; problem: po restarcie bez logowania nic nie startuje → krok 9 (autologon) priorytet.
+
+## 🔴 PRIORYTET 1 (szef 15.11 01:44: „musimy to zabezpieczyć”)
+Serwer 2x nie wrócił sam po restarcie (14.11 ~19:52 po resecie hasła; 14.11 ~22:53 po aktualizacjach – offline w Tailscale >2 h, Strażnik alarm 01:41). Wieczorem pomógł dopiero twardy stop/start w panelu Contabo.
+Plan przy laptopie: 1) podgląd TightVNC (co na ekranie) 2) twardy stop/start 3) przyczyna: dziennik System (zdarzenia 41/6008, usługi przy starcie, Tailscale), sterownik sieci 4) autologowanie + START_WSZYSTKO przy logowaniu, Tailscale jako usługa automatyczna z odzyskiwaniem 5) test: restart i sprawdzenie, że wszystko wstaje samo w <10 min.
