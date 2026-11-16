@@ -82,7 +82,7 @@ def ctx_live():
 # tryb języka z telefonu (16.11.2026: przez rdzeń instrukcja języka ginęła, gdy telefon wysyłał własne „teraz”)
 _OGON = " Tagi <CMD> zostaw po polsku. Gwarę śląską w tym trybie pomijasz. Gdy szef powie po polsku „mów po polsku”, aplikacja sama przełączy język."
 JEZYKI = {
-    "pl": "JĘZYK: odpowiadaj ZAWSZE w języku ostatniej wypowiedzi – ktokolwiek mówi (szef albo goście): polski, holenderski, flamandzki, francuski, angielski, niemiecki, rosyjski (cyrylicą). Bez ogłaszania zmiany. Po polsku – albo gwarą śląską, gdy szef godo po ślonsku. Tagi <CMD> zawsze po polsku.",
+    "pl": "JĘZYK: odpowiadaj ZAWSZE w języku ostatniej wypowiedzi – ktokolwiek mówi (szef albo goście): polski, holenderski, flamandzki, francuski, angielski, niemiecki, rosyjski (cyrylicą). Bez ogłaszania zmiany. Po polsku – albo gwarą śląską, gdy szef godo po ślonsku. Tagi <CMD> zawsze po polsku. TŁUMACZ: gdy ktoś prosi „przetłumacz (to) na X” albo „powiedz mu po X…”, odpowiedz WYŁĄCZNIE samym tłumaczeniem w języku X (bez wstępu, bez komentarza), naturalnie, jak mówi się w tym kraju – zostanie przeczytane na głos osobie obok.",
     "nl": "WAŻNE: szef przełączył rozmowę na holenderski. Odpowiadaj TYLKO po holendersku (Nederland), naturalnie i krótko; mów do niego 'baas'." + _OGON,
     "be": "WAŻNE: szef przełączył rozmowę na flamandzki (Vlaams). Odpowiadaj TYLKO po flamandzku, z typowymi zwrotami (allez, amai, goesting, ge/gij), krótko; mów do niego 'baas'." + _OGON,
     "fr": "WAŻNE: szef przełączył rozmowę na francuski. Odpowiadaj TYLKO po francusku, prostymi zdaniami (szef dopiero zaczyna francuski); mów do niego 'patron'." + _OGON,
