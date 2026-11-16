@@ -218,3 +218,4 @@ INSPEKCJA UPDATE: 2026-11-16 04:52 (ponowny fire_trigger, ten sam UPDATE 3a4b8bd
 2026-11-16 09:58 | Reżyser (Reel) | JPMORGAN ALL IN ON CRYPTO? (CLAIM CHECK, 23.7 s) | opublikowano (IG 18239250190318689) | ok
 2026-11-16 13:48 | Handlowiec | Reel-przykład „dagmenu” NL (biznes/przyklad_reel_menu, 16,5 s, oznaczony VOORBEELD) + 4 szkice NL (06–09) + KINO: pola end/dis | produkty 2–5 nadal niegotowe | ok
 2026-11-16 13:48 | Handlowiec | DO RAPORTU: 9 szkiców w biznes/szkice/ (nowe: 06–09 warsztat, rowery, 2 cukiernie) gotowych do przejrzenia; przykładowy Reel do pokazania klientom: biznes/przyklad_reel_menu/reel.mp4 (link do wstawienia w szkice 08/09); wysyłka dopiero po wpisie KvK
+2026-11-16 18:14 | Reżyser (Raport 18) | NASDAQ -2%: BITCOIN HOLDS $64K? | posted (IG media 17894669172457970) | ok

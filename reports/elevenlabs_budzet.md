@@ -38,3 +38,4 @@ Konektor: ElevenLabs-619b9b4c (mcp__ElevenLabs-619b9b4c__*). Konto wspólne z g�
 | 2026-11-15 | Reżyser (Raport 18) | Lektor | lektor Raportu 18:00 (5 scen, Patrick) | eleven_multilingual_v2 | ~535 |
 | 2026-11-16 | Reżyser (Reel 10:00) | Lektor | lektor Reela CLAIM CHECK (4 sceny, Patrick) | eleven_multilingual_v2 | ~277 |
 | 2026-11-16 | Mózg (dla szefa) | Obrazy | szkic koncepcyjny Rytuału nowej mocy – Przygody Hexy (2 warianty, ref. Hexa_cala) | gemini-3-pro-image | ~3 654 |
+| 2026-11-16 | Reżyser (Raport 18) | Lektor | lektor Raportu 18:00 (5 scen, Patrick) | eleven_multilingual_v2 | ~375 |
