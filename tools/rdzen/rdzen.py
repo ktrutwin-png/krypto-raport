@@ -79,11 +79,25 @@ def ctx_live():
     return "\n\n".join(out)
 
 
+# tryb języka z telefonu (16.11.2026: przez rdzeń instrukcja języka ginęła, gdy telefon wysyłał własne „teraz”)
+_OGON = " Tagi <CMD> zostaw po polsku. Gwarę śląską w tym trybie pomijasz. Gdy szef powie po polsku „mów po polsku”, aplikacja sama przełączy język."
+JEZYKI = {
+    "pl": "JĘZYK: odpowiadaj ZAWSZE w języku ostatniej wypowiedzi – ktokolwiek mówi (szef albo goście): polski, holenderski, flamandzki, francuski, angielski, niemiecki, rosyjski (cyrylicą). Bez ogłaszania zmiany. Po polsku – albo gwarą śląską, gdy szef godo po ślonsku. Tagi <CMD> zawsze po polsku.",
+    "nl": "WAŻNE: szef przełączył rozmowę na holenderski. Odpowiadaj TYLKO po holendersku (Nederland), naturalnie i krótko; mów do niego 'baas'." + _OGON,
+    "be": "WAŻNE: szef przełączył rozmowę na flamandzki (Vlaams). Odpowiadaj TYLKO po flamandzku, z typowymi zwrotami (allez, amai, goesting, ge/gij), krótko; mów do niego 'baas'." + _OGON,
+    "fr": "WAŻNE: szef przełączył rozmowę na francuski. Odpowiadaj TYLKO po francusku, prostymi zdaniami (szef dopiero zaczyna francuski); mów do niego 'patron'." + _OGON,
+    "en": "WAŻNE: szef przełączył rozmowę na angielski. Odpowiadaj TYLKO po angielsku, naturalnie i krótko; mów do niego 'boss'." + _OGON,
+    "de": "WAŻNE: szef przełączył rozmowę na niemiecki. Odpowiadaj TYLKO po niemiecku, naturalnie i krótko (szef mówi płynnie); mów do niego 'Chef'." + _OGON,
+    "ru": "WAŻNE: szef przełączył rozmowę na rosyjski. Odpowiadaj TYLKO po rosyjsku, cyrylicą, naturalnie i krótko (szef mówi po rosyjsku); mów do niego 'шеф'." + _OGON,
+}
+
+
 def system_prompt(lang, lat, lon, teraz_tel=""):
     persona = read(p("hexa.md")) or "Jesteś Hexa – głos i twarz Claude. Mówisz krótko po polsku."
     mem = read(p("pamiec_hexy.md"), 6000)
     now = datetime.datetime.now()
-    teraz = teraz_tel or f"TERAZ: {now:%A %d.%m.%Y, %H:%M} (Europe/Amsterdam). Szef jest w przybliżeniu tu: {lat}, {lon}. Język rozmowy z telefonu: {lang}."
+    teraz = teraz_tel or f"TERAZ: {now:%A %d.%m.%Y, %H:%M} (Europe/Amsterdam). Szef jest w przybliżeniu tu: {lat}, {lon}."
+    teraz += "\n" + JEZYKI.get(lang, "")
     return [
         {"type": "text", "text": persona + "\n\nPAMIĘĆ HEXY (fakty, które szef kazał zapamiętać):\n" + mem,
          "cache_control": {"type": "ephemeral"}},
