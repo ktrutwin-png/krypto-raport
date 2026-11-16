@@ -11,3 +11,5 @@
 - Powtórzenia: 1
 - Status: nowy
 - L-20261111-02: Pełne obrazy z Canva generate-image pobieramy tylko przez projekt + export-design (link z get-assets to miniatura 200 px z podpisem, zmiana rozmiaru = 403). Vercel buildCommand max 256 znaków → skrypt b.sh w files.
+
+- L-20261116-01: Metricool „Could not upload video thumbnail” = YouTube odrzuca custom thumbnail (kanał bez weryfikacji telefonem; Shorts bez miniatur przez API). Shorts: bez videoThumbnailUrl, klatka 0 = okładka. Zmiana narzędzia nic nie da – to limit YouTube API.
