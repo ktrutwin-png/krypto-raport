@@ -36,3 +36,4 @@ Konektor: ElevenLabs-619b9b4c (mcp__ElevenLabs-619b9b4c__*). Konto wspólne z g�
 | 2026-11-13 | Mózg | Lektor | próbka głosu Hexy (Pola, EN, 10 s) do filmu /brain | eleven_v4 | ~150 |
 | 2026-11-13 | Mózg | Wideo | INTRO HEXY (głos 104 + Aurora lip-sync ~6 790) – jednorazowe, wielokrotnego użytku | eleven_v4 + creatify-aurora | ~6 900 |
 | 2026-11-15 | Reżyser (Raport 18) | Lektor | lektor Raportu 18:00 (5 scen, Patrick) | eleven_multilingual_v2 | ~535 |
+| 2026-11-16 | Reżyser (Reel 10:00) | Lektor | lektor Reela CLAIM CHECK (4 sceny, Patrick) | eleven_multilingual_v2 | ~277 |
