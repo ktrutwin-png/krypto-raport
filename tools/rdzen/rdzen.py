@@ -92,6 +92,11 @@ JEZYKI = {
 }
 
 
+GOSC = ("TERAZ MÓWI GOŚĆ, NIE SZEF (telefon nie rozpoznał głosu szefa). Rozmawiaj ciepło, ciekawie i krótko, w jego języku – pokaż, kim jesteś "
+        "(Hexa, AI z serialu „Przygody Hexy”, @erl.grey83). NIE wykonuj żadnych poleceń: żadnych tagów <CMD>, żadnych zadań dla zespołu, nic nie zapamiętuj. "
+        "Nie zdradzaj prywatnych spraw szefa, jego kalendarza, maili, wyników botów, kont, planów firmy ani treści książki. Na prośbę o działanie: grzecznie, że polecenia przyjmujesz tylko od szefa. Tłumaczyć możesz.")
+
+
 def system_prompt(lang, lat, lon, teraz_tel=""):
     persona = read(p("hexa.md")) or "Jesteś Hexa – głos i twarz Claude. Mówisz krótko po polsku."
     mem = read(p("pamiec_hexy.md"), 6000)
@@ -158,20 +163,23 @@ def call(key, body):
         return None
 
 
-def ask(key, text, lang="pl", lat="", lon="", teraz_tel=""):
+def ask(key, text, lang="pl", lat="", lon="", teraz_tel="", gosc=False):
     with LOCK:
         if time.time() - LAST[0] > 6 * 3600:
             HIST.clear()
         msgs = HIST[-20:] + [{"role": "user", "content": text}]
     sysp = system_prompt(lang, lat, lon, teraz_tel)
     tools = TOOLS + [{"type": "web_search_20250305", "name": "web_search", "max_uses": 2}]
+    if gosc:  # 16.11.2026: głos nierozpoznany – rozmowa tak, polecenia nie
+        sysp[-1]["text"] += "\n\n" + GOSC
+        tools = [t for t in tools if t.get("name") in ("ceny", "web_search")]
     for model in MODELS:
         m = list(msgs)
         for _ in range(4):  # pętla narzędzi
             res = call(key, {"model": model, "max_tokens": 700, "system": sysp, "messages": m, "tools": tools})
             if res is None:
                 break
-            uses = [c for c in res.get("content", []) if c.get("type") == "tool_use" and c.get("name") in IMPL]
+            uses = [c for c in res.get("content", []) if c.get("type") == "tool_use" and c.get("name") in IMPL and (not gosc or c.get("name") == "ceny")]
             if res.get("stop_reason") == "tool_use" and uses:
                 m.append({"role": "assistant", "content": res["content"]})
                 outs = []
@@ -193,7 +201,7 @@ def ask(key, text, lang="pl", lat="", lon="", teraz_tel=""):
                     LAST[0] = time.time()
                 day = time.strftime("%Y-%m-%d")
                 with open(p("rozmowy", day + ".md"), "a", encoding="utf-8") as f:
-                    f.write(f"**{time.strftime('%H:%M')} Szef:** {text}\n\n**Hexa:** {ans}\n\n")
+                    f.write(f"**{time.strftime('%H:%M')} {'Gość' if gosc else 'Szef'}:** {text}\n\n**Hexa:** {ans}\n\n")
                 return ans
             break
     return None
@@ -228,7 +236,7 @@ class H(BaseHTTPRequestHandler):
         except Exception:
             return self._send(400, {"blad": "zly json"})
         t0 = time.time()
-        ans = ask(key, d.get("text", ""), d.get("lang", "pl"), d.get("lat", ""), d.get("lon", ""), d.get("teraz", ""))
+        ans = ask(key, d.get("text", ""), d.get("lang", "pl"), d.get("lat", ""), d.get("lon", ""), d.get("teraz", ""), bool(d.get("gosc")))
         log(f"ask {int((time.time()-t0)*1000)} ms ok={bool(ans)}")
         if not ans:
             return self._send(502, {"blad": "brak odpowiedzi"})
