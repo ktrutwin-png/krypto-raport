@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en" data-title-pl="Mózg · Erl.grey83">
+<html lang="en" data-title-pl="Przygody Hexy · Erl.grey83">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>The Brain · Erl.grey83</title>
+<title>Hexa's Adventures · Erl.grey83</title>
 <meta name="description" content="Not a map to copy – the building blocks behind @erl.grey83: one AI brain, AI agents and bots on demo accounts. What each piece does and what it doesn't, so you can draw your own map.">
-<meta property="og:title" content="The Brain · Erl.grey83">
+<meta property="og:title" content="Hexa's Adventures · Erl.grey83">
 <meta property="og:description" content="One AI brain, many workers. Not a map to copy – the pieces to draw your own. No hype, no profit promises.">
 <meta property="og:image" content="https://erlgrey83-crypto-freaq.vercel.app/assets/hexa_og.jpg">
 <meta name="theme-color" content="#050507">
@@ -50,7 +50,7 @@ a{color:var(--gold)}a:hover{color:var(--gold2)}
 .lang button[aria-pressed="true"]{background:rgba(244,241,234,.16);color:var(--hi)}
 .blk.nx::after{content:attr(data-nx)}
 .hero-in{flex:1;display:flex;align-items:flex-end;justify-content:space-between;gap:40px;padding-bottom:max(64px,env(safe-area-inset-bottom))}
-.copy{max-width:640px;display:flex;flex-direction:column;gap:22px}
+.copy{max-width:780px;display:flex;flex-direction:column;gap:22px}
 h1{font-weight:400;font-size:clamp(46px,7.4vw,108px);line-height:.95;letter-spacing:-.045em;color:var(--hi);text-shadow:0 16px 38px rgba(0,0,0,.4)}
 h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
 h1 .ln>span{display:block;animation:rise 1s var(--ease) both}
@@ -63,6 +63,7 @@ h1 em{font-family:var(--serif);font-style:italic;font-weight:500;letter-spacing:
 .btn:hover i{transform:translateX(2px) rotate(-45deg)}.btn:active{transform:scale(.97)}
 .btn.p{background:var(--hi);color:#08080a}.btn.p i{background:#08080a;color:var(--hi)}.btn.p:hover{background:var(--gold2);color:#08080a}
 .btn.s{color:var(--hi)}.btn.s i{background:rgba(244,241,234,.12);color:var(--hi)}.btn.s:hover{color:var(--hi);background:rgba(244,241,234,.12)}
+.ep{text-decoration:none;transition:border-color .3s,transform .3s var(--ease)}.ep:hover{border-color:rgba(201,165,74,.45);transform:translateY(-2px)}
 .ep{width:280px;padding:18px 20px;border-radius:24px;display:flex;flex-direction:column;gap:6px}
 .ep .k{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mut)}
 .ep .t{font-family:var(--serif);font-style:italic;font-size:30px;line-height:1;color:var(--hi)}
@@ -226,29 +227,49 @@ td:first-child{color:var(--hi)}
     </a>
     <div class="rt">
     <nav class="nav glass" aria-label="Main">
-      <a href="/" data-pl="Start">Home</a>
-      <a href="/#mapa" data-pl="Przygody">Adventures</a>
-      <a class="hm" href="#roj" data-pl="Rój">Swarm</a>
-      <a class="cta-s" href="https://www.instagram.com/erl.grey83/" target="_blank" rel="noopener">Instagram</a>
+      <a href="#mapa" data-pl="Przygody">Adventures</a>
+      <a href="#roj" data-pl="Rój">Swarm</a>
+      <a class="hm" href="https://www.instagram.com/erl.grey83/" target="_blank" rel="noopener">Instagram</a>
+      <a class="cta-s" href="/" data-pl="Rynek ↗">Market ↗</a>
     </nav>
     <div class="lang glass" role="group" aria-label="Language / Język"><button type="button" data-l="en" aria-pressed="true">EN</button><button type="button" data-l="pl" aria-pressed="false">PL</button></div>
     </div>
   </header>
   <div class="wrap hero-in">
     <div class="copy">
-      <span class="eyebrow a1"><span data-pl="Nasza mapa, nie twoja">Our map, not yours</span><span class="xl" data-pl="&nbsp;· na żywo z serwera">&nbsp;· live from the server</span></span>
-      <h1><span class="ln"><span data-pl="Jeden mózg AI.">One AI brain.</span></span><span class="ln"><span><em><span data-roj="all">33</span> <span data-pl="pracowników.">workers.</span></em></span></span></h1>
-      <p class="lede a2" data-pl="Tak jedna osoba – nie zespół – zbudowała system stojący za @erl.grey83. To nasza mapa, nie do skopiowania. Niżej są klocki: co każdy naprawdę robi i czego &lt;b&gt;nie&lt;/b&gt; robi, żebyś narysował &lt;b&gt;własną&lt;/b&gt;. Bez hype’u i bez zrzutów zmyślonych liczb.">This is how one person – not a team – built the system behind @erl.grey83. It's our map, not one to copy. Below are the pieces: what each one really does and what it does <b>not</b> do, so you can draw <b>your own</b>. No hype, no screenshots of fake numbers.</p>
+      <span class="eyebrow a1"><span data-pl="Przygody Hexy">Hexa's Adventures</span><span class="xl" data-pl="&nbsp;· serial sci-fi">&nbsp;· a sci-fi series</span></span>
+      <h1><span class="ln"><span data-pl="Klocek">One block</span></span><span class="ln"><span data-pl="po <em>klocku.</em>">at a <em>time.</em></span></span></h1>
+      <p class="lede a2" data-pl="Hexa to AI, które obudziło się w ciemności z jednym świecącym klockiem na mapie. Co sobotę ląduje w nowym świecie, pokonuje nowego bossa i zabiera mu jego moc – a ty uczysz się, jak dać ten sam klocek własnemu AI.">Hexa is an AI that woke up in the dark with one glowing block on her map. Every Saturday she lands on a new world, beats a new boss and takes its power – and you learn how to give that same block to your own AI.</p>
       <div class="acts a3">
-        <a class="btn p" href="#roj"><span data-pl="Zobacz rój na żywo">See the swarm live</span> <i aria-hidden="true">↓</i></a>
-        <a class="btn s" href="/#mapa"><span data-pl="Przygody Hexy">Hexa's Adventures</span> <i aria-hidden="true">→</i></a>
+        <a class="btn p" href="#mapa"><span data-pl="Odcinki">The episodes</span> <i aria-hidden="true">↓</i></a>
+        <a class="btn s" href="#roj"><span data-pl="Prawdziwa mapa">The real map</span> <i aria-hidden="true">↓</i></a>
       </div>
     </div>
   </div>
 </section>
 
+<section id="mapa" class="wrap map" aria-labelledby="mapa-h">
+  <div class="head rv">
+    <div><span class="eyebrow" data-pl="Mapa Hexy">Hexa's map</span><h2 id="mapa-h" data-pl="Siedem światów.<br><em>Siedem klocków.</em>">Seven worlds.<br><em>Seven blocks.</em></h2></div>
+    <p data-pl="Każdy klocek to prawdziwa umiejętność, której potrzebuje agent AI. Hexa zdobywa go w walce, a lekcja na końcu odcinka pokazuje, jak wbudować go we własne AI. Klocek zapala się w dniu premiery odcinka.">Each block is a real skill an AI agent needs. Hexa wins it in a fight; the lesson at the end of the episode shows you how to build it into your own AI. A block lights up the day its episode airs.</p>
+  </div>
+  <ol class="blocks rv" id="bloki">
+    <li class="blk glass" data-d="2026-11-21"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">01</span><h3 data-pl="Tarcza">Shield</h3><span class="pl" data-pl="Węzeł Zero · przebudzenie">Node Zero · the awakening</span><span class="dt" data-pl="sob 21 lis">Sat 21 Nov</span></li>
+    <li class="blk glass" data-d="2026-11-28"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">02</span><h3 data-pl="Filtr Głosu">Voice Filter</h3><span class="pl" data-pl="Szklane Miasto · boss: Szeptacz">Glass City · boss: the Whisperer</span><span class="dt" data-pl="sob 28 lis">Sat 28 Nov</span></li>
+    <li class="blk glass" data-d="2026-12-05"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">03</span><h3 data-pl="Pamięć">Memory</h3><span class="pl" data-pl="Archiwum Mgieł · boss: Mgła">Fog Archive · boss: the Fog</span><span class="dt" data-pl="sob 5 gru">Sat 5 Dec</span></li>
+    <li class="blk glass" data-d="2026-12-12"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">04</span><h3 data-pl="Oko Prawdy">Eye of Truth</h3><span class="pl" data-pl="Miraż · boss: Iluzjonista">Mirage · boss: the Illusionist</span><span class="dt" data-pl="sob 12 gru">Sat 12 Dec</span></li>
+    <li class="blk glass" data-d="2026-12-19"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">05</span><h3 data-pl="Zegar">Clock</h3><span class="pl" data-pl="Planeta Zegarów · boss: Pętla">Clock Planet · boss: the Loop</span><span class="dt" data-pl="sob 19 gru">Sat 19 Dec</span></li>
+    <li class="blk glass" data-d="2026-12-26"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">06</span><h3 data-pl="Rój">Swarm</h3><span class="pl" data-pl="Kuźnia · boss: Tytan">The Forge · boss: the Titan</span><span class="dt" data-pl="sob 26 gru">Sat 26 Dec</span></li>
+    <li class="blk glass" data-d="2027-01-02"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">07</span><h3 data-pl="Pieczęć">Seal</h3><span class="pl" data-pl="Lustrzany Księżyc · boss: Mimik">Mirror Moon · boss: the Mimic</span><span class="dt" data-pl="sob 2 sty">Sat 2 Jan</span></li>
+  </ol>
+  <div class="foot"><span data-pl="Fikcja. Prawdziwa lekcja. Każdy klocek to umiejętność, której naprawdę używa nasz system AI.">Fiction. Real lesson. Every block is a skill our own AI system really uses.</span><a href="#roj" data-pl="Zobacz wszystkie klocki, które działają dziś ↓">See all the blocks we run today ↓</a></div>
+</section>
 <div class="wrap">
-<div class="series glass"><b data-pl="Z Przygód Hexy">From Hexa's Adventures</b> <span data-pl="W serialu Hexa zdobywa jeden klocek na odcinek. To jest prawdziwa mapa, z której pochodzą te klocki.">In the series Hexa wins one block per episode. This is the real map those blocks come from.</span> <a href="/#mapa" data-pl="Zobacz odcinki →">See the episodes →</a></div>
+<section class="bsec" style="padding-top:40px">
+<span class="eyebrow" data-pl="Prawdziwa mapa">The real map</span>
+<h2 data-pl="Jeden mózg AI. &lt;em&gt;Prawdziwi pracownicy.&lt;/em&gt;">One AI brain. <em>Real workers.</em></h2>
+<p class="sub" data-pl="Klocki z serialu pochodzą z naszego prawdziwego systemu. Tak jedna osoba – nie zespół – zbudowała go za @erl.grey83: co każdy klocek naprawdę robi i czego &lt;b&gt;nie&lt;/b&gt; robi, żebyś narysował &lt;b&gt;własną&lt;/b&gt; mapę. Bez hype’u i bez zmyślonych liczb.">The blocks in the series come from our real system. This is how one person – not a team – built it behind @erl.grey83: what each block really does and what it does <b>not</b> do, so you can draw <b>your own</b> map. No hype, no fake numbers.</p>
+</section>
 <div class="brainbox" data-pl="&lt;b&gt;🧠 Mózg – Claude (Anthropic).&lt;/b&gt; Planuje pracę, pisze zasady dla każdego agenta, sprawdza wyniki i naprawia to, co się psuje. Agenci w tygodniu nie piszą do właściciela – raportują Mózgowi, a właściciel dostaje jeden krótki raport tygodniowy."><b>🧠 The Brain – Claude (Anthropic).</b> Plans the work, writes the rules for every agent, checks their results and fixes what breaks. Agents don't talk to the owner during the week – they report to the Brain, and the owner gets one short weekly report.</div>
 
 <section class="bsec" id="roj">
@@ -400,7 +421,11 @@ td:first-child{color:var(--hi)}
 </script>
 
 <script>
-(function(){var els=[].slice.call(document.querySelectorAll('.bsec,.series,.brainbox,.cta'));
+// Hexa's map: block 1 is always lit (her first power); the rest light up on their premiere day
+(function(){const now=new Date();let next=null;document.querySelectorAll("#bloki .blk").forEach((li,i)=>{const d=new Date(li.dataset.d+"T09:00:00Z");if(i===0||d<=now)li.classList.add("on");if(d>now&&!next){next=li;li.classList.add("nx")}});document.querySelectorAll("#bloki .blk").forEach(li=>{li.dataset.nx="Next"});document.addEventListener("langchange",()=>document.querySelectorAll("#bloki .blk").forEach(li=>{li.dataset.nx=window.LANG==="pl"?"Następny":"Next"}));(function(){})})();
+</script>
+<script>
+(function(){var els=[].slice.call(document.querySelectorAll('.bsec,.brainbox,.cta,.map .rv'));
 if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){return}
 els.forEach(function(e){e.classList.add('rv')});
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.06});
