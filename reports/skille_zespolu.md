@@ -28,7 +28,7 @@ Agent w chmurze: zanim zacznie zadanie z listy niżej, czyta odpowiedni `SKILL.m
 - `rembg` (MIT, CPU) – wycinanie tła z obrazów do okładek i miniatur: `C:\Hexa\grafika\.venv\Scripts\rembg.exe i wejscie.jpg wyjscie.png`.
 - TradingView **Lightweight Charts** (Apache-2.0) – na stronie duży wykres 30 dni (BTC/złoto/ETH); zostaw logo TradingView (wymóg licencji).
 - Sceny 3D: filmowe wykończenie (winieta, ziarno, lekka aberracja) – domyślnie włączone, `"czysto": 1` wyłącza.
-- Odrzucone: ComfyUI/Stable Diffusion (potrzebują karty graficznej, serwer jej nie ma), Remotion (licencja firmowa), Upscayl (AGPL), Vanta/Theatre (porzucone).
+- Odrzucone: ComfyUI/Stable Diffusion (potrzebują karty graficznej, serwer jej nie ma), Remotion (licencja firmowa – POPRAWKA 16.11.2026: darmowa dla osób prywatnych i firm do 3 osób, więc nas obejmuje → przyjęte), Upscayl (AGPL), Vanta/Theatre (porzucone).
 
 ## Strona i design (agent strony, Reżyser – okładki/miniatury)
 - `design-taste-frontend` (taste-skill) – kierunek artystyczny zamiast „generycznej strony AI”, referencje, sprawdzenie w przeglądarce.
@@ -67,3 +67,9 @@ Zasada: repo dostaje gwiazdkę od szefa dopiero, gdy jego skill/narzędzie dzia�
 | nextlevelbuilder/ui-ux-pro-max-skill | 11.11.2026 | test | – |
 | mrdoob/three.js | 11.11.2026 | działa (sceny 3D) | do dania 25.11 |
 - Odłożone (16.11.2026): ethanplusai/sellbird (~5,7k ★) – automat cold-mail B2B; przyda się dopiero na etapie sprzedaży usług; uwaga RODO/NL. Zasada szefa: mało ale najlepsze.
+
+- Do instalacji (16.11.2026, znalezione przez szefa, przegląd bezpieczeństwa OK na serwerze w C:\Hexa\przeglad – brak sieci, kluczy, hooków):
+  - `Jakeschincariol/instagram-agent-skill` (★6,6k, MIT) – 13 skilli /ig-reel, /ig-caption, /ig-plan, /ig-audit, /ig-human… dla Social Media/Reżysera.
+  - `remotion-dev/skills` (oficjalne) – remotion-best-practices, -create, -render, -captions, -multimedia, -docs, -license: filmowe napisy i animacje zamiast „tandetnych” (decyzja szefa 16.11).
+  - `Remocn/remocn` (★1,7k, MIT) – gotowe animacje/przejścia do Remotion.
+  - Kopiowanie do C:\Users\Administrator\.claude\skills z sesji Mózgu zablokowane przez zabezpieczenia → instaluje Zwiadowca skilli w swoim przebiegu (`npx skills add`).
