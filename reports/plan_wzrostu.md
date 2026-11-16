@@ -66,7 +66,7 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 3. PĘTLA: ostatnie zdanie wraca do pierwszej sceny, żeby film zapętlał się płynnie.
 4. UDOSTĘPNIENIE: w ostatniej scenie note na ekranie „SEND THIS TO A FRIEND WHO HOLDS <BTC/GOLD/…>”; w opisie to samo zdanie.
 5. KOMENTARZ: pytanie z dwoma odpowiedziami do wyboru (np. „Bull or bear by Friday? 🐂/🐻”), na ekranie i w opisie.
-6. ZAPIS: raz w tygodniu (środa, ONE NUMBER) film „cheat sheet” z poziomami/liczbami do zapamiętania + „Save this for later”.
+6. ZAPIS: raz w tygodniu (środa, ETF FLOWS – od 16.11 zamiast ONE NUMBER) film „cheat sheet” z poziomami/liczbami do zapamiętania + „Save this for later”.
 
 ## Opisy i SEO
 - IG: pierwsza linia = fraza wyszukiwana (np. „Bitcoin price today: …”, „Gold price news: …”), potem 2–3 punkty, CTA, pytanie, źródła, disclaimer. 3–5 hashtagów niszowych (#bitcoin #crypto #btc #gold #cryptonews), nie więcej.
@@ -93,14 +93,14 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - Raport 18:00 zawsze ma co najmniej jedną scenę o złocie i jedną o bankach/makro, jeśli był taki news w ciągu ostatnich 12 h.
 
 ## Kalendarz
-- 10:00 Reel wg filaru dnia (pon CLAIM CHECK, wt CRYPTO 101, śr ONE NUMBER + cheat sheet, czw BTC vs GOLD (R35), pt BIGGEST MOVE, sob MYTH vs FACT); niedziela Weekly Market Brief.
+- 10:00 Reel wg filaru dnia (pon CLAIM CHECK, wt CRYPTO 101, śr ETF FLOWS + cheat sheet (od 16.11 zamiast ONE NUMBER: napływy/odpływy spot ETF BTC/ETH z ostatniego tygodnia – Farside/SoSoValue, hook = pytanie w klatce 0, np. „WHO SOLD $1B OF BTC?”), czw BTC vs GOLD (R35), pt BIGGEST MOVE, sob MYTH vs FACT); niedziela Weekly Market Brief.
 - 10:23 i 18:23 ten sam film na YouTube Shorts.
 - 18:00 raport dnia (news).
 - 7.11 jednorazowo: film „How my AI system works” (IG + YT) – przedstawia konto.
 
 ## Pomiar i decyzje (poniedziałek, Opiekun)
 - Porównaj filary: zasięg spoza obserwujących %, skip %, śr. czas, udostępnienia, zapisy, nowi obserwujący.
-- Filar najsłabszy 2 tygodnie z rzędu → zamień na nowy (pomysły: „LIQUIDATION MAP”, „WHALE WATCH”, „ETF FLOWS”, „ONE CHART”).
+- Filar najsłabszy 2 tygodnie z rzędu → zamień na nowy (pomysły: „LIQUIDATION MAP”, „WHALE WATCH”, „ONE CHART”; 16.11 ONE NUMBER → ETF FLOWS).
 - Hook z najlepszym skip rate → zapisz jako wzór w reports/wzrost.log („WNIOSEK:”).
 - Dopisz postęp do celów na dole tego pliku (data, IG obserwujący, YT subskrybenci).
 
@@ -110,6 +110,7 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - 2026-11-07: przegląd grafiki przez Mózg (6 poprawek w STANDARDZIE JAKOŚCI), ticker przeniesiony nad strefę UI IG
 - ROZKAZ R1–R5, R7: zrobione – Reel 07.11 10:00: 24,0 s, 5 scen; note 64 px biel na ciemnym pasku, sub/chip zielone ≥44 px; 5 nowych obrazów (bank *_holo_01 z 7.11), ostatnia scena z własnym obrazem; każda scena move + anim/chip/note; ticker y≈1470; wpis w dzienniku zespołu (reports/2026-11-07-reel)
 - 2026-11-09: IG 166 (skok +67 w 1 dzien – prawdopodobnie boty, do wyjasnienia), YT 10, spoza obserwujacych ~25% (7 dni) | najlepszy filar tyg. 1: WEEK IN 30s (skip 54.5%); hook-wzor: kontrast dwoch aktywow
+- 2026-11-16: IG 121 (spadek po czystce kont-botów z 08-10.11; nowi obserwujący 7 dni: 37), YT 13, spoza obserwujących ~69% (7 dni 09-15.11: 82 z 118 – skok 15.11 dzięki Reelowi Hexy „Comment HEXA”: zasięg 44, wyśw. 94) | filar zamieniony: ONE NUMBER → ETF FLOWS (najsłabszy 2 tyg. z rzędu: skip 100%, zasięg 5)
 
 ## R13 NOWY STYL WIDEO (od szefa 10.11) — OBOWIĄZUJE Reels I YouTube Shorts
 - Każdy Reel i każdy Short w stylu tools/okladki/STYL.md (wzór: reel_szef_v2): kilka scen po 3–5 s z hexa_gen, krzykliwe nagłówki Anton, liczba dnia na żółto, lektor + muzyka, CTA pytanie.
