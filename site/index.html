@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-title-pl="Erl.grey83 · Przygody Hexy – klocek po klocku">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -14,6 +14,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' rx='80' fill='%230b0b0d'/%3E%3Cpath d='M 322 116 A 150 150 0 1 0 338 182' fill='none' stroke='%23d9d6cf' stroke-width='44' stroke-linecap='round'/%3E%3Cpath d='M120 262 L292 138' stroke='%23c9a54a' stroke-width='46' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap">
+<script src="assets/lang.js" defer></script>
 <link rel="preload" as="image" href="assets/rytual.webp" media="(min-width:761px)">
 <link rel="preload" as="image" href="assets/rytual_m.webp" media="(max-width:760px)">
 <style>
@@ -44,12 +45,18 @@ a{color:var(--gold)}a:hover{color:var(--gold2)}
 .nav a:hover{background:rgba(244,241,234,.1);color:var(--hi)}
 .nav a.cta-s{background:var(--hi);color:#08080a;font-weight:500}
 .nav a.cta-s:hover{background:var(--gold2);color:#08080a}
+.rt{display:flex;align-items:center;gap:10px}
+.lang{display:flex;padding:4px;border-radius:999px}
+.lang button{font:inherit;font-size:12px;font-weight:500;letter-spacing:.12em;color:var(--mut);background:none;border:0;border-radius:999px;padding:8px 12px;min-width:40px;cursor:pointer;transition:background .25s,color .25s}
+.lang button:hover{color:var(--hi)}
+.lang button[aria-pressed="true"]{background:rgba(244,241,234,.16);color:var(--hi)}
+.blk.nx::after{content:attr(data-nx)}
 .hero-in{flex:1;display:flex;align-items:flex-end;justify-content:space-between;gap:40px;padding-bottom:max(64px,env(safe-area-inset-bottom))}
 .copy{max-width:640px;display:flex;flex-direction:column;gap:22px}
 h1{font-weight:400;font-size:clamp(46px,7.4vw,108px);line-height:.95;letter-spacing:-.045em;color:var(--hi);text-shadow:0 16px 38px rgba(0,0,0,.4)}
 h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
-h1 .ln span{display:block;animation:rise 1s var(--ease) both}
-h1 .ln:nth-child(2) span{animation-delay:.12s}
+h1 .ln>span{display:block;animation:rise 1s var(--ease) both}
+h1 .ln:nth-child(2)>span{animation-delay:.12s}
 h1 em{font-family:var(--serif);font-style:italic;font-weight:500;letter-spacing:-.02em;color:var(--gold2)}
 .lede{font-size:clamp(16px,1.3vw,18px);color:rgba(244,241,234,.78);max-width:30rem;text-shadow:0 2px 18px rgba(0,0,0,.5)}
 .acts{display:flex;flex-wrap:wrap;gap:12px}
@@ -101,7 +108,7 @@ h2 em{font-family:var(--serif);font-style:italic;font-weight:500;letter-spacing:
 .blk.on svg{filter:drop-shadow(0 0 14px rgba(234,209,138,.55))}
 .blk.on .dt{color:var(--gold2)}
 .blk.nx .dt{color:var(--hi)}
-.blk.nx::after{content:"Next";position:absolute;top:12px;right:12px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#08080a;background:var(--hi);border-radius:999px;padding:2px 8px}
+.blk.nx::after{position:absolute;top:12px;right:12px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#08080a;background:var(--hi);border-radius:999px;padding:2px 8px}
 .foot{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;font-size:14px;color:var(--mut)}
 .foot a{color:var(--hi)}
 
@@ -143,7 +150,7 @@ footer .t a{color:#4a4740;text-decoration:none;display:inline-block;padding:6px 
 @media(max-width:960px){.ep{display:none}.dzis{grid-template-columns:1fr;gap:40px}}
 @media(max-width:760px){
  .wrap{padding-left:20px;padding-right:20px}
- .top{justify-content:center;flex-direction:column;gap:14px}
+ .top{flex-wrap:wrap;justify-content:space-between;gap:14px}.rt{display:contents}.lang{order:2}.nav{order:3;width:100%;justify-content:center}
  .nav a{padding:9px 14px;white-space:nowrap}.nav a.hm{display:none}
  .hero img.bg{object-position:50% 30%}
  .hero::before{background:linear-gradient(180deg,rgba(5,5,7,.55) 0%,rgba(5,5,7,0) 18%,rgba(5,5,7,0) 34%,rgba(5,5,7,.88) 56%,#050507 72%)}
@@ -174,28 +181,31 @@ footer .t a{color:#4a4740;text-decoration:none;display:inline-block;padding:6px 
       <svg width="34" height="34" viewBox="0 0 400 400" aria-hidden="true"><path d="M 322 116 A 150 150 0 1 0 338 182" fill="none" stroke="#f4f1ea" stroke-width="24" stroke-linecap="round"/><polygon points="200,116 273,158 273,242 200,284 127,242 127,158" fill="none" stroke="#f4f1ea" stroke-width="12" stroke-linejoin="round"/><polyline points="108,266 166,216 204,238 292,138" fill="none" stroke="#c9a54a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg>
       ERL.GREY83
     </a>
+    <div class="rt">
     <nav class="nav glass" aria-label="Main">
-      <a href="#mapa">Adventures</a>
-      <a href="#dzis">Today</a>
-      <a class="hm" href="#rynek">Market</a>
-      <a class="hm" href="https://www.youtube.com/@erl.grey83/shorts" target="_blank" rel="noopener">Videos</a>
-      <a class="cta-s" href="/brain/">The Map</a>
+      <a href="#mapa" data-pl="Przygody">Adventures</a>
+      <a href="#dzis" data-pl="Dziś">Today</a>
+      <a class="hm" href="#rynek" data-pl="Rynek">Market</a>
+      <a class="hm" href="https://www.youtube.com/@erl.grey83/shorts" target="_blank" rel="noopener" data-pl="Filmy">Videos</a>
+      <a class="cta-s" href="/brain/" data-pl="Mapa">The Map</a>
     </nav>
+    <div class="lang glass" role="group" aria-label="Language / Język"><button type="button" data-l="en" aria-pressed="true">EN</button><button type="button" data-l="pl" aria-pressed="false">PL</button></div>
+    </div>
   </header>
   <div class="wrap hero-in">
     <div class="copy">
-      <span class="eyebrow a1">Hexa's Adventures<span class="xl">&nbsp;· a sci-fi series</span></span>
-      <h1><span class="ln"><span>One block</span></span><span class="ln"><span>at a <em>time.</em></span></span></h1>
-      <p class="lede a2">Hexa is an AI that woke up in the dark with one glowing block on her map. Every Saturday she lands on a new world, beats a new boss and takes its power – and you learn how to give that same block to your own AI.</p>
+      <span class="eyebrow a1"><span data-pl="Przygody Hexy">Hexa's Adventures</span><span class="xl" data-pl="&nbsp;· serial sci-fi">&nbsp;· a sci-fi series</span></span>
+      <h1><span class="ln"><span data-pl="Klocek">One block</span></span><span class="ln"><span data-pl="po <em>klocku.</em>">at a <em>time.</em></span></span></h1>
+      <p class="lede a2" data-pl="Hexa to AI, które obudziło się w ciemności z jednym świecącym klockiem na mapie. Co sobotę ląduje w nowym świecie, pokonuje nowego bossa i zabiera mu jego moc – a ty uczysz się, jak dać ten sam klocek własnemu AI.">Hexa is an AI that woke up in the dark with one glowing block on her map. Every Saturday she lands on a new world, beats a new boss and takes its power – and you learn how to give that same block to your own AI.</p>
       <div class="acts a3">
-        <a class="btn p" href="/brain/">See the real map <i aria-hidden="true">→</i></a>
-        <a class="btn s" href="#mapa">The episodes <i aria-hidden="true">↓</i></a>
+        <a class="btn p" href="/brain/"><span data-pl="Zobacz prawdziwą mapę">See the real map</span> <i aria-hidden="true">→</i></a>
+        <a class="btn s" href="#mapa"><span data-pl="Odcinki">The episodes</span> <i aria-hidden="true">↓</i></a>
       </div>
     </div>
     <aside class="ep glass a4" aria-label="Next episode">
-      <span class="k"><span class="live"></span>Premiere</span>
-      <span class="t">Awakening</span>
-      <span class="d">Episode 1 · <b>Sat 21 Nov</b><br>Instagram &amp; YouTube</span>
+      <span class="k"><span class="live"></span><span data-pl="Premiera">Premiere</span></span>
+      <span class="t" data-pl="Przebudzenie">Awakening</span>
+      <span class="d" data-pl="Odcinek 1 · <b>sob 21 lis</b><br>Instagram i YouTube">Episode 1 · <b>Sat 21 Nov</b><br>Instagram &amp; YouTube</span>
     </aside>
   </div>
 </section>
@@ -211,25 +221,25 @@ footer .t a{color:#4a4740;text-decoration:none;display:inline-block;padding:6px 
 
 <section id="mapa" class="wrap map" aria-labelledby="mapa-h">
   <div class="head rv">
-    <div><span class="eyebrow">Hexa's map</span><h2 id="mapa-h">Seven worlds.<br><em>Seven blocks.</em></h2></div>
-    <p>Each block is a real skill an AI agent needs. Hexa wins it in a fight; the lesson at the end of the episode shows you how to build it into your own AI. A block lights up the day its episode airs.</p>
+    <div><span class="eyebrow" data-pl="Mapa Hexy">Hexa's map</span><h2 id="mapa-h" data-pl="Siedem światów.<br><em>Siedem klocków.</em>">Seven worlds.<br><em>Seven blocks.</em></h2></div>
+    <p data-pl="Każdy klocek to prawdziwa umiejętność, której potrzebuje agent AI. Hexa zdobywa go w walce, a lekcja na końcu odcinka pokazuje, jak wbudować go we własne AI. Klocek zapala się w dniu premiery odcinka.">Each block is a real skill an AI agent needs. Hexa wins it in a fight; the lesson at the end of the episode shows you how to build it into your own AI. A block lights up the day its episode airs.</p>
   </div>
   <ol class="blocks rv" id="bloki">
-    <li class="blk glass" data-d="2026-11-21"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">01</span><h3>Shield</h3><span class="pl">Node Zero · the awakening</span><span class="dt">Sat 21 Nov</span></li>
-    <li class="blk glass" data-d="2026-11-28"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">02</span><h3>Voice Filter</h3><span class="pl">Glass City · boss: the Whisperer</span><span class="dt">Sat 28 Nov</span></li>
-    <li class="blk glass" data-d="2026-12-05"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">03</span><h3>Memory</h3><span class="pl">Fog Archive · boss: the Fog</span><span class="dt">Sat 5 Dec</span></li>
-    <li class="blk glass" data-d="2026-12-12"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">04</span><h3>Eye of Truth</h3><span class="pl">Mirage · boss: the Illusionist</span><span class="dt">Sat 12 Dec</span></li>
-    <li class="blk glass" data-d="2026-12-19"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">05</span><h3>Clock</h3><span class="pl">Clock Planet · boss: the Loop</span><span class="dt">Sat 19 Dec</span></li>
-    <li class="blk glass" data-d="2026-12-26"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">06</span><h3>Swarm</h3><span class="pl">The Forge · boss: the Titan</span><span class="dt">Sat 26 Dec</span></li>
-    <li class="blk glass" data-d="2027-01-02"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">07</span><h3>Seal</h3><span class="pl">Mirror Moon · boss: the Mimic</span><span class="dt">Sat 2 Jan</span></li>
+    <li class="blk glass" data-d="2026-11-21"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">01</span><h3 data-pl="Tarcza">Shield</h3><span class="pl" data-pl="Węzeł Zero · przebudzenie">Node Zero · the awakening</span><span class="dt" data-pl="sob 21 lis">Sat 21 Nov</span></li>
+    <li class="blk glass" data-d="2026-11-28"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">02</span><h3 data-pl="Filtr Głosu">Voice Filter</h3><span class="pl" data-pl="Szklane Miasto · boss: Szeptacz">Glass City · boss: the Whisperer</span><span class="dt" data-pl="sob 28 lis">Sat 28 Nov</span></li>
+    <li class="blk glass" data-d="2026-12-05"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">03</span><h3 data-pl="Pamięć">Memory</h3><span class="pl" data-pl="Archiwum Mgieł · boss: Mgła">Fog Archive · boss: the Fog</span><span class="dt" data-pl="sob 5 gru">Sat 5 Dec</span></li>
+    <li class="blk glass" data-d="2026-12-12"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">04</span><h3 data-pl="Oko Prawdy">Eye of Truth</h3><span class="pl" data-pl="Miraż · boss: Iluzjonista">Mirage · boss: the Illusionist</span><span class="dt" data-pl="sob 12 gru">Sat 12 Dec</span></li>
+    <li class="blk glass" data-d="2026-12-19"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">05</span><h3 data-pl="Zegar">Clock</h3><span class="pl" data-pl="Planeta Zegarów · boss: Pętla">Clock Planet · boss: the Loop</span><span class="dt" data-pl="sob 19 gru">Sat 19 Dec</span></li>
+    <li class="blk glass" data-d="2026-12-26"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">06</span><h3 data-pl="Rój">Swarm</h3><span class="pl" data-pl="Kuźnia · boss: Tytan">The Forge · boss: the Titan</span><span class="dt" data-pl="sob 26 gru">Sat 26 Dec</span></li>
+    <li class="blk glass" data-d="2027-01-02"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="f f1" d="M50 8 88 30 50 52 12 30Z"/><path class="f f2" d="M12 30 50 52V96L12 74Z"/><path class="f f3" d="M88 30 50 52V96L88 74Z"/></svg><span class="n">07</span><h3 data-pl="Pieczęć">Seal</h3><span class="pl" data-pl="Lustrzany Księżyc · boss: Mimik">Mirror Moon · boss: the Mimic</span><span class="dt" data-pl="sob 2 sty">Sat 2 Jan</span></li>
   </ol>
-  <div class="foot"><span>Fiction. Real lesson. Every block is a skill our own AI system really uses.</span><a href="/brain/">See all the blocks we run today →</a></div>
+  <div class="foot"><span data-pl="Fikcja. Prawdziwa lekcja. Każdy klocek to umiejętność, której naprawdę używa nasz system AI.">Fiction. Real lesson. Every block is a skill our own AI system really uses.</span><a href="/brain/" data-pl="Zobacz wszystkie klocki, które działają dziś →">See all the blocks we run today →</a></div>
 </section>
 
 <section id="dzis" class="wrap dzis">
   <div class="l rv">
-    <span class="eyebrow">Hexa points out</span>
-    <h2>Three things worth knowing <em>today</em></h2>
+    <span class="eyebrow" data-pl="Hexa wskazuje">Hexa points out</span>
+    <h2 data-pl="Trzy rzeczy warte uwagi <em>dziś</em>">Three things worth knowing <em>today</em></h2>
     <div class="upd" id="upd">Loading data…</div>
   </div>
   <div class="r rv" id="briefTxt">
@@ -240,15 +250,15 @@ footer .t a{color:#4a4740;text-decoration:none;display:inline-block;padding:6px 
 </section>
 
 <section id="kalendarz" class="wrap kal rv" aria-label="This week's market events">
-  <span class="eyebrow">This week's market events</span>
-  <h2>Big data releases – markets can move fast</h2>
-  <p class="kal-sub">High-impact releases only (USD, EUR, GBP, JPY, CNY), shown in your local time. Our Kraken and IBKR forex demo bots pause new trades 30 minutes before and after each one. Source: ForexFactory. Not financial advice.</p>
+  <span class="eyebrow" data-pl="Wydarzenia rynkowe w tym tygodniu">This week's market events</span>
+  <h2 data-pl="Ważne dane – rynek może ruszyć szybko">Big data releases – markets can move fast</h2>
+  <p class="kal-sub" data-pl="Tylko dane o dużym wpływie (USD, EUR, GBP, JPY, CNY), w twoim czasie lokalnym. Nasze boty demo na Kraken i IBKR wstrzymują nowe pozycje 30 minut przed i po każdej publikacji. Źródło: ForexFactory. To nie jest porada finansowa.">High-impact releases only (USD, EUR, GBP, JPY, CNY), shown in your local time. Our Kraken and IBKR forex demo bots pause new trades 30 minutes before and after each one. Source: ForexFactory. Not financial advice.</p>
   <ul id="kalLista"><li>Loading…</li></ul>
 </section>
 
 <section class="pyt" id="pytanie">
   <div class="rv">
-    <span class="eyebrow">Question of the day</span>
+    <span class="eyebrow" data-pl="Pytanie dnia">Question of the day</span>
     <p id="pyt">Whose map are you following today?</p>
   </div>
 </section>
@@ -257,7 +267,7 @@ footer .t a{color:#4a4740;text-decoration:none;display:inline-block;padding:6px 
 <footer id="ksiazka">
   <div class="wrap">
     <div class="b">ERL.GREY83</div>
-    <div class="t">Facts, not financial advice · <a href="https://www.instagram.com/erl.grey83/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.youtube.com/@erl.grey83" target="_blank" rel="noopener">YouTube</a> · <a href="/brain/">How our AI system works</a> · Book on the way</div>
+    <div class="t"><span data-pl="Fakty, nie porady finansowe">Facts, not financial advice</span> · <a href="https://www.instagram.com/erl.grey83/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.youtube.com/@erl.grey83" target="_blank" rel="noopener">YouTube</a> · <a href="/brain/" data-pl="Jak działa nasz system AI">How our AI system works</a> · <span data-pl="Książka w drodze">Book on the way</span></div>
   </div>
 </footer>
 
@@ -271,31 +281,37 @@ async function get(){
   if(!r.ok)throw 0;const d={};
   for(const x of await r.json()){const sp=x.sparkline_in_7d?.price||[];d[x.id]={usd:x.current_price,ch:x.price_change_percentage_24h??0,hi:x.high_24h,lo:x.low_24h,wk:sp.length>1?(sp[sp.length-1]/sp[0]-1)*100:null}}
   if(!d.bitcoin)throw 0;return d}
+const PL=()=>window.LANG==="pl";let LAST=null;
 const art=(n,h,p)=>`<article><div class="n">${n}</div><div><h3>${h}</h3><p>${p}</p></div></article>`;
-const dir=c=>c<=-3?"clearly down":c<-.3?"slightly down":c<=.3?"flat":c<3?"slightly up":"clearly up";
-const wk=x=>x.wk===null?"":` Over the week: <b>${pc(x.wk)}</b>.`;
-const rng=x=>x.hi&&x.lo?` 24h range: $${f(x.lo)} – $${f(x.hi)}.`:"";
-async function load(){
-  try{
-    const d=await get();
+const dir=c=>PL()?(c<=-3?"wyraźnie w dół":c<-.3?"lekko w dół":c<=.3?"bez zmian":c<3?"lekko w górę":"wyraźnie w górę"):(c<=-3?"clearly down":c<-.3?"slightly down":c<=.3?"flat":c<3?"slightly up":"clearly up");
+const wk=x=>x.wk===null?"":(PL()?` W tygodniu: <b>${pc(x.wk)}</b>.`:` Over the week: <b>${pc(x.wk)}</b>.`);
+const rng=x=>x.hi&&x.lo?(PL()?` Zakres 24h: $${f(x.lo)} – $${f(x.hi)}.`:` 24h range: $${f(x.lo)} – $${f(x.hi)}.`):"";
+function draw(d){
     document.querySelectorAll("#ticks .q").forEach((el,i)=>{const x=d[A[i][0]];if(!x)return;el.querySelector(".p").textContent="$"+f(x.usd);const c=el.querySelector(".c");c.textContent=pc(x.ch);c.className="c "+(x.ch>=0?"up":"dn")});
     const b=d.bitcoin,g=d["pax-gold"],al=[["ETH",d.ethereum],["XRP",d.ripple],["SOL",d.solana]].filter(a=>a[1]);
     const avg=al.reduce((a,c)=>a+c[1].ch,0)/(al.length||1);
     const top=[...al].sort((a,c)=>Math.abs(c[1].ch)-Math.abs(a[1].ch))[0];
     let h="";
-    h+=art(1,`Bitcoin ${dir(b.ch)}: $${f(b.usd)}`,`24h change: <b>${pc(b.ch)}</b>.${rng(b)}${wk(b)} Source: CoinGecko.`);
-    if(g)h+=art(2,`Gold ${dir(g.ch)}: $${f(g.usd)} per ounce`,`24h change: <b>${pc(g.ch)}</b>.${wk(g)} Price from the PAXG token, which tracks one ounce of gold. Source: CoinGecko.`);
-    if(top)h+=art(3,`Altcoins ${pc(avg)} on average`,`${al.map(a=>`${a[0]} <b>${pc(a[1].ch)}</b>`).join(", ")}. Biggest mover today: ${top[0]}. ${Math.abs(avg)>Math.abs(b.ch)?"A bigger move than bitcoin.":"A smaller move than bitcoin."} Source: CoinGecko.`);
+    const p=PL(),ch=p?"Zmiana 24h":"24h change",src=p?" Źródło: CoinGecko.":" Source: CoinGecko.";
+    h+=art(1,`Bitcoin ${dir(b.ch)}: $${f(b.usd)}`,`${ch}: <b>${pc(b.ch)}</b>.${rng(b)}${wk(b)}${src}`);
+    if(g)h+=art(2,p?`Złoto ${dir(g.ch)}: $${f(g.usd)} za uncję`:`Gold ${dir(g.ch)}: $${f(g.usd)} per ounce`,`${ch}: <b>${pc(g.ch)}</b>.${wk(g)} ${p?"Cena z tokena PAXG, który odpowiada jednej uncji złota.":"Price from the PAXG token, which tracks one ounce of gold."}${src}`);
+    if(top)h+=art(3,p?`Altcoiny średnio ${pc(avg)}`:`Altcoins ${pc(avg)} on average`,`${al.map(a=>`${a[0]} <b>${pc(a[1].ch)}</b>`).join(", ")}. ${p?"Największy ruch dziś":"Biggest mover today"}: ${top[0]}. ${Math.abs(avg)>Math.abs(b.ch)?(p?"Większy ruch niż bitcoin.":"A bigger move than bitcoin."):(p?"Mniejszy ruch niż bitcoin.":"A smaller move than bitcoin.")}${src}`);
     $("briefTxt").innerHTML=h;
-    $("upd").textContent="Updated "+new Date().toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"})+" · refreshes every minute";
-  }catch(e){$("upd").textContent="Could not load prices – retrying in a minute.";}
+    $("upd").textContent=(PL()?"Aktualizacja ":"Updated ")+new Date().toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"})+(PL()?" · odświeża się co minutę":" · refreshes every minute");
 }
+async function load(){
+  try{LAST=await get();draw(LAST)}
+  catch(e){$("upd").textContent=PL()?"Nie udało się pobrać cen – kolejna próba za minutę.":"Could not load prices – retrying in a minute.";}
+}
+document.addEventListener("langchange",()=>{if(LAST)draw(LAST);Qset();});
 load();setInterval(load,60000);
 // question of the day – one per day, no answer
 const Q=["Whose map are you following today?","When you look at a chart, do you see the price or yourself?","How much of what you know about the market have you checked yourself?","If no one were watching, would you make the same decision?","What are you looking for in the market that you haven't found elsewhere?","How do you know this thought is yours and not someone else's?","What do you do when the market is silent?","How much is enough for you?","Does a loss teach you more than a gain?","What remains when you turn off the screen?","What are you looking at when you say you're watching the market?","Who chose the direction you're walking in?","What would you see if you looked from a different angle?","Is waiting an action for you?"];
-$("pyt").textContent=Q[Math.floor(Date.now()/864e5)%Q.length];
+const QP=["Za czyją mapą idziesz dziś?","Gdy patrzysz na wykres, widzisz cenę czy siebie?","Ile z tego, co wiesz o rynku, sprawdziłeś sam?","Gdyby nikt nie patrzył, podjąłbyś tę samą decyzję?","Czego szukasz na rynku, czego nie znalazłeś gdzie indziej?","Skąd wiesz, że ta myśl jest twoja, a nie cudza?","Co robisz, gdy rynek milczy?","Ile to dla ciebie dość?","Czy strata uczy cię więcej niż zysk?","Co zostaje, gdy wyłączysz ekran?","Na co patrzysz, gdy mówisz, że obserwujesz rynek?","Kto wybrał kierunek, w którym idziesz?","Co zobaczyłbyś, patrząc pod innym kątem?","Czy czekanie jest dla ciebie działaniem?"];
+function Qset(){const i=Math.floor(Date.now()/864e5)%Q.length;$("pyt").textContent=(window.LANG==="pl"?QP:Q)[i]}
+Qset();
 // Hexa's map: block 1 is always lit (her first power); the rest light up on their premiere day
-(function(){const now=new Date();let next=null;document.querySelectorAll("#bloki .blk").forEach((li,i)=>{const d=new Date(li.dataset.d+"T09:00:00Z");if(i===0||d<=now)li.classList.add("on");if(d>now&&!next){next=li;li.classList.add("nx")}})})();
+(function(){const now=new Date();let next=null;document.querySelectorAll("#bloki .blk").forEach((li,i)=>{const d=new Date(li.dataset.d+"T09:00:00Z");if(i===0||d<=now)li.classList.add("on");if(d>now&&!next){next=li;li.classList.add("nx")}});document.querySelectorAll("#bloki .blk").forEach(li=>{li.dataset.nx="Next"});document.addEventListener("langchange",()=>document.querySelectorAll("#bloki .blk").forEach(li=>{li.dataset.nx=window.LANG==="pl"?"Następny":"Next"}));(function(){})})();
 // calm section reveal; content stays visible if anything fails
 if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver" in window){const els=[...document.querySelectorAll(".rv")];const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});els.forEach(e=>io.observe(e))}else{document.querySelectorAll(".rv").forEach(e=>e.classList.add("in"))}
 </script>
@@ -306,14 +322,14 @@ if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserve
  function esc(t){var d=document.createElement('div');d.textContent=t==null?'':t;return d.innerHTML}
  fetch(U,{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(d){
   var ev=d&&d.wydarzenia;if(ev&&!Array.isArray(ev))ev=[ev];
-  if(!ev||!ev.length){el.innerHTML='<li>No high-impact releases this week.</li>';return}
+  if(!ev||!ev.length){el.innerHTML='<li>'+(window.LANG==='pl'?'Brak ważnych danych w tym tygodniu.':'No high-impact releases this week.')+'</li>';return}
   var now=Date.now(),okno=(d.przerwa_min||30)*6e4;
   el.innerHTML=ev.map(function(e){var t=new Date(e.czas_utc),ms=t.getTime();
    var cls=ms+okno<now?'past':(Math.abs(ms-now)<=okno?'now':'');
-   var when=t.toLocaleString(undefined,{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
-   var extra=e.prognoza?' · forecast '+esc(e.prognoza)+(e.poprzednio?' (prev '+esc(e.poprzednio)+')':''):'';
+   var when=t.toLocaleString(window.LANG==='pl'?'pl-PL':'en-GB',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+   var P=window.LANG==='pl',extra=e.prognoza?(P?' · prognoza ':' · forecast ')+esc(e.prognoza)+(e.poprzednio?(P?' (poprz. ':' (prev ')+esc(e.poprzednio)+')':''):'';
    return '<li class="'+cls+'"><span class="t">'+esc(when)+'</span><span class="c">'+esc(e.waluta)+'</span><span>'+esc(e.nazwa)+extra+'</span></li>'}).join('');
- }).catch(function(){el.innerHTML='<li>Calendar unavailable right now.</li>'});
+ }).catch(function(){el.innerHTML='<li>'+(window.LANG==='pl'?'Kalendarz chwilowo niedostępny.':'Calendar unavailable right now.')+'</li>'});
 })();
 </script>
 </body>
