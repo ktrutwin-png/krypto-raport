@@ -59,8 +59,8 @@
   },
   {
    "n": "Skanery",
-   "s": "praca",
-   "ostatnio": "15.11 04:07 – proces działa na serwerze",
+   "s": "blad",
+   "ostatnio": "16.11 22:26 – PROCES NIE DZIAŁA na serwerze",
    "typ": "agent",
    "en": "Watches gold, indices and crypto 24/7 and logs setups. It only observes and reports – it never places trades.",
    "gdzie": "Server",
@@ -129,8 +129,8 @@
   },
   {
    "n": "Hexa 💧",
-   "s": "praca",
-   "ostatnio": "11.11 21:02 – proces działa na serwerze",
+   "s": "blad",
+   "ostatnio": "16.11 22:26 – PROCES NIE DZIAŁA na serwerze",
    "typ": "bot",
    "en": "Calm gold bot (XAU/USD)",
    "gdzie": "MetaTrader 5 demo",
@@ -141,8 +141,8 @@
   },
   {
    "n": "Turbo 🔥",
-   "s": "praca",
-   "ostatnio": "11.11 21:02 – proces działa na serwerze",
+   "s": "blad",
+   "ostatnio": "16.11 22:26 – PROCES NIE DZIAŁA na serwerze",
    "typ": "bot",
    "en": "Aggressive gold bot (XAU/USD)",
    "gdzie": "MetaTrader 5 demo",
