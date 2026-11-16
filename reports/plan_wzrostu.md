@@ -160,3 +160,8 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - Ludzie przewijają po ~3 s, bo nic ich nie zaskakuje („oklepane”). Każdy Reel/Short musi w 0–2 s pokazać coś, czego widz się nie spodziewa: ruch Hexy, zapalający się znak, pytanie wprost do widza, liczba-szok – NIE logo, NIE wstęp, NIE spokojny wykres.
 - Najpierw oko, potem treść: grafika na poziomie filmu, nie „wystarczająco dobra”.
 - Analityk co tydzień sprawdza w Metricool średni czas oglądania / retencję 3 s i porównuje Reelsy: co zatrzymało, co przewinięto → wnioski do reports/nauka.
+
+### R43 – Żywe efekty na stronie (szef 16.11.2026, inspiracja: post @thesanskaarsingh „15 prompts”)
+- Bierzemy pomysły, nie paczkę (robimy sami, w naszym neonowym stylu, lekko): przekręcane liczby przy cenach BTC/złota, karty z poświatą (spotlight), wjeżdżający nagłówek (blur-in), przesuwany pasek (marquee) z rynkami.
+- Zasada: lekko i szybko (bez ciężkich bibliotek), wyłączane przy `prefers-reduced-motion`.
+- Ich lejek „skomentuj PACK → DM” (2,4 tys. komentarzy) potwierdza nasz plan R31 z „BRAIN”.
