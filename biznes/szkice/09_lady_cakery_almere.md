@@ -1,0 +1,2 @@
+# Lady Cakery (Almere) · kanaal: DM op Instagram (@ladycakery.nl) · NL (kort, past in een DM)
+Hoi! Jullie Instagram ziet er heerlijk uit. Ik maak voor lokale zaken automatisch korte Reels met voice-over van hun eigen foto's – bijvoorbeeld „vandaag in de vitrine” of de gelato van de dag, zonder dat jullie hoeven te monteren. Voorbeeld (16 sec, fictief menu): [link]. Ik zoek drie zaken in Flevoland voor een pilot met 30% korting. Interesse in een gratis proef-Reel van één product? Groet, [Naam] ([KvK-nummer]). Geen interesse? Stuur „stop”, dan hoor je niets meer van me.

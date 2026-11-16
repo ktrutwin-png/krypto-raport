@@ -1,0 +1,16 @@
+{
+ "date": "VOORBEELD · dinsdag",
+ "style": "news",
+ "handle": "Eetcafé Voorbeeld",
+ "dis": "VOORBEELD – fictief menu, geen echte zaak",
+ "ticker": "DAGMENU · SOEP €6,50 · DAGSCHOTEL €17,50 · DESSERT €6,00 · RESERVEER VIA WHATSAPP",
+ "end": {"a": "Vandaag vers<br>op tafel", "b": "Eetcafé Voorbeeld · dagelijks automatisch", "c": "Voorbeeld van een automatische Reel"},
+ "scenes": [
+  {"img": "s1.jpg", "tag": "DAGMENU DINSDAG", "head": ["VERSE", "*TOMATENSOEP*"], "chip": "€6,50", "move": "in",
+   "say": "Vandaag op het menu: verse tomatensoep, voor zes euro vijftig."},
+  {"img": "s2.jpg", "head": ["DAGSCHOTEL", "*STEAK & FRIET*"], "chip": "€17,50", "note": "OP = OP", "move": "out",
+   "say": "Als dagschotel: steak met friet en salade."},
+  {"img": "s3.jpg", "tag": "TOETJE", "head": ["WARME", "*APPELTAART*"], "sub": "MET VANILLE-IJS", "chip": "€6,00", "move": "up",
+   "say": "En als toetje warme appeltaart met ijs. Reserveer via WhatsApp."}
+ ]
+}

@@ -9,7 +9,7 @@ scenes.json:
                "note": "FIRST TEST AFTER JOBS DATA",                       # ciemna ramka w dolnej czesci, wchodzi w polowie sceny
                "chip": "▲ +1.6%",                                          # maly znaczek pod naglowkiem
                "say": "lektor...", "move": "in"}, ... ] }
-Na koncu automatycznie plansza "This Is Not Financial Advice! Just data. @handle" (2,2 s).
+Na koncu automatycznie plansza "This Is Not Financial Advice! Just data. @handle" (2,2 s); pola pliku "end": {"a","b","c"} i "dis" nadpisuja plansze i dopisek u gory (16.11, reel dla klienta).
 Scena 3D zamiast obrazu (od 11.11.2026): "d3": {"typ": "waga", "p": {"przechyl": 0.7}} – kino samo renderuje ruchoma scene 3D
 (tools/3d/scena.js; typy i parametry: tools/3d/README.md) na dlugosc lektora. "img" moze tez byc gotowym filmem (.mp4/.mov).
 Naglowki same dopasowuja wielkosc (jedna linia = jeden wiersz, bez osieroconych slow). U gory zloty pasek postepu.
@@ -92,7 +92,7 @@ async def overlays():
                 if (e.scrollWidth > e.clientWidth) { e.style.whiteSpace = 'normal'; e.style.textWrap = 'balance'; } }); }""")
             await pg.screenshot(path=path, omit_background=True)
         await shot(f'<div class="gt"></div><div class="gb"></div><div class="hd">{H.escape(HANDLE)}<b>{H.escape(CFG["date"])}</b></div>'
-                   f'<div class="dis">For information only · not investment advice</div>', "_hd.png")
+                   f'<div class="dis">{H.escape(CFG.get("dis", "For information only · not investment advice"))}</div>', "_hd.png")
         if CFG.get("ticker"):
             t = H.escape(CFG["ticker"]); t = re.sub(r"(▲[^·]*)", r'<span class="u">\1</span>', t); t = re.sub(r"(▼[^·]*)", r'<span class="d">\1</span>', t)
             await pg.set_viewport_size({"width": 6000, "height": 70})
@@ -101,7 +101,8 @@ async def overlays():
             await pg.set_viewport_size({"width": W, "height": H_})
         for i, s in enumerate(S):
             if s.get("end"):
-                await shot(f'<div class="end"><div class="a">This is not<br>financial advice!</div><div class="b">Just data. {H.escape(HANDLE)}</div><div class="l"></div><div class="c">Follow · new numbers daily</div></div>', f"_t{i}.png")
+                E = CFG.get("end") or {}  # plansza koncowa do nadpisania (np. reel dla klienta): {"a": "linia1<br>linia2", "b": "...", "c": "..."}
+                await shot(f'<div class="end"><div class="a">{E.get("a", "This is not<br>financial advice!")}</div><div class="b">{H.escape(E.get("b", "Just data. " + HANDLE))}</div><div class="l"></div><div class="c">{H.escape(E.get("c", "Follow · new numbers daily"))}</div></div>', f"_t{i}.png")
                 await shot("", f"_n{i}.png"); continue
             if STYLE == "cinema":
                 body = (f'<div class="big">{rich(s["big"])}</div>' if s.get("big") else "") + (f'<div class="csub">{rich(s["sub"])}</div>' if s.get("sub") else "")
