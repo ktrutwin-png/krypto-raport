@@ -19,4 +19,4 @@ Pełny system (wersje, ikony, favicon): artefakt „Logo szefa – Erl.grey83”
 - `Hexa_postac.png`: OFICJALNA twarz Hexy (wybór szefa 12.11): holograficzna młoda kobieta, złote oczy, Ensō na czole, luźne orby agentów. Głos: ElevenLabs „Hexa” (starsza, mądra kobieta). Flow ElevenLabs: „Hexa – postać”.
 
 - `wideo/umiejetnosci/Grafika_umiejetnosci.mp4`: ZACHOWAĆ (szef 13.11: „podoba mi się”). Film o umiejętnościach graficznych, 21 s, cały w kodzie. Źródło: film.html. Nie usuwać.
-- Hexa_rytual.png – Rytuał nowej mocy (Przygody Hexy), zatwierdzony przez szefa 16.11: „To jest piękne”. Wzór kadru rytuału; w filmie klocki mają być heksagonalne.
+- Hexa_rytual.png – Rytuał nowej mocy (Przygody Hexy), zatwierdzony przez szefa 16.11: „To jest piękne”. Wzór kadru rytuału; klocki = sześciany 3D dokładnie jak na tym kadrze (szef 16.11: „klocki są dobre”).
