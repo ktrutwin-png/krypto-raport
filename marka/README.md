@@ -20,3 +20,4 @@ Pełny system (wersje, ikony, favicon): artefakt „Logo szefa – Erl.grey83”
 
 - `wideo/umiejetnosci/Grafika_umiejetnosci.mp4`: ZACHOWAĆ (szef 13.11: „podoba mi się”). Film o umiejętnościach graficznych, 21 s, cały w kodzie. Źródło: film.html. Nie usuwać.
 - Hexa_rytual.png – Rytuał nowej mocy (Przygody Hexy), zatwierdzony przez szefa 16.11: „To jest piękne”. Wzór kadru rytuału; klocki = sześciany 3D dokładnie jak na tym kadrze (szef 16.11: „klocki są dobre”).
+- `X_profil_400.jpg` + `X_naglowek_1500x500.jpg`: profil X @erlgrey83 (16.11, szef: logo jako zdjęcie, Hexa w tle) – ustawione.
