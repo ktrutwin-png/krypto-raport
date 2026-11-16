@@ -59,8 +59,8 @@
   },
   {
    "n": "Skanery",
-   "s": "blad",
-   "ostatnio": "16.11 22:26 – PROCES NIE DZIAŁA na serwerze",
+   "s": "praca",
+   "ostatnio": "16.11 22:32 – proces działa na serwerze",
    "typ": "agent",
    "en": "Watches gold, indices and crypto 24/7 and logs setups. It only observes and reports – it never places trades.",
    "gdzie": "Server",
