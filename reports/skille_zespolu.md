@@ -78,3 +78,9 @@ Zasada: repo dostaje gwiazdkę od szefa dopiero, gdy jego skill/narzędzie dzia�
   - `calesthio/OpenMontage` (AGPLv3 – do użytku wewnętrznego OK, nie udostępniać jako usługi) – agentowe studio wideo: koncepcje → storyboard z akceptacją i kosztem PRZED generowaniem → Remotion/HyperFrames/FFmpeg, self-review (ffprobe, klatki, audio). Dubluje częściowo nasz KINO + Remotion/HyperFrames/piper/ElevenLabs → TEST dopiero PO premierze odc. 1 (21.11), na jednym Reelu albo odc. 2; jeśli lepsze od KINO – zastępuje część naszego łańcucha zamiast dokładać. Klucze tylko darmowe (Pexels/Pixabay) + nasz ElevenLabs z puli Lektor. (Szef 16.11, Reel valeridoesai.)
   - `msitarzewski/agency-agents` (MIT, 330 person agentów) – NIE instalujemy całości; 4 wzorce skopiowane do `reports/wzorce/agency-agents/` (Pisarz, Reżyser ×2, Inspektor). Działa od 16.11 – gwiazdka, jeśli poprawi jakość.
   - Kopiowanie do C:\Users\Administrator\.claude\skills z sesji Mózgu zablokowane przez zabezpieczenia → instaluje Zwiadowca skilli w swoim przebiegu (`npx skills add`).
+
+## 17.11.2026 – lista „60 repo GitHub” (hexsecteam, propozycja szefa)
+- Wzięte: **aquasecurity/trivy** v0.76.2 (skaner podatności; serwer C:\Hexa\narzedzia\trivy, suma SHA256 sprawdzona). Pierwszy skan bibliotek Pythona (boty 79, Freqtrade 83, system 45, ktrut 45 pakietów): **0 podatności HIGH/CRITICAL**. Skan: C:\Hexa\narzedzia\trivy_skan3.ps1 (listy pip freeze → trivy fs). Dla Strażnika/Inspektora: powtarzać raz w miesiącu.
+- Wzięte jako wiedza: **OWASP/CheatSheetSeries** (zabezpieczenia strony i serwera – dla Strażnika/Inspektora).
+- Odrzucone: pozostałe 58 – narzędzia ofensywne (exploity, łamanie haseł, Wi-Fi phishing, malware), OSINT do śledzenia ludzi; nie nasza dziedzina, ryzyko i konflikty z Defenderem na serwerze botów.
+- Odłożone: HKUDS/CLI-Anything (sterowanie programami typu Shotcut/Blender) – wrócić, gdy montaż odcinków Hexy będzie wymagał prawdziwego programu montażowego.
