@@ -182,3 +182,6 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - Dużo później w serialu (nie rusza założeń ani pierwszych 7 odcinków): Hexa spotyka miłość swojego życia – Kenta. Rodzi im się dziecko i stąd wózek KenT.
 - Odcinki z tym wątkiem puszczamy tuż przed premierą wózka KenT – serial jako naturalna zapowiedź produktu.
 - Strona po przyłożeniu karty (wizja szefa 18.11): 1) pojawia się symbol ensō (logo, rysowany jednym ruchem, neon); 2) zaraz po nim Hexa z ensō na czole – „staje się częścią domu i życia”; 3) w telefonie siatka jej możliwości (klocki): lodówka, pralka, piekarnik, hulajnoga, samochód, telewizor, wózek KenT, światło, prąd, temperatura w domu – „każda opcja każdego życia możliwa do podłączenia”. Krótko, lekko animowane, na każdym telefonie bez instalacji.
+
+## R47 – Agent „Strażnik marki” (szef 18.11.2026)
+Uruchomić PO rejestracji znaku UE. Co tydzień: nowe zgłoszenia znaków w EUIPO/TMview podobne do HEXA/ERL.GREY83/KenT, sklepy z apkami (Google Play, App Store), domeny i sieć (kopie logo ensō, wyglądu Hexy). Wynik w tygodniowym raporcie zespołu; przy trafieniu alarm do szefa + gotowy projekt pisma/sprzeciwu (sprzeciw w EUIPO: 3 mies. od publikacji cudzego zgłoszenia). Decyzję o kroku prawnym podejmuje szef.
