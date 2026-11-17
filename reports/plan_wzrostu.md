@@ -169,4 +169,4 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 ### R44 – Odcinek Hexy „Laboratorium” (pomysł szefa 17.11.2026)
 - Hexa w laboratorium staje do walki z kilkoma strategiami jak z przeciwnikami (arena/pojedynki): każda strategia = przeciwnik z imieniem i stylem, runda = tydzień na demo.
 - Tylko prawdziwe wyniki z reports/lab_tabela.md (demo, oznaczone jako demo); przegrane strategie pokazujemy razem z lekcją — uczciwie, bez upiększania.
-- Kolejność: po Ep1 „Przebudzenie” (21.11) i po pierwszych 1–2 tygodniach danych z laboratorium.
+- Kolejność (szef 17.11): odcinek 8 lub dalszy — pierwsze 7 odcinków ma już scenariusz; seria jest otwarta, bez końca. Do tego czasu laboratorium zbierze tygodnie prawdziwych danych.
