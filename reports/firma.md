@@ -38,3 +38,8 @@ Motto (zawsze w całości): „Na twojej drodze cudze mapy się nie sprawdzą”
 - Jeden mózg dla całej sieci domu (szef 18.11): polecenia wydaje tylko domownik, którego głos jest wgrany; inni mogą tylko rozmawiać. Zabezpieczenie: głos to pierwszy klucz, ale sam głos da się dziś podrobić (klonowanie głosu) – przy zakupach, zamkach i rzeczach krytycznych drugi klucz: odcisk palca / potwierdzenie w telefonie / PIN (jak u Hexy szefa: głos + kciuk).
 - Wyświetlacze holograficzne w domu (szef 18.11, dalszy etap): Hexa (lub asystentka klienta) pokazuje się w pokoju. Istniejące urządzenia do obejrzenia/partnerstwa: Looking Glass, Proto, Gatebox (Japonia – postać asystentki w szklanej kapsule; dowód, że ludzie chcą „widzieć” asystentkę).
 - Język marki (szef 18.11): Hexa = MÓZG, ORBY wokół niej = UMIEJĘTNOŚCI/klocki (lodówka, piekarnik, żelazko, drony, dom…). Jej opowieść o sobie ma być najlepszą reklamą produktu.
+
+## Ochrona marki (szef 18.11.2026)
+- Prawo autorskie (automatycznie, 0 €): logo ensō, wygląd Hexy, serial/teksty, kod. Trzymać daty powstania (repo).
+- Nazwy (Hexa, ERL.GREY83, KenT) chroni TYLKO znak towarowy. Plan: znak UE (EUIPO) słowno-graficzny „HEXA by ERL.GREY83” + ensō, klasy 9 i 42 = 900 €, 10 lat, odnawialny. Najpierw sprawdzić TMview/EUIPO czy wolne. Zgłosić gdy będzie przychód.
+- Wózek KenT + mózg: patent możliwy dopiero na konkretne rozwiązanie techniczne (gotowy projekt). Do tego czasu NIE pokazywać szczegółów technicznych publicznie (publikacja przekreśla patent).
