@@ -36,3 +36,4 @@ Motto (zawsze w całości): „Na twojej drodze cudze mapy się nie sprawdzą”
 - Zasada nadrzędna (szef 18.11): wszystko opcjonalne – każdy klocek i każda funkcja do włączenia/wyłączenia przez użytkownika.
 - Smartwatch z Hexą (szef 18.11) – kolejne urządzenie obok telefonu, laptopa, tabletu.
 - Jeden mózg dla całej sieci domu (szef 18.11): polecenia wydaje tylko domownik, którego głos jest wgrany; inni mogą tylko rozmawiać. Zabezpieczenie: głos to pierwszy klucz, ale sam głos da się dziś podrobić (klonowanie głosu) – przy zakupach, zamkach i rzeczach krytycznych drugi klucz: odcisk palca / potwierdzenie w telefonie / PIN (jak u Hexy szefa: głos + kciuk).
+- Wyświetlacze holograficzne w domu (szef 18.11, dalszy etap): Hexa (lub asystentka klienta) pokazuje się w pokoju. Istniejące urządzenia do obejrzenia/partnerstwa: Looking Glass, Proto, Gatebox (Japonia – postać asystentki w szklanej kapsule; dowód, że ludzie chcą „widzieć” asystentkę).
