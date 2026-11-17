@@ -165,3 +165,8 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - Bierzemy pomysły, nie paczkę (robimy sami, w naszym neonowym stylu, lekko): przekręcane liczby przy cenach BTC/złota, karty z poświatą (spotlight), wjeżdżający nagłówek (blur-in), przesuwany pasek (marquee) z rynkami.
 - Zasada: lekko i szybko (bez ciężkich bibliotek), wyłączane przy `prefers-reduced-motion`.
 - Ich lejek „skomentuj PACK → DM” (2,4 tys. komentarzy) potwierdza nasz plan R31 z „BRAIN”.
+
+### R44 – Odcinek Hexy „Laboratorium” (pomysł szefa 17.11.2026)
+- Hexa w laboratorium staje do walki z kilkoma strategiami jak z przeciwnikami (arena/pojedynki): każda strategia = przeciwnik z imieniem i stylem, runda = tydzień na demo.
+- Tylko prawdziwe wyniki z reports/lab_tabela.md (demo, oznaczone jako demo); przegrane strategie pokazujemy razem z lekcją — uczciwie, bez upiększania.
+- Kolejność: po Ep1 „Przebudzenie” (21.11) i po pierwszych 1–2 tygodniach danych z laboratorium.
