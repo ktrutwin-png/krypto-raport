@@ -21,3 +21,11 @@ Motto (zawsze w całości): „Na twojej drodze cudze mapy się nie sprawdzą”
 4. Zmiana w jednym ramieniu = aktualizacja wszędzie tego samego dnia (procedura z zespol.md: światełka, /brain, odcinek Hexy).
 5. Tylko fakty, „not financial advice”, konta demo, bez obietnic zysku, bez reklam giełd/brokerów.
 6. Raz w tygodniu (niedziela) Inspektor sprawdza tę mapę z rzeczywistością i dopisuje rozjazdy do zgloszenia.md.
+
+## Platforma asystentek AI (pomysł szefa 17–18.11.2026)
+- Aplikacja na abonament: klient dostaje własną asystentkę (własne imię, wygląd, głos) na naszym silniku; osobne serwery dla klientów.
+- **Hexa zostaje nasza** – nie jest sprzedawana; twarz marki, gwiazda serialu i wzór. Na później: rejestracja znaku towarowego „Hexa” (nazwa + postać), gdy będą środki.
+- Budowa modułowa od początku (klocki: maile, kalendarz, trading, smart home, kiedyś KenT) – asystentka rośnie bez przebudowy.
+- Cennik: abonament podstawowy + każdy dodatkowy klocek = kilka € więcej miesięcznie (decyzja szefa 18.11). Cena klocka musi pokryć jego koszt (API Claude, głos ElevenLabs; maile Gmail wymagają płatnego audytu Google).
+- Zasady: mózg na płatnym API Anthropic (nie abonament Max szefa), RODO + szyfrowanie od dnia 1.
+- Kolejność: 1) usługa „zrobię Ci asystentkę” dla 3–5 klientów (Handlowiec), 2) beta ~50 osób bez Gmaila, 3) pełna aplikacja + audyt Google, gdy jest przychód.
