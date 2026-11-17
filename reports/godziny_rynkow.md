@@ -109,6 +109,7 @@ Giełdy (z godzin świec w danych 1h): NYSE/Nasdaq kasowa 15:30–22:00, Xetra (
   | 15:30-17:30 | 1 | 0 | -1.00 | 1 | -1.00 |
   | 09:00-11:00 | 2 | 0 | 0.00 | 0 | – |
   Wniosek (n małe): 11 z 16 okazji bez wejścia – cele z trendem padały, ale ceny nie wracały do strefy; od 16.11 strefy ≤0.5 ATR od zamknięcia (L2).
+- 2026-11-17: rozliczono AUD/USD short dzień 16.11 = brak 0R (cel 0.6745 padł 16:00 bez powrotu do strefy 0.6775–0.6790 – strefa liczona od zamknięcia D1, a cena o 06:50 była już 0.6756). Razem n=17 (z wejściem n=5): okno 14:30-17:00 n=3, 0 celów, 0R. Od 17.11 strefa ≤0.5 ATR liczona od bieżącej ceny 1h, nie od zamknięcia D1.
 ### Historia wpisów
 (z okazje_zwiadowcy.csv)
 - 2026-11-09: brak rozliczonych okazji (start Z2) – statystyka od pierwszych rozliczeń.
