@@ -173,7 +173,7 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 
 ### R45 – Karta NFC Hexy (szef 17.11.2026, na przyszłość)
 - Fizyczna wizytówka z chipem NFC: przyłożenie do telefonu otwiera stronę-wizytówkę Hexy (kim jest, serial, laboratorium, IG/YouTube/X, strona).
-- Nadruk (zmiana szefa 18.11): zamiast wizerunku Hexy – znak ENSŌ (otwarty krąg zen, „niedokończony krąg życia”) = mózg, sama esencja Hexy; projekt nigdy nie jest skończony. Obraz z rytuału (site/assets/rytual.webp) do rozważenia na rewersie; neonowy styl marki.
+- Nadruk (zmiana szefa 18.11): nasze LOGO (otwarty krąg = ensō, heksagon, złota linia wzrostu – marka/X_profil_400.jpg) zamiast wizerunku Hexy; logo to znak ENSŌ (otwarty krąg zen, „niedokończony krąg życia”) = mózg, sama esencja Hexy; projekt nigdy nie jest skończony. Obraz z rytuału (site/assets/rytual.webp) do rozważenia na rewersie; neonowy styl marki.
 - Karta z własnym linkiem, BEZ abonamentu (np. Wizardcard.nl, Mobilocard, Etsy); link stały, treść strony zmieniamy po naszej stronie.
 - Link docelowo na własną domenę (kandydaci 17.11: hexaorb.com / iamhexa.com, 12 $/rok – decyzja szefa); do tego czasu obecna strona.
 - Kolejność: projekt nadruku + strona wizytówki (Mózg) → zamówienie krok po kroku z szefem.
