@@ -33,3 +33,5 @@ Motto (zawsze w całości): „Na twojej drodze cudze mapy się nie sprawdzą”
 - Kolejne klocki w przyszłości (szef 18.11): podpięcie asystentki do hulajnogi, samochodu elektrycznego, roweru – „niezliczone możliwości”.
 - Smart home (szef 18.11, dalszy termin): sterowanie całym domem jak Alexa, tylko lepiej. Pomysł szefa: kapcie dla gości z czujnikiem temperatury ciała – w którym pokoju jest gość, tam ogrzewanie/klima dopasowuje się do osoby w danych kapciach. Uwaga: temperatura ciała to dane o zdrowiu – tylko za zgodą gościa, przetwarzanie lokalnie w domu, bez wysyłki na zewnątrz.
 - Dom dalej (szef 18.11): sterowanie robotami domowymi, pralką, lodówką. Lodówka widzi, że ubywa produktu (mleko, jajka) albo właściciel mówi Hexie → Hexa zamawia → dron przywozi. Zasada: zamówienie z pieniędzmi zawsze z limitem/zgodą właściciela.
+- Zasada nadrzędna (szef 18.11): wszystko opcjonalne – każdy klocek i każda funkcja do włączenia/wyłączenia przez użytkownika.
+- Smartwatch z Hexą (szef 18.11) – kolejne urządzenie obok telefonu, laptopa, tabletu.
