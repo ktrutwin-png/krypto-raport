@@ -170,3 +170,10 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - Hexa w laboratorium staje do walki z kilkoma strategiami jak z przeciwnikami (arena/pojedynki): każda strategia = przeciwnik z imieniem i stylem, runda = tydzień na demo.
 - Tylko prawdziwe wyniki z reports/lab_tabela.md (demo, oznaczone jako demo); przegrane strategie pokazujemy razem z lekcją — uczciwie, bez upiększania.
 - Kolejność (szef 17.11): odcinek 8 lub dalszy — pierwsze 7 odcinków ma już scenariusz; seria jest otwarta, bez końca. Do tego czasu laboratorium zbierze tygodnie prawdziwych danych.
+
+### R45 – Karta NFC Hexy (szef 17.11.2026, na przyszłość)
+- Fizyczna wizytówka z chipem NFC: przyłożenie do telefonu otwiera stronę-wizytówkę Hexy (kim jest, serial, laboratorium, IG/YouTube/X, strona).
+- Nadruk: wizerunek Hexy + obraz z rytuału (site/assets/rytual.webp – „klocki” z rytuału), neonowy styl marki.
+- Karta z własnym linkiem, BEZ abonamentu (np. Wizardcard.nl, Mobilocard, Etsy); link stały, treść strony zmieniamy po naszej stronie.
+- Link docelowo na własną domenę (kandydaci 17.11: hexaorb.com / iamhexa.com, 12 $/rok – decyzja szefa); do tego czasu obecna strona.
+- Kolejność: projekt nadruku + strona wizytówki (Mózg) → zamówienie krok po kroku z szefem.
