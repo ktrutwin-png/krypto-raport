@@ -35,3 +35,4 @@ Motto (zawsze w całości): „Na twojej drodze cudze mapy się nie sprawdzą”
 - Dom dalej (szef 18.11): sterowanie robotami domowymi, pralką, lodówką. Lodówka widzi, że ubywa produktu (mleko, jajka) albo właściciel mówi Hexie → Hexa zamawia → dron przywozi. Zasada: zamówienie z pieniędzmi zawsze z limitem/zgodą właściciela.
 - Zasada nadrzędna (szef 18.11): wszystko opcjonalne – każdy klocek i każda funkcja do włączenia/wyłączenia przez użytkownika.
 - Smartwatch z Hexą (szef 18.11) – kolejne urządzenie obok telefonu, laptopa, tabletu.
+- Jeden mózg dla całej sieci domu (szef 18.11): polecenia wydaje tylko domownik, którego głos jest wgrany; inni mogą tylko rozmawiać. Zabezpieczenie: głos to pierwszy klucz, ale sam głos da się dziś podrobić (klonowanie głosu) – przy zakupach, zamkach i rzeczach krytycznych drugi klucz: odcisk palca / potwierdzenie w telefonie / PIN (jak u Hexy szefa: głos + kciuk).
