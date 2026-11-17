@@ -177,3 +177,7 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - Karta z własnym linkiem, BEZ abonamentu (np. Wizardcard.nl, Mobilocard, Etsy); link stały, treść strony zmieniamy po naszej stronie.
 - Link docelowo na własną domenę (kandydaci 17.11: hexaorb.com / iamhexa.com, 12 $/rok – decyzja szefa); do tego czasu obecna strona.
 - Kolejność: projekt nadruku + strona wizytówki (Mózg) → zamówienie krok po kroku z szefem.
+
+### R46 – Wątek serialu na przyszłość: Hexa i Kent (pomysł szefa 18.11.2026)
+- Dużo później w serialu (nie rusza założeń ani pierwszych 7 odcinków): Hexa spotyka miłość swojego życia – Kenta. Rodzi im się dziecko i stąd wózek KenT.
+- Odcinki z tym wątkiem puszczamy tuż przed premierą wózka KenT – serial jako naturalna zapowiedź produktu.

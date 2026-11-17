@@ -30,3 +30,4 @@ Motto (zawsze w całości): „Na twojej drodze cudze mapy się nie sprawdzą”
 - Zasady: mózg na płatnym API Anthropic (nie abonament Max szefa), RODO + szyfrowanie od dnia 1.
 - Kolejność: 1) usługa „zrobię Ci asystentkę” dla 3–5 klientów (Handlowiec), 2) beta ~50 osób bez Gmaila, 3) pełna aplikacja + audyt Google, gdy jest przychód.
 - Urządzenia (szef 18.11): sterowanie asystentką z telefonu, laptopa i tabletu (jedno konto, jedna pamięć, wszędzie ta sama asystentka); później jako klocki: drony, a potem wózek KenT.
+- Kolejne klocki w przyszłości (szef 18.11): podpięcie asystentki do hulajnogi, samochodu elektrycznego, roweru – „niezliczone możliwości”.
