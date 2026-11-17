@@ -181,3 +181,4 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 ### R46 – Wątek serialu na przyszłość: Hexa i Kent (pomysł szefa 18.11.2026)
 - Dużo później w serialu (nie rusza założeń ani pierwszych 7 odcinków): Hexa spotyka miłość swojego życia – Kenta. Rodzi im się dziecko i stąd wózek KenT.
 - Odcinki z tym wątkiem puszczamy tuż przed premierą wózka KenT – serial jako naturalna zapowiedź produktu.
+- Strona po przyłożeniu karty (wizja szefa 18.11): 1) pojawia się symbol ensō (logo, rysowany jednym ruchem, neon); 2) zaraz po nim Hexa z ensō na czole – „staje się częścią domu i życia”; 3) w telefonie siatka jej możliwości (klocki): lodówka, pralka, piekarnik, hulajnoga, samochód, telewizor, wózek KenT, światło, prąd, temperatura w domu – „każda opcja każdego życia możliwa do podłączenia”. Krótko, lekko animowane, na każdym telefonie bez instalacji.
