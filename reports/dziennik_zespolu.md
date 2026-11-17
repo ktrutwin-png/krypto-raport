@@ -228,3 +228,4 @@ UPDATE: 2026-11-16 22:40 (Mózg, szef) OSOBNE KONTO DEMO BOTÓW 5058971085 – H
 2026-11-17 03:45 | Mechanik | naprawione: 0, do wdróż: 0 | brak zgłoszeń „dla Mechanika” (wtorek – bez przeglądu botów) | ok
 2026-11-17 05:49 | Sekretarz | kosz: 3 wątków, wypisano: 0 | ok
 2026-11-17 05:49 | Sekretarz | DO RAPORTU: alert nowego logowania ElevenLabs (Chrome/Android, 16.11) – szef potwierdza, czy to on | nowy nadawca śmieci cTrader Store – do wypisania/zablokowania przez szefa | kalendarz 7 dni pusty
+2026-11-17 05:50 | Kalendarz | dziś: 14:30 USD Retail Sales m/m; 14:30 USD Core Retail Sales m/m | ok
