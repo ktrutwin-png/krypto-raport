@@ -263,7 +263,34 @@ class H(BaseHTTPRequestHandler):
             return self._send(200, {"ok": True, "czas": time.strftime("%H:%M:%S")})
         self._send(404, {"blad": "nie ma"})
 
+    def tts(self):
+        """18.11.2026: glos Hexy przez serwer – klucz ElevenLabs tylko w sejfie serwera, nie w telefonie."""
+        if not TOKEN or self.headers.get("X-Hexa-Token", "") != TOKEN:
+            return self._send(403, {"blad": "zly token"})
+        voice = self.path.split("/tts/", 1)[1].split("?", 1)[0]
+        q = self.path.split("?", 1)[1] if "?" in self.path else "output_format=mp3_44100_64"
+        body = self.rfile.read(int(self.headers.get("content-length", "0")))
+        try:
+            k = open(r"C:\Hexa\sejf\elevenlabs.txt", encoding="utf-8").read().strip()
+            rq = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{voice}?{q}", data=body, method="POST",
+                                        headers={"xi-api-key": k, "Content-Type": "application/json", "Accept": "audio/mpeg"})
+            with urllib.request.urlopen(rq, timeout=30) as r:
+                mp3 = r.read()
+            self.send_response(200)
+            self.send_header("content-type", "audio/mpeg")
+            self.send_header("content-length", str(len(mp3)))
+            self.end_headers()
+            self.wfile.write(mp3)
+        except urllib.error.HTTPError as e:
+            log(f"tts http {e.code}")
+            self._send(e.code, {"blad": e.read()[:200].decode("utf-8", "ignore")})
+        except Exception as e:
+            log(f"tts blad {e}")
+            self._send(502, {"blad": str(e)[:200]})
+
     def do_POST(self):
+        if self.path.startswith("/tts/"):
+            return self.tts()
         if self.path != "/ask":
             return self._send(404, {"blad": "nie ma"})
         if not TOKEN or self.headers.get("X-Hexa-Token", "") != TOKEN:
