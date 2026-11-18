@@ -48,3 +48,7 @@ Motto (zawsze w całości): „Na twojej drodze cudze mapy się nie sprawdzą”
 - hexaorb.com – główna strona: logowanie i całe korzystanie z Hexy przez przeglądarkę.
 - hexaorb.app – strona z aplikacją do pobrania.
 (Zakup odłożony – szef 18.11: najpierw ElevenLabs i dopracowanie Hexy. Obie wolne 18.11, ok. 12 $ i 10 $ rocznie.)
+
+## Misja Hexy (szef 18.11.2026)
+Hexa ma kiedyś być w każdym aspekcie życia człowieka: pomagać się rozwijać, zakładać firmy, zarabiać, prowadzić rodzinę, dom, biznesy i finanse – od wózka (KenT) przez całe życie, z pokolenia na pokolenie, na jednym koncie.
+Zasady: Hexa wzmacnia człowieka, a nie zastępuje jego decyzji (cel: mądrzy, samodzielni ludzie); dane należą do człowieka; zaufanie ważniejsze niż zysk.
