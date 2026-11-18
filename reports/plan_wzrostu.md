@@ -191,3 +191,6 @@ Na prezentacje dla inwestorów i ludzi: Hexa „do wszystkiego”, dopasowana do
 
 ## R49 – Własny głos Hexy (szef 18.11.2026)
 Decyzja: na razie zostajemy przy ElevenLabs (plan miesięczny, nie roczny) – serial i animacja. W tle budujemy własny, darmowy głos Hexy: ~1 h próbek NASZEGO zaprojektowanego głosu „Hexa” (nie kopia Poli – to głos lektorki z biblioteki), jednorazowy trening otwartego modelu (Piper) na wynajętym GPU / Colab, potem działa za darmo na serwerze i w telefonie offline (pl, nl i inne). Po gotowości – porównanie z ElevenLabs, decyzja szefa. Grafika i filmy (ruch ust) – później.
+
+## R50 – Hexa jak żywy hologram (szef 18.11.2026)
+Cel szefa: rozmowa ma wyglądać jak z prawdziwym hologramem człowieka – „żeby innym szczęka opadła”; Hexa = wizytówka firmy. Twarz zawsze ta sama (ensō na czole). Etapy: 1) mimika nastrojów (klipy: śmiech, uśmiech, smutek, złość, zdziwienie, zamyślenie; tag [n:…] z rdzenia) – w toku 18.11; 2) szybki głos (flash) + zapas na serwerze – zrobione 18.11; 3) ruch ust zsynchronizowany z głosem na żywo (awatar sterowany dźwiękiem: MuseTalk/LivePortrait na wynajętym GPU albo gotowa usługa awatara na żywo) – do wyceny; 4) oczy śledzące rozmówcę (kamera przednia) i reakcje na ciszę/mrugnięcia; 5) tryb hologramu na laptopie/TV.
