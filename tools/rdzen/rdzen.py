@@ -318,8 +318,8 @@ def ask_stream(key, text, lang="pl", lat="", lon="", teraz_tel="", gosc=False):
                             mm = re.match(r"\s*\[n:([a-z]+)\]\s*", full)
                             if mm:
                                 sent = mm.end()
-                                if mm.group(1) not in ("usmiech", "smiech"):  # szef 18.11: usmiech za szeroki - wylaczony
-                                    yield "n", mm.group(1)
+                                # szef 18.11: tylko delikatny usmiech (szeroki/smiech -> delikatny)
+                                yield "n", "usmiech" if mm.group(1) == "smiech" else mm.group(1)
                             tag_done = True
                         while True:
                             rest = full[sent:]
