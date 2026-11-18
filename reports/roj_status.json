@@ -177,9 +177,9 @@
   },
   {
    "n": "Kraken Donchian",
-   "s": "praca",
+   "s": "blad",
    "opis": "bot krypto Freqtrade, strategia Donchian 4h na BTC (na sucho).",
-   "ostatnio": "11.11 21:02 – proces działa na serwerze",
+   "ostatnio": "18.11 03:53 – PROCES NIE DZIAŁA na serwerze",
    "typ": "bot",
    "en": "Crypto breakout strategy, BTC 4h",
    "gdzie": "Freqtrade dry-run",
@@ -190,9 +190,9 @@
   },
   {
    "n": "Kraken Momentum",
-   "s": "praca",
+   "s": "blad",
    "opis": "bot krypto Freqtrade, strategia Momentum 1d na BTC (na sucho).",
-   "ostatnio": "11.11 21:02 – proces działa na serwerze",
+   "ostatnio": "18.11 03:53 – PROCES NIE DZIAŁA na serwerze",
    "typ": "bot",
    "en": "Crypto momentum strategy, BTC 1d",
    "gdzie": "Freqtrade dry-run",
