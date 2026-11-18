@@ -118,6 +118,8 @@ TOOLS = [
      "input_schema": {"type": "object", "properties": {"tresc": {"type": "string"}, "pilne": {"type": "boolean"}}, "required": ["tresc"]}},
     {"name": "zapamietaj", "description": "Zapisz trwały fakt o szefie lub jego prośbę na przyszłość (tylko gdy szef wyraźnie prosi albo to ważna stała informacja). Nigdy haseł, kodów, numerów kont.",
      "input_schema": {"type": "object", "properties": {"fakt": {"type": "string"}}, "required": ["fakt"]}},
+    {"name": "fundusze", "description": "Stan funduszy szefa TERAZ: krypto na Tangem i Kraku przeliczone po aktualnych kursach w EUR, poduszka w Skarbcu Revolut i wydatki w tym tygodniu względem budżetu 30 €/dzień. Użyj zawsze, gdy szef pyta o fundusze, pieniądze, oszczędności, portfel, ile ma lub ile wydał. TYLKO dla szefa – nigdy dla gościa.",
+     "input_schema": {"type": "object", "properties": {}, "required": []}},
 ]
 
 
@@ -149,7 +151,44 @@ def t_zapamietaj(a):
     return "Zapamiętane."
 
 
-IMPL = {"ceny": t_ceny, "zadanie_dla_zespolu": t_zadanie, "zapamietaj": t_zapamietaj}
+FIN = r"C:\Hexa\finanse"   # prywatne dane szefa – tylko na serwerze, nigdy w repo
+
+
+def t_fundusze(_):
+    import csv, datetime as dt
+    port = json.load(open(os.path.join(FIN, "portfel.json"), encoding="utf-8"))
+    ids = sorted({cid for miejsce in port.values() for cid in miejsce})
+    u = "https://api.coingecko.com/api/v3/simple/price?ids=" + ",".join(ids) + "&vs_currencies=eur"
+    kurs = json.load(urllib.request.urlopen(u, timeout=10))
+    wynik, razem = {}, 0.0
+    for miejsce, monety in port.items():
+        suma = 0.0
+        for cid, ilosc in monety.items():
+            suma += ilosc * (kurs.get(cid, {}).get("eur") or 0)
+        wynik[miejsce] = round(suma, 2); razem += suma
+    pod = 0.0
+    try:
+        pod = json.load(open(os.path.join(FIN, "poduszka.json"), encoding="utf-8")).get("odlozone", 0.0)
+    except Exception:
+        pass
+    dzis = dt.date.today(); pon = dzis - dt.timedelta(days=dzis.weekday())
+    wydane = 0.0
+    try:
+        for r in csv.reader(open(os.path.join(FIN, "wydatki.csv"), encoding="utf-8"), delimiter=";"):
+            if len(r) < 3 or r[0] == "data" or not r[1] or "wplyw" in r[2] or r[2] == "tangem":
+                continue
+            if dt.date.fromisoformat(r[0][:10]) >= pon and "czynsz" not in r[3].lower():
+                wydane += float(r[1])
+    except Exception:
+        pass
+    dni = dzis.weekday() + 1
+    return json.dumps({"krypto_eur": wynik, "krypto_razem_eur": round(razem, 2),
+                       "poduszka_skarbiec_revolut_eur": pod, "cel_poduszki_eur": 700,
+                       "wydane_w_tym_tygodniu_eur": round(wydane, 2), "budzet_do_dzis_eur": 30 * dni,
+                       "budzet_tygodnia_eur": 210, "uwaga": "kursy CoinGecko teraz; wydatki z powiadomien Revolut/Krak"}, ensure_ascii=False)
+
+
+IMPL = {"ceny": t_ceny, "zadanie_dla_zespolu": t_zadanie, "zapamietaj": t_zapamietaj, "fundusze": t_fundusze}
 
 
 # ---------- Claude ----------
