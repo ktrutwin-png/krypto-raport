@@ -1,0 +1,79 @@
+{
+ "date": "18.11.2026",
+ "style": "news",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "ticker": "BTC ETFs 7 DAYS RED · -$1.9B · NOV 17 -$240M · BTC $64,657 ▼12.3% 7D · ETH $1,810 ▼12.1% 7D · XRP $1.00 ▲4.6% 24H",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "ETF FLOWS · CHEAT SHEET",
+   "head": [
+    "WHO SOLD",
+    "*$1B OF BTC?*"
+   ],
+   "chip": "▼ 2 WEEKS IN A ROW",
+   "say": "Who sold a billion dollars of Bitcoin E T Fs, two weeks running?",
+   "move": "in"
+  },
+  {
+   "img": "s2.jpg",
+   "d3": {
+    "typ": "globus",
+    "p": {
+     "luki": [
+      [
+       40.7,
+       -74.0,
+       51.5,
+       -0.1
+      ],
+      [
+       40.7,
+       -74.0,
+       35.7,
+       139.7
+      ],
+      [
+       40.7,
+       -74.0,
+       1.3,
+       103.8
+      ]
+     ],
+     "lon0": -30,
+     "seed": 7
+    }
+   },
+   "head": [
+    "7 DAYS RED",
+    "*-$1.9B*"
+   ],
+   "sub": "SPOT BTC ETFs · NOV 5–13",
+   "say": "Spot Bitcoin funds bled seven days straight. One point nine billion dollars out.",
+   "move": "out"
+  },
+  {
+   "img": "s3.jpg",
+   "head": [
+    "IBIT -$210M",
+    "*IN ONE DAY*"
+   ],
+   "sub": "NOV 17 · ALL BTC ETFs -$240M",
+   "chip": "▼ BTC -12% IN 7 DAYS",
+   "say": "Yesterday, BlackRock's I BIT alone lost two hundred ten million.",
+   "move": "up"
+  },
+  {
+   "img": "s4.jpg",
+   "head": [
+    "INFLOWS BACK",
+    "*BY FRIDAY?*"
+   ],
+   "sub": "🐂 YES / 🐻 NO · SAVE THIS",
+   "note": "SEND THIS TO A FRIEND WHO HOLDS BTC",
+   "say": "Save this. Will money return by Friday? Not financial advice, just data.",
+   "move": "down"
+  }
+ ]
+}
