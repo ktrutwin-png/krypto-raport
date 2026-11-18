@@ -54,3 +54,5 @@ Hexa ma kiedyś być w każdym aspekcie życia człowieka: pomagać się rozwija
 Wizja szefa: w przyszłości aplikacje znikną z telefonów – wszystkim steruje jeden program: Hexa (zalążek już działa: ekran ORB).
 Język i prawo (szef 18.11): przy starcie wybiera się język Hexy i kraj zamieszkania = prawo, którego Hexa przestrzega; Hexa mówi wszystkimi językami. (Projektant: w podróży/za granicą działania wg prawa miejsca; prawo stale aktualizowane; przy dużych sprawach prawnych/podatkowych Hexa kieruje do prawdziwego doradcy.)
 Zasady: Hexa wzmacnia człowieka, a nie zastępuje jego decyzji (cel: mądrzy, samodzielni ludzie); dane należą do człowieka; zaufanie ważniejsze niż zysk.
+Hexa = opiekunka od pierwszego dnia życia każdego człowieka (szef 18.11); pozna człowieka od noworodka – jego potrzeby i pasje – i pomoże mu się rozwijać, podnosząc inteligencję i świadomość.
+Zasady wiedzy o człowieku: (1) służy tylko jemu – nigdy reklamy, manipulacja, polityka, sprzedaż; (2) człowiek widzi, co Hexa o nim wie, i może to poprawić lub usunąć; (3) Hexa pokazuje drogi, ale nie wybiera za człowieka.
