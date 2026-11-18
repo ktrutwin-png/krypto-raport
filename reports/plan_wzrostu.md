@@ -188,3 +188,6 @@ Uruchomić PO rejestracji znaku UE. Co tydzień: nowe zgłoszenia znaków w EUIP
 
 ## R48 – Pokaz wszechstronności Hexy (szef 18.11.2026)
 Na prezentacje dla inwestorów i ludzi: Hexa „do wszystkiego”, dopasowana do każdego człowieka (trading, mechanika, inżynieria, muzyka, filmy, biznes, finanse, dom…). Dowody zbieramy z NASZEJ prawdziwej pracy – każdy orb = umiejętność z działającym przykładem: trading (boty, Laboratorium), księgowa (budżet szefa – bez liczb!), reżyserka (serial, Reele), projektantka (KenT – bez szczegółów technicznych), mechanik serwera (strażnicy), pisarka (książka). Teczka „Hexa potrafi” uzupełniana na bieżąco; z niej później demo-film i pokaz na żywo. Zasady: tylko prawda, bez wyników testów i danych prywatnych.
+
+## R49 – Własny głos Hexy (szef 18.11.2026)
+Decyzja: na razie zostajemy przy ElevenLabs (plan miesięczny, nie roczny) – serial i animacja. W tle budujemy własny, darmowy głos Hexy: ~1 h próbek NASZEGO zaprojektowanego głosu „Hexa” (nie kopia Poli – to głos lektorki z biblioteki), jednorazowy trening otwartego modelu (Piper) na wynajętym GPU / Colab, potem działa za darmo na serwerze i w telefonie offline (pl, nl i inne). Po gotowości – porównanie z ElevenLabs, decyzja szefa. Grafika i filmy (ruch ust) – później.
