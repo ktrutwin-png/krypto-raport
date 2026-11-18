@@ -448,6 +448,12 @@
    "teraz_en": "Watching 7 high-impact releases this week.",
    "pl": "Śledzi ważne dane ekonomiczne w tym tygodniu. Nasze boty demo wstrzymują nowe pozycje 30 minut wokół każdej publikacji.",
    "teraz_pl": "Pilnuje 7 ważnych publikacji w tym tygodniu."
+  },
+  {
+   "n": "Laboratorium",
+   "s": "praca",
+   "opis": "Laboratorium: odważne boty testowe na demo/paper (MT5, Kraken na sucho, IBKR paper).",
+   "ostatnio": "18.11 02:42 – proces działa na serwerze"
   }
  ]
 }
