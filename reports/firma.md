@@ -43,3 +43,8 @@ Motto (zawsze w całości): „Na twojej drodze cudze mapy się nie sprawdzą”
 - Prawo autorskie (automatycznie, 0 €): logo ensō, wygląd Hexy, serial/teksty, kod. Trzymać daty powstania (repo).
 - Nazwy (Hexa, ERL.GREY83, KenT) chroni TYLKO znak towarowy. Plan: znak UE (EUIPO) słowno-graficzny „HEXA by ERL.GREY83” + ensō, klasy 9 i 42 = 900 €, 10 lat, odnawialny. Najpierw sprawdzić TMview/EUIPO czy wolne. Zgłosić gdy będzie przychód.
 - Wózek KenT + mózg: patent możliwy dopiero na konkretne rozwiązanie techniczne (gotowy projekt). Do tego czasu NIE pokazywać szczegółów technicznych publicznie (publikacja przekreśla patent).
+
+## Domeny (szef 18.11.2026)
+- hexaorb.com – główna strona: logowanie i całe korzystanie z Hexy przez przeglądarkę.
+- hexaorb.app – strona z aplikacją do pobrania.
+(Zakup na Vercel czeka na dane właściciela od szefa.)
