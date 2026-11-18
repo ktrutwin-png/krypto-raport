@@ -13,7 +13,7 @@ Bezpieczeństwo:
 - Hexa nie ma narzędzi do pieniędzy, botów, kasowania ani kluczy – tylko odczyt + zadania dla zespołu.
 Uruchomienie: python rdzen.py  (Harmonogram zadań: „Hexa Rdzeń”, przy starcie systemu).
 """
-import json, os, re, socket, subprocess, threading, time, urllib.request, datetime
+import json, os, re, socket, subprocess, threading, time, urllib.request, urllib.error, datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -246,6 +246,135 @@ def ask(key, text, lang="pl", lat="", lon="", teraz_tel="", gosc=False):
     return None
 
 
+def call_stream(key, body):
+    """18.11.2026: odpowiedz Claude kawalkami (SSE) - Hexa zaczyna mowic po pierwszym zdaniu."""
+    b = dict(body, stream=True)
+    r = urllib.request.Request("https://api.anthropic.com/v1/messages", data=json.dumps(b).encode("utf-8"), method="POST",
+                               headers={"content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01"})
+    try:
+        resp = urllib.request.urlopen(r, timeout=60)
+    except urllib.error.HTTPError as e:
+        log(f"claude-s {e.code} {e.read()[:300]!r}")
+        return
+    with resp:
+        ev = None
+        for raw in resp:
+            line = raw.decode("utf-8", "ignore").rstrip("\r\n")
+            if line.startswith("event:"):
+                ev = line[6:].strip()
+            elif line.startswith("data:"):
+                try:
+                    yield ev, json.loads(line[5:].strip())
+                except Exception:
+                    pass
+
+
+ZDANIE = re.compile(r"[.!?…](?=\s)")
+
+
+def ask_stream(key, text, lang="pl", lat="", lon="", teraz_tel="", gosc=False):
+    """Generator: ("n", nastroj) / ("s", zdanie) / ("koniec", caly_tekst). Ta sama pamiec i narzedzia co ask()."""
+    with LOCK:
+        if time.time() - LAST[0] > 6 * 3600:
+            HIST.clear()
+        msgs = HIST[-20:] + [{"role": "user", "content": text}]
+    sysp = system_prompt(lang, lat, lon, teraz_tel)
+    tools = TOOLS + [{"type": "web_search_20250305", "name": "web_search", "max_uses": 2}]
+    if gosc:
+        sysp[-1]["text"] += "\n\n" + GOSC
+        tools = [t for t in tools if t.get("name") in ("ceny", "web_search")]
+    full = ""      # caly tekst odpowiedzi
+    sent = 0       # ile znakow z full juz poszlo jako zdania
+    tag_done = False
+    for model in MODELS:
+        m = list(msgs)
+        ok = False
+        for _ in range(5):
+            blocks, parts, stop = {}, {}, None
+            got = False
+            for ev, d in call_stream(key, {"model": model, "max_tokens": 700, "system": sysp, "messages": m, "tools": tools}):
+                got = True
+                t = d.get("type")
+                if t == "content_block_start":
+                    blocks[d["index"]] = dict(d["content_block"]); parts[d["index"]] = ""
+                elif t == "content_block_delta":
+                    dd = d.get("delta", {}); i = d["index"]
+                    if dd.get("type") == "text_delta":
+                        blocks[i]["text"] = blocks[i].get("text", "") + dd["text"]
+                        full += dd["text"]
+                        # nastroj [n:xxx] na poczatku
+                        if not tag_done:
+                            st = full.lstrip()
+                            if st.startswith("[") and "]" not in st and len(st) < 20:
+                                continue
+                            mm = re.match(r"\s*\[n:([a-z]+)\]\s*", full)
+                            if mm:
+                                yield "n", mm.group(1); sent = mm.end()
+                            tag_done = True
+                        while True:
+                            rest = full[sent:]
+                            if "<CMD>" in rest and "</CMD>" not in rest:
+                                break
+                            mt = ZDANIE.search(rest)
+                            if not mt:
+                                break
+                            z = re.sub(r"(?s)<CMD>.*?</CMD>", "", rest[:mt.end()]).strip()
+                            sent += mt.end()
+                            if z:
+                                yield "s", z
+                    elif dd.get("type") == "input_json_delta":
+                        parts[i] += dd.get("partial_json", "")
+                elif t == "content_block_stop":
+                    i = d["index"]; bl = blocks.get(i, {})
+                    if bl.get("type") in ("tool_use", "server_tool_use"):
+                        try:
+                            bl["input"] = json.loads(parts[i]) if parts[i] else {}
+                        except Exception:
+                            bl["input"] = {}
+                    if bl.get("type") == "text":
+                        bl.pop("citations", None)
+                elif t == "message_delta":
+                    stop = d.get("delta", {}).get("stop_reason") or stop
+            if not got:
+                break
+            content = [blocks[i] for i in sorted(blocks)]
+            uses = [c for c in content if c.get("type") == "tool_use" and c.get("name") in IMPL and (not gosc or c.get("name") == "ceny")]
+            if stop == "pause_turn":
+                m.append({"role": "assistant", "content": content}); continue
+            if stop == "tool_use" and uses:
+                m.append({"role": "assistant", "content": content})
+                outs = []
+                for u in uses:
+                    try:
+                        out = IMPL[u["name"]](u.get("input") or {})
+                    except Exception as e:
+                        out = "Błąd narzędzia: " + str(e)
+                    log(f"tool {u['name']} {json.dumps(u.get('input'), ensure_ascii=False)[:200]}")
+                    outs.append({"type": "tool_result", "tool_use_id": u["id"], "content": out})
+                m.append({"role": "user", "content": outs})
+                if full and not full.endswith((" ", "\n")):
+                    full += " "
+                continue
+            ok = True
+            break
+        if ok or full.strip():
+            break
+    rest = re.sub(r"(?s)<CMD>.*?</CMD>", "", full[sent:]).strip()
+    if rest:
+        yield "s", rest
+    ans = full.strip()
+    if ans:
+        with LOCK:
+            HIST.append({"role": "user", "content": text})
+            HIST.append({"role": "assistant", "content": ans})
+            del HIST[:-40]
+            LAST[0] = time.time()
+        day = time.strftime("%Y-%m-%d")
+        with open(p("rozmowy", day + ".md"), "a", encoding="utf-8") as f:
+            f.write(f"**{time.strftime('%H:%M')} {'Gość' if gosc else 'Szef'}:** {text}\n\n**Hexa:** {ans}\n\n")
+    yield "koniec", ans
+
+
 class H(BaseHTTPRequestHandler):
     def _send(self, code, obj):
         b = json.dumps(obj, ensure_ascii=False).encode("utf-8")
@@ -288,7 +417,31 @@ class H(BaseHTTPRequestHandler):
             log(f"tts blad {e}")
             self._send(502, {"blad": str(e)[:200]})
 
+    def ask_s(self):
+        if not TOKEN or self.headers.get("X-Hexa-Token", "") != TOKEN:
+            log(f"odmowa {self.client_address[0]}")
+            return self._send(403, {"blad": "zly token"})
+        key = self.headers.get("X-Claude-Key", "")
+        try:
+            d = json.loads(self.rfile.read(int(self.headers.get("content-length", "0"))).decode("utf-8"))
+        except Exception:
+            return self._send(400, {"blad": "zly json"})
+        t0 = time.time(); first = None
+        self.send_response(200)
+        self.send_header("content-type", "application/x-ndjson; charset=utf-8")
+        self.end_headers()
+        try:
+            for k, v in ask_stream(key, d.get("text", ""), d.get("lang", "pl"), d.get("lat", ""), d.get("lon", ""), d.get("teraz", ""), bool(d.get("gosc"))):
+                if k == "s" and first is None:
+                    first = int((time.time() - t0) * 1000)
+                self.wfile.write((json.dumps({k: v}, ensure_ascii=False) + "\n").encode("utf-8")); self.wfile.flush()
+        except Exception as e:
+            log(f"ask_s blad {e}")
+        log(f"ask_s pierwsze zdanie {first} ms, calosc {int((time.time()-t0)*1000)} ms")
+
     def do_POST(self):
+        if self.path == "/ask_s":
+            return self.ask_s()
         if self.path.startswith("/tts/"):
             return self.tts()
         if self.path != "/ask":
@@ -324,7 +477,8 @@ def tailscale_ip():
 
 if __name__ == "__main__":
     os.makedirs(p("rozmowy"), exist_ok=True)
-    threading.Thread(target=git_sync, daemon=True).start()
+    if not os.environ.get("HEXA_NOSYNC"):
+        threading.Thread(target=git_sync, daemon=True).start()
     host = os.environ.get("HEXA_HOST") or tailscale_ip()
     log(f"start {host}:{PORT}")
     ThreadingHTTPServer((host, PORT), H).serve_forever()
