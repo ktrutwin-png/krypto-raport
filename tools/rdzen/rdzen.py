@@ -317,7 +317,9 @@ def ask_stream(key, text, lang="pl", lat="", lon="", teraz_tel="", gosc=False):
                                 continue
                             mm = re.match(r"\s*\[n:([a-z]+)\]\s*", full)
                             if mm:
-                                yield "n", mm.group(1); sent = mm.end()
+                                sent = mm.end()
+                                if mm.group(1) not in ("usmiech", "smiech"):  # szef 18.11: usmiech za szeroki - wylaczony
+                                    yield "n", mm.group(1)
                             tag_done = True
                         while True:
                             rest = full[sent:]
