@@ -288,6 +288,8 @@ def ask_stream(key, text, lang="pl", lat="", lon="", teraz_tel="", gosc=False):
     sysp = sysp[:1]
     if hist and isinstance(hist[-1].get("content"), str):
         hist[-1] = {"role": hist[-1]["role"], "content": [{"type": "text", "text": hist[-1]["content"], "cache_control": {"type": "ephemeral"}}]}
+    biez += ("\n\nTEMPO ROZMOWY: mówisz na żywo, każde zdanie od razu idzie na głos. Pierwsze zdanie krótkie. "
+             "Gdy musisz użyć narzędzia albo wyszukiwania, NAJPIERW powiedz jedno krótkie zdanie (np. „Już sprawdzam, szefie.”), potem użyj narzędzia.")
     msgs = hist + [{"role": "user", "content": [{"type": "text", "text": "[KONTEKST TERAZ – nie czytaj na głos]\n" + biez}, {"type": "text", "text": text}]}]
     full = ""      # caly tekst odpowiedzi
     sent = 0       # ile znakow z full juz poszlo jako zdania
