@@ -250,3 +250,4 @@ UPDATE: 2026-11-18 05:15 (Mechanik) Z031 – Market Watch terminala C:\Hexa\MT5_
 2026-11-18 05:48 | Kalendarz | dziś: 08:00 GBP CPI y/y; 16:00 GBP BOE Gov Bailey Speaks; 20:00 USD FOMC Meeting Minutes | ok
 2026-11-18 05:49 | Sekretarz | kosz: 2 wątków, wypisano: 0 | ok
 2026-11-18 05:49 | Sekretarz | DO RAPORTU: Contabo – mail 17.11 o incydencie bezpieczeństwa u nich (zalecane środki ostrożności) – szef przeczyta i zdecyduje (np. zmiana hasła/2FA) | ElevenLabs – wątek o niezapłaconej fakturze rocznej (status past due) czeka na odpowiedź supportu | Zapier, InstaForex nadal przysyłają reklamy – do wypisania/zablokowania przez szefa | kalendarz 18–25.11 pusty, brak podejrzanych zaproszeń
+2026-11-18 06:40 | Strażnik | BŁĄD: Strażnik – IB Gateway nie działa (brak procesu java o 05:41 i 06:40); reszta procesów OK, RAM 2.78 GB wolne, Tarcza zielona; szef powiadomiony | błąd
