@@ -1,0 +1,33 @@
+{
+ "date": "18.11.2026",
+ "style": "news",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "ticker": "GOLD $3,742 ▼2.7% · BTC $62,404 ▼1.7% · ETH $1,739 ▼1.9% · XRP $0.97 ▲1.1% · SOL $72.43 ▲0.8% · FEAR & GREED 11",
+ "scenes": [
+  {"img": "s1.jpg",
+   "tag": "LIVE MARKET UPDATE",
+   "head": ["GOLD -2.7%", "*BTC $62K*", "*SHOCK HIKE?*"],
+   "chip": "▼ GOLD AT 1-YEAR LOW",
+   "move": "in",
+   "say": "Gold just fell almost three percent. Bitcoin, sixty-two K. The trigger? One Fed word: shock."},
+  {"img": "s2.jpg",
+   "d3": {"typ": "pokretlo", "p": {"od": 0.5, "do": 0.9, "seed": 1811}},
+   "head": ["FED'S WALLER", "*HALF-POINT*", "*HIKE?*"],
+   "note": "MARKETS PRICE 0.25 POINT",
+   "move": "out",
+   "say": "Fed governor Waller reportedly floated a half-point December hike, to shock inflation lower."},
+  {"img": "s3.jpg",
+   "head": ["GOLD $3,742", "*1-YEAR LOW*"],
+   "chip": "▼ -2.7% TODAY",
+   "move": "up",
+   "say": "Higher rates hit gold: under three thousand seven fifty, a one-year low."},
+  {"img": "s4.jpg",
+   "tag": "WATCH NEXT",
+   "head": ["FEAR 11/100", "*BOUNCE*", "~OR BREAK?~"],
+   "sub": "BOUNCE 🐂 / BREAK 🐻",
+   "note": "SEND THIS TO A FRIEND WHO HOLDS GOLD",
+   "move": "down",
+   "say": "Crypto fear sits at eleven. Bounce, or break, before the next shock? This is not financial advice, just data."}
+ ]
+}
