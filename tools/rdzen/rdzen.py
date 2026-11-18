@@ -277,12 +277,18 @@ def ask_stream(key, text, lang="pl", lat="", lon="", teraz_tel="", gosc=False):
     with LOCK:
         if time.time() - LAST[0] > 6 * 3600:
             HIST.clear()
-        msgs = HIST[-20:] + [{"role": "user", "content": text}]
+        hist = [dict(h) for h in HIST[-20:]]
     sysp = system_prompt(lang, lat, lon, teraz_tel)
     tools = TOOLS + [{"type": "web_search_20250305", "name": "web_search", "max_uses": 2}]
+    biez = sysp[-1]["text"]
     if gosc:
-        sysp[-1]["text"] += "\n\n" + GOSC
+        biez += "\n\n" + GOSC
         tools = [t for t in tools if t.get("name") in ("ceny", "web_search")]
+    # szybciej: osobowosc + historia w pamieci podrecznej Claude, a zmienny stan (czas, agenci) idzie przy pytaniu
+    sysp = sysp[:1]
+    if hist and isinstance(hist[-1].get("content"), str):
+        hist[-1] = {"role": hist[-1]["role"], "content": [{"type": "text", "text": hist[-1]["content"], "cache_control": {"type": "ephemeral"}}]}
+    msgs = hist + [{"role": "user", "content": [{"type": "text", "text": "[KONTEKST TERAZ – nie czytaj na głos]\n" + biez}, {"type": "text", "text": text}]}]
     full = ""      # caly tekst odpowiedzi
     sent = 0       # ile znakow z full juz poszlo jako zdania
     tag_done = False
@@ -370,8 +376,14 @@ def ask_stream(key, text, lang="pl", lat="", lon="", teraz_tel="", gosc=False):
             del HIST[:-40]
             LAST[0] = time.time()
         day = time.strftime("%Y-%m-%d")
-        with open(p("rozmowy", day + ".md"), "a", encoding="utf-8") as f:
-            f.write(f"**{time.strftime('%H:%M')} {'Gość' if gosc else 'Szef'}:** {text}\n\n**Hexa:** {ans}\n\n")
+        wpis = f"**{time.strftime('%H:%M')} {'Gość' if gosc else 'Szef'}:** {text}\n\n**Hexa:** {ans}\n\n"
+        for nazwa in (day + ".md", day + "_s.md"):
+            try:
+                with open(p("rozmowy", nazwa), "a", encoding="utf-8") as f:
+                    f.write(wpis)
+                break
+            except OSError:
+                continue
     yield "koniec", ans
 
 
