@@ -47,4 +47,4 @@ Motto (zawsze w całości): „Na twojej drodze cudze mapy się nie sprawdzą”
 ## Domeny (szef 18.11.2026)
 - hexaorb.com – główna strona: logowanie i całe korzystanie z Hexy przez przeglądarkę.
 - hexaorb.app – strona z aplikacją do pobrania.
-(Zakup na Vercel czeka na dane właściciela od szefa.)
+(Zakup odłożony – szef 18.11: najpierw ElevenLabs i dopracowanie Hexy. Obie wolne 18.11, ok. 12 $ i 10 $ rocznie.)
