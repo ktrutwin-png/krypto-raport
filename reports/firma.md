@@ -51,4 +51,5 @@ Motto (zawsze w całości): „Na twojej drodze cudze mapy się nie sprawdzą”
 
 ## Misja Hexy (szef 18.11.2026)
 Hexa ma kiedyś być w każdym aspekcie życia człowieka: pomagać się rozwijać, zakładać firmy, zarabiać, prowadzić rodzinę, dom, biznesy i finanse – od wózka (KenT) przez całe życie, z pokolenia na pokolenie, na jednym koncie.
+Wizja szefa: w przyszłości aplikacje znikną z telefonów – wszystkim steruje jeden program: Hexa (zalążek już działa: ekran ORB).
 Zasady: Hexa wzmacnia człowieka, a nie zastępuje jego decyzji (cel: mądrzy, samodzielni ludzie); dane należą do człowieka; zaufanie ważniejsze niż zysk.
