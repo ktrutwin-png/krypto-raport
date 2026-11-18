@@ -84,3 +84,10 @@ Zasada: repo dostaje gwiazdkę od szefa dopiero, gdy jego skill/narzędzie dzia�
 - Wzięte jako wiedza: **OWASP/CheatSheetSeries** (zabezpieczenia strony i serwera – dla Strażnika/Inspektora).
 - Odrzucone: pozostałe 58 – narzędzia ofensywne (exploity, łamanie haseł, Wi-Fi phishing, malware), OSINT do śledzenia ludzi; nie nasza dziedzina, ryzyko i konflikty z Defenderem na serwerze botów.
 - Odłożone: HKUDS/CLI-Anything (sterowanie programami typu Shotcut/Blender) – wrócić, gdy montaż odcinków Hexy będzie wymagał prawdziwego programu montażowego.
+
+## 18.11.2026 – Projektant: wózek KenT (smart)
+Gotowego skilla „projektowanie inteligentnego wózka dziecięcego” nie ma – złożony z 3 sprawdzonych + 1 własnego (serwer, C:\Users\Administrator\.claude\skills):
+- **kent-smart-stroller** (nasz) – 6 filtrów: EN 1888 + uwaga, że norma wyklucza wózki z napędem (gąsienice = dodatkowo ocena ryzyka maszyny), „dwa mózgi” (bezpieczeństwo bez AI + Hexa), czujniki kabiny (CO₂/temperatura pod kopułą), prywatność danych dziecka, mapa certyfikacji UE/USA (do weryfikacji), koszt/DFM. Dokumenty poufne w C:\Hexa\kent\.
+- **designing-hardware-products** + **hardware-kernel** (telagod/code-abyss, MIT, commit 2544577) – elektronika ESP32, PCB KiCad, firmware, aplikacja na telefon.
+- **hardware-prd** (mohitagw15856/pm-claude-skills, MIT, commit c4679f9) – dokument wymagań: koszt BOM, certyfikaty, niezawodność, etapy EVT/DVT/PVT.
+Treść przejrzana przed instalacją (brak pobierania z sieci, kluczy, poleceń usuwania).
