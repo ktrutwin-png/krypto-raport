@@ -176,30 +176,30 @@
    "teraz_pl": "Gotowy na ręczne transakcje właściciela."
   },
   {
-   "n": "Kraken Donchian",
-   "s": "blad",
-   "opis": "bot krypto Freqtrade, strategia Donchian 4h na BTC (na sucho).",
-   "ostatnio": "18.11 03:53 – PROCES NIE DZIAŁA na serwerze",
+   "n": "Kraken Keltner 1h",
+   "s": "praca",
+   "opis": "bot krypto Freqtrade, wybicie z kanału Keltnera 1h z wolumenem, 10 par EUR (na sucho, od 18.11).",
+   "ostatnio": "18.11 03:55 – podmieniony (był Donchian 4h BTC)",
    "typ": "bot",
-   "en": "Crypto breakout strategy, BTC 4h",
+   "en": "Crypto Keltner breakout, 1h, 10 EUR pairs",
    "gdzie": "Freqtrade dry-run",
-   "nazwa_en": "Kraken Donchian",
-   "teraz_en": "Watching BTC on the 4-hour chart.",
-   "pl": "Strategia wybicia na krypto, BTC 4h",
-   "teraz_pl": "Obserwuje BTC na wykresie 4-godzinnym."
+   "nazwa_en": "Kraken Keltner 1h",
+   "teraz_en": "Watching 10 EUR pairs on the 1-hour chart for volume breakouts.",
+   "pl": "Wybicie Keltnera na krypto, 1h, 10 par EUR",
+   "teraz_pl": "Szuka wybić z wolumenem na 10 parach EUR (wykres 1h)."
   },
   {
-   "n": "Kraken Momentum",
-   "s": "blad",
-   "opis": "bot krypto Freqtrade, strategia Momentum 1d na BTC (na sucho).",
-   "ostatnio": "18.11 03:53 – PROCES NIE DZIAŁA na serwerze",
+   "n": "Kraken EMA 4h",
+   "s": "praca",
+   "opis": "bot krypto Freqtrade, przecięcie EMA9/21 nad EMA200 na 4h, 10 par EUR (na sucho, od 18.11).",
+   "ostatnio": "18.11 03:55 – podmieniony (był Momentum 1d BTC)",
    "typ": "bot",
-   "en": "Crypto momentum strategy, BTC 1d",
+   "en": "Crypto EMA crossover in trend, 4h, 10 EUR pairs",
    "gdzie": "Freqtrade dry-run",
-   "nazwa_en": "Kraken Momentum",
-   "teraz_en": "Watching BTC on the daily chart.",
-   "pl": "Strategia momentum na krypto, BTC 1d",
-   "teraz_pl": "Obserwuje BTC na wykresie dziennym."
+   "nazwa_en": "Kraken EMA 4h",
+   "teraz_en": "Watching 10 EUR pairs on the 4-hour chart for EMA crossovers.",
+   "pl": "Przecięcie EMA w trendzie, 4h, 10 par EUR",
+   "teraz_pl": "Czeka na przecięcie EMA9/21 nad EMA200 na 10 parach EUR (4h)."
   },
   {
    "n": "IB Skaner",
