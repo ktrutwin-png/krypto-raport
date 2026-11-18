@@ -185,3 +185,6 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 
 ## R47 – Agent „Strażnik marki” (szef 18.11.2026)
 Uruchomić PO rejestracji znaku UE. Co tydzień: nowe zgłoszenia znaków w EUIPO/TMview podobne do HEXA/ERL.GREY83/KenT, sklepy z apkami (Google Play, App Store), domeny i sieć (kopie logo ensō, wyglądu Hexy). Wynik w tygodniowym raporcie zespołu; przy trafieniu alarm do szefa + gotowy projekt pisma/sprzeciwu (sprzeciw w EUIPO: 3 mies. od publikacji cudzego zgłoszenia). Decyzję o kroku prawnym podejmuje szef.
+
+## R48 – Pokaz wszechstronności Hexy (szef 18.11.2026)
+Na prezentacje dla inwestorów i ludzi: Hexa „do wszystkiego”, dopasowana do każdego człowieka (trading, mechanika, inżynieria, muzyka, filmy, biznes, finanse, dom…). Dowody zbieramy z NASZEJ prawdziwej pracy – każdy orb = umiejętność z działającym przykładem: trading (boty, Laboratorium), księgowa (budżet szefa – bez liczb!), reżyserka (serial, Reele), projektantka (KenT – bez szczegółów technicznych), mechanik serwera (strażnicy), pisarka (książka). Teczka „Hexa potrafi” uzupełniana na bieżąco; z niej później demo-film i pokaz na żywo. Zasady: tylko prawda, bez wyników testów i danych prywatnych.
