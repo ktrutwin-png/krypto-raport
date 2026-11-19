@@ -1,0 +1,33 @@
+{
+ "date": "19.11.2026",
+ "style": "news",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $63,588 ▼1.6% · ETH $1,802 ▼0.5% · XRP $0.98 ▼2.0% · GOLD $3,732 ▲0.2%",
+ "scenes": [
+  {"img": "s1.jpg",
+   "tag": "BTC vs GOLD",
+   "head": ["BTC -14%", "*GOLD -4%*"],
+   "chip": "▼ LAST 7 DAYS",
+   "move": "in",
+   "say": "Bitcoin fell fourteen percent this week. Gold? Only four."},
+  {"img": "s2.jpg",
+   "head": ["SAME SHOCK:", "*FED HIKE BETS*"],
+   "note": "GOLD AT A 14-MONTH LOW TOO",
+   "move": "out",
+   "say": "Same shock: traders bet the Fed hikes rates. Risk assets get hit first."},
+  {"img": "s3.jpg",
+   "d3": {"typ": "liczba", "p": {"text": "17", "sub": "OZ GOLD PER BTC", "kolor": "gold", "kolor2": "btc", "seed": 1911}},
+   "head": ["1 BTC =", "*17 OZ GOLD*"],
+   "sub": "WAS ~19 A WEEK AGO",
+   "move": "up",
+   "say": "Now one bitcoin buys seventeen ounces of gold, down from nineteen."},
+  {"img": "s4.jpg",
+   "tag": "COMMENT BTC OR GOLD",
+   "head": ["WHO BOUNCES", "*FIRST?*"],
+   "sub": "BTC 🐂  /  GOLD 🐻",
+   "note": "SEND THIS TO A FRIEND WHO HOLDS BTC",
+   "move": "down",
+   "say": "B T C or gold, who bounces first? Comment below. This is not financial advice, just data."}
+ ]
+}
