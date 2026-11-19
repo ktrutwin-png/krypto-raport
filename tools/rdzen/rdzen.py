@@ -122,6 +122,8 @@ TOOLS = [
      "input_schema": {"type": "object", "properties": {}, "required": []}},
     {"name": "boty", "description": "Stan botów tradingowych szefa TERAZ (konto botów MT5): saldo i kapitał konta, wynik zamkniętych transakcji dzisiaj per bot (Hexa, Turbo, Indeksy, Laboratorium) i otwarte pozycje na żywo. Użyj zawsze, gdy szef pyta o boty, konto botów, wynik dnia, jak idzie Hexie/Turbo. Kwoty w USD. Nie mów, że to demo – szef wie. TYLKO dla szefa – nigdy dla gościa.",
      "input_schema": {"type": "object", "properties": {}, "required": []}},
+    {"name": "plany", "description": "Plany szefa i zespołu: otwarte zadania z planów rozbudowy (biznes/strony dla firm, boty, skanery, wzrost IG/YT), ostatnie kroki „NASTĘPNIE” oraz plan dnia (kalendarz, maile do odpisania, wyjazdy) z porannego briefingu. Użyj, gdy szef pyta, co mamy do zrobienia, jaki jest plan, plan dnia, co dalej z projektem. Odpowiadaj krok po kroku, najważniejsze najpierw. TYLKO dla szefa – nigdy dla gościa.",
+     "input_schema": {"type": "object", "properties": {"temat": {"type": "string", "description": "opcjonalnie: biznes, boty, skanery, wzrost albo dzien"}}, "required": []}},
 ]
 
 
@@ -197,7 +199,29 @@ def t_boty(_):
     return (r.stdout.strip() or ("blad: " + r.stderr[-300:]))
 
 
-IMPL = {"ceny": t_ceny, "zadanie_dla_zespolu": t_zadanie, "zapamietaj": t_zapamietaj, "fundusze": t_fundusze, "boty": t_boty}
+PRYW = r"C:\Hexa\prywatne"   # prywatne (kalendarz, maile) – tylko na serwerze, nigdy w repo
+
+
+def t_plany(a):
+    import glob as _g
+    temat = (a.get("temat") or "").lower()
+    out = []
+    if temat in ("", "dzien", "dzień"):
+        pd = read(os.path.join(PRYW, "plan_dnia.md"), 2500).strip()
+        out.append("PLAN DNIA (z porannego briefingu):\n" + (pd or "brak – briefing jeszcze nie zapisał planu na dziś"))
+    for f in sorted(_g.glob(os.path.join(REPO, "reports", "plan_*.md"))):
+        nazwa = os.path.basename(f)[5:-3]
+        if temat and temat not in ("dzien", "dzień") and temat not in nazwa:
+            continue
+        txt = read(f, 60000)
+        otw = [l.strip()[6:][:220] for l in txt.splitlines() if l.strip().startswith("- [ ]")]
+        nast = [l.split("NASTĘPNIE", 1)[1][:300] for l in txt.splitlines() if "NASTĘPNIE" in l][-2:]
+        if otw or nast:
+            out.append(f"PLAN {nazwa.upper()}:\n" + "\n".join("- " + x for x in otw[:12]) + ("\nOSTATNIO „NASTĘPNIE”: " + " | ".join(nast) if nast else ""))
+    return "\n\n".join(out)[:6000] or "Brak otwartych zadań w planach."
+
+
+IMPL = {"ceny": t_ceny, "zadanie_dla_zespolu": t_zadanie, "zapamietaj": t_zapamietaj, "fundusze": t_fundusze, "boty": t_boty, "plany": t_plany}
 
 
 # ---------- Claude ----------
