@@ -110,6 +110,7 @@ Giełdy (z godzin świec w danych 1h): NYSE/Nasdaq kasowa 15:30–22:00, Xetra (
   | 09:00-11:00 | 2 | 0 | 0.00 | 0 | – |
   Wniosek (n małe): 11 z 16 okazji bez wejścia – cele z trendem padały, ale ceny nie wracały do strefy; od 16.11 strefy ≤0.5 ATR od zamknięcia (L2).
 - 2026-11-17: rozliczono AUD/USD short dzień 16.11 = brak 0R (cel 0.6745 padł 16:00 bez powrotu do strefy 0.6775–0.6790 – strefa liczona od zamknięcia D1, a cena o 06:50 była już 0.6756). Razem n=17 (z wejściem n=5): okno 14:30-17:00 n=3, 0 celów, 0R. Od 17.11 strefa ≤0.5 ATR liczona od bieżącej ceny 1h, nie od zamknięcia D1.
+- 2026-11-19: rozliczono EUR/USD short dzień 18.11 = brak 0R (po 07:00 szczyt 1.0987 pod strefą 1.0995–1.1015, dno 1.0958 tuż nad celem 1.0957). Razem n=19 (z wejściem n=5): okno 14:00-17:00 n=11, 0 celów. Makro (TD Economics, ET→CET +6h): czw 19.11 14:30 wnioski o zasiłek USA, 14:50 Hammack, 18:30 Goolsbee, 20:15 Barr, 22:00 Barkin; pt 20.11 00:30 CPI Japonii, 08:00 sprzedaż detal. UK, 14:30 sprzedaż detal. Kanady, 18:15 Cook (Fed).
 ### Historia wpisów
 (z okazje_zwiadowcy.csv)
 - 2026-11-09: brak rozliczonych okazji (start Z2) – statystyka od pierwszych rozliczeń.
