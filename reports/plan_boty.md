@@ -82,3 +82,10 @@ MT5: Hexa (830083), Turbo (830099) · IBKR paper: IB Skaner · Kraken: Freqtrade
 ## Hexa – odczyt kont (szef 19.11.2026)
 - [x] 19.11: narzędzie Hexy „boty” – stan konta botów MT5 5058971085 (saldo, wynik dnia per bot, otwarte pozycje), C:\Hexa\rdzen\stan_botow.py, tylko odczyt, tylko dla szefa.
 - [ ] Gdy ruszy konto IBKR (Gateway/IBC na serwerze): dołożyć Hexie odczyt stanu konta IBKR (saldo, wynik dnia, pozycje) – tak samo jak „boty”, tylko odczyt. Szef: „dopisz to sobie w swoich planach”.
+
+## M8 (19.11.2026, szef) – HEXA i TURBO NA WSZYSTKICH INTERWAŁACH I PLATFORMACH
+Szef: „skoro Hexa i Turbo tak fajnie działają na MT5, przetestuj warianty 15 min, 30 min, 1 h, 4 h i dzień na wszystkich platformach – MT5, IBKR, eToro, Kraken; może się okazać, że to najlepsze boty”.
+- [ ] Wykonawca: 🧪 Laboratorium (co noc, po kolei). Logika Hexa/Turbo bez zmian, zmienia się tylko interwał (M15/M30/H1/H4/D1) i instrument.
+- [ ] Krok 1 – backtest z kosztami każdego wariantu (5 interwałów × Hexa/Turbo) na złocie, potem na instrumentach danej platformy: MT5 (XAUUSD, indeksy), IBKR paper (XAUUSD/forex), eToro demo (GOLD, BTC), Kraken paper (BTC, ETH, XRP). Sprawdzian na ostatnich 30% danych.
+- [ ] Krok 2 – na demo idą warianty ze sprawdzianem PF ≥ 0,95; MT5 tylko konto botów 5058971085, magic z puli 830200–830299 (oryginalne Hexa 830083 / Turbo 830099 NIETKNIĘTE).
+- [ ] Krok 3 – tabela porównawcza w reports/lab_tabela.md: platforma × interwał × bot (transakcje, PF, wynik, maks. obsunięcie); po ~20 transakcjach na wariant – werdykt, które kombinacje zostają.
