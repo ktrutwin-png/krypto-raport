@@ -120,6 +120,8 @@ TOOLS = [
      "input_schema": {"type": "object", "properties": {"fakt": {"type": "string"}}, "required": ["fakt"]}},
     {"name": "fundusze", "description": "Stan funduszy szefa TERAZ: krypto na Tangem i Kraku przeliczone po aktualnych kursach w EUR, poduszka w Skarbcu Revolut i wydatki w tym tygodniu względem budżetu 30 €/dzień. Użyj zawsze, gdy szef pyta o fundusze, pieniądze, oszczędności, portfel, ile ma lub ile wydał. TYLKO dla szefa – nigdy dla gościa.",
      "input_schema": {"type": "object", "properties": {}, "required": []}},
+    {"name": "boty", "description": "Stan botów tradingowych szefa TERAZ (konto botów MT5): saldo i kapitał konta, wynik zamkniętych transakcji dzisiaj per bot (Hexa, Turbo, Indeksy, Laboratorium) i otwarte pozycje na żywo. Użyj zawsze, gdy szef pyta o boty, konto botów, wynik dnia, jak idzie Hexie/Turbo. Kwoty w USD. Nie mów, że to demo – szef wie. TYLKO dla szefa – nigdy dla gościa.",
+     "input_schema": {"type": "object", "properties": {}, "required": []}},
 ]
 
 
@@ -188,7 +190,14 @@ def t_fundusze(_):
                        "budzet_tygodnia_eur": 210, "uwaga": "kursy CoinGecko teraz; wydatki z powiadomien Revolut/Krak"}, ensure_ascii=False)
 
 
-IMPL = {"ceny": t_ceny, "zadanie_dla_zespolu": t_zadanie, "zapamietaj": t_zapamietaj, "fundusze": t_fundusze}
+def t_boty(_):
+    import subprocess
+    py = r"C:\Users\ktrut\AppData\Local\Programs\Python\Python312\python.exe"
+    r = subprocess.run([py, p("stan_botow.py")], capture_output=True, text=True, timeout=45)
+    return (r.stdout.strip() or ("blad: " + r.stderr[-300:]))
+
+
+IMPL = {"ceny": t_ceny, "zadanie_dla_zespolu": t_zadanie, "zapamietaj": t_zapamietaj, "fundusze": t_fundusze, "boty": t_boty}
 
 
 # ---------- Claude ----------
