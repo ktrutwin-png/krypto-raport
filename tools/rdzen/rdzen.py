@@ -122,8 +122,8 @@ TOOLS = [
      "input_schema": {"type": "object", "properties": {}, "required": []}},
     {"name": "boty", "description": "Stan botów tradingowych szefa TERAZ (konto botów MT5): saldo i kapitał konta, wynik zamkniętych transakcji dzisiaj per bot (Hexa, Turbo, Indeksy, Laboratorium) i otwarte pozycje na żywo. Użyj zawsze, gdy szef pyta o boty, konto botów, wynik dnia, jak idzie Hexie/Turbo. Kwoty w USD. Nie mów, że to demo – szef wie. TYLKO dla szefa – nigdy dla gościa.",
      "input_schema": {"type": "object", "properties": {}, "required": []}},
-    {"name": "plany", "description": "Plany szefa i zespołu: otwarte zadania z planów rozbudowy (biznes/strony dla firm, boty, skanery, wzrost IG/YT), ostatnie kroki „NASTĘPNIE” oraz plan dnia (kalendarz, maile do odpisania, wyjazdy) z porannego briefingu. Użyj, gdy szef pyta, co mamy do zrobienia, jaki jest plan, plan dnia, co dalej z projektem. Odpowiadaj krok po kroku, najważniejsze najpierw. TYLKO dla szefa – nigdy dla gościa.",
-     "input_schema": {"type": "object", "properties": {"temat": {"type": "string", "description": "opcjonalnie: biznes, boty, skanery, wzrost albo dzien"}}, "required": []}},
+    {"name": "plany", "description": "Plany szefa i zespołu: otwarte zadania z planów rozbudowy (biznes/strony dla firm, boty, skanery, wzrost IG/YT), ostatnie kroki „NASTĘPNIE” plan tygodnia (kalendarz na 7 dni, maile do odpisania, wyjazdy) oraz ostatnie 7 dni: awarie, co zrobiliśmy, co czeka na szefa. Użyj, gdy szef pyta, co mamy do zrobienia, jaki jest plan, plan dnia, co dalej z projektem. Odpowiadaj krok po kroku, najważniejsze najpierw. TYLKO dla szefa – nigdy dla gościa.",
+     "input_schema": {"type": "object", "properties": {"temat": {"type": "string", "description": "opcjonalnie: biznes, boty, skanery, wzrost, dzien, tydzien albo awarie"}}, "required": []}},
 ]
 
 
@@ -218,7 +218,26 @@ def t_plany(a):
         nast = [l.split("NASTĘPNIE", 1)[1][:300] for l in txt.splitlines() if "NASTĘPNIE" in l][-2:]
         if otw or nast:
             out.append(f"PLAN {nazwa.upper()}:\n" + "\n".join("- " + x for x in otw[:12]) + ("\nOSTATNIO „NASTĘPNIE”: " + " | ".join(nast) if nast else ""))
-    return "\n\n".join(out)[:6000] or "Brak otwartych zadań w planach."
+    if temat in ("", "tydzien", "tydzień", "awarie", "dzien", "dzień"):
+        import datetime as _dt
+        od = (_dt.date.today() - _dt.timedelta(days=7)).isoformat()
+        aw, zr, dr = [], [], []
+        for l in read(os.path.join(REPO, "reports", "dziennik_zespolu.md")).splitlines():
+            l = l.strip(); d = l[:10]
+            if l.startswith("UPDATE:"):
+                d = l[8:18]
+            if not (d[:4].isdigit() and d >= od):
+                continue
+            if "BŁĄD" in l or "awari" in l.lower() or "nie działa" in l:
+                aw.append(l[:230])
+            elif "DO RAPORTU" in l:
+                dr.append(l[:230])
+            elif l.startswith("UPDATE:"):
+                zr.append(l[:200])
+        out.append("OSTATNIE 7 DNI – AWARIE/BŁĘDY:\n" + ("\n".join(aw[-10:]) or "brak"))
+        out.append("OSTATNIE 7 DNI – CO ZROBILIŚMY (zmiany):\n" + ("\n".join(zr[-10:]) or "brak"))
+        out.append("CZEKA NA SZEFA (DO RAPORTU, 7 dni):\n" + ("\n".join(dr[-8:]) or "nic"))
+    return "\n\n".join(out)[:9000] or "Brak otwartych zadań w planach."
 
 
 IMPL = {"ceny": t_ceny, "zadanie_dla_zespolu": t_zadanie, "zapamietaj": t_zapamietaj, "fundusze": t_fundusze, "boty": t_boty, "plany": t_plany}
