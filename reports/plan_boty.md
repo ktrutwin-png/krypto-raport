@@ -105,3 +105,4 @@ Wykonawca: 🧪 Laboratorium. M8 ma pierwszeństwo, ale KROK 0 z M9 uruchom od r
 
 ## Nagroda dla najlepszego bota Laboratorium (szef 19.11.2026)
 - [ ] LAB_Donchian_XAG (830202, srebro H1) – 2/2 na plus (+294,75 $ 18.11, +357,60 $ 19.11). Szef: jeśli przejdzie wszystkie testy (≥ 20–30 transakcji, PF po kosztach ≥ 1,3, obie połowy na plus) – dostaje nagrodę: nową, własną nazwę i miejsce obok Hexy i Turbo. Szef 19.11 wybrał nazwę: „Silver King” – nadajemy ją po pozytywnym werdykcie (do tego czasu nazwa robocza LAB_Donchian_XAG).
+- [ ] M8 dodatkowo (szef 19.11): Hexa i Turbo mają od 10.11.2026 TP = 1R (wcześniej DCH 5R), a drugie wejście dzieli stop z pierwszym (TP mniejszy niż SL). W backteście M8 porównaj TP 1R / 1,5R / 2R / 3R i drugie wejście z własnym stopem – wynik do lab_tabela.md; zmiana w botach tylko po „wdróż” szefa.
