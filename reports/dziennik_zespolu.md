@@ -263,3 +263,5 @@ UPDATE: 2026-11-18 18:14 Szef: na Telegram TYLKO briefing 8:00 i raport 22:00. Z
 2026-11-19 04:52 | Mechanik | DO RAPORTU: poprawka dla promptu Krypto Reel 10:00 (trig_01L2yePA): usunąć „Film na Telegram szefa wysyła sam serwer – nic tu nie rób”, wpisać „Reel TYLKO Instagram i YouTube, na Telegram nic”, przyczyna/test: HexaTelegramReele wyłączone przez szefa 18.11 18:14, zdanie wprowadza w błąd (Z033)
 2026-11-19 04:52 | Mechanik | DO RAPORTU: IB Gateway 18.11 padał 3× (crash JVM w awt.dll 21:14/21:47/21:51 CET), działa od 21:52 – boty IBKR paper znów handlują; szybki_fx: 18 wejść anulowanych od 15.11 przez „Error 10349 TIF DAY preset” – poprawka ustawienia Gateway/tif w szybki_fx.py tylko po „wdróż”
 2026-11-19 05:48 | Kalendarz | dziś brak ważnych danych | ok
+2026-11-19 05:49 | Sekretarz | kosz: 0 wątków, wypisano: 0 | ok
+2026-11-19 05:49 | Sekretarz | DO RAPORTU: ElevenLabs – 18.11 przyszło potwierdzenie płatności (paragon) – szef sprawdzi, czy to zamyka sprawę faktury past due | Contabo – mail 17.11 o incydencie bezpieczeństwa nadal do przeczytania przez szefa | kalendarz 19–26.11 pusty, brak podejrzanych zaproszeń
