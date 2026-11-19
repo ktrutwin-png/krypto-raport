@@ -102,3 +102,6 @@ Wykonawca: 🧪 Laboratorium. M8 ma pierwszeństwo, ale KROK 0 z M9 uruchom od r
 - [ ] Bot B „Fala” (memecoiny DEX z historią): wiek ≥ 3 dni, płynność ≥ 250 000 $, market cap 5–200 mln $. Wejście: wybicie ponad szczyt 1 h przy wolumenie ≥ 3× średniej z 24 h. Wyjście: trailing 2 × ATR(1h), SL pod dołkiem wybicia.
 - [ ] Bot C „Duże memy” (Kraken – jest historia → najpierw BACKTEST): DOGE, SHIB, PEPE, BONK, WIF, FLOKI (sprawdź, które są na Kraken). Momentum H1/H4 z filtrem BTC (memy idą za BTC – tylko gdy BTC nad EMA50 H4). Backtest ≥ 1 rok z prowizjami, sprawdzian na ostatnich 30%, potem dry-run/symulacja na serwerze.
 - [ ] Karta w reports/lab_tabela.md (sekcja „Memy”): transakcje, trafność, PF po kosztach, śr. wynik, maks. obsunięcie, ile kandydatów odrzucił filtr i ile z nich faktycznie padło (dowód, że filtr działa). Werdykt przy ≥ 100 transakcjach (A, B) / ≥ 30 (C). Prawdziwe pieniądze – nigdy bez „wdróż” szefa.
+
+## Nagroda dla najlepszego bota Laboratorium (szef 19.11.2026)
+- [ ] LAB_Donchian_XAG (830202, srebro H1) – 2/2 na plus (+294,75 $ 18.11, +357,60 $ 19.11). Szef: jeśli przejdzie wszystkie testy (≥ 20–30 transakcji, PF po kosztach ≥ 1,3, obie połowy na plus) – dostaje nagrodę: nową, własną nazwę i miejsce obok Hexy i Turbo. Werdykt podaje Mózg szefowi, nazwę wybiera szef. Do tego czasu nazwa robocza bez zmian.
