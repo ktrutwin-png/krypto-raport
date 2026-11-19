@@ -1,0 +1,16 @@
+{
+ "date": "VOORBEELD · winterweek",
+ "style": "news",
+ "handle": "Garage Voorbeeld",
+ "dis": "VOORBEELD – fictieve garage, geen echte zaak",
+ "ticker": "WINTERCHECK €29 · APK + ONDERHOUD · WINTERBANDEN WISSELEN · AFSPRAAK VIA WHATSAPP",
+ "end": {"a": "Veilig de<br>winter in", "b": "Garage Voorbeeld · elke week automatisch", "c": "Voorbeeld van een automatische Reel"},
+ "scenes": [
+  {"img": "s1.jpg", "tag": "DEZE WEEK", "head": ["GRATIS", "*WINTERCHECK*"], "sub": "BIJ APK OF ONDERHOUD", "move": "in",
+   "say": "Deze week: gratis wintercheck bij elke APK of onderhoudsbeurt."},
+  {"img": "s2.jpg", "head": ["WINTERBANDEN", "*WISSELEN*"], "chip": "€29", "note": "VOL = VOL", "move": "out",
+   "say": "Winterbanden wisselen voor negenentwintig euro. Plekken gaan snel."},
+  {"img": "s3.jpg", "tag": "AFSPRAAK", "head": ["APPEN IS", "*GENOEG*"], "sub": "WE STUREN JE EEN TIJD", "move": "up",
+   "say": "Stuur ons een appje met je kenteken, en wij sturen je een tijd."}
+ ]
+}
