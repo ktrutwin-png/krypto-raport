@@ -89,3 +89,4 @@ Szef: „skoro Hexa i Turbo tak fajnie działają na MT5, przetestuj warianty 15
 - [ ] Krok 1 – backtest z kosztami każdego wariantu (5 interwałów × Hexa/Turbo) na złocie, potem na instrumentach danej platformy: MT5 (XAUUSD, indeksy), IBKR paper (XAUUSD/forex), eToro demo (GOLD, BTC), Kraken paper (BTC, ETH, XRP). Sprawdzian na ostatnich 30% danych.
 - [ ] Krok 2 – na demo idą warianty ze sprawdzianem PF ≥ 0,95; MT5 tylko konto botów 5058971085, magic z puli 830200–830299 (oryginalne Hexa 830083 / Turbo 830099 NIETKNIĘTE).
 - [ ] Krok 3 – tabela porównawcza w reports/lab_tabela.md: platforma × interwał × bot (transakcje, PF, wynik, maks. obsunięcie); po ~20 transakcjach na wariant – werdykt, które kombinacje zostają.
+- [ ] Krok 4 (DOPIERO po werdykcie z kroku 3, szef 19.11): zdublowanie najlepszych – max 2 pozycje naraz dla Hexy i max 2 dla Turbo na każdej platformie; przed wdrożeniem test, czy druga pozycja poprawia wynik, a nie tylko ryzyko.
