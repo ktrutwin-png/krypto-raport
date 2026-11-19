@@ -42,3 +42,38 @@ Kod: `C:\Hexa\lab` (silnik `lab_silnik.py`, boty `boty\*.py`, start `START_LAB.p
 - Dane akcji pod eToro (Stooq zwraca puste pliki, Twelve Data limit 8/min) – backtest „kontra tygodnia na akcjach” odłożony.
 
 **Najlepszy na start (backtest):** LAB_Londyn_XAU – sprawdzian PF 2,19, +33 R na 90 transakcjach.
+
+---
+
+## 2026-11-19 (noc 2)
+
+**Przegląd (od startu 18.11):**
+- MT5 (konto demo 5058971085, trade_mode DEMO potwierdzony): **2 zamknięte, obie na plus, razem +514,13 $** – LAB_Londyn_XAU short złota, wyjście czasowe +219,38 $; LAB_Donchian_XAG short srebra +294,75 $ (TP). Otwarta: Donchian_XAG short 0,06 lot @ 45,221 (−88,80 $).
+- Kraken na sucho: LAB_KR_RSI2_H4 trzyma SHORT XRP/EUR @ 0,91141 (100 € × 5); jeden błąd SSL Krakena 18.11 15:08 – bot sam wrócił, stan aktualny.
+- IBKR paper: Gateway znów odpowiada – LAB_IB_RSI2_AUD połączony od 18.11 20:53 (konto DUR…), czeka na sygnał.
+- eToro DEMO (odczyt `account: demo` potwierdzony): Kontra D1 GBPUSD – brak sygnału (świeca 18.11: zakres 1,03×ATR < 1,8×ATR). Pozycji lab: 0.
+- LAB_RSI2_FX: 1 sygnał USDJPY odrzucony przez limit 30% depozytu (zajęte 1522 + 600 > 1611 $) – limit działa; depozyt srebra (Donchian) jest ciężki.
+- **Wyłączone: nic** (za mało transakcji do oceny; próg ~20).
+
+**Kreacja – runda 4 (2952 zestawy, świeże dane MT5, koszty: spread świecy; Kraken 0,52% maker):**
+
+| Pomysł | Rynek | Nauka PF (n) | Sprawdzian PF (n) | Decyzja |
+|---|---|---|---|---|
+| **Luka poniedziałkowa** – po weekendzie gra na zamknięcie luki ≥0,6 ATR, TP 50% luki, SL 2× | EURUSD / GBPUSD / USDJPY / AUDUSD H1 | 2,07 / 3,36 / 1,40 / 1,16 | **4,97 (26) / 2,71 (22) / 99 (18) / 1,87 (27)** | ✅ demo `LAB_Luka_FX` 830205 |
+| **Konsolidacja** – wybicie z 12 świec H1 ≤ 2× ATR50, SL pół pudełka, TP 3× | USDJPY / EURUSD H1 | 1,93 (98) / 1,30 (189) | **1,78 (68) / 1,69 (72)** | ✅ demo `LAB_Kons_H1` 830206 |
+| **NY fade** – przeciw pierwszej godzinie Nowego Jorku (≥2,5 ATR), TP 61,8% | XAUUSD / EURUSD / GBPUSD M15 | 2,60 / 1,35 / 1,10 | **1,44 (30) / 1,58 (19) / 1,57 (18)** | ✅ demo `LAB_NYFade` 830207 |
+| NY fade | USDJPY / AUDUSD / XAGUSD | 0,61 / 0,99 / 2,02 | 0,69 / 0,96 / 1,06 | ❌ pominięte |
+| Konsolidacja M15 | wszystkie | ≤ 1,35 | ≤ 1,30, GBP/AUD/XAG/XAU < 0,9 | ❌ szum |
+| Konsolidacja na krypto H1/H4 (Kraken) | BTC/ETH/XRP | ≤ 1,82 | ≤ 0,80 | ❌ opłaty znów zabijają |
+
+**Lekcje:**
+- Luka weekendowa na FX zamyka się częściej, niż się wydaje (spr. wr 85–100%), ale to profil „dużo małych wygranych, rzadka duża strata” (TP 0,5 / SL 2) – suma R na nauce bywała ujemna mimo PF > 1. Obserwować, czy jedna strata nie zjada miesiąca.
+- Konsolidacja działa tylko przy bardzo ciasnym pudełku (kz 2,0); kz 3–4 to już szum – parametr wrażliwy, ryzyko przeuczenia.
+- NY fade działa na złocie i EUR/GBP, nie na jenie – jen w otwarciu NY częściej kontynuuje ruch.
+- Krypto na Krakenie: trzecia noc z rzędu potwierdza – krótkie TF i wybicia tracą na opłatach; zostaje tylko H4 RSI2 z wejściem maker.
+
+**Uruchomione dziś:** LAB_Luka_FX (830205), LAB_Kons_H1 (830206), LAB_NYFade (830207) – ryzyko 0,4% na transakcję, test `--raz` ok, procesy żyją, logi bez błędów. Razem aktywnych: 9/10.
+
+**Zablokowane / uwagi:** brak nowych blokad. Dane akcji pod eToro nadal niedostępne (odłożone).
+
+**Najlepszy (na żywo):** LAB_Donchian_XAG +294,75 $ (1 zamknięta); w backteście nowych – LAB_Kons_H1 USDJPY (+40 R na 68 transakcjach sprawdzianu).
