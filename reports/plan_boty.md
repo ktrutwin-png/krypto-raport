@@ -80,6 +80,7 @@ MT5: Hexa (830083), Turbo (830099) · IBKR paper: IB Skaner · Kraken: Freqtrade
 - 2026-11-18 Mechanik (środa, przegląd tydz. 2): Z029 Indeksy – SPY/indeksy CFD na koncie botów wyłączone (tm=0), DAX ETF niepłynny → GOTOWY DO WDROŻENIA PLAN {"VOO": ["DCH"]} (701 tr, +0,088R, PF 1,18, połowy +0,108/+0,069R); odrzucone IVV/EWG/QQQM/IWM. Z031 – mój skrypt zapchał Market Watch terminala botów (03:43–03:55 UTC, „Cannot select”), przywrócone. Karta (konto botów od 16.11): Hexa 1 tr −22,07 $, Turbo 1 tr −22,05 $, Indeksy 0, Kraken 0 tr (nowe boty), IB 0; szef 7 dni 26 tr PF 1,17 +448 $. Hexa/Turbo: brak testu (< 30 tr, ryzyko % i SL ATR już są).
 - 2026-11-19 Mechanik: Z032 IB Gateway – zadziałało po restarcie Gateway 18.11 21:52 CET (lab/warianty/szybki znów połączone i handlują), do sprawdzenia przez Inspektora; Z033 – poprawka promptu Reel czeka na wdróż.
 
+- 2026-11-20 Mechanik: Z032 – IB Gateway wisi od 19.11 05:30 przed oknem (nie brak logowania), poprawka kill+StartGateway.bat + strażnik portu 4002 czeka na „wdróż”; Z034 – M9 KROK 0 nie ruszył (brak C:\Hexa\lab\memy), poprawka promptu Laboratorium czeka na „wdróż”.
 ## Hexa – odczyt kont (szef 19.11.2026)
 - [x] 19.11: narzędzie Hexy „boty” – stan konta botów MT5 5058971085 (saldo, wynik dnia per bot, otwarte pozycje), C:\Hexa\rdzen\stan_botow.py, tylko odczyt, tylko dla szefa.
 - [ ] Gdy ruszy konto IBKR (Gateway/IBC na serwerze): dołożyć Hexie odczyt stanu konta IBKR (saldo, wynik dnia, pozycje) – tak samo jak „boty”, tylko odczyt. Szef: „dopisz to sobie w swoich planach”.
