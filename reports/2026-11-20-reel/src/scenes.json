@@ -1,0 +1,67 @@
+{
+ "date": "20.11.2026",
+ "style": "news",
+ "mood": "gold",
+ "handle": "@erl.grey83",
+ "ticker": "GOLD $3,586 ▼2.2% · BTC $61,895 ▼2.7% · ETH $1,755 ▼2.7% · XRP $0.96 ▼1.6%",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "BIGGEST MOVE",
+   "head": [
+    "GOLD -7.6%",
+    "*IN 5 DAYS?*"
+   ],
+   "chip": "▼ $3,586",
+   "move": "in",
+   "say": "Gold just lost seven point six percent in five days. Reportedly its worst week in eight months."
+  },
+  {
+   "img": "s2.jpg",
+   "head": [
+    "WHY?",
+    "*FED HIKE BETS*"
+   ],
+   "note": "STRONGER DOLLAR · HIGHER YIELDS",
+   "move": "out",
+   "say": "Why? Traders reportedly bet the Fed hikes again. Stronger dollar, higher yields."
+  },
+  {
+   "img": "s3.jpg",
+   "d3": {
+    "typ": "swiece",
+    "p": {
+     "dir": "down",
+     "dane": [
+      3880,
+      3864,
+      3847,
+      3724,
+      3667,
+      3586
+     ],
+     "seed": 2011
+    }
+   },
+   "head": [
+    "$3,515",
+    "*1-YEAR LOW*"
+   ],
+   "sub": "TODAY'S INTRADAY LOW",
+   "move": "up",
+   "say": "Today it touched three thousand five hundred fifteen dollars, the lowest in over a year."
+  },
+  {
+   "img": "s4.jpg",
+   "tag": "COMMENT BOUNCE OR PAIN",
+   "head": [
+    "BOUNCE OR",
+    "*MORE PAIN?*"
+   ],
+   "sub": "BOUNCE 🐂  /  PAIN 🐻",
+   "note": "SEND THIS TO A FRIEND WHO HOLDS GOLD",
+   "move": "down",
+   "say": "Gold: bounce, or more pain? Comment below. This is not financial advice, just data."
+  }
+ ]
+}
