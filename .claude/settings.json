@@ -5,6 +5,7 @@
   },
   "env": {
     "ENABLE_STOP_REVIEW": "0",
-    "MAX_COMMIT_REVIEWS_PER_HOUR": "3"
+    "MAX_COMMIT_REVIEWS_PER_HOUR": "3",
+    "HYPERFRAMES_NO_TELEMETRY": "1"
   }
 }
