@@ -3,3 +3,5 @@ __pycache__/
 tools/reel/voice/
 tools/3d/sprite_frames/
 tools/3d/node_modules/
+
+graphify-out/
