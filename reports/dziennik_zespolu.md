@@ -280,3 +280,5 @@ UPDATE: 2026-11-18 18:14 Szef: na Telegram TYLKO briefing 8:00 i raport 22:00. Z
 2026-11-20 04:52 | Mechanik | DO RAPORTU: poprawka dla IB Gateway (serwer): Stop-Process java 10956 + C:\IBC\StartGateway.bat, potem strażnik (co 10 min: port 4002 nie Listen 2× → restart Gateway, max 3/dobę), przyczyna/test: Gateway wisi od 19.11 05:30:24 („instance of control is not created yet” 57×, port 4002 zamknięty) – IBKR paper (szybki_fx, warianty, LAB_IB) stoi ~23 h
 2026-11-20 04:52 | Mechanik | DO RAPORTU: poprawka dla promptu 🧪 Laboratorium: dopisać „równolegle z M8 – M9 KROK 0 (zbieracz memy) i jeden bot na przebieg”, przyczyna/test: przebieg 20.11 03:20 zrobił tylko M8, C:\Hexa\lab\memy nie istnieje (Z034)
 2026-11-20 05:48 | Kalendarz | dziś brak ważnych danych | ok
+2026-11-20 05:49 | Sekretarz | kosz: 4 wątki, wypisano: 3 | ok
+2026-11-20 05:49 | Sekretarz | DO RAPORTU: eToro – konserwacja platformy nd 22.11 07:00–08:00 GMT | Contabo – mail 17.11 o incydencie bezpieczeństwa nadal czeka na szefa | ElevenLabs – paragon 18.11 do sprawdzenia vs faktura past due | kalendarz 20–27.11: tylko 27.11 abonament Claude Max, brak podejrzanych zaproszeń
