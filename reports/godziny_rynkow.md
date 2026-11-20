@@ -111,6 +111,15 @@ Giełdy (z godzin świec w danych 1h): NYSE/Nasdaq kasowa 15:30–22:00, Xetra (
   Wniosek (n małe): 11 z 16 okazji bez wejścia – cele z trendem padały, ale ceny nie wracały do strefy; od 16.11 strefy ≤0.5 ATR od zamknięcia (L2).
 - 2026-11-17: rozliczono AUD/USD short dzień 16.11 = brak 0R (cel 0.6745 padł 16:00 bez powrotu do strefy 0.6775–0.6790 – strefa liczona od zamknięcia D1, a cena o 06:50 była już 0.6756). Razem n=17 (z wejściem n=5): okno 14:30-17:00 n=3, 0 celów, 0R. Od 17.11 strefa ≤0.5 ATR liczona od bieżącej ceny 1h, nie od zamknięcia D1.
 - 2026-11-19: rozliczono EUR/USD short dzień 18.11 = brak 0R (po 07:00 szczyt 1.0987 pod strefą 1.0995–1.1015, dno 1.0958 tuż nad celem 1.0957). Razem n=19 (z wejściem n=5): okno 14:00-17:00 n=11, 0 celów. Makro (TD Economics, ET→CET +6h): czw 19.11 14:30 wnioski o zasiłek USA, 14:50 Hammack, 18:30 Goolsbee, 20:15 Barr, 22:00 Barkin; pt 20.11 00:30 CPI Japonii, 08:00 sprzedaż detal. UK, 14:30 sprzedaż detal. Kanady, 18:15 Cook (Fed).
+- 2026-11-20 (pt): rozliczono 9 (5 celów: GBP/USD tydz. 13.11 +2.37R 18.11 17:00, XAU tydz. 16.11 +2.07R 18.11 01:00, USD/JPY tydz. 17.11 +1.69R 19.11 13:00, GBP/USD dzień 19.11 +1.20R 19:00; 3 stopy: US500 mies. 10.11 19.11 17:30, DE40 mies. 16.11 17.11 16:00, USTEC tydz. 18.11 19.11 15:30; 2× brak 0R: XAG 17.11, XAU 18.11 – cel bez wejścia). Razem n=28 (z wejściem n=12):
+  | okno_godzin | n | cel | % | śr. R | z wejściem n | śr. R z wejściem |
+  |---|---|---|---|---|---|---|
+  | 14:00-17:00 | 15 | 4 | 27% | +0.30 | 7 | +0.64 |
+  | 15:00-18:00 | 3 | 1 | 33% | +0.43 | 1 | +1.30 |
+  | 14:30-17:00 | 3 | 0 | 0% | 0.00 | 0 | – |
+  | 15:30-17:30 | 4 | 0 | 0% | -0.75 | 3 | -1.00 |
+  | 09:00-11:00 | 3 | 0 | 0% | -0.33 | 1 | -1.00 |
+  Wniosek (n małe): okno 14:00–17:00 dla forex/metali z trendem działa (4 cele w tym tygodniu); okna indeksów (15:30–17:30, 09:00–11:00) – 0 celów, wszystkie wejścia = stop (n=4).
 ### Historia wpisów
 (z okazje_zwiadowcy.csv)
 - 2026-11-09: brak rozliczonych okazji (start Z2) – statystyka od pierwszych rozliczeń.
