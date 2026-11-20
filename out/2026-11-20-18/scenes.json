@@ -1,0 +1,82 @@
+{
+ "date": "20.11.2026",
+ "style": "news",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $59,380 ▼5.4% · ETH $1,642 ▼7.2% · GOLD $3,537 ▼3.5% · XRP $0.91 ▼6.2% · SOL $69.27 ▼5.4% · FEAR & GREED 8",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "LIVE MARKET UPDATE",
+   "head": [
+    "BTC UNDER $60K",
+    "*GOLD -3.5%*",
+    "~EVERYTHING SELLS?~"
+   ],
+   "chip": "▼ BTC -14% IN 7 DAYS",
+   "move": "in",
+   "say": "Bitcoin just broke below sixty thousand, and gold dropped three and a half percent. Everything is selling."
+  },
+  {
+   "img": "d3_liq.mp4",
+   "head": [
+    "$770M",
+    "*WIPED IN 1 HOUR*"
+   ],
+   "note": "DERIBIT REPORTEDLY PAUSED TRADING",
+   "move": "out",
+   "say": "Lookonchain says seven hundred seventy million got liquidated in one hour. Deribit reportedly paused trading.",
+   "d3_src": {
+    "typ": "liczba",
+    "p": {
+     "text": "$770M",
+     "sub": "LIQUIDATED IN 1 HOUR",
+     "kolor": "silver",
+     "kolor2": "btc",
+     "seed": 2011
+    }
+   }
+  },
+  {
+   "img": "d3_fear.mp4",
+   "head": [
+    "FEAR & GREED 8",
+    "*EXTREME FEAR*"
+   ],
+   "chip": "▼ ETH -7% · XRP -6%",
+   "move": "up",
+   "say": "Fear and greed sits at eight, extreme fear. Ether fell seven percent today.",
+   "d3_src": {
+    "typ": "pokretlo",
+    "p": {
+     "od": 0.18,
+     "do": 0.08,
+     "seed": 2012
+    }
+   }
+  },
+  {
+   "img": "s4.jpg",
+   "head": [
+    "GOLD $3,537",
+    "*NEW 1-YEAR LOW*"
+   ],
+   "note": "S&P 500 -2% INTRADAY",
+   "move": "down",
+   "say": "Gold hit a fresh one year low as a stronger dollar reportedly weighs, and stocks slid too."
+  },
+  {
+   "img": "s5.jpg",
+   "tag": "WATCH NEXT",
+   "head": [
+    "$60K LINE",
+    "*RECLAIM*",
+    "~OR BREAK?~"
+   ],
+   "sub": "BULL 🐂 / BEAR 🐻 BY MONDAY?",
+   "note": "SEND THIS TO A FRIEND WHO HOLDS BTC",
+   "move": "in",
+   "say": "Watch sixty K. Everything is selling, but for how long? Bull or bear by Monday? This is not financial advice, just data."
+  }
+ ]
+}
