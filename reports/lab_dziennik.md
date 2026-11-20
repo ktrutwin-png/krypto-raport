@@ -77,3 +77,29 @@ Kod: `C:\Hexa\lab` (silnik `lab_silnik.py`, boty `boty\*.py`, start `START_LAB.p
 **Zablokowane / uwagi:** brak nowych blokad. Dane akcji pod eToro nadal niedostępne (odłożone).
 
 **Najlepszy (na żywo):** LAB_Donchian_XAG +294,75 $ (1 zamknięta); w backteście nowych – LAB_Kons_H1 USDJPY (+40 R na 68 transakcjach sprawdzianu).
+
+---
+
+## 2026-11-20 (noc 3) – priorytet szefa: M8
+
+**Przegląd (konto demo botów 5058971085, trade_mode DEMO potwierdzony):**
+- MT5 lab: **4 zamknięte, razem +848,40 $** – Donchian_XAG +294,75 $ i +357,78 $ (2/2, TP), Londyn_XAU +219,38 $, Kons_H1 USDJPY −23,51 $ (pierwsza strata). Otwarta: Donchian_XAG SHORT srebra @ 42,542 (+92,75 $).
+- **Problem nocy:** limit 30% depozytu laboratorium zatyka boty – Kontra_FX, RSI2_FX, NYFade i Kons_H1 (EURUSD) dostawały „limit laboratorium 30% – pomijam”. Powód: lot liczony od ryzyka 0,4–0,5% przy ciasnym SL daje duże loty (NYFade na złocie chciał 7373 $ depozytu). Lekcja: przy wielu botach na jednym koncie ryzyko trzeba liczyć też od depozytu, nie tylko od SL – do poprawy jutro (cap lota).
+- Kraken na sucho: KR_RSI2_H4 żyje (stan 20.11 01:31), SHORT XRP bez zmian.
+- IBKR paper: **IB Gateway nie słucha na 127.0.0.1:4002** (ConnectionRefused co minutę od 19.11 rano) – nie restartuję (zakaz), zgłoszone już przez Inspektora (Z032).
+- eToro DEMO: Kontra D1 GBPUSD – brak sygnału.
+- **Wyłączone: nic** (żaden bot nie ma ~20 transakcji).
+
+**M8 – Hexa i Turbo na M15/M30/H1/H4/D1, wszystkie platformy (krok 1–3):**
+- Napisany backtest `C:\Hexa\lab\m8\m8_bt.py` – 3 rodziny sygnałów 1:1 z hexa_bot.py/hexa_turbo.py (ASIA, DCH, D15) przeniesione na interwał X, koszty każdej platformy, nauka 70% / sprawdzian 30%. 150 przebiegów + 100 testów TP. Pełna tabela: `reports/lab_tabela.md` (sekcja M8).
+- **Złoto to dom Hexy i Turby:** na każdym interwale sprawdzian PF ≥ 1 (MT5: M15 1,01 · M30 1,28 · H1 1,37 · H4 1,59 · D1 2,35), to samo na IBKR i eToro (inne koszty, prawie ten sam wynik). Srebro też na plus na wszystkich TF (1,04–1,99).
+- **Forex słabo:** EURUSD ~1,0, GBPUSD tylko H4 (1,03), USDJPY tylko H1 Turbo (1,00), AUDUSD wszędzie < 0,9 ❌.
+- **Krypto martwe na krótkich TF:** koszty 0,75% (Kraken) / 2% (eToro) są większe niż SL z ATR na M15–H4 → PF 0,0–0,6. Przeżywa tylko D1: Kraken BTC 1,02 (n47), ETH 1,09 (n42), XRP 1,18 (n53, ale nauka 0,38); eToro BTC D1 0,69 ❌.
+- **TP (dodatkowe zadanie szefa):** TP 1R (obecny od 10.11) to najsłabszy wariant na każdym interwale; TP 2–3R podnosi PF (H1 Hexa 1,37 → 1,47, H4 1,59 → 1,80–2,00, D1 2,35 → 4,80). Drugie wejście z własnym SL: +30–80% ΣR, ale ~1,5× większe obsunięcie. Do decyzji szefa – w Hexie/Turbo nic nie zmieniam.
+- **Uczciwie:** sprawdzian złota trafił na silny trend 2026, a na nauce złoto miało PF ~1,0 (M30/H1 < 1). To może być „reżim”, nie przewaga – rozstrzygnie demo.
+
+**Uruchomione dziś (krok 2):** `LAB_M8_HexaTurbo` – jeden proces, 14 wariantów (magic 830210–830223, 0,01 lota jak oryginał, oryginalne Hexa 830083 / Turbo 830099 nietknięte), test `--raz` ok, proces żyje. Od razu weszło 12 pozycji SHORT (złoto i srebro wybijają dołem) – reszta odrzucona limitem 30%. eToro DEMO: `LAB_ET_M8_XAU_D1` – SHORT GOLD @ 3563,87, SL 3805, TP 3334 (500 $ × 5, poz. 3646949765, zapisane w etoro_pozycje.json). Aktywnych botów: 10/10.
+
+**Zablokowane / czeka:** IBKR (Gateway nie działa) – warianty złota M30/H1/H4/D1 na IBKR czekają; Kraken BTC/ETH D1 – czekają na wolny slot (limit 10 botów).
+
+**Najlepszy (na żywo):** LAB_Donchian_XAG +652,53 $ (2/2). W M8 najlepszy w backteście: Hexa/Turbo D1 na złocie (PF 2,35, DD 5R), a z największym zyskiem w R – M30/H1 na złocie (+134–139R na sprawdzianie).
