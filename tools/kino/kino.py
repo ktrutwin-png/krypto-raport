@@ -48,8 +48,8 @@ def rich(t):
 CSS = """<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700;800;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 <style>html,body{margin:0;width:1080px;height:1920px;background:transparent;overflow:hidden;font-family:Inter,sans-serif}
 .y{color:#ffd23f}.g{color:#3dff8f}
-.gt{position:absolute;left:0;right:0;top:0;height:820px;background:linear-gradient(rgba(2,4,14,.88),rgba(2,4,14,.55) 60%,transparent)}
-.gb{position:absolute;left:0;right:0;bottom:0;height:560px;background:linear-gradient(transparent,rgba(2,4,14,.75))}
+.gt{position:absolute;left:0;right:0;top:0;height:820px;background:linear-gradient(rgba(2,4,14,.80),rgba(2,4,14,.42) 60%,transparent)}
+.gb{position:absolute;left:0;right:0;bottom:0;height:560px;background:linear-gradient(transparent,rgba(2,4,14,.62))}
 .hd{position:absolute;top:88px;left:54px;color:#fff;font:700 30px Inter;text-shadow:0 2px 8px #000}
 .hd b{display:block;font:500 22px Inter;opacity:.75;letter-spacing:2px;margin-top:4px}
 .dis{position:absolute;top:96px;right:54px;text-align:right;font:500 20px Inter;color:#fffa;text-shadow:0 2px 6px #000}
@@ -165,7 +165,7 @@ for i, (s, L) in enumerate(zip(S, DUR)):
     if vid and not end: z, x, y = "1.0", "(iw-ow)/2", "(ih-oh)/2"   # scena 3D ma wlasny ruch kamery - bez dodatkowego zoomu (nic sie nie ucina)
     flt = (f"[0]{'tpad=stop_mode=clone:stop_duration=90,fps=%d,' % FPS if vid else ''}scale={int(W*ss)}:{int(H_*ss)}:force_original_aspect_ratio=increase:flags=lanczos,crop={int(W*ss)}:{int(H_*ss)},setsar=1,"
            f"scale=w='{W}*({z})':h='{H_}*({z})':eval=frame:flags=bicubic,crop={W}:{H_}:x='{x}':y='{y}',"
-           f"eq=contrast=1.07:saturation=1.12{',boxblur=18:2' if end else ''},format=rgba[bg];"
+           f"eq=contrast=1.07:saturation=1.12{',boxblur=18:2' if end else (',unsharp=5:5:0.9:3:3:0.4' if not vid else '')},format=rgba[bg];"  # szef 20.11: tlo ostrzejsze i pelniejsze
            + ("[bg]null[a];" if end else "[bg][1]overlay=0:0[a];")
            + (f"[2]format=rgba[t];" if i == 0 else f"[2]format=rgba,fade=t=in:st={FADE}:d=0.25:alpha=1[t];")  # nowy naglowek po przejsciu (bez nakladania tekstow); plan wzrostu: naglowek widoczny od klatki 0
            + ("[a][t]overlay=0:0[b];" if i == 0 else f"[a][t]overlay=x='if(lt(t,{FADE + 0.3:.2f}),-70*pow(1-(t-{FADE:.2f})/0.3,2),0)':y=0[b];")   # naglowek wjezdza z lewej
@@ -191,7 +191,7 @@ for i, (s, L) in enumerate(zip(S, DUR)):
     flt += f";{cur}format=yuv420p"
     run(["ffmpeg", "-y", *(["-i", s["img"]] if vid else ["-loop", "1", "-framerate", str(FPS), "-t", str(L), "-i", s["img"]]), "-loop", "1", "-t", str(L), "-i", "_hd.png",
          "-loop", "1", "-t", str(L), "-i", f"_t{i}.png", "-loop", "1", "-t", str(L), "-i", f"_n{i}.png", *extra,
-         "-filter_complex", flt, "-t", str(L), "-r", str(FPS), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "19", f"_c{i}.mp4"])
+         "-filter_complex", flt, "-t", str(L), "-r", str(FPS), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "17", f"_c{i}.mp4"])
     clips.append(f"_c{i}.mp4")
 inp = sum([["-i", c] for c in clips], []); chain = ""; off = 0; last = "[0]"
 for i in range(1, len(clips)):
@@ -200,7 +200,7 @@ for i in range(1, len(clips)):
     chain += f"{last}[{i}]xfade=transition={tr}:duration={FADE}:offset={off:.2f}{out};"; last = out
 T = sum(DUR) - FADE * (len(DUR) - 1)
 chain += f"color=c=0xffd23f:s={W}x8:r={FPS}:d={T + 1:.2f}[pb];{last}[pb]overlay=x='-W+W*t/{T:.2f}':y=0:shortest=1[pv];"; last = "[pv]"   # zloty pasek postepu
-run(["ffmpeg", "-y", *inp, "-filter_complex", chain + f"{last}format=yuv420p[v]", "-map", "[v]", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "19", "_v.mp4"])
+run(["ffmpeg", "-y", *inp, "-filter_complex", chain + f"{last}format=yuv420p[v]", "-map", "[v]", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast", "-crf", "17", "_v.mp4"])
 run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", "_l.txt", "-af", f"atrim=0:{T}", "_vo.wav"])
 run([sys.executable, os.path.join(REEL, "music.py"), str(T + 1), CFG.get("mood", "calm")])
 FX = {"tense": "lowpass=f=6000,aecho=0.8:0.6:310|690:0.35|0.25",          # horror: ciemny, duzo pogłosu

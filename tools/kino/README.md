@@ -1,3 +1,5 @@
+> **OD 20.11.2026 (szef: „tło ostrzejsze i pełniejsze”, grafika w pełni po stronie Reżysera – testować i wdrażać, co działa):** kino.py wyostrza tło (unsharp po zoomie), lżejsze przyciemnienie góry/dołu (.gt .80/.42, .gb .62), crf 17. Nowe obrazy do banku zapisuj w PEŁNEJ rozdzielczości źródła (min. 1440×2560, nie zmniejszaj do 1080×1920) – kino i tak robi nadpróbkowanie ×2, więcej detalu = ostrzejszy film. Wpływ na zasięgi mierzy Opiekun konta (reports/wzrost.log, od 21.11).
+
 > **OD 11.11.2026 (wieczór): STYL GŁĘBIA – szef: „to jest to, o co mi chodziło od samego początku”.** Tła = fotorealistyczne sceny AI z głębią jak `tools/neon/wzory/wzor_globus.webp` i `wzor_sala.webp` (punkt zbiegu, mokre odbicia, poświata, neon cyjan/fiolet/magenta, złote monety). Przepis: rozkaz R17 w `reports/plan_wzrostu.md` i sekcja GŁĘBIA w `tools/neon/README.md`.
 
 > **OBOWIĄZKOWE od 11.11.2026: skille graficzne** – przed każdą grafiką przeczytaj `tools/skille/README.md` (ui-ux-pro-max, banner-design, bang-motion, hyperframes) i stosuj; miniatury YT wg banner-design + wzór `tools/skille/wzory/miniatura.html`.
