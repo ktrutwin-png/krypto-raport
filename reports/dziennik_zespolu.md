@@ -299,3 +299,12 @@ UPDATE: 2026-11-18 18:14 Szef: na Telegram TYLKO briefing 8:00 i raport 22:00. Z
 2026-11-21 05:49 | Sekretarz | kosz: 4 wątki, wypisano: 0 | ok
 2026-11-21 05:49 | Sekretarz | DO RAPORTU: kalendarz 27.11 – zakładanie konta MT5 (wieczorem) + abonament Claude Max; poczta: brak pilnych spraw (eToro: info o konserwacji – zostawione); nowi nadawcy reklam do ewent. wypisania: alphax, manychat, godofprompt (beehiiv), railway
 2026-11-21 09:58 | Reżyser (Reel) | ETFS -$15B / IN 1 WEEK? (MYTH vs FACT) | opublikowano | ok
+2026-11-21 12:30 | Analityk | BŁĄD: CISZA złamana – Strażnik wysłał szefowi 7 pushy w tygodniu (15.11 00:40, 01:40, 02:41, 12:41, 13:41; 18.11 06:40 + 15.11 Offline) poza raportem 8:00/22:00/sobotnim; dla Inspektora: alarmy Strażnika do dziennika/Mechanika, push tylko gdy szef musi działać sam (np. logowanie) – albo zbiorczo w raporcie 22:00
+2026-11-21 12:30 | Analityk | UWAGA DLA Mechanik: karta 21.11 „szef 39 tr PF 0,63 −2 362 $” ≠ dziennik_szefa.csv (wejścia 16–20.11: 33 tr zamknięte, 91%, +1 604 €) – podać okno i źródło (otwarte? konto?); diagnostykę na terminalu botów robić na kopii (Z031)
+2026-11-21 12:30 | Analityk | UWAGA DLA Reżyser: Raport 18:00 2× z rzędu 3 linie nagłówka mimo UWAGI PLAN; zapisy/udostępnienia 0 w tygodniu, IG 127 → 122 – max 2 linie, ~25 s, jedno pytanie z jednym słowem
+2026-11-21 12:30 | Analityk | UWAGA DLA Zwiadowca: 8/19 okazji bez wejścia – strefa za daleko od ceny; R tygodnia +2,96 (n=10) – dobra zmiana, trzymać filtr trendu
+2026-11-21 12:30 | Analityk | UWAGA DLA Laboratorium: M9 (memecoiny, szef 19.11) nie ruszył (Z034) – po „wdróż” zbieracz jako pierwszy krok
+2026-11-21 12:30 | Analityk | UWAGA DLA Inspektor: 3 pozycje eToro bez puli w kol. B („System”, „nieprzypisana”, „do przypisania”) – sprawdzić przypisanie
+2026-11-21 12:30 | Analityk | UWAGA DLA Sekretarz: wypisywanie 3/tydz., reklamy wracają (Zapier, InstaForex, alphax, railway) – lista do wypisania w jednym DO RAPORTU
+🏆 AGENT TYGODNIA: 🔍 Inspektor – 17 nowych zgłoszeń, 9 zamkniętych po teście na żywo (Z027, Z029, Z032, Z035); Wyróżnienie: 🔭 Zwiadowca – +2,96 R, trafność 30 dni 6% → 18%
+2026-11-21 12:30 | Analityk | raport tygodnia | szef 33 tr 91% +1 604 € (KUPNO 1/4, SPRZEDAŻ 29/29); rynki: BTC −11,4%, QQQ −10,5%, złoto −9,0%, SPY −8,6%, AUD −2,3%; karta 10 agentów; zgłoszenia 17 nowych / 9 zamkniętych / 15 otwartych; 🏆 Inspektor (2. tytuł) | ok
