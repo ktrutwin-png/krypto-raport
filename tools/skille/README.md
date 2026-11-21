@@ -9,6 +9,9 @@ Agenci w chmurze nie mają skilli z serwera, dlatego tu leżą ich kopie (licenc
 | `banner-design/` | miniatury YouTube (1280×720), okładki, banery: rozmiary, strefy bezpieczne, 1 CTA, kontrast ≥ 4,5:1, 2–3 kierunki artystyczne | Reżyser (miniatury Shorts/Weekly, okładki Reels), Social Media |
 | `bang-motion/` | motion design: kinetic typography, openery, explainery jako jeden index.html z osią czasu (GSAP), render klatka po klatce | Reżyser – intro Weekly, mocny hook w 1. sekundzie Reela, filmy specjalne |
 | `hyperframes/` | HTML → MP4 deterministycznie: animowane wykresy, mapy, napisy słowo po słowie | Reżyser – gdy kino.py czegoś nie ma. Telemetria wyłączona – NIE uruchamiaj `npx hyperframes events` |
+| `remotion-best-practices`, `remotion-captions`, `remotion-render` (serwer `C:\Users\Administrator\.claude\skills\`, 22.11) | Remotion: animacje i napisy słowo po słowie w React, render CLI; bez `--license-key` (licencja darmowa) | Reżyser – napisy i animacje Reels/odcinków |
+| `motionsites-web-builder` (serwer, 22.11) | kinowe strony/hero: spec z wartościami, techniki scroll/WebGL/typografia, pętla zrzut→poprawki | agent strony, ORB |
+| `ig-reel`, `ig-caption` (serwer, 22.11) | hook mówiony + ekranowy (26 formuł, ocena hookscore.py), pierwsza linia opisu | Reżyser, Social Media |
 
 Do tego (już opisane gdzie indziej): sceny 3D `tools/3d/README.md` (rozkaz R14), `impeccable` + `design-taste-frontend` + `no-ai-slop` (serwer `C:\Users\Administrator\.claude\skills\`), rembg (wycinanie tła, serwer `C:\Hexa\grafika\.venv`).
 

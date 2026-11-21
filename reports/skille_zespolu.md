@@ -54,6 +54,15 @@ Instalować w następnym przebiegu po końcowym przeglądzie na serwerze (C:\Hex
 - Do oceny: `tt-a1i/archify` (★96k, Apache-2.0) – interaktywne diagramy z planu/kodu (strona /brain/, wyjaśnienia dla szefa).
 - Odrzucone: OpenMontage (AGPL-3.0), alpaca-skills / hypergrok-trading-desk / roman-rr/trading-skills (składanie zleceń lub sygnały na żywo), aiskillstore/marketplace (brak licencji).
 
+## 22.11.2026 – Zwiadowca skilli (zainstalowane na serwerze, laptop offline – do doinstalowania)
+Przegląd w C:\Hexa\przeglad\<repo> (commity niżej): czysty tekst + lokalne skrypty, bez wysyłek, kluczy i hooków Claude. Instalacja pojedynczo `npx skills add <repo> -s <skill> -g`, log C:\Hexa\narzedzia\skille_20261122.log.
+- **Wideo (Reżyser, Social Media)** – `remotion-dev/skills` (oficjalne, ★7,7k, 6f55706): `remotion-best-practices` (zbiorczy: animacje, napisy, mapy, 3D, multimedia), `remotion-captions` (napisy słowo po słowie z SRT/transkrypcji), `remotion-render` (render CLI, przezroczyste wideo). Zasada: mamy darmową licencję (≤3 osoby) – NIE podawać `--license-key`; testy z `--is-production=false`. Moduł map 3D wymaga płatnego klucza Google/MapTiler – pomijamy.
+- **Strona (agent strony, ORB)** – `motionsites-web-builder` (Motionsites-AI/claude-skill, ★2,4k, faa30d5): kinowe hero i strony, 58 sprawdzonych technik (scroll, WebGL, typografia w ruchu), pętla zrzut→ocena→poprawki (`scripts/shoot.py` – tylko lokalny Chrome headless). Media © MotionSites: wolno używać na naszych stronach, nie kopiować do repo ani nie odsprzedawać.
+- **Instagram (Social Media, Reżyser)** – `ig-reel` (26 formuł hooka mówionego + ekranowego, `hookscore.py` ocenia hook lokalnie) i `ig-caption` (pierwsza linia przed „więcej”, `caption.py`) z Jakeschincariol/instagram-agent-skill (★8k, MIT, d03c56b). Uzupełnia viral-instagram-reels; reszta ig-* – w razie potrzeby.
+- **Teksty (Pisarz, Social Media, Reżyser)** – `copywriting` (lista „AI-tells” do usuwania, ramy tekstów) i `social` (platformy, karuzele, short-form, limity znaków) z coreyhaines31/marketingskills (★62k, MIT, 5b2b400). Folder `tools/clis` (płatne klucze) nie instalowany.
+- Kolejka na następny tydzień: `blader/humanizer` (★72k, MIT – porównać z no-ai-slop, wziąć lepszy), `emilkowalski/skills` (★59k, MIT – animacje UI: animate, improve-animations, apple-design – dla strony/ORB), `tt-a1i/archify` (★99k, Apache-2.0 – diagramy dla /brain/), `cathrynlavery/diagram-design` (★70k, MIT).
+- Odrzucone 22.11: `AgriciDaniel/claude-seo` (skille wołają skrypty `${CLAUDE_PLUGIN_ROOT}` – działają tylko jako plugin, a plugin ma hooks.json; SEO mamy w chmurze przez searchfit-seo), skille tradingowe z GitHuba (Krexa, mphinance itd. – mało gwiazdek lub paper/live trading), SnailSploit/Claude-Red i Claude-OSINT (ofensywne), Illyism/seo-skills (brak licencji).
+
 ## Ogólne
 - `no-ai-slop` – teksty (opisy, książka, skrypty lektora), `unlazy` – duże zadania z bramkami, `find-skills` – szukanie nowych skilli (instalujemy tylko sprawdzone: najpierw serwer, potem laptop).
 
