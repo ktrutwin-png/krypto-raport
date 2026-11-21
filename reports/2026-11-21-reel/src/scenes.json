@@ -1,0 +1,18 @@
+{
+ "date": "21.11.2026",
+ "style": "news",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $57,743 ▼6.7% · ETH $1,624 ▼7.4% · XRP $0.88 ▼8.1% · FEAR & GREED 6",
+ "scenes": [
+  {"img": "s1.jpg", "tag": "MYTH vs FACT", "head": ["ETFS -$15B", "*IN 1 WEEK?*"], "chip": "▼ BTC $57.7K", "move": "in",
+   "say": "Bitcoin ETFs shrank fifteen billion dollars in one week. Did investors flee?"},
+  {"img": "s2.jpg", "head": ["MOSTLY", "*MYTH*"], "note": "BTC -14% → ETF ASSETS -15%", "move": "out",
+   "say": "Mostly myth. Bitcoin fell fourteen percent, so the funds shrank with it."},
+  {"img": "s3.jpg", "d3": {"typ": "liczba", "p": {"text": "~1%", "sub": "REAL OUTFLOWS / WEEK", "kolor": "btc", "kolor2": "silver"}},
+   "head": ["FACT", "*~$1B A WEEK*"], "sub": "REAL OUTFLOWS ≈ 1% OF ASSETS", "move": "up",
+   "say": "Real outflows: reportedly about one billion a week. Around one percent."},
+  {"img": "s4.jpg", "tag": "COMMENT PANIC OR PATIENCE", "head": ["PANIC OR", "*PATIENCE?*"], "sub": "PANIC 🐻  /  PATIENCE 🐂", "note": "SEND THIS TO A FRIEND WHO HOLDS BTC", "move": "down",
+   "say": "Fifteen billion gone, mostly price. Panic or patience? Comment below. This is not financial advice, just data."}
+ ]
+}
