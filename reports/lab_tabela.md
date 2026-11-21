@@ -1,24 +1,26 @@
 # Laboratorium – tabela stanu (demo / paper / virtual)
 
-Aktualizacja: 2026-11-20 02:15 UTC
+Aktualizacja: 2026-11-21 01:35 UTC
 
 | Nazwa | Platforma | Magic / clientId | Start | Transakcje (zamkn.) | Wynik | PF | Status | Backtest (spr. PF, n) |
 |---|---|---|---|---|---|---|---|---|
-| LAB_Londyn_XAU | MT5 demo 5058971085 · XAUUSD M15 | 830201 | 2026-11-18 | 1 | +219,38 $ | – (1/0) | ✅ działa (sygnały blokuje limit 30%) | 2,19 (90) |
-| LAB_Donchian_XAG | MT5 demo · XAGUSD H1 | 830202 | 2026-11-18 | 2 (+1 otwarta, +92,75 $) | +652,53 $ | – (2/0) | ✅ działa – kandydat „Silver King” | 1,50 (94) |
-| LAB_Kontra_FX | MT5 demo · EURUSD, USDJPY M15 | 830203 | 2026-11-18 | 0 | 0,00 $ | – | ⚠️ działa, sygnały odrzucane limitem 30% | 1,32 / 1,36 |
-| LAB_RSI2_FX | MT5 demo · USDJPY, GBPUSD M15 | 830204 | 2026-11-18 | 0 | 0,00 $ | – | ⚠️ działa, sygnały odrzucane limitem 30% | 1,37 / 1,10 |
-| LAB_KR_RSI2_H4 | Kraken na sucho · BTC/EUR, XRP/EUR H4 (500 € wirt.) | paper | 2026-11-18 | 0 (+1 otwarta SHORT XRP) | −2,35 € (opłaty) | – | ✅ działa (stan 20.11 01:31) | 1,31 (9) / 1,60 (11) |
-| LAB_IB_RSI2_AUD | IBKR paper · AUDUSD M15 | clientId 50 | 2026-11-18 | 0 | 0,00 $ | – | ⛔ Gateway nie słucha na 4002 (connection refused) | 1,22 (237) |
-| LAB_ET_Kontra_D1 | eToro DEMO · GBPUSD D1 (obsługa nocą) | – | 2026-11-18 | 0 | 0,00 $ | – | ⏳ brak sygnału | 2,16 (7) |
-| LAB_Luka_FX | MT5 demo · EURUSD, GBPUSD, USDJPY, AUDUSD H1 | 830205 | 2026-11-19 | 0 | 0,00 $ | – | ✅ działa (handluje w poniedziałki) | 4,97 / 2,71 / 99 / 1,87 (18–27) |
+| LAB_Londyn_XAU | MT5 demo 5058971085 · XAUUSD M15 | 830201 | 2026-11-18 | 1 | +219,38 $ | – (1/0) | ✅ działa | 2,19 (90) |
+| LAB_Donchian_XAG | MT5 demo · XAGUSD H1 | 830202 | 2026-11-18 | 3 (+1 otwarta, −1,00 $) | +1032,53 $ | – (3/0) | ✅ działa – kandydat „Silver King” | 1,50 (94) |
+| LAB_Kontra_FX_off | MT5 demo · EURUSD, USDJPY M15 | 830203 | 2026-11-18 | 0 | 0,00 $ | – | ⏸️ zawieszony 21.11 (0 transakcji, slot dla M8) | 1,32 / 1,36 |
+| LAB_RSI2_FX | MT5 demo · USDJPY, GBPUSD M15 | 830204 | 2026-11-18 | 1 | +16,20 $ | – (1/0) | ✅ działa | 1,37 / 1,10 |
+| LAB_KR_RSI2_H4 | Kraken na sucho · BTC/EUR, XRP/EUR H4 | paper | 2026-11-18 | 0 (+1 otwarta SHORT XRP) | opłaty | – | ✅ działa (pojedyncze błędy SSL Krakena, sam wraca) | 1,31 (9) / 1,60 (11) |
+| LAB_IB_RSI2_AUD | IBKR paper · AUDUSD M15 | clientId 50 | 2026-11-18 | 0 | 0,00 $ | – | ✅ Gateway wrócił 20.11 22:16, połączony | 1,22 (237) |
+| LAB_ET_Kontra_D1 | eToro DEMO · GBPUSD D1 | – | 2026-11-18 | 0 | 0,00 $ | – | ⏳ brak sygnału | 2,16 (7) |
+| LAB_Luka_FX | MT5 demo · 4 pary H1 | 830205 | 2026-11-19 | 0 | 0,00 $ | – | ✅ działa (handluje w poniedziałki) | 1,87–4,97 |
 | LAB_Kons_H1 | MT5 demo · USDJPY, EURUSD H1 | 830206 | 2026-11-19 | 1 | −23,51 $ | 0,00 | ✅ działa | 1,78 (68) / 1,69 (72) |
-| LAB_NYFade | MT5 demo · XAUUSD, EURUSD, GBPUSD M15 | 830207 | 2026-11-19 | 0 | 0,00 $ | – | ⚠️ działa, sygnały odrzucane limitem 30% | 1,44 (30) / 1,58 (19) / 1,57 (18) |
-| LAB_M8_HexaTurbo | MT5 demo · 14 wariantów Hexa/Turbo (tabela M8 niżej) | 830210–830223 | 2026-11-20 | 0 (12 otwartych od 01:51 UTC) | 0,00 $ | – | 🆕 działa | patrz M8 |
-| LAB_ET_M8_XAU_D1 | eToro DEMO · GOLD D1 (Hexa=Turbo, DCH) | poz. 3646949765 | 2026-11-20 | 0 (1 otwarta SHORT @ 3563,87, SL 3805 / TP 3334) | 0,00 $ | – | 🆕 obsługa nocą | 2,32 (69) |
+| LAB_NYFade_off | MT5 demo · XAU/EUR/GBP M15 | 830207 | 2026-11-19 | 0 | 0,00 $ | – | ⏸️ zawieszony 21.11 (0 transakcji – lot > limit 30%, slot dla M8) | 1,44 / 1,58 / 1,57 |
+| LAB_M8_HexaTurbo | MT5 demo · 14 wariantów (niżej) | 830210–830223 | 2026-11-20 | 13 (+13 otwartych) | −96,02 $ | 0,68 | ✅ działa (21.11: rezerwa 8% limitu dla pustych wariantów) | patrz M8 |
+| LAB_IB_M8_XAU | IBKR paper · XAUUSD H1/H4/D1 (Hexa, 1 oz) | clientId 51 | 2026-11-21 | 0 | 0,00 $ | – | 🆕 działa, D1 SHORT czeka na otwarcie rynku | 1,35 / 1,58 / 2,34 |
+| LAB_KR_M8_D1 | Kraken na sucho · BTC/ETH/XRP D1 (500 € wirt./para) | paper | 2026-11-21 | 0 (3 otwarte: SHORT BTC DCH, ETH DCH+D15) | opłaty | – | 🆕 działa | 1,02 / 1,09 / 1,18 |
+| LAB_ET_M8_XAU_D1 | eToro DEMO · GOLD D1 | poz. 3646949765 | 2026-11-20 | 0 (1 otwarta SHORT @ 3563,87, +13,66 $) | 0,00 $ | – | ✅ SL 3805 / TP 3334 | 2,32 (69) |
 
-Wyłączone: brak (żaden bot nie ma jeszcze ~20 transakcji).
-Razem MT5 lab: 4 zamknięte, +848,40 $ (PF 37,1), otwarte: Donchian_XAG + 12 pozycji M8. Aktywne boty: 10/10.
+Wyłączone na stałe: brak (żaden bot nie ma ~20 transakcji). Zawieszone (bez lekcji, brak danych): Kontra_FX, NYFade.
+Razem MT5 lab: 19 zamkniętych, +1148,58 $; konto demo botów: saldo 6655 $, kapitał 6936 $. Aktywne procesy: 10/10.
 
 ## M8 – Hexa i Turbo na M15/M30/H1/H4/D1, wszystkie platformy (backtest 20.11.2026)
 
@@ -61,6 +63,22 @@ Wniosek TP: na każdym interwale TP 1R (obecne ustawienie DCH/ASIA od 10.11) daj
 
 **Uwaga (uczciwie):** sprawdzian złota przypada na mocny trend 2026 – na nauce PF złota był ~1,0 (M30/H1 nawet < 1). Wynik zależy od reżimu rynku; werdykt dopiero po ~20 transakcjach na wariant na demo.
 
+**Wyniki na demo (stan 21.11 01:30 UTC, MT5):**
+
+| Wariant | Magic | Zamkn. | Wynik | PF | Otwarte |
+|---|---|---|---|---|---|
+| H_XAU_M15 | 830210 | 5 | −27,37 $ | 0,73 | 0 |
+| T_XAU_M15 | 830211 | 2 | −6,11 $ | 0,87 | 1 |
+| H_XAU_M30 / T_XAU_M30 | 830212 / 830213 | 2 / 2 | −9,63 / −9,36 $ | 0,82 / 0,82 | 1 / 1 |
+| H_XAU_H1 / T_XAU_H1 | 830214 / 830215 | 0 | – | – | 0 (głodzone limitem 30% – poprawione 21.11) |
+| HT_XAU_H4 / HT_XAU_D1 / H4_TP2x2 | 830216 / 830217 / 830218 | 0 | – | – | 2 / 1 / 2 (wszystkie na plusie ~+43 $) |
+| H_XAG_M30 | 830219 | 1 | −46,05 $ | 0,00 | 1 |
+| HT_XAG_H4 | 830220 | 0 | – | – | 2 (+90 $) |
+| T_JPY_H1 | 830223 | 1 | +2,50 $ | – | 1 |
+| **Razem M8 MT5** | | **13** | **−96,02 $** | **0,68** | 13 |
+
+Uwaga: 6 wariantów złota bierze ten sam sygnał DCH → jedna zła świeca (20.11 10:02) to 4 straty naraz. Warianty nie są niezależne – werdykt trzeba liczyć per interwał, nie sumować.
+
 **Na demo od 20.11 (spr PF ≥ 0,95):**
 
 | Wariant | Platforma | Magic / ID | spr PF (n) | Status |
@@ -76,5 +94,5 @@ Wniosek TP: na każdym interwale TP 1R (obecne ustawienie DCH/ASIA od 10.11) daj
 | HT_GBP_H4 | MT5 demo | 830222 | 1,03 | 🆕 sygnał odrzucony limitem 30% |
 | T_JPY_H1 | MT5 demo | 830223 | 1,00 | 🆕 czeka |
 | LAB_ET_M8_XAU_D1 | eToro DEMO | poz. 3646949765 | 2,32 | 🆕 SHORT GOLD |
-| IBKR XAUUSD M30/H1/H4/D1 | IBKR paper | clientId 51 (plan) | 1,24–2,34 | ⛔ Gateway nie działa (port 4002 zamknięty) – czeka |
-| Kraken BTC / ETH / XRP D1 | Kraken paper | – | 1,02 / 1,09 / 1,18 (nauka 1,06 / 0,73 / 0,38) | ⏳ zakwalifikowane, czeka na wolny slot (10/10 botów) |
+| LAB_IB_M8_XAU: H1 / H4 / D1 | IBKR paper | clientId 51 | 1,35 / 1,58 / 2,34 | 🆕 21.11 działa; D1 DCH SHORT ponawiany, rynek zamknięty w weekend |
+| LAB_KR_M8_D1: BTC / ETH / XRP D1 | Kraken paper | – | 1,02 / 1,09 / 1,18 (nauka 1,06 / 0,73 / 0,38) | 🆕 21.11 SHORT BTC (DCH), SHORT ETH (DCH + D15); uwaga: rollover 0,12%/dobę – backtest go nie liczył |

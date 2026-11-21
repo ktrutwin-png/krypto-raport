@@ -103,3 +103,29 @@ Kod: `C:\Hexa\lab` (silnik `lab_silnik.py`, boty `boty\*.py`, start `START_LAB.p
 **Zablokowane / czeka:** IBKR (Gateway nie działa) – warianty złota M30/H1/H4/D1 na IBKR czekają; Kraken BTC/ETH D1 – czekają na wolny slot (limit 10 botów).
 
 **Najlepszy (na żywo):** LAB_Donchian_XAG +652,53 $ (2/2). W M8 najlepszy w backteście: Hexa/Turbo D1 na złocie (PF 2,35, DD 5R), a z największym zyskiem w R – M30/H1 na złocie (+134–139R na sprawdzianie).
+
+---
+
+## 2026-11-21 (noc 4) – M8 na wszystkich platformach
+
+**Przegląd (konto demo botów 5058971085, trade_mode DEMO potwierdzony; Hexa/Turbo/Indeksy bez otwartych pozycji, nietknięte):**
+- MT5 lab: **19 zamkniętych, razem +1148,58 $**. Gwiazda: LAB_Donchian_XAG 3/3 (+294,75 / +357,78 / +380,00 $ = +1032,53 $), znów SHORT srebra od 20.11. RSI2_FX pierwsza transakcja +16,20 $ (GBPUSD).
+- **M8 na MT5 (pierwsza doba): 13 zamkniętych, −96,02 $, PF 0,68.** Straty prawie w całości z M15/M30 na złocie i M30 na srebrze – 20.11 o 10:02 jedna świeca wybiła 4 warianty naraz. H4/D1 jeszcze nic nie zamknęły, ale 7 pozycji H4/D1 jest na plusie (~+43 $ każda złota, +90 $ srebro H4). Za wcześnie na werdykt (próg ~20 transakcji na wariant).
+- Kraken na sucho: KR_RSI2_H4 trzyma SHORT XRP; pojedynczy błąd SSL Krakena, bot sam wrócił.
+- IBKR paper: **IB Gateway znów słucha na 4002 (od 20.11 22:16)** – LAB_IB_RSI2_AUD połączony (DUR…).
+- eToro DEMO (`account: demo` w odpowiedzi): LAB_ET_M8_XAU_D1 SHORT GOLD @ 3563,87 → 3544,40, +13,66 $ (SL 3805 / TP 3334 bez zmian). Kontra D1 GBPUSD – brak sygnału.
+- **Wyłączone (lekcja): nic.** **Zawieszone:** LAB_Kontra_FX i LAB_NYFade (pliki `_off`, aktywny=false) – 0 transakcji w 2–3 dni, bo lot z ryzyka % przy ciasnym SL przekraczał limit 30%; to nie werdykt o strategii, tylko oddanie slotów priorytetowi M8.
+
+**M8 – dziś (krok 2 domknięty na wszystkich platformach):**
+- 🆕 `LAB_IB_M8_XAU` – IBKR paper, clientId 51, XAUUSD (CMDTY/SMART, 1 oz = 0,01 lota): Hexa H1 / H4 / D1 (spr PF IBKR 1,35 / 1,58 / 2,34). Sygnały tym samym kodem m8_bt.py, świece MIDPOINT z IB, OCA TP/SL GTC, BE dla D15. Test `--raz`: kontrakt i 8 lat D1 pobrane; sygnał D1 DCH SHORT – zlecenie anulowane (sobota, rynek zamknięty) → dodałem ponawianie co 15 min tej samej świecy.
+- 🆕 `LAB_KR_M8_D1` – Kraken na sucho, BTC/ETH/XRP D1 (500 € wirt./para, ryzyko 2%, max 5x). Sygnały na świecach Binance (potrzeba 2000+ dni do trendu 16×D1), wykonanie na cenach Krakena EUR. Od razu weszły: SHORT BTC (DCH), SHORT ETH (DCH + D15).
+- MT5: poprawka w LAB_M8_HexaTurbo (kopia `.bak_20261121`): ostatnie 8% limitu 30% zarezerwowane dla wariantów bez pozycji – H1 (najlepszy PF w backteście) przez całą dobę nie dostał ani jednego wejścia, bo M15 zjadał limit. Logika sygnałów bez zmian.
+
+**Lekcje:**
+- Kilka wariantów tego samego bota na jednym instrumencie = jedna pozycja ×N, nie N niezależnych testów. Werdykt M8 liczę per interwał, a o łącznym ryzyku decyduje limit.
+- Kraken margin pobiera rollover 0,02%/4 h (~0,12%/dobę) – na D1 z pozycjami trzymanymi tygodniami to może być więcej niż cała przewaga z backtestu (który liczył tylko 0,75% za wejście i wyjście). Paper to policzy – zobaczymy.
+- Limit 30% przy wielu botach wymaga podziału, nie „kto pierwszy, ten lepszy”.
+
+**Nowe pomysły:** dziś bez nowych strategii – noc w całości na M8 (priorytet szefa). Aktywne procesy: 10/10.
+
+**Najlepszy:** LAB_Donchian_XAG +1032,53 $ (3/3). W M8 na żywo – na razie H4/D1 złota (otwarte na plusie), M15 najsłabszy (PF 0,73).
