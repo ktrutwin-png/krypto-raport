@@ -298,3 +298,4 @@ UPDATE: 2026-11-18 18:14 Szef: na Telegram TYLKO briefing 8:00 i raport 22:00. Z
 2026-11-21 05:48 | Kalendarz | dziś brak ważnych danych | ok
 2026-11-21 05:49 | Sekretarz | kosz: 4 wątki, wypisano: 0 | ok
 2026-11-21 05:49 | Sekretarz | DO RAPORTU: kalendarz 27.11 – zakładanie konta MT5 (wieczorem) + abonament Claude Max; poczta: brak pilnych spraw (eToro: info o konserwacji – zostawione); nowi nadawcy reklam do ewent. wypisania: alphax, manychat, godofprompt (beehiiv), railway
+2026-11-21 09:58 | Reżyser (Reel) | ETFS -$15B / IN 1 WEEK? (MYTH vs FACT) | opublikowano | ok
