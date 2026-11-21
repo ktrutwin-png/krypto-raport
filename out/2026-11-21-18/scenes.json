@@ -1,0 +1,41 @@
+{
+ "date": "21.11.2026",
+ "style": "news",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $59,922 ▲0.8% · ETH $1,680 ▲2.2% · GOLD $3,535 ▲0.4% · XRP $0.93 ▲2.0% · SOL $70.53 ▲1.6% · FEAR & GREED 8",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "LIVE MARKET UPDATE",
+   "head": ["BTC $55K→$60K", "*IN HOURS?*"],
+   "chip": "▼ BTC -8% IN 7 DAYS",
+   "move": "in",
+   "say": "Bitcoin reportedly crashed near fifty five thousand, then ripped back to sixty thousand in hours."
+  },
+  {
+   "img": "s2.jpg",
+   "head": ["$934M", "*LIQUIDATED*"],
+   "note": "SHORTS GOT WRECKED TOO",
+   "move": "out",
+   "d3": {"typ": "swiece", "p": {"dir": "up", "dane": [62064, 61804, 61679, 58416, 58922, 56229, 57716, 58122, 59843, 59922], "seed": 2111}},
+   "say": "Coin Market Cap counts nine hundred thirty four million in Bitcoin liquidations in a day. Longs first, then shorts."
+  },
+  {
+   "img": "s3.jpg",
+   "head": ["FEAR & GREED 8", "*ETH +2%*"],
+   "chip": "▲ ETH $1,680",
+   "move": "up",
+   "say": "Fear and greed is still stuck at eight, extreme fear, while Ether bounced two percent."
+  },
+  {
+   "img": "s4.jpg",
+   "tag": "WATCH NEXT",
+   "head": ["$60K LINE", "*HOLD OR FADE?*"],
+   "sub": "HOLD 🐂 / FADE 🐻 BY MONDAY?",
+   "note": "SEND THIS TO A FRIEND WHO HOLDS BTC",
+   "move": "down",
+   "say": "Watch sixty K. Hold or fade back to fifty five by Monday? This is not financial advice, just data."
+  }
+ ]
+}
