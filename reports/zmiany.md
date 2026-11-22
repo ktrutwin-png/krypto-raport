@@ -20,3 +20,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-22 11:50 | Raport sobotni: najpierw liczby wzrostu IG/YT/X
 - 2026-11-22 11:50 | Social Media: błędy do dziennika, zero powiadomień
 
+- 2026-11-22 12:32 | Reele i grafiki: pełne, żywe neonowe kolory (test 2 tyg.)
