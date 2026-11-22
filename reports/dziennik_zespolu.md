@@ -339,3 +339,4 @@ UPDATE: 2026-11-22 14:21 (Agent Skanery) skaner_dzienny.py na serwerze: US30 RSI
 2026-11-22 15:29 | Pisarz | kronika tygodnia + praca nad książką | – | ok
 2026-11-22 16:43 | Nauczyciel | lekcje: +17, skreślone: 6, nowe narzędzia: 2 | Reżyser: zasięg dają wydarzenia i Hexa, nie forma – BTC <$60K 20.11 zasięg 105 i Reel Hexy 191 vs mediana newsów 6; nota SAVE/SEND THIS przez 30 dni = 2 zapisy/udostępnienia na 54 Reelsy | ok
 2026-11-22 16:43 | Nauczyciel | DO RAPORTU: propozycja narzędzia Windsor konektor youtube dla Reżysera – dane per film YT (Metricool od 2 tygodni zwraca 0 wierszy), koszt: w ramach planu Windsor – do sprawdzenia
+2026-11-22 18:24 | Reżyser (Raport 18) | BTC -21% IN NOV. / TODAY +2% | posted (IG media 17883736338546079, 26,1 s, 4 sceny, 1×3D pokrętło; repo 18:23 – po terminie 18:20 dla Shorts, render 3D ~20 min) | ok
