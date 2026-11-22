@@ -33,11 +33,12 @@ Zasada: agenci PRZYGOTOWUJĄ (oferty, produkty, szkice wiadomości); szef wysył
 - 2026-11-19 (Handlowiec, przebieg 4): ✅ Reel-przykład dla warsztatu biznes/przyklad_reel_garage/reel.mp4 (17,2 s, „wintercheck + winterbanden €29 + afspraak via WhatsApp”, fikcyjny „Garage Voorbeeld”, VOORBEELD, piper NL, Unsplash; nie publikować) · ✅ +10 firm (41–50) wg L1 – wszystkie z publicznym kanałem: 2 restauracje Lelystad z www+tel. (Eetcafé @ The Beach, Next Restaurant – A), 2 auto Almere (AFS Automotive, Autozaak.nl – autoscout24), 6 nagelstudio Almere (Fresha) · ✅ 13 „do sprawdzenia”: 9 oznaczonych „pominięte (L1)” (6 fizjo bez www + 3 fryzjerzy bez kanału), reszta (5, 17, 22, 23) zostaje do wizyty · produkty 2–5: M5 i e-book P1 wciąż otwarte – brak opisów. NASTĘPNIE: szkice dla nr 42 Next (formularz, link do Reela menu) i 43 AFS (Reel warsztatu), Reel-przykład dla nagelstudio (6 firm tej branży na liście).
 
 ## LEKCJE (📚 Nauczyciel dopisuje co tydzień – czytaj przed pracą i stosuj)
-- L1 (15.11) Handlowiec: 13 z 40 firm nadal „do sprawdzenia” (głównie fizjo bez www – zorgkaart nie podaje adresów) → nowe firmy wybieraj tylko z publicznym kanałem (Fresha/Treatwell/IG/strona z formularzem); fizjo bez www pomiń.
-- L2 (15.11) Handlowiec: Reel-przykład „menu dnia” przesunięty 2× (12.11 i zadanie Mózgu 13.11) – to jedyny brakujący element pierwszej oferty; zrób go NA POCZĄTKU przebiegu, 1 scena na gotowym KINO (scenes.json + bank), oznaczony „przykład”.
-- L3 (15.11) Handlowiec: oferta ze źródłem ceny (Searchlab/FlowHunt) oceniona 4/5 przez Analityka – każda nowa cena/pakiet zawsze ze źródłem i datą.
-- L4 (15.11) Pisarz/e-book P1: otwarty 8 dni bez startu (Z023) – zacznij od spisu treści (8–10 tytułów, 1 linijka każdy), to 1 przebieg; lekcja 1 w następnym.
-
+- L1 (15.11, potw. 19.11) Handlowiec: nowe firmy tylko z publicznym kanałem (Fresha/Treatwell/IG/formularz) – 19.11 +10 firm, wszystkie z kanałem; 9 bez kanału „pominięte”. Trzymaj.
+- ~~L2 (15.11) Reel-przykład na początku przebiegu~~ – zadziałało: 16.11 „dagmenu” (16,5 s) i 19.11 warsztat (17,2 s). Zasada zostaje: brakujący element oferty robisz jako pierwszy.
+- L3 (15.11) Handlowiec: każda cena/pakiet ze źródłem i datą (Searchlab/FlowHunt) – oferta oceniona 4/5.
+- L4 (15.11, akt. 22.11) Pisarz/e-book P1: otwarty 15 dni bez startu – zacznij od spisu treści (8–10 tytułów po 1 linijce) w jednym przebiegu, lekcja 1 w następnym.
+- L5 (22.11) Handlowiec: 9 szkiców + 2 Reele-przykłady, 0 wysłanych od 9.11 (czeka na KvK) – nie dokładaj szkiców. Zrób JEDEN pakiet „gotowe do wysłania” (firma priorytetu A, kanał, tekst NL z linkiem do Reela, puste pole KvK) i jedną linię DO RAPORTU.
+- L6 (22.11) Handlowiec: „produkty 2–5 niegotowe” powtórzone w 4/4 przebiegach – to nie Twoja blokada (M5 Mechanik, P1 Pisarz); pisz raz w tygodniu z liczbą dni zwłoki.
 
 ## Lista oczekująca: publiczne repo marki (decyzja szefa 13.11.2026)
 - Idea: oddać społeczności coś w zamian — publikować wybrane narzędzia jako open source pod marką Erl.grey83.

@@ -10,13 +10,14 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - [ ] Z4 (9.11, PILNE) Fałszywy sygnał: 9.11 17:05 skaner_dzienny wysłał „SPRZEDAŻ USDJPY (DON) – cena przebiła minimum z 55 dni (152.888)”, a cena była ~158.16 (minimum NIE przebite). Znajdź przyczynę (warunek DON, indeksy świec, dane D1 z MT5, tekst powodu), dopisz test, który by to złapał, i zgłoś poprawkę Mechanikowi przez Inspektora. Do czasu naprawy – sygnały DON z dopiskiem „do weryfikacji”. Szef: „zapisać w dzienniku agenta, który był za to odpowiedzialny”.
 - [x] Z3 (7.11) Po każdym przebiegu jedna linijka w reports/dziennik_zespolu.md.
 ## LEKCJE (📚 Nauczyciel dopisuje co tydzień – czytaj przed pracą i stosuj)
-- L1 (15.11) Okazje Zwiadowcy 9–13.11: 0/7 trafień, śr. −0,55 R; WSZYSTKIE 3 okazje z wejściem skończyły się stopem (śr. −1,0 R) – liczy się R okazji z wejściem, raportuj go osobno od „brak wejścia”.
-- L2 (15.11) 4 z 7 okazji = brak wejścia (strefa za daleko od ceny) → strefa wejścia ≤0,5 ATR od ostatniego zamknięcia (stosowane od 12.11 – zmierz w tygodniu 16–20.11).
-- L3 (15.11) Kontry pod trend przegrywają: XAU long 9.11 i GBP/USD long 10.11 = stopy; od 11.11 tylko „z trendem” (D1 pod/nad SMA20/50/200) – trzymaj, porównaj trafność po n≥10.
-- L4 (15.11) Skala pewności nie kalibruje: obie okazje z pewnością 3 (XAU, USTEC 9.11) = −1 R. Co piątek tabela pewność → wynik; jeśli 3 nie bije 2 przy n≥10, zmień kryteria pewności.
-- L5 (15.11) Cele 2–3 R przy stopie ~1 ATR dają 0 trafień w tygodniu z dużymi ruchami – HIPOTEZA: dla horyzontu „dzień” cel 1–1,5 R; sprawdź na historii okazji po n≥10.
-- L6 (15.11) Skaner D1 (bt_ranking.py): najlepsze XAU SMA +1,65 R (n79), XAG SMA +0,94 R (n123); usunięty USDJPY DON short (−0,21 R od 2020). Decyzje o CFG tylko z rankingu historii – sygnaly_wyniki.csv ma n=1 (brak sygnałów od 3.11).
-- L7 (15.11) Każdy warunek wybicia na ticku najpierw waliduje tick (ask>0, ask≥bid, spread ≤0,5%) – fantom USDJPY 9.11 powstał z pustego ticka (Z002).
+- L1 (15.11, akt. 22.11) R okazji z wejściem raportuj osobno od „brak wejścia”: 9–13.11 z wejściem 3/3 stopy (−1,0 R); 16–20.11 rozliczone 10: +2,96 R (śr. +0,30 R); 30 dni z wejściem n=12, śr. +0,15 R.
+- L2 (22.11) Strefa ≤0,5 ATR nie wystarcza: nadal 8 z 19 okazji bez wejścia (cel padł bez wejścia) → strefa ≤0,3 ATR od ostatniego zamknięcia albo wejście po cenie bieżącej z celem przeliczonym (wstępne – porównaj 23–27.11).
+- L3 (15.11, potw. 22.11) Tylko „z trendem” (D1 pod/nad SMA20/50/200): od 11.11 trafność 26%, +0,35 R vs 30 dni łącznie 18% – trzymaj.
+- L4 (15.11) Skala pewności nie kalibruje (obie „3” z 9.11 = −1 R). Co piątek tabela pewność → wynik; jeśli 3 nie bije 2 przy n≥10, zmień kryteria.
+- ~~L5 (15.11) Cel 1–1,5 R zamiast 2–3 R~~ – obalone 20.11: cele z trendem trafione +2,37 / +2,07 / +1,69 / +1,20 R. Cele ~2 R przy stopie ~1 ATR zostają.
+- L6 (15.11, akt. 22.11) Decyzje o CFG skanera D1 tylko z rankingu historii: XAU SMA +1,65 R (n79), XAG SMA +0,94 R; usunięty USDJPY DON short; 22.11 filtr zmienności F4 dla US30 RSI2 +0,103 → +0,147 R (n84, obie połowy lepsze, Z040). sygnaly_wyniki.csv n=3 – za mało na wnioski.
+- L7 (15.11) Każdy warunek wybicia na ticku najpierw waliduje tick (ask>0, ask≥bid, spread ≤0,5%) – fantom USDJPY 9.11 (Z002).
+- L8 (22.11) Serie „Authorization failed” MT5 (9× 17–21.11) same wracają w 2–8 min – to MetaQuotes-Demo, nie BŁĄD; „BŁĄD:” w dzienniku dopiero przy przerwie > 15 min.
 
 ## UMIEJĘTNOŚCI I NARZĘDZIA (🔭 Zwiadowca)
 - Narzędzia: skanery na laptopie (skaner_dzienny.py, ib_skaner.py), sygnaly_wyniki.csv, MT5 historia, Twelve_Data.

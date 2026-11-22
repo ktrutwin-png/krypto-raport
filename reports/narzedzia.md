@@ -41,3 +41,8 @@ Wszystkie klucze szefa: C:\Hexa\sejf\ na serwerze, spis w SPIS.md (bez wartości
 - Gmail create_label + label_thread | etykiety zamiast wypisów, które nie działają | 📬 Sekretarz | 15.11.2026
 - Vercel get_deployment / get_runtime_errors | dowód, że produkcja = commit z naprawą | 🔍 Inspektor | 15.11.2026
 - PROPOZYCJA (DO RAPORTU): TEXT_TO_QUANT (konektor już podłączony, plan tylko krypto Binance spot) | walk-forward / overfit dla strategii Kraken (BTC) | 🔧 Mechanik | koszt: kredyty planu – najpierw get_usage, zgoda szefa
+
+## Przegląd Nauczyciela 22.11.2026 (nazwa | do czego | komu | od kiedy)
+- Instagram Trial Reels (funkcja IG, darmowa) | Reel najpierw tylko dla nie-obserwujących – czyste testy A/B Laboratorium | 🎬 Reżyser, 🧪 Laboratorium | 22.11.2026 (najpierw sprawdzić `trial_params` w ścieżce publikacji)
+- Freqtrade lookahead-analysis / recursive-analysis (wbudowane, serwer) | wykrywa zawyżone backtesty Kraken (patrzenie w przyszłość, zależność od rozbiegu) | 🔧 Mechanik | 22.11.2026
+- PROPOZYCJA (DO RAPORTU): Windsor – konektor `youtube` (dziś połączony tylko `instagram`) | dane per film YT (Metricool daje 0 wierszy od 2 tygodni) | 🎬 Reżyser | koszt: w ramach planu Windsor – do sprawdzenia przez szefa
