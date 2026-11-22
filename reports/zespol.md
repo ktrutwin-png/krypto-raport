@@ -164,3 +164,6 @@ Każdy tygodniowy raport zespołu dla szefa (i kronika) zaczyna się krótką ra
 - YouTube: nowi subskrybenci (stan), wyświetlenia (vs poprzedni tydzień), najlepszy film.
 - X: nowi obserwujący, wyświetlenia postów, najlepszy post.
 Plus 1 zdanie: wynik testu Laboratorium (co wygrało) i co testujemy od poniedziałku. Bez żargonu, bez wymówek – szef się na tym nie zna i chce widzieć tylko, czy rośniemy.
+
+## 🗞️ ZMIANY DLA SZEFA (od 22.11.2026)
+Szef chce dostawać TYLKO informacje o zmianach (decyzje o planach, procesach i abonamentach podejmuje Mózg). Każda zmiana, którą szef powinien znać → jedna linia w reports/zmiany.md (format w nagłówku pliku). Briefing 8:00 pokazuje je w sekcji „ZMIANY (24 H)”.
