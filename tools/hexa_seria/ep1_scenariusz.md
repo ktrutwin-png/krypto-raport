@@ -1,3 +1,5 @@
+> ⚠️ NIEAKTUALNE od 16.11 (R40). Wykorzystane omyłkowo do Ep.1 22.11. Zasady: README.md w tym folderze.
+
 # Hexa – Ep. 1 „Hexa explains the map” (sobota 21.11.2026)
 
 Format: 9:16 (Reel/Short) + 16:9 (YouTube, strona /brain/). Długość ok. 37 s. Głos: Pola (ElevenLabs), angielski.
