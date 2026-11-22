@@ -129,3 +129,21 @@ Kod: `C:\Hexa\lab` (silnik `lab_silnik.py`, boty `boty\*.py`, start `START_LAB.p
 **Nowe pomysły:** dziś bez nowych strategii – noc w całości na M8 (priorytet szefa). Aktywne procesy: 10/10.
 
 **Najlepszy:** LAB_Donchian_XAG +1032,53 $ (3/3). W M8 na żywo – na razie H4/D1 złota (otwarte na plusie), M15 najsłabszy (PF 0,73).
+
+---
+
+## 2026-11-22 (noc 5) – M8 przegląd, M9 ruszyło: zbieracz memów + Bot C
+
+**Przegląd (konto demo botów 5058971085, trade_mode DEMO; Hexa/Turbo/Indeksy bez pozycji, nietknięte):** weekend – rynki zamknięte, MT5 bez nowych zamknięć. Lab MT5: 19 zamkniętych, +1148,58 $ (Donchian_XAG 3/3 +1032,53 $, znów SHORT srebra). M8 na MT5: 13 tr., −96 $, PF 0,68; otwarte H4/D1 złota po +43 $, srebro H4 +49/+41 $. IBKR M8 D1 SHORT czeka na otwarcie rynku (zlecenie PreSubmitted, ponawia co 15 min). Kraken: KR_RSI2_H4 zamknął SHORT XRP **+55,88 €** (TP) i otworzył SHORT BTC i XRP; KR_M8_D1 trzyma SHORT BTC/ETH. eToro DEMO (`account: demo` w odpowiedzi): GOLD SHORT +2,50 $. Wszystkie 10 procesów żyło, logi bez błędów.
+
+**M8:** kroki 1–3 na bieżąco, do werdyktu (~20 transakcji na wariant) daleko – kroku 4 nie zaczynam.
+
+**Wyłączone (lekcja): nic.** **Zawieszony:** LAB_IB_RSI2_AUD (plik `_off`, aktywny=false) – 0 transakcji w 4 dni, z czego półtora dnia Gateway nie działał; bez werdyktu, slot oddany M9.
+
+**M9 – nowe:**
+- 🆕 **KROK 0 – zbieracz** `C:\Hexa\lab\memy\zbieracz.py`: co 3 min GeckoTerminal (nowe i trendujące pule Solany), DexScreener (profile, boosty, ceny/płynność/wolumen/kupna-sprzedaże), RugCheck dla kandydatów bota A (10–180 min, płynność ≥ 10k) i B (≥ 3 dni, ≥ 250k). Tylko odczyt, 0 €, bez kluczy. Autostart w START_WSZYSTKO (kopia .bak), test restartu przeszedł (wykrycie → zabicie → BRAK → start → druga instancja sama się zamyka). Pierwsze cykle: 165 tokenów, 0 błędów. Do poprawy: „top 10 bez puli” nie zawsze odcina konto puli (np. PUMP 59,5%) – dopracuję przy bocie A.
+- 🆕 **Bot C – backtest** 56 wariantów na DOGE/SHIB/PEPE/BONK/WIF/FLOKI (wszystkie są na Kraken EUR). Wybicia Donchiana i skoki wolumenu – PF sprawdzianu 0,3–0,75 ❌ (koszt 1% w obie strony > przewaga). Przeżył tylko **H4 EMA20/50 + wolumen 1,5×, filtr BTC, SL 2 ATR, trailing 3 ATR: nauka PF 1,82 (n75), sprawdzian PF 1,51 (n35)**. Puszczony na papier jako `LAB_KR_M9_MemyC` (50 € na transakcję, tylko LONG). Dziś BTC pod EMA50 H4 → filtr nie pozwala wejść – i dobrze.
+
+**Lekcje:** na memach liczy się koszt, nie trafność – trafność zwycięzcy to 29%, zarabia kilka dużych trendów. Filtr BTC podnosi PF (1,30 → 1,51) i zmniejsza obsunięcie.
+
+**Najlepszy:** LAB_Donchian_XAG +1032,53 $ (3/3). Aktywne procesy: 10/10 + zbieracz memów.
