@@ -19,3 +19,5 @@ Planista codziennie 07:31 aktualizuje ten plik i C:\Hexa\plan\na_dzis.json (sekc
 - ZASADA SZEFA 22.11: NIC na laptopie – każde zadanie i działanie na serwerze/w chmurze; ma działać przy zamkniętym laptopie i padniętym telefonie. Z022: prompty → serwer (partia 2), odpięcie zadań przypiętych do DESKTOP-20N25SR – pon. 23.11 z szefem w aplikacji desktop.
 - Za dużo otwartych rozkazów: plan_wzrostu 29 otwartych – Planista co tydzień zamyka nieaktualne (R27/R34 zastąpione R40 itd.).
 - X: codzienna obecność (nie tylko odcinki) – 1 post dziennie z najlepszego Reela (do testu w Laboratorium).
+
+- [ ] 2026-11-22 (Mózg, szef: „sprawdź i w razie dobrej jakości wdróż”): TEST RUCHOMYCH GRAFIK – darmowy image-to-video Wan na serwerze (C:\Hexa\generatory\wan_api.txt) na 3 grafikach z banku (5 s, 9:16). Kryteria: ostrość, brak zniekształceń i napisów, czas < 5 min/scena. Jeśli OK → wdrożyć do kino.py (1–2 sceny ruchome na Reel), linia w zmiany.md. Jeśli nie → zostaje ruch kamery.
