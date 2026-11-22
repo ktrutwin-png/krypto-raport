@@ -24,3 +24,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-22 12:47 | Grafiki: min. 2 nowe obrazy dziennie, bez powtórek 14 dni
 - 2026-11-22 13:47 | Analityk: nowe kontrole ryzyka, błędów i przed otwarciem
 - 2026-11-22 15:35 | Hexa: karta postaci – jeden stały wygląd we wszystkich grafikach
+- 2026-11-22 19:35 | Inspektor: 4 nowe stałe reguły z powtarzających się błędów (zadania w chmurze, cisza w nowych zadaniach, pula eToro od razu, „działa” dopiero po restarcie)

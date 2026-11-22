@@ -179,3 +179,7 @@ Każda poprawka szefa albo błąd, który wrócił ≥ 2 razy, staje się tu sta
 - 2026-11-22 – Seria Hexa robiona TYLKO wg biblii i R40 (nie ze starych scenariuszy); Hexa kończy „Comment HEXA”, w opisie link /brain/ – Reżyser, kontroler serii
 - 2026-11-22 – Nic nie działa na laptopie; wszystko na serwerze – wszyscy
 - 2026-11-22 – Na Telegram tylko briefing 8:00 i raport 22:00 – wszyscy
+- 2026-11-22 – Nowe zadanie/przypomnienie tworzyć tylko w chmurze: po utworzeniu sprawdzić w list_triggers, że nie ma bound_device (DESKTOP-20N25SR) – Mózg (Z006, Z012, Z025, Z022)
+- 2026-11-22 – Każde nowe zadanie ma w prompcie CISZĘ (bez push/Telegrama/„daj szefowi” poza wyjątkami z sekcji CISZA) – Mózg przy tworzeniu zadań (Z004, Z017, Z038, Kontrola Ep.2)
+- 2026-11-22 – Każde otwarcie pozycji na eToro (także bot Laboratorium) = od razu wiersz w Transakcje z pulą w kol. B i positionId – wszystkie zadania i boty eToro (Z001, Z037)
+- 2026-11-22 – Zmiana kodu działającego procesu: w UPDATE i zmiany.md pisać „czeka na restart (Z…)”, a „działa” dopiero po restarcie i świeżym logu – Agent Skanery, Mechanik, Mózg (Z024, Z040)
