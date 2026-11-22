@@ -326,3 +326,4 @@ UPDATE: 2026-11-22 00:15 (Zwiadowca skilli) nowe: remotion-best-practices, remot
 2026-11-22 05:48 | Kalendarz | dziś brak ważnych danych | ok
 2026-11-22 05:49 | Sekretarz | kosz: 2 wątków, wypisano: 0 | ok
 2026-11-22 05:49 | Sekretarz | DO RAPORTU: odpowiedź supportu ElevenLabs ws. anulowania faktury rocznej (czeka na ruch szefa); kalendarz 27.11: zakładanie konta MT5 + abonament Claude Max; brak podejrzanych zaproszeń
+2026-11-22 10:30 | Reżyser | Weekly Market Brief: Week in Markets: Nasdaq -10%, BTC -14% | Gold, Bitcoin, Fed, China | YT ok/IG ok | ok
