@@ -1,0 +1,64 @@
+{
+ "date": "22.11.2026",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "style": "news",
+ "ticker": "BTC $61,189 ▲2.1% · ETH $1,722 ▲2.4% · GOLD $3,538 ▲0.1% · FEAR & GREED 8",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "LIVE MARKET UPDATE",
+   "head": [
+    "BTC -21% IN NOV.",
+    "*TODAY +2%*"
+   ],
+   "chip": "▲ $61,189",
+   "anim": {
+    "dir": "up",
+    "label": "$61.2K"
+   },
+   "say": "Bitcoin is down twenty one percent this month, but today it bounced two percent, back to sixty one thousand.",
+   "move": "in"
+  },
+  {
+   "img": "s2.jpg",
+   "head": [
+    "RLUSD $2.85B",
+    "*TOP 5 STABLECOIN*"
+   ],
+   "chip": "▲ USDC +$250M MINTED",
+   "note": "STABLECOIN CASH STILL ARRIVING",
+   "say": "Ripple's R L U S D reportedly joined the top five stablecoins, and Circle minted two hundred fifty million U S D C.",
+   "move": "out"
+  },
+  {
+   "img": "s3.jpg",
+   "head": [
+    "GOLD $3,538",
+    "~NEAR 52-WEEK LOW~"
+   ],
+   "sub": "FED DECISION: DEC 9",
+   "note": "FLAT INTO THE WEEKEND",
+   "say": "Gold sits flat near its yearly low, with the Fed due December ninth.",
+   "move": "up"
+  },
+  {
+   "img": "s4.jpg",
+   "d3": {
+    "typ": "pokretlo",
+    "p": {
+     "od": 0.48,
+     "do": 0.08
+    }
+   },
+   "head": [
+    "FEAR 8 · $64K NEXT?",
+    "*BOUNCE OR TRAP?*"
+   ],
+   "sub": "BULL OR BEAR BY FRIDAY? 🐂/🐻",
+   "note": "SEND THIS TO A FRIEND WHO HOLDS BTC",
+   "say": "Fear is at eight. Is minus twenty one the bottom? Bounce or trap by Friday? Not financial advice, just data.",
+   "move": "down"
+  }
+ ]
+}
