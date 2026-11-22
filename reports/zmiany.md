@@ -12,3 +12,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-22 11:15 | Briefing/raport idą jako JPEG – naprawiony błąd 8:00
 - 2026-11-22 11:30 | Strażnik: alarm do Ciebie tylko gdy musisz działać sam
 - 2026-11-22 11:29 | Poczta: maile z kodami nigdy do kosza
+- 2026-11-22 11:34 | Serwer: Windows nie restartuje się już sam w nocy
