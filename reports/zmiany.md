@@ -21,3 +21,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-22 11:50 | Social Media: błędy do dziennika, zero powiadomień
 
 - 2026-11-22 12:32 | Reele i grafiki: pełne, żywe neonowe kolory (test 2 tyg.)
+- 2026-11-22 12:47 | Grafiki: min. 2 nowe obrazy dziennie, bez powtórek 14 dni
