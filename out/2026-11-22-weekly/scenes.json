@@ -1,0 +1,288 @@
+{
+ "date": "WEEK 47 · 16–20.11.2026",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "style": "news",
+ "format": "landscape",
+ "ticker": "NASDAQ 22,618 ▼10.0% W/W · S&P 500 6,910 ▼8.6% · BTC $58,950 ▼13.7% · ETH $1,623 ▼15.9% · GOLD $3,521 ▼9.2% · SILVER $41 ▼16% · US 10Y 4.92% ▼23BP · VIX 35.9 ▲86% · BRENT $92.6 ▼3.4% · DXY 103.8 ▲0.4% · USD/CNY 6.67",
+ "scenes": [
+  {
+   "img": "nasdaq_chip_crash_vix_w01.jpg",
+   "tag": "WEEKLY MARKET BRIEF",
+   "chap": "WEEK 47 · 2026",
+   "head": [
+    "NASDAQ -10%.",
+    "*BITCOIN -14%.*",
+    "*GOLD -9%.*"
+   ],
+   "sub": "EVERYTHING SOLD AT ONCE",
+   "move": "in",
+   "say": "The Nasdaq lost ten percent, its worst week since March twenty twenty. Bitcoin fell fourteen percent and broke below sixty thousand dollars. And gold dropped nine percent, right in the middle of the panic. This is your week in markets, in five minutes, with facts, not hype."
+  },
+  {
+   "img": "gold_bars_falling_dollar_w01.jpg",
+   "chap": "01 · GOLD",
+   "head": [
+    "GOLD",
+    "*$3,901 → $3,504*"
+   ],
+   "chip": "▼ -9.2% ON THE WEEK",
+   "anim": {
+    "dir": "down",
+    "label": "$3,521"
+   },
+   "note": "HIGH MONDAY · LOW FRIDAY",
+   "move": "right",
+   "say": "Let's start with gold. On Monday it traded near three thousand nine hundred dollars an ounce. By Friday it touched about three thousand five hundred and four, its lowest level in roughly fourteen months. It closed the week near three thousand five hundred twenty, down about nine percent."
+  },
+  {
+   "img": "gold_bars_falling_dollar_w01.jpg",
+   "chap": "01 · GOLD",
+   "head": [
+    "SILVER -16%",
+    "*DOLLAR: 19-MONTH HIGH*"
+   ],
+   "note": "SAFE HAVEN? NOT THIS WEEK",
+   "move": "out",
+   "say": "Silver was hit even harder, down about sixteen percent. Why did safe havens fall? The dollar index touched a nineteen month high on Thursday, and the Fed signaled another rate hike. The round number to watch now is three thousand five hundred."
+  },
+  {
+   "img": "china_vault_yuan_w01.jpg",
+   "chap": "02 · CHINA",
+   "head": [
+    "RETAIL SALES +0.4%",
+    "*FORECAST: 0.8%*"
+   ],
+   "chip": "FACTORY OUTPUT +4.8% · MISS",
+   "note": "OCTOBER DATA, YEAR ON YEAR",
+   "move": "in",
+   "say": "Now China. October data disappointed across the board. Retail sales grew just zero point four percent from a year earlier, half of what economists expected. Factory output rose four point eight percent, also below forecasts. Investment fell eight point one percent this year."
+  },
+  {
+   "img": "world_markets_storm_w01.jpg",
+   "chap": "02 · CHINA",
+   "head": [
+    "LPR 3.00%",
+    "*YUAN 6.67*"
+   ],
+   "chip": "RATES ON HOLD AGAIN",
+   "note": "US MOVES TO BLOCK NVIDIA RENTALS",
+   "move": "left",
+   "say": "On Friday the People's Bank of China kept its one year loan prime rate at three percent. The yuan stayed calm near six point six seven per dollar. Meanwhile, Washington reportedly moved to stop Chinese firms from renting Nvidia computing power in data centers abroad."
+  },
+  {
+   "img": "ai_chip_selloff_w01.jpg",
+   "d3": {
+    "typ": "liczba",
+    "p": {
+     "text": "-10%",
+     "sub": "NASDAQ",
+     "kolor": "silver",
+     "kolor2": "gold",
+     "seed": 47
+    }
+   },
+   "chap": "03 · USA",
+   "head": [
+    "NASDAQ -10%",
+    "*WORST WEEK SINCE 2020*"
+   ],
+   "chip": "S&P 500 -8.6% · DOW -8%",
+   "move": "right",
+   "say": "Wall Street had a brutal week. The Nasdaq Composite fell about ten percent, its worst week since March twenty twenty. The S and P five hundred dropped eight point six percent and fell on all five days. The S and P and the Dow are now both in correction territory."
+  },
+  {
+   "img": "ai_chip_selloff_w01.jpg",
+   "chap": "03 · USA",
+   "head": [
+    "NVIDIA -23%",
+    "*IN ONE WEEK*"
+   ],
+   "chip": "REVENUE $115.8B · +103%",
+   "note": "REPORTED SEC ACCOUNTING REVIEW",
+   "move": "out",
+   "say": "The trigger was artificial intelligence. Nvidia reported quarterly revenue of almost one hundred sixteen billion dollars, more than double a year ago. But the stock still fell almost twenty three percent on the week. On Friday alone it lost fourteen percent, after Reuters reported that SEC staff are looking at possible accounting issues. Reuters says this does not establish wrongdoing."
+  },
+  {
+   "img": "world_markets_storm_w01.jpg",
+   "chap": "03 · USA",
+   "head": [
+    "VIX 35.9",
+    "*10Y 4.92%*"
+   ],
+   "chip": "FEAR INDEX +86% · YIELD -23 BP",
+   "note": "TAIWAN -17.5% · NIKKEI -5%",
+   "move": "in",
+   "say": "Fear spread fast. The VIX volatility index jumped eighty six percent to almost thirty six. Investors ran to bonds, and the US ten year yield fell from five point one five to about four point nine two percent. In Asia, Taiwan's market posted a record weekly loss of seventeen and a half percent."
+  },
+  {
+   "img": "fed_hike_lever_chamber_w01.jpg",
+   "chap": "04 · THE FED",
+   "head": [
+    "FED MINUTES:",
+    "*DECEMBER HIKE*"
+   ],
+   "chip": "RATE NOW ~3.9%",
+   "note": "TWO OFFICIALS FLOATED +0.50%",
+   "move": "left",
+   "say": "Now the Fed. The minutes of the October meeting, released on Wednesday, showed that nearly all officials expect a quarter point rate hike in December. A large majority worried that inflation could stay high."
+  },
+  {
+   "img": "fed_rate_dial_jobs_w01.jpg",
+   "chap": "04 · THE FED",
+   "head": [
+    "HIKE ODDS ~90%",
+    "*DECISION: DEC 9*"
+   ],
+   "chip": "1Y INFLATION EXPECTATIONS 3.7%",
+   "move": "right",
+   "say": "Prediction market Kalshi puts the chance of a December hike at about ninety percent. One small relief: one year inflation expectations from the University of Michigan fell to three point seven percent, the lowest since March. Higher rates make cash and bonds more attractive, and that weighs on gold and bitcoin."
+  },
+  {
+   "img": "btc_breaks_60k_floor_w01.jpg",
+   "chap": "05 · BITCOIN",
+   "head": [
+    "BITCOIN",
+    "*$65,696 → $57,778*"
+   ],
+   "chip": "▼ -13.7% ON THE WEEK",
+   "anim": {
+    "dir": "down",
+    "label": "$58,951"
+   },
+   "note": "SATURDAY LOW ~$55,100",
+   "move": "out",
+   "say": "Bitcoin. It started the week near sixty five thousand seven hundred dollars. On Friday it broke below sixty thousand for the first time since July, and closed near fifty eight thousand nine hundred fifty, down almost fourteen percent. On Saturday it briefly touched about fifty five thousand, then bounced back above sixty thousand."
+  },
+  {
+   "img": "btc_etf_outflow_tower_w01.jpg",
+   "chap": "05 · BITCOIN",
+   "head": [
+    "ETFS -$1.25B",
+    "*4 DAYS OF OUTFLOWS*"
+   ],
+   "chip": "IBIT RECORD: -$541M ON THURSDAY",
+   "note": "ETHER ETFS -$222M",
+   "move": "in",
+   "say": "Money kept leaving the spot bitcoin ETFs. Weekly net outflows reached about one point two five billion dollars. On Thursday, BlackRock's fund saw five hundred forty one million dollars walk out, its largest one day withdrawal since launch. Ether ETFs lost another two hundred twenty two million."
+  },
+  {
+   "img": "btc_breaks_60k_floor_w01.jpg",
+   "d3": {
+    "typ": "swiece",
+    "p": {
+     "dir": "down",
+     "dane": [
+      68314,
+      64150,
+      65351,
+      64882,
+      64947,
+      63068,
+      61986,
+      58951,
+      60215
+     ],
+     "seed": 47
+    }
+   },
+   "chap": "05 · BITCOIN",
+   "head": [
+    "BTC + NASDAQ",
+    "*SAME DIRECTION*"
+   ],
+   "move": "left",
+   "say": "Notice the pattern. Bitcoin did not act like digital gold this week. It moved together with tech stocks, as investors cut risk everywhere at once. The key round number now is sixty thousand dollars."
+  },
+  {
+   "img": "gold_vs_btc_scale_w01.jpg",
+   "chap": "06 · CRYPTO",
+   "head": [
+    "ETHER -16%",
+    "*$1,623*"
+   ],
+   "chip": "LOW ~$1,540 ON SATURDAY",
+   "anim": {
+    "dir": "down",
+    "label": "$1,623"
+   },
+   "move": "right",
+   "say": "Ether fell even more than bitcoin, about sixteen percent on the week, to around one thousand six hundred twenty three dollars. On Saturday it dipped to roughly one thousand five hundred forty. Forced selling of leveraged bets hit the whole market."
+  },
+  {
+   "img": "hack_ice_vault_w02.jpg",
+   "chap": "06 · CRYPTO",
+   "head": [
+    "BINANCE HACK",
+    "*LAUNDERING CONTINUES*"
+   ],
+   "chip": "$149M BTC MIXED · ~$248M ETH MOVED",
+   "note": "PER ELLIPTIC & LOOKONCHAIN",
+   "move": "out",
+   "say": "Security news. Funds linked to the October Binance breach are on the move again. According to Elliptic, about one hundred forty nine million dollars in bitcoin was pushed through coinjoin mixers, and Lookonchain tracked roughly two hundred forty eight million dollars in ether leaving wallets linked to the breach."
+  },
+  {
+   "img": "tokenization_bonds_chain_w01.jpg",
+   "chap": "07 · TOKENIZATION",
+   "head": [
+    "RWA $40.9B",
+    "*TOKENIZED ON-CHAIN*"
+   ],
+   "chip": "TREASURIES $14.1B",
+   "note": "SOURCE: RWA.XYZ",
+   "move": "in",
+   "say": "Tokenization. According to RWA dot xyz, real world assets distributed on blockchains are worth about forty point nine billion dollars, down nearly four percent in thirty days. Tokenized US Treasuries hold about fourteen point one billion. The biggest single product is Ondo's dollar yield token, at about two point four billion."
+  },
+  {
+   "img": "tokenization_bonds_chain_w01.jpg",
+   "chap": "07 · TOKENIZATION",
+   "head": [
+    "DBS + JPMORGAN",
+    "*24/7 DOLLAR TRANSFERS*"
+   ],
+   "chip": "SINGAPORE ↔ USA · ON-CHAIN",
+   "note": "TOKENIZED DEPOSITS, EVEN ON WEEKENDS",
+   "move": "left",
+   "say": "Big banks keep building, even in a falling market. DBS and JPMorgan launched a service that lets institutions move tokenized dollar deposits between Singapore and the United States around the clock, including weekends. Ant International is the first client."
+  },
+  {
+   "img": "oil_tanker_plunge_w01.jpg",
+   "chap": "08 · OIL",
+   "head": [
+    "BRENT $92.6",
+    "*3RD WEEKLY LOSS*"
+   ],
+   "chip": "▼ -3.4% ON THE WEEK",
+   "anim": {
+    "dir": "chop",
+    "label": "$92.6"
+   },
+   "note": "TANKER FIRE NEAR HORMUZ",
+   "move": "right",
+   "say": "Oil. Brent crude closed Friday near ninety two dollars sixty, its third weekly loss in a row, as Gulf supplies kept flowing to Asia. Prices still ticked up late Friday after a tanker fire near the Strait of Hormuz. OPEC plus meets on November twenty ninth to set output for twenty twenty seven."
+  },
+  {
+   "img": "week_ahead_calendar_w01.jpg",
+   "chap": "NEXT WEEK",
+   "head": [
+    "WED: PCE + GDP",
+    "*THU: US CLOSED*"
+   ],
+   "chip": "MON FLASH PMIS · TUE CONFIDENCE",
+   "note": "DEC 4 JOBS · DEC 9 FED · DEC 10 CPI",
+   "move": "in",
+   "say": "Next week is short. Monday brings flash PMI data, Tuesday consumer confidence. Wednesday is the big day: October PCE inflation, the Fed's favorite gauge, plus GDP, durable goods and jobless claims. Thursday US markets are closed for Thanksgiving, and Friday is a half day. Then jobs on December fourth and the Fed on December ninth."
+  },
+  {
+   "img": "gold_vs_btc_scale_w01.jpg",
+   "chap": "QUESTION OF THE WEEK",
+   "head": [
+    "STOCKS, GOLD",
+    "*OR BITCOIN?*"
+   ],
+   "sub": "WHO BOUNCES FIRST?",
+   "move": "left",
+   "say": "So here is the question of the week. After the worst week in years, what bounces first: stocks, gold or bitcoin? Write your answer in the comments. Subscribe for daily crypto and gold facts, and see you next Sunday. This is not financial advice, just data."
+  }
+ ]
+}
