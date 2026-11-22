@@ -23,3 +23,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-22 12:32 | Reele i grafiki: pełne, żywe neonowe kolory (test 2 tyg.)
 - 2026-11-22 12:47 | Grafiki: min. 2 nowe obrazy dziennie, bez powtórek 14 dni
 - 2026-11-22 13:47 | Analityk: nowe kontrole ryzyka, błędów i przed otwarciem
+- 2026-11-22 15:35 | Hexa: karta postaci – jeden stały wygląd we wszystkich grafikach

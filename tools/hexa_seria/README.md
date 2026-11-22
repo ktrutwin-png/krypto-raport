@@ -28,3 +28,6 @@ c) opis IG/YT: „Comment HEXA”, „Link in bio”, „Hexa's Adventures – e
 d) zaplanowane na 3 platformach (IG Reel, YT Short, X) na sobotę 21:00, flagi AI ustawione;
 e) min. 8 klatek obejrzanych: pełny ekran, ostre, napisy w polu bezpiecznym (nie w górnych 220 px ani dolnych 300 px), bez literówek, liczby zgodne z reports/roj_status.json;
 f) plansza końcowa zapowiada właściwy następny odcinek wg R40.
+
+## KARTA POSTACI (Mózg 22.11.2026) – OBOWIĄZKOWY WZÓR WYGLĄDU
+marka/Hexa_karta_postaci_B.png (główna) + marka/Hexa_karta_postaci_A.png: twarz ze złotymi oczami, ensō na czole (złote = mówi/aktywna, czerwone = złość, przygaszone = spokój), świecące niebiesko-fioletowe włosy ze światła, ciemny dopasowany strój ze złoto-cyjanowymi liniami, szpilki. Każdy obraz/film Hexy generuj z referencją tej karty + marka/Hexa_postac.png. Miny: lekki uśmiech, oczko, zamyślenie, złość.
