@@ -328,3 +328,4 @@ UPDATE: 2026-11-22 00:15 (Zwiadowca skilli) nowe: remotion-best-practices, remot
 2026-11-22 05:49 | Sekretarz | DO RAPORTU: odpowiedź supportu ElevenLabs ws. anulowania faktury rocznej (czeka na ruch szefa); kalendarz 27.11: zakładanie konta MT5 + abonament Claude Max; brak podejrzanych zaproszeń
 2026-11-22 10:30 | Reżyser | Weekly Market Brief: Week in Markets: Nasdaq -10%, BTC -14% | Gold, Bitcoin, Fed, China | YT ok/IG ok | ok
 UPDATE: 2026-11-22 11:15 (Mózg) Briefing 8:00 nie doszedł: Telegram 400 IMAGE_PROCESS_FAILED na PNG. raport22.wyslij() wysyła teraz zawsze JPEG (dotyczy też raportu 22:00); briefing 22.11 wysłany ręcznie 11:14 – telegram True.
+UPDATE: 2026-11-22 11:41 (Mózg) Z022 część: Nauczyciel trig_01SStiBZ czyta pliki z serwera zamiast laptopa (prompt). UWAGA: zadanie nadal przypięte do laptopa DESKTOP-20N25SR – odpięcie tylko w aplikacji desktop szefa.
