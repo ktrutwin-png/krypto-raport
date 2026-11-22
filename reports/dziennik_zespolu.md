@@ -329,3 +329,4 @@ UPDATE: 2026-11-22 00:15 (Zwiadowca skilli) nowe: remotion-best-practices, remot
 2026-11-22 10:30 | Reżyser | Weekly Market Brief: Week in Markets: Nasdaq -10%, BTC -14% | Gold, Bitcoin, Fed, China | YT ok/IG ok | ok
 UPDATE: 2026-11-22 11:15 (Mózg) Briefing 8:00 nie doszedł: Telegram 400 IMAGE_PROCESS_FAILED na PNG. raport22.wyslij() wysyła teraz zawsze JPEG (dotyczy też raportu 22:00); briefing 22.11 wysłany ręcznie 11:14 – telegram True.
 UPDATE: 2026-11-22 11:41 (Mózg) Z022 część: Nauczyciel trig_01SStiBZ czyta pliki z serwera zamiast laptopa (prompt). UWAGA: zadanie nadal przypięte do laptopa DESKTOP-20N25SR – odpięcie tylko w aplikacji desktop szefa.
+2026-11-22 11:50 | Mózg | UPDATE: 2026-11-22 11:50 prompty: Sekretarz, Inspektor, Pisarz, Mechanik, Wyniki 7.12, Shorts (18:47), Analityk, Reel 10:00 (+YT), Social Media, Rok minął – serwer zamiast laptopa, Z013/Z022/Z033/Z038/Z039 | ok

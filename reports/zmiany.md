@@ -13,3 +13,10 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-22 11:30 | Strażnik: alarm do Ciebie tylko gdy musisz działać sam
 - 2026-11-22 11:29 | Poczta: maile z kodami nigdy do kosza
 - 2026-11-22 11:34 | Serwer: Windows nie restartuje się już sam w nocy
+- 2026-11-22 11:50 | Sekretarz już nie kasuje maili – tylko Czyszczenie 07:17
+- 2026-11-22 11:50 | Inspektor, Mechanik, Pisarz, Analityk pracują na serwerze
+- 2026-11-22 11:50 | Reel 10:00 sam idzie na IG i YouTube, bez Telegrama
+- 2026-11-22 11:50 | YT Shorts wieczorem 18:47, czeka na raport do 25 min
+- 2026-11-22 11:50 | Raport sobotni: najpierw liczby wzrostu IG/YT/X
+- 2026-11-22 11:50 | Social Media: błędy do dziennika, zero powiadomień
+
