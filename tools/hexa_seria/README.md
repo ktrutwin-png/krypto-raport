@@ -9,4 +9,13 @@
    Odcinek = planeta-serwer + boss + nowy klocek + Rytuał (5–6 s) + lekcja „jak dać ten klocek swojemu AI”. Bez krypto/złota.
 3. **Zakończenie każdego odcinka: Hexa MÓWI wezwanie** – „Comment HEXA and I'll send you the map.” (głos Pola, OmniHuman, na ekranie napis COMMENT „HEXA”).
 4. **Link w opisie** do strony Hexy z repozytoriami/klockami: https://erlgrey83-crypto-freaq.vercel.app/brain/ (ta sama co DM za komentarz HEXA, R31) + „Link in bio”.
-5. Przed renderem: sprawdź punkty 1–4 i pokaż szefowi scenariusz (1 akapit) – zmiana względem biblii tylko za jego zgodą.
+5. Szef 22.11: „ty decydujesz o grafikach o wszystkim … ma wyglądać nowocześnie i zajebiście, nie tandetnie”. Bez pytania o zgodę – ale zgodnie z biblią.
+6. JAKOŚĆ (zakaz „tandety”): kino pełnoekranowe 9:16, żadnych płaskich paneli z kółkami/ikonkami. Sceny planety-serwera i bossa = wideo AI
+   (ElevenLabs: kling-3-pro / seedance-v2.5, 9:16, 1080p, prompt filmowy: głębia, światło wolumetryczne, mokre odbicia, ruch kamery),
+   Hexa mówi = OmniHuman 1.5 (max 30 s audio na klip – dziel), Rytuał 5–6 s zawsze te same ujęcia (zapisz raz w ep2/rytual.mp4 i używaj ponownie).
+   Napisy: duże, 2–4 słowa naraz, środek-dół, Anton/Inter, podświetlenie słowa. Muzyka filmowa cicho pod głosem. 30–60 s.
+   Przed publikacją obejrzyj min. 6 klatek – jeśli cokolwiek wygląda tanio, popraw zanim wyjdzie.
+7. Budżet ElevenLabs na odcinek: max 60 000 kr. (sprawdź account_get_usage; zostaw min. 150 000 kr. na resztę miesiąca). Zawsze estimate_only przed wideo.
+8. Publikacja: SOBOTA 21:00 (Europe/Amsterdam) jednocześnie IG Reel + YT Short (Metricool brandId 7613270, isAiGenerated true)
+   oraz X (Typefully social_set 366138; wideo < 10 MB → ffmpeg 720×1280 2-pass ~1,8 Mb/s, made_with_ai true; w treści link /brain/).
+   W opisie IG/YT: CTA „Comment HEXA 👇” + link w bio. Wersja 16:9 na /brain/.
