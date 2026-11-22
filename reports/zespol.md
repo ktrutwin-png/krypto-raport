@@ -157,3 +157,10 @@ WYMIANA NA LEPSZE (repo, skill, narzędzie, agent): wszystko jest połączone �
 - Etap 3: prawdziwe pieniądze tylko po „wdróż” szefa, małe kwoty, twardy SL, limit straty dziennej; klucz API wpisuje szef (tylko handel, bez wypłat).
 - Ryzyko do pilnowania: margin Krakena liczy zabezpieczenie z CAŁEGO konta (strata może wyjść poza wkład); ESMA może obciąć dźwignię do 2x.
 - 14.11 21:50 ✅ ETAP 2 WYSTARTOWAŁ (szef: „postaw na sucho, 500 € demo, krótsze TP – nasze”): C:\Hexa\kraken_pro\paper_margin.py (w START_WSZYSTKO). 3 boty, każdy 500 € na niby, 10x, LONG+SHORT na XRP/BTC/ETH-EUR, wejście = reguła szefa (3 świece M15 + trend H1), bez SL, TP: 0,8% / 1,2% / ATR(min 0,8%). Koszty i likwidacja (40%, cross) jak na Kraken Pro. TP szefa ze złota (+0,3%) nie pokrywa opłat Krakena (~0,65–0,8% w obie strony) → 0,8% to najkrótsze sensowne. Wyniki: transakcje.csv, stan_*.json, agent.log. Ocena po 2 tygodniach.
+
+## 📈 WYNIKI SOCIAL W RAPORCIE TYGODNIOWYM (szef 22.11.2026: „ja po prostu chcę widzieć wyniki”)
+Każdy tygodniowy raport zespołu dla szefa (i kronika) zaczyna się krótką ramką WYNIKI – po jednej linii na platformę, tylko liczby z Metricool/Typefully (pon–niedz):
+- Instagram: nowi obserwujący (+/−, stan), wyświetlenia Reelsów (vs poprzedni tydzień), najlepszy Reel tygodnia (tytuł + wyświetlenia).
+- YouTube: nowi subskrybenci (stan), wyświetlenia (vs poprzedni tydzień), najlepszy film.
+- X: nowi obserwujący, wyświetlenia postów, najlepszy post.
+Plus 1 zdanie: wynik testu Laboratorium (co wygrało) i co testujemy od poniedziałku. Bez żargonu, bez wymówek – szef się na tym nie zna i chce widzieć tylko, czy rośniemy.
