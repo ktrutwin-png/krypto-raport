@@ -29,3 +29,9 @@ Plan produkcji (po wykupieniu Pro, najpóźniej śr 18.11):
 - Flow ElevenLabs 8XgK5aWkYdmhl4YZDo4L: portret `marka/Hexa_postac.png` + głos Pola (eleven_v4, EN, tagi [calm, warm]/[confident]) → OmniHuman 1.5, 1080p, prompt: spokojna, naturalna mimika, lekkie skinienia, mrugnięcia, włosy płyną.
 - Koszt: głos 145 kr. (9 s), wideo 8 842 kr. (9,16 s) ≈ 965 kr./s.
 - Ten sposób = standard serii. Act-Two (nagranie szefa) tylko do ujęć z gestami całego ciała, jeśli będą potrzebne.
+
+## WYKONANE 22.11.2026 (Pro „Kris's Workspace”)
+- Flow ElevenLabs hDYv2VdX6DoEDWgOjojJ. Głos Pola eleven_v4, 33,6 s (541 kr.), liczba z roj_status.json = 34 (nie 32).
+- OmniHuman 1.5 ma limit 30 s audio w 1080p → głos dzielony na 2 części (glos_a 0–15,06 s, glos_b reszta), 2 klipy (14 602 + 17 976 kr.).
+- Montaż: góra 1080×1080 Hexa (crop), dół panel scen `ep1/panel.py` (napisy słowo po słowie z words.json), plansza końcowa Ep.2, muzyka `tools/reel/music.py calm` 12%.
+- Pliki: ep1/hexa_ep1_9x16.mp4 (IG Reel / YT Short), ep1/hexa_ep1_16x9.mp4 (/brain/, YT).
