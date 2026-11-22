@@ -19,3 +19,12 @@
 8. Publikacja: SOBOTA 21:00 (Europe/Amsterdam) jednocześnie IG Reel + YT Short (Metricool brandId 7613270, isAiGenerated true)
    oraz X (Typefully social_set 366138; wideo < 10 MB → ffmpeg 720×1280 2-pass ~1,8 Mb/s, made_with_ai true; w treści link /brain/).
    W opisie IG/YT: CTA „Comment HEXA 👇” + link w bio. Wersja 16:9 na /brain/.
+
+## KONTROLA PRZED PUBLIKACJĄ (obowiązkowa, szef 22.11: „kontroluj wszystko”)
+Zanim cokolwiek zostanie zaplanowane, zapisz tools/hexa_seria/epN/kontrola.md z ✅/❌ dla każdego punktu. Każdy ❌ trzeba naprawić, a dopiero potem publikować:
+a) temat, planeta, boss i klocek zgodne z biblią i kalendarzem R40 na tę datę;
+b) Hexa na końcu MÓWI „Comment HEXA and I'll send you the map” (sprawdź w transkrypcji) + napis COMMENT „HEXA”;
+c) opis IG/YT: „Comment HEXA”, „Link in bio”, „Hexa's Adventures – every Saturday”; X: link /brain/;
+d) zaplanowane na 3 platformach (IG Reel, YT Short, X) na sobotę 21:00, flagi AI ustawione;
+e) min. 8 klatek obejrzanych: pełny ekran, ostre, napisy w polu bezpiecznym (nie w górnych 220 px ani dolnych 300 px), bez literówek, liczby zgodne z reports/roj_status.json;
+f) plansza końcowa zapowiada właściwy następny odcinek wg R40.
