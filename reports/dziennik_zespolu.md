@@ -324,3 +324,5 @@ UPDATE: 2026-11-22 00:15 (Zwiadowca skilli) nowe: remotion-best-practices, remot
 2026-11-22 04:47 | Mechanik | DO RAPORTU: poprawka dla CISZY (harmonogram): Strażnik, Social Media i Test IBKR – błędy do dziennika zespołu zamiast do szefa; push=false w 9 cichych zadaniach (szef ręcznie w ustawieniach), przyczyna/test: 7 pushy Strażnika w tygodniu poza raportami
 2026-11-22 04:47 | Mechanik | DO RAPORTU: poprawka dla poczty (harmonogram): kosz tylko w Czyszczeniu, z regułą „maile bezpieczeństwa/kody nigdy do kosza”; Sekretarz bez kosza, przyczyna/test: 2 zadania z różnymi regułami, Czyszczenie kasuje maile bezpieczeństwa starsze niż 30 dni
 2026-11-22 05:48 | Kalendarz | dziś brak ważnych danych | ok
+2026-11-22 05:49 | Sekretarz | kosz: 2 wątków, wypisano: 0 | ok
+2026-11-22 05:49 | Sekretarz | DO RAPORTU: odpowiedź supportu ElevenLabs ws. anulowania faktury rocznej (czeka na ruch szefa); kalendarz 27.11: zakładanie konta MT5 + abonament Claude Max; brak podejrzanych zaproszeń
