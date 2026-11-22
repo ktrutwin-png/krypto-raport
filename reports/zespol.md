@@ -167,3 +167,9 @@ Plus 1 zdanie: wynik testu Laboratorium (co wygrało) i co testujemy od poniedzi
 
 ## 🗞️ ZMIANY DLA SZEFA (od 22.11.2026)
 Szef chce dostawać TYLKO informacje o zmianach (decyzje o planach, procesach i abonamentach podejmuje Mózg). Każda zmiana, którą szef powinien znać → jedna linia w reports/zmiany.md (format w nagłówku pliku). Briefing 8:00 pokazuje je w sekcji „ZMIANY (24 H)”.
+
+## REGUŁY Z POPRAWEK (od 22.11.2026)
+Każda poprawka szefa albo błąd, który wrócił ≥ 2 razy, staje się tu stałą regułą (jedna linia: data – reguła – kogo dotyczy). Wszyscy agenci czytają tę sekcję przed pracą.
+- 2026-11-22 – Seria Hexa robiona TYLKO wg biblii i R40 (nie ze starych scenariuszy); Hexa kończy „Comment HEXA”, w opisie link /brain/ – Reżyser, kontroler serii
+- 2026-11-22 – Nic nie działa na laptopie; wszystko na serwerze – wszyscy
+- 2026-11-22 – Na Telegram tylko briefing 8:00 i raport 22:00 – wszyscy
