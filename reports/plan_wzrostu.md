@@ -121,6 +121,7 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - ROZKAZ R1–R5, R7: zrobione – Reel 07.11 10:00: 24,0 s, 5 scen; note 64 px biel na ciemnym pasku, sub/chip zielone ≥44 px; 5 nowych obrazów (bank *_holo_01 z 7.11), ostatnia scena z własnym obrazem; każda scena move + anim/chip/note; ticker y≈1470; wpis w dzienniku zespołu (reports/2026-11-07-reel)
 - 2026-11-09: IG 166 (skok +67 w 1 dzien – prawdopodobnie boty, do wyjasnienia), YT 10, spoza obserwujacych ~25% (7 dni) | najlepszy filar tyg. 1: WEEK IN 30s (skip 54.5%); hook-wzor: kontrast dwoch aktywow
 - 2026-11-16: IG 121 (spadek po czystce kont-botów z 08-10.11; nowi obserwujący 7 dni: 37), YT 13, spoza obserwujących ~69% (7 dni 09-15.11: 82 z 118 – skok 15.11 dzięki Reelowi Hexy „Comment HEXA”: zasięg 44, wyśw. 94) | filar zamieniony: ONE NUMBER → ETF FLOWS (najsłabszy 2 tyg. z rzędu: skip 100%, zasięg 5)
+- 2026-11-23: IG 121 (7 dni 16-22.11: nowi 4, zasieg 353, wysw. 557), YT 15 (Metricool, +2 tydz.), X – brak liczby obserwujacych (Typefully nie podaje), spoza obserwujacych ~90% (319 z 353) | filar bez zamiany (zaden najslabszy 2 tyg. z rzedu); do obserwacji MYTH vs FACT, BTC vs GOLD, Weekly na IG
 
 ## R13 NOWY STYL WIDEO (od szefa 10.11) — OBOWIĄZUJE Reels I YouTube Shorts
 - Każdy Reel i każdy Short w stylu tools/okladki/STYL.md (wzór: reel_szef_v2): kilka scen po 3–5 s z hexa_gen, krzykliwe nagłówki Anton, liczba dnia na żółto, lektor + muzyka, CTA pytanie.
