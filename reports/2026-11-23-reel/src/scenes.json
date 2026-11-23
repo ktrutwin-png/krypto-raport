@@ -1,0 +1,18 @@
+{
+ "date": "23.11.2026",
+ "style": "news",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $61,424 ▲2.9% · ETH $1,722 ▲2.2% · XRP $0.94 ▲1.4% · GOLD $3,611 ▲2.2% · FEAR & GREED 9",
+ "scenes": [
+  {"img": "s1.jpg", "tag": "CLAIM CHECK", "head": ["$11B UNDERWATER", "*FORCED TO SELL?*"], "chip": "▼ COST $75K · BTC $61K", "move": "in",
+   "say": "Strategy is eleven billion dollars under water on bitcoin. Is it forced to sell?"},
+  {"img": "s2.jpg", "d3": {"typ": "liczba", "p": {"text": "$75K", "sub": "AVG COST · BTC NOW $61K", "kolor": "btc", "kolor2": "silver", "seed": 7}},
+   "head": ["850K BTC", "*BOUGHT AT ~$75K*"], "sub": "BTC TODAY: $61.4K", "move": "out",
+   "say": "It holds about eight hundred fifty thousand bitcoin, average cost near seventy five thousand."},
+  {"img": "s3.jpg", "head": ["NOT FORCED", "*~BUT POSSIBLE~*"], "note": "MAY SELL TO FUND DIVIDENDS", "move": "up",
+   "say": "Verdict: not forced. But the company says it may sell some to fund dividends."},
+  {"img": "s4.jpg", "tag": "COMMENT HOLD OR FOLD", "head": ["HOLD OR", "*FOLD?*"], "sub": "HOLD 🐂  /  FOLD 🐻", "note": "SEND THIS TO A FRIEND WHO HOLDS BTC", "move": "down",
+   "say": "Eleven billion under water, no forced sale. Hold or fold? This is not financial advice, just data."}
+ ]
+}
