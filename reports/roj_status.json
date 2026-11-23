@@ -59,8 +59,8 @@
   },
   {
    "n": "Skanery",
-   "s": "praca",
-   "ostatnio": "16.11 22:32 – proces działa na serwerze",
+   "s": "blad",
+   "ostatnio": "23.11 02:14 – PROCES NIE DZIAŁA na serwerze",
    "typ": "agent",
    "en": "Watches gold, indices and crypto 24/7 and logs setups. It only observes and reports – it never places trades.",
    "gdzie": "Server",
@@ -451,9 +451,9 @@
   },
   {
    "n": "Laboratorium",
-   "s": "praca",
+   "s": "blad",
    "opis": "Laboratorium: odważne boty testowe na demo/paper (MT5, Kraken na sucho, IBKR paper).",
-   "ostatnio": "18.11 02:42 – proces działa na serwerze"
+   "ostatnio": "23.11 02:14 – PROCES NIE DZIAŁA na serwerze"
   }
  ]
 }
