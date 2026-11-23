@@ -65,6 +65,7 @@ MT5: Hexa (830083), Turbo (830099) · IBKR paper: IB Skaner · Kraken: Freqtrade
 - Tygodniowo: tabela „szef vs Bot Szefa” + tempo wyzwania 5 000 € → 1 000 000 €.
 
 ## Postęp
+- 2026-11-23: Mechanik – Z042 Hexa+Turbo stoją od 22.11 ~06:10 (fałszywe „już działa” w START_WSZYSTKO po restarcie 02:13) → GOTOWY DO WDROŻENIA; Z041 → czeka na wdróż.
 - 2026-11-07: start planu
 - 2026-11-07: dodany projekt „Bot Szefa” (skalping bez SL) i cel realnego konta od 1.01.2027
 - 2026-11-07: reguły szefa (3 świece, knoty, dolar) + dziennik głosowy w panelu
