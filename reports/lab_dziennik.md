@@ -147,3 +147,29 @@ Kod: `C:\Hexa\lab` (silnik `lab_silnik.py`, boty `boty\*.py`, start `START_LAB.p
 **Lekcje:** na memach liczy się koszt, nie trafność – trafność zwycięzcy to 29%, zarabia kilka dużych trendów. Filtr BTC podnosi PF (1,30 → 1,51) i zmniejsza obsunięcie.
 
 **Najlepszy:** LAB_Donchian_XAG +1032,53 $ (3/3). Aktywne procesy: 10/10 + zbieracz memów.
+
+---
+
+## 2026-11-23 (noc 6) – poniedziałkowe otwarcie boli M8, M9 Bot A ruszył
+
+**Przegląd (konto demo botów 5058971085, trade_mode DEMO; Hexa/Turbo/Indeksy bez otwartych pozycji, nietknięte):** po otwarciu rynku złoto i srebro skoczyły w górę – SHORT-y laboratorium dostały po głowie. Lab MT5: **25 zamkniętych, +596,83 $** (było +1148,58 $). LAB_Donchian_XAG pierwszy SL: −377,70 $ (4 tr., +654,83 $, PF 2,73 – wciąż najlepszy). Konto botów: saldo 6103,64 $, kapitał 5828,39 $.
+- **M8 MT5: 18 zamkniętych, −270,07 $, PF 0,43.** Nowe straty z nocy: M15 Turbo −34,54, M30 Hexa/Turbo −44,06/−44,06, XAG M30 −48,29, JPY H1 −3,10. H1 złota wciąż 0 zamknięć; 5 SHORT-ów H4/D1 złota po −47 $, XAG H4 −15/−24 $. Maks. 5 transakcji na wariant – do progu ~20 daleko, kroku 4 nie ruszam. Obraz na razie zgodny z backtestem: M15/M30 najsłabsze.
+- **IBKR paper:** D1 SHORT XAUUSD wreszcie wypełniony (22.11 23:01 @ 3575,81, OCA TP/SL).
+- **Kraken na sucho:** KR_RSI2_H4 SHORT BTC i XRP otwarte (kapitał 551,78 €), KR_M8_D1 SHORT BTC/ETH otwarte, MemyC – filtr BTC blokuje (BTC pod EMA50 H4).
+- **eToro DEMO** (`account: demo` w odpowiedzi): LAB_ET_M8_XAU_D1 GOLD SHORT −37,94 $ (SL 3805 / TP 3334), wiersz w arkuszu Transakcje jest (128). Brak nowych otwarć → brak nowych wierszy.
+
+**Wyłączone (lekcja): nic** (żaden bot nie ma ~20 transakcji ani −30% kapitału). **Zawieszony:** LAB_Kons_H1 (plik `_off`, aktywny=false, bez otwartych pozycji) – 1 transakcja w 4 dni, od 19.11 sygnały blokował limit 30%; bez werdyktu, slot oddany M9 Bot A.
+
+**M9 – nowe:**
+- 🆕 **`LAB_DEX_M9_SnajperA`** (Bot A, papier): kandydaci z memy.sqlite (tylko odczyt), filtr: wiek 15–90 min, płynność ≥ 30k, LP ≥ 90% zablokowana/spalona, mint i freeze odebrane, top 10 bez puli ≤ 30%, nie „rugged”, kupujący > sprzedający 5 min, rosnący wolumen 5 min. Wejście po cenie NASTĘPNEGO odczytu (realne opóźnienie), 10 $, koszty 1% + poślizg 2×wartość/płynność + 0,01 $ sieci w każdą stronę. Wyjście: +100% połowa, reszta trailing −30%, SL −35%, rug (płynność < 1k / zniknięcie > 2 h) = wyjście po tym, co się da. Ceny otwartych pozycji bot bierze sam z DexScreener. Test `--raz` ok, proces działa.
+- **Replay na 24 h zebranych danych** (te same reguły): 287 kandydatów → 13 wejść, 11 zamkniętych, 36% trafnych, **+7,73 $, PF 1,36**; czysto: 5 × SL (≈ −20 $) i 2 × trailing (+89%, +133%) – klasyka memów, zarabiają pojedyncze strzały. 4 zamknięcia to „brak danych” (patrz niżej) – wynik traktuję jako test silnika, nie dowód.
+- **Dowód filtra (wstępny):** odrzuceni za bezpieczeństwo – 23% padło (−90% albo płynność < 1k) w ~0,5 h obserwacji; przepuszczeni – 8% w ~3,8 h.
+- 🔧 **Zbieracz – poprawka** (kopia `zbieracz.py.bak_20261123`): nowy status „mały” (po 15 min płynność < 5k i nigdy ≥ 10k → nie śledzimy). Lekcja: ~670 nowych tokenów/h przy limicie 450 śledzonych oznaczało, że każdy token był odświeżany tylko ~40 min od odkrycia – kandydaci bota A i obserwacja „czy padł” urywały się w połowie. Po restarcie od razu 189 tokenów „małych”, 0 błędów.
+
+**Lekcje:**
+- Weekendowa luka na złocie/srebrze uderza we wszystkie SHORT-y naraz – 6 wariantów M8 + Donchian_XAG to w praktyce jedna duża pozycja kierunkowa. Przy werdykcie M8 trzeba to liczyć jako jedno zdarzenie.
+- Zbieracz z limitem musi mieć priorytet „ważne tokeny”, a nie „najnowsze” – inaczej mierzymy tylko pierwsze 40 minut życia memów.
+
+**Nowe pomysły:** brak nowych strategii poza M9 Bot A – noc na M8 + M9 (priorytet szefa). Następny przebieg M9: Bot B „Fala” (tokeny ≥ 3 dni, płynność ≥ 250k).
+
+**Najlepszy:** LAB_Donchian_XAG +654,83 $ (4 tr., PF 2,73). Aktywne procesy: 10/10 + zbieracz memów.
