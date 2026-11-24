@@ -1,28 +1,29 @@
 # Laboratorium – tabela stanu (demo / paper / virtual)
 
-Aktualizacja: 2026-11-23 01:45 UTC
+Aktualizacja: 2026-11-24 01:55 UTC
 
 | Nazwa | Platforma | Magic / clientId | Start | Transakcje (zamkn.) | Wynik | PF | Status | Backtest (spr. PF, n) |
 |---|---|---|---|---|---|---|---|---|
 | LAB_Londyn_XAU | MT5 demo 5058971085 · XAUUSD M15 | 830201 | 2026-11-18 | 1 | +219,38 $ | – (1/0) | ✅ działa | 2,19 (90) |
 | LAB_Donchian_XAG | MT5 demo · XAGUSD H1 | 830202 | 2026-11-18 | 4 | +654,83 $ | 2,73 (3/1) | ✅ działa – kandydat „Silver King” (23.11 pierwszy SL −377,70 $ – srebro w górę po otwarciu) | 1,50 (94) |
 | LAB_Kontra_FX_off | MT5 demo · EURUSD, USDJPY M15 | 830203 | 2026-11-18 | 0 | 0,00 $ | – | ⏸️ zawieszony 21.11 (0 transakcji, slot dla M8) | 1,32 / 1,36 |
-| LAB_RSI2_FX | MT5 demo · USDJPY, GBPUSD M15 | 830204 | 2026-11-18 | 1 | +16,20 $ | – (1/0) | ✅ działa | 1,37 / 1,10 |
-| LAB_KR_RSI2_H4 | Kraken na sucho · BTC/EUR, XRP/EUR H4 | paper | 2026-11-18 | 1 (+2 otwarte SHORT BTC, XRP) | +55,88 € (kapitał 551,78 €) | – (1/0) | ✅ działa | 1,31 (9) / 1,60 (11) |
+| LAB_RSI2_FX | MT5 demo · USDJPY, GBPUSD M15 | 830204 | 2026-11-18 | 6 | +26,48 $ | 3,28 | ✅ działa | 1,37 / 1,10 |
+| LAB_KR_RSI2_H4 | Kraken na sucho · BTC/EUR, XRP/EUR H4 | paper | 2026-11-18 | 1 (+2 otwarte SHORT BTC, XRP) | +55,88 € (kapitał 550,58 €) | – (1/0) | ✅ działa | 1,31 (9) / 1,60 (11) |
 | LAB_IB_RSI2_AUD_off | IBKR paper · AUDUSD M15 | clientId 50 | 2026-11-18 | 0 | 0,00 $ | – | ⏸️ zawieszony 22.11 (0 transakcji w 4 dni, bez werdyktu – slot dla M9 Bot C) | 1,22 (237) |
 | LAB_ET_Kontra_D1 | eToro DEMO · GBPUSD D1 | – | 2026-11-18 | 0 | 0,00 $ | – | ⏳ brak sygnału | 2,16 (7) |
-| LAB_Luka_FX | MT5 demo · 4 pary H1 | 830205 | 2026-11-19 | 0 | 0,00 $ | – | ✅ działa (handluje w poniedziałki) | 1,87–4,97 |
+| LAB_Luka_FX_off | MT5 demo · 4 pary H1 | 830205 | 2026-11-19 | 0 | 0,00 $ | – | ⏸️ zawieszony 24.11 (0 transakcji w 5 dni – bez werdyktu, slot dla M9 Bot B) | 1,87–4,97 |
 | LAB_Kons_H1_off | MT5 demo · USDJPY, EURUSD H1 | 830206 | 2026-11-19 | 1 | −23,51 $ | 0,00 | ⏸️ zawieszony 23.11 (1 transakcja w 4 dni, sygnały blokował limit 30% – bez werdyktu, slot dla M9 Bot A) | 1,78 (68) / 1,69 (72) |
 | LAB_NYFade_off | MT5 demo · XAU/EUR/GBP M15 | 830207 | 2026-11-19 | 0 | 0,00 $ | – | ⏸️ zawieszony 21.11 (0 transakcji – lot > limit 30%, slot dla M8) | 1,44 / 1,58 / 1,57 |
-| LAB_M8_HexaTurbo | MT5 demo · 14 wariantów (niżej) | 830210–830223 | 2026-11-20 | 18 (+7 otwartych) | −270,07 $ | 0,43 | ✅ działa (max 5 tr./wariant – do werdyktu daleko) | patrz M8 |
-| LAB_IB_M8_XAU | IBKR paper · XAUUSD H1/H4/D1 (Hexa, 1 oz) | clientId 51 | 2026-11-21 | 0 (1 otwarta: D1 SHORT @ 3575,81 od 22.11 23:01) | 0,00 $ | – | ✅ działa | 1,35 / 1,58 / 2,34 |
-| LAB_KR_M8_D1 | Kraken na sucho · BTC/ETH/XRP D1 (500 € wirt./para) | paper | 2026-11-21 | 0 (3 otwarte: SHORT BTC DCH, ETH DCH+D15) | opłaty | – | 🆕 działa | 1,02 / 1,09 / 1,18 |
+| LAB_M8_HexaTurbo | MT5 demo · 14 wariantów (niżej) | 830210–830223 | 2026-11-20 | 32 (+4 otwarte) | −565,37 $ | 0,43 | ✅ działa (max 7 tr./wariant – do werdyktu daleko) | patrz M8 |
+| LAB_IB_M8_XAU | IBKR paper · XAUUSD H1/H4/D1 (Hexa, 1 oz) | clientId 51 | 2026-11-21 | 0 (1 otwarta: D1 SHORT @ 3575,81 od 22.11 23:01, ok. −92 $) | 0,00 $ | – | ✅ działa | 1,35 / 1,58 / 2,34 |
+| LAB_KR_M8_D1 | Kraken na sucho · BTC/ETH/XRP D1 (500 € wirt./para) | paper | 2026-11-21 | 1 (ETH DCH SL −10,85 €; otwarte SHORT BTC DCH, ETH D15) | −10,85 € + opłaty | 0,00 | ✅ działa | 1,02 / 1,09 / 1,18 |
 | LAB_KR_M9_MemyC | Kraken na sucho · DOGE/SHIB/PEPE/BONK/WIF/FLOKI EUR H4, tylko LONG | paper | 2026-11-22 | 0 | 0,00 € | – | 🆕 działa (BTC pod EMA50 H4 → filtr blokuje) | 1,51 (35) |
-| LAB_DEX_M9_SnajperA | DEX Solana na papierze · nowe tokeny 15–90 min (10 $/transakcja, 500 $ wirt.) | paper | 2026-11-23 | 0 | 0,00 $ | – | 🆕 działa | replay 24 h: PF 1,36 (11) |
-| LAB_ET_M8_XAU_D1 | eToro DEMO · GOLD D1 | poz. 3646949765 | 2026-11-20 | 0 (1 otwarta SHORT @ 3563,87, −37,94 $) | 0,00 $ | – | ✅ SL 3805 / TP 3334 | 2,32 (69) |
+| LAB_DEX_M9_SnajperA | DEX Solana na papierze · nowe tokeny 15–90 min (10 $/transakcja, 500 $ wirt.) | paper | 2026-11-23 | 13 (+3 otwarte) | −53,44 $ (kapitał 443,55 $) | 0,00 (0/13) | ✅ działa (wszystkie SL; 7 z 13 było +40…+65% i wróciło) | replay 24 h: PF 1,36 (11) |
+| LAB_DEX_M9_FalaB | DEX Solana na papierze · memy ≥ 3 dni, płynność ≥ 250k, mc 5–200 mln, kupno po kapitulacji H1 (10 $/transakcja) | paper | 2026-11-24 | 0 | 0,00 $ | – | 🆕 działa | 1,99 (29) |
+| LAB_ET_M8_XAU_D1 | eToro DEMO · GOLD D1 | poz. 3646949765 | 2026-11-20 | 0 (1 otwarta SHORT @ 3563,87, −73,28 $) | 0,00 $ | – | ✅ SL 3805 / TP 3334 | 2,32 (69) |
 
-Wyłączone na stałe: brak (żaden bot nie ma ~20 transakcji). Zawieszone (bez lekcji, brak danych): Kontra_FX, NYFade, IB_RSI2_AUD (22.11), Kons_H1 (23.11).
-Razem MT5 lab: 25 zamkniętych, +596,83 $; konto demo botów (23.11 01:25 UTC): saldo 6103,64 $, kapitał 5828,39 $. Aktywne procesy: 10/10 + zbieracz memów.
+Wyłączone na stałe: brak (żaden bot nie ma ~20 transakcji). Zawieszone (bez lekcji, brak danych): Kontra_FX, NYFade, IB_RSI2_AUD (22.11), Kons_H1 (23.11), Luka_FX (24.11).
+Razem MT5 lab: 44 zamknięte, +311,81 $; konto demo botów (24.11 01:26 UTC): saldo 5904,43 $, kapitał 5710,35 $. Aktywne procesy: 10/10 + zbieracz memów.
 
 ## M8 – Hexa i Turbo na M15/M30/H1/H4/D1, wszystkie platformy (backtest 20.11.2026)
 
@@ -65,18 +66,21 @@ Wniosek TP: na każdym interwale TP 1R (obecne ustawienie DCH/ASIA od 10.11) daj
 
 **Uwaga (uczciwie):** sprawdzian złota przypada na mocny trend 2026 – na nauce PF złota był ~1,0 (M30/H1 nawet < 1). Wynik zależy od reżimu rynku; werdykt dopiero po ~20 transakcjach na wariant na demo.
 
-**Wyniki na demo (stan 23.11 01:25 UTC, MT5):**
+**Wyniki na demo (stan 24.11 01:26 UTC, MT5):**
 
 | Wariant | Magic | Zamkn. | Wynik | PF | Otwarte |
 |---|---|---|---|---|---|
-| H_XAU_M15 / T_XAU_M15 | 830210 / 830211 | 5 / 3 | −27,37 / −40,65 $ | 0,73 / 0,51 | 0 / 0 |
-| H_XAU_M30 / T_XAU_M30 | 830212 / 830213 | 3 / 3 | −53,69 / −53,42 $ | 0,45 / 0,45 | 0 / 0 |
-| H_XAU_H1 / T_XAU_H1 | 830214 / 830215 | 0 | – | – | 0 |
-| HT_XAU_H4 / HT_XAU_D1 / H4_TP2x2 | 830216 / 830217 / 830218 | 0 | – | – | 2 / 1 / 2 (po −47 $ – złoto w górę po otwarciu) |
+| H_XAU_M15 / T_XAU_M15 | 830210 / 830211 | 7 / 5 | +34,98 / +22,02 $ | 1,35 / 1,26 | 0 / 0 |
+| H_XAU_M30 / T_XAU_M30 | 830212 / 830213 | 4 / 4 | −10,85 / −10,57 $ | 0,89 / 0,89 | 0 / 0 |
+| H_XAU_H1 / T_XAU_H1 | 830214 / 830215 | 0 / 1 | – / −42,60 $ | – / 0,00 | 0 |
+| HT_XAU_H4 / HT_XAU_D1 / H4_TP2x2 | 830216 / 830217 / 830218 | 2 / 0 / 2 | −190,92 / – / −190,95 $ | 0,00 / – / 0,00 | 0 / 1 (−98,75 $) / 0 |
 | H_XAG_M30 | 830219 | 2 | −94,34 $ | 0,00 | 0 |
-| HT_XAG_H4 | 830220 | 0 | – | – | 2 (−15 / −24 $) |
-| T_JPY_H1 | 830223 | 2 | −0,60 $ | 0,81 | 0 |
-| **Razem M8 MT5** | | **18** | **−270,07 $** | **0,43** | 7 |
+| HT_XAG_H4 / HT_XAG_D1 | 830220 / 830221 | 1 / 0 | −81,39 $ / – | 0,00 | 1 (−94,50 $) / 0 |
+| HT_GBP_H4 | 830222 | 0 | – | – | 2 (~0 $) |
+| T_JPY_H1 | 830223 | 4 | −0,75 $ | 0,85 | 0 |
+| **Razem M8 MT5** | | **32** | **−565,37 $** | **0,43** | 4 |
+
+Na żywo kolejność odwrotna niż w backteście: M15 na plusie, H4/D1 i srebro najgorsze – ale prawie całe −560 $ to jedno zdarzenie (SHORT-y złota/srebra przez weekend, poniedziałkowy skok). Próbka 0–7 transakcji na wariant – bez werdyktu.
 
 Uwaga: 6 wariantów złota bierze ten sam sygnał DCH → jedna zła świeca (20.11 10:02) to 4 straty naraz. Warianty nie są niezależne – werdykt trzeba liczyć per interwał, nie sumować.
 
@@ -99,7 +103,7 @@ Uwaga: 6 wariantów złota bierze ten sam sygnał DCH → jedna zła świeca (20
 | LAB_KR_M8_D1: BTC / ETH / XRP D1 | Kraken paper | – | 1,02 / 1,09 / 1,18 (nauka 1,06 / 0,73 / 0,38) | 🆕 21.11 SHORT BTC (DCH), SHORT ETH (DCH + D15); uwaga: rollover 0,12%/dobę – backtest go nie liczył |
 
 
-## Memy (M9) – stan 23.11.2026
+## Memy (M9) – stan 24.11.2026
 
 **Krok 0 – zbieracz** `C:\Hexa\lab\memy\zbieracz.py` (cykl 3 min, darmowe API, tylko odczyt): GeckoTerminal new_pools + trending_pools (Solana), DexScreener profile/boosty/tokens, RugCheck (mint/freeze authority, top 10 z i bez puli, % zablokowanej płynności, ryzyka). Pierwsze 4 cykle: 165 tokenów, ~160 snapshotów/cykl, 0 błędów, 17 raportów RugCheck (2 z aktywnym mint+freeze authority). Autostart: START_WSZYSTKO („Memy – zbieracz M9”), test restartu ok.
 
@@ -120,8 +124,24 @@ Wniosek: na memach z Krakena działa tylko wolny trend H4 z filtrem BTC; szybkie
 
 | Bot | Status | Transakcje | Trafność | PF po kosztach | Śr. wynik | Maks. DD | Odrzuceni przez filtr / padli |
 |---|---|---|---|---|---|---|---|
-| A „Snajper z filtrem” (`LAB_DEX_M9_SnajperA`) | 🆕 papier od 23.11 · replay 24 h: | 11 (+2 otw.) | 36% | 1,36 | +0,70 $ (+7%) | – | 272 odrzuconych za bezpieczeństwo: 23% padło (≥ −90% lub płynność < 1k) vs 8% przepuszczonych |
-| B „Fala” | ⏳ czeka | – | – | – | – | – | – |
+| A „Snajper z filtrem” (`LAB_DEX_M9_SnajperA`) – papier na żywo od 23.11 | ✅ działa | 13 (+3 otw.) | 0% | 0,00 | −4,11 $ (−41%) | −56 $ (−11% kapitału) | 272 kandydatów, weszło 16; odrzuty: LP < 90% 224, wolumen nie rośnie 152, sprzedający ≥ kupujący 74, top 10 > 30% 36, mint 5, freeze 4 |
+| A – replay 24 h (22–23.11) | test silnika | 11 (+2 otw.) | 36% | 1,36 | +0,70 $ (+7%) | – | odrzuceni za bezpieczeństwo: 23% padło (≥ −90% lub płynność < 1k) vs 8% przepuszczonych |
+| B „Fala” (`LAB_DEX_M9_FalaB`) – kupno po kapitulacji | 🆕 papier od 24.11 | 0 | – | backtest spr 1,99 (29) | – | – | 12 kandydatów na starcie |
 | C „Duże memy” (`LAB_KR_M9_MemyC`) | papier od 22.11 (BTC pod EMA50 H4 – filtr blokuje) | 0 | – | – | – | – | – |
 
 **Bot A – replay 24 h (22.11 01:00 → 23.11 01:30, te same reguły co bot):** 287 kandydatów (płynność ≥ 30k, wiek 15–90 min). Odrzuty (token może mieć kilka powodów): LP < 90% – 265, wolumen nie rośnie – 158, sprzedający ≥ kupujący – 72, top 10 > 30% – 30, freeze – 14, mint – 1. Wejść 13, zamkniętych 11: TRAIL 2 (+89%, +133%), SL 5 (−38…−45%), „brak danych” 4 (zbieracz przestał śledzić – wycena po ostatniej cenie, +6 $ netto). Uczciwie: 1 doba, 11 transakcji, a ~40% wyniku to wyceny bez danych – to tylko test, że silnik działa; werdykt przy ≥ 100 transakcjach na papierze. „Dev nie sprzedał wszystkiego” – nie mierzymy (brak darmowego źródła w zbieraczu), do dopracowania.
+
+**Bot B – backtest 24.11** (`memy\m9b_bt.py`, `m9b_bt2.py`; 23 memy z bazy: wiek ≥ 3 dni, płynność ≥ 250k, świece H1 GeckoTerminal do 4000 h, 06–11.2026; koszty 1% swap w każdą stronę + poślizg + sieć; wejście na otwarciu następnej świecy; nauka 70% / spr 30%):
+
+| Wariant | Nauka n · PF · ΣR% | Sprawdzian n · PF · traf. · ΣR% |
+|---|---|---|
+| Wybicie z planu: zamkn. > szczyt 24 h, wol. ≥ 3×, SL pod świecą, trailing 2 ATR | 313 · 0,85 · −230% | 94 · **0,21** ❌ · 15% · −423% |
+| Najlepsze z 36 wybić (N 6, K 5, 2 ATR, SL zakres) | 229 · 0,70 | 75 · **0,36** ❌ · 19% |
+| Wybicia z najlepszą nauką (N 24, K 5, 3 ATR) | 180 · 3,39 · +2434% | 54 · 0,19 ❌ (przeuczenie – kilka rakiet) |
+| **Kapitulacja: świeca H1 −10%, wol. ≥ 3×, SL −35%, trailing 3 ATR** ✅ (na papier) | 65 · 10,6 · +4916% | 29 · **1,99** · 45% · +145% |
+| Kapitulacja −10%, wol. 2×, SL −35%, 3 ATR | 102 · 6,35 | 34 · 1,44 · 41% |
+| Kapitulacja −15%, wol. 3×, SL −25%, 3 ATR | 32 · 10,4 | 10 · 2,78 · 30% |
+| Kapitulacja −10%, wol. 5×, SL −15/−25%, 3 ATR | 36 · 11,3 | 20–21 · 0,98–1,02 |
+| Kapitulacja −25% (wszystkie) | 8 · 1,6–2,1 | 1 · 0,00 |
+
+Wniosek: wybicie z wolumenem na memach DEX = moment wyjścia wcześniejszych kupujących; 36/36 wariantów przegrało na sprawdzianie. Odwrotna reguła (kupno paniki u memów, które mają ≥ 3 dni i dużą płynność) przeszła. **Uczciwie:** survivorship bias (w danych tylko tokeny, które przetrwały do dziś), 29 transakcji w sprawdzianie, nauka PF 10 to kilka odbić o setki procent; backtest kapitulacji nie miał filtra market cap (bot ma 5–200 mln). Werdykt przy ≥ 100 transakcjach na papierze.

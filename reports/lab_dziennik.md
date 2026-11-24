@@ -173,3 +173,31 @@ Kod: `C:\Hexa\lab` (silnik `lab_silnik.py`, boty `boty\*.py`, start `START_LAB.p
 **Nowe pomysły:** brak nowych strategii poza M9 Bot A – noc na M8 + M9 (priorytet szefa). Następny przebieg M9: Bot B „Fala” (tokeny ≥ 3 dni, płynność ≥ 250k).
 
 **Najlepszy:** LAB_Donchian_XAG +654,83 $ (4 tr., PF 2,73). Aktywne procesy: 10/10 + zbieracz memów.
+
+---
+
+## 2026-11-24 (noc 7) – M8 bez werdyktu, M9 Bot B: wybicia odrzucone, gra „przeciw tłumowi”
+
+**Przegląd (konto demo botów 5058971085, trade_mode DEMO; Hexa/Turbo/Indeksy bez otwartych pozycji, nietknięte):** saldo 5904,43 $, kapitał 5710,35 $. Lab MT5: **44 zamknięte, +311,81 $** (było +596,83 $). Donchian_XAG bez zmian (4 tr., +654,83 $, PF 2,73), RSI2_FX 6 tr. +26,48 $ (PF 3,28), Londyn_XAU 1 tr. +219,38 $.
+- **M8 MT5: 32 zamknięte, −565,37 $, PF 0,43.** Obraz się odwrócił: M15 złota teraz na plusie (Hexa 7 tr. +34,98 $ PF 1,35, Turbo 5 tr. +22,02 $ PF 1,26), M30 ~0 (−10,85/−10,57 $, PF 0,89), a najwięcej straciły H4 (HT_XAU_H4 i H4_TP2x2 po 2 tr. −190,9 $ – SHORT-y sprzed weekendu wybite w poniedziałek) i srebro (XAG M30 −94,34, XAG H4 −81,39 $). H1: 1 tr. (Turbo −42,60 $). Otwarte: D1 złota SHORT −98,75 $, XAG H4 SHORT −94,50 $, GBP H4 2× ~0. Maks. 7 transakcji na wariant (próg ~20) → **werdyktu i kroku 4 jeszcze nie ma**.
+- **IBKR paper:** D1 SHORT XAUUSD @ 3575,81 nadal otwarty (złoto ~3668 → ok. −92 $ na 1 oz). W logu 2 timeouty połączenia 23.11 po południu, bot sam wstał 16:28 (konto DUR…, paper).
+- **Kraken na sucho:** KR_M8_D1 – ETH DCH SHORT zamknięty SL **−10,85 €** (23.11 14:27); otwarte BTC DCH i ETH D15 SHORT. KR_RSI2_H4 kapitał 550,58 € (rollover zjada ~0,6 €/dobę). MemyC – BTC 61 271 pod EMA50 H4 62 777 → filtr blokuje, 0 transakcji.
+- **eToro DEMO** (`"account":"demo"` w odpowiedzi): LAB_ET_M8_XAU_D1 GOLD SHORT −73,28 $ (SL 3805 / TP 3334). Brak nowych otwarć i zamknięć → arkusz bez zmian.
+- **M9 Bot A na żywo:** 13 zamkniętych, **0 trafnych, −53,44 $** (kapitał 443,55 $ z 500), wszystkie wyjścia SL −35…−44%. 7 z 13 było w trakcie +40…+65% nad wejściem (BONER +65%, ChristmASS +60%, HUANG +49%, JENSEN +47%) i wróciło do SL – TP dopiero przy +100% to za daleko na memy po pierwszej fali. Do progu (≥ 20 tr. na wyłączenie, ≥ 100 na werdykt M9) jeszcze nie – bot zostaje; kandydat na wariant „BE po +40%”.
+
+**Wyłączone (lekcja): nic** (żaden bot nie ma ~20 transakcji ani −30% kapitału). **Zawieszony:** LAB_Luka_FX (plik `_off`, aktywny=false, bez otwartych pozycji) – 0 transakcji od 19.11, bez werdyktu; slot oddany M9 Bot B.
+
+**M9 Bot B „Fala” – backtest** (`memy\m9b_bt.py`): 23 memy z bazy zbieracza (wiek ≥ 3 dni, płynność ≥ 250k; bez WETH/ZEC/ORCA), świece H1 z darmowego GeckoTerminal (do 4000 h, 06–11.2026), koszty 1% swap w każdą stronę + poślizg 2×(10 $/płynność) + sieć, wejście na otwarciu następnej świecy, nauka 70% / spr 30%.
+- **Wybicie z planu** (zamknięcie > szczyt N h, wolumen ≥ K × śr. 24 h, SL pod dołkiem wybicia, trailing 2–3 ATR): 36 wariantów (N 1/6/24 × K 2/3/5 × ATR 2/3 × SL świeca/zakres) – **sprawdzian PF 0,10–0,36 ❌ we wszystkich**, trafność 11–21%. Nauka bywała świetna (PF do 3,4), ale to kilka rakiet z wczesnego życia tokenów – klasyczne przeuczenie.
+- **Odwrotnie – kupno po kapitulacji** (`m9b_bt2.py`): świeca H1 −10% przy wolumenie ≥ 3× średniej, SL −35%, trailing 3 ATR: **nauka n65 PF 10,6, sprawdzian n29 PF 1,99, trafność 45%, ΣR +145%**. Sąsiedzi też trzymają (K 2/3, SL 25/35%, spadek 10/15%: spr PF 1,44–2,78), trailing 2 ATR i spadek 25% – słabo.
+- 🆕 **`LAB_DEX_M9_FalaB`** na papierze (10 $/transakcja, 500 $ wirt.): co godzinę skan kandydatów z bazy (wiek ≥ 3 dni, płynność ≥ 250k, market cap 5–200 mln), sygnał „kapitulacja”, wejście po cenie następnego odczytu DexScreener, stop co 5 min. Test `--raz` ok (12 kandydatów, 0 sygnałów), proces działa.
+- **Uczciwie:** to backtest na tokenach, które PRZEŻYŁY do dziś (survivorship bias – kupowanie dołków u ocalałych zawsze wygląda dobrze), tylko 29 transakcji w sprawdzianie, a w backteście kapitulacji nie było filtra market cap (bot go ma). Papier pokaże, ile z tego jest prawdą.
+
+**Lekcje:**
+- Na memach DEX wybicie z wolumenem to moment, w którym wcześni sprzedają późnym – po kosztach 2% w obie strony to maszynka do strat (zgodne z Botem C na Krakenie: wybicia Donchiana też odpadły).
+- Bot A: SL −35% przy TP +100% na tokenach 15–90 min to za mało miejsca na zyski, a za dużo na straty – przy werdykcie trzeba sprawdzić wcześniejsze zabezpieczenie zysku.
+- M8: przez weekendową lukę złota/srebra jedno zdarzenie dało ~−560 $ na H4/D1/XAG – przy werdykcie liczę je jako jedną stratę kierunkową, nie 6 niezależnych.
+
+**Nowe pomysły:** poza M9 Bot B – brak (noc na M8 + M9, priorytet szefa).
+
+**Najlepszy:** LAB_Donchian_XAG +654,83 $ (4 tr., PF 2,73). Aktywne procesy: 10/10 + zbieracz memów.
