@@ -1,0 +1,17 @@
+{
+ "date": "24.11.2026",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "style": "news",
+ "ticker": "BTC $59,425 ▼4.4% · ETH $1,668 ▼5.6% · GOLD $3,565 ▼2.1% · FEAR & GREED 8",
+ "scenes": [
+  {"img": "s1.jpg", "tag": "LIVE MARKET UPDATE", "head": ["CHIPS -10%", "*BTC UNDER $60K*"], "chip": "▼ BTC -4.4%", "anim": {"dir": "down", "label": "$59.4K"},
+   "say": "Chip stocks crashed nearly ten percent, and Bitcoin slipped back under sixty thousand.", "move": "in"},
+  {"img": "s2.jpg", "head": ["NASDAQ 100 -3%", "*$472M LIQUIDATED*"], "chip": "▼ ETH -5.6%", "note": "TECH SELLS, CRYPTO FOLLOWS",
+   "say": "The Nasdaq slid three percent, and about four hundred seventy million in crypto bets were reportedly liquidated.", "move": "out"},
+  {"img": "s3.jpg", "head": ["GOLD -2.1%", "*NO SAFE HAVEN*"], "chip": "▼ $3,565", "note": "HAWKISH FED · STRONG DOLLAR",
+   "say": "Even gold dropped two percent, as a hawkish Fed and a firm dollar weighed.", "move": "up"},
+  {"img": "s4.jpg", "head": ["FEAR 8 · $60K LINE", "*RECLAIM OR BREAK?*"], "sub": "BULL OR BEAR BY FRIDAY? 🐂/🐻", "note": "SEND THIS TO A FRIEND WHO HOLDS BTC",
+   "say": "Fear is at eight. Will chips and Bitcoin reclaim sixty thousand, or break lower? This is not financial advice, just data.", "move": "down"}
+ ]
+}
