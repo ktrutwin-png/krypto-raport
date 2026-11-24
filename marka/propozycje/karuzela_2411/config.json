@@ -1,0 +1,77 @@
+{
+ "dir": "marka/propozycje/karuzela_2411",
+ "karty": [
+  {
+   "k": "XAU",
+   "pc": "−2.4%",
+   "cena": "$3,563",
+   "haslo": "CLOUDY DAY FOR GOLD",
+   "scena": "s_xau.jpg",
+   "x0": 150,
+   "sila": 0.4,
+   "piorun": false,
+   "say": "Gold slips two point four percent. A strong dollar and rising bond yields keep the pressure on, as markets price in higher interest rates.",
+   "cap": "Strong dollar + rising yields = pressure on gold"
+  },
+  {
+   "k": "XDC",
+   "pc": "−3.0%",
+   "cena": "$0.0258",
+   "haslo": "NERVES ON",
+   "scena": "s_xdc.jpg",
+   "x0": 150,
+   "sila": 0.45,
+   "piorun": false,
+   "say": "X D C drops three percent. Smaller networks follow the market down, as traders cut risk across the board.",
+   "cap": "Small caps follow the market as traders cut risk"
+  },
+  {
+   "k": "BTC",
+   "pc": "−4.2%",
+   "cena": "$59,475",
+   "haslo": "RAIN ON THE CURB",
+   "scena": "s_btc.jpg",
+   "x0": 200,
+   "sila": 0.8,
+   "piorun": false,
+   "say": "Bitcoin falls more than four percent, under sixty thousand dollars. Fear of higher rates and forced selling of leveraged bets weigh on the leader.",
+   "cap": "Rate fears + forced selling hit the leader"
+  },
+  {
+   "k": "ETH",
+   "pc": "−5.1%",
+   "cena": "$1,670",
+   "haslo": "POOL PARTY CANCELLED",
+   "scena": "s_eth.jpg",
+   "x0": 200,
+   "sila": 0.9,
+   "piorun": true,
+   "say": "Ether loses five percent and keeps falling harder than Bitcoin, as appetite for risk fades.",
+   "cap": "Ether keeps falling harder than Bitcoin"
+  },
+  {
+   "k": "XRP",
+   "pc": "−6.1%",
+   "cena": "$0.912",
+   "haslo": "STORM ON THE CHART",
+   "scena": "s_xrp.jpg",
+   "x0": 150,
+   "sila": 1.0,
+   "piorun": true,
+   "say": "X R P slides six percent, back near ninety cents. In a risk off market, the high flyers take the biggest hits.",
+   "cap": "Risk-off: high flyers take the biggest hits"
+  },
+  {
+   "k": "XLM",
+   "pc": "−7.2%",
+   "cena": "$0.1233",
+   "haslo": "TRASHED",
+   "scena": "s_xlm.jpg",
+   "x0": 150,
+   "sila": 1.0,
+   "piorun": true,
+   "say": "And Stellar is today's biggest loser, down more than seven percent. When the market turns, smaller coins fall the fastest. Not financial advice. Follow for the daily moves.",
+   "cap": "Today's biggest loser — small coins fall fastest"
+  }
+ ]
+}

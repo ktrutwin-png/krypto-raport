@@ -5,11 +5,9 @@ from PIL import Image, ImageDraw, ImageFilter, ImageEnhance, ImageFont
 src=open('karta_sunset.py').read().split("P=f'{REPO}/propozycje/sunset'")[0]
 exec(src)
 W,H=1080,1920; FPS=30
-D=f'{REPO}/propozycje/karuzela_2411'; R=f'{D}/reel'
-T=json.load(open(f'{R}/teksty.json'))
-KARTY=[('XAU','−2.4%','$3,563','s_xau.jpg',150,0.4,False),('XDC','−3.0%','$0.0258','s_xdc.jpg',150,0.45,False),
-       ('BTC','−4.2%','$59,475','s_btc.jpg',200,0.8,False),('ETH','−5.1%','$1,670','s_eth.jpg',200,0.9,True),
-       ('XRP','−6.1%','$0.912','s_xrp.jpg',150,1.0,True),('XLM','−7.2%','$0.1233','s_xlm.jpg',150,1.0,True)]
+CFG=json.load(open(sys.argv[1])); D='/home/claude/krypto-raport/'+CFG['dir']; R=f'{D}/reel'; os.makedirs(R,exist_ok=True)
+T=[{'cap':c['cap']} for c in CFG['karty']]
+KARTY=[(c['k'],c['pc'],c['cena'],c['scena'],c['x0'],c['sila'],c['piorun']) for c in CFG['karty']]
 def dlug(p):
     w=wave.open(p); d=w.getnframes()/w.getframerate(); w.close(); return d
 def tytul(k,pc,cena,i):

@@ -1,0 +1,37 @@
+[
+ {
+  "data": "2026-11-24",
+  "sceny": [
+   {
+    "k": "XAU",
+    "postac": "siwy biznesmen w garniturze",
+    "miejsce": "taras na dachu, pochmurno"
+   },
+   {
+    "k": "XDC",
+    "postac": "dziewczyna w bluzie",
+    "miejsce": "neonowa pralnia nocą"
+   },
+   {
+    "k": "BTC",
+    "postac": "przypakowany brodacz",
+    "miejsce": "krawężnik przy pomarańczowym aucie, deszcz"
+   },
+   {
+    "k": "ETH",
+    "postac": "blondynka w srebrnej sukni",
+    "miejsce": "basen przy willi, ulewa"
+   },
+   {
+    "k": "XRP",
+    "postac": "wytatuowany mężczyzna na kolanach",
+    "miejsce": "mokra ulica, burza"
+   },
+   {
+    "k": "XLM",
+    "postac": "chłopak w skórzanej kurtce",
+    "miejsce": "zaułek przy śmietniku, burza"
+   }
+  ]
+ }
+]

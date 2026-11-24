@@ -35,3 +35,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-24: Panel Telegram – guzik 🔍 OCENA zamiast LOT: werdykt SHORT / LONG / CZEKAJ dla złota (trend H1 + impet M5 + RSI, ostrzega przed gonieniem przeciągniętego ruchu, podaje TP/SL).
 - 2026-11-24: Strona crypto freaq – pasek cen na żywo: złoto, BTC, ETH, XRP, XLM, XDC (SOL usunięty) + nowa pozycja w briefie „Our focus: XRP, XLM, XDC” (cena, 24h, tydzień).
 - 2026-11-24: Strona crypto freaq – nowa grafika na górze (neonowe miasto, holograficzny globus, złoto, prawdziwe monety XRP/XLM/XDC na podestach), osobny kadr na telefon.
+- 2026-11-24: Nowy format Reela „Karuzela gra” (6 postaci w stylu gry, darmowy FLUX z Cloudflare, lektor, ruch kamery) – test od 25.11 w Reelu 10:00; klucz Cloudflare w sejfie serwera.

@@ -15,6 +15,19 @@ Copy this folder to a scratchpad, then:
 6. Cover = a frame around 5-6 s (jpg). Push mp4 + cover + caption.txt to `reports/YYYY-MM-DD-reel/`, publish with Windsor `create_video_post` (raw GitHub URLs, share_to_feed true).
 Caption: hook first line, 3 facts, a question for comments, "Follow @erl.grey83", disclaimer, 5-8 hashtags.
 
+## ⭐ NOWY FORMAT „KARUZELA GRA” – TEST od śr. 25.11.2026 (Reel 10:00; szef zatwierdził 24.11)
+Wzór gotowy: marka/propozycje/karuzela_2411/ (config.json, podglad.jpg, reel/). 6 kart = złoto, BTC, ETH, XRP, XLM, XDC; każda karta = INNA postać w INNYM miejscu (styl półrealistyczny jak nowoczesna gra, tropikalne neonowe miasto), emocja i pogoda wg ruchu 24h; BEZ monet w scenie, BEZ nagości, bez nazw/logo GTA.
+1. Dane: CoinGecko get-coin-markets ids pax-gold,bitcoin,ethereum,ripple,stellar,xdce-crowd-sale → cena + 24h %. Kolejność kart: od największego wzrostu do największego spadku.
+2. Nastrój: ≤−4% burza/ulewa/rozpacz (sila 1.0, piorun true) · −4…−1% pochmurno/nerwy (sila 0.4) · −1…+1% spokój (sila 0) · +1…+4% słońce, plaża/drink (sila 0) · ≥+4% złote światło, jacht/zakupy/fura, na bogato (sila 0).
+3. Sceny: unikaj postaci i miejsc z reports/sceny_karuzeli.json z ostatnich 14 dni. Prompt: "Cinematic semi-realistic AAA open-world video game render, tropical Miami-like neon city, highly detailed, depth of field, no text, no letters, no logos, no signs with writing. <postać, miejsce, emocja, pogoda>". Generuj na SERWERZE (Remote_Desktop_Commander, deviceId 0b708a8f-66a5-4eeb-8a28-ac5878aae932): `python C:\Hexa\generatory\flux_gen.py "<prompt>" C:\Hexa\krypto-raport\marka\propozycje\karuzela_RRRRMMDD\s_<kod>.jpg` (darmowy FLUX, ~3 s), potem na serwerze `git stash; git pull; git add …; git commit; git push; git stash pop` i pull tutaj. Obejrzyj każdą scenę (Read); zła → nowy prompt. x0 = lewa krawędź kadru 824 px wokół postaci (0–200).
+4. Powód ruchu: WebSearch (≥2 źródła dla złota/BTC/ETH; mała moneta bez newsa → uczciwie „follows the market”). Dla każdej karty: say (EN, 20–30 słów, „analysts point to”) i cap (≤8 słów). Bez obietnic, bez porad.
+5. config.json w folderze dnia – format jak karuzela_2411/config.json (k, pc, cena, haslo, scena, x0, sila, piorun, say, cap).
+6. Lektor na serwerze (JEDEN stały głos): dla każdej karty `"<say>" | python -m piper -m tools\reel\voice\en_US-hfc_male-medium.onnx --length-scale 1.05 --sentence-silence 0.25 -f marka\propozycje\karuzela_RRRRMMDD\reel\vN.wav` (N = numer karty), push, pull.
+7. Render tutaj: `python3 tools/monety/karuzela.py <config>` (karty + podglad.jpg) → `python3 tools/monety/reel_karuzela.py <config>` → `python3 tools/monety/audio_reel.py <config> tense|calm|uplift` (tense gdy większość spada, uplift gdy rośnie) → reel/reel.mp4 (~55 s, Ken Burns, deszcz, pioruny, podpisy, żółty pasek z adresem strony).
+8. Obejrzyj min. 6 klatek. Publikacja jak zwykle (Reel IG + Short YT): opis = hak, po jednej linijce na aktywo, „Live prices → link in bio”, disclaimer, hashtagi; na YouTube w opisie pełny link https://erlgrey83-crypto-freaq.vercel.app (klikalny).
+9. Dopisz dzień i sceny do reports/sceny_karuzeli.json; jedna linia w reports/dziennik_zespolu.md.
+10. Gdy coś padnie i nie da się naprawić do 10:30 → zwykły Reel jak niżej + „BŁĄD:” w dzienniku. Test A/B prowadzi Laboratorium treści (wyświetlenia, czas oglądania vs zwykły Reel).
+
 ## Styl CYBERPUNK (od 5.11.2026)
 Tlo `bg()` ma neonowe miasto (cyjan #00f0ff + roz #ff2bd6 + zolte okna), rozowa linie horyzontu i siatke. Karty sa ciemne (min. 82% krycia), zeby tekst byl czytelny.
 Zasady wzrostu z zadania 12:00 (hook w 1 s, 20-35 s, filar dnia) maja pierwszenstwo przed czasami scen w tym README.
