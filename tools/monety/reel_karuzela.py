@@ -57,7 +57,7 @@ def klatka(sc,t):
     c.alpha_composite(ty,(0,40+dy))
     b=min(1,max(0,(t-0.8)/0.5)); po=sc['pod'].copy()
     if b<1: po.putalpha(po.split()[3].point(lambda v:int(v*b)))
-    c.alpha_composite(po,(0,1560+int((1-b)*30)))
+    # szef 24.11: bez podpisu na dole (lektor mowi to samo)
     d=ImageDraw.Draw(c); d.text((60,H-70),'ERL.GREY83',font=fb(30,700),fill=(244,241,234),anchor='lm'); d.text((W-60,H-70),'NOT FINANCIAL ADVICE',font=fb(22,600),fill=(190,190,200),anchor='rm')
     d.rounded_rectangle([150,H-150,W-150,H-102],radius=24,fill=(255,200,60,235)); d.text((W//2,H-126),'LIVE PRICES → erlgrey83-crypto-freaq.vercel.app',font=fb(24,800),fill=(10,10,14),anchor='mm')
     return c.convert('RGB')
