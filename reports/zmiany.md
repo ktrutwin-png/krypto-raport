@@ -38,3 +38,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-24: Nowy format Reela „Karuzela gra” (6 postaci w stylu gry, darmowy FLUX z Cloudflare, lektor, ruch kamery) – test od 25.11 w Reelu 10:00; klucz Cloudflare w sejfie serwera.
 - 2026-11-24: Briefing 8:00 – nowa stała sekcja „RYNEK – DLACZEGO”: 5–8 krótkich informacji z linkami (złoto, dolar/Fed, BTC/ETH, XRP/XLM/XDC i ich firmy, duże firmy), bez liczb i plotek.
 - 24.11 Hexa: usunięte hasło „opiekunka życia” – przedstawia się po prostu „Hexa”.
+- 24.11 Panel Telegram: dźwięk tylko przy „TP trafiony”, pozostałe wiadomości panelu przychodzą po cichu.
