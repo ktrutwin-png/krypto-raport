@@ -122,6 +122,7 @@ Forex/złoto: 16 sesji (2–23.11, limit 500 świec); krypto 22 dni (2–23.11, 
   | 15:30-17:30 | 4 | 0 | 0% | -0.75 |
   | 09:00-11:00 | 3 | 0 | 0% | -0.33 |
   Wniosek (n małe): cele padają w drugiej połowie sesji NY (GBP 20:00) – okno 14:00–17:00 to dobre okno WEJŚCIA, cel może przyjść później.
+- 2026-11-24 (wt): rozliczono GBP/USD short dzień 23.11 = cel 23.11 13:00 (+1.19R, wejście 07:00; godziny z Yahoo 1h, UTC). Razem n=32, cel 22%, śr. +0.13R; okno 14:00-17:00 n=19, 6 celów, +0.35R. UWAGA: Twelve Data forex 1h zwraca dziś czas UTC+11 (Sydney) – świeca TD 19:00 = 09:00 CET (sprawdzone na GBP/USD vs Yahoo); tabele godzin z 23.11 przeliczyć w pn 30.11 na danych z jednoznacznym znacznikiem czasu.
 ### Historia wpisów
 (z okazje_zwiadowcy.csv)
 - 2026-11-09: brak rozliczonych okazji (start Z2) – statystyka od pierwszych rozliczeń.

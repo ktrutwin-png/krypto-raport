@@ -357,3 +357,5 @@ UPDATE: 2026-11-22 14:21 (Agent Skanery) skaner_dzienny.py na serwerze: US30 RSI
 2026-11-24 02:05 | Laboratorium | +1 (LAB_DEX_M9_FalaB) / −0 (zawieszony Luka_FX) | najlepszy: LAB_Donchian_XAG +654,83 $ | ok
 2026-11-24 04:42 | Mechanik | naprawione: 0, do wdróż: 0 | brak zgłoszeń „dla Mechanika” (Z040/Z041/Z042 nadal czekają na wdróż – Mózg); wtorek – bez przeglądu | ok
 2026-11-24 05:48 | Kalendarz | dziś brak ważnych danych (najbliższe: jutro 14:30 PL USD Prelim GDP q/q, Core PCE Price Index m/m) | ok
+2026-11-24 06:51 | Zwiadowca | okazje: 3 (1/1/1: EUR/USD short dz., XAG short tydz., ETH short mies.), rozliczone: 1 (GBP/USD 23.11 cel +1.19R), trafność 30 dni: 22% (n=32, śr. +0.13R), najlepsze okno: 14:00–17:00 (n=19, 6 celów, +0.35R) | ok
+2026-11-24 06:51 | Zwiadowca | BŁĄD: Twelve Data forex 1h zwraca czas UTC+11 (świeca TD 19:00 = 09:00 CET, potw. Yahoo GBP/USD) – tabele godzin forex/złota z 23.11 w godziny_rynkow.md mogą mieć przesunięte godziny; rozliczenia od dziś na Yahoo 1h (UTC), przeliczenie tabel w pn 30.11
