@@ -63,11 +63,6 @@ def klatka(i):
         sh=Image.new('RGBA',(W,H),(0,0,0,0)); ImageDraw.Draw(sh).ellipse([cx-R*0.95,sy-R*0.10,cx+R*0.95,sy+R*0.14],fill=(0,0,0,150))
         bg.alpha_composite(sh.filter(ImageFilter.GaussianBlur(12)))
         bg.alpha_composite(im,(int(cx-Sw/2),top))
-        # flara na krawedzi
-        fx=cx+R*0.55*math.cos(t*1.3+k); fy=top+cy*0.45
-        fl=Image.new('RGBA',(W,H),(0,0,0,0)); fd=ImageDraw.Draw(fl); fa=int(120+120*max(0,math.sin(t*2.3+k*2)))
-        fd.line([fx-90,fy,fx+90,fy],fill=(255,255,255,fa),width=3); fd.line([fx,fy-40,fx,fy+40],fill=(255,255,255,fa),width=2); fd.ellipse([fx-8,fy-8,fx+8,fy+8],fill=(255,255,255,fa))
-        bg.alpha_composite(_glow(fl,6,2)); bg.alpha_composite(fl)
     # bokeh na pierwszym planie
     bk=Image.new('RGBA',(W,H),(0,0,0,0)); bd=ImageDraw.Draw(bk)
     for p in BK:
