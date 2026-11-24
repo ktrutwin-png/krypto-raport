@@ -28,3 +28,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-22 20:22 | eToro przegląd tygodnia: nowe zadanie z dostępem do repo
 - 2026-11-24 15:05 | Reele/Raport/Shorts: sceny 3D (waga, pokrętło, skarbiec, globus) wyłączone – decyzja szefa, tylko neonowe obrazy
 - 2026-11-24 15:08 | Grafiki: wzór stylu od szefa (złoty byk/BTC/neon) – punkt odniesienia dla wszystkich obrazów
+- 2026-11-24 15:12 | Treści: główne tematy XRP, XLM, XDC i złoto (BTC/ETH tylko tło)
