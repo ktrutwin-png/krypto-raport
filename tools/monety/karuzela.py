@@ -31,7 +31,7 @@ import karta_sunset
 for i,(k,pc,cena,has,scn,(cx,cy,Dm),fx,pk,x0) in enumerate(KARTY,1):
     s=Image.open(f'{D}/{scn}'); m=mon[k]
     if pk: m=rozbij(m,pk)
-    sc=polozona(s,m,cx,cy,Dm,ambient=(0.95,1.0,1.1)); sc.convert('RGB').save(f'{D}/_tmp.jpg',quality=95)
+    s.convert('RGB').save(f'{D}/_tmp.jpg',quality=95)   # szef 24.11: bez monet w scenie
     kol=(255,255,255); gl=(255,30,70) if float(pc[1:-1])>=4 else (255,120,40)
     wyj=f'{D}/{i}_{k.lower()}.jpg'
     if fx=='mzawka': globals()['deszcz_orig']=deszcz
