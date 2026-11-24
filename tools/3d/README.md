@@ -1,4 +1,7 @@
-# Sceny 3D do Reels / Shorts / Weekly (szef 11.11.2026)
+# Sceny 3D do Reels / Shorts / Weekly – WYŁĄCZONE od 24.11.2026
+
+> **Szef 24.11.2026: sceny 3D (waga, pokrętło/licznik, skarbiec, globus, liczba, świece) nie pasują do wystroju – NIE używać w żadnym filmie.** kino.py pomija `"d3"`, gdy scena ma `"img"`. Zamiast 3D: świeże neonowe obrazy (zasady kolorystyki w reports/plan_wzrostu.md).
+
 
 Prawdziwy render 3D (three.js, metal PBR wg skilla `3d-metal-material`: ciemne studio, jasne karty, fazowane krawędzie, bloom).
 Każda scena się rusza i ma wolne, ciemniejsze miejsce u góry na nagłówek.

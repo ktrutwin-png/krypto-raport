@@ -26,3 +26,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-22 15:35 | Hexa: karta postaci – jeden stały wygląd we wszystkich grafikach
 - 2026-11-22 19:35 | Inspektor: 4 nowe stałe reguły z powtarzających się błędów (zadania w chmurze, cisza w nowych zadaniach, pula eToro od razu, „działa” dopiero po restarcie)
 - 2026-11-22 20:22 | eToro przegląd tygodnia: nowe zadanie z dostępem do repo
+- 2026-11-24 15:05 | Reele/Raport/Shorts: sceny 3D (waga, pokrętło, skarbiec, globus) wyłączone – decyzja szefa, tylko neonowe obrazy

@@ -142,6 +142,8 @@ D3 = os.path.join(HERE, "..", "3d")
 for i, (s, L) in enumerate(zip(S, DUR)):
     d = s.get("d3")
     if not d or s.get("end"): continue
+    # 24.11.2026 (szef): sceny 3D WYLACZONE - nie pasuja do stylu. Jest obraz -> bierzemy obraz; 3D tylko awaryjnie, gdy scena nie ma obrazu
+    if s.get("img") and not os.environ.get("KINO_3D"): print("3D wylaczone (24.11) - scena", i + 1, "z obrazu"); continue
     try:
         if not os.path.exists(os.path.join(D3, "node_modules", "three")): run(["npm", "i", "--no-audit", "--no-fund"], cwd=D3)
         full = os.environ.get("KINO_3D_FULL"); w3, h3 = ((W, H_) if full else ((1440, 810) if WIDE else (810, 1440)))
