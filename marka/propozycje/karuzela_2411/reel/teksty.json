@@ -1,0 +1,8 @@
+[
+ {"k":"XAU","say":"Gold slips two point four percent. A strong dollar and rising bond yields keep the pressure on, as markets price in higher interest rates.","cap":"Strong dollar + rising yields = pressure on gold"},
+ {"k":"XDC","say":"X D C drops three percent. Smaller networks follow the market down, as traders cut risk across the board.","cap":"Small caps follow the market as traders cut risk"},
+ {"k":"BTC","say":"Bitcoin falls more than four percent, under sixty thousand dollars. Fear of higher rates and forced selling of leveraged bets weigh on the leader.","cap":"Rate fears + forced selling hit the leader"},
+ {"k":"ETH","say":"Ether loses five percent and keeps falling harder than Bitcoin, as appetite for risk fades.","cap":"Ether keeps falling harder than Bitcoin"},
+ {"k":"XRP","say":"X R P slides six percent, back near ninety cents. In a risk off market, the high flyers take the biggest hits.","cap":"Risk-off: high flyers take the biggest hits"},
+ {"k":"XLM","say":"And Stellar is today's biggest loser, down more than seven percent. When the market turns, smaller coins fall the fastest. Not financial advice. Follow for the daily moves.","cap":"Today's biggest loser — small coins fall fastest"}
+]
