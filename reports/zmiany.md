@@ -29,3 +29,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-24 15:05 | Reele/Raport/Shorts: sceny 3D (waga, pokrętło, skarbiec, globus) wyłączone – decyzja szefa, tylko neonowe obrazy
 - 2026-11-24 15:08 | Grafiki: wzór stylu od szefa (złoty byk/BTC/neon) – punkt odniesienia dla wszystkich obrazów
 - 2026-11-24 15:12 | Treści: główne tematy XRP, XLM, XDC i złoto (BTC/ETH tylko tło)
+- 2026-11-24 15:57 | Reele: 3×/tydz. dłuższe Reele objaśniające (45–60 s) o XRP/XLM/XDC/złocie – test 2 tyg.
