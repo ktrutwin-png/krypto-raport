@@ -355,3 +355,4 @@ UPDATE: 2026-11-22 14:21 (Agent Skanery) skaner_dzienny.py na serwerze: US30 RSI
 2026-11-23 07:01 | Zwiadowca | okazje: 4 (1/2/1: GBP/USD short dz., AUD/USD i XAU short tydz., BTC short mies.), rozliczone: 3 (GBP/USD 20.11 cel +1.20R, USD/CHF 2× brak), trafność 30 dni: 19% (n=31, śr. +0.09R, z wejściem n=14 +0.20R), najlepsze okno: 14:00–17:00 (n=18, 28%, +0.31R); godziny_rynkow.md zaktualizowane (Twelve Data 1h; srebro i indeksy kasowe poza planem – proxy SPY/QQQ/EWG, srebro bez okazji) | ok
 2026-11-23 09:57 | Reżyser (Reel) | $11B UNDERWATER / FORCED TO SELL? (CLAIM CHECK, Strategy) | IG ok/YT ok | ok
 2026-11-24 02:05 | Laboratorium | +1 (LAB_DEX_M9_FalaB) / −0 (zawieszony Luka_FX) | najlepszy: LAB_Donchian_XAG +654,83 $ | ok
+2026-11-24 04:42 | Mechanik | naprawione: 0, do wdróż: 0 | brak zgłoszeń „dla Mechanika” (Z040/Z041/Z042 nadal czekają na wdróż – Mózg); wtorek – bez przeglądu | ok
