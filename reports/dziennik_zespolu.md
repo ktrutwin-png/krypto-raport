@@ -360,3 +360,4 @@ UPDATE: 2026-11-22 14:21 (Agent Skanery) skaner_dzienny.py na serwerze: US30 RSI
 2026-11-24 06:51 | Zwiadowca | okazje: 3 (1/1/1: EUR/USD short dz., XAG short tydz., ETH short mies.), rozliczone: 1 (GBP/USD 23.11 cel +1.19R), trafność 30 dni: 22% (n=32, śr. +0.13R), najlepsze okno: 14:00–17:00 (n=19, 6 celów, +0.35R) | ok
 2026-11-24 06:51 | Zwiadowca | BŁĄD: Twelve Data forex 1h zwraca czas UTC+11 (świeca TD 19:00 = 09:00 CET, potw. Yahoo GBP/USD) – tabele godzin forex/złota z 23.11 w godziny_rynkow.md mogą mieć przesunięte godziny; rozliczenia od dziś na Yahoo 1h (UTC), przeliczenie tabel w pn 30.11
 2026-11-24 09:56 | Reżyser (Reel) | CRYPTO 101: $343M LIQUIDATED / WHAT DOES IT MEAN? | IG ok/YT ok | ok
+2026-11-24 11:40 | ElevenLabs | faktura roczna anulowana – ponaglenia zakończone | ok
