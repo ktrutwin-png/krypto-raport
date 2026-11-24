@@ -23,7 +23,7 @@ Konektor: ElevenLabs-619b9b4c (mcp__ElevenLabs-619b9b4c__*). Konto wspólne z g�
 1. Przed użyciem przeczytaj tabelę „Zużycie” i policz sumę tygodnia (pon–nd) w swojej puli. Limit przekroczony → wróć do darmowych (piper, Canva, HF hexa_gen.py) i nic nie generuj w ElevenLabs.
 2. Po każdej generacji dopisz wiersz do „Zużycie” (data, agent, pula, co, model, ~kredyty). Lektor: kredyty ≈ liczba znaków tekstu (multilingual v2 / v3), flash ≈ połowa.
 3. Jedna generacja na rzecz (generations_count=1 dla lektora, 2 dla obrazu). Nigdy nie ponawiaj tej samej generacji – płaci się drugi raz. Najpierw sprawdź tekst skillem no-ai-slop i liczby (Analityk), dopiero potem generuj.
-4. Lektor: głos „Patrick International Narration” `9Ft9sm9dzvprPILZmLJl` (głęboki, spokojny, dokumentalny – „przyciąga, nie krzyczy”, R19); zapas: „Ken Franson” `kJKMPwrIKzwVkMKOfRtr`. Jeden głos na stałe = rozpoznawalność marki. Pobierz plik audio na serwer i wpisz ścieżkę w polu `"glos"` sceny w scenes.json (KINO od 12.11 używa go zamiast piper; puste `glos` = piper jak dotąd). Jeden plik na scenę albo jedno nagranie pocięte ffmpeg na sceny.
+4. Lektor (szef 24.11.2026): JEDEN STAŁY GŁOS we wszystkich filmach – darmowy piper `en_US-hfc_male-medium` (głos nr 6 z próbek `marka/glosy/`). NIE generuj lektora w ElevenLabs, nie wpisuj pola `"glos"` w scenes.json (KINO je ignoruje). Pula „Lektor” wolna na inne cele.
 5. Obrazy ElevenLabs: prompt GŁĘBIA z R17 + kolory marki R21, bez ludzi, bez tekstu; 9:16 dla Reels, 16:9 dla miniatur. Najpierw `creative_get_model_guide` dla modelu.
 6. Raz w tygodniu (niedziela) Analityk sumuje zużycie w dzienniku zespołu: „ElevenLabs: X / limit” – bez powiadomień do szefa.
 

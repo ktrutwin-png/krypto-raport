@@ -10,8 +10,8 @@
 
 # KINO – Reel z lektorem
 ## Styl "news" (DOMYŚLNY od 6.11.2026 – wzór szefa: „taka forma jest najlepsza dla YT i Insta”)
-Gruby naglowek u góry (Anton, biały + *żółty* + ~zielony~, lekko pochylony), opcjonalnie tag (np. LIVE MARKET UPDATE), sub, chip (▲/▼ liczba), note (ciemna ramka wchodząca w połowie sceny). Obrazy = holograficzne sceny z wykresami/panelami danych (bank: *_holo_*). Szybki energiczny lektor: piper **en_US-ryan-high** (obniżony o 10%), ~2,5 słowa/s. Na końcu automatyczna plansza „This Is Not Financial Advice! Just data. @erl.grey83”. 4–6 scen, 25–40 s.
-Głos pobierz do tools/reel/voice/: https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ryan/high/en_US-ryan-high.onnx (+ .onnx.json), export no_proxy= NO_PROXY=. Folder voice/ jest w .gitignore.
+Gruby naglowek u góry (Anton, biały + *żółty* + ~zielony~, lekko pochylony), opcjonalnie tag (np. LIVE MARKET UPDATE), sub, chip (▲/▼ liczba), note (ciemna ramka wchodząca w połowie sceny). Obrazy = holograficzne sceny z wykresami/panelami danych (bank: *_holo_*). Szybki energiczny lektor: piper **en_US-hfc_male-medium** (JEDEN STAŁY GŁOS od 24.11.2026, bez zmiany tonu), ~2,5 słowa/s. Na końcu automatyczna plansza „This Is Not Financial Advice! Just data. @erl.grey83”. 4–6 scen, 25–40 s.
+Głos pobierz do tools/reel/voice/: https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/hfc_male/medium/en_US-hfc_male-medium.onnx (+ .onnx.json), export no_proxy= NO_PROXY=. Folder voice/ jest w .gitignore.
 Prompt obrazu (news): "Futuristic holographic <temat> dashboard, vertical composition, <wykres/obiekt>, floating translucent data panels, deep navy background, neon cyan and gold light, ultra detailed 3D render, top third darker and empty for headline, no readable words".
 
 ### Sceny 3D (od 11.11.2026 – szef: 1–2 w każdym filmie)
@@ -28,7 +28,7 @@ Pełnoekranowe pionowe zdjęcia (9:16), wolny ruch kamery, duża liczba + podpis
 
 ## Użycie
 1. Folder z obrazami scen + `scenes.json` (format w nagłówku `kino.py`).
-2. `python3 tools/kino/kino.py <folder>` -> `reel.mp4` + `cover.jpg`. Głos: `tools/reel/voice/en_US-joe-medium.onnx` (pobierz wg `tools/reel/README.md`) albo env `KINO_VOICE`. Gotowy lektor ElevenLabs: pole `"glos": "plik.mp3"` w scenie (ścieżka od folderu scen; budżet: `reports/elevenlabs_budzet.md`).
+2. `python3 tools/kino/kino.py <folder>` -> `reel.mp4` + `cover.jpg`. Głos: `tools/reel/voice/en_US-hfc_male-medium.onnx` (pobierz wg `tools/reel/README.md`) albo env `KINO_VOICE`. Pole `"glos"` (ElevenLabs) jest WYŁĄCZONE od 24.11.2026 – zawsze stały głos hfc_male.
 
 ## Skąd obrazy (wszystko darmowe, kolejność)
 1. **Bank** `tools/kino/bank/<temat>_NN.jpg` (1080x1920). Użyj, jeśli pasuje do tematu; nie powtarzaj tego samego zdjęcia 2 dni z rzędu.

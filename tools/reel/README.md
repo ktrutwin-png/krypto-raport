@@ -5,8 +5,8 @@ Copy this folder to a scratchpad, then:
 
 1. Edit `reel.html`: scenes sc1..sc6 (hook with big number + 7-day BTC chart from `prices.js`, why/cause scene, drivers, funds, levels + key dates, CTA question). Keep all on-screen text in English, nick @erl.grey83, footer "For information only, not investment advice."
    Replace `PX` in `prices.js` with fresh 7-day BTC prices (CoinGecko get-coin-market-chart, id=bitcoin, days=7).
-2. Edit `segs` in `vo.py` - narration explains WHY it happened (do not read the slide text), only facts from >=2 sources, hedge causes ("analysts point to"). Voice: piper en_US-joe-medium (deep male, ~95 Hz). Download once:
-   `curl -L -o voice/en_US-joe-medium.onnx https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/joe/medium/en_US-joe-medium.onnx` (+ `.onnx.json`). Needs `pip install --break-system-packages piper-tts` and `export no_proxy= NO_PROXY=` for pip/curl.
+2. Edit `segs` in `vo.py` - narration explains WHY it happened (do not read the slide text), only facts from >=2 sources, hedge causes ("analysts point to"). Voice: piper en_US-hfc_male-medium (THE ONE fixed brand voice since 24.11.2026). Download once:
+   `curl -L -o voice/en_US-hfc_male-medium.onnx https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/hfc_male/medium/en_US-hfc_male-medium.onnx` (+ `.onnx.json`). Needs `pip install --break-system-packages piper-tts` and `export no_proxy= NO_PROXY=` for pip/curl.
 3. `python3 vo.py` -> timing.json + voice.m4a. `python3 music.py <T> <nastroj>` -> melody.wav (oryginalny podklad synthwave; nastroj: calm / tense / uplift / gold - dobierz do tematu, opis w music.py), then `ffmpeg -i melody.wav -af "lowpass=f=3500,aecho=0.8:0.55:380|760:0.3|0.2" melody_fx.wav` (dla tense: `lowpass=f=6000,aecho=0.8:0.6:310|690:0.35|0.25`; dla uplift: `highpass=f=70,aecho=0.8:0.75:140|290|560|1100:0.38|0.3|0.22|0.15`). Szef 5.11.2026: tense = HORROR (drastyczna muzyka przy spadkach/krachu), uplift = NIEBO (anielski chór przy wzrostach) - patrz special.py.
 4. Frames: run 4 in parallel `python3 frames.py <i> 4` (i=0..3) -> f/%05d.jpg (30 fps, 1080x1920).
 5. Mix (music ducked under voice, loudnorm) and mux:

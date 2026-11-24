@@ -16,19 +16,19 @@ Naglowki same dopasowuja wielkosc (jedna linia = jeden wiersz, bez osieroconych 
 style "cinema" = stary wyglad (duza liczba "big" + "sub" na srodku).
 "glos": "lektor1.mp3" (od 12.11.2026) – gotowe nagranie lektora (ElevenLabs) zamiast piper, bez obnizania tonu; dziala tez przy pustym "say";
 sciezka wzgledna liczona od folderu scen; brak pliku = ostrzezenie "GLOS brak pliku" i powrot do piper. Budzet kredytow: reports/elevenlabs_budzet.md.
-Glos: piper en_US-ryan-high (energiczny meski), obnizony o ~10% (KINO_PITCH, domyslnie 0.9); KINO_VOICE nadpisuje model.
+Glos: JEDEN STALY (szef 24.11.2026): piper en_US-hfc_male-medium, bez zmiany tonu. Pole "glos" (ElevenLabs) jest ignorowane – zawsze ten sam lektor.
 Wynik: reel.mp4 (1080x1920, 30 fps) + cover.jpg."""
 import json, os, subprocess, sys, wave, asyncio, re, html as H
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 D = os.path.abspath(sys.argv[1]); HERE = os.path.dirname(os.path.abspath(__file__)); REEL = os.path.join(HERE, "..", "reel")
 VDIR = os.path.join(REEL, "voice")
-if not os.environ.get("KINO_VOICE") and not os.path.exists(os.path.join(VDIR, "en_US-ryan-high.onnx")):  # glos wzorcowy szefa – pobierz raz
+if not os.environ.get("KINO_VOICE") and not os.path.exists(os.path.join(VDIR, "en_US-hfc_male-medium.onnx")):  # staly glos szefa – pobierz raz
     os.makedirs(VDIR, exist_ok=True)
     env = dict(os.environ, no_proxy="", NO_PROXY="")
-    for f in ("en_US-ryan-high.onnx", "en_US-ryan-high.onnx.json"):
-        subprocess.run(["curl", "-sSfL", "-o", os.path.join(VDIR, f), "https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ryan/high/" + f], env=env)
-VOICE =os.environ.get("KINO_VOICE") or next((os.path.join(VDIR, v) for v in ("en_US-ryan-high.onnx", "en_US-joe-medium.onnx") if os.path.exists(os.path.join(VDIR, v))), "")
-PITCH = float(os.environ.get("KINO_PITCH", "0.9" if "ryan" in VOICE else "1.0"))
+    for f in ("en_US-hfc_male-medium.onnx", "en_US-hfc_male-medium.onnx.json"):
+        subprocess.run(["curl", "-sSfL", "-o", os.path.join(VDIR, f), "https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/hfc_male/medium/" + f], env=env)
+VOICE =os.environ.get("KINO_VOICE") or next((os.path.join(VDIR, v) for v in ("en_US-hfc_male-medium.onnx",) if os.path.exists(os.path.join(VDIR, v))), "")
+PITCH = float(os.environ.get("KINO_PITCH", "1.0"))
 FPS, FADE = 30, 0.45
 CFG = json.load(open(os.path.join(D, "scenes.json"))); WIDE = CFG.get("format") == "landscape"; W, H_ = (1920, 1080) if WIDE else (1080, 1920); SS = 1.25 if WIDE else 2; S = list(CFG["scenes"]); STYLE = CFG.get("style", "news")
 HANDLE = CFG.get("handle", "@erl.grey83")
@@ -121,7 +121,7 @@ asyncio.run(overlays())
 DUR = []
 for i, s in enumerate(S):
     last = i == len(S) - 1
-    gl = s.get("glos")  # gotowe nagranie lektora (np. ElevenLabs mp3/wav) - wtedy bez piper i bez obnizania tonu; sciezka wzgledna = od folderu scen
+    gl = None  # szef 24.11: jeden staly glos (hfc_male) – pole "glos" ignorowane; dawniej: s.get("glos") gotowe nagranie lektora (np. ElevenLabs mp3/wav) - wtedy bez piper i bez obnizania tonu; sciezka wzgledna = od folderu scen
     if gl and not s.get("end") and not os.path.exists(gl):
         print(f"GLOS brak pliku: {gl} (scena {i + 1}) -> " + ("piper z 'say'" if s.get("say", "").strip() else "cisza 2,2 s"), file=sys.stderr); gl = None
     if s.get("end") or not (s.get("say", "").strip() or gl):

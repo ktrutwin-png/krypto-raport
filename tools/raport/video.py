@@ -2,12 +2,12 @@
 Uzycie: python3 video.py <folder_z_slide1-3.png> <nastroj: calm|tense|uplift|gold> [sciezka_do_glosu.onnx]
 Lektor: plik narration.json w folderze = lista 3 tekstow (po angielsku), jeden na slajd. Czas slajdu = dlugosc
 jego narracji (+0,6 s). Bez narration.json film jest tylko z muzyka (stale czasy 4,5/7,5/6,5 s).
-Glos: piper en_US-joe-medium (gleboki meski, jak w Reelach); domyslnie szukany w tools/reel/voice/.
+Glos: piper en_US-hfc_male-medium (staly glos marki od 24.11.2026); domyslnie szukany w tools/reel/voice/.
 Wynik: report.mp4 + cover.jpg. Slajd 4:5 na srodku pionu, tlo = rozmyty slajd, lekkie przyblizenie, przejscia."""
 import subprocess, sys, os, json, wave
 D = os.path.abspath(sys.argv[1]); MOOD = sys.argv[2] if len(sys.argv) > 2 else "calm"
 HERE = os.path.dirname(os.path.abspath(__file__)); REEL = os.path.join(HERE, "..", "reel")
-VOICE = sys.argv[3] if len(sys.argv) > 3 else os.path.join(REEL, "voice", "en_US-joe-medium.onnx")
+VOICE = sys.argv[3] if len(sys.argv) > 3 else os.path.join(REEL, "voice", "en_US-hfc_male-medium.onnx")
 FADE = .5; FPS = 30
 def run(cmd, **kw): subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, **kw)
 os.chdir(D)

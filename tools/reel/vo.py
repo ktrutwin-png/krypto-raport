@@ -7,7 +7,7 @@ segs=["Bitcoin ended the week almost flat, down about half a percent. But it cli
 "So, will Bitcoin close next week above eighty thousand? Tell us in the comments, and follow for daily reports."]
 os.makedirs('seg',exist_ok=True);S=[];t=0.0
 for i,s in enumerate(segs):
-    subprocess.run(['python3','-m','piper','-m','voice/en_US-joe-medium.onnx','--length-scale','1.0','-f',f'seg/a{i}.wav'],input=s.encode(),check=True,capture_output=True)
+    subprocess.run(['python3','-m','piper','-m','voice/en_US-hfc_male-medium.onnx','--length-scale','1.0','-f',f'seg/a{i}.wav'],input=s.encode(),check=True,capture_output=True)
     w=wave.open(f'seg/a{i}.wav');d=w.getnframes()/w.getframerate()
     L=d+0.45;S.append([round(t,2),round(t+L,2)])
     subprocess.run(['ffmpeg','-y','-loglevel','error','-i',f'seg/a{i}.wav','-af',f'apad=whole_dur={L:.2f},aresample=44100','-ac','2',f'seg/p{i}.wav'],check=True)
