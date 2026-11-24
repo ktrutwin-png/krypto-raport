@@ -61,6 +61,7 @@ def klatka(sc,t):
     if b<1: po.putalpha(po.split()[3].point(lambda v:int(v*b)))
     c.alpha_composite(po,(0,1560+int((1-b)*30)))
     d=ImageDraw.Draw(c); d.text((60,H-70),'ERL.GREY83',font=fb(30,700),fill=(244,241,234),anchor='lm'); d.text((W-60,H-70),'NOT FINANCIAL ADVICE',font=fb(22,600),fill=(190,190,200),anchor='rm')
+    d.rounded_rectangle([150,H-150,W-150,H-102],radius=24,fill=(255,200,60,235)); d.text((W//2,H-126),'LIVE PRICES → erlgrey83-crypto-freaq.vercel.app',font=fb(24,800),fill=(10,10,14),anchor='mm')
     return c.convert('RGB')
 XF=0.4; total=sum(s['dur'] for s in sceny)-XF*(len(sceny)-1)
 cmd=['ffmpeg','-y','-loglevel','error','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','-','-c:v','libx264','-preset','veryfast','-crf','20','-pix_fmt','yuv420p',f'{R}/obraz.mp4']
