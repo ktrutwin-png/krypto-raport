@@ -34,3 +34,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-24: Jeden stały głos lektora we wszystkich filmach: piper en_US-hfc_male-medium (wybór szefa, próbka nr 6). ElevenLabs lektor wyłączony, pole "glos" ignorowane (kino.py, video.py, vo.py, README, budżet).
 - 2026-11-24: Panel Telegram – guzik 🔍 OCENA zamiast LOT: werdykt SHORT / LONG / CZEKAJ dla złota (trend H1 + impet M5 + RSI, ostrzega przed gonieniem przeciągniętego ruchu, podaje TP/SL).
 - 2026-11-24: Strona crypto freaq – pasek cen na żywo: złoto, BTC, ETH, XRP, XLM, XDC (SOL usunięty) + nowa pozycja w briefie „Our focus: XRP, XLM, XDC” (cena, 24h, tydzień).
+- 2026-11-24: Strona crypto freaq – nowa grafika na górze (neonowe miasto, holograficzny globus, złoto, prawdziwe monety XRP/XLM/XDC na podestach), osobny kadr na telefon.
