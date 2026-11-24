@@ -1,0 +1,18 @@
+{
+ "date": "24.11.2026",
+ "style": "news",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "ticker": "BTC $60,148 ▼2.1% · ETH $1,693 ▼1.7% · XRP $0.94 ▲0.3% · GOLD $3,624 · FEAR & GREED 9",
+ "scenes": [
+  {"img": "s1.jpg", "tag": "CRYPTO 101 IN 30s", "head": ["$343M LIQUIDATED", "*WHAT DOES IT MEAN?*"], "chip": "▼ BTC · 24 HOURS", "move": "in",
+   "say": "Three hundred forty three million dollars of bitcoin bets were liquidated in one day. What does that mean?"},
+  {"img": "s2.jpg", "d3": {"typ": "pokretlo", "p": {"od": 0.15, "do": 0.95, "seed": 3}},
+   "head": ["10X LEVERAGE", "*-10% = WIPED OUT*"], "sub": "BORROWED MONEY, BIGGER BET", "move": "out",
+   "say": "Traders borrow to bet bigger. With ten times leverage, a ten percent move against you wipes out the deposit."},
+  {"img": "s3.jpg", "head": ["FORCED SELLING", "*~CHAIN REACTION~*"], "note": "ONE LIQUIDATION CAN TRIGGER THE NEXT", "anim": {"dir": "down", "label": "$60K"}, "move": "up",
+   "say": "The exchange closes the bet automatically. Those forced sales can push the price lower and trigger the next ones."},
+  {"img": "s4.jpg", "tag": "COMMENT FLUSH OR PAIN", "head": ["FLUSH DONE OR", "*MORE PAIN?*"], "sub": "FLUSH 🐂  /  PAIN 🐻", "note": "SEND THIS TO A FRIEND WHO TRADES WITH LEVERAGE", "move": "down",
+   "say": "Three hundred forty three million in a day. Flush done, or more pain? This is not financial advice, just data."}
+ ]
+}
