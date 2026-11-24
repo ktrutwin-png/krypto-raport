@@ -80,7 +80,7 @@ h1 em{font-family:var(--serif);font-style:italic;font-weight:500;letter-spacing:
 
 /* TICKER */
 .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.strip .wrap{padding-top:20px;padding-bottom:20px;display:grid;grid-template-columns:repeat(4,1fr)}
+.strip .wrap{padding-top:20px;padding-bottom:20px;display:grid;grid-template-columns:repeat(6,1fr)}
 .q{display:flex;align-items:baseline;gap:12px;white-space:nowrap;padding:4px 0}
 .q+.q{border-left:1px solid var(--line);padding-left:28px}
 .q .s{font-size:11px;letter-spacing:.24em;color:var(--dim)}
@@ -170,6 +170,12 @@ footer .t a{color:#4a4740;text-decoration:none;display:inline-block;padding:6px 
  footer .wrap{justify-content:center;text-align:center}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+/* 24.11.2026: 6 aktywow w pasku */
+#ticks .q+.q{padding-left:16px}
+#ticks .q{gap:8px}
+#ticks .q .p{font-size:19px}
+@media (max-width:760px){#ticks .q:nth-child(odd){border-left:0;padding-left:0}#ticks .q .p{font-size:17px}#ticks .q .s{letter-spacing:.14em}}
 </style>
 </head>
 <body>
@@ -216,6 +222,8 @@ footer .t a{color:#4a4740;text-decoration:none;display:inline-block;padding:6px 
     <div class="q"><span class="s">BTC</span><span class="p">…</span><span class="c"></span></div>
     <div class="q"><span class="s">ETH</span><span class="p">…</span><span class="c"></span></div>
     <div class="q"><span class="s">XRP</span><span class="p">…</span><span class="c"></span></div>
+    <div class="q"><span class="s">XLM</span><span class="p">…</span><span class="c"></span></div>
+    <div class="q"><span class="s">XDC</span><span class="p">…</span><span class="c"></span></div>
   </div>
 </section>
 
@@ -257,7 +265,7 @@ footer .t a{color:#4a4740;text-decoration:none;display:inline-block;padding:6px 
 </footer>
 
 <script>
-const A=[["pax-gold","XAU"],["bitcoin","BTC"],["ethereum","ETH"],["ripple","XRP"],["solana","SOL"]];
+const A=[["pax-gold","XAU"],["bitcoin","BTC"],["ethereum","ETH"],["ripple","XRP"],["stellar","XLM"],["xdce-crowd-sale","XDC"]];   // szef 24.11.2026: 6 aktywow strony
 const f=v=>v>=1000?v.toLocaleString('en-US',{maximumFractionDigits:0}):v.toLocaleString('en-US',{maximumFractionDigits:v<10?3:2});
 const pc=v=>(v>=0?"+":"")+v.toFixed(1)+"%";
 const $=i=>document.getElementById(i);
@@ -273,7 +281,7 @@ const wk=x=>x.wk===null?"":(PL()?` W tygodniu: <b>${pc(x.wk)}</b>.`:` Over the w
 const rng=x=>x.hi&&x.lo?(PL()?` Zakres 24h: $${f(x.lo)} – $${f(x.hi)}.`:` 24h range: $${f(x.lo)} – $${f(x.hi)}.`):"";
 function draw(d){
     document.querySelectorAll("#ticks .q").forEach((el,i)=>{const x=d[A[i][0]];if(!x)return;el.querySelector(".p").textContent="$"+f(x.usd);const c=el.querySelector(".c");c.textContent=pc(x.ch);c.className="c "+(x.ch>=0?"up":"dn")});
-    const b=d.bitcoin,g=d["pax-gold"],al=[["ETH",d.ethereum],["XRP",d.ripple],["SOL",d.solana]].filter(a=>a[1]);
+    const b=d.bitcoin,g=d["pax-gold"],al=[["ETH",d.ethereum],["XRP",d.ripple],["XLM",d.stellar],["XDC",d["xdce-crowd-sale"]]].filter(a=>a[1]);
     const avg=al.reduce((a,c)=>a+c[1].ch,0)/(al.length||1);
     const top=[...al].sort((a,c)=>Math.abs(c[1].ch)-Math.abs(a[1].ch))[0];
     let h="";
@@ -281,6 +289,8 @@ function draw(d){
     h+=art(1,`Bitcoin ${dir(b.ch)}: $${f(b.usd)}`,`${ch}: <b>${pc(b.ch)}</b>.${rng(b)}${wk(b)}${src}`);
     if(g)h+=art(2,p?`Złoto ${dir(g.ch)}: $${f(g.usd)} za uncję`:`Gold ${dir(g.ch)}: $${f(g.usd)} per ounce`,`${ch}: <b>${pc(g.ch)}</b>.${wk(g)} ${p?"Cena z tokena PAXG, który odpowiada jednej uncji złota.":"Price from the PAXG token, which tracks one ounce of gold."}${src}`);
     if(top)h+=art(3,p?`Altcoiny średnio ${pc(avg)}`:`Altcoins ${pc(avg)} on average`,`${al.map(a=>`${a[0]} <b>${pc(a[1].ch)}</b>`).join(", ")}. ${p?"Największy ruch dziś":"Biggest mover today"}: ${top[0]}. ${Math.abs(avg)>Math.abs(b.ch)?(p?"Większy ruch niż bitcoin.":"A bigger move than bitcoin."):(p?"Mniejszy ruch niż bitcoin.":"A smaller move than bitcoin.")}${src}`);
+    const fo=[["XRP",d.ripple],["XLM",d.stellar],["XDC",d["xdce-crowd-sale"]]].filter(a=>a[1]);
+    if(fo.length)h+=art(4,p?"Nasz fokus: XRP, XLM, XDC":"Our focus: XRP, XLM, XDC",fo.map(a=>`${a[0]} <b>$${f(a[1].usd)}</b> (${pc(a[1].ch)}${a[1].wk===null?"":(p?", tydzień ":", week ")+pc(a[1].wk)})`).join(" · ")+(p?". Trzy sieci płatności i tokenizacji, które śledzimy codziennie.":". Three payment and tokenization networks we track every day.")+src);
     $("briefTxt").innerHTML=h;
     $("upd").textContent=(PL()?"Aktualizacja ":"Updated ")+new Date().toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"})+(PL()?" · odświeża się co minutę":" · refreshes every minute");
 }
