@@ -361,3 +361,4 @@ UPDATE: 2026-11-22 14:21 (Agent Skanery) skaner_dzienny.py na serwerze: US30 RSI
 2026-11-24 06:51 | Zwiadowca | BŁĄD: Twelve Data forex 1h zwraca czas UTC+11 (świeca TD 19:00 = 09:00 CET, potw. Yahoo GBP/USD) – tabele godzin forex/złota z 23.11 w godziny_rynkow.md mogą mieć przesunięte godziny; rozliczenia od dziś na Yahoo 1h (UTC), przeliczenie tabel w pn 30.11
 2026-11-24 09:56 | Reżyser (Reel) | CRYPTO 101: $343M LIQUIDATED / WHAT DOES IT MEAN? | IG ok/YT ok | ok
 2026-11-24 11:40 | ElevenLabs | faktura roczna anulowana – ponaglenia zakończone | ok
+2026-11-24 18:12 | Reżyser (Raport 18) | CHIPS -10% / BTC UNDER $60K | posted (IG media 18123110986752132, 27,7 s, 4 sceny, 4 nowe obrazy Figma w banku; 1. próba z URL commita SHA + cover_url → container ERROR, 2. próba z URL main bez cover_url ok) | ok
