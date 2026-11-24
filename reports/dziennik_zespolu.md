@@ -356,3 +356,4 @@ UPDATE: 2026-11-22 14:21 (Agent Skanery) skaner_dzienny.py na serwerze: US30 RSI
 2026-11-23 09:57 | Reżyser (Reel) | $11B UNDERWATER / FORCED TO SELL? (CLAIM CHECK, Strategy) | IG ok/YT ok | ok
 2026-11-24 02:05 | Laboratorium | +1 (LAB_DEX_M9_FalaB) / −0 (zawieszony Luka_FX) | najlepszy: LAB_Donchian_XAG +654,83 $ | ok
 2026-11-24 04:42 | Mechanik | naprawione: 0, do wdróż: 0 | brak zgłoszeń „dla Mechanika” (Z040/Z041/Z042 nadal czekają na wdróż – Mózg); wtorek – bez przeglądu | ok
+2026-11-24 05:48 | Kalendarz | dziś brak ważnych danych (najbliższe: jutro 14:30 PL USD Prelim GDP q/q, Core PCE Price Index m/m) | ok
