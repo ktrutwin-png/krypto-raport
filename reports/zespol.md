@@ -128,6 +128,13 @@ WYMIANA NA LEPSZE (repo, skill, narzędzie, agent): wszystko jest połączone �
 - Jensen Huang (były CEO NVIDIA, zrezygnował 12.11.2026): jeśli pojawi się OFICJALNA informacja o jego nowej roli (np. zarząd/zespół przy Terafabie Elona Muska albo inna firma) – wrzucić do porannego briefingu w sekcji „RYNEK – WAŻNE”, z linkiem do źródła. Przeczucie szefa: Huang trafi do zespołu przy Terafabie. Podawać TYLKO potwierdzone fakty, nigdy plotki.
 - NVIDIA wyniki 17.11.2026 – w briefingu 18.11 krótko: przychód, prognoza, reakcja kursu (fakty, bez prognoz, not financial advice).
 
+## 📰 BRIEFING 8:00 – SEKCJA „RYNEK – DLACZEGO” (szef 24.11.2026, stała, KAŻDEGO dnia)
+Szef: „nie chodzi mi o liczby, chodzi o informację – dlaczego złoto spada, czemu dolar się waha, czemu ta krypto rośnie, a ta spada, co zrobił Garlinghouse, co zrobiła inna firma – krótko, żebym wiedział, gdzie gryźć i lepiej wyczuwał rynek”. Zastępuje wcześniejsze „wielki news tylko gdy jest”.
+- 5–8 punktów, każdy max 1–2 zdania po polsku: CO się stało + DLACZEGO (przyczyna) + 🔗 źródło. Kolejność wg wagi dla nas.
+- Zawsze: złoto (dlaczego ruch), dolar/Fed/rentowności (gdy się ruszały), BTC i ETH, nasze XRP / XLM / XDC (Ripple, Stellar, XDC Network – co zrobiły firmy i ich szefowie, np. Brad Garlinghouse, regulacje, ETF, partnerstwa), oraz 1–2 największe ruchy dużych firm/tematów, które ciągną rynek (np. NVIDIA, banki, tokenizacja).
+- Okres: ostatnie 24 h (od poprzedniego briefingu). Źródła pierwotne na pierwszym miejscu (komunikaty firm, Fed, SEC, oficjalne konta), potem Reuters/Bloomberg/CoinDesk; min. 2 źródła dla przyczyn ruchu. ZERO plotek i „insiderów”; gdy przyczyna niepewna – „analitycy wskazują…” albo „bez jasnej przyczyny”. Bez prognoz i porad.
+- Forma: krótka sekcja w grafice briefingu (nasz styl) + linki w podpisie/wiadomości pod grafiką, żeby szef mógł kliknąć.
+
 ## Podręcznik marketingowy (13.11.2026)
 - Reżyser i Handlowiec przed planowaniem treści czytają C:\Hexa\wiedza\marketing (5 ról z agency-agents, MIT): Instagram Curator, Carousel Growth Engine, Content Creator, Growth Hacker, Social Media Strategist + README z naszymi zasadami.
 - Do tego umiejętności content-skills (viral-hooks, viral-instagram-reels, viral-captions-and-ctas…).
