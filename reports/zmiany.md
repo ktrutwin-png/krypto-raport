@@ -48,3 +48,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 25.11 23:05 | Priorytet: niezawodność agentów (cel 14 dni bez szefa); wygląd i głos Hexy zamrożone; zero nowych abonamentów.
 - 25.11 23:11 | Plan szefa: IG 10:00 + 18:00 + Hexa sob 21:00; Telegram 8:00 + 22:00; reszta = 100% trading i boty.
 - 25.11 23:14 | Plan szefa: Weekly w niedzielę zostaje; codzienna kontrola i aktualizacja obu stron (bez mylących obietnic YT/X).
+- 25.11 23:36 | Boty: znaki 💧 Hexa, 🔥 Turbo, 🥈 Don (Donchian_XAG) we wszystkich raportach; trójka kandydatów na real MT5 (styczeń).
