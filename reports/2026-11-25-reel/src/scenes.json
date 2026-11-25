@@ -1,0 +1,56 @@
+{
+ "date": "25.11.2026",
+ "style": "news",
+ "mood": "tense",
+ "handle": "@erl.grey83",
+ "ticker": "BTC ETFs NOV ≈ -$4.7B · NOV 24 -$570M · BTC $59,210 ▼1.8% · ETH $1,649 ▼2.8% · GOLD $3,537 · FEAR & GREED 8",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "ETF FLOWS · CHEAT SHEET",
+   "head": [
+    "$4.7B OUT",
+    "*WHO'S SELLING?*"
+   ],
+   "chip": "▼ BTC ETFs · NOVEMBER",
+   "move": "in",
+   "say": "Almost five billion dollars left Bitcoin E T Fs in November. Who's selling?"
+  },
+  {
+   "img": "s2.jpg",
+   "head": [
+    "-$570M IN 1 DAY",
+    "*FUNDS CUT RISK*"
+   ],
+   "sub": "WORST ETF MONTH SINCE LAUNCH",
+   "move": "out",
+   "say": "Five hundred seventy million on Monday alone, as Bitcoin lost sixty thousand."
+  },
+  {
+   "img": "s3.jpg",
+   "head": [
+    "$97B → $81B",
+    "*IN ONE WEEK*"
+   ],
+   "note": "LOWER PRICE + WITHDRAWALS",
+   "anim": {
+    "dir": "down",
+    "label": "$81B"
+   },
+   "move": "up",
+   "say": "E T F assets: ninety seven to eighty one billion in a week. Lower price, plus withdrawals."
+  },
+  {
+   "img": "s4.jpg",
+   "tag": "SAVE THIS FOR LATER",
+   "head": [
+    "$4.7B · $81B · 8",
+    "*BOTTOM OR LOWER?*"
+   ],
+   "sub": "BOTTOM 🐂  /  LOWER 🐻",
+   "note": "SEND THIS TO A FRIEND WHO HOLDS BTC",
+   "move": "down",
+   "say": "Save this. Bottom, or lower? This is not financial advice, just data."
+  }
+ ]
+}
