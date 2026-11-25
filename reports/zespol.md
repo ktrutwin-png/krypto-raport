@@ -194,3 +194,7 @@ Każda poprawka szefa albo błąd, który wrócił ≥ 2 razy, staje się tu sta
 ## 🐛 BUG-HUNTER (szef 25.11.2026 „bierz”) – kontrola własnego kodu
 Skill: `.claude/skills/bug-hunter` (codexstar69/bug-hunter v3.2.1, MIT; sprawdzony – sieć tylko context7 do dokumentacji). Domyślnie TYLKO skan i raport (Hunter → Skeptic → Referee), bez edycji.
 Inspektor: raz w tygodniu (niedziela) skan `panel_tg.py`, `tools/rdzen/*.py`, skryptów botów MT5 i raportu 22:00; potwierdzone przez Referee błędy → dziennik + zadanie dla Mechanika. Poprawki tylko przez Mechanika/Mózg, nigdy autofix na żywych botach.
+
+## ✍️ HUMANIZER + 🧑‍💻 PONYTAIL (szef 25.11.2026 „podłącz, jeśli się przyda”)
+- `.claude/skills/humanizer` (blader/humanizer, MIT): Reżyser, Raporty 12/18, Reel 10:00 i Karuzela – KAŻDY opis/podpis na IG, YouTube i X oraz tekst lektora przepuść przez humanizer przed publikacją (bez sztucznych AI-zwrotów, liczby i fakty bez zmian).
+- `.claude/skills/ponytail` (DietrichGebert/ponytail, MIT, tylko rdzeń SKILL.md, bez hooków): Mechanik i Mózg przy poprawkach kodu (boty, panel, Hexa) – najmniejsza kompletna zmiana; nigdy nie tnie walidacji, obsługi błędów ani bezpieczeństwa.

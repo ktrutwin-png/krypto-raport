@@ -31,3 +31,5 @@ Wzór gotowy: marka/propozycje/karuzela_2411/ (config.json, podglad.jpg, reel/).
 ## Styl CYBERPUNK (od 5.11.2026)
 Tlo `bg()` ma neonowe miasto (cyjan #00f0ff + roz #ff2bd6 + zolte okna), rozowa linie horyzontu i siatke. Karty sa ciemne (min. 82% krycia), zeby tekst byl czytelny.
 Zasady wzrostu z zadania 12:00 (hook w 1 s, 20-35 s, filar dnia) maja pierwszenstwo przed czasami scen w tym README.
+
+> 25.11.2026: opis posta (IG/YT/X) i teksty lektora przepuść przez skill `humanizer` przed publikacją.
