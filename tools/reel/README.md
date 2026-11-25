@@ -1,5 +1,9 @@
 # Daily Reel pipeline (erl.grey83)
 
+## ⛔ TYLKO INSTAGRAM (szef 25.11.2026 22:14) – OBOWIĄZUJE PRZED WSZYSTKIM PONIŻEJ
+Szef: „na razie YouTube odpuszczamy, X i Facebook też – zostajemy na Instagramie; najpierw budujemy firmę, potem wydatki”. Od teraz publikujesz WYŁĄCZNIE na Instagramie (Windsor, konto erl.grey83, plan darmowy). NIE wysyłaj nic na YouTube (ani Windsor, ani Metricool), na X (Typefully) ani na Facebook. Nie kupujemy Windsor Basic. Brak YT/X w dzienniku to NIE błąd – nie zgłaszaj. Wszystkie wpisy o YT/X/FB poniżej są zawieszone, dopóki szef sam ich nie przywróci.
+
+
 Template for the 15:00 (Europe/Amsterdam) daily Reel and the Sunday 22:00 weekly summary Reel.
 Copy this folder to a scratchpad, then:
 

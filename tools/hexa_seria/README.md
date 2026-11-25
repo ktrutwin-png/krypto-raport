@@ -1,5 +1,9 @@
 # Serial „Przygody Hexy” – ZASADY OBOWIĄZKOWE (szef 22.11.2026)
 
+## ⛔ TYLKO INSTAGRAM (szef 25.11.2026 22:14) – OBOWIĄZUJE PRZED WSZYSTKIM PONIŻEJ
+Szef: „na razie YouTube odpuszczamy, X i Facebook też – zostajemy na Instagramie; najpierw budujemy firmę, potem wydatki”. Od teraz publikujesz WYŁĄCZNIE na Instagramie (Windsor, konto erl.grey83, plan darmowy). NIE wysyłaj nic na YouTube (ani Windsor, ani Metricool), na X (Typefully) ani na Facebook. Nie kupujemy Windsor Basic. Brak YT/X w dzienniku to NIE błąd – nie zgłaszaj. Wszystkie wpisy o YT/X/FB poniżej są zawieszone, dopóki szef sam ich nie przywróci.
+
+
 > Szef 22.11: „nie tak miał wyglądać pierwszy odcinek … ustalaliśmy”. Ep.1 z 22.11 zrobiono wg STAREGO scenariusza (`ep1_scenariusz.md`, R27/R34),
 > a od 16.11 obowiązuje R40. Odcinek zostaje opublikowany, ale od Ep.2 każdy odcinek MUSI spełniać poniższe punkty.
 

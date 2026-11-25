@@ -44,3 +44,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 25.11 Zespół: skille humanizer (naturalne opisy i lektor) i ponytail (najmniejsze poprawki kodu).
 - 25.11 11:55 | Reele: od 26.11 do 9.12 Reel 10:00 = Karuzela gra (filar dnia na Raport 18:00)
 - 25.11 11:55 | YouTube: wysyłka przez Windsor upload_video zamiast Metricool (limit FREE); „YT ok” tylko z video id
+- 25.11 22:14 | Kanały: szef – TYLKO Instagram. YouTube, X i Facebook wstrzymane; Windsor Basic (19 €) NIE kupujemy. Reguła na górze tools/reel/README.md, tools/hexa_seria/README.md, reports/plan_wzrostu.md.

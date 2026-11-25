@@ -1,5 +1,9 @@
 # PLAN WZROSTU @erl.grey83 (od 7.11.2026) – czytają go zadania Reel 10:00, Raport 18:00, YouTube Shorts i Opiekun
 
+## ⛔ TYLKO INSTAGRAM (szef 25.11.2026 22:14) – OBOWIĄZUJE PRZED WSZYSTKIM PONIŻEJ
+Szef: „na razie YouTube odpuszczamy, X i Facebook też – zostajemy na Instagramie; najpierw budujemy firmę, potem wydatki”. Od teraz publikujesz WYŁĄCZNIE na Instagramie (Windsor, konto erl.grey83, plan darmowy). NIE wysyłaj nic na YouTube (ani Windsor, ani Metricool), na X (Typefully) ani na Facebook. Nie kupujemy Windsor Basic. Brak YT/X w dzienniku to NIE błąd – nie zgłaszaj. Wszystkie wpisy o YT/X/FB poniżej są zawieszone, dopóki szef sam ich nie przywróci.
+
+
 **JEDYNY obowiązujący plan publikacji na IG i YT (szef 6.11.2026: „wszystko inne odrzucamy, działaj zgodnie z tym planem”). Ocena wyników 7.12.2026.**
 
 Diagnoza 6.11: IG 101 obserwujących, zasięg spoza obserwujących ~17%, skip 50–100%, 0 udostępnień, 0 zapisów. YT 7 subskrybentów, 0 wyświetleń.
