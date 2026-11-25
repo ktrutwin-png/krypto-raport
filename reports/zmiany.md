@@ -46,3 +46,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 25.11 11:55 | YouTube: wysyłka przez Windsor upload_video zamiast Metricool (limit FREE); „YT ok” tylko z video id
 - 25.11 22:14 | Kanały: szef – TYLKO Instagram. YouTube, X i Facebook wstrzymane; Windsor Basic (19 €) NIE kupujemy. Reguła na górze tools/reel/README.md, tools/hexa_seria/README.md, reports/plan_wzrostu.md.
 - 25.11 23:05 | Priorytet: niezawodność agentów (cel 14 dni bez szefa); wygląd i głos Hexy zamrożone; zero nowych abonamentów.
+- 25.11 23:11 | Plan szefa: IG 10:00 + 18:00 + Hexa sob 21:00; Telegram 8:00 + 22:00; reszta = 100% trading i boty.

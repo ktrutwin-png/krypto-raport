@@ -1,5 +1,9 @@
 # PLAN WZROSTU @erl.grey83 (od 7.11.2026) – czytają go zadania Reel 10:00, Raport 18:00, YouTube Shorts i Opiekun
 
+## 📌 PLAN SZEFA (25.11.2026 23:11) – STAŁY
+Instagram: Reel 10:00 i Raport 18:00 codziennie + Przygody Hexy w sobotę 21:00 (z gotowych materiałów, Hexa zostaje w obecnym stanie). Telegram do szefa: tylko briefing 8:00 i raport 22:00. Cała reszta mocy zespołu = TRADING I BOTY (MT5 Hexa/Turbo, Freqtrade, Laboratorium, skanery): cel to udowodniony zysk na demo, potem prawdziwe pieniądze. Żadnych nowych projektów pobocznych.
+
+
 ## 🔴 PRIORYTET NR 1: NIEZAWODNOŚĆ (szef 25.11.2026 23:05)
 Szef: „na razie głos Hexy i jej wygląd nie są ważne – dopracować agentów. Wyjadę na dwa tygodnie i wszystko ma chodzić, muszę być pewny, że nic się nie stanie”. Od teraz: (1) ZAMROŻONE: nowe prace nad wyglądem i głosem Hexy (orby, avatar, lip-sync) i wszystko, co kosztuje – seria Przygód Hexy idzie tylko z gotowych materiałów. (2) Każdy agent wpisuje „ok” TYLKO z dowodem z platformy (media id, numer zlecenia, plik) – nigdy z własnego logu. (3) Każda awaria: Mechanik naprawia sam w ciągu przebiegu, Inspektor sprawdza, czy naprawa trzyma; czerwone światło do szefa tylko gdy nie da się naprawić. (4) Cel: 14 dni pracy bez szefa i bez laptopa – test „Dwa tygodnie bez szefa” prowadzi Mózg, wynik w tygodniowym raporcie. (5) Oszczędzanie: zero nowych abonamentów i płatnych narzędzi bez zgody szefa.
 
