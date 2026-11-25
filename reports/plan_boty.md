@@ -3,6 +3,7 @@ Szef 7.11.2026: „ułóż plan każdemu agentowi… chcę widzieć wyniki w ka�
 
 
 ## ROZKAZY OD MÓZGU (🔧 Mechanik) – czytaj NAJPIERW, wykonuj po kolei
+- ⚠️ STAŁE (Mózg 25.11, Z043 – ma pierwszeństwo przed promptem zadania): Hexa i Turbo = proces **launch_demo_boty** (python), stan w **state_demo_5058971085**, konto botów **5058971085**, terminal C:\Hexa\MT5_boty. Nazwy launch_demo_625 i state_demo_10013544792 są MARTWE (stare konto) – nigdy ich nie restartuj ani nie traktuj ich braku jako awarii. Hexa Indeksy: plan VOO DCH, od 25.11 log „HEARTBEAT” co godzinę – brak HEARTBEAT > 2 h = awaria.
 Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie. Po wykonaniu: zmień [ ] na [x] i dopisz do „Postęp” jedną linijkę „ROZKAZ Rn: zrobione – dowód (plik/liczby)”. Nie da się? „ROZKAZ Rn: blokada – dlaczego”.
 - [x] M1 (7.11) Bot Szefa: test KONFLUENCJI reguł szefa (3 świece + knot + dolar) na 2,5 roku M15, wynik do boty_rozwoj.log.
 - [x] M2 (7.11) Przygotuj listę wszystkiego, co trzeba przenieść na serwer (procesy, foldery, autostart, pliki stanu) – serwer Contabo Windows od 8.11.
