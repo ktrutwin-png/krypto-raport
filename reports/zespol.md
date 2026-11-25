@@ -190,3 +190,7 @@ Każda poprawka szefa albo błąd, który wrócił ≥ 2 razy, staje się tu sta
 - 2026-11-22 – Każde nowe zadanie ma w prompcie CISZĘ (bez push/Telegrama/„daj szefowi” poza wyjątkami z sekcji CISZA) – Mózg przy tworzeniu zadań (Z004, Z017, Z038, Kontrola Ep.2)
 - 2026-11-22 – Każde otwarcie pozycji na eToro (także bot Laboratorium) = od razu wiersz w Transakcje z pulą w kol. B i positionId – wszystkie zadania i boty eToro (Z001, Z037)
 - 2026-11-22 – Zmiana kodu działającego procesu: w UPDATE i zmiany.md pisać „czeka na restart (Z…)”, a „działa” dopiero po restarcie i świeżym logu – Agent Skanery, Mechanik, Mózg (Z024, Z040)
+
+## 🐛 BUG-HUNTER (szef 25.11.2026 „bierz”) – kontrola własnego kodu
+Skill: `.claude/skills/bug-hunter` (codexstar69/bug-hunter v3.2.1, MIT; sprawdzony – sieć tylko context7 do dokumentacji). Domyślnie TYLKO skan i raport (Hunter → Skeptic → Referee), bez edycji.
+Inspektor: raz w tygodniu (niedziela) skan `panel_tg.py`, `tools/rdzen/*.py`, skryptów botów MT5 i raportu 22:00; potwierdzone przez Referee błędy → dziennik + zadanie dla Mechanika. Poprawki tylko przez Mechanika/Mózg, nigdy autofix na żywych botach.
