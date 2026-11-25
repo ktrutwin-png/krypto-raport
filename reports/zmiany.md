@@ -40,3 +40,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 24.11 Hexa: usunięte hasło „opiekunka życia” – przedstawia się po prostu „Hexa”.
 - 24.11 Panel Telegram: dźwięk tylko przy „TP trafiony”, pozostałe wiadomości panelu przychodzą po cichu.
 - 25.11 Zespół: dodany skill bug-hunter (kontrola własnego kodu, cotygodniowy skan Inspektora).
+- 25.11 Panel Telegram: bez SL na pozycjach szefa (jego decyzja); głośny alarm, gdy strata jego pozycji przekroczy 10/20/30% konta – nic nie zamyka się samo.
