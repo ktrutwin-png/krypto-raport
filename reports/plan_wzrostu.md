@@ -1,5 +1,9 @@
 # PLAN WZROSTU @erl.grey83 (od 7.11.2026) – czytają go zadania Reel 10:00, Raport 18:00, YouTube Shorts i Opiekun
 
+## 🔴 PRIORYTET NR 1: NIEZAWODNOŚĆ (szef 25.11.2026 23:05)
+Szef: „na razie głos Hexy i jej wygląd nie są ważne – dopracować agentów. Wyjadę na dwa tygodnie i wszystko ma chodzić, muszę być pewny, że nic się nie stanie”. Od teraz: (1) ZAMROŻONE: nowe prace nad wyglądem i głosem Hexy (orby, avatar, lip-sync) i wszystko, co kosztuje – seria Przygód Hexy idzie tylko z gotowych materiałów. (2) Każdy agent wpisuje „ok” TYLKO z dowodem z platformy (media id, numer zlecenia, plik) – nigdy z własnego logu. (3) Każda awaria: Mechanik naprawia sam w ciągu przebiegu, Inspektor sprawdza, czy naprawa trzyma; czerwone światło do szefa tylko gdy nie da się naprawić. (4) Cel: 14 dni pracy bez szefa i bez laptopa – test „Dwa tygodnie bez szefa” prowadzi Mózg, wynik w tygodniowym raporcie. (5) Oszczędzanie: zero nowych abonamentów i płatnych narzędzi bez zgody szefa.
+
+
 ## ⛔ TYLKO INSTAGRAM (szef 25.11.2026 22:14) – OBOWIĄZUJE PRZED WSZYSTKIM PONIŻEJ
 Szef: „na razie YouTube odpuszczamy, X i Facebook też – zostajemy na Instagramie; najpierw budujemy firmę, potem wydatki”. Od teraz publikujesz WYŁĄCZNIE na Instagramie (Windsor, konto erl.grey83, plan darmowy). NIE wysyłaj nic na YouTube (ani Windsor, ani Metricool), na X (Typefully) ani na Facebook. Nie kupujemy Windsor Basic. Brak YT/X w dzienniku to NIE błąd – nie zgłaszaj. Wszystkie wpisy o YT/X/FB poniżej są zawieszone, dopóki szef sam ich nie przywróci.
 
