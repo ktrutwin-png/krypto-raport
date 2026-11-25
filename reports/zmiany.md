@@ -42,3 +42,5 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 25.11 Zespół: dodany skill bug-hunter (kontrola własnego kodu, cotygodniowy skan Inspektora).
 - 25.11 Panel Telegram: bez SL na pozycjach szefa (jego decyzja); głośny alarm, gdy strata jego pozycji przekroczy 10/20/30% konta – nic nie zamyka się samo.
 - 25.11 Zespół: skille humanizer (naturalne opisy i lektor) i ponytail (najmniejsze poprawki kodu).
+- 25.11 11:55 | Reele: od 26.11 do 9.12 Reel 10:00 = Karuzela gra (filar dnia na Raport 18:00)
+- 25.11 11:55 | YouTube: wysyłka przez Windsor upload_video zamiast Metricool (limit FREE); „YT ok” tylko z video id

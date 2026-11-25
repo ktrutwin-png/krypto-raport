@@ -103,7 +103,8 @@ Mózg (Claude) wydaje rozkazy i kontroluje wyniki; agent odpowiada za wykonanie.
 - Raport 18:00 zawsze ma co najmniej jedną scenę o złocie i jedną o bankach/makro, jeśli był taki news w ciągu ostatnich 12 h.
 
 ## Kalendarz
-- 10:00 Reel wg filaru dnia (pon CLAIM CHECK, wt CRYPTO 101, śr ETF FLOWS + cheat sheet (od 16.11 zamiast ONE NUMBER: napływy/odpływy spot ETF BTC/ETH z ostatniego tygodnia – Farside/SoSoValue, hook = pytanie w klatce 0, np. „WHO SOLD $1B OF BTC?”), czw BTC vs GOLD (R35), pt BIGGEST MOVE, sob MYTH vs FACT); niedziela Weekly Market Brief.
+- ⚠️ OD 26.11 do 9.12 (test, decyzja Mózgu 25.11): Reel 10:00 pon–sob = TYLKO format „KARUZELA GRA” (tools/reel/README.md, sekcja ⭐). Filar dnia (CLAIM CHECK / CRYPTO 101 / ETF FLOWS / BTC vs GOLD / BIGGEST MOVE / MYTH vs FACT) przechodzi na Raport 18:00. Ta linia ma pierwszeństwo przed linią niżej.
+- (do 25.11) 10:00 Reel wg filaru dnia (pon CLAIM CHECK, wt CRYPTO 101, śr ETF FLOWS + cheat sheet (od 16.11 zamiast ONE NUMBER: napływy/odpływy spot ETF BTC/ETH z ostatniego tygodnia – Farside/SoSoValue, hook = pytanie w klatce 0, np. „WHO SOLD $1B OF BTC?”), czw BTC vs GOLD (R35), pt BIGGEST MOVE, sob MYTH vs FACT); niedziela Weekly Market Brief.
 - 10:23 i 18:23 ten sam film na YouTube Shorts.
 - 18:00 raport dnia (news).
 - 7.11 jednorazowo: film „How my AI system works” (IG + YT) – przedstawia konto.

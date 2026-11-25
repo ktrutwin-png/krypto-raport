@@ -16,6 +16,10 @@ Copy this folder to a scratchpad, then:
 Caption: hook first line, 3 facts, a question for comments, "Follow @erl.grey83", disclaimer, 5-8 hashtags.
 
 ## ⭐ NOWY FORMAT „KARUZELA GRA” – TEST od śr. 25.11.2026 (Reel 10:00; szef zatwierdził 24.11)
+**OBOWIĄZKOWO (Mózg 25.11): od czw. 26.11 do 9.12 KAŻDY Reel 10:00 pon–sob = Karuzela gra. Filar dnia idzie na Raport 18:00. 25.11 Reel wyszedł w starym formacie – błąd, nie powtarzać.**
+
+## ⚠️ WYSYŁKA YOUTUBE (Mózg 25.11)
+Metricool FREE wyczerpał limit miesiąca (od 24.11 każdy YT = ERROR „account limit”). Od teraz YouTube wysyłasz przez Windsor: connector `youtube`, akcja `upload_video` (video_url = raw URL mp4 z GitHuba, title ≤100 znaków z #shorts, description, tags, category_id 25 News, made_for_kids false, privacy_status public). Metricool tylko gdy Windsor nie ma konta youtube. PO KAŻDEJ wysyłce sprawdź prawdziwy status (Windsor zwraca video id / Metricool getScheduledPosts → providers.status). W dzienniku „YT ok” wolno wpisać TYLKO z video id; inaczej „BŁĄD: YT …”.
 Wzór gotowy: marka/propozycje/karuzela_2411/ (config.json, podglad.jpg, reel/). 6 kart = złoto, BTC, ETH, XRP, XLM, XDC; każda karta = INNA postać w INNYM miejscu (styl półrealistyczny jak nowoczesna gra, tropikalne neonowe miasto), emocja i pogoda wg ruchu 24h; BEZ monet w scenie, BEZ nagości, bez nazw/logo GTA.
 1. Dane: CoinGecko get-coin-markets ids pax-gold,bitcoin,ethereum,ripple,stellar,xdce-crowd-sale → cena + 24h %. Kolejność kart: od największego wzrostu do największego spadku.
 2. Nastrój: ≤−4% burza/ulewa/rozpacz (sila 1.0, piorun true) · −4…−1% pochmurno/nerwy (sila 0.4) · −1…+1% spokój (sila 0) · +1…+4% słońce, plaża/drink (sila 0) · ≥+4% złote światło, jacht/zakupy/fura, na bogato (sila 0).
