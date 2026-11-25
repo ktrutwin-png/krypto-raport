@@ -1,0 +1,13 @@
+{ "date": "25.11.2026", "mood": "tense", "handle": "@erl.grey83", "style": "news",
+  "ticker": "BTC $58,478 ▼1.5% · ETH $1,643 ▼1.5% · GOLD $3,466 ▼2.5% · XRP $0.91 ▼0.5%",
+  "scenes": [
+    {"img": "s1.jpg", "tag": "LIVE MARKET UPDATE", "head": ["GOLD UNDER $3,500", "*BTC TOO. WHY?*"], "chip": "▼ GOLD -2.5% TODAY",
+     "say": "Gold just broke under thirty-five hundred, first time since twenty twenty-five. Bitcoin fell too.", "move": "in",
+     "anim": {"dir": "down", "label": "$3,466"}},
+    {"img": "s2.jpg", "head": ["PCE 3.8%", "*INFLATION HEATS UP*"], "note": "DEC 9: FED HIKE BETS CLIMB",
+     "say": "Why? Inflation, reportedly. The Fed's favorite gauge sped up to three point eight percent, and rate hike bets climbed.", "move": "out"},
+    {"img": "s3.jpg", "head": ["BTC $58.5K", "~FEAR INDEX: 8~"], "chip": "▼ EXTREME FEAR 8/100",
+     "say": "Bitcoin sits near fifty-eight thousand. The fear index reads eight out of a hundred.", "move": "up"},
+    {"img": "s4.jpg", "head": ["$3,500 · $60K", "*BULL OR BEAR?*"], "sub": "BACK ABOVE OR LOWER BY FRIDAY?", "note": "SEND THIS TO A FRIEND WHO HOLDS GOLD",
+     "say": "Back above thirty-five hundred and sixty thousand by Friday, or lower? This is not financial advice, just data.", "move": "down"}
+  ] }
