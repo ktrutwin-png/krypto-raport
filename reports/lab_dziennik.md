@@ -201,3 +201,26 @@ Kod: `C:\Hexa\lab` (silnik `lab_silnik.py`, boty `boty\*.py`, start `START_LAB.p
 **Nowe pomysły:** poza M9 Bot B – brak (noc na M8 + M9, priorytet szefa).
 
 **Najlepszy:** LAB_Donchian_XAG +654,83 $ (4 tr., PF 2,73). Aktywne procesy: 10/10 + zbieracz memów.
+
+---
+
+## 2026-11-25 (noc 8) – M8 odrabia, M9 Bot A wyłączony (A2 też nie przeszedł)
+
+**Przegląd (konto demo botów 5058971085, trade_mode DEMO; Hexa 830083 i Turbo 830099 po 1 otwartej, nietknięte):** saldo 6171,13 $, kapitał 6639,94 $. Lab MT5: **55 zamkniętych, +445,31 $** (było +311,81 $). Donchian_XAG bez zmian (4 tr., +654,83 $, PF 2,73), Londyn_XAU 2 tr. +183,11 $ (24.11 SL −36,27 $), RSI2_FX 7 tr. +42,14 $ (PF 4,63).
+- **M8 MT5: 45 zamkniętych, −433,56 $, PF 0,60** (było 0,43). M15 złota: Hexa 10 tr. +17,90 $ (PF 1,13), Turbo 8 tr. +4,71 $; nowe M15_TP2/TP3 – 3 i 2 tr., +3,68 / +18,62 $; M30 złota Hexa/Turbo po 5 tr. +18,65 / +19,10 $ (PF 1,2); XAG M30 5 tr. +25,21 $ (PF 1,27); T_JPY_H1 5 tr. −2,65 $. Cała strata to dalej jedno zdarzenie 23.11 (H4 / H4_TP2x2 / XAG H4 / T_H1). Złoto zeszło w nocy do ~3555 → 10 otwartych SHORT-ów ok. **+405 $** niezrealizowane (M15 i XAG M30 ze stopem na BE). Maks. 10 tr./wariant – bez werdyktu.
+- **IBKR paper (DUR…):** D1 SHORT @ 3575,81 + nowy H1 SHORT @ 3567,53 (24.11 16:00, SL 3607,53 / TP 3527,53) – obie na plusie.
+- **Kraken na sucho:** KR_M8_D1 bez zmian (otwarte SHORT BTC DCH, ETH D15); KR_RSI2_H4 kapitał 549,38 € (2 SHORT-y od 21.11); MemyC 0 tr. – BTC 59,8k pod EMA50 H4 62,2k.
+- **eToro DEMO** (`"account":"demo"` w odpowiedzi): LAB_ET_M8_XAU_D1 GOLD SHORT **+6,31 $** (SL 3805 / TP 3334). Brak otwarć i zamknięć → arkusz bez zmian.
+
+**Wyłączone (lekcja): `LAB_DEX_M9_SnajperA`** – 29 transakcji, 3 trafne, **PF 0,15, −105,14 $** (kapitał 400 z 500 = −20%), 26 × SL −35…−44%. Plik `_off`, aktywny=false, 6 otwartych pozycji papierowych zamrożonych po ostatniej wycenie (~65 $). Lekcja: memy w 15–90 min życia po „przeżyciu pierwszej fali” to wciąż rynek, na którym wcześni sprzedają późnym – nawet przepuszczone przez filtr padają w 49% (śr. −74% od wejścia), a koszty ~2% w obie strony zjadają resztę. Filtr bezpieczeństwa działa (odrzuceni: 81% padło), ale nie daje przewagi, tylko mniejszą stratę.
+
+**Nowy pomysł (przetestowany, odrzucony): A2 – zabezpieczenie zysku.** Lekcja z 24.11: 12/29 transakcji A było ≥ +40% i wróciło do SL. Replay 3 dób (te same wejścia, 44–46 tr.), 10 wariantów: stop na +3% po szczycie +15…+40%, TP połowy +30…+60%, trailing 15–30%, SL 12–35%. Nauka do PF 1,23, ale **sprawdzian (ostatnie 30% czasu) PF 0,04–0,49 we wszystkich** → nie idzie na papier. Szczegóły w lab_tabela.md (Memy).
+
+**Karta M9 (lab_tabela.md):** A wyłączony; B 1 tr. (ANSEM −45%, trailing), 1 otwarta; C 0 tr. Do werdyktów B (≥ 100) i C (≥ 30) daleko.
+
+**Lekcje:**
+- Ciaśniejsze wyjścia na memach poprawiają tylko naukę – na nowych danych znika wszystko. Przy 2% kosztów i 50% zgonów tokenów sam timing wyjścia nie robi przewagi.
+- M8: bez weekendowej luki M15/M30 złota i M30 srebra są na plusie – zgodne z backtestem (PF 1,0–1,3); werdykt nadal przy ~20 tr.
+
+**Najlepszy:** LAB_Donchian_XAG +654,83 $ (4 tr., PF 2,73). Aktywne procesy: 9/10 + zbieracz memów (wolny slot po Bocie A).
+
