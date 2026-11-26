@@ -2,6 +2,17 @@
 
 
 
+
+## 🎬 RAPORT 18:00 = „THE TRADER'S DIARY” Z AVATAREM SZEFA (szef 26.11.2026 16:02) – ZASTĘPUJE format Karuzela gra o 18:00
+Szef: postać (jego avatar, bez wąsów) jest bohaterem wieczornego raportu na Instagramie – historia człowieka, który właśnie buduje day trading, podaje, co się dzieje na świecie, i sam z tego czerpie, budując dalej swoje życie. **10:00 bez zmian: czysta informacja w stylu GTA 6 (Karuzela gra).** Sobota 21:00 bez zmian: serial Hexy.
+- Od piątku 27.11.2026, codziennie 18:00, TYLKO Instagram. Licznik: 27.11 = „DAY 1”, dalej kolejne dni.
+- Obrazy: TYLKO postać z `tools/avatar/README.md` (FLUX.2 + referencja, darmowo, na serwerze). 4–5 scen pionowych, min. 2 nowe dziennie, sceny pasujące do treści (biurko z wykresami, ulica z newsami na tablecie, kawa o świcie, okno nocą…).
+- Montaż: `tools/kino/kino.py` (styl news, nagłówki u góry) + napisy karaoke (automatycznie). 35–50 s. "dis": "Not financial advice", plansza końcowa: "Freedom is<br>built daily." / "ERL.GREY83" / "Follow the journey".
+- Lektor: pierwsza osoba („I…”), po angielsku, głos Ryan: przed kino.py ustaw `LEKTOR_GLOS=en-GB-RyanNeural` i `LEKTOR_RATE=-4%`. (10:00 zostaje Andrew.)
+- Treść (kolejno): 1) hook „Day N. …” + krótki obraz dnia; 2–3) 2–3 prawdziwe wydarzenia dnia (złoto, dolar, krypto XRP/XLM/XDC, makro) – każde z ≥2 źródeł, przyczyny ostrożnie („analysts point to”); 4) czego JA się z tego uczę / moja zasada (dyscyplina, cierpliwość, ryzyko) – BEZ sygnałów, bez „kupuj/sprzedaj”, bez obietnic zysku, bez konkretnych transakcji; 5) zamknięcie: „Freedom is built daily.”
+- Nigdy: prawdziwe imię szefa, jego praca, miasto, alkohol, liczby z jego kont.
+- Opis IG: 2–3 zdania + „Day N of building freedom” + #trading #gold #crypto #mindset (max 5 tagów) + „Not financial advice”.
+
 ## 🔤 NAPISY KARAOKE W KAŻDYM REELU (szef 26.11.2026 15:53: „napisy nie byle jakie – sprawdź jak to robią inni”)
 Standard 2026 (opus.pro, blitzcut, kapwing, captions.ai): słowo po słowie, Anton, biały z czarnym obrysem, aktualne słowo złote #ffd23f i lekko większe, 1–3 słowa naraz, środek linii y=1150 (poza martwą strefą Reels i ramką „note”).
 - Robi to `tools/napisy/napisy.py` automatycznie: kino.py i monety/audio_reel.py wypalają napisy same.

@@ -62,3 +62,5 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-26 15:08 – Lektor Reeli/Raportu/Weekly: Andrew (edge-tts en-US-AndrewNeural, darmowy) zamiast piper hfc_male (szef: nie podobał mu się). tools/reel/lektor.py; kino.py i raport/video.py używają go same, piper tylko zapas.
 
 - 2026-11-26 16:10 – Napisy karaoke w Reelach (słowo po słowie, Anton, złoty akcent, wg standardu 2026): tools/napisy/napisy.py + font Anton; lektor.py zapisuje czasy słów; kino.py i audio_reel.py wypalają napisy same. Lektor filmów: wybór głosu przez LEKTOR_GLOS (film o szefie: Ryan).
+
+- 2026-11-26 16:20 – Raport 18:00 od 27.11: „The Trader's Diary” z avatarem szefa (bez wąsów, FLUX.2 Cloudflare z referencją, darmowo), lektor Ryan, napisy karaoke; 10:00 zostaje GTA (czysta informacja); sobota 21:00 serial Hexy. Wzór postaci: marka/Erl_avatar.jpg, zasady: tools/avatar/README.md.
