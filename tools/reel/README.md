@@ -6,7 +6,7 @@
 
 
 ## ✅ DZIŚ 26.11.2026 – RAPORT 18:00 JEST GOTOWY (zrobił Mózg na prośbę szefa, 16:40) – NIE TWÓRZ NOWEGO
-Reżyser (Raport 18): opublikuj DOKŁADNIE ten film o 18:00 na Instagramie (Windsor, erl.grey83), jak zwykle przez URL z commitem SHA:
+⛔ SZEF 16:18: NAJPIERW OCENA SZEFA. Publikuj TYLKO jeśli istnieje plik `reports/2026-11-26-raport18/ZATWIERDZONE.txt` (tworzy go Mózg po akceptacji szefa). Jeśli go nie ma o 18:00 – NIC nie publikuj (ani tego, ani zwykłego raportu), wpisz do dziennika „DAY 1 czeka na ocenę szefa” – Mózg opublikuje sam po akceptacji. Gdy plik jest: Reżyser (Raport 18): opublikuj DOKŁADNIE ten film o 18:00 na Instagramie (Windsor, erl.grey83), jak zwykle przez URL z commitem SHA:
 - film: `reports/2026-11-26-raport18/reel.mp4` (56,9 s, DAY 1 „The Trader's Diary” – szef budzi Hexę), okładka `cover.jpg`, opis `caption.txt` (bez zmian).
 - Po publikacji: wpis do dziennika jak zwykle + streszczenie DAY 1 jest już w reports/diary_18.md. Od jutra (27.11 = DAY 2) robisz odcinki sam wg bloku „SZEF + HEXA RAZEM” poniżej.
 - Ten blok usuń po publikacji (jednorazowy).
