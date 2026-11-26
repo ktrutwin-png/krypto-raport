@@ -33,5 +33,40 @@
     "miejsce": "zaułek przy śmietniku, burza"
    }
   ]
+ },
+ {
+  "data": "2026-11-26",
+  "sceny": [
+   {
+    "k": "XLM",
+    "postac": "dziewczyna z warkoczykami w żółtej sukience",
+    "miejsce": "promenada w słońcu"
+   },
+   {
+    "k": "XRP",
+    "postac": "starszy pan w hawajskiej koszuli",
+    "miejsce": "skuter wodny na turkusowej wodzie"
+   },
+   {
+    "k": "XDC",
+    "postac": "nastoletni skater w czerwonej czapce",
+    "miejsce": "skatepark przy plaży"
+   },
+   {
+    "k": "ETH",
+    "postac": "kobieta w białym lnie z kokosem",
+    "miejsce": "hamak na plaży"
+   },
+   {
+    "k": "BTC",
+    "postac": "łysy mężczyzna w okularach przy grillu",
+    "miejsce": "grill na dachu, panorama miasta"
+   },
+   {
+    "k": "XAU",
+    "postac": "siwa elegancka kobieta w błękitnej marynarce",
+    "miejsce": "kawiarnia na chodniku, poranne słońce"
+   }
+  ]
  }
 ]
