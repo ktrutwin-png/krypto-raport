@@ -1,5 +1,12 @@
 # Serial „Przygody Hexy” – ZASADY OBOWIĄZKOWE (szef 22.11.2026)
 
+## 🔆 ZNAK ENSŌ NA KAŻDEJ PUBLIKACJI (szef 26.11.2026 21:51) – OBOWIĄZUJE PRZED WSZYSTKIM PONIŻEJ
+Szef: „na wszystkim, co publikujemy, zawsze znaczek – może być wpasowany w tło, ważne, żeby było go widać”.
+- Ostatni krok przed KAŻDĄ publikacją (Reel 10:00, Raport 18:00, odcinek Hexy, karuzela, grafika, okładka): `python tools/znak/enso_znak.py <plik.mp4|.jpg>` (nadpisuje plik; dźwięk bez zmian). Domyślnie prawy górny róg, 10% szerokości, z miękkim cieniem. Jeśli w rogu jest napis – `--rog lg|pd|ld`.
+- Po nałożeniu obejrzyj klatkę (ffmpeg -ss 5 … -frames:v 1, Read): znak widoczny, nie zasłania liczb ani twarzy. Bez znaku = NIE publikuj; w dzienniku dopisz „Ensō ✔”.
+- Plik znaku: marka/Enso_znak_wodny.png (z zatwierdzonego Ensō, nie generować od nowa).
+
+
 
 
 ## 🎙️ NOWY GŁOS HEXY = SONIA (szef 26.11.2026 14:54) – zastępuje głos Pola

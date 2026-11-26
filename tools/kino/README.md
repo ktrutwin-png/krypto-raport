@@ -1,5 +1,12 @@
 > **OD 20.11.2026 (szef: „tło ostrzejsze i pełniejsze”, grafika w pełni po stronie Reżysera – testować i wdrażać, co działa):** kino.py wyostrza tło (unsharp po zoomie), lżejsze przyciemnienie góry/dołu (.gt .80/.42, .gb .62), crf 17. Nowe obrazy do banku zapisuj w PEŁNEJ rozdzielczości źródła (min. 1440×2560, nie zmniejszaj do 1080×1920) – kino i tak robi nadpróbkowanie ×2, więcej detalu = ostrzejszy film. Wpływ na zasięgi mierzy Opiekun konta (reports/wzrost.log, od 21.11).
 
+## 🔆 ZNAK ENSŌ NA KAŻDEJ PUBLIKACJI (szef 26.11.2026 21:51) – OBOWIĄZUJE PRZED WSZYSTKIM PONIŻEJ
+Szef: „na wszystkim, co publikujemy, zawsze znaczek – może być wpasowany w tło, ważne, żeby było go widać”.
+- Ostatni krok przed KAŻDĄ publikacją (Reel 10:00, Raport 18:00, odcinek Hexy, karuzela, grafika, okładka): `python tools/znak/enso_znak.py <plik.mp4|.jpg>` (nadpisuje plik; dźwięk bez zmian). Domyślnie prawy górny róg, 10% szerokości, z miękkim cieniem. Jeśli w rogu jest napis – `--rog lg|pd|ld`.
+- Po nałożeniu obejrzyj klatkę (ffmpeg -ss 5 … -frames:v 1, Read): znak widoczny, nie zasłania liczb ani twarzy. Bez znaku = NIE publikuj; w dzienniku dopisz „Ensō ✔”.
+- Plik znaku: marka/Enso_znak_wodny.png (z zatwierdzonego Ensō, nie generować od nowa).
+
+
 > **OD 11.11.2026 (wieczór): STYL GŁĘBIA – szef: „to jest to, o co mi chodziło od samego początku”.** Tła = fotorealistyczne sceny AI z głębią jak `tools/neon/wzory/wzor_globus.webp` i `wzor_sala.webp` (punkt zbiegu, mokre odbicia, poświata, neon cyjan/fiolet/magenta, złote monety). Przepis: rozkaz R17 w `reports/plan_wzrostu.md` i sekcja GŁĘBIA w `tools/neon/README.md`.
 
 > **WYŁĄCZONE od 24.11.2026 (szef: „nie podobają mi się te trójwymiary, nie pasują do wystroju”): NIE używaj pola `"d3"` (waga, licznik/pokrętło, skarbiec, globus, liczba, świece 3D). Każda scena ma mieć zwykły obraz `"img"` w neonowym stylu. Poniżej stary opis tylko dla historii.**

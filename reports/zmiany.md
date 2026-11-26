@@ -78,3 +78,5 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-26 16:45 – Raport 18:00: Hexa tylko głosem (szef pyta, ona odpowiada danymi), świat GTA 6/Vice City, wszystko po angielsku.
 
 - 2026-11-26 17:05 – ZASADA GŁÓWNA szefa: „Czy to zbliża mnie do życia z tradingu w 2027? Jeśli nie – nie robimy i nie ponosimy kosztów.” Wpisana na górze zespol.md, plan_wzrostu.md, plan_boty.md.
+- 2026-11-26 21:58 | Ensō na każdej publikacji: tools/znak/enso_znak.py
+- 2026-11-26 22:00 | 10:00: plan B – powrót Crypto Report po teście GTA

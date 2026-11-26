@@ -15,6 +15,7 @@ Pełny system (wersje, ikony, favicon): artefakt „Logo szefa – Erl.grey83”
 - `Enso_ikona.png`: ikona aplikacji 2048 (ORB, Hexa)
 - `Enso_awatar.png`: awatar Instagram/YouTube (jasne koło)
 - `Enso_favicon.png`: favicon, przezroczyste tło
+- `Enso_znak_wodny.png`: znak na KAŻDĄ publikację (przezroczysty, kość + złota linia), nakłada `tools/znak/enso_znak.py` (szef 26.11: „na wszystkim, co publikujemy, zawsze znaczek”)
 - `Profil_Erl.grey83_1080.png`: OFICJALNE zdjęcie profilowe Insta + YouTube (wybór szefa 12.11: tłoczona czerń + złota linia, bez napisu)
 - `Hexa_postac.png`: OFICJALNA twarz Hexy (wybór szefa 12.11): holograficzna młoda kobieta, złote oczy, Ensō na czole, luźne orby agentów. Głos: ElevenLabs „Hexa” (starsza, mądra kobieta). Flow ElevenLabs: „Hexa – postać”.
 
