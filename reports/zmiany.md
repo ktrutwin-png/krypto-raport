@@ -56,3 +56,5 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-26 14:55 – ElevenLabs: rezygnacja (szef). Reszta kredytów (~231k, do 18.12) idzie na zapas odcinków Przygód Hexy #2–#7; rezerwa 10k na głos Hexy w telefonie do przełączenia na darmowy edge-tts. Lektor Reeli już darmowy (piper).
 
 - 2026-11-26 14:58 – Nowy głos Hexy: Sonia (edge-tts en-GB-SoniaNeural, darmowy) – w serialu od #2; ElevenLabs tylko do wideo do 18.12.
+
+- 2026-11-26 15:01 – Głos Hexy w telefonie: Zofia (edge-tts pl-PL-ZofiaNeural, darmowy), po angielsku Sonia; C:\Hexa\rdzen\glos_hexy.py (kopia .bak_20261126_zofia), glos_tryb.txt=serwer – ElevenLabs już nie używany w rozmowach. Test: 2,1 s (plik) / 3,6 s (strumień).
