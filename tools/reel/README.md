@@ -1,6 +1,13 @@
 # Daily Reel pipeline (erl.grey83)
 
 
+
+## 🔤 NAPISY KARAOKE W KAŻDYM REELU (szef 26.11.2026 15:53: „napisy nie byle jakie – sprawdź jak to robią inni”)
+Standard 2026 (opus.pro, blitzcut, kapwing, captions.ai): słowo po słowie, Anton, biały z czarnym obrysem, aktualne słowo złote #ffd23f i lekko większe, 1–3 słowa naraz, środek linii y=1150 (poza martwą strefą Reels i ramką „note”).
+- Robi to `tools/napisy/napisy.py` automatycznie: kino.py i monety/audio_reel.py wypalają napisy same.
+- WARUNEK: lektor MUSI iść przez `tools/reel/lektor.py` – obok każdego v1.wav / _a0.wav powstaje `<plik>.wav.words.json` z czasami słów. Karuzela: commituj też `reel/v*.wav.words.json` razem z v*.wav.
+- Brak napisów w gotowym Reelu = błąd do zgłoszenia (zgloszenia.md). Wyłączenie tylko dla testów: KINO_NAPISY=0.
+
 ## 🎙️ NOWY LEKTOR = ANDREW (szef 26.11.2026 15:01) – zastępuje piper hfc_male („nie podoba mi się”)
 JEDEN lektor we WSZYSTKICH Reelach, Raporcie 18:00, Weekly i karuzelach: darmowy edge-tts `en-US-AndrewNeural` (naturalny męski głos), przez `tools/reel/lektor.py`.
 - Użycie zamiast piper:  `"<say>" | python tools\reel\lektor.py -f <plik.wav>`  (WAV 22 050 Hz jak piper, reszta potoku bez zmian). Na serwerze działa; kino.py i raport/video.py same używają lektora.

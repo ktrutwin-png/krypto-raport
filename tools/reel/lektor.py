@@ -16,13 +16,18 @@ def main():
     txt = (o.t if o.t is not None else sys.stdin.buffer.read().decode("utf-8")).strip()
     try:
         import edge_tts
+        SLOWA = []   # 26.11: czasy slow do napisow karaoke (tools/napisy) -> <plik>.words.json
         async def z():
             b = io.BytesIO()
-            async for ch in edge_tts.Communicate(txt, o.glos, rate=o.rate).stream():
+            async for ch in edge_tts.Communicate(txt, o.glos, rate=o.rate, boundary="WordBoundary").stream():
                 if ch["type"] == "audio": b.write(ch["data"])
+                elif ch["type"] == "WordBoundary":
+                    s = ch["offset"] / 1e7; SLOWA.append([round(s, 3), round(s + ch["duration"] / 1e7, 3), ch["text"]])
             return b.getvalue()
         mp3 = asyncio.run(z())
         if not mp3: raise RuntimeError("pusto")
+        import json
+        json.dump({"tekst": txt, "slowa": SLOWA}, open(o.f + ".words.json", "w", encoding="utf-8"), ensure_ascii=False)
     except Exception as e:
         print(f"lektor: edge-tts niedostepny ({e})", file=sys.stderr); sys.exit(3)
     r = subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-i", "pipe:0", "-ac", "1", "-ar", "22050", "-c:a", "pcm_s16le", o.f], input=mp3)

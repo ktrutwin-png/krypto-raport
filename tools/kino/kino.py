@@ -219,6 +219,17 @@ mix = (f"[0]aresample=44100,aformat=channel_layouts=stereo,volume={VOL}[m];[1]ar
        "[duck][v2]amix=inputs=2:normalize=0:weights=1 1.35,loudnorm=I=-14:TP=-1.5:LRA=7[out]")
 run(["ffmpeg", "-y", "-i", "_mel.wav", "-i", "_vo.wav", "-filter_complex", mix, "-map", "[out]", "-t", str(T), "-ar", "44100", "-c:a", "aac", "-b:a", "192k", "_m.m4a"])
 run(["ffmpeg", "-y", "-i", "_v.mp4", "-i", "_m.m4a", "-shortest", "-c:v", "copy", "-c:a", "copy", "-movflags", "+faststart", "reel.mp4"])
+# szef 26.11.2026: napisy karaoke (slowo po slowie, Anton, zloty akcent) z czasow slow lektora – tools/napisy/napisy.py
+if os.environ.get("KINO_NAPISY", "1") != "0":
+    try:
+        sys.path.insert(0, os.path.join(HERE, "..", "napisy")); from napisy import ass as _ass, wypal as _wypal
+        seg, t0 = [], 0.0
+        for i, L in enumerate(DUR):
+            seg.append((t0 + 0.12, f"_a{i}.wav.words.json")); t0 += L - FADE
+        if _ass(seg, "_napisy.ass"):
+            _wypal("reel.mp4", "_napisy.ass", "_reel_n.mp4"); os.replace("_reel_n.mp4", "reel.mp4")
+    except Exception as e:
+        print("NAPISY blad:", e, file=sys.stderr)
 run(["ffmpeg", "-y", "-ss", "1.2", "-i", "reel.mp4", "-frames:v", "1", "-q:v", "2", "cover.jpg"])
 for f in ([] if os.environ.get("KINO_KEEP") else os.listdir(".")):
     if f.startswith("_") or f == "melody.wav": os.remove(f)
