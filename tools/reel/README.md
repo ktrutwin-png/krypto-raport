@@ -80,6 +80,7 @@ Caption: hook first line, 3 facts, a question for comments, "Follow @erl.grey83"
 ## 🔁 PLAN B DLA 10:00 – POWRÓT DO „CRYPTO REPORT” (szef 26.11.2026 21:55)
 - Test „Karuzela gra” (GTA) o 10:00 trwa 2–3 tygodnie od 25.11 (ocena najpóźniej 16.12.2026). Analityk/Social Media porównuje wyniki z wzrost.log (zasięg, % spoza obserwujących, śr. oglądanie, zapisy, udostępnienia) z dawnym formatem „CRYPTO REPORT”.
 - Jeśli GTA nie pasuje (wyniki nie lepsze od starego formatu) → od następnego dnia o 10:00 wraca „CRYPTO REPORT” jak na początku: karuzela 3 slajdów (ceny i zmiany, top stories ze źródłami, weekly scoreboard + takeaway), wzór: reports/2026-10-30-18/ (slide1–3.jpg, caption.txt). Zmiana dotyczy TYLKO 10:00.
+- WYGLĄD I TREŚĆ powrotnego Crypto Report (szef 26.11 21:57): codziennie INNY kolor przewodni – 7 kolorów tęczy wg dnia tygodnia: pon czerwony #FF3B3B, wt pomarańczowy #FF8A1F, śr żółty #FFD21F, czw zielony #2EE66B, pt niebieski #1FA8FF, sob indygo #5B5BFF, nd fioletowy #B44BFF (neon + głębia, reszta jak w stylu marki). Monety/rynki ZAWSZE: złoto (XAU), Bitcoin (BTC), XRP, XLM, XDC – tylko prawdziwe dane ze źródłami (CoinGecko/CoinMarketCap, złoto Twelve Data), newsy z podanym źródłem, bez wymyślania. Na każdym slajdzie znak Ensō (tools/znak/enso_znak.py).
 - 18:00 bez zmian: „The Trader's Diary” – szef + Hexa (głos), informacje o rynku.
 - Decyzję (zostaje GTA / wraca Crypto Report) wpisz w dziennik_zespolu.md i zmiany.md; szef dowie się z briefingu.
 
