@@ -25,3 +25,9 @@ Postać zostaje jak w `marka/Erl_avatar.jpg`, ale NIE wszystko w dwóch kolorach
 ## ⛔ 26.11 16:34 – w Raporcie 18:00 bez Hexy (ani wyglądu, ani głosu). Sekcja „WĄTEK BUDUJĘ HEXĘ” wyżej – NIEAKTUALNA dla 18:00.
 
 ## 26.11 16:38 – świat wizualny = GTA 6 / Vice City (jak karuzela 10:00 i obrazy szefa z ElevenLabs): palmy, róż + turkus, burza przy spadkach, złoty zachód przy wzrostach.
+
+## ⭐ 26.11 16:51 – WIERNOŚĆ SZEFOWI (szef: „masz moje zdjęcia, sprawdź jak wyglądam, zrób to lepiej”; świat naprawdę cyberpunkowy)
+- Referencja twarzy od teraz: prawdziwe zdjęcie `C:\Hexa\generatory\szef_zdjecie.jpg` (studio, czarna koszula). Podawaj je jako PIERWSZĄ referencję we flux2_ref.py.
+- Wygląd z prawdziwego zdjęcia: krótkie ciemne włosy postawione na czubku (mały irokez), mocno wygolone boki, PRZEZROCZYSTE okulary w cienkich czarnych prostokątnych oprawkach (NIE przeciwsłoneczne), cienki pasek bródki pod dolną wargą, lekki zarost, brak wąsów, jasna karnacja, spokojne, pewne spojrzenie, ok. 40+ lat, czarna koszula / ciemny elegancki strój.
+- Świat: mocny cyberpunk (Night City / Blade Runner + GTA 6 Miami): neony róż/turkus/fiolet, hologramy reklam, deszcz, mokre odbicia, latające auta w tle, wieżowce, palmy w neonie. Prompt zaczynaj od: "Photorealistic cinematic still of the man from the reference photo (exact same face, clear thin black rectangular glasses, small mohawk with shaved sides, thin goatee strip under the lip, no mustache), ..."
+- Przed użyciem porównaj twarz z prawdziwym zdjęciem – nie podobny = odrzuć.
