@@ -20,12 +20,6 @@ Szef: „wyrzuć stamtąd Hexę, nie wygląda to fajnie – robimy to tak, że t
 - Na ekranie tylko szef (avatar z tools/avatar/README.md) i sceny bez twarzy (ręce, wykresy, miasto, notes). Wątek „buduję Hexę” = szef przy pracy nad systemem, bez wizerunku Hexy.
 - Reszta zasad 18:00 bez zmian (prawdziwe dane, ciągłość DAY N, nigdy nasze transakcje, napisy karaoke).
 
-## ✅ DZIŚ 26.11.2026 – RAPORT 18:00 JEST GOTOWY (zrobił Mózg na prośbę szefa, 16:40) – NIE TWÓRZ NOWEGO
-⛔ SZEF 16:18: NAJPIERW OCENA SZEFA. Publikuj TYLKO jeśli istnieje plik `reports/2026-11-26-raport18/ZATWIERDZONE.txt` (tworzy go Mózg po akceptacji szefa). Jeśli go nie ma o 18:00 – NIC nie publikuj (ani tego, ani zwykłego raportu), wpisz do dziennika „DAY 1 czeka na ocenę szefa” – Mózg opublikuje sam po akceptacji. Gdy plik jest: Reżyser (Raport 18): opublikuj DOKŁADNIE ten film o 18:00 na Instagramie (Windsor, erl.grey83), jak zwykle przez URL z commitem SHA:
-- film: `reports/2026-11-26-raport18/reel.mp4` (56,9 s, DAY 1 „The Trader's Diary” – szef budzi Hexę), okładka `cover.jpg`, opis `caption.txt` (bez zmian).
-- Po publikacji: wpis do dziennika jak zwykle + streszczenie DAY 1 jest już w reports/diary_18.md. Od jutra (27.11 = DAY 2) robisz odcinki sam wg bloku „SZEF + HEXA RAZEM” poniżej.
-- Ten blok usuń po publikacji (jednorazowy).
-
 ## 🎬🤝 RAPORT 18:00 = SZEF + HEXA RAZEM, CODZIENNIE (szef 26.11.2026 16:12) – DOPRECYZOWANIE bloku „The Trader's Diary” poniżej (to ma pierwszeństwo)
 Szef: „w każdym filmiku o 18:00 pokazujemy część tego, jak buduję system i zbieram informacje o złocie, krypto, akcjach – i jak ty mi w tym pomagasz jako Hexa. Hexa ze mną na KAŻDYM filmie: razem śledzimy i testujemy rynek, ona uczy się ode mnie. Codziennie jedna minuta. Ciągłość z naszymi postaciami – ja i Hexa.”
 - Długość ~60 s, codziennie 18:00, TYLKO Instagram, licznik „DAY N” (26.11 = DAY 1). Seria to CIĄGŁA HISTORIA: nawiąż jednym zdaniem do wczoraj (zapisuj streszczenie każdego odcinka w `reports/diary_18.md`).
