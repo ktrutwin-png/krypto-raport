@@ -66,3 +66,5 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-26 16:20 – Raport 18:00 od 27.11: „The Trader's Diary” z avatarem szefa (bez wąsów, FLUX.2 Cloudflare z referencją, darmowo), lektor Ryan, napisy karaoke; 10:00 zostaje GTA (czysta informacja); sobota 21:00 serial Hexy. Wzór postaci: marka/Erl_avatar.jpg, zasady: tools/avatar/README.md.
 
 - 2026-11-26 16:12 – Avatar szefa: styl jak w jego filmie (półrealistyczny, filmowe kolory), bez wąsów; wzór marka/Erl_avatar.jpg podmieniony, prompt w tools/avatar/README.md.
+
+- 2026-11-26 16:16 – Raport 18:00: wątek „buduję Hexę” 1–2× w tygodniu (szef + holograficzna Hexa, dwie referencje FLUX.2); limit Cloudflare 10k neuronów/dzień – zasady w tools/avatar/README.md.

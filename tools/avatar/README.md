@@ -9,3 +9,12 @@ SZEF 26.11 16:08: styl jak w filmie o nim („kolorystycznie zajebiście”, „
 - Napoje: tylko kawa, herbata albo woda – nigdy alkohol.
 - Bank gotowych scen: `tools/avatar/bank/` – możesz użyć ponownie, ale min. 2 nowe sceny na każdy raport.
 - Zapas (gdy Cloudflare odmówi): FLUX Kontext na HF (`C:\Hexa\lab\film_szef\sceny.py`, ref C:\Hexa\generatory\szef.png, dopisać „no mustache”), dzienny limit ok. 6 obrazów.
+
+## WĄTEK „BUDUJĘ HEXĘ” (szef 26.11.2026 16:09: „pokazujemy, jak budujemy Hexę – to nasze dzieło, nie mamy się czego wstydzić”)
+- W The Trader's Diary 1–2 razy w tygodniu jedna scena o budowie Hexy: szef w warsztacie/przy biurku, przed nim holograficzna Hexa (w trakcie budowy, ze światła i kodu), lektor mówi np. „At night I also build Hexa – an AI that helps me stay disciplined.” Uczciwie: Hexa to projekt w budowie, bez przesadnych obietnic.
+- Dwie referencje naraz: `python C:\Hexa\generatory\flux2_ref.py "<prompt>" wynik.jpg C:\Hexa\generatory\szef_avatar.jpg 768 1344 C:\Hexa\krypto-raport\marka\Hexa_postac.png` (prompt: „the man from the first reference image … the AI woman from the second reference image …” – wygląd Hexy wg karty postaci: złote oczy, ensō na czole, niebiesko-fioletowe włosy, ciemny strój ze złoto-cyjanowymi liniami).
+- Na końcu takiej sceny/opisu można dodać: „Meet Hexa – every Saturday 21:00”.
+
+## DZIENNY LIMIT (sprawdzone 26.11)
+- Cloudflare Workers AI: 10 000 neuronów/dzień (reset 00:00 UTC) – starcza na ok. 5–6 obrazów FLUX.2 + karuzelę 10:00 (flux-1-schnell, tani). KOLEJNOŚĆ: najpierw karuzela 10:00 (schnell), potem max 4 nowe sceny FLUX.2 na 18:00, resztę scen bierz z `tools/avatar/bank/`. Każdą nową scenę dopisz do banku.
+- Zapas: HF FLUX Kontext (ok. 6 obrazów/dzień). Nie kupujemy płatnych planów bez zgody szefa.
