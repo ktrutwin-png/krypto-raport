@@ -6,6 +6,13 @@
 
 
 
+
+## 🎙️ RAPORT 18:00 – HEXA TYLKO GŁOSEM + ŚWIAT GTA 6 (szef 26.11.2026 16:38) – doprecyzowuje blok „HEXA BEZ GŁOSU I WYGLĄDU” poniżej
+- Hexy NIGDY nie widać. Od czasu do czasu (nie w każdej scenie) szef zadaje jej pytanie przy biurku („Hexa, what did gold do today?”), a ona odpowiada SAMYM GŁOSEM (Sonia: scena z "kto": "hexa", na obrazie dalej szef / wykresy / miasto). Odpowiedź Hexy = dane dnia (prawdziwe ceny + przyczyny ze źródeł).
+- Świat i kolory: nasz cyberpunk w stylu GTA 6 / Vice City (wzory: karuzela 10:00, `marka/propozycje/karuzela_20261126/`, obrazy z ElevenLabs szefa) – nocne miasto Miami z palmami, róż + turkus neonów, burza i błyskawice przy spadkach, złoty zachód słońca / jacht przy wzrostach, mokry asfalt z odbiciami, półrealistyczny filmowy render. Szef (avatar) zawsze elegancki w tym świecie, przy biurku sprawdza akcje / złoto / krypto.
+- Nastrój scen wg rynku: spadek = burza, deszcz, czerwone wykresy; wzrost = złote słońce, spokój; flat = nocny neon.
+- WSZYSTKO PO ANGIELSKU (lektor, napisy, nagłówki, opis).
+
 ## ⛔ RAPORT 18:00 – HEXA BEZ GŁOSU I BEZ WYGLĄDU (szef 26.11.2026 16:34) – ZASTĘPUJE wszystko o Hexie w blokach 18:00 poniżej
 Szef: „wyrzuć stamtąd Hexę, nie wygląda to fajnie – robimy to tak, że to ona zbiera mi dane, ale nie ma jej głosu ani jej wyglądu”.
 - W filmach 18:00 NIE pokazujemy Hexy (żadnego hologramu, twarzy, postaci) i NIE ma jej głosu (żadnych scen "kto": "hexa").

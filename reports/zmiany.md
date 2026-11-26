@@ -74,3 +74,5 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-26 16:40 – DAY 1 Raportu 18:00 gotowy (szef budzi Hexę, prawdziwe ceny 26.11) – reports/2026-11-26-raport18/, publikuje Reżyser o 18:00 bez tworzenia nowego. Nowa seria startuje DZIŚ (DAY 1 = 26.11, jutro DAY 2).
 
 - 2026-11-26 16:40 – Raport 18:00: Hexa bez wyglądu i głosu – tylko wspominana przez szefa jako AI, która zbiera dane (szef). DAY 1 przerobiony.
+
+- 2026-11-26 16:45 – Raport 18:00: Hexa tylko głosem (szef pyta, ona odpowiada danymi), świat GTA 6/Vice City, wszystko po angielsku.
