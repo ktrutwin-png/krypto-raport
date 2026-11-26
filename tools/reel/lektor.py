@@ -3,14 +3,14 @@ Uzycie jak piper:  "<tekst>" | python tools/reel/lektor.py -f wyjscie.wav [--rat
 Wynik: WAV mono 22050 Hz (jak piper), wiec reszta potoku (audio_reel, kino, raport) dziala bez zmian.
 Gdy edge-tts nie dziala (brak sieci do speech.platform.bing.com), zwraca kod 3 - wtedy uzyj piper jako zapasu."""
 import sys, io, asyncio, subprocess, shutil, os, argparse
-GLOS = "en-US-AndrewNeural"
+GLOS = os.environ.get("LEKTOR_GLOS", "en-US-AndrewNeural")   # wyjatki (np. film o szefie): LEKTOR_GLOS / LEKTOR_RATE
 def ffmpeg():
     for p in (shutil.which("ffmpeg"),
               r"C:\Users\Administrator\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.2-full_build\bin\ffmpeg.exe"):
         if p and os.path.exists(p): return p
     raise SystemExit("brak ffmpeg")
 def main():
-    a = argparse.ArgumentParser(); a.add_argument("-f", required=True); a.add_argument("--rate", default="+0%"); a.add_argument("--glos", default=GLOS)
+    a = argparse.ArgumentParser(); a.add_argument("-f", required=True); a.add_argument("--rate", default=os.environ.get("LEKTOR_RATE", "+0%")); a.add_argument("--glos", default=GLOS)
     a.add_argument("-t", default=None)
     o, _ = a.parse_known_args()
     txt = (o.t if o.t is not None else sys.stdin.buffer.read().decode("utf-8")).strip()

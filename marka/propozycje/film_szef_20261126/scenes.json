@@ -1,0 +1,13 @@
+{ "date": "26.11.2026", "mood": "uplift", "handle": "@erl.grey83", "style": "news",
+  "dis": "A true story - ERL.GREY83",
+  "end": {"a": "Build your<br>freedom daily.", "b": "ERL.GREY83", "c": "Follow the journey"},
+  "scenes": [
+    {"img": "s1.jpg", "tag": "CHAPTER 1", "head": ["*05:30.*", "THE SAME ALARM."], "say": "Every morning, the same alarm. The same road to work. Selling my time, hour by hour.", "move": "in"},
+    {"img": "s2.jpg", "tag": "THE SYSTEM", "head": ["SELLING MY HOURS", "*TO SOMEONE ELSE*"], "say": "For years I gave my days to a system that was never built for me.", "move": "out"},
+    {"img": "s3.jpg", "tag": "THE NIGHTS", "head": ["SO AT NIGHT,", "*I BUILT MY OWN.*"], "say": "So at night, I started building my own.", "move": "in"},
+    {"img": "s4.jpg", "tag": "THE NOTEBOOK", "head": ["EVERY LOSS.", "*EVERY WIN.*"], "say": "Every loss went into a notebook. Every win too. I compared them, line by line, until my mistakes became my teachers.", "move": "in"},
+    {"img": "s5.jpg", "tag": "THE PHILOSOPHY", "head": ["NO EUPHORIA.", "*ONLY DISCIPLINE.*"], "say": "Sleepless nights turned into a philosophy. No euphoria. No shortcuts. Only discipline.", "move": "out"},
+    {"img": "s6.jpg", "tag": "THE MACHINE", "head": ["RULES THAT", "*PROTECT ME FROM ME*"], "say": "Rule by rule, the system grew. Bots that never sleep. Rules that protect me from myself.", "move": "in"},
+    {"img": "s7.jpg", "tag": "THE DAY", "head": ["AND ONE DAY,", "*I WALKED OUT.*"], "say": "And one day, I simply walked out.", "move": "in"},
+    {"img": "s8.jpg", "tag": "FREEDOM", "head": ["FREEDOM IS", "*BUILT DAILY.*"], "say": "Freedom isn't dropped into a ballot box once every few years. You build it, every single day. Until your money works for you, and you never sell your time again.", "move": "out"}
+  ] }
