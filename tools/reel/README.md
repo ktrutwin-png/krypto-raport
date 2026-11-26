@@ -77,6 +77,12 @@ Copy this folder to a scratchpad, then:
 6. Cover = a frame around 5-6 s (jpg). Push mp4 + cover + caption.txt to `reports/YYYY-MM-DD-reel/`, publish with Windsor `create_video_post` (raw GitHub URLs, share_to_feed true).
 Caption: hook first line, 3 facts, a question for comments, "Follow @erl.grey83", disclaimer, 5-8 hashtags.
 
+## 🔁 PLAN B DLA 10:00 – POWRÓT DO „CRYPTO REPORT” (szef 26.11.2026 21:55)
+- Test „Karuzela gra” (GTA) o 10:00 trwa 2–3 tygodnie od 25.11 (ocena najpóźniej 16.12.2026). Analityk/Social Media porównuje wyniki z wzrost.log (zasięg, % spoza obserwujących, śr. oglądanie, zapisy, udostępnienia) z dawnym formatem „CRYPTO REPORT”.
+- Jeśli GTA nie pasuje (wyniki nie lepsze od starego formatu) → od następnego dnia o 10:00 wraca „CRYPTO REPORT” jak na początku: karuzela 3 slajdów (ceny i zmiany, top stories ze źródłami, weekly scoreboard + takeaway), wzór: reports/2026-10-30-18/ (slide1–3.jpg, caption.txt). Zmiana dotyczy TYLKO 10:00.
+- 18:00 bez zmian: „The Trader's Diary” – szef + Hexa (głos), informacje o rynku.
+- Decyzję (zostaje GTA / wraca Crypto Report) wpisz w dziennik_zespolu.md i zmiany.md; szef dowie się z briefingu.
+
 ## ⭐ NOWY FORMAT „KARUZELA GRA” – TEST od śr. 25.11.2026 (Reel 10:00; szef zatwierdził 24.11)
 **OBOWIĄZKOWO (Mózg 25.11): od czw. 26.11 do 9.12 KAŻDY Reel 10:00 pon–sob = Karuzela gra. Filar dnia idzie na Raport 18:00. 25.11 Reel wyszedł w starym formacie – błąd, nie powtarzać.**
 
