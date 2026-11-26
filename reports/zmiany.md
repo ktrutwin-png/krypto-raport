@@ -50,3 +50,5 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 25.11 23:14 | Plan szefa: Weekly w niedzielę zostaje; codzienna kontrola i aktualizacja obu stron (bez mylących obietnic YT/X).
 - 25.11 23:36 | Boty: znaki 💧 Hexa, 🔥 Turbo, 🥈 Don (Donchian_XAG) we wszystkich raportach; trójka kandydatów na real MT5 (styczeń).
 - 26.11 02:40 | Panel szefa: przycisk 🃏 JOKER – 1 na 24 h, tylko przy SILNYM trendzie (H1 EMA20/50 z odstępem > 0,5 ATR, EMA20 idzie w stronę trendu, cena po właściwej stronie, M5 i RSI zgodne), lot ×2, TP ×2, tylko w kierunku trendu; nie trzeba go używać. Kopia: panel_tg.py.bak_20261126_joker.
+
+- 2026-11-26 14:45 - Strona glowna: nowa sekcja Zlota mysl (EN i PL) z mysla szefa o wolnosci, pod Pytaniem dnia (na prosbe szefa).
