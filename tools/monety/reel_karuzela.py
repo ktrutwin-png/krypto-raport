@@ -39,7 +39,7 @@ for i,(k,pc,cena,scn,x0,sila,piorun) in enumerate(KARTY,1):
     fg=s.crop((x0,0,x0+824,1024)).resize((1236,1536),Image.LANCZOS)   # zapas na ruch kamery
     bg=s.resize((H,H)).crop(((H-W)//2,0,(H-W)//2+W,H)).filter(ImageFilter.GaussianBlur(30)); bg=ImageEnhance.Brightness(bg).enhance(0.35)
     dur=dlug(f'{R}/v{i}.wav')+1.0
-    sceny.append(dict(fg=fg,bg=bg,dur=dur,tyt=tytul(k,pc,cena,i),pod=podpis(T[i-1]['cap']),sila=sila,piorun=piorun,zoom_in=(i%2==1)))
+    sceny.append(dict(fg=fg,bg=bg,dur=dur,tyt=tytul(k,pc,cena,i),pod=podpis(T[i-1]['cap']),sila=sila,piorun=piorun,zoom_in=(i%2==1),first=(i==1)))
 def klatka(sc,t):
     c=sc['bg'].copy().convert('RGBA'); p=min(1,t/sc['dur'])
     z=1.0+0.10*(p if sc['zoom_in'] else 1-p); fw,fh=int(1080*1.144/z),int(1342*1.144/z)
@@ -52,7 +52,7 @@ def klatka(sc,t):
     for j in range(260): md.line([(0,1642-j),(W,1642-j)],fill=(5,5,10,int(210*(1-j/260))))
     c.alpha_composite(m)
     rl=Image.new('RGBA',(W,H),(0,0,0,0)); deszcz_kl(rl,t,sc['sila']); c.alpha_composite(rl)
-    a=min(1,t/0.5); dy=int((1-a)*-50); ty=sc['tyt'].copy()
+    a=1 if sc.get('first') else min(1,t/0.5); dy=int((1-a)*-50); ty=sc['tyt'].copy()  # first: naglowek od klatki 0 (plan wzrostu)
     if a<1: ty.putalpha(ty.split()[3].point(lambda v:int(v*a)))
     c.alpha_composite(ty,(0,40+dy))
     b=min(1,max(0,(t-0.8)/0.5)); po=sc['pod'].copy()

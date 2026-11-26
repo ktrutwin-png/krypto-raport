@@ -1,0 +1,77 @@
+{
+ "dir": "marka/propozycje/karuzela_20261126",
+ "karty": [
+  {
+   "k": "XLM",
+   "pc": "+3.5%",
+   "cena": "$0.1285",
+   "haslo": "DANCING IN THE SUN",
+   "scena": "s_xlm.jpg",
+   "x0": 100,
+   "sila": 0,
+   "piorun": false,
+   "say": "Green day. Stellar leads the pack, up three and a half percent. After last week's sell-off, the smaller coins bounce the hardest.",
+   "cap": "Small coins bounce hardest after the sell-off"
+  },
+  {
+   "k": "XRP",
+   "pc": "+3.4%",
+   "cena": "$0.954",
+   "haslo": "FULL THROTTLE",
+   "scena": "s_xrp.jpg",
+   "x0": 200,
+   "sila": 0,
+   "piorun": false,
+   "say": "X R P climbs more than three percent, back near ninety five cents, as buyers step back in.",
+   "cap": "Buyers step back in"
+  },
+  {
+   "k": "XDC",
+   "pc": "+2.8%",
+   "cena": "$0.0264",
+   "haslo": "BACK ON BOARD",
+   "scena": "s_xdc.jpg",
+   "x0": 100,
+   "sila": 0,
+   "piorun": false,
+   "say": "X D C adds almost three percent. No big news here, it simply follows the market up.",
+   "cap": "Follows the market up"
+  },
+  {
+   "k": "ETH",
+   "pc": "+2.5%",
+   "cena": "$1,689",
+   "haslo": "HAMMOCK MODE",
+   "scena": "s_eth.jpg",
+   "x0": 200,
+   "sila": 0,
+   "piorun": false,
+   "say": "Ether gains two and a half percent, near one thousand seven hundred dollars, a calmer day after weeks of heavy losses.",
+   "cap": "A calmer day after heavy losses"
+  },
+  {
+   "k": "BTC",
+   "pc": "+2.4%",
+   "cena": "$60,646",
+   "haslo": "ROOFTOP BBQ",
+   "scena": "s_btc.jpg",
+   "x0": 200,
+   "sila": 0,
+   "piorun": false,
+   "say": "Bitcoin rises over two percent and is back above sixty thousand dollars. With U S markets closed for Thanksgiving, trading is thin.",
+   "cap": "Back above $60K on thin holiday trading"
+  },
+  {
+   "k": "XAU",
+   "pc": "+1.0%",
+   "cena": "$3,562",
+   "haslo": "COFFEE IN THE SUN",
+   "scena": "s_xau.jpg",
+   "x0": 200,
+   "sila": 0,
+   "piorun": false,
+   "say": "And gold edges up one percent, back above three thousand five hundred dollars. A quiet bounce everywhere. Is it real, or just a pause? This is not financial advice, just data.",
+   "cap": "A quiet bounce. Real, or a pause?"
+  }
+ ]
+}
