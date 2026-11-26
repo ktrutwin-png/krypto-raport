@@ -58,3 +58,5 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-26 14:58 – Nowy głos Hexy: Sonia (edge-tts en-GB-SoniaNeural, darmowy) – w serialu od #2; ElevenLabs tylko do wideo do 18.12.
 
 - 2026-11-26 15:01 – Głos Hexy w telefonie: Zofia (edge-tts pl-PL-ZofiaNeural, darmowy), po angielsku Sonia; C:\Hexa\rdzen\glos_hexy.py (kopia .bak_20261126_zofia), glos_tryb.txt=serwer – ElevenLabs już nie używany w rozmowach. Test: 2,1 s (plik) / 3,6 s (strumień).
+
+- 2026-11-26 15:08 – Lektor Reeli/Raportu/Weekly: Andrew (edge-tts en-US-AndrewNeural, darmowy) zamiast piper hfc_male (szef: nie podobał mu się). tools/reel/lektor.py; kino.py i raport/video.py używają go same, piper tylko zapas.

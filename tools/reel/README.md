@@ -1,5 +1,12 @@
 # Daily Reel pipeline (erl.grey83)
 
+
+## 🎙️ NOWY LEKTOR = ANDREW (szef 26.11.2026 15:01) – zastępuje piper hfc_male („nie podoba mi się”)
+JEDEN lektor we WSZYSTKICH Reelach, Raporcie 18:00, Weekly i karuzelach: darmowy edge-tts `en-US-AndrewNeural` (naturalny męski głos), przez `tools/reel/lektor.py`.
+- Użycie zamiast piper:  `"<say>" | python tools\reel\lektor.py -f <plik.wav>`  (WAV 22 050 Hz jak piper, reszta potoku bez zmian). Na serwerze działa; kino.py i raport/video.py same używają lektora.
+- piper hfc_male zostaje TYLKO jako zapas, gdy lektor.py zwróci kod 3 (brak sieci do edge-tts) – wtedy wpis do reports/zgloszenia.md.
+- Lektor generuj NA SERWERZE (chmura agenta nie łączy się z edge-tts). Wyjątek: serial Hexy – mówi Hexa głosem Sonia.
+
 ## ⛔ TYLKO INSTAGRAM (szef 25.11.2026 22:14) – OBOWIĄZUJE PRZED WSZYSTKIM PONIŻEJ
 Szef: „na razie YouTube odpuszczamy, X i Facebook też – zostajemy na Instagramie; najpierw budujemy firmę, potem wydatki”. Od teraz publikujesz WYŁĄCZNIE na Instagramie (Windsor, konto erl.grey83, plan darmowy). NIE wysyłaj nic na YouTube (ani Windsor, ani Metricool), na X (Typefully) ani na Facebook. Nie kupujemy Windsor Basic. Brak YT/X w dzienniku to NIE błąd – nie zgłaszaj. Wszystkie wpisy o YT/X/FB poniżej są zawieszone, dopóki szef sam ich nie przywróci.
 
@@ -33,7 +40,7 @@ Wzór gotowy: marka/propozycje/karuzela_2411/ (config.json, podglad.jpg, reel/).
 3. Sceny: unikaj postaci i miejsc z reports/sceny_karuzeli.json z ostatnich 14 dni. Prompt: "Cinematic semi-realistic AAA open-world video game render, tropical Miami-like neon city, highly detailed, depth of field, no text, no letters, no logos, no signs with writing. <postać, miejsce, emocja, pogoda>". Generuj na SERWERZE (Remote_Desktop_Commander, deviceId 0b708a8f-66a5-4eeb-8a28-ac5878aae932): `python C:\Hexa\generatory\flux_gen.py "<prompt>" C:\Hexa\krypto-raport\marka\propozycje\karuzela_RRRRMMDD\s_<kod>.jpg` (darmowy FLUX, ~3 s), potem na serwerze `git stash; git pull; git add …; git commit; git push; git stash pop` i pull tutaj. Obejrzyj każdą scenę (Read); zła → nowy prompt. x0 = lewa krawędź kadru 824 px wokół postaci (0–200).
 4. Powód ruchu: WebSearch (≥2 źródła dla złota/BTC/ETH; mała moneta bez newsa → uczciwie „follows the market”). Dla każdej karty: say (EN, 20–30 słów, „analysts point to”) i cap (≤8 słów; NIE jest pokazywany na wideo – szef 24.11: bez podpisu na dole, wystarczy lektor). Bez obietnic, bez porad.
 5. config.json w folderze dnia – format jak karuzela_2411/config.json (k, pc, cena, haslo, scena, x0, sila, piorun, say, cap).
-6. Lektor na serwerze (JEDEN stały głos): dla każdej karty `"<say>" | python -m piper -m tools\reel\voice\en_US-hfc_male-medium.onnx --length-scale 1.05 --sentence-silence 0.25 -f marka\propozycje\karuzela_RRRRMMDD\reel\vN.wav` (N = numer karty), push, pull.
+6. Lektor na serwerze (JEDEN stały głos): dla każdej karty `"<say>" | python tools\reel\lektor.py -f marka\propozycje\karuzela_RRRRMMDD\reel\vN.wav` (N = numer karty), push, pull.
 7. Render tutaj: `python3 tools/monety/karuzela.py <config>` (karty + podglad.jpg) → `python3 tools/monety/reel_karuzela.py <config>` → `python3 tools/monety/audio_reel.py <config> tense|calm|uplift` (tense gdy większość spada, uplift gdy rośnie) → reel/reel.mp4 (~55 s, Ken Burns, deszcz, pioruny, żółty pasek z adresem strony; bez podpisów na dole).
 8. Obejrzyj min. 6 klatek. Publikacja jak zwykle (Reel IG + Short YT): opis = hak, po jednej linijce na aktywo, „Live prices → link in bio”, disclaimer, hashtagi; na YouTube w opisie pełny link https://erlgrey83-crypto-freaq.vercel.app (klikalny).
 9. Dopisz dzień i sceny do reports/sceny_karuzeli.json; jedna linia w reports/dziennik_zespolu.md.
@@ -44,3 +51,14 @@ Tlo `bg()` ma neonowe miasto (cyjan #00f0ff + roz #ff2bd6 + zolte okna), rozowa 
 Zasady wzrostu z zadania 12:00 (hook w 1 s, 20-35 s, filar dnia) maja pierwszenstwo przed czasami scen w tym README.
 
 > 25.11.2026: opis posta (IG/YT/X) i teksty lektora przepuść przez skill `humanizer` przed publikacją.
+## ZASADY Z DANYCH (Laboratorium tresci, 22.11.2026) – maja pierwszenstwo przed gustem
+Metricool, 54 Reelsy 23.10–22.11: srednio 83% widzow odpada w pierwszych 3 s; newsy "price today" 88–89%, pytanie/konflikt 77%, Hexa 77%. Mediana wyswietlen spada (13 -> 6), czas ogladania ~8–9 s, zapisy+udostepnienia ~0.
+1. Kadr 0,0 s: jedna liczba albo pytanie, max 6 slow, duzy napis + ruch od pierwszej klatki. Zero intro z data/logo. Data i zrodla na koncu.
+2. ZAKAZ "Bitcoin price today" w pierwszym kadrze. Ten sam news jako konflikt/liczba: "$55K -> $60K in 6 hours", "Who sold $1B?", "BTC -14%, gold -4%: why?".
+3. Dzien duzego ruchu (>=5% w 24 h): hak = sama liczba ruchu ("BTC UNDER $60K") – to jest temat dnia (20.11: 109 wyswietlen vs mediana 10).
+4. Dlugosc: jedna mysl, cel 15–25 s. Gdy >25 s – w 8–10 s nowa liczba/zwrot akcji.
+5. Min. 1 Reel z Hexa / "jak dziala nasz system AI" w tygodniu + CTA komentarzowe jednym slowem (jak "Comment HEXA" – najlepszy Reel: 353 wysw.).
+6. Raz w tygodniu "cheat sheet": 3 liczby/poziomy na jednej planszy w ostatniej klatce (powod do zapisu).
+7. TEST A/B TLA 23–29.11: 23/25/27/29.11 poranny Reel = A (obecne tlo bg()), wieczorny = B (generator neon 3D C:\Hexa\wideo_hf\reel_zloto\tlo_neon.js, SEED = data RRRRMMDD); 24/26/28.11 odwrotnie (poranny = B, wieczorny = A). Wszystko inne bez zmian. Podsumowanie tygodnia i seria Hexa poza testem. Kazdy Reel wpisz do C:\Hexa\tresci\testy_ab.md (data godz | wariant | temat).
+8. Bez wpadek: nowy wariant – przed publikacja 3 klatki obejrzane (ostrosc, czytelnosc, pole bezpieczne, prawdziwe liczby, literowki). Bez zdjec szefa. Zero kosztow (nie uzywac kredytow ElevenLabs ani platnych generatorow).
+Aktualne liczby, wnioski i kolejka testow: C:\Hexa\tresci\analiza_widza.md (aktualizowane co tydzien).

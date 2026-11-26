@@ -129,8 +129,12 @@ for i, s in enumerate(S):
     if gl:
         run(["ffmpeg", "-y", "-i", gl, "-ar", "44100", "-ac", "1", f"_a{i}.wav"]); pitch_s = 1.0
     else:
-        assert VOICE and os.path.exists(VOICE), "brak glosu piper w tools/reel/voice (patrz tools/reel/README.md)"
-        run([sys.executable, "-m", "piper", "-m", VOICE, "--length-scale", "0.96", "--sentence-silence", "0.18", "-f", f"_a{i}.wav"], input=s["say"].encode()); pitch_s = PITCH
+        if subprocess.run([sys.executable, os.path.join(REEL, "lektor.py"), "-f", f"_a{i}.wav"], input=s["say"].encode()).returncode == 0:
+            pitch_s = 1.0  # szef 26.11: lektor Andrew (edge-tts) – bez zmiany tonu
+        else:
+          print("LEKTOR: edge-tts niedostepny -> zapas piper", file=sys.stderr)
+          assert VOICE and os.path.exists(VOICE), "brak glosu piper w tools/reel/voice (patrz tools/reel/README.md)"
+          run([sys.executable, "-m", "piper", "-m", VOICE, "--length-scale", "0.96", "--sentence-silence", "0.18", "-f", f"_a{i}.wav"], input=s["say"].encode()); pitch_s = PITCH
     w = wave.open(f"_a{i}.wav"); d = w.getnframes() / w.getframerate(); sr = w.getframerate(); w.close()
     L = round(d + 0.35 + (0 if last else FADE), 2); DUR.append(L)
     pf = f"asetrate={int(sr*pitch_s)},aresample={sr},atempo={1/pitch_s:.4f}," if pitch_s != 1.0 else ""

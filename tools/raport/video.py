@@ -14,10 +14,11 @@ os.chdir(D)
 NAR = json.load(open("narration.json")) if os.path.exists("narration.json") else None
 if NAR:
     assert len(NAR) == 3, "narration.json = dokladnie 3 teksty"
-    assert os.path.exists(VOICE), f"brak glosu {VOICE} (pobierz wg tools/reel/README.md)"
     DUR = []
     for i, s in enumerate(NAR):
-        run([sys.executable, "-m", "piper", "-m", VOICE, "--length-scale", "1.05", "-f", f"_a{i}.wav"], input=s.encode())
+        if subprocess.run([sys.executable, os.path.join(REEL, "lektor.py"), "-f", f"_a{i}.wav"], input=s.encode()).returncode != 0:  # szef 26.11: lektor Andrew
+            print("LEKTOR: edge-tts niedostepny -> zapas piper", file=sys.stderr)
+            run([sys.executable, "-m", "piper", "-m", VOICE, "--length-scale", "1.05", "-f", f"_a{i}.wav"], input=s.encode())
         w = wave.open(f"_a{i}.wav"); d = w.getnframes() / w.getframerate(); w.close()
         L = d + 0.6 + (FADE if i < 2 else 0.8); DUR.append(round(L, 2))
         run(["ffmpeg", "-y", "-i", f"_a{i}.wav", "-af", f"adelay=200|200,apad=whole_dur={L:.2f},aresample=44100", "-ac", "2", f"_p{i}.wav"])
