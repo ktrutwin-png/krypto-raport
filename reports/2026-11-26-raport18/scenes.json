@@ -1,0 +1,13 @@
+{ "date": "26.11.2026", "mood": "uplift", "handle": "@erl.grey83", "style": "news",
+  "dis": "Not financial advice - real market data",
+  "end": {"a": "Day 1.<br>Freedom is built daily.", "b": "ERL.GREY83 x HEXA", "c": "Hexa's story - every Saturday 9 PM"},
+  "scenes": [
+    {"img": "d1.jpg", "tag": "THE TRADER'S DIARY", "head": ["DAY 1.", "*THE NIGHT I WOKE HER UP.*"], "say": "Day one. After months of building, tonight I finally woke her up.", "move": "in"},
+    {"img": "d2.jpg", "kto": "hexa", "tag": "HEXA ONLINE", "head": ["HELLO.", "*I'M HEXA.*"], "say": "Hello. I'm Hexa. I can see the market now. Shall we begin?", "move": "in"},
+    {"img": "d3.jpg", "kto": "hexa", "tag": "GOLD", "head": ["GOLD *$3,574*", "WILD 24 HOURS"], "say": "Gold is near three thousand five hundred seventy dollars. Yesterday it fell to three thousand four hundred twenty-six, and came all the way back.", "move": "out"},
+    {"img": "d4.jpg", "kto": "hexa", "tag": "CRYPTO", "head": ["BITCOIN ~$60K", "*XRP +4.9%*"], "say": "Crypto is green tonight. Bitcoin is up about four percent, near sixty thousand. X R P is up almost five.", "move": "in"},
+    {"img": "d5.jpg", "tag": "THE LESSON", "head": ["SOME DROPS", "*HURT.*"], "say": "I used to trade on instinct. Some drops hurt. So now I build rules, bots, a real system.", "move": "in"},
+    {"img": "d6.jpg", "kto": "hexa", "tag": "THE DEAL", "head": ["YOU KEEP", "*THE DISCIPLINE.*"], "say": "I'll watch the market while you work. You keep the discipline.", "move": "out"},
+    {"img": "d7.jpg", "tag": "DAY 1", "head": ["FREEDOM IS", "*BUILT DAILY.*"], "say": "Day one. Freedom is built daily.", "move": "in"},
+    {"img": "d8.jpg", "kto": "hexa", "tag": "HEXA'S STORY", "head": ["HOW I WOKE UP?", "*SATURDAY 9 PM.*"], "say": "How I woke up is my own story. Every Saturday, nine P M.", "move": "in"}
+  ] }

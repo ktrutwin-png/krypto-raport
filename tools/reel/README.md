@@ -4,9 +4,16 @@
 
 
 
+
+## ✅ DZIŚ 26.11.2026 – RAPORT 18:00 JEST GOTOWY (zrobił Mózg na prośbę szefa, 16:40) – NIE TWÓRZ NOWEGO
+Reżyser (Raport 18): opublikuj DOKŁADNIE ten film o 18:00 na Instagramie (Windsor, erl.grey83), jak zwykle przez URL z commitem SHA:
+- film: `reports/2026-11-26-raport18/reel.mp4` (56,9 s, DAY 1 „The Trader's Diary” – szef budzi Hexę), okładka `cover.jpg`, opis `caption.txt` (bez zmian).
+- Po publikacji: wpis do dziennika jak zwykle + streszczenie DAY 1 jest już w reports/diary_18.md. Od jutra (27.11 = DAY 2) robisz odcinki sam wg bloku „SZEF + HEXA RAZEM” poniżej.
+- Ten blok usuń po publikacji (jednorazowy).
+
 ## 🎬🤝 RAPORT 18:00 = SZEF + HEXA RAZEM, CODZIENNIE (szef 26.11.2026 16:12) – DOPRECYZOWANIE bloku „The Trader's Diary” poniżej (to ma pierwszeństwo)
 Szef: „w każdym filmiku o 18:00 pokazujemy część tego, jak buduję system i zbieram informacje o złocie, krypto, akcjach – i jak ty mi w tym pomagasz jako Hexa. Hexa ze mną na KAŻDYM filmie: razem śledzimy i testujemy rynek, ona uczy się ode mnie. Codziennie jedna minuta. Ciągłość z naszymi postaciami – ja i Hexa.”
-- Długość ~60 s, codziennie 18:00, TYLKO Instagram, licznik „DAY N” (27.11 = DAY 1). Seria to CIĄGŁA HISTORIA: nawiąż jednym zdaniem do wczoraj (zapisuj streszczenie każdego odcinka w `reports/diary_18.md`).
+- Długość ~60 s, codziennie 18:00, TYLKO Instagram, licznik „DAY N” (26.11 = DAY 1). Seria to CIĄGŁA HISTORIA: nawiąż jednym zdaniem do wczoraj (zapisuj streszczenie każdego odcinka w `reports/diary_18.md`).
 - W KAŻDYM odcinku są OBIE postacie: szef (avatar, tools/avatar/README.md) i Hexa (karta postaci). Min. 2 sceny razem (dwie referencje FLUX.2), reszta może być osobno.
 - Dialog: scena z polem `"kto": "hexa"` mówi głosem Hexy (Sonia), reszta głosem szefa (Ryan: LEKTOR_GLOS=en-GB-RyanNeural, LEKTOR_RATE=-4%). Np. Hexa: „Gold dropped one percent today. Analysts point to a stronger dollar.” Szef: „And that is why I wait for confirmation.”
 - Treść: prawdziwe wydarzenia dnia (złoto, dolar, krypto XRP/XLM/XDC, akcje/indeksy) z AKTUALNYMI cenami z wiarygodnych źródeł (≥2) – liczby ZAWSZE prawdziwe i z dzisiejszej daty; + fragment budowy systemu (boty, zasady, panel, Lab – ogólnie, bez wyników kont); + lekcja dnia (np. jak spadek boli bez stop-lossa → jak trzymam się zasad, cierpliwość, dyscyplina).
@@ -15,7 +22,7 @@ Szef: „w każdym filmiku o 18:00 pokazujemy część tego, jak buduję system 
 
 ## 🎬 RAPORT 18:00 = „THE TRADER'S DIARY” Z AVATAREM SZEFA (szef 26.11.2026 16:02) – ZASTĘPUJE format Karuzela gra o 18:00
 Szef: postać (jego avatar, bez wąsów) jest bohaterem wieczornego raportu na Instagramie – historia człowieka, który właśnie buduje day trading, podaje, co się dzieje na świecie, i sam z tego czerpie, budując dalej swoje życie. **10:00 bez zmian: czysta informacja w stylu GTA 6 (Karuzela gra).** Sobota 21:00 bez zmian: serial Hexy.
-- Od piątku 27.11.2026, codziennie 18:00, TYLKO Instagram. Licznik: 27.11 = „DAY 1”, dalej kolejne dni.
+- Od piątku 27.11.2026, codziennie 18:00, TYLKO Instagram. Licznik: 26.11 = „DAY 1”, dalej kolejne dni.
 - Obrazy: TYLKO postać z `tools/avatar/README.md` (FLUX.2 + referencja, darmowo, na serwerze). 4–5 scen pionowych, min. 2 nowe dziennie, sceny pasujące do treści (biurko z wykresami, ulica z newsami na tablecie, kawa o świcie, okno nocą…).
 - Montaż: `tools/kino/kino.py` (styl news, nagłówki u góry) + napisy karaoke (automatycznie). 35–50 s. "dis": "Not financial advice", plansza końcowa: "Freedom is<br>built daily." / "ERL.GREY83" / "Follow the journey".
 - Lektor: pierwsza osoba („I…”), po angielsku, głos Ryan: przed kino.py ustaw `LEKTOR_GLOS=en-GB-RyanNeural` i `LEKTOR_RATE=-4%`. (10:00 zostaje Andrew.)

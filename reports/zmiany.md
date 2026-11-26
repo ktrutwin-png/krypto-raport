@@ -70,3 +70,5 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-26 16:16 – Raport 18:00: wątek „buduję Hexę” 1–2× w tygodniu (szef + holograficzna Hexa, dwie referencje FLUX.2); limit Cloudflare 10k neuronów/dzień – zasady w tools/avatar/README.md.
 
 - 2026-11-26 16:20 – Raport 18:00: szef + Hexa razem w każdym odcinku (~60 s, ciągła historia, dialog: Hexa=Sonia, szef=Ryan; kino.py pole "kto": "hexa"); prawdziwe ceny, nigdy nasze transakcje.
+
+- 2026-11-26 16:40 – DAY 1 Raportu 18:00 gotowy (szef budzi Hexę, prawdziwe ceny 26.11) – reports/2026-11-26-raport18/, publikuje Reżyser o 18:00 bez tworzenia nowego. Nowa seria startuje DZIŚ (DAY 1 = 26.11, jutro DAY 2).
