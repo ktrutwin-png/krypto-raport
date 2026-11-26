@@ -381,3 +381,4 @@ UPDATE: 2026-11-22 14:21 (Agent Skanery) skaner_dzienny.py na serwerze: US30 RSI
 2026-11-26 02:45 | Laboratorium | +1 (LAB_Dyw_XAU) / −0 | najlepszy: LAB_Donchian_XAG +729,68 $ | ok
 2026-11-26 04:45 | Mechanik | naprawione: 0, do wdróż: 0 | brak nowych zgłoszeń dla Mechanika (Z044 – kontrola w przeglądzie 2.12); czwartek – bez przeglądu botów | ok
 2026-11-26 05:50 | Kalendarz | dziś brak ważnych danych | ok
+2026-11-26 06:51 | Zwiadowca | okazje: 3 (1/1/1: GBP/USD short dz., SOL/USD short tydz., DE40 short mies.), rozliczone: 1 (GBP/USD 25.11 cel +1.20R – strefa 00–03, cel 10:00), trafność 30 dni: 24% (n=34, śr. +0.12R), najlepsze okno: 14:00–17:00 (n=21, 7 celów, +0.33R); dziś Święto Dziękczynienia (USA zamknięte) → okno dnia 09:00–12:00 Londyn; dane Yahoo D1/1h + Twelve Data XAU + CoinGecko top 20 | ok
