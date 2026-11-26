@@ -1,5 +1,16 @@
 # Serial „Przygody Hexy” – ZASADY OBOWIĄZKOWE (szef 22.11.2026)
 
+
+## ⛔ KONIEC ELEVENLABS – ZAPAS ODCINKÓW (szef 26.11.2026 14:49) – OBOWIĄZUJE PRZED WSZYSTKIM PONIŻEJ
+Szef: „Resztę kredytów ElevenLabs wykorzystaj do stworzenia jak największej ilości serialu Hexy” – rezygnujemy z ElevenLabs (oszczędzamy).
+- Stan 26.11 14:50: plan Pro, zostało ok. 231 000 kr., ważne do odnowienia 18.12.2026 12:50 UTC. Po tej dacie ElevenLabs NIE istnieje w naszym systemie.
+- Limit 60 000/odcinek i rezerwa 150 000 z pkt 7 – UCHYLONE. Nowa zasada: zostaw tylko 10 000 kr. rezerwy (głos Hexy w telefonie do czasu przełączenia na darmowy), resztę zużyj na odcinki.
+- Kolejność: #2 Szklane Miasto (28.11), #3 Archiwum Mgieł (5.12), #4 Miraż (12.12), #5 Planeta Zegarów (19.12), #6 Kuźnia (26.12), #7 Lustrzany Księżyc (2.01) – rób po kolei, aż skończą się kredyty. Jakość wg R40 i pkt 6 bez obniżania; jeśli kredyty na ostatni odcinek nie starczą na całość, zrób jego najdroższe ujęcia (Hexa mówi – OmniHuman, boss, planeta), a resztę dokończ darmowo.
+- Zawsze estimate_only przed wideo; po każdej generacji wpis do reports/elevenlabs_budzet.md (Zużycie).
+- Gotowe odcinki: tools/hexa_seria/epN/ (final.mp4 + kontrola.md + opis IG). Publikacja bez zmian: sobota 21:00, TYLKO Instagram.
+- Rytuał (ep2/rytual.mp4) i intro nagrane raz – używaj ponownie, nie generuj drugi raz.
+- Głos Hexy po 18.12 = darmowy (edge-tts, próbki: marka/propozycje/glos_hexy_20261126/, wybór szefa w toku) – NIE generuj nic w ElevenLabs po 18.12.
+
 ## ⛔ TYLKO INSTAGRAM (szef 25.11.2026 22:14) – OBOWIĄZUJE PRZED WSZYSTKIM PONIŻEJ
 Szef: „na razie YouTube odpuszczamy, X i Facebook też – zostajemy na Instagramie; najpierw budujemy firmę, potem wydatki”. Od teraz publikujesz WYŁĄCZNIE na Instagramie (Windsor, konto erl.grey83, plan darmowy). NIE wysyłaj nic na YouTube (ani Windsor, ani Metricool), na X (Typefully) ani na Facebook. Nie kupujemy Windsor Basic. Brak YT/X w dzienniku to NIE błąd – nie zgłaszaj. Wszystkie wpisy o YT/X/FB poniżej są zawieszone, dopóki szef sam ich nie przywróci.
 
