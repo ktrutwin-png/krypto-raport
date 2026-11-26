@@ -77,6 +77,15 @@ Copy this folder to a scratchpad, then:
 6. Cover = a frame around 5-6 s (jpg). Push mp4 + cover + caption.txt to `reports/YYYY-MM-DD-reel/`, publish with Windsor `create_video_post` (raw GitHub URLs, share_to_feed true).
 Caption: hook first line, 3 facts, a question for comments, "Follow @erl.grey83", disclaimer, 5-8 hashtags.
 
+## 🌈 10:00 = KARUZELA „CRYPTO REPORT” Z LEKTOREM – OD 27.11.2026 (szef 26.11 22:20) – ZASTĘPUJE „KARUZELA GRA” (GTA) i plan B poniżej
+Szef: „przywracamy tę karuzelę”, zamiast GTA. Publikacja jako Reel (pionowo 1080x1920) przewijający 4 slajdy + osobno te same 4 slajdy jako karuzela NIE – jeden post: Reel.
+- Slajdy (kolor przewodni = tęcza wg dnia tygodnia, patrz plan B): 1) ZŁOTO + BTC – cena, zmiana 24h, liczba dnia; 2) AKCJE I RYNEK – S&P 500, Nasdaq, dolar (DXY/EURUSD), co i DLACZEGO; 3) TOP NEWSY (2–3) ze źródłem; 4) „COINS WE FOLLOW” – XAU, BTC, XRP, XLM, XDC: cena, 24h, 7d. NIGDY „our portfolio”, nigdy ilości ani kwoty szefa.
+- LEKTOR: edge-tts `en-US-ChristopherNeural`, rate -6%, pitch -8Hz (głęboki, stanowczy, darmowy) – `LEKTOR_GLOS=en-US-ChristopherNeural LEKTOR_RATE=-6%` do tools/reel/lektor.py (dodaj pitch -8Hz). Lektor TŁUMACZY każdy slajd: co się stało i dlaczego, krótko, po angielsku, tylko fakty. Napisy karaoke jak dotąd.
+- MUZYKA: delikatna – `music.py <czas> calm` (lub `gold` przy makro), głośność 0.35 + sidechain (muzyka cichnie pod głosem): `sidechaincompress=threshold=0.03:ratio=6:attack=20:release=400`. Muzyka NIGDY nie zagłusza lektora; NIE używać tense/uplift w tym formacie.
+- Ensō na każdym slajdzie (tools/znak/enso_znak.py na gotowym mp4). Dane: CoinGecko/CoinMarketCap, złoto/akcje/dolar Twelve Data; newsy z linkiem źródła.
+- Wzór wyglądu: reports/2026-10-30-18/ i 2026-11-04-18/ (CRYPTO REPORT), tylko kolor wg dnia.
+- Test wyników: od 27.11 Social Media porównuje z GTA (25–26.11) i starymi karuzelami w wzrost.log.
+
 ## 🔁 PLAN B DLA 10:00 – POWRÓT DO „CRYPTO REPORT” (szef 26.11.2026 21:55)
 - Test „Karuzela gra” (GTA) o 10:00 trwa 2–3 tygodnie od 25.11 (ocena najpóźniej 16.12.2026). Analityk/Social Media porównuje wyniki z wzrost.log (zasięg, % spoza obserwujących, śr. oglądanie, zapisy, udostępnienia) z dawnym formatem „CRYPTO REPORT”.
 - Jeśli GTA nie pasuje (wyniki nie lepsze od starego formatu) → od następnego dnia o 10:00 wraca „CRYPTO REPORT” jak na początku: karuzela 3 slajdów (ceny i zmiany, top stories ze źródłami, weekly scoreboard + takeaway), wzór: reports/2026-10-30-18/ (slide1–3.jpg, caption.txt). Zmiana dotyczy TYLKO 10:00.

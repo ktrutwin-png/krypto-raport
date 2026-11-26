@@ -81,3 +81,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-26 21:58 | Ensō na każdej publikacji: tools/znak/enso_znak.py
 - 2026-11-26 22:00 | 10:00: plan B – powrót Crypto Report po teście GTA
 - 2026-11-26 22:05 | Crypto Report plan B: 7 kolorów tęczy, XAU/BTC/XRP/XLM/XDC
+- 2026-11-26 22:30 | 10:00: karuzela Crypto Report + lektor Christopher zamiast GTA
