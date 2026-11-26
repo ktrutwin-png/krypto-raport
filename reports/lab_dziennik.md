@@ -224,3 +224,28 @@ Kod: `C:\Hexa\lab` (silnik `lab_silnik.py`, boty `boty\*.py`, start `START_LAB.p
 
 **Najlepszy:** LAB_Donchian_XAG +654,83 $ (4 tr., PF 2,73). Aktywne procesy: 9/10 + zbieracz memów (wolny slot po Bocie A).
 
+
+---
+
+## 2026-11-26 (noc 9) – M8 prawie odrobione, M15 złota blisko werdyktu; nowy LAB_Dyw_XAU
+
+**Przegląd (konto demo botów 5058971085, trade_mode DEMO; Hexa 830083 i Turbo 830099 bez otwartych pozycji, nietknięte):** saldo 6788,00 $, kapitał 6794,07 $. Lab MT5: **106 zamkniętych, +858,15 $** (było +445,31 $). Donchian_XAG 5 tr. +729,68 $ (PF 2,93), Londyn_XAU 3 tr. +249,75 $ (PF 7,89), RSI2_FX 9 tr. +30,54 $ (PF 2,32).
+- **M8 MT5: 88 zamkniętych, −128,31 $** (rdzeń 830210–830223: 81 tr., −193,50 $, PF 0,88; było 0,60). Złoto M15: Hexa 18 tr. +80,83 $ (PF 1,35), Turbo 15 tr. +96,63 $ (PF 1,53), TP2/TP3 7/4 tr. +23,98/+41,21 $; M30 Hexa/Turbo po 10 tr. +48 $ (PF 1,28); XAG M30 9 tr. +78,37 $ (PF 1,44); H1 Hexa +31,44 $ / Turbo −11,60 $; H4 −279,87 $ i H4_TP2x2 −190,95 $ (23.11 luka + 25.11 SL, gdy złoto odbiło z 3467 do 3576). Maks. 18 tr./wariant – werdykt przy następnym przeglądzie.
+- **IBKR paper (DUR…):** 6 zamkniętych, −18,40 $ – H1 3 × TP (+40,02/+39,81/+31,58), 2 × SL (−0,97/−50,75), H4 SL −78,09.
+- **Kraken na sucho:** KR_M8_D1 bez zmian; KR_RSI2_H4 zamknął oba SHORT-y czasem (BTC −1,20 €, XRP −6,00 €), kapitał 548,68 €; MemyC 0 tr. (BTC 60,5k pod EMA50 H4 61,6k).
+- **eToro DEMO** (`"account":"demo"` w odpowiedzi): LAB_ET_M8_XAU_D1 GOLD SHORT **+32,42 $** (SL 3805 / TP 3334). Brak otwarć/zamknięć → arkusz bez zmian.
+- **M9:** zbieracz 63,6k tokenów, 0 błędów; FalaB 2 tr. −6,13 $, 1 otwarta (GeckoTerminal 429 – bot ponawia z przerwą); C bez sygnału.
+
+**Wyłączone (lekcja): nic** – żaden aktywny bot nie ma ~20 transakcji z PF < 0,9 ani −30% kapitału.
+
+**Nowe pomysły (1728 przebiegów, `narzedzia\backtest_noc9.py`, wyniki `logi\backtest_runda9.txt`):**
+- **SERIA** – kontra po dokładnie 4–6 świecach w jedną stronę. Przeszło tylko GBPUSD H1 (spr PF 1,47, n53, siatka 62/72) i słabiej USDJPY M15 (1,37, n64). Na złocie i indeksach odpada (spr 0,79–0,90) – w trendzie seria to nie wyczerpanie, tylko początek.
+- **DYWERGENCJA złoto–srebro** – gdy w 4 h jeden metal ucieknie drugiemu o ≥ 3 ATR, maruder dogania. **XAUUSD H1: nauka PF 1,38 (n280), sprawdzian PF 1,15 (n106, traf. 48%), 132/144 wariantów z spr PF ≥ 1** – najstabilniejszy wynik laboratorium. Srebro jako maruder – tylko jeden szczęśliwy punkt (26/144) ❌.
+- 🆕 **`LAB_Dyw_XAU`** (magic 830230, XAUUSD H1, SL 2,5 / TP 3 ATR, max 48 h, ryzyko 0,5%) – test `--raz` ok, proces działa (START_LAB). Kod strategii w pliku bota (wspólny silnik i lab_mt5 bez zmian).
+- GBPUSD seria H1 – czeka na wolny slot (10/10 aktywnych).
+
+**Lekcje:**
+- M8: na żywo M15/M30 złota idą lepiej niż sprawdzian (PF 1,28–1,53 vs 1,01–1,28), a H4 – gorzej; wszystkie warianty H4 biorą ten sam sygnał DCH, więc 2 złe dni = −470 $. Przy werdykcie H4 liczę jako 2 zdarzenia, nie 5 transakcji.
+- Kontra po serii działa tylko tam, gdzie rynek nie jest w silnym trendzie (forex H1) – złoto 2026 karze każdą kontrę.
+
+**Najlepszy:** LAB_Donchian_XAG +729,68 $ (5 tr., PF 2,93). Aktywne procesy: 10/10 + zbieracz memów.
