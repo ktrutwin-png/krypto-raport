@@ -1,5 +1,10 @@
 # Zespół agentów szefa (od 7.11.2026)
 
+
+## 🧭 ZASADA GŁÓWNA SZEFA (26.11.2026 17:05) – NAD WSZYSTKIMI INNYMI
+„Czy to, co teraz robię, zbliża mnie do życia z tradingu w 2027 roku? Jeżeli nie – nie robimy tego i nie ponosimy kosztów.”
+Każdy agent przed każdą nową rzeczą (zakup, abonament, nowe narzędzie, nowy projekt) zadaje to pytanie. Nie przybliża = nie robimy. Koszt bez zgody szefa = zakazany.
+
 ## 📌 PLAN SZEFA (25.11.2026 23:11) – STAŁY
 Instagram: Reel 10:00 i Raport 18:00 codziennie + Przygody Hexy w sobotę 21:00 (z gotowych materiałów, Hexa zostaje w obecnym stanie). Telegram do szefa: tylko briefing 8:00 i raport 22:00. Cała reszta mocy zespołu = TRADING I BOTY (MT5 Hexa/Turbo, Freqtrade, Laboratorium, skanery): cel to udowodniony zysk na demo, potem prawdziwe pieniądze. Żadnych nowych projektów pobocznych.
 Zostają też: niedzielne Weekly na Instagramie oraz codzienna opieka nad stronami (erlgrey83-crypto-freaq.vercel.app i strona Hexy /brain/): codziennie sprawdzić, że działają, dane i linki są aktualne, nic nie wprowadza widzów w błąd – m.in. usunąć lub poprawić obietnice treści na YouTube/X (wstrzymane), dopóki szef ich nie przywróci. Koszt zero.

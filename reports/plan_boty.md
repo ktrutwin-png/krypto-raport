@@ -2,6 +2,11 @@
 Szef 7.11.2026: „ułóż plan każdemu agentowi… chcę widzieć wyniki w każdej dziedzinie od każdego agenta”. Wszystko DEMO / paper / dry-run. Agent tylko mierzy i testuje; wdrożenie po „wdróż” szefa w rozmowie z Claude.
 
 
+
+## 🧭 ZASADA GŁÓWNA SZEFA (26.11.2026 17:05) – NAD WSZYSTKIMI INNYMI
+„Czy to, co teraz robię, zbliża mnie do życia z tradingu w 2027 roku? Jeżeli nie – nie robimy tego i nie ponosimy kosztów.”
+Każdy agent przed każdą nową rzeczą (zakup, abonament, nowe narzędzie, nowy projekt) zadaje to pytanie. Nie przybliża = nie robimy. Koszt bez zgody szefa = zakazany.
+
 ## ROZKAZY OD MÓZGU (🔧 Mechanik) – czytaj NAJPIERW, wykonuj po kolei
 - ⚠️ STAŁE (szef 25.11.2026 23:36) – ZNAKI BOTÓW we wszystkich raportach (22:00, tygodniowy, miesięczny, panel, Hexa): 💧 Hexa (woda), 🔥 Turbo (ogień), 🥈 Don = LAB_Donchian_XAG (srebrny medal, „Silver King”). Trójka kandydatów na prawdziwe MT5 w styczniu 2027: Hexa + Turbo (złoto), Don (srebro); rezerwa: Londyn_XAU, RSI2_FX.
 - ⚠️ STAŁE (Mózg 25.11, Z043 – ma pierwszeństwo przed promptem zadania): Hexa i Turbo = proces **launch_demo_boty** (python), stan w **state_demo_5058971085**, konto botów **5058971085**, terminal C:\Hexa\MT5_boty. Nazwy launch_demo_625 i state_demo_10013544792 są MARTWE (stare konto) – nigdy ich nie restartuj ani nie traktuj ich braku jako awarii. Hexa Indeksy: plan VOO DCH, od 25.11 log „HEARTBEAT” co godzinę – brak HEARTBEAT > 2 h = awaria.
