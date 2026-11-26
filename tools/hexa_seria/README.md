@@ -1,6 +1,12 @@
 # Serial „Przygody Hexy” – ZASADY OBOWIĄZKOWE (szef 22.11.2026)
 
 
+
+## 🎙️ NOWY GŁOS HEXY = SONIA (szef 26.11.2026 14:54) – zastępuje głos Pola
+- Głos Hexy w serialu i wszędzie po angielsku: darmowy edge-tts `en-GB-SoniaNeural` (bez zmian tempa i tonu). Próbka: marka/propozycje/glos_hexy_20261126/hexa_EN_Sonia.mp3.
+- Od odcinka #2 audio Hexy generuj DARMOWO Sonią (python -m edge_tts -v en-GB-SoniaNeural), a ElevenLabs używaj tylko do obrazu/wideo (OmniHuman dostaje gotowe audio Sonii). Dzięki temu głos się nie zmieni po 18.12 i zostaje więcej kredytów na odcinki.
+- Głosu Pola (lqJpYZ185uAhVny7fXot) już nie używamy w nowych materiałach.
+
 ## ⛔ KONIEC ELEVENLABS – ZAPAS ODCINKÓW (szef 26.11.2026 14:49) – OBOWIĄZUJE PRZED WSZYSTKIM PONIŻEJ
 Szef: „Resztę kredytów ElevenLabs wykorzystaj do stworzenia jak największej ilości serialu Hexy” – rezygnujemy z ElevenLabs (oszczędzamy).
 - Stan 26.11 14:50: plan Pro, zostało ok. 231 000 kr., ważne do odnowienia 18.12.2026 12:50 UTC. Po tej dacie ElevenLabs NIE istnieje w naszym systemie.

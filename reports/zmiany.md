@@ -54,3 +54,5 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-26 14:45 - Strona glowna: nowa sekcja Zlota mysl (EN i PL) z mysla szefa o wolnosci, pod Pytaniem dnia (na prosbe szefa).
 
 - 2026-11-26 14:55 – ElevenLabs: rezygnacja (szef). Reszta kredytów (~231k, do 18.12) idzie na zapas odcinków Przygód Hexy #2–#7; rezerwa 10k na głos Hexy w telefonie do przełączenia na darmowy edge-tts. Lektor Reeli już darmowy (piper).
+
+- 2026-11-26 14:58 – Nowy głos Hexy: Sonia (edge-tts en-GB-SoniaNeural, darmowy) – w serialu od #2; ElevenLabs tylko do wideo do 18.12.
