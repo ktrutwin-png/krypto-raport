@@ -21,3 +21,5 @@ SZEF 26.11 16:08: styl jak w filmie o nim („kolorystycznie zajebiście”, „
 
 ## KOLORY (szef 26.11.2026 16:13)
 Postać zostaje jak w `marka/Erl_avatar.jpg`, ale NIE wszystko w dwóch kolorach (cyjan + złoto). Ma być nowocześnie i różnorodnie jak w filmie o szefie (marka/propozycje/film_szef_20261126): każda scena ma własną, pasującą paletę – ciepła lampa nocą, deszczowy niebieski, złoty wschód słońca, pomarańczowe światło hali, neon tylko jako akcent. W jednym odcinku min. 2 różne palety.
+
+## ⛔ 26.11 16:34 – w Raporcie 18:00 bez Hexy (ani wyglądu, ani głosu). Sekcja „WĄTEK BUDUJĘ HEXĘ” wyżej – NIEAKTUALNA dla 18:00.

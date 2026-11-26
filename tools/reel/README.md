@@ -5,6 +5,14 @@
 
 
 
+
+## ⛔ RAPORT 18:00 – HEXA BEZ GŁOSU I BEZ WYGLĄDU (szef 26.11.2026 16:34) – ZASTĘPUJE wszystko o Hexie w blokach 18:00 poniżej
+Szef: „wyrzuć stamtąd Hexę, nie wygląda to fajnie – robimy to tak, że to ona zbiera mi dane, ale nie ma jej głosu ani jej wyglądu”.
+- W filmach 18:00 NIE pokazujemy Hexy (żadnego hologramu, twarzy, postaci) i NIE ma jej głosu (żadnych scen "kto": "hexa").
+- Mówi TYLKO szef (Ryan, pierwsza osoba). Hexa istnieje wyłącznie w słowach szefa jako jego AI, która zbiera dane: np. „Hexa pulled tonight's numbers: …”, „My AI, Hexa, flagged…”.
+- Na ekranie tylko szef (avatar z tools/avatar/README.md) i sceny bez twarzy (ręce, wykresy, miasto, notes). Wątek „buduję Hexę” = szef przy pracy nad systemem, bez wizerunku Hexy.
+- Reszta zasad 18:00 bez zmian (prawdziwe dane, ciągłość DAY N, nigdy nasze transakcje, napisy karaoke).
+
 ## ✅ DZIŚ 26.11.2026 – RAPORT 18:00 JEST GOTOWY (zrobił Mózg na prośbę szefa, 16:40) – NIE TWÓRZ NOWEGO
 ⛔ SZEF 16:18: NAJPIERW OCENA SZEFA. Publikuj TYLKO jeśli istnieje plik `reports/2026-11-26-raport18/ZATWIERDZONE.txt` (tworzy go Mózg po akceptacji szefa). Jeśli go nie ma o 18:00 – NIC nie publikuj (ani tego, ani zwykłego raportu), wpisz do dziennika „DAY 1 czeka na ocenę szefa” – Mózg opublikuje sam po akceptacji. Gdy plik jest: Reżyser (Raport 18): opublikuj DOKŁADNIE ten film o 18:00 na Instagramie (Windsor, erl.grey83), jak zwykle przez URL z commitem SHA:
 - film: `reports/2026-11-26-raport18/reel.mp4` (56,9 s, DAY 1 „The Trader's Diary” – szef budzi Hexę), okładka `cover.jpg`, opis `caption.txt` (bez zmian).
