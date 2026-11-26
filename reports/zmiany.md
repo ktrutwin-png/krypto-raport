@@ -68,3 +68,5 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-26 16:12 – Avatar szefa: styl jak w jego filmie (półrealistyczny, filmowe kolory), bez wąsów; wzór marka/Erl_avatar.jpg podmieniony, prompt w tools/avatar/README.md.
 
 - 2026-11-26 16:16 – Raport 18:00: wątek „buduję Hexę” 1–2× w tygodniu (szef + holograficzna Hexa, dwie referencje FLUX.2); limit Cloudflare 10k neuronów/dzień – zasady w tools/avatar/README.md.
+
+- 2026-11-26 16:20 – Raport 18:00: szef + Hexa razem w każdym odcinku (~60 s, ciągła historia, dialog: Hexa=Sonia, szef=Ryan; kino.py pole "kto": "hexa"); prawdziwe ceny, nigdy nasze transakcje.

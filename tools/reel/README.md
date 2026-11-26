@@ -3,6 +3,16 @@
 
 
 
+
+## 🎬🤝 RAPORT 18:00 = SZEF + HEXA RAZEM, CODZIENNIE (szef 26.11.2026 16:12) – DOPRECYZOWANIE bloku „The Trader's Diary” poniżej (to ma pierwszeństwo)
+Szef: „w każdym filmiku o 18:00 pokazujemy część tego, jak buduję system i zbieram informacje o złocie, krypto, akcjach – i jak ty mi w tym pomagasz jako Hexa. Hexa ze mną na KAŻDYM filmie: razem śledzimy i testujemy rynek, ona uczy się ode mnie. Codziennie jedna minuta. Ciągłość z naszymi postaciami – ja i Hexa.”
+- Długość ~60 s, codziennie 18:00, TYLKO Instagram, licznik „DAY N” (27.11 = DAY 1). Seria to CIĄGŁA HISTORIA: nawiąż jednym zdaniem do wczoraj (zapisuj streszczenie każdego odcinka w `reports/diary_18.md`).
+- W KAŻDYM odcinku są OBIE postacie: szef (avatar, tools/avatar/README.md) i Hexa (karta postaci). Min. 2 sceny razem (dwie referencje FLUX.2), reszta może być osobno.
+- Dialog: scena z polem `"kto": "hexa"` mówi głosem Hexy (Sonia), reszta głosem szefa (Ryan: LEKTOR_GLOS=en-GB-RyanNeural, LEKTOR_RATE=-4%). Np. Hexa: „Gold dropped one percent today. Analysts point to a stronger dollar.” Szef: „And that is why I wait for confirmation.”
+- Treść: prawdziwe wydarzenia dnia (złoto, dolar, krypto XRP/XLM/XDC, akcje/indeksy) z AKTUALNYMI cenami z wiarygodnych źródeł (≥2) – liczby ZAWSZE prawdziwe i z dzisiejszej daty; + fragment budowy systemu (boty, zasady, panel, Lab – ogólnie, bez wyników kont); + lekcja dnia (np. jak spadek boli bez stop-lossa → jak trzymam się zasad, cierpliwość, dyscyplina).
+- NIGDY: nasze prawdziwe transakcje, salda, wyniki botów, sygnały, „kupuj/sprzedaj”, obietnice zysku. Ryzyko pokazujemy jako lekcję i ostrzeżenie, nigdy jako wzór do naśladowania.
+- Napisy karaoke i plansza końcowa jak wyżej; „Not financial advice” zawsze.
+
 ## 🎬 RAPORT 18:00 = „THE TRADER'S DIARY” Z AVATAREM SZEFA (szef 26.11.2026 16:02) – ZASTĘPUJE format Karuzela gra o 18:00
 Szef: postać (jego avatar, bez wąsów) jest bohaterem wieczornego raportu na Instagramie – historia człowieka, który właśnie buduje day trading, podaje, co się dzieje na świecie, i sam z tego czerpie, budując dalej swoje życie. **10:00 bez zmian: czysta informacja w stylu GTA 6 (Karuzela gra).** Sobota 21:00 bez zmian: serial Hexy.
 - Od piątku 27.11.2026, codziennie 18:00, TYLKO Instagram. Licznik: 27.11 = „DAY 1”, dalej kolejne dni.

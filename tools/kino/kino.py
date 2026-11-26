@@ -129,7 +129,9 @@ for i, s in enumerate(S):
     if gl:
         run(["ffmpeg", "-y", "-i", gl, "-ar", "44100", "-ac", "1", f"_a{i}.wav"]); pitch_s = 1.0
     else:
-        if subprocess.run([sys.executable, os.path.join(REEL, "lektor.py"), "-f", f"_a{i}.wav"], input=s["say"].encode()).returncode == 0:
+        # szef 26.11: dialog postaci – "kto": "hexa" = glos Hexy (Sonia), "kto": "szef" lub brak = lektor z LEKTOR_GLOS
+        _env = dict(os.environ, **({"LEKTOR_GLOS": "en-GB-SoniaNeural", "LEKTOR_RATE": "+0%"} if s.get("kto") == "hexa" else {}))
+        if subprocess.run([sys.executable, os.path.join(REEL, "lektor.py"), "-f", f"_a{i}.wav"], input=s["say"].encode(), env=_env).returncode == 0:
             pitch_s = 1.0  # szef 26.11: lektor Andrew (edge-tts) – bez zmiany tonu
         else:
           print("LEKTOR: edge-tts niedostepny -> zapas piper", file=sys.stderr)
