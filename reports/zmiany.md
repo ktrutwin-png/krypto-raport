@@ -83,3 +83,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-26 22:05 | Crypto Report plan B: 7 kolorów tęczy, XAU/BTC/XRP/XLM/XDC
 - 2026-11-26 22:30 | 10:00: karuzela Crypto Report + lektor Christopher zamiast GTA
 - 2026-11-27 03:28 | rój +12 wpisów, strona bez YouTube (tylko IG)
+- 2026-11-27 03:30 | strona: bez linku X (wstrzymany)
