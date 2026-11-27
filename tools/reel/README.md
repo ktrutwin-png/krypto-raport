@@ -1,4 +1,6 @@
-﻿> **ZAMROZONE (szef 27.11.2026 17:45):** format Reela 10:00 z 27.11 (karuzela CRYPTO REPORT, lektor Christopher z LEKTOR_PITCH=-8Hz, spokojna muzyka + sidechain, grafika jak w poscie IG media 17994129123080467, Enso) zostaje DOKLADNIE taki. Zadnych zmian glosu, grafiki ani formatu raportow – nie wracamy do przerabiania raportow, cala uwaga na trading. Zmiana tylko na wyrazne polecenie szefa.
+﻿> **ZAMROZONE (szef 27.11.2026 17:45):** Raport 18:00 (z szefem i glosem Hexy) tez zostaje DOKLADNIE taki jak teraz – nic nie ruszamy. Zmiana tylko na wyrazne polecenie szefa.
+
+> **ZAMROZONE (szef 27.11.2026 17:45):** format Reela 10:00 z 27.11 (karuzela CRYPTO REPORT, lektor Christopher z LEKTOR_PITCH=-8Hz, spokojna muzyka + sidechain, grafika jak w poscie IG media 17994129123080467, Enso) zostaje DOKLADNIE taki. Zadnych zmian glosu, grafiki ani formatu raportow – nie wracamy do przerabiania raportow, cala uwaga na trading. Zmiana tylko na wyrazne polecenie szefa.
 
 # Daily Reel pipeline (erl.grey83)
 
@@ -132,4 +134,5 @@ Metricool, 54 Reelsy 23.10â€“22.11: srednio 83% widzow odpada w pierwszych 
 7. TEST A/B TLA 23â€“29.11: 23/25/27/29.11 poranny Reel = A (obecne tlo bg()), wieczorny = B (generator neon 3D C:\Hexa\wideo_hf\reel_zloto\tlo_neon.js, SEED = data RRRRMMDD); 24/26/28.11 odwrotnie (poranny = B, wieczorny = A). Wszystko inne bez zmian. Podsumowanie tygodnia i seria Hexa poza testem. Kazdy Reel wpisz do C:\Hexa\tresci\testy_ab.md (data godz | wariant | temat).
 8. Bez wpadek: nowy wariant â€“ przed publikacja 3 klatki obejrzane (ostrosc, czytelnosc, pole bezpieczne, prawdziwe liczby, literowki). Bez zdjec szefa. Zero kosztow (nie uzywac kredytow ElevenLabs ani platnych generatorow).
 Aktualne liczby, wnioski i kolejka testow: C:\Hexa\tresci\analiza_widza.md (aktualizowane co tydzien).
+
 
