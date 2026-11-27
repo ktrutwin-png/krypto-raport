@@ -1,0 +1,123 @@
+{
+ "date": "27.11.2026",
+ "mood": "gold",
+ "handle": "@erl.grey83",
+ "style": "news",
+ "dis": "Not financial advice - real market data",
+ "end": {
+  "a": "Day 2.<br>Freedom is built daily.",
+  "b": "ERL.GREY83",
+  "c": "Follow the journey"
+ },
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "THE TRADER'S DIARY",
+   "head": [
+    "DAY 2.",
+    "*GOLD +1.9%.*",
+    "BITCOIN SLEPT."
+   ],
+   "say": "Day two. Gold jumped almost two percent. Bitcoin barely moved.",
+   "move": "in"
+  },
+  {
+   "img": "s2.jpg",
+   "tag": "BLACK FRIDAY",
+   "head": [
+    "QUIET MARKETS.",
+    "*HEXA, WHAT MOVED?*"
+   ],
+   "say": "Black Friday, short session. Hexa, what moved?",
+   "move": "left"
+  },
+  {
+   "img": "s3.jpg",
+   "kto": "hexa",
+   "tag": "HEXA",
+   "head": [
+    "GOLD *$3,635*",
+    "~UP 1.9% TODAY~"
+   ],
+   "chip": "▲ +1.9%",
+   "anim": {
+    "dir": "up",
+    "label": "$3,635"
+   },
+   "say": "Gold, near three thousand six hundred thirty five. Up almost two percent.",
+   "move": "up"
+  },
+  {
+   "img": "s5.jpg",
+   "kto": "hexa",
+   "tag": "HEXA",
+   "head": [
+    "BITCOIN *$59,900*",
+    "FLAT ON THE WEEK"
+   ],
+   "chip": "▼ -1.0% 24H",
+   "anim": {
+    "dir": "chop",
+    "label": "$59,918"
+   },
+   "say": "Bitcoin, near fifty nine thousand nine hundred. Down one percent today.",
+   "move": "right"
+  },
+  {
+   "img": "s4.jpg",
+   "kto": "hexa",
+   "tag": "HEXA",
+   "head": [
+    "GOLD FROM *$3,426*",
+    "IN TWO DAYS"
+   ],
+   "note": "52-WEEK LOW → +6% REBOUND",
+   "say": "Two days ago gold hit a yearly low. Now it is six percent higher.",
+   "move": "out"
+  },
+  {
+   "img": "s6.jpg",
+   "kto": "hexa",
+   "tag": "HEXA",
+   "head": [
+    "FEAR & GREED *10*",
+    "EXTREME FEAR"
+   ],
+   "say": "Fear and greed index: ten. Extreme fear.",
+   "move": "down"
+  },
+  {
+   "img": "s7.jpg",
+   "kto": "hexa",
+   "tag": "HEXA",
+   "head": [
+    "BTC ETF ASSETS",
+    "*$79.3B*"
+   ],
+   "chip": "▼ FROM $81.0B",
+   "say": "Bitcoin E T F assets slipped to seventy nine billion.",
+   "move": "in"
+  },
+  {
+   "img": "s8.jpg",
+   "tag": "THE LESSON",
+   "head": [
+    "FEAR IS LOUD.",
+    "*RULES ARE QUIET.*"
+   ],
+   "say": "When fear is this loud, I don't chase. I keep my rules.",
+   "move": "left"
+  },
+  {
+   "img": "s9.jpg",
+   "tag": "DAY 2",
+   "head": [
+    "GOLD OR BITCOIN:",
+    "*WHO LEADS NEXT WEEK?*"
+   ],
+   "note": "SEND THIS TO A FRIEND WHO HOLDS GOLD",
+   "say": "Gold or Bitcoin, who leads next week? Comment below. Freedom is built daily. Not financial advice, just data.",
+   "move": "up"
+  }
+ ]
+}
