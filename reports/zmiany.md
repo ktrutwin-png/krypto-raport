@@ -86,3 +86,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-27 03:30 | strona: bez linku X (wstrzymany)
 - 2026-11-27 04:00 | lektor.py: --pitch/LEKTOR_PITCH (karuzela -8Hz)
 - 2026-11-27 04:05 | serwer: kopia repo rdzenia ORB zsynchr. (46 wpisów)
+- 2026-11-27 17:45 | Reel 10:00 ZAMROZONY w obecnym formacie (glos, grafika) � szef: nic nie zmieniamy, skupienie na tradingu
