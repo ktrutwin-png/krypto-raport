@@ -84,3 +84,5 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-26 22:30 | 10:00: karuzela Crypto Report + lektor Christopher zamiast GTA
 - 2026-11-27 03:28 | rój +12 wpisów, strona bez YouTube (tylko IG)
 - 2026-11-27 03:30 | strona: bez linku X (wstrzymany)
+- 2026-11-27 04:00 | lektor.py: --pitch/LEKTOR_PITCH (karuzela -8Hz)
+- 2026-11-27 04:05 | serwer: kopia repo rdzenia ORB zsynchr. (46 wpisów)
