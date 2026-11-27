@@ -1,13 +1,14 @@
-{ "date": "27.11.2026", "mood": "tense", "handle": "@erl.grey83", "style": "news",
+{ "date": "27.11.2026", "mood": "calm", "handle": "@erl.grey83", "style": "news",
   "dis": "Not financial advice - real market data",
   "end": {"a": "Day 2.<br>Freedom is built daily.", "b": "ERL.GREY83", "c": "Follow the journey"},
   "scenes": [
     {"img": "n2.jpg", "tag": "THE TRADER'S DIARY", "head": ["DAY 2.", "*THE MARKET TESTED ME.*"], "say": "Day two. Yesterday my system came alive. Today, the market tested my rules.", "move": "in"},
     {"img": "b_d2.jpg", "tag": "MY AI", "head": ["HEXA,", "*WHAT DID GOLD DO?*"], "say": "Hexa, what did gold do today?", "move": "in"},
     {"img": "n1.jpg", "kto": "hexa", "tag": "HEXA", "head": ["GOLD HIT *$3,685*", "THEN *~$3,620*"], "say": "Gold ran to about three thousand six hundred eighty five during London. When New York opened, it dropped around sixty dollars, to near three thousand six hundred twenty.", "move": "out"},
-    {"img": "b_d4.jpg", "kto": "hexa", "tag": "HEXA", "head": ["BITCOIN *~$60K*", "XRP $0.95 · XDC -2%"], "say": "Bitcoin is just under sixty thousand, down about one percent. X R P holds near ninety five cents. Stellar is up almost one percent, X D C is down two.", "move": "in"},
+    {"img": "b_d4.jpg", "kto": "hexa", "tag": "HEXA", "head": ["BITCOIN *~$60K*", "XRP $0.95 Â· XDC -2%"], "say": "Bitcoin is just under sixty thousand, down about one percent. X R P holds near ninety five cents. Stellar is up almost one percent, X D C is down two.", "move": "in"},
     {"img": "b_d6.jpg", "tag": "BLACK FRIDAY", "head": ["THIN MARKET.", "*EARLY CLOSE.*"], "say": "It's Black Friday. Wall Street closes early, volume is thin, and thin markets love to run the obvious stops.", "move": "in"},
     {"img": "n3.jpg", "tag": "THE LESSON", "head": ["A STOP ON THE OBVIOUS LINE", "*GETS HUNTED.*"], "say": "Today's lesson. A stop right on the line everyone sees gets hunted. Next time, it goes beyond the last swing.", "move": "out"},
-    {"img": "b_d8.jpg", "tag": "OUR WATCHLIST", "head": ["BTC · XRP · XLM · XDC", "*SMALL STEPS. EVERY DAY.*"], "say": "Our long term watchlist stays the same. Bitcoin, X R P, Stellar and X D C. Price can't move us. We do our part.", "move": "in"},
+    {"img": "b_d8.jpg", "tag": "OUR WATCHLIST", "head": ["BTC Â· XRP Â· XLM Â· XDC", "*SMALL STEPS. EVERY DAY.*"], "say": "Our long term watchlist stays the same. Bitcoin, X R P, Stellar and X D C. Price can't move us. We do our part.", "move": "in"},
     {"img": "b_d7.jpg", "tag": "DAY 2", "head": ["FREEDOM IS", "*BUILT DAILY.*"], "say": "Day two. Freedom is built daily.", "move": "in"}
   ] }
+
