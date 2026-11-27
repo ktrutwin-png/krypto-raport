@@ -89,3 +89,4 @@ Bez Å¼argonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-27 17:45 | Reel 10:00 ZAMROZONY w obecnym formacie (glos, grafika) – szef: nic nie zmieniamy, skupienie na tradingu
 - 2026-11-27 17:46 | Raport 18:00 (szef + glos Hexy) ZAMROZONY w obecnym formacie – szef: nic nie ruszamy
 - 2026-11-27 18:31 | 10:00 od 28.11 = karuzela zdjec CRYPTO REPORT (3 slajdy, bez glosu, wzor reports/2026-10-27-18) - szef
+- 2026-11-27 20:10 | kino.py: scenes.json czytany jako utf-8-sig (koniec 'Â·') + opcjonalne pole css_extra (kolory per film); nowy generator tel generatory/neon_tla.py
