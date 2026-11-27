@@ -82,3 +82,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-26 22:00 | 10:00: plan B – powrót Crypto Report po teście GTA
 - 2026-11-26 22:05 | Crypto Report plan B: 7 kolorów tęczy, XAU/BTC/XRP/XLM/XDC
 - 2026-11-26 22:30 | 10:00: karuzela Crypto Report + lektor Christopher zamiast GTA
+- 2026-11-27 03:20 - Strona glowna: pod mottem (bez zmian) nowa 'Mysl dnia' z pliku reports/mysli_dnia.json; od 28.11: 'Lepszy maly zysk niz wielka strata' (szef 27.11).

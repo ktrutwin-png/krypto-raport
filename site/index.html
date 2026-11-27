@@ -263,6 +263,10 @@ footer .t a{color:#4a4740;text-decoration:none;display:inline-block;padding:6px 
       <span data-pl="„Wolności nie wrzuca się do urny raz na kilka lat. Buduje się ją <em style='color:var(--gold2)'>codziennie</em> – każdym dniem, w którym twoje pieniądze pracują, a ty przestajesz sprzedawać swój czas.”">“Freedom isn't dropped into a ballot box once every few years. You build it <em style="color:var(--gold2)">every day</em> – with every day your money works and you stop selling your time.”</span>
     </blockquote>
     <div style="margin-top:22px;font-size:12px;letter-spacing:.24em;color:var(--gold)">— ERL.GREY83</div>
+    <div id="mdz" style="display:none;margin-top:56px">
+      <span class="eyebrow" data-pl="Myśl dnia">Thought of the day</span>
+      <p id="mdzT" style="margin:18px 0 0;font-family:var(--serif);font-style:italic;font-size:clamp(20px,3vw,28px);line-height:1.35;color:var(--hi)"></p>
+    </div>
   </div>
 </section>
 </main>
@@ -309,6 +313,14 @@ async function load(){
   catch(e){$("upd").textContent=PL()?"Nie udało się pobrać cen – kolejna próba za minutę.":"Could not load prices – retrying in a minute.";}
 }
 document.addEventListener("langchange",()=>{if(LAST)draw(LAST);Qset();});
+// thought of the day – from reports/mysli_dnia.json, latest entry dated today or earlier
+let MDZ=null;
+function MDZset(){if(!MDZ)return;$("mdzT").textContent="„"+(window.LANG==="pl"?MDZ.pl:MDZ.en)+"”";$("mdz").style.display="block"}
+fetch("https://raw.githubusercontent.com/ktrutwin-png/krypto-raport/main/reports/mysli_dnia.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{
+ const t=new Date(),dz=t.getFullYear()+"-"+String(t.getMonth()+1).padStart(2,"0")+"-"+String(t.getDate()).padStart(2,"0");
+ const m=((d&&d.mysli)||[]).filter(x=>x.data<=dz).sort((a,b)=>a.data<b.data?1:-1);
+ if(m.length){MDZ=m[0];MDZset()}}).catch(()=>{});
+document.addEventListener("langchange",MDZset);
 load();setInterval(load,60000);
 // question of the day – one per day, no answer
 const Q=["Whose map are you following today?","When you look at a chart, do you see the price or yourself?","How much of what you know about the market have you checked yourself?","If no one were watching, would you make the same decision?","What are you looking for in the market that you haven't found elsewhere?","How do you know this thought is yours and not someone else's?","What do you do when the market is silent?","How much is enough for you?","Does a loss teach you more than a gain?","What remains when you turn off the screen?","What are you looking at when you say you're watching the market?","Who chose the direction you're walking in?","What would you see if you looked from a different angle?","Is waiting an action for you?"];
