@@ -249,3 +249,29 @@ Kod: `C:\Hexa\lab` (silnik `lab_silnik.py`, boty `boty\*.py`, start `START_LAB.p
 - Kontra po serii działa tylko tam, gdzie rynek nie jest w silnym trendzie (forex H1) – złoto 2026 karze każdą kontrę.
 
 **Najlepszy:** LAB_Donchian_XAG +729,68 $ (5 tr., PF 2,93). Aktywne procesy: 10/10 + zbieracz memów.
+
+---
+
+## 2026-11-27 (noc 10) – pierwszy werdykt M8: H_XAU_M15 zostaje; krok 4 przetestowany; NR7 czeka na slot
+
+**Przegląd (konto demo botów 5058971085, trade_mode DEMO; Hexa 830083 i Turbo 830099 bez otwartych pozycji, nietknięte):** saldo 6689,35 $, kapitał 6679,91 $. Lab MT5: **122 zamknięte, +759,50 $** (było +858,15 $). Donchian_XAG 5 tr. +729,68 $ (PF 2,93, 1 SHORT otwarty), Londyn_XAU 3 tr. +249,75 $, RSI2_FX 12 tr. +24,22 $ (PF 1,48).
+- **M8 MT5: 101 zamkniętych, −220,64 $** (rdzeń 86 tr., −239,45 $, PF 0,86). Noc 26/27.11: 2 SL-e DCH na wszystkich 4 wariantach M15 (−9…−14 $ każdy).
+- **Werdykt (≥ 20 tr.): H_XAU_M15 – 20 tr., +57,89 $, PF 1,23** (sprawdzian 1,01) → **zostaje**. T_XAU_M15 17 tr. PF 1,36 – werdykt za ~3 transakcje.
+- **IBKR paper (DUR…):** bez nowych zamknięć (6 tr., −18,40 $). LAB_IB_DCH_INDIA (clientId 52) wystartował 26.11 22:47 – dodany w innej sesji na polecenie szefa.
+- **Kraken na sucho:** KR_M8_D1 bez zmian; KR_RSI2_H4 2 nowe SHORT-y (BTC @ 55 393 €, XRP @ 0,873 €); MemyC 0 tr. (filtr BTC); PAXG_LongBezSL (pomysł szefa) działa, 0 tr.
+- **eToro DEMO** (`"account":"demo"` w odpowiedzi): LAB_ET_M8_XAU_D1 GOLD SHORT **−7,84 $** (SL 3805 / TP 3334). Brak otwarć/zamknięć → arkusz bez zmian.
+- **M9:** zbieracz 79,3k tokenów, 0 błędów; FalaB 3 tr. −6,91 $ (VINE −8% nowa); C bez sygnału.
+
+**Wyłączone (lekcja): nic** – żaden aktywny bot nie ma ~20 transakcji z PF < 0,9 ani −30% kapitału (najbliżej: rdzeń M8 PF 0,86, ale to 15 niezależnych wariantów, liczonych osobno).
+
+**M8 krok 4 – test drugiej pozycji (`m8\krok4_bt.py`, wynik `m8\m8_krok4.json`):** max 2 pozycje na rodzinę zamiast 1, złoto M15/M30/H1 × Hexa/Turbo × TP baza/2R × MT5/IBKR/eToro (72 przebiegi). ΣR rośnie o 30–55%, obsunięcie o 30–80%. Poprawa zysku na jednostkę ryzyka tylko **Turbo M30** (MT5 ΣR/DD 5,70 → 7,56, na 3 platformach). H_XAU_M15: +8R za DD 30 → 50R – **nie dublujemy**. Nic nie wdrażam.
+
+**Nowe pomysły (162 przebiegi, `narzedzia\backtest_noc10.py`):**
+- **TYDZIEŃ** (czwartek w kierunku ruchu tygodnia) – niestabilny (JPY 0/27, XAG 6/27, AUD 3/27) ❌.
+- **NR7** (wybicie z najwęższego dnia z 7, H1, TP 1,5R) – siatka spr ≥ 1 na 63/72 wariantach; XAU/XAG/JPY nauka 1,15–1,33 i sprawdzian 1,12–1,52 → kandydat `LAB_NR7`. **Nie uruchomiony – 12/12 aktywnych**; czeka na slot (z GBPUSD seria).
+
+**Lekcje:**
+- Werdykt per wariant ≠ suma: M8 jako całość −220 $, ale wynik to dwa weekendowe zdarzenia H4; M15/M30 złota i srebra są na plusie.
+- Druga pozycja to dźwignia, nie przewaga – opłaca się tylko tam, gdzie sygnały same się nie nakładają (Turbo M30).
+
+**Najlepszy:** LAB_Donchian_XAG +729,68 $ (5 tr., PF 2,93). Aktywne procesy: 12 + zbieracz memów, wszystkie żyją.
