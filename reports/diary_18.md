@@ -1,3 +1,4 @@
 # The Trader's Diary – streszczenia odcinków (ciągłość historii szef + Hexa)
 
 - DAY 1 (26.11.2026): Po miesiącach budowy system szefa „ożywa”. Jego AI Hexa (tylko głos, bez wyglądu) zbiera dane – szef pyta: „Hexa, what did gold do today?”, ona odpowiada: złoto ~3 574 $ po dzikiej dobie (dołek 3 426 $ i powrót), BTC ~60 tys. $ (+4%), XRP +4,9%. Szef: kiedyś handlował na instynkt, spadki bolały – teraz zasady, boty, system. Rutyna: gdy on w pracy, Hexa zbiera liczby; wieczorem on decyduje, spokojnie i z zasadami.
+- DAY 2 (27.11.2026): Black Friday, krótka sesja. Hexa: złoto ~3 635 $ (+1,9%, szczyt 3 685 $), ~6% nad dołkiem 3 426 $ z 25.11; BTC ~59,9 tys. $ (−1%, tydzień płasko); Fear & Greed 10 (skrajny strach); aktywa ETF BTC ~79,3 mld $ (z 81,0). Lekcja szefa: „gdy strach jest tak głośny, nie gonię – trzymam się zasad”. Pytanie: złoto czy bitcoin w przyszłym tygodniu?
