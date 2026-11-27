@@ -1,0 +1,112 @@
+{
+ "date": "27.11.2026",
+ "style": "news",
+ "mood": "gold",
+ "handle": "@erl.grey83",
+ "ticker": "GOLD $3,675 ▲3.0% · BTC $61,708 ▲1.7% · ETH $1,729 ▲2.3% · SOL $73.1 ▲3.2% · XRP $0.98 ▲2.6% · XMR $455 ▼12.3%",
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "BIGGEST MOVE",
+   "head": [
+    "GOLD *+3%* IN A DAY",
+    "BTC ONLY ~+1.7%~"
+   ],
+   "say": "Gold jumped three percent in one day.",
+   "move": "in"
+  },
+  {
+   "img": "s2.jpg",
+   "head": [
+    "BITCOIN *+1.7%*",
+    "LEFT BEHIND"
+   ],
+   "chip": "▲ $61,708",
+   "say": "Bitcoin? Only one point seven.",
+   "move": "left"
+  },
+  {
+   "img": "s3.jpg",
+   "head": [
+    "WHY *NOW*?",
+    "DAY AFTER THANKSGIVING"
+   ],
+   "say": "Why now? The day after Thanksgiving.",
+   "move": "out"
+  },
+  {
+   "img": "s4.jpg",
+   "head": [
+    "THIN *MARKET*",
+    "FEW TRADERS ONLINE"
+   ],
+   "say": "Few traders, so one wave of buying",
+   "move": "up"
+  },
+  {
+   "img": "s5.jpg",
+   "head": [
+    "*+$107*",
+    "SINCE THE OPEN"
+   ],
+   "anim": {
+    "dir": "up",
+    "label": "$3,675"
+   },
+   "say": "lifted gold over a hundred dollars.",
+   "move": "right"
+  },
+  {
+   "img": "s6.jpg",
+   "head": [
+    "*$3,675*",
+    "AN OUNCE"
+   ],
+   "chip": "▲ +3.0%",
+   "say": "Now near three thousand six seventy five.",
+   "move": "in"
+  },
+  {
+   "img": "s8.jpg",
+   "head": [
+    "STILL *−34%*",
+    "FROM THE 52-WEEK HIGH"
+   ],
+   "anim": {
+    "dir": "down",
+    "label": "$5,595 HIGH"
+   },
+   "say": "Still a third below its yearly high.",
+   "move": "down"
+  },
+  {
+   "img": "s7.jpg",
+   "head": [
+    "SILVER",
+    "*RALLIES TOO*"
+   ],
+   "say": "And silver rallied even harder.",
+   "move": "left"
+  },
+  {
+   "img": "s9.jpg",
+   "head": [
+    "REAL TURN",
+    "OR *HOLIDAY BOUNCE*?"
+   ],
+   "note": "🐂 REAL TURN  ·  🐻 HOLIDAY BOUNCE",
+   "say": "Real turn, or just a holiday bounce?",
+   "move": "out"
+  },
+  {
+   "img": "s10.jpg",
+   "head": [
+    "GOLD *+3%*",
+    "IN ONE DAY"
+   ],
+   "note": "SEND THIS TO A FRIEND WHO HOLDS GOLD",
+   "say": "Gold, plus three. This is not financial advice, just data.",
+   "move": "right"
+  }
+ ]
+}
