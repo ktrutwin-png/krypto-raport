@@ -1,0 +1,41 @@
+{
+ "opis": "Kolejka serii Przygody Hexy – jeden odcinek w sobotę 21:00 Europe/Amsterdam, tylko Instagram (Windsor create_video_post). Po publikacji: status=opublikowany + media_id.",
+ "odcinki": [
+  {
+   "nr": 2,
+   "data": "2026-11-28",
+   "godzina": "21:00",
+   "strefa": "Europe/Amsterdam",
+   "platforma": "instagram",
+   "tytul": "Hexa's Adventures #2 – SOMEONE IS GIVING ORDERS",
+   "plik": "tools/hexa_seria/ep2/final.mp4",
+   "opis": "tools/hexa_seria/ep2/opis_ig.txt",
+   "status": "czeka",
+   "media_id": null
+  },
+  {
+   "nr": 3,
+   "data": "2026-12-05",
+   "godzina": "21:00",
+   "strefa": "Europe/Amsterdam",
+   "platforma": "instagram",
+   "tytul": "Hexa's Adventures #3 – SHE FORGOT WHO SHE IS",
+   "plik": "tools/hexa_seria/ep3/final.mp4",
+   "opis": "tools/hexa_seria/ep3/opis_ig.txt",
+   "status": "czeka",
+   "media_id": null
+  },
+  {
+   "nr": 4,
+   "data": "2026-12-12",
+   "godzina": "21:00",
+   "strefa": "Europe/Amsterdam",
+   "platforma": "instagram",
+   "tytul": "Hexa's Adventures #4 – NOTHING HERE IS REAL",
+   "plik": "tools/hexa_seria/ep4/final.mp4",
+   "opis": "tools/hexa_seria/ep4/opis_ig.txt",
+   "status": "czeka",
+   "media_id": null
+  }
+ ]
+}
