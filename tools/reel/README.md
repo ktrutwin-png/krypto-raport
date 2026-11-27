@@ -1,6 +1,7 @@
-﻿> **ZAMROZONE (szef 27.11.2026 17:45):** Raport 18:00 (z szefem i glosem Hexy) tez zostaje w obecnym formacie i glosie (grafiki codziennie nowe, ale w tym samym klimacie) – nic nie ruszamy. Zmiana tylko na wyrazne polecenie szefa.
+﻿> **10:00 OD 28.11.2026 = KARUZELA ZDJEC "CRYPTO REPORT", BEZ GLOSU (szef 27.11 18:31 - zastepuje zamrozony Reel 10:00 z lektorem):** wzor 1:1 = reports/2026-10-27-18/ (slide1-3.jpg + caption.txt), styl "SYSTEM ONLINE / NEON MARKET FEED": 3 slajdy 1080x1350: 1) PRZEGLAD - BTC i ETH duze karty, reszta coinow (w tym XRP, XLM, XDC) w tabelce 24h, total market cap, BTC dominance, Fear&Greed, BTC ETF assets, ramki DERIVATIVES & CHANGES i SENTIMENT; 2) TOP STORIES FROM AROUND THE WORLD - 3 newsy z tagiem i 2 zdaniami; 3) WEEKLY SCOREBOARD - tabela coinow 24h i 7d + 3 kafelki + TAKEAWAY. Pasek u gory z liczba dnia (np. ETF flows), zrodla w stopce, "For information only, not investment advice.", Enso. Prawdziwe dane z dzisiejszej godziny publikacji (CoinMarketCap/CoinGecko, newsy z min. 2 zrodel). Publikacja: Windsor instagram create_carousel_post (bez lektora, bez filmu). Opis jak w 2026-10-27-18/caption.txt. NIGDY "our portfolio", kwoty ani ilosci szefa.
+> **ZAMROZONE (szef 27.11.2026 17:45):** Raport 18:00 (z szefem i glosem Hexy) tez zostaje w obecnym formacie i glosie (grafiki codziennie nowe, ale w tym samym klimacie) – nic nie ruszamy. Zmiana tylko na wyrazne polecenie szefa.
 
-> **ZAMROZONE (szef 27.11.2026 17:45):** format Reela 10:00 z 27.11 (karuzela CRYPTO REPORT, lektor Christopher z LEKTOR_PITCH=-8Hz, spokojna muzyka + sidechain, Enso) zostaje w tym formacie. Grafiki sa nowe kazdego dnia (tresc rynku), ale ZAWSZE w tym samym klimacie i stylu co post IG media 17994129123080467. Zadnych zmian glosu, stylu grafiki ani formatu raportow – nie wracamy do przerabiania raportow, cala uwaga na trading. Zmiana tylko na wyrazne polecenie szefa.
+> ~~ZAMROZONE 17:45 (Reel 10:00 z lektorem) - NIEAKTUALNE od 28.11, patrz blok wyzej~~ format Reela 10:00 z 27.11 (karuzela CRYPTO REPORT, lektor Christopher z LEKTOR_PITCH=-8Hz, spokojna muzyka + sidechain, Enso) zostaje w tym formacie. Grafiki sa nowe kazdego dnia (tresc rynku), ale ZAWSZE w tym samym klimacie i stylu co post IG media 17994129123080467. Zadnych zmian glosu, stylu grafiki ani formatu raportow – nie wracamy do przerabiania raportow, cala uwaga na trading. Zmiana tylko na wyrazne polecenie szefa.
 
 # Daily Reel pipeline (erl.grey83)
 
@@ -134,6 +135,7 @@ Metricool, 54 Reelsy 23.10â€“22.11: srednio 83% widzow odpada w pierwszych 
 7. TEST A/B TLA 23â€“29.11: 23/25/27/29.11 poranny Reel = A (obecne tlo bg()), wieczorny = B (generator neon 3D C:\Hexa\wideo_hf\reel_zloto\tlo_neon.js, SEED = data RRRRMMDD); 24/26/28.11 odwrotnie (poranny = B, wieczorny = A). Wszystko inne bez zmian. Podsumowanie tygodnia i seria Hexa poza testem. Kazdy Reel wpisz do C:\Hexa\tresci\testy_ab.md (data godz | wariant | temat).
 8. Bez wpadek: nowy wariant â€“ przed publikacja 3 klatki obejrzane (ostrosc, czytelnosc, pole bezpieczne, prawdziwe liczby, literowki). Bez zdjec szefa. Zero kosztow (nie uzywac kredytow ElevenLabs ani platnych generatorow).
 Aktualne liczby, wnioski i kolejka testow: C:\Hexa\tresci\analiza_widza.md (aktualizowane co tydzien).
+
 
 
 

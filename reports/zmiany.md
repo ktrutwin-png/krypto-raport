@@ -88,3 +88,4 @@ Bez ≈ºargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-27 04:05 | serwer: kopia repo rdzenia ORB zsynchr. (46 wpis√≥w)
 - 2026-11-27 17:45 | Reel 10:00 ZAMROZONY w obecnym formacie (glos, grafika) ñ szef: nic nie zmieniamy, skupienie na tradingu
 - 2026-11-27 17:46 | Raport 18:00 (szef + glos Hexy) ZAMROZONY w obecnym formacie ñ szef: nic nie ruszamy
+- 2026-11-27 18:31 | 10:00 od 28.11 = karuzela zdjec CRYPTO REPORT (3 slajdy, bez glosu, wzor reports/2026-10-27-18) - szef
