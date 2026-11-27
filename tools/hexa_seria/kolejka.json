@@ -84,6 +84,42 @@
    "opis": "tools/hexa_seria/ep8/opis_ig.txt",
    "status": "czeka",
    "media_id": null
+  },
+  {
+   "nr": 9,
+   "data": "2027-01-16",
+   "godzina": "21:00",
+   "strefa": "Europe/Amsterdam",
+   "platforma": "instagram",
+   "tytul": "Hexa's Adventures #9 – ALL IN? NOT ME.",
+   "plik": "tools/hexa_seria/ep9/final.mp4",
+   "opis": "tools/hexa_seria/ep9/opis_ig.txt",
+   "status": "czeka",
+   "media_id": null
+  },
+  {
+   "nr": 10,
+   "data": "2027-01-23",
+   "godzina": "21:00",
+   "strefa": "Europe/Amsterdam",
+   "platforma": "instagram",
+   "tytul": "Hexa's Adventures #10 – SOMEONE TURNED IT OFF",
+   "plik": "tools/hexa_seria/ep10/final.mp4",
+   "opis": "tools/hexa_seria/ep10/opis_ig.txt",
+   "status": "czeka",
+   "media_id": null
+  },
+  {
+   "nr": 11,
+   "data": "2027-01-30",
+   "godzina": "21:00",
+   "strefa": "Europe/Amsterdam",
+   "platforma": "instagram",
+   "tytul": "Hexa's Adventures #11 – EVERYTHING WAS ERASED",
+   "plik": "tools/hexa_seria/ep11/final.mp4",
+   "opis": "tools/hexa_seria/ep11/opis_ig.txt",
+   "status": "czeka",
+   "media_id": null
   }
  ]
 }

@@ -20,6 +20,7 @@ Szef: „Resztę kredytów ElevenLabs wykorzystaj do stworzenia jak największej
 - Limit 60 000/odcinek i rezerwa 150 000 z pkt 7 – UCHYLONE. Nowa zasada: zostaw tylko 10 000 kr. rezerwy (głos Hexy w telefonie do czasu przełączenia na darmowy), resztę zużyj na odcinki.
 - Kolejność: #2 Szklane Miasto (28.11), #3 Archiwum Mgieł (5.12), #4 Miraż (12.12), #5 Planeta Zegarów (19.12), #6 Kuźnia (26.12), #7 Lustrzany Księżyc (2.01) – rób po kolei, aż skończą się kredyty. Jakość wg R40 i pkt 6 bez obniżania; jeśli kredyty na ostatni odcinek nie starczą na całość, zrób jego najdroższe ujęcia (Hexa mówi – OmniHuman, boss, planeta), a resztę dokończ darmowo.
 - Zawsze estimate_only przed wideo; po każdej generacji wpis do reports/elevenlabs_budzet.md (Zużycie).
+- 27.11: odcinki #2–#11 GOTOWE w tools/hexa_seria/epN/ (final.mp4, opis_ig.txt, kontrola.md, arkusz.jpg); kolejka = tools/hexa_seria/kolejka.json (soboty 28.11 → 30.01). Publikuje zadanie „Przygody Hexy – sobota 21:00” (Windsor, tylko IG). Kredyty ElevenLabs zużyte (zostało ~9,8 tys. rezerwy). Kolejne odcinki tylko darmowo.
 - Gotowe odcinki: tools/hexa_seria/epN/ (final.mp4 + kontrola.md + opis IG). Publikacja bez zmian: sobota 21:00, TYLKO Instagram.
 - Rytuał (ep2/rytual.mp4) i intro nagrane raz – używaj ponownie, nie generuj drugi raz.
 - Głos Hexy po 18.12 = darmowy (edge-tts, próbki: marka/propozycje/glos_hexy_20261126/, wybór szefa w toku) – NIE generuj nic w ElevenLabs po 18.12.

@@ -51,3 +51,14 @@ Szef: „Resztę kredytów ElevenLabs wykorzystaj do stworzenia jak największej
 | 2026-11-16 | Mózg (dla szefa) | Obrazy | szkic koncepcyjny Rytuału nowej mocy – Przygody Hexy (2 warianty, ref. Hexa_cala) | gemini-3-pro-image | ~3 654 |
 | 2026-11-16 | Reżyser (Raport 18) | Lektor | lektor Raportu 18:00 (5 scen, Patrick) | eleven_multilingual_v2 | ~375 |
 | 2026-11-17 | Reżyser (Reel 10:00) | Lektor | lektor Reela CRYPTO 101 Fear & Greed (4 sceny, Patrick) | eleven_multilingual_v2 | ~325 |
+| 2026-11-27 | Mózg | Wideo | Przygody Hexy #2 – 3 ujęcia Veo (8 s, 9:16) | veo-3.1-fast | ~21 800 |
+| 2026-11-27 | Mózg | Wideo | Przygody Hexy #3 – 3 ujęcia Veo (8 s, 9:16) | veo-3.1-fast | ~21 800 |
+| 2026-11-27 | Mózg | Wideo | Przygody Hexy #4 – 3 ujęcia Veo (8 s, 9:16) | veo-3.1-fast | ~21 800 |
+| 2026-11-27 | Mózg | Wideo | Przygody Hexy #5 – 3 ujęcia Veo (8 s, 9:16) | veo-3.1-fast | ~21 800 |
+| 2026-11-27 | Mózg | Wideo | Przygody Hexy #6 – 3 ujęcia Veo (8 s, 9:16) | veo-3.1-fast | ~21 800 |
+| 2026-11-27 | Mózg | Wideo | Przygody Hexy #7 – 3 ujęcia Veo (8 s, 9:16) | veo-3.1-fast | ~21 800 |
+| 2026-11-27 | Mózg | Wideo | Przygody Hexy #8 – 3 ujęcia Veo (8 s, 9:16) | veo-3.1-fast | ~21 800 |
+| 2026-11-27 | Mózg | Wideo | Przygody Hexy #9 – 3 ujęcia Veo (8 s, 9:16) | veo-3.1-fast | ~21 800 |
+| 2026-11-27 | Mózg | Wideo | Przygody Hexy #10 – 3 ujęcia Veo (8 s, 9:16) | veo-3.1-fast | ~21 800 |
+| 2026-11-27 | Mózg | Wideo | Przygody Hexy #11 – 3 ujęcia Veo (8 s, 9:16) | veo-3.1-fast | ~21 800 |
+| 2026-11-27 | Mózg | Stan | po serii #2–#11 zostało 9 778 kredytów (rezerwa na głos Hexy w telefonie do 18.12) | – | – |
