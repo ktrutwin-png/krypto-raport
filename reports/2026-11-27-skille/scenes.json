@@ -1,17 +1,135 @@
-{ "date": "27.11.2026", "mood": "calm", "handle": "@erl.grey83", "style": "news",
-  "dis": "Not financial advice - free open-source tools",
-  "end": {"a": "11 skills.<br>Rules first.", "b": "ERL.GREY83", "c": "Follow for more"},
-  "scenes": [
-    {"img": "s1.jpg", "tag": "CLAUDE TRADING SKILLS", "head": ["11 FREE AI SKILLS", "*TRADING WITH RULES*"], "say": "Eleven free skills that turn Claude into a disciplined trading assistant. Open source, on GitHub, for everyone.", "move": "in"},
-    {"img": "s2.jpg", "tag": "1 · SCANNER", "head": ["THOUSANDS OF CHARTS", "*ONE SHORTLIST*"], "say": "First, the Scanner reads thousands of charts and finds the setups. Breakouts, flags, oversold bounces.", "move": "out"},
-    {"img": "s3.jpg", "tag": "2-4 · NEWS · ANALYST · PELOSI", "head": ["HEADLINES · EARNINGS", "*CONGRESS TRADES*"], "say": "News, Analyst and the Pelosi Tracker add the context. Breaking headlines, real earnings from S E C filings, and the stock trades Congress must disclose.", "move": "in"},
-    {"img": "s4.jpg", "tag": "5 · ENTRY", "head": ["NO GUESSING.", "*WAIT FOR THE CLOSE.*"], "say": "Then the Entry Timer watches bar by bar. No guessing. It waits for a candle to close beyond the level.", "move": "out"},
-    {"img": "s5.jpg", "tag": "6 · EXIT", "head": ["STOP AND TARGET", "*BEFORE I ENTER*"], "say": "The Exit Planner sets the stop and the target before I get in. I know where I am wrong before I risk a cent.", "move": "in"},
-    {"img": "s6.jpg", "tag": "7-8 · BUDGET · RISK", "head": ["LIMITS FIRST.", "*OVER THE LIMIT = BLOCKED*"], "say": "Budget sizes the position from the stop. Risk checks every trade against my limits, and blocks anything over them.", "move": "out"},
-    {"img": "s7.jpg", "tag": "9 · TIME MACHINE", "head": ["10,000 SESSIONS", "*BEFORE ONE DOLLAR*"], "say": "Time Machine replays the trade ten thousand times, plus every past time the setup fired. Bad odds? We skip it.", "move": "in"},
-    {"img": "s8.jpg", "tag": "10-11 · ALERTS · BROKER", "head": ["PAPER BY DEFAULT.", "*NEVER WITHOUT MY YES.*"], "say": "Alerts ring at the stop, the target and the close. The Broker sends orders to paper trading by default, and never without my yes.", "move": "out"},
-    {"img": "s11.jpg", "tag": "WHAT I DO WITH THEM", "head": ["ONE CHAIN.", "*EVERY SINGLE TRADE.*"], "say": "What do I actually do with them? Every trade goes through the same chain. Plan, size, risk check, time machine, alerts. And the same rules now guard our gold trades and our bots.", "move": "in"},
-    {"img": "s9.jpg", "tag": "REAL TEST", "head": ["TIGHT STOP ON GOLD:", "*62% HIT THE LOSS FIRST*"], "say": "Our first real test. A tight stop on gold hit the loss first in sixty two percent of sessions. The machine said no. So we widened the stop and cut the size.", "move": "out"},
-    {"img": "s12.jpg", "tag": "HOW GOOD IS IT?", "head": ["DISCIPLINE: *10/10*", "PREDICTING PRICE: *0/10*"], "say": "How good is it? Honestly. For discipline, ten out of ten. For predicting price, zero. It does not guess the future. It stops the bad trades. Built for U S stocks, with free data.", "move": "in"},
-    {"img": "s10.jpg", "tag": "FREE · MIT LICENSE", "head": ["GITHUB:", "*DAY-TRADER-SKILL*"], "say": "It is free and open source on GitHub. Search day trader skill. Rules first. Emotions last.", "move": "in"}
-  ] }
+{
+ "date": "27.11.2026",
+ "mood": "calm",
+ "handle": "@erl.grey83",
+ "style": "news",
+ "dis": "Not financial advice - free open-source tools",
+ "end": {
+  "a": "11 skills.<br>Rules first.",
+  "b": "ERL.GREY83",
+  "c": "Follow for more"
+ },
+ "scenes": [
+  {
+   "img": "s1.jpg",
+   "tag": "CLAUDE TRADING SKILLS",
+   "head": [
+    "11 FREE AI SKILLS",
+    "*TRADING WITH RULES*"
+   ],
+   "say": "Eleven free skills that turn Claude into a disciplined trading assistant. Open source, on GitHub, for everyone.",
+   "move": "in"
+  },
+  {
+   "img": "s2.jpg",
+   "tag": "1 / SCANNER",
+   "head": [
+    "THOUSANDS OF CHARTS",
+    "*ONE SHORTLIST*"
+   ],
+   "say": "First, the Scanner reads thousands of charts and finds the setups. Breakouts, flags, oversold bounces.",
+   "move": "out"
+  },
+  {
+   "img": "s3.jpg",
+   "tag": "2-4 / NEWS / ANALYST / PELOSI",
+   "head": [
+    "HEADLINES / EARNINGS",
+    "*CONGRESS TRADES*"
+   ],
+   "say": "News, Analyst and the Pelosi Tracker add the context. Breaking headlines, real earnings from S E C filings, and the stock trades Congress must disclose.",
+   "move": "in"
+  },
+  {
+   "img": "s4.jpg",
+   "tag": "5 / ENTRY",
+   "head": [
+    "NO GUESSING.",
+    "*WAIT FOR THE CLOSE.*"
+   ],
+   "say": "Then the Entry Timer watches bar by bar. No guessing. It waits for a candle to close beyond the level.",
+   "move": "out"
+  },
+  {
+   "img": "s5.jpg",
+   "tag": "6 / EXIT",
+   "head": [
+    "STOP AND TARGET",
+    "*BEFORE I ENTER*"
+   ],
+   "say": "The Exit Planner sets the stop and the target before I get in. I know where I am wrong before I risk a cent.",
+   "move": "in"
+  },
+  {
+   "img": "s6.jpg",
+   "tag": "7-8 / BUDGET / RISK",
+   "head": [
+    "LIMITS FIRST.",
+    "*OVER THE LIMIT = BLOCKED*"
+   ],
+   "say": "Budget sizes the position from the stop. Risk checks every trade against my limits, and blocks anything over them.",
+   "move": "out"
+  },
+  {
+   "img": "s7.jpg",
+   "tag": "9 / TIME MACHINE",
+   "head": [
+    "10,000 SESSIONS",
+    "*BEFORE ONE DOLLAR*"
+   ],
+   "say": "Time Machine replays the trade ten thousand times, plus every past time the setup fired. Bad odds? We skip it.",
+   "move": "in"
+  },
+  {
+   "img": "s8.jpg",
+   "tag": "10-11 / ALERTS / BROKER",
+   "head": [
+    "PAPER BY DEFAULT.",
+    "*NEVER WITHOUT MY YES.*"
+   ],
+   "say": "Alerts ring at the stop, the target and the close. The Broker sends orders to paper trading by default, and never without my yes.",
+   "move": "out"
+  },
+  {
+   "img": "s11.jpg",
+   "tag": "WHAT I DO WITH THEM",
+   "head": [
+    "ONE CHAIN.",
+    "*EVERY SINGLE TRADE.*"
+   ],
+   "say": "What do I actually do with them? Every trade goes through the same chain. Plan, size, risk check, time machine, alerts. And the same rules now guard our gold trades and our bots.",
+   "move": "in"
+  },
+  {
+   "img": "s9.jpg",
+   "tag": "REAL TEST",
+   "head": [
+    "TIGHT STOP ON GOLD:",
+    "*62% HIT THE LOSS FIRST*"
+   ],
+   "say": "Our first real test. A tight stop on gold hit the loss first in sixty two percent of sessions. The machine said no. So we widened the stop and cut the size.",
+   "move": "out"
+  },
+  {
+   "img": "s12.jpg",
+   "tag": "HOW GOOD IS IT?",
+   "head": [
+    "DISCIPLINE: *10/10*",
+    "PREDICTING PRICE: *0/10*"
+   ],
+   "say": "How good is it? Honestly. For discipline, ten out of ten. For predicting price, zero. It does not guess the future. It stops the bad trades. Built for U S stocks, with free data.",
+   "move": "in"
+  },
+  {
+   "img": "s10.jpg",
+   "tag": "FREE / MIT LICENSE",
+   "head": [
+    "GITHUB:",
+    "*DAY-TRADER-SKILL*"
+   ],
+   "say": "It is free and open source on GitHub. Search day trader skill. Rules first. Emotions last.",
+   "move": "in"
+  }
+ ],
+ "css_extra": ".y{color:#e3c36f;text-shadow:0 0 26px rgba(201,165,74,.55),4px 6px 0 #000}.head{color:#efe9dd}.tag{background:rgba(11,11,13,.88);border:2px solid #c9a54a;color:#ead18a;box-shadow:0 0 22px rgba(201,165,74,.45)}.gt{background:linear-gradient(rgba(11,11,13,.82),rgba(11,11,13,.40) 60%,transparent)}.gb{background:linear-gradient(transparent,rgba(11,11,13,.70))}.hd{color:#d9d6cf}.dis{color:#d9d6cfaa}.end .a{color:#e3c36f}.end .l{background:#c9a54a;box-shadow:0 0 24px rgba(201,165,74,.7)}.end .c{color:#d9d6cf}.chap{color:#c9a54a}.csub{color:#e3c36f}.g{color:#d9d6cf}"
+}
