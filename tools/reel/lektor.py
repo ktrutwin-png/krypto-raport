@@ -1,5 +1,6 @@
 """JEDEN lektor marki (szef 26.11.2026): edge-tts en-US-AndrewNeural (naturalny meski glos, darmowy) zamiast piper hfc_male.
-Uzycie jak piper:  "<tekst>" | python tools/reel/lektor.py -f wyjscie.wav [--rate -4%]
+Uzycie jak piper:  "<tekst>" | python tools/reel/lektor.py -f wyjscie.wav [--rate -4%] [--pitch -8Hz]
+27.11 (Z049): --pitch / LEKTOR_PITCH (np. -8Hz dla Christophera w karuzeli 10:00), domyslnie +0Hz.
 Wynik: WAV mono 22050 Hz (jak piper), wiec reszta potoku (audio_reel, kino, raport) dziala bez zmian.
 Gdy edge-tts nie dziala (brak sieci do speech.platform.bing.com), zwraca kod 3 - wtedy uzyj piper jako zapasu."""
 import sys, io, asyncio, subprocess, shutil, os, argparse
@@ -11,6 +12,7 @@ def ffmpeg():
     raise SystemExit("brak ffmpeg")
 def main():
     a = argparse.ArgumentParser(); a.add_argument("-f", required=True); a.add_argument("--rate", default=os.environ.get("LEKTOR_RATE", "+0%")); a.add_argument("--glos", default=GLOS)
+    a.add_argument("--pitch", default=os.environ.get("LEKTOR_PITCH", "+0Hz"))
     a.add_argument("-t", default=None)
     o, _ = a.parse_known_args()
     txt = (o.t if o.t is not None else sys.stdin.buffer.read().decode("utf-8")).strip()
@@ -19,7 +21,7 @@ def main():
         SLOWA = []   # 26.11: czasy slow do napisow karaoke (tools/napisy) -> <plik>.words.json
         async def z():
             b = io.BytesIO()
-            async for ch in edge_tts.Communicate(txt, o.glos, rate=o.rate, boundary="WordBoundary").stream():
+            async for ch in edge_tts.Communicate(txt, o.glos, rate=o.rate, pitch=o.pitch, boundary="WordBoundary").stream():
                 if ch["type"] == "audio": b.write(ch["data"])
                 elif ch["type"] == "WordBoundary":
                     s = ch["offset"] / 1e7; SLOWA.append([round(s, 3), round(s + ch["duration"] / 1e7, 3), ch["text"]])
