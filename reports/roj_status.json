@@ -46,16 +46,16 @@
   {
    "n": "Opiekun",
    "s": "praca",
-   "ostatnio": "27.11 03:3x – opieka nad IG + sprawdzenie roju i strony",
+   "ostatnio": "28.11 03:4x – rój zgodny z rzeczywistością (+5 agentów), wdrożenie strony bez YouTube",
    "typ": "agent",
    "en": "Looks after the channel: reach, followers and one small improvement to the videos every day.",
    "gdzie": "Instagram",
    "ikona": "🛠",
    "tag": "Quality",
    "nazwa_en": "Caretaker",
-   "teraz_en": "Checking reach, comments and that the swarm matches what really runs.",
+   "teraz_en": "Keeping the Instagram account and this map in sync with reality.",
    "pl": "Dba o kanał: zasięgi, obserwujących i jedno małe ulepszenie filmów każdego dnia.",
-   "teraz_pl": "Sprawdza zasięgi, komentarze i czy rój zgadza się z tym, co naprawdę działa."
+   "teraz_pl": "Pilnuje konta Instagram i zgodności tej mapy z rzeczywistością."
   },
   {
    "n": "Skanery",
@@ -347,14 +347,14 @@
    "n": "IBKR Szybki",
    "s": "czeka",
    "opis": "szybkie transakcje forex na koncie demo IBKR (EUR/USD, GBP/USD, USD/JPY), świece 5 min.",
-   "ostatnio": "15.11 – podłączony do IB Gateway, czeka na otwarcie forexu (niedz. ~23:00)",
+   "ostatnio": "28.11 03:4x – proces nie działa (weekend), warianty_fx działa",
    "typ": "bot",
    "en": "Fast forex trades (EUR/USD, GBP/USD, USD/JPY)",
    "gdzie": "Interactive Brokers paper",
    "nazwa_en": "IBKR fast",
-   "teraz_en": "Waiting for the forex market to open (Sunday ~23:00 CET).",
+   "teraz_en": "Paused for the weekend; forex reopens Sunday ~23:00 CET.",
    "pl": "Szybkie transakcje forex (EUR/USD, GBP/USD, USD/JPY)",
-   "teraz_pl": "Czeka na otwarcie rynku forex (niedziela ok. 23:00 CET)."
+   "teraz_pl": "Przerwa weekendowa; forex rusza w niedzielę ok. 23:00 CET."
   },
   {
    "n": "IBKR Warianty",
@@ -466,7 +466,7 @@
   },
   {
    "n": "Silver King",
-   "s": "praca",
+   "s": "blad",
    "typ": "bot",
    "en": "Silver bot (XAG/USD): trades breakouts of recent highs and lows. Best of the lab so far – candidate for a real account.",
    "pl": "Bot na srebro (XAG/USD): gra wybicia ostatnich szczytów i dołków. Najlepszy z laboratorium – kandydat na prawdziwe konto.",
@@ -474,9 +474,9 @@
    "ikona": "🥈",
    "tag": "Markets",
    "nazwa_en": "Silver King 🥈",
-   "teraz_en": "Watching silver for the next breakout.",
-   "teraz_pl": "Pilnuje srebra pod kolejne wybicie.",
-   "ostatnio": "27.11 03:3x – proces działa na serwerze (dopisany 27.11)"
+   "teraz_en": "Stopped while the MT5 demo terminal is being repaired.",
+   "teraz_pl": "Zatrzymany na czas naprawy terminala MT5 demo.",
+   "ostatnio": "28.11 03:4x – PROCES NIE DZIAŁA (LAB_Donchian_XAG, naprawa MT5)"
   },
   {
    "n": "Lab PAXG long",
@@ -544,9 +544,9 @@
    "ikona": "🧪",
    "tag": "Markets",
    "nazwa_en": "Lab MT5 set",
-   "teraz_en": "Running its test bots on demo.",
-   "teraz_pl": "Prowadzi swoje boty testowe na demo.",
-   "ostatnio": "27.11 03:3x – proces działa na serwerze (dopisany 27.11)"
+   "teraz_en": "London gold and M8 bots running; RSI2 forex and divergence paused during MT5 repair.",
+   "teraz_pl": "Działają Londyn XAU i M8; RSI2 FX i dywergencja stoją na czas naprawy MT5.",
+   "ostatnio": "28.11 03:4x – działa Londyn_XAU, M8_HexaTurbo; RSI2_FX i Dyw_XAU nie działają"
   },
   {
    "n": "Lab memy i Indie",
@@ -631,6 +631,76 @@
    "teraz_en": "Next scan: weekday morning.",
    "teraz_pl": "Kolejny przegląd: rano w dzień roboczy.",
    "ostatnio": "27.11 03:3x – dopisany (zadanie harmonogramu aktywne)"
+  },
+  {
+   "n": "Badacz",
+   "s": "czeka",
+   "typ": "agent",
+   "en": "Saturday research: backtests new gold and silver entry methods with real costs and out-of-sample checks.",
+   "pl": "Sobotnie badania: testuje nowe metody wejść na złoto i srebro z realnymi kosztami i testem poza próbą.",
+   "gdzie": "Server",
+   "ikona": "🔬",
+   "tag": "Research",
+   "nazwa_en": "Method researcher",
+   "teraz_en": "Next research run: Saturday 10:41 CET.",
+   "teraz_pl": "Kolejne badania: sobota 10:41.",
+   "ostatnio": "28.11 03:4x – dopisany (zadanie harmonogramu aktywne)"
+  },
+  {
+   "n": "Aktualizator",
+   "s": "czeka",
+   "typ": "agent",
+   "en": "Monthly check of our skills and tools for safe updates, with a security review before anything changes.",
+   "pl": "Comiesięczny przegląd skilli i narzędzi pod bezpieczne aktualizacje, z kontrolą bezpieczeństwa przed zmianą.",
+   "gdzie": "Server",
+   "ikona": "🔄",
+   "tag": "Ops",
+   "nazwa_en": "Updater",
+   "teraz_en": "Next check: 1 December.",
+   "teraz_pl": "Kolejny przegląd: 1 grudnia.",
+   "ostatnio": "28.11 03:4x – dopisany (zadanie harmonogramu aktywne)"
+  },
+  {
+   "n": "Sprzątacz",
+   "s": "czeka",
+   "typ": "agent",
+   "en": "Monthly server clean-up: temp files, caches and old render leftovers, never touching bots or data.",
+   "pl": "Comiesięczne sprzątanie serwera: pliki tymczasowe, cache, stare resztki renderów – bez ruszania botów i danych.",
+   "gdzie": "Server",
+   "ikona": "🧹",
+   "tag": "Ops",
+   "nazwa_en": "Clean-up crew",
+   "teraz_en": "Next clean-up: 2 December.",
+   "teraz_pl": "Kolejne sprzątanie: 2 grudnia.",
+   "ostatnio": "28.11 03:4x – dopisany (zadanie harmonogramu aktywne)"
+  },
+  {
+   "n": "TRADE odpowiedzi",
+   "s": "czeka",
+   "typ": "agent",
+   "en": "Every evening replies to people who comment or DM the word TRADE with the link to our free trading tools list.",
+   "pl": "Co wieczór odpowiada osobom, które napiszą TRADE w komentarzu lub DM, linkiem do naszej darmowej listy narzędzi.",
+   "gdzie": "Instagram",
+   "ikona": "💬",
+   "tag": "Content",
+   "nazwa_en": "TRADE replies",
+   "teraz_en": "Next check: today 20:00 CET.",
+   "teraz_pl": "Kolejne sprawdzenie: dziś 20:00.",
+   "ostatnio": "28.11 03:4x – dopisany (zadanie harmonogramu aktywne)"
+  },
+  {
+   "n": "Przygody Hexy",
+   "s": "czeka",
+   "typ": "agent",
+   "en": "Publishes one Hexa's Adventures episode a week on Instagram, Saturday 21:00 CET.",
+   "pl": "Publikuje jeden odcinek Przygód Hexy w tygodniu na Instagramie, w sobotę o 21:00.",
+   "gdzie": "Instagram",
+   "ikona": "🎬",
+   "tag": "Content",
+   "nazwa_en": "Hexa's Adventures",
+   "teraz_en": "Next episode: Saturday 21:00 CET.",
+   "teraz_pl": "Kolejny odcinek: sobota 21:00.",
+   "ostatnio": "28.11 03:4x – dopisany (zadanie harmonogramu aktywne)"
   }
  ]
 }
