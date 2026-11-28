@@ -466,7 +466,7 @@
   },
   {
    "n": "Silver King",
-   "s": "blad",
+   "s": "praca",
    "typ": "bot",
    "en": "Silver bot (XAG/USD): trades breakouts of recent highs and lows. Best of the lab so far – candidate for a real account.",
    "pl": "Bot na srebro (XAG/USD): gra wybicia ostatnich szczytów i dołków. Najlepszy z laboratorium – kandydat na prawdziwe konto.",
@@ -476,7 +476,7 @@
    "nazwa_en": "Silver King 🥈",
    "teraz_en": "Stopped while the MT5 demo terminal is being repaired.",
    "teraz_pl": "Zatrzymany na czas naprawy terminala MT5 demo.",
-   "ostatnio": "28.11 03:4x – PROCES NIE DZIAŁA (LAB_Donchian_XAG, naprawa MT5)"
+   "ostatnio": "28.11 04:37 - dziala na srebrze (XAGUSD H1), wznowiony po naprawie serwera"
   },
   {
    "n": "Lab PAXG long",
