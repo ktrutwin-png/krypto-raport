@@ -275,3 +275,28 @@ Kod: `C:\Hexa\lab` (silnik `lab_silnik.py`, boty `boty\*.py`, start `START_LAB.p
 - Druga pozycja to dźwignia, nie przewaga – opłaca się tylko tam, gdzie sygnały same się nie nakładają (Turbo M30).
 
 **Najlepszy:** LAB_Donchian_XAG +729,68 $ (5 tr., PF 2,93). Aktywne procesy: 12 + zbieracz memów, wszystkie żyją.
+
+---
+
+## 2026-11-28 (noc 11) – piątkowa piła na złocie; M8 bez nowych werdyktów; „okrągłe poziomy” w kolejce
+
+**Przegląd (konto demo botów 5058971085, trade_mode DEMO; Hexa 830083 bez pozycji, Turbo 830099 1 pozycja −16,47 $ – nietknięte):** saldo 6505,36 $, kapitał 6393,55 $. Lab MT5: **138 zamkniętych, +630,01 $** (było +759,50 $). Pierwsza transakcja LAB_Dyw_XAU = TP +59,33 $; Londyn_XAU LONG zamknięty czasem −37,52 $.
+- **M8 MT5: 115 zamkniętych, −371,94 $** (rdzeń 97 tr., −443,34 $, PF 0,77). Piątek 27.11: złoto 3680 → 3620 → 3660 – SL-e M15 (−22 $ ×2), ASIA LONG na M30 Hexa/Turbo i H1 Turbo (−54,50 $ ×3), XAG M30 −37,35 $; plus: M15_TP2 +46,19 $, M15_TP3 +25,66 $ (trailing).
+- **H_XAU_M15: 22 tr., +58,85 $, PF 1,22** – nadal zostaje. T_XAU_M15 19 tr., PF 1,33 – werdykt przy następnej transakcji. M30 spadły do PF 0,97 (11 tr.).
+- **IBKR paper (DUR…):** 7 tr., −135,33 $ – nowy SL H4 D15 −116,93 $ (27.11 01:09 UTC). Połączenie 27.11 ~11:20 UTC zerwane, bot sam się połączył.
+- **Kraken na sucho:** KR_M8_D1 bez zmian (SHORT BTC DCH, ETH D15 otwarte), RSI2_H4 2 SHORT-y otwarte; 27.11 ~11:20 UTC „connection reset” w logach obu – chwilowe, pliki stanu odświeżone 28.11 01:27 UTC (procesy żyją).
+- **eToro DEMO** (`"account":"demo"` w odpowiedzi): GOLD SHORT −67,57 $ (3660,2; SL 3805 / TP 3334). Brak otwarć/zamknięć → arkusz bez zmian.
+- **M9:** zbieracz 95,7k tokenów, 0 błędów; FalaB 3 tr. −6,91 $, 0 sygnałów (GeckoTerminal 429); C – BTC 59,9k pod EMA50 H4 61,2k, filtr blokuje.
+
+**Wyłączone (lekcja): nic** – jedyny wariant z ≥ 20 tr. (H_XAU_M15) ma PF 1,22; żaden bot nie stracił 30% kapitału.
+
+**Nowe pomysły (216 przebiegów, `narzedzia\backtest_noc11.py`):**
+- **ORB_NY** (wybicie pierwszej godziny Nowego Jorku) – nauka PF < 1 na 5/6 instrumentach ❌.
+- **OKRĄGŁE kontra** (odbicie od 50 $ / 1 $ / 0,01) – 3/72 wariantów ❌. Okrągłe liczby nie są murem.
+- **OKRĄGŁE kontynuacja** – XAU 9/12 wariantów spr ≥ 1, najlepszy nauka 1,07 → spr 1,10 (n821), EUR 8/12. Przewaga cienka, ale stabilna → w kolejce na slot (12/12 aktywnych) za NR7.
+
+**Lekcje:**
+- W piątek na złocie wszystkie ASIA LONG złapały ten sam szczyt – trzy warianty = jedna strata ×3. Kolejny dowód, że M8 trzeba oceniać per zdarzenie.
+- Wybicie godziny otwarcia NY na H1 nie działa poza samym złotem w trendzie – to samo, co ASIA, tylko później i drożej.
+
+**Najlepszy:** LAB_Donchian_XAG +729,68 $ (5 tr., PF 2,93, LONG otwarty +17,10 $). Aktywne procesy: 12 + zbieracz memów, wszystkie żyją.
