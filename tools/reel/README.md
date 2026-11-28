@@ -139,3 +139,5 @@ Aktualne liczby, wnioski i kolejka testow: C:\Hexa\tresci\analiza_widza.md (aktu
 
 
 
+
+- 2026-11-28 (szef): kazdy film o naszych umiejetnosciach tradingowych MUSI miec w opisie i na koncu filmu link do listy narzedzi: https://github.com/ktrutwin-png/krypto-raport/tree/main/trading-tools oraz CTA 'Comment TRADE to get the list'. Na komentarz TRADE odpowiadamy linkiem (Windsor reply_to_comment; gdy ktos napisze TRADE w DM - reply_to_message z klikalnym linkiem, w ciagu 24 h). Lista trading-tools/README.md aktualizowana przy kazdym nowym/odrzuconym repo.
