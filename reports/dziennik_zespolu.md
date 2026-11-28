@@ -421,3 +421,4 @@ UPDATE: 2026-11-28 04:55 tools/reel/README.md – naprawione kodowanie (UTF-8, b
 2026-11-28 04:58 | Inspektor | DO RAPORTU: Z056 – IB Gateway na serwerze padł 04:03 (błąd Javy w GUI po przełączeniu pulpitu), wisi z otwartym portem, więc strażnik go nie widzi; IB skaner i boty Lab IB bez danych – restart Gateway przed otwarciem rynku w poniedziałek (po „wdróż”) | Z055 – strona na żywo wciąż z linkiem YouTube (wdrożenie z 26.11), poprawka czeka w repo – wdrożyć na Vercel
 2026-11-28 05:02 | Inspektor | INSPEKCJA UPDATE: (28.11 04:55 Mechanik, fire ręczny) sprawdzone już w przebiegu 04:58 – Z051/Z052 zamknięte (UTF-8 ok, jeden blok 10:00), Z053 zamknięte (przyczyna: stara partycja ~100 GB przed migracją VPS 6), Z054 potwierdzone, czeka na wdróż | od 04:58 brak nowych zmian | ok
 2026-11-28 05:50 | Kalendarz | dziś brak ważnych danych | ok
+2026-11-28 10:01 | Reżyser (Reel) | STOCKS +5.6% – SO BTC UP TOO? (MYTH vs FACT) | IG ok (18362386501170573), Ensō ✔ | ok
