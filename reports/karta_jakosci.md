@@ -39,3 +39,23 @@ Boty (Mechanik 21.11, 7 dni, konto botów 5058971085): Hexa 13 tr PF 2,74 +214 $
 Pule eToro (kolumna B, zamknięte 15–21.11): Pula 500 Turbo 1 tr −30,51 $; inne pule 0 zamkniętych. Otwarte: System 1, nieprzypisana 1, „do przypisania” 1 – do Inspektora.
 Trading szefa i rynki: trading\analiza_szefa.log, trading\rynki_tydzien.md (serwer).
 CISZA: złamana – Strażnik 7 pushy do szefa w tygodniu (alarmy serwera/IB Gateway); eToro przegląd tygodnia 22.11 nadal z push (Z004).
+
+## Tydzień 2026-11-28 (22–28.11)
+| Agent | Ocena | Liczba-dowód | Jedna rzecz do poprawy |
+|---|---|---|---|
+| 🔭 Zwiadowca | 5 | 13 okazji rozliczonych w tyg.: suma +5,80 R (tydz. wcześniej +2,96 R); trafność 30 dni 19% → 27% (n=41, z wejściem 46%, +0,31 R); sam wykrył przesunięcie czasu Twelve Data (Z044) | przeliczyć tabele godzin z 23.11 na Yahoo UTC w pn 30.11 (Z044) – do tego czasu nie opierać okna 14–17 na starych danych |
+| 🔍 Inspektor | 4 | 12 własnych zgłoszeń (Z041, Z043, Z048–Z052, Z055, Z056 i in.), wyłapał powrót Z045 (4. stracony film YT) i stojący ORB (Z050); 0 FAILED wśród włączonych zadań | Z046 – przepuścił 3 filmy YT „ok” bez sprawdzenia platformy; kontrola publikacji zawsze na platformie (już reguła) |
+| 🔧 Mechanik | 4 | naprawione: Z049, Z050 doraźnie, Z051, Z052 (UTF-8, jeden blok 10:00); diagnozy z testem: Z029 (brak sygnału VOO ≠ awaria), Z042, Z054 (131/400 linii restartów) | Z050 – doraźny pull nie trzyma (repo stało 12 h); dawać od razu stałe rozwiązanie, nie łatkę |
+| 🎬 Reżyser | 2 | IG 123 → 116 obserwujących (−7), wyświetlenia Reels 136 vs 657 (−79% t/t); 3 filmy YT wpisane „YT ok” bez wysyłki (Z045); zapisy/udostępnienia 0 – 6. tydzień | sukces wpisywać tylko z media id z platformy; zmniejszyć liczbę zmian formatu (5 zmian formatu 10:00 w 6 dni) |
+| 💼 Handlowiec | 3 | lista firm 50 → 60, 1 gotowa wiadomość (Next Restaurant), 0 wysłanych od 9.11 | produkt P1/M5 – 19 dni bez gotowego produktu; jeden produkt do końca tygodnia |
+| 📬 Sekretarz | 3 | 7/7 przebiegów, wyłapał odrzuconą płatność ElevenLabs i nowe logowania (Link.com, OpenAI); kosz 7 dni: 0 wątków (kontrola Analityka) | wypisano 0 – przeglądarka nadal z laptopa (Z041); wypisywanie przez Gmail/serwer |
+| ✍️ Pisarz | 4 | kronika 22.11 terminowo (sekcja tygodnia jest) | dodać ramkę WYNIKI (IG liczby) na początku wpisu – reguła 22.11 |
+| 🧪 Laboratorium | 2 | 7 dni: PF 0,77, −518,57 $; Kelt1h PF 0,04; Silver King (Donchian_XAG) nie działa od migracji | wyłączyć/zawiesić boty PF < 0,8 po 20 tr zamiast trzymać |
+| 🛰 Strażnik | 4 | 23.11 wykrył brak Hexa+Turbo (2 przebiegi) BEZ pushu do szefa – CISZA dotrzymana | widzieć zawieszony IB Gateway z otwartym portem (Z056) |
+| 🧠 Badacz | 4 | 1. przebieg 28.11: 11 metod przetestowanych, przeszła 1 (VP_RETEST_XAU PF 1,50, OOS 2,0) | – (za mało danych) |
+
+Projekty: plan_wzrostu 29 otwartych / 7 zrobionych (19%) – większość rozkazów R6–R29 > 14 dni, część nieaktualna po decyzji „tylko IG” 25.11; plan_boty 27/35 (77%); plan_hexa_os 0/5; plan_skanery 2/4 (50%); plan_glowny 1/5.
+Boty (Mechanik 28.11, 7 d): 💧 Hexa 9 tr PF 1,91 +134,66 $ | 🔥 Turbo 9 tr PF 3,35 +233,88 $ | Lab PF 0,77 −518,57 $ | Kelt1h PF 0,04.
+Pule eToro (kol. B): 0 zamkniętych transakcji w 22–28.11; otwarte: GOLD Lab 3646949765, LLY ×2 bez puli (Z037c).
+Trading szefa: 136 tr, 77%, +167,79 € – szczegóły trading\analiza_szefa.log (serwer). Szef vs boty wg Mechanika (21–27.11) −1 925,88 € – inne okno/źródło niż dziennik_szefa.csv (+167,79 € 22–27.11) → do uzgodnienia (Mechanik).
+CISZA: brak dowodu pushu do szefa poza dozwolonymi; ryzyko – 3 jednorazowe zadania z „daj szefowi” przypięte do laptopa (Z048).
