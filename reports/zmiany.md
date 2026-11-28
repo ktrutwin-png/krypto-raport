@@ -86,10 +86,11 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-27 03:30 | strona: bez linku X (wstrzymany)
 - 2026-11-27 04:00 | lektor.py: --pitch/LEKTOR_PITCH (karuzela -8Hz)
 - 2026-11-27 04:05 | serwer: kopia repo rdzenia ORB zsynchr. (46 wpisów)
-- 2026-11-27 17:45 | Reel 10:00 ZAMROZONY w obecnym formacie (glos, grafika) � szef: nic nie zmieniamy, skupienie na tradingu
-- 2026-11-27 17:46 | Raport 18:00 (szef + glos Hexy) ZAMROZONY w obecnym formacie � szef: nic nie ruszamy
+- 2026-11-27 17:45 | Reel 10:00 ZAMROZONY w obecnym formacie (glos, grafika) – szef: nic nie zmieniamy, skupienie na tradingu
+- 2026-11-27 17:46 | Raport 18:00 (szef + glos Hexy) ZAMROZONY w obecnym formacie – szef: nic nie ruszamy
 - 2026-11-27 18:31 | 10:00 od 28.11 = karuzela zdjec CRYPTO REPORT (3 slajdy, bez glosu, wzor reports/2026-10-27-18) - szef
 - 2026-11-27 20:10 | kino.py: scenes.json czytany jako utf-8-sig (koniec '·') + opcjonalne pole css_extra (kolory per film); nowy generator tel generatory/neon_tla.py
 - 2026-11-28 01:00: REGULA GWIAZDEK (szef): kazde repo, ktorego uzywamy i ktore dziala, dostaje gwiazdke. Dane dzis: freqtrade, TradingAgents, basic-memory, day-trader-skill. Kolejne (Kronos, Vibe-Trading itd.) dopiero gdy przejda test Badacza. Pilnuje Mozg + miesieczne zadanie aktualizacji.
 - 2026-11-28 01:20: nowy folder trading-tools/ (publiczna lista repo do tradingu, EN) + regula TRADE w tools/reel/README.md.
 - 2026-11-28 03:50 | Rój: +5 agentów, Silver King=błąd (naprawa MT5)
+- 2026-11-28 04:55 | README Reela: polskie znaki + 1 blok 10:00
