@@ -92,3 +92,4 @@ Bez żargonu, bez drobnych poprawek technicznych. Briefing pokazuje ostatnie 6 z
 - 2026-11-27 20:10 | kino.py: scenes.json czytany jako utf-8-sig (koniec '·') + opcjonalne pole css_extra (kolory per film); nowy generator tel generatory/neon_tla.py
 - 2026-11-28 01:00: REGULA GWIAZDEK (szef): kazde repo, ktorego uzywamy i ktore dziala, dostaje gwiazdke. Dane dzis: freqtrade, TradingAgents, basic-memory, day-trader-skill. Kolejne (Kronos, Vibe-Trading itd.) dopiero gdy przejda test Badacza. Pilnuje Mozg + miesieczne zadanie aktualizacji.
 - 2026-11-28 01:20: nowy folder trading-tools/ (publiczna lista repo do tradingu, EN) + regula TRADE w tools/reel/README.md.
+- 2026-11-28 03:50 | Rój: +5 agentów, Silver King=błąd (naprawa MT5)
